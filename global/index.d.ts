@@ -93,7 +93,7 @@ declare function isFinite(expression: number): boolean;
 declare function isNaN(expression: number): boolean;
 
 /**
- * Returns true is the supplied string is a valid XML name.
+ * Returns true if the supplied string is a valid XML name.
  * @param name The XML name to test.
  */
 declare function isXMLName(name: string): boolean;
