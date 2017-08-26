@@ -7471,7 +7471,7 @@ declare class Application {
 	 * @param from The name of the action set containing the action being played (note that the Action Set name is case-sensitive and must match the name in the Actions palette).
 	 * @param options Options for batch automation.
 	 */
-	batch(inputFiles: AliasArray, action: string, from: string, options?: BatchOptions): string;
+	batch(inputFiles: File[], action: string, from: string, options?: BatchOptions): string;
 
 	/**
 	 * Alerts the user.
@@ -7588,7 +7588,7 @@ declare class Application {
 	 * @param inputFiles The files to include.
 	 * @param options Options for creating the contact sheet.
 	 */
-	makeContactSheet(inputFiles: AliasArray, options?: ContactSheetOptions): string;
+	makeContactSheet(inputFiles: File[], options?: ContactSheetOptions): string;
 
 	/**
 	 * Creates a PDF presentation file.
@@ -7596,7 +7596,7 @@ declare class Application {
 	 * @param outputFile The location of the output file.
 	 * @param options Options for the PDF presentation.
 	 */
-	makePDFPresentation(inputFiles: AliasArray, outputFile: File, options?: PresentationOptions): string;
+	makePDFPresentation(inputFiles: File[], outputFile: File, options?: PresentationOptions): string;
 
 	/**
 	 * DEPRECATED. Creates a web photo gallery.
@@ -7610,14 +7610,14 @@ declare class Application {
 	 * DEPRECATED. Merges multiple files into one, user interaction required.
 	 * @param inputFiles List of input files to include.
 	 */
-	makePhotomerge(inputFiles: AliasArray): string;
+	makePhotomerge(inputFiles: File[]): string;
 
 	/**
 	 * Creates a picture package from multiple files.
 	 * @param inputFiles The files to include.
 	 * @param options Options for creating a Picture Package.
 	 */
-	makePicturePackage(inputFiles: AliasArray, options?: PicturePackageOptions): string;
+	makePicturePackage(inputFiles: File[], options?: PicturePackageOptions): string;
 
 	/**
 	 * Opens the specified document file(s).
