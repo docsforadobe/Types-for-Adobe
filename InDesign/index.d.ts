@@ -1,3 +1,6 @@
+/// <reference path="../JavaScript/index.d.ts" />
+/// <reference path="../ScriptUI/index.d.ts" />
+
 /**
  * An assignment.
  */
