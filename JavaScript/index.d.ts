@@ -328,29 +328,29 @@ declare class Array<T> {
 	 * Removes the first element from the array, decreases the length by 1, and returns the value of the element.
 	 * Returns the value of the deleted array element.
 	 */
-	shift(): any;
+	shift(): T | undefined;
 
 	/**
 	 * Creates a new array, which contains a subset of the original array's elements.
 	 * The slice begins with the index start, and continues up to, but not including the index, end.If start or end is a negative number, the indexed is resolved counting backwards from the end of the array resulting in the element array[array. length + negativeIndex]. Returns a new array containing elements array[start] through array[end-1].
 	 */
-	slice(): Array;
+	slice(start?: number, end?: number): T[];
 
 	/**
 	 * Sorts the elements of the array in place, using the given function to compare to elements.
 	 * If no function is provided, the elements are sorted alphabetically.Returns no return value.
 	 * @param userFunction A user-supplied function of the form userFunction(a, b) which returns less than 0 if a is greater than b, 0 if a and b are equal, and greater than 0 if b is greater than a.
 	 */
-	sort(userFunction: Function): void;
+	sort(userFunction?: (a: T, b: T) => number): this;
 
 	/**
 	 * Removes num elements from the array beginning with index, start.
 	 * Optionally insert new elements beginning at index start.To ensure contiguity, elements are moved up to fill in any gaps.Returns a new array containing any elements deleted from the original array.
 	 * @param start The index of the first element to remove. Negative values are relative to the end of the array.
-	 * @param num The number of array elements to remove, including start. If omitted, all elements from array index start to the end of the array are removed.
-	 * @param value A list of one or more values to be added to the array starting at index start. Must specify a value for num, to use this argument.
+	 * @param deleteCount The number of array elements to remove, including start. If omitted, all elements from array index start to the end of the array are removed.
+	 * @param values A list of one or more values to be added to the array starting at index start. Must specify a value for num, to use this argument.
 	 */
-	splice(start: number, num?: number, value?: any): Array;
+	splice(start: number, deleteCount?: number, ...values?): T[];
 
 	/**
 	 * Converts an array to a string and returns the string (localized).
@@ -371,9 +371,9 @@ declare class Array<T> {
 	/**
 	 * Adds one or more elements to the beginning of the array.
 	 * Returns the new array length.
-	 * @param value The values of one or more elements to be added to the beginning of the array.
+	 * @param values The values of one or more elements to be added to the beginning of the array.
 	 */
-	unshift(value: any): number;
+	unshift(...values: T[]): number;
 
 }
 
