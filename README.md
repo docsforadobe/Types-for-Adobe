@@ -6,7 +6,6 @@ cd test
 npm init -y
 npm i types-for-adobe
 printf '{ "compilerOptions": { "module": "none", "noLib": true, "types": ["types-for-adobe/photoshop"] }, "exclude": ["node_modules"] }' > tsconfig.json
-
 ```
 
 ## Note
