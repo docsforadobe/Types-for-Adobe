@@ -7,6 +7,7 @@ npm init -y
 npm i pravdomil/types-for-adobe
 printf '{"compilerOptions":{"module":"none","noLib":true,"types":["types-for-adobe/photoshop"]},"exclude":["node_modules"]}' > tsconfig.json
 printf 'app.activeDocument' > index.ts
+# change tsconfig.json types value to Adobe product you're targeting
 # open index.ts your favourite TypeScript editor and start scripting
 ```
 
