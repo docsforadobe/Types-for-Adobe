@@ -1,3 +1,5 @@
+/// <reference path="../JavaScript/index.d.ts" />
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
