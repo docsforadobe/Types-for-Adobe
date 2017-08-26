@@ -277,7 +277,7 @@ declare class Object {
 /**
  * An array with integer indexing and a length property.
  */
-declare class Array {
+declare class Array<T> {
 	/**
 	 * The length of the array
 	 */
@@ -287,16 +287,16 @@ declare class Array {
 	 * Creates and returns a new array.
 	 * Takes any number of parameters, which become the elements of the array, or a single value which becomes the length of an empty array. Note that you cannot create a one-element array, as the single parameter value is interpreted as the length. Returns the new array.
 	 * @param length If no other parameters are passed, the initial length of the empty array. Otherwise, the first element.
-	 * @param element If there is more than one parameter, the array is initialized with the given parameters.
+	 * @param values If there is more than one parameter, the array is initialized with the given parameters.
 	 */
-	constructor(length: number, element?: any);
+	constructor(length: number, ...values: T[]);
 
 	/**
 	 * Returns a new array created by concatenating the given values to the end of the original array.
 	 * The original array is unchanged.If an array is provided as a parameter to concat(), each of its elements are appended as separate array elements at the end of the new array.Returns a new array, the result of concatenation the given values to the end of the original array.
-	 * @param value Any number of values to be added to the end of the array. Can also be arrays.
+	 * @param values Any number of values to be added to the end of the array. Can also be arrays.
 	 */
-	concat(value: any): Array;
+	concat(...values: T[][]): T[];
 
 	/**
 	 * Joins all elements of the array into a string; optionally, each element is separated by delimiter.
@@ -309,20 +309,20 @@ declare class Array {
 	 * Removes the last element from the array, decreases the length by 1, and returns the value of the element.
 	 * Returns the value of the deleted array element.
 	 */
-	pop(): any;
+	pop(): T | undefined;
 
 	/**
 	 * Places one or more values onto the end of the array and increases length by n.
 	 * Returns the new length of the array.
-	 * @param value Any number of values to be pushed onto the end of the array.
+	 * @param values Any number of values to be pushed onto the end of the array.
 	 */
-	push(value: number): number;
+	push(...values: T[]): number;
 
 	/**
 	 * Reverses the order of the elements in the array.
 	 * Returns the reversed array.
 	 */
-	reverse(): Array;
+	reverse(): T[];
 
 	/**
 	 * Removes the first element from the array, decreases the length by 1, and returns the value of the element.
