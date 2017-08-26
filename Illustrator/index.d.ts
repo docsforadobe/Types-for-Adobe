@@ -9212,7 +9212,7 @@ declare class Layer {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	move(relativeObject: Object, insertionLocation: ElementPlacement): Layer;
+	move(relativeObject: Object, insertionLocation: any): Layer;
 
 	/**
 	 * Deletes this object.
@@ -9716,7 +9716,7 @@ declare class Symbol {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: ElementPlacement): Symbol;
+	duplicate(relativeObject: Object, insertionLocation: any): Symbol;
 
 	/**
 	 * Deletes this object.
@@ -10009,14 +10009,14 @@ declare class PageItem {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: ElementPlacement): PageItem;
+	duplicate(relativeObject: Object, insertionLocation: any): PageItem;
 
 	/**
 	 * Move the object.
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	move(relativeObject: Object, insertionLocation: ElementPlacement): PageItem;
+	move(relativeObject: Object, insertionLocation: any): PageItem;
 
 	/**
 	 * Deletes this object.
@@ -11121,14 +11121,14 @@ declare class TextRange {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: ElementPlacement): TextRange;
+	duplicate(relativeObject: Object, insertionLocation: any): TextRange;
 
 	/**
 	 * Move the object.
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	move(relativeObject: Object, insertionLocation: ElementPlacement): TextRange;
+	move(relativeObject: Object, insertionLocation: any): TextRange;
 
 	/**
 	 * Deletes this object.
