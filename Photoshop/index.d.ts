@@ -4539,7 +4539,7 @@ declare class Documents {
 	 * @param bitsPerChannel The number of bits per channel.
 	 * @param colorProfileName The name of color profile for document.
 	 */
-	static add(width?: UnitValue | number, height?: UnitValue | number, resolution?: number, name?: string, mode?: NewDocumentMode, initialFill?: DocumentFill, pixelAspectRatio?: number, bitsPerChannel?: BitsPerChannelType, colorProfileName?: string): Document;
+	add(width?: UnitValue | number, height?: UnitValue | number, resolution?: number, name?: string, mode?: NewDocumentMode, initialFill?: DocumentFill, pixelAspectRatio?: number, bitsPerChannel?: BitsPerChannelType, colorProfileName?: string): Document;
 
 	/**
 	 * Get the first element in the collection with the provided name.
