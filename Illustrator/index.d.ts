@@ -10205,7 +10205,7 @@ declare class PathItem extends PageItem {
 	/**
 	 * All the selected points in the path.
 	 */
-	readonly selectedPathPoints: ObjectArray;
+	readonly selectedPathPoints: PathPoints;
 
 	/**
 	 * Type of line capping.
@@ -10679,7 +10679,7 @@ declare class TextPath {
 	/**
 	 * All the selected points in the path.
 	 */
-	readonly selectedPathPoints: ObjectArray;
+	readonly selectedPathPoints: PathPoints;
 
 	/**
 	 * Type of line capping.
