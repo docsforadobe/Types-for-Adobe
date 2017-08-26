@@ -101,9 +101,9 @@ declare function isXMLName(name: string): boolean;
 /**
  * Localizes a ZString-encoded string and merges additional arguments into the string.
  * @param what The string to localize. A ZString-encoded string that can contain placeholder for additional arguments in the form %1 to %n.
- * @param argument Optional argument(s) to be merged into the string.
+ * @param arguments Optional argument(s) to be merged into the string. There may be more than one argument.
  */
-declare function localize(what: string, argument?: any): string;
+declare function localize(what: string, ...arguments: any[]): string;
 
 /**
  * Extracts a floating-point number from a string.
