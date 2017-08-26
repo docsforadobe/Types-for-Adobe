@@ -1194,16 +1194,23 @@ declare class Number {
 
 }
 
+interface BooleanConstructor {
+  new(value?: any): Boolean;
+  readonly prototype: Boolean;
+
+  /**
+   * Creates and returns a new Boolean object set to the value of the argument converted to a boolean.
+   * @param value The value to be converted to a Boolean.
+   */
+  (value: any): boolean;
+  
+}
+declare const Boolean: BooleanConstructor;
+
 /**
  * Wraps a Boolean value.
  */
-declare class Boolean {
-	/**
-	 * Creates and returns a new Boolean object set to the value of the argument converted to a boolean.
-	 * @param value The value to be converted to a Boolean.
-	 */
-	constructor(value: any);
-
+interface Boolean {
 	/**
 	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
 	 */
