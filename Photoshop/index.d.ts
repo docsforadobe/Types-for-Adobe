@@ -7630,7 +7630,7 @@ declare class Application {
 	/**
 	 * Uses the Photoshop open dialog to select files.
 	 */
-	openDialog(): FileArray;
+	openDialog(): File[];
 
 	/**
 	 * Purges one or more caches.
