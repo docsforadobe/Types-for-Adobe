@@ -4539,7 +4539,7 @@ declare class Documents {
 	 * @param bitsPerChannel The number of bits per channel.
 	 * @param colorProfileName The name of color profile for document.
 	 */
-	static add(width?: UnitValue, height?: UnitValue, resolution?: number, name?: string, mode?: NewDocumentMode, initialFill?: DocumentFill, pixelAspectRatio?: number, bitsPerChannel?: BitsPerChannelType, colorProfileName?: string): Document;
+	static add(width?: UnitValue | number, height?: UnitValue | number, resolution?: number, name?: string, mode?: NewDocumentMode, initialFill?: DocumentFill, pixelAspectRatio?: number, bitsPerChannel?: BitsPerChannelType, colorProfileName?: string): Document;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4740,7 +4740,7 @@ declare class Guides {
 	 * @param direction Indicates whether the guide is vertical or horizontal.
 	 * @param coordinate Location of the guide from origin of image.
 	 */
-	static add(direction: Direction, coordinate: UnitValue): Guide;
+	static add(direction: Direction, coordinate: UnitValue | number): Guide;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5199,7 +5199,7 @@ declare class GenericPDFOpenOptions extends OpenOptions {
 	/**
 	 * DEPRECATED.
 	 */
-	static height: UnitValue;
+	static height: UnitValue | number;
 
 	/**
 	 * The document mode.
@@ -5244,7 +5244,7 @@ declare class GenericPDFOpenOptions extends OpenOptions {
 	/**
 	 * DEPRECATED.
 	 */
-	static width: UnitValue;
+	static width: UnitValue | number;
 
 }
 
@@ -5265,7 +5265,7 @@ declare class GenericEPSOpenOptions extends OpenOptions {
 	/**
 	 * The image height.
 	 */
-	static height: UnitValue;
+	static height: UnitValue | number;
 
 	/**
 	 * The document mode.
@@ -5280,7 +5280,7 @@ declare class GenericEPSOpenOptions extends OpenOptions {
 	/**
 	 * The image width.
 	 */
-	static width: UnitValue;
+	static width: UnitValue | number;
 
 }
 
@@ -7819,7 +7819,7 @@ declare class Document {
 	/**
 	 * The height of the document.
 	 */
-	readonly height: UnitValue;
+	readonly height: UnitValue | number;
 
 	/**
 	 * A histogram showing the number of pixels at each color intensity level for the composite channel.
@@ -7930,7 +7930,7 @@ declare class Document {
 	/**
 	 * The width of the document.
 	 */
-	readonly width: UnitValue;
+	readonly width: UnitValue | number;
 
 	/**
 	 * The XMP properties of the document. The Camera RAW settings are stored here.
@@ -7973,7 +7973,7 @@ declare class Document {
 	 * @param width The width of the resulting document.
 	 * @param height The height of the resulting document.
 	 */
-	crop(bounds: UnitRect, angle?: number, width?: UnitValue, height?: UnitValue): void;
+	crop(bounds: UnitRect, angle?: number, width?: UnitValue | number, height?: UnitValue | number): void;
 
 	/**
 	 * Creates a duplicate of the document object.
@@ -8057,7 +8057,7 @@ declare class Document {
 	 * @param height The desired height of the canvas.
 	 * @param anchor The anchor point to resize around.
 	 */
-	resizeCanvas(width?: UnitValue, height?: UnitValue, anchor?: AnchorPosition): void;
+	resizeCanvas(width?: UnitValue | number, height?: UnitValue | number, anchor?: AnchorPosition): void;
 
 	/**
 	 * Changes the size of the image.
@@ -8067,7 +8067,7 @@ declare class Document {
 	 * @param resampleMethod The downsample method.
 	 * @param amount Amount of noise value when using preserve details (range: 0 - 100)
 	 */
-	resizeImage(width?: UnitValue, height?: UnitValue, resolution?: number, resampleMethod?: ResampleMethod, amount?: number): void;
+	resizeImage(width?: UnitValue | number, height?: UnitValue | number, resolution?: number, resampleMethod?: ResampleMethod, amount?: number): void;
 
 	/**
 	 * Expands the document to show clipped sections.
@@ -8558,7 +8558,7 @@ declare class DocumentPrintSettings {
 	/**
 	 * Bleed width.
 	 */
-	bleedWidth: UnitValue;
+	bleedWidth: UnitValue | number;
 
 	/**
 	 * Description field from File Info.
@@ -8633,17 +8633,17 @@ declare class DocumentPrintSettings {
 	/**
 	 * X position of image on page.
 	 */
-	readonly posX: UnitValue;
+	readonly posX: UnitValue | number;
 
 	/**
 	 * Y position of image on page.
 	 */
-	readonly posY: UnitValue;
+	readonly posY: UnitValue | number;
 
 	/**
 	 * Width of the print border.
 	 */
-	printBorder: UnitValue;
+	printBorder: UnitValue | number;
 
 	/**
 	 * Color space for printer. Can be nothing (meaning same as source) or a string specifying a specific color profile.
@@ -8692,7 +8692,7 @@ declare class DocumentPrintSettings {
 	 * @param posY Y position of image on page.
 	 * @param scale Position of the image on page when printing. Can be centered, scale to fit, or user defined.
 	 */
-	setPagePosition(docPosition: DocPositionStyle, posX?: UnitValue, posY?: UnitValue, scale?: number): void;
+	setPagePosition(docPosition: DocPositionStyle, posX?: UnitValue | number, posY?: UnitValue | number, scale?: number): void;
 
 }
 
@@ -8729,7 +8729,7 @@ declare class Selection {
 	 * Contracts the selection.
 	 * @param by The amount to contract the selection.
 	 */
-	contract(by: UnitValue): void;
+	contract(by: UnitValue | number): void;
 
 	/**
 	 * Copies the selection to the clipboard.
@@ -8751,13 +8751,13 @@ declare class Selection {
 	 * Expands the selection.
 	 * @param by The amount to expand the selection.
 	 */
-	expand(by: UnitValue): void;
+	expand(by: UnitValue | number): void;
 
 	/**
 	 * Feathers the edges of the selection.
 	 * @param by The amount to feather the edge.
 	 */
-	feather(by: UnitValue): void;
+	feather(by: UnitValue | number): void;
 
 	/**
 	 * Fills the selection.
@@ -8842,7 +8842,7 @@ declare class Selection {
 	 * Selects the selection border only (in the specified width); subsequent actions do not affect the selected area within the borders.
 	 * @param width The width of the border selection.
 	 */
-	selectBorder(width: UnitValue): void;
+	selectBorder(width: UnitValue | number): void;
 
 	/**
 	 * Grows the selection to include pixels throughout the image falling within the tolerance range.
@@ -8880,14 +8880,14 @@ declare class Selection {
 	 * @param deltaX The amount to move the object horizontally.
 	 * @param deltaY The amount to move the object vertically.
 	 */
-	translate(deltaX?: UnitValue, deltaY?: UnitValue): void;
+	translate(deltaX?: UnitValue | number, deltaY?: UnitValue | number): void;
 
 	/**
 	 * Moves the boundary of selection relative to its current position.
 	 * @param deltaX The amount to move the object horizontally.
 	 * @param deltaY The amount to move the object vertically.
 	 */
-	translateBoundary(deltaX?: UnitValue, deltaY?: UnitValue): void;
+	translateBoundary(deltaX?: UnitValue | number, deltaY?: UnitValue | number): void;
 
 }
 
@@ -9207,7 +9207,7 @@ declare class ArtLayer extends Layer {
 	 * @param vertical The amount (in pixels) to move the selection vertically (downward). Range: -6144 to 6144.
 	 * @param undefinedAreas The method for filling areas left blank by the offset.
 	 */
-	applyOffset(horizontal: UnitValue, vertical: UnitValue, undefinedAreas: OffsetUndefinedAreas): void;
+	applyOffset(horizontal: UnitValue | number, vertical: UnitValue | number, undefinedAreas: OffsetUndefinedAreas): void;
 
 	/**
 	 * Applies the pinch filter.
@@ -9576,7 +9576,7 @@ declare class Layer {
 	 * @param deltaX The amount to move the object horizontally.
 	 * @param deltaY The amount to move the object vertically.
 	 */
-	translate(deltaX?: UnitValue, deltaY?: UnitValue): void;
+	translate(deltaX?: UnitValue | number, deltaY?: UnitValue | number): void;
 
 	/**
 	 * Unlinks the layer.
@@ -9671,7 +9671,7 @@ declare class Guide {
 	/**
 	 * Location of the guide from origin of image.
 	 */
-	coordinate: UnitValue;
+	coordinate: UnitValue | number;
 
 	/**
 	 * Indicates whether the guide is vertical or horizontal.
@@ -9789,7 +9789,7 @@ declare class TextItem {
 	/**
 	 * The amount of baseline offset of text.
 	 */
-	baselineShift: UnitValue;
+	baselineShift: UnitValue | number;
 
 	/**
 	 * The case of the text.
@@ -9839,7 +9839,7 @@ declare class TextItem {
 	/**
 	 * The amount to indent the first line of paragraphs. Range: -1296 to 1296.
 	 */
-	firstLineIndent: UnitValue;
+	firstLineIndent: UnitValue | number;
 
 	/**
 	 * The text face of the character.
@@ -9854,7 +9854,7 @@ declare class TextItem {
 	/**
 	 * The height of the bounding box for paragraph text.
 	 */
-	height: UnitValue;
+	height: UnitValue | number;
 
 	/**
 	 * Character scaling (horizontal) in proportion to horizontal scale. Range: 0 - 1000 as a percentage.
@@ -9894,7 +9894,7 @@ declare class TextItem {
 	/**
 	 * The distance at the end of a line that will cause a word to break in unjustified type. Range: 0 - 720 picas.
 	 */
-	hyphenationZone: UnitValue;
+	hyphenationZone: UnitValue | number;
 
 	/**
 	 * The paragraph justification.
@@ -9914,12 +9914,12 @@ declare class TextItem {
 	/**
 	 * The leading amount.
 	 */
-	leading: UnitValue;
+	leading: UnitValue | number;
 
 	/**
 	 * The amount to indent text from the left. Range: -1296 to 1296.
 	 */
-	leftIndent: UnitValue;
+	leftIndent: UnitValue | number;
 
 	/**
 	 * If true, ligatures are used.
@@ -9979,22 +9979,22 @@ declare class TextItem {
 	/**
 	 * The amount to indent text from the right. Range: -1296 to 1296.
 	 */
-	rightIndent: UnitValue;
+	rightIndent: UnitValue | number;
 
 	/**
 	 * The font size in points.
 	 */
-	size: UnitValue;
+	size: UnitValue | number;
 
 	/**
 	 * The amount of space after each paragraph. Range: -1296 to 1296.
 	 */
-	spaceAfter: UnitValue;
+	spaceAfter: UnitValue | number;
 
 	/**
 	 * The amount of space before each paragraph. Range: -1296 to 1296.
 	 */
-	spaceBefore: UnitValue;
+	spaceBefore: UnitValue | number;
 
 	/**
 	 * The strike through option to use.
@@ -10059,7 +10059,7 @@ declare class TextItem {
 	/**
 	 * The width of the bounding box for paragraph text.
 	 */
-	width: UnitValue;
+	width: UnitValue | number;
 
 	/**
 	 * Converts the text object and its containing layer to a fill layer with the text changed to a clipping path.
@@ -10632,5 +10632,5 @@ declare enum ElementPlacement {
 
 }
 
-type UnitPoint = [number, number];
-type UnitRect = [number, number, number, number];
+type UnitPoint = [UnitValue | number, UnitValue | number];
+type UnitRect = [UnitValue | number, UnitValue | number, UnitValue | number, UnitValue | number];
