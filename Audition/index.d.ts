@@ -1,6 +1,4 @@
-/// <reference path="../JavaScript/index.d.ts" />
-
-declare var app: Application;
+/// <reference path="../global/index.d.ts" />
 
 /**
  * This events propagates changes of the Audition transport like e.g. playback started.
