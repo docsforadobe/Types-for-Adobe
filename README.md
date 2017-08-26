@@ -1,4 +1,4 @@
-# TypeScript definitions for Adobe Products
+# Use TypeScript for Adobe Products
 ## Usage
 ```
 mkdir test
