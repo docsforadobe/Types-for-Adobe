@@ -1153,7 +1153,7 @@ declare class String {
 	 * Matches a string against a regular expression.
 	 * @param regexp The regular expression to use.
 	 */
-	match(regexp: RegExp): Array;
+	match(regexp: RegExp): RegExpMatchArray | null;
 
 	/**
 	 * 
@@ -1259,6 +1259,11 @@ declare class String {
 	 */
 	valueOf(): string;
 
+}
+
+interface RegExpMatchArray extends Array<string> {
+	index?: number;
+	input?: string;
 }
 
 /**
