@@ -1060,7 +1060,7 @@ interface String {
 	 * Returns a string containing the characters beginning at the specified index, start, through the specified number of characters.
 	 * The original string is unchanged.Returns a string containing the extracted characters.
 	 * @param start Location at which to begin extracting characters.
-	 * @param length  The number of characters to extract.
+	 * @param length The number of characters to extract.
 	 */
 	substr(start: number, length: number): string;
 
@@ -1068,7 +1068,7 @@ interface String {
 	 * Returns a substring of the given string by extracting characters from indexA up to but not including indexB.
 	 * The original string is unchanged.Returns a substring of characters from the given string, starting at indexA and ending with indexB-1.
 	 * @param indexA The index to begin extracting.
-	 * @param indexB  The index at which to end extraction. If omitted, slice extracts to the end of the string.
+	 * @param indexB The index at which to end extraction. If omitted, slice extracts to the end of the string.
 	 */
 	substring(indexA: number, indexB: number): string;
 
