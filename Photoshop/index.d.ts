@@ -5490,7 +5490,7 @@ declare enum SaveOptions {
 /**
  * Options for saving a Photoshop document.
  */
-declare class PhotoshopSaveOptions extends SaveOptions {
+declare class PhotoshopSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5521,7 +5521,7 @@ declare class PhotoshopSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in BMP format.
  */
-declare class BMPSaveOptions extends SaveOptions {
+declare class BMPSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5552,7 +5552,7 @@ declare class BMPSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in GIF format.
  */
-declare class GIFSaveOptions extends SaveOptions {
+declare class GIFSaveOptions {
 	/**
 	 * The number of colors in palette. Not valid for all palette types.
 	 */
@@ -5603,7 +5603,7 @@ declare class GIFSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in EPS format.
  */
-declare class EPSSaveOptions extends SaveOptions {
+declare class EPSSaveOptions {
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
@@ -5654,7 +5654,7 @@ declare class EPSSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in JPEG format.
  */
-declare class JPEGSaveOptions extends SaveOptions {
+declare class JPEGSaveOptions {
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
@@ -5685,7 +5685,7 @@ declare class JPEGSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in PDF format.
  */
-declare class PDFSaveOptions extends SaveOptions {
+declare class PDFSaveOptions {
 	/**
 	 * The PDF version to make the document compatible with.
 	 */
@@ -5851,7 +5851,7 @@ declare class PDFSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in PICT format.
  */
-declare class PICTFileSaveOptions extends SaveOptions {
+declare class PICTFileSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5877,7 +5877,7 @@ declare class PICTFileSaveOptions extends SaveOptions {
 /**
  * Options for saving a document as a PICT resource file.
  */
-declare class PICTResourceSaveOptions extends SaveOptions {
+declare class PICTResourceSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5913,7 +5913,7 @@ declare class PICTResourceSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in Pixar format.
  */
-declare class PixarSaveOptions extends SaveOptions {
+declare class PixarSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5924,7 +5924,7 @@ declare class PixarSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in PNG format.
  */
-declare class PNGSaveOptions extends SaveOptions {
+declare class PNGSaveOptions {
 	/**
 	 * Compression used on the image.
 	 */
@@ -5940,7 +5940,7 @@ declare class PNGSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in RAW format.
  */
-declare class RawSaveOptions extends SaveOptions {
+declare class RawSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5956,7 +5956,7 @@ declare class RawSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in SGI RGB format.
  */
-declare class SGIRGBSaveOptions extends SaveOptions {
+declare class SGIRGBSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5972,7 +5972,7 @@ declare class SGIRGBSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in TGA (Targa) format.
  */
-declare class TargaSaveOptions extends SaveOptions {
+declare class TargaSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -5993,7 +5993,7 @@ declare class TargaSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in TIFF format.
  */
-declare class TiffSaveOptions extends SaveOptions {
+declare class TiffSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
@@ -6059,7 +6059,7 @@ declare class TiffSaveOptions extends SaveOptions {
 /**
  * Options for saving a document in Photoshop DCS 1.0 format.
  */
-declare class DCS1_SaveOptions extends SaveOptions {
+declare class DCS1_SaveOptions {
 	/**
 	 * The DCS type.
 	 */
@@ -6105,7 +6105,7 @@ declare class DCS1_SaveOptions extends SaveOptions {
 /**
  * Options for saving a document in Photoshop DCS 2.0 format.
  */
-declare class DCS2_SaveOptions extends SaveOptions {
+declare class DCS2_SaveOptions {
 	/**
 	 * The DCS type.
 	 */
