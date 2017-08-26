@@ -2510,7 +2510,7 @@ declare class XML {
 	 * Returns an array of Namespace objects mirroring the current list of valid namespaces at this element.
 	 * The last element of thereturned array is the default namespace.
 	 */
-	inScopeNamespaces(): Array<Namespace>;
+	inScopeNamespaces(): Namespace[];
 
 	/**
 	 * Inserts the given child2 after the given child1 in this XML object and returns this XML object.
@@ -2552,7 +2552,7 @@ declare class XML {
 	/**
 	 * Returns an array containing all namespace declarations of this XML object.
 	 */
-	namespaceDeclarations(): Array<Namespace>;
+	namespaceDeclarations(): Namespace[];
 
 	/**
 	 * Returns the type of this XML object as one of the strings "element", "attribute", "comment", "processing-instruction", or "text".
