@@ -1,5 +1,7 @@
 /// <reference path="../JavaScript/index.d.ts" />
 
+declare var app: Application;
+
 /**
  * This events propagates changes of the Audition transport like e.g. playback started.
  */
@@ -265,7 +267,7 @@ declare class WaveDocument {
 	/**
 	 * Returns an array of marker objects. Each marker object consists of the properties 'start' 'length' 'name' 'description' and 'type'.
 	 */
-	readonly markers: Array;
+	readonly markers: any[];
 
 	/**
 	 * Returns the document's current metadata as a vanilla Object. Each property is readonly and represents an metadata entry.
@@ -364,7 +366,7 @@ declare class AMEFormatsEvent {
 	/**
 	 * The formats available for running an export.
 	 */
-	readonly formats: Array;
+	readonly formats: any[];
 
 }
 
@@ -386,7 +388,7 @@ declare class AMEFormat {
 	 * Request the available user match source and system presets for this format from Adobe Media Encoder. An event with type AMEPresetsEvent.EVENT_RequestPresetsSuccess or AMEPresetsEvent.EVENT_RequestPresetsError will be sent to notify about success or failure.
 	 * Request the available presets for this format from AME.
 	 */
-	requestPresets(): Array;
+	requestPresets(): any[];
 
 }
 
@@ -3368,7 +3370,7 @@ declare class Application {
 	/**
 	 * Get currently opened documents
 	 */
-	readonly documents: Array;
+	readonly documents: Document[];
 
 	/**
 	 * Path of the application executable.
@@ -3452,7 +3454,7 @@ declare class AMEServer {
 	 * @param temporaryFilesDir 
 	 * @param outputFile Add the selected tracks of a multitrack document to the AME queue. The routing information is passed in as an array of tracks. The first track in the array will be routed to the first channels in the output file. A channel can be left unassigned by adding null to the array "trackRouting". Beside the final output file you have to specify a directory to store temporary wave files as well as the temporary project file. The temporary files will be deleted by AME after the export has been completed. An event with type AMEAddMultitrackDocumentToQueueEvent.EVENT_ADDMULTITRACKDOCUMENTTOQUEUE_SUCCESS or AMEAddMultitrackDocumentToQueueEvent.EVENT_ADDMULTITRACKDOCUMENTTOQUEUE_ERROR will be sent to notify about success or failure. Add the selected tracks of a multitrack document to the AME queue.
 	 */
-	addMultitrackDocumentAndRoutingToQueue(multitrackDocument: Document, trackRouting: Array, preset: AMEPreset, temporaryFilesDir: string, outputFile: string): boolean;
+	addMultitrackDocumentAndRoutingToQueue(multitrackDocument: Document, trackRouting: any[], preset: AMEPreset, temporaryFilesDir: string, outputFile: string): boolean;
 
 	/**
 	 * Connect to AME. An event with type DynamicLinkConnectionEvent.EVENT_CONNECTION will be sent to notify about success or failure.
@@ -3535,17 +3537,17 @@ declare class AMEPresetsEvent {
 	/**
 	 * Available match source presets for this format.
 	 */
-	readonly matchSourcePresets: Array;
+	readonly matchSourcePresets: any[];
 
 	/**
 	 * Available system presets for this format.
 	 */
-	readonly systemPresets: Array;
+	readonly systemPresets: any[];
 
 	/**
 	 * Available user presets for this format.
 	 */
-	readonly userPresets: Array;
+	readonly userPresets: any[];
 
 }
 
