@@ -1261,11 +1261,6 @@ declare class String {
 
 }
 
-interface RegExpMatchArray extends Array<string> {
-	index?: number;
-	input?: string;
-}
-
 /**
  * Wraps a numeric value.
  */
@@ -1491,6 +1486,11 @@ declare class RegExp {
 	 */
 	toString(): string;
 
+}
+
+interface RegExpMatchArray extends Array<string> {
+	index?: number;
+	input?: string;
 }
 
 /**
