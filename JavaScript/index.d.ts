@@ -1473,7 +1473,7 @@ declare class RegExp {
 	 * The return value is an array of matches, with the first element containing the match, and successive elements containing the results of any matching subexpression in their order of appearance. If there is no match, the result is null.
 	 * @param text The string to match.
 	 */
-	exec(text: string): Array;
+	exec(text: string): RegExpExecArray | null;
 
 	/**
 	 * Execute a regular expression, and return true if there is a match.
@@ -1491,6 +1491,11 @@ declare class RegExp {
 interface RegExpMatchArray extends Array<string> {
 	index?: number;
 	input?: string;
+}
+
+interface RegExpExecArray extends Array<string> {
+	index: number;
+	input: string;
 }
 
 /**
