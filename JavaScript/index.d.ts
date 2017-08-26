@@ -1118,41 +1118,47 @@ interface String {
 
 }
 
-/**
- * Wraps a numeric value.
- */
-declare class Number {
-	/**
-	 * A constant representing the largest representable number.
-	 */
-	static readonly MAX_VALUE: number;
-
-	/**
-	 * A constant representing the smallest representable number.
-	 */
-	static readonly MIN_VALUE: number;
-
-	/**
-	 * A constant representing negative infinity.
-	 */
-	static readonly NEGATIVE_INFINITY: number;
-
-	/**
-	 * A constant representing the special "Not a Number" value.
-	 */
-	static readonly NaN: number;
-
-	/**
-	 * A constant representing positive infinity.
-	 */
-	static readonly POSITIVE_INFINITY: number;
+interface NumberConstructor {
+	new(value?: any): Number;
+	readonly prototype: Number;
 
 	/**
 	 * Returns a new Number object set to the value of the argument converted to a number.
 	 * @param value The value of the object being created.
 	 */
-	constructor(value: any);
+	(value: any): number;
+	
+	/**
+	 * A constant representing the largest representable number.
+	 */
+	readonly MAX_VALUE: number;
 
+	/**
+	 * A constant representing the smallest representable number.
+	 */
+	readonly MIN_VALUE: number;
+
+	/**
+	 * A constant representing negative infinity.
+	 */
+	readonly NEGATIVE_INFINITY: number;
+
+	/**
+	 * A constant representing the special "Not a Number" value.
+	 */
+	readonly NaN: number;
+
+	/**
+	 * A constant representing positive infinity.
+	 */
+	readonly POSITIVE_INFINITY: number;
+}
+declare const Number: NumberConstructor;
+
+/**
+ * Wraps a numeric value.
+ */
+interface Number {
 	/**
 	 * Converts the Number object to a string in scientific notation.
 	 * @param decimals The number of decimals.
