@@ -1,4 +1,7 @@
 # Use TypeScript for Adobe Products
+## Prerequisites
+Install [Node.js](https://nodejs.org/en/download/) and [TypeScript](https://www.typescriptlang.org/#download-links).
+
 ## Usage
 ```
 mkdir test
