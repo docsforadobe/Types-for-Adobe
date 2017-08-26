@@ -3,18 +3,6 @@
  */
 declare class $ {
 	/**
-	 * The most recent run-time error information.
-	 * Assigning error text to this property generates a run-time error; however, the preferred way to generate a run-time error is to throw an Error object.
-	 */
-	static error: Error;
-
-	/**
-	 * The version number of the ExtendScript engine.
-	 * Formatted as a three-part number and description; for example: "3.92.95 (debug)".
-	 */
-	static readonly version: string;
-
-	/**
 	 * The ExtendScript build information.
 	 */
 	static readonly build: string;
@@ -25,20 +13,25 @@ declare class $ {
 	static readonly buildDate: Date;
 
 	/**
-	 * A reference to the global object, which contains the JavaScript global namespace.
+	 * The character used as the decimal point character in formatted numeric output.
 	 */
-	static readonly global: Object;
+	static decimalPoint: string;
 
 	/**
-	 * The current stack trace.
+	 * The name of the current ExtendScript engine, if set.
 	 */
-	static readonly stack: string;
+	static readonly engineName: string;
 
 	/**
-	 * The current debugging level, which enables or disables the JavaScript debugger.
-	 * One of 0 (no debugging), 1 (break on runtime errors), or 2 (full debug mode).
+	 * The most recent run-time error information.
+	 * Assigning error text to this property generates a run-time error; however, the preferred way to generate a run-time error is to throw an Error object.
 	 */
-	static level: number;
+	static error: Error;
+
+	/**
+	 * The file name of the current script.
+	 */
+	static readonly fileName: string;
 
 	/**
 	 * Gets or sets low-level debug output flags.
@@ -52,10 +45,31 @@ declare class $ {
 	static flags: number;
 
 	/**
-	 * Sets or clears strict mode for object modification.
-	 * When true, any attempt to write to a read-only property causes a runtime error. Some objects do not permit the creation of new properties when true.
+	 * A reference to the global object, which contains the JavaScript global namespace.
 	 */
-	static strict: any;
+	static readonly global: Object;
+
+	/**
+	 * A high-resolution timer, measuring the time in microseconds. The timer starts when ExtendScript is
+	 * initialized during the application startup sequence. Every read access resets the timer to Zero.
+	 */
+	static readonly hiresTimer: number;
+
+	/**
+	 * The path for include files for the current script.
+	 */
+	static readonly includePath: string;
+
+	/**
+	 * The current debugging level, which enables or disables the JavaScript debugger.
+	 * One of 0 (no debugging), 1 (break on runtime errors), or 2 (full debug mode).
+	 */
+	static level: number;
+
+	/**
+	 * The current line number of the currently executing script.
+	 */
+	static readonly line: number;
 
 	/**
 	 * Gets or sets the current locale.
@@ -69,14 +83,14 @@ declare class $ {
 	static localize: boolean;
 
 	/**
-	 * The character used as the decimal point character in formatted numeric output.
-	 */
-	static decimalPoint: string;
-
-	/**
 	 * The ExtendScript memory cache size, in bytes.
 	 */
 	static memCache: number;
+
+	/**
+	 * The current operating system version information.
+	 */
+	static readonly os: string;
 
 	/**
 	 * An array of objects containing information about the display screens attached to your computer.
@@ -85,35 +99,21 @@ declare class $ {
 	static readonly screens: Object[];
 
 	/**
-	 * The current operating system version information.
+	 * The current stack trace.
 	 */
-	static readonly os: string;
+	static readonly stack: string;
 
 	/**
-	 * The file name of the current script.
+	 * Sets or clears strict mode for object modification.
+	 * When true, any attempt to write to a read-only property causes a runtime error. Some objects do not permit the creation of new properties when true.
 	 */
-	static readonly fileName: string;
+	static strict: any;
 
 	/**
-	 * The current line number of the currently executing script.
+	 * The version number of the ExtendScript engine.
+	 * Formatted as a three-part number and description; for example: "3.92.95 (debug)".
 	 */
-	static readonly line: number;
-
-	/**
-	 * A high-resolution timer, measuring the time in microseconds. The timer starts when ExtendScript is
-	 * initialized during the application startup sequence. Every read access resets the timer to Zero.
-	 */
-	static readonly hiresTimer: number;
-
-	/**
-	 * The name of the current ExtendScript engine, if set.
-	 */
-	static readonly engineName: string;
-
-	/**
-	 * The path for include files for the current script.
-	 */
-	static readonly includePath: string;
+	static readonly version: string;
 
 	/**
 	 * Shows an About box for the ExtendScript component, and returns the text for the box.
@@ -121,27 +121,28 @@ declare class $ {
 	static about(): string;
 
 	/**
-	 * Converts this object to a string.
-	 */
-	static toString(): string;
-
-	/**
-	 * Prints text to the Console.
-	 * @param text The text to print. All arguments are concatenated.
-	 */
-	static write(text: any): void;
-
-	/**
-	 * Prints text to the Console, and adds a newline character.
-	 * @param text The text to print. All arguments are concatenated.
-	 */
-	static writeln(text: any): void;
-
-	/**
 	 * Breaks execution at the current position.
 	 * @param condition A string containing a JavaScript statement to be used as a condition. If the statement evaluates to true or nonzero when this point is reached, execution stops.
 	 */
 	static bp(condition?: any): void;
+
+	/**
+	 * Invokes the platform-specific color selection dialog, and returns the selected color.
+	 * @param color The color to be preselected in the dialog, as 0xRRGGBB, or -1 for the platform default.
+	 */
+	static colorPicker(color: number): number;
+
+	/**
+	 * Loads and evaluates a file.
+	 * @param file The file to load.
+	 * @param timeout An optional timeout in milliseconds.
+	 */
+	static evalFile(file: File, timeout?: number): any;
+
+	/**
+	 * Initiates garbage collection in the ExtendScript engine.
+	 */
+	static gc(): void;
 
 	/**
 	 * Retrieves the value of an environment variable.
@@ -164,22 +165,21 @@ declare class $ {
 	static sleep(msecs: number): void;
 
 	/**
-	 * Invokes the platform-specific color selection dialog, and returns the selected color.
-	 * @param color The color to be preselected in the dialog, as 0xRRGGBB, or -1 for the platform default.
+	 * Converts this object to a string.
 	 */
-	static colorPicker(color: number): number;
+	static toString(): string;
 
 	/**
-	 * Loads and evaluates a file.
-	 * @param file The file to load.
-	 * @param timeout An optional timeout in milliseconds.
+	 * Prints text to the Console.
+	 * @param text The text to print. All arguments are concatenated.
 	 */
-	static evalFile(file: File, timeout?: number): any;
+	static write(text: any): void;
 
 	/**
-	 * Initiates garbage collection in the ExtendScript engine.
+	 * Prints text to the Console, and adds a newline character.
+	 * @param text The text to print. All arguments are concatenated.
 	 */
-	static gc(): void;
+	static writeln(text: any): void;
 
 }
 
@@ -188,16 +188,10 @@ declare class $ {
  */
 declare class Object {
 	/**
-	 * Creates and returns a new object of a given type.
-	 * @param what The object type.
+	 * Points to the constructor function that created this object.
+	 * Note that this property is treated as an XML element in the XML class.
 	 */
-	constructor(what: any);
-
-	/**
-	 * Reports whether an object is still valid.
-	 * @param what The object to check.
-	 */
-	static isValid(what: Object): boolean;
+	readonly 'constructor': Function;
 
 	/**
 	 * Points to the prototype object for this object.
@@ -206,27 +200,16 @@ declare class Object {
 	readonly prototype: Object;
 
 	/**
-	 * Points to the constructor function that created this object.
-	 * Note that this property is treated as an XML element in the XML class.
-	 */
-	readonly 'constructor': Function;
-
-	/**
 	 * Retrieves and returns the Reflection object associated with this method or a property.
 	 * Note that this property is treated as an XML element in the XML class.
 	 */
 	readonly reflect: Reflection;
 
 	/**
-	 * Creates and returns a string representing this object.
-	 * Many objects (such as Date) override this method in favor of their own implementation. If an object has no string value and no user-defined toString() method, the default method returns [object type], where type is the object type or the name of the constructor function that created the object.
+	 * Creates and returns a new object of a given type.
+	 * @param what The object type.
 	 */
-	toString(): string;
-
-	/**
-	 * Creates and returns a string representing this object, localized for the current locale. See toString().
-	 */
-	toLocaleString(): string;
+	constructor(what: any);
 
 	/**
 	 * Reports whether a given property is defined with an instance or within the prototype chain.
@@ -235,22 +218,27 @@ declare class Object {
 	hasOwnProperty(name: string): boolean;
 
 	/**
-	 * Reports whether a given property is enumerable.
-	 * @param name The name of the property to check.
-	 */
-	propertyIsEnumerable(name: string): boolean;
-
-	/**
 	 * Checks whether the given object is a prototype of this object.
 	 * @param what The object to check.
 	 */
 	isPrototypeOf(what: Object): boolean;
 
 	/**
-	 * Retrieves and returns the primitive value of this object.
-	 * If the object has no primitive value, returns the object itself.Note that you rarely need to call this method yourself.The JavaScript interpreter automatically invokes it when encountering an object where a primitive value is expected.
+	 * Reports whether an object is still valid.
+	 * @param what The object to check.
 	 */
-	valueOf(): Object;
+	static isValid(what: Object): boolean;
+
+	/**
+	 * Reports whether a given property is enumerable.
+	 * @param name The name of the property to check.
+	 */
+	propertyIsEnumerable(name: string): boolean;
+
+	/**
+	 * Creates and returns a string representing this object, localized for the current locale. See toString().
+	 */
+	toLocaleString(): string;
 
 	/**
 	 * Creates and returns a string representation of this object.
@@ -259,10 +247,22 @@ declare class Object {
 	toSource(): string;
 
 	/**
+	 * Creates and returns a string representing this object.
+	 * Many objects (such as Date) override this method in favor of their own implementation. If an object has no string value and no user-defined toString() method, the default method returns [object type], where type is the object type or the name of the constructor function that created the object.
+	 */
+	toString(): string;
+
+	/**
 	 * Removes the watch function of a property.
 	 * @param name The name of the property to unwatch.
 	 */
 	unwatch(name: string): void;
+
+	/**
+	 * Retrieves and returns the primitive value of this object.
+	 * If the object has no primitive value, returns the object itself.Note that you rarely need to call this method yourself.The JavaScript interpreter automatically invokes it when encountering an object where a primitive value is expected.
+	 */
+	valueOf(): Object;
 
 	/**
 	 * Adds a watch function to a property, which is called when the value changes.
@@ -279,17 +279,17 @@ declare class Object {
  */
 declare class Array {
 	/**
+	 * The length of the array
+	 */
+	length: number;
+
+	/**
 	 * Creates and returns a new array.
 	 * Takes any number of parameters, which become the elements of the array, or a single value which becomes the length of an empty array. Note that you cannot create a one-element array, as the single parameter value is interpreted as the length. Returns the new array.
 	 * @param length If no other parameters are passed, the initial length of the empty array. Otherwise, the first element.
 	 * @param element If there is more than one parameter, the array is initialized with the given parameters.
 	 */
 	constructor(length: number, element?: any);
-
-	/**
-	 * The length of the array
-	 */
-	length: number;
 
 	/**
 	 * Returns a new array created by concatenating the given values to the end of the original array.
@@ -306,10 +306,29 @@ declare class Array {
 	join(delimiter?: string): string;
 
 	/**
+	 * Removes the last element from the array, decreases the length by 1, and returns the value of the element.
+	 * Returns the value of the deleted array element.
+	 */
+	pop(): any;
+
+	/**
+	 * Places one or more values onto the end of the array and increases length by n.
+	 * Returns the new length of the array.
+	 * @param value Any number of values to be pushed onto the end of the array.
+	 */
+	push(value: number): number;
+
+	/**
 	 * Reverses the order of the elements in the array.
 	 * Returns the reversed array.
 	 */
 	reverse(): Array;
+
+	/**
+	 * Removes the first element from the array, decreases the length by 1, and returns the value of the element.
+	 * Returns the value of the deleted array element.
+	 */
+	shift(): any;
 
 	/**
 	 * Creates a new array, which contains a subset of the original array's elements.
@@ -325,19 +344,6 @@ declare class Array {
 	sort(userFunction: Function): void;
 
 	/**
-	 * Removes the last element from the array, decreases the length by 1, and returns the value of the element.
-	 * Returns the value of the deleted array element.
-	 */
-	pop(): any;
-
-	/**
-	 * Places one or more values onto the end of the array and increases length by n.
-	 * Returns the new length of the array.
-	 * @param value Any number of values to be pushed onto the end of the array.
-	 */
-	push(value: number): number;
-
-	/**
 	 * Removes num elements from the array beginning with index, start.
 	 * Optionally insert new elements beginning at index start.To ensure contiguity, elements are moved up to fill in any gaps.Returns a new array containing any elements deleted from the original array.
 	 * @param start The index of the first element to remove. Negative values are relative to the end of the array.
@@ -347,10 +353,14 @@ declare class Array {
 	splice(start: number, num?: number, value?: any): Array;
 
 	/**
-	 * Removes the first element from the array, decreases the length by 1, and returns the value of the element.
-	 * Returns the value of the deleted array element.
+	 * Converts an array to a string and returns the string (localized).
 	 */
-	shift(): any;
+	toLocaleString(): string;
+
+	/**
+	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
+	 */
+	toSource(): string;
 
 	/**
 	 * Converts an array to a string and returns the string.
@@ -359,21 +369,11 @@ declare class Array {
 	toString(): string;
 
 	/**
-	 * Converts an array to a string and returns the string (localized).
-	 */
-	toLocaleString(): string;
-
-	/**
 	 * Adds one or more elements to the beginning of the array.
 	 * Returns the new array length.
 	 * @param value The values of one or more elements to be added to the beginning of the array.
 	 */
 	unshift(value: any): number;
-
-	/**
-	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
-	 */
-	toSource(): string;
 
 }
 
@@ -397,14 +397,14 @@ declare class Math {
 	static readonly LN2: number;
 
 	/**
-	 * The base 2 logarithm of e.
-	 */
-	static readonly LOG2E: number;
-
-	/**
 	 * The base 10 logarithm of e.
 	 */
 	static readonly LOG10E: number;
+
+	/**
+	 * The base 2 logarithm of e.
+	 */
+	static readonly LOG2E: number;
 
 	/**
 	 * The ratio of the circumference of a circle to its diameter.
@@ -550,12 +550,6 @@ declare class Date {
 	constructor(year: number, month?: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number);
 
 	/**
-	 * Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().
-	 * @param text The string to parse.
-	 */
-	static parse(text: string): Date;
-
-	/**
 	 * Returns the number of milliseconds between midnight January 1, 1970, UTC, and the specified time.
 	 * @param year The year expressed in four digits, for example, 2001. To indicate for a year from 1900 to 1999, you can specify a value from 0 to 99.
 	 * @param month An integer value from 0 (Jan) to 11 (Dec).
@@ -577,11 +571,6 @@ declare class Date {
 	 * This is an integer from 0 (Sunday) to 6 (Saturday).Returns the day of the week for date.
 	 */
 	getDay(): number;
-
-	/**
-	 * Returns the year of the specified Date object, as a difference from 1900, in local time.
-	 */
-	getYear(): number;
 
 	/**
 	 * Returns the four digit year of the specified Date object in local time.
@@ -664,6 +653,17 @@ declare class Date {
 	getUTCSeconds(): number;
 
 	/**
+	 * Returns the year of the specified Date object, as a difference from 1900, in local time.
+	 */
+	getYear(): number;
+
+	/**
+	 * Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().
+	 * @param text The string to parse.
+	 */
+	static parse(text: string): Date;
+
+	/**
 	 * Sets the day of the month of a specified Date object according to local time.
 	 * Returns the number of milliseconds between the new date and midnight, January 1, 1970.
 	 * @param date An integer from 1 to 31 indicating the day of the month.
@@ -699,6 +699,13 @@ declare class Date {
 	setMinutes(minutes: number): number;
 
 	/**
+	 * Sets the month of a specified Date object according to local time.
+	 * Returns the number of milliseconds between the new date and midnight, January 1, 1970.
+	 * @param month An integer value from 0 (Jan) to 11 (Dec).
+	 */
+	setMonth(month: number): number;
+
+	/**
 	 * Sets the seconds of a specified Date object according to local time.
 	 * Returns the number of milliseconds between the new date and midnight, January 1, 1970.
 	 * @param seconds An integer value from 0 to 59.
@@ -706,11 +713,11 @@ declare class Date {
 	setSeconds(seconds: number): number;
 
 	/**
-	 * Sets the month of a specified Date object according to local time.
-	 * Returns the number of milliseconds between the new date and midnight, January 1, 1970.
-	 * @param month An integer value from 0 (Jan) to 11 (Dec).
+	 * Sets the date of a specified Date object in milliseconds since midnight, January 1, 1970.
+	 * Returns the value of ms.
+	 * @param ms An integer indicating the number of milliseconds between the date set and midnight, January 1, 1970.
 	 */
-	setMonth(month: number): number;
+	setTime(ms: number): number;
 
 	/**
 	 * Sets the date of a specified Date object according to universal time.
@@ -748,13 +755,6 @@ declare class Date {
 	setUTCMinutes(min: number): number;
 
 	/**
-	 * Sets the seconds of a specified Date object according to UTC.
-	 * Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
-	 * @param sec An integer value in the range 0 to 59 indicating the number of seconds to set.
-	 */
-	setUTCSeconds(sec: number): number;
-
-	/**
 	 * Sets the month of a specified Date object according to UTC.
 	 * Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
 	 * @param month An integer value in the range 0 (Jan.) to 11 (Dec.) indicating the month to set.
@@ -762,11 +762,11 @@ declare class Date {
 	setUTCMonth(month: number): number;
 
 	/**
-	 * Sets the date of a specified Date object in milliseconds since midnight, January 1, 1970.
-	 * Returns the value of ms.
-	 * @param ms An integer indicating the number of milliseconds between the date set and midnight, January 1, 1970.
+	 * Sets the seconds of a specified Date object according to UTC.
+	 * Returns the number of milliseconds between the date set and midnight, January 1, 1970, in UTC.
+	 * @param sec An integer value in the range 0 to 59 indicating the number of seconds to set.
 	 */
-	setTime(ms: number): number;
+	setUTCSeconds(sec: number): number;
 
 	/**
 	 * Sets the year of a specified Date object according to local time, as a difference between the current year and 1900.
@@ -781,14 +781,9 @@ declare class Date {
 	toDateString(): string;
 
 	/**
-	 * Returns the time as a string.
+	 * Returns the date and time adjusted to GMT (UTC) as a string.
 	 */
-	toTimeString(): string;
-
-	/**
-	 * Returns a string value representing the date and time stored in the Date object in human readable format (localized).
-	 */
-	toLocaleString(): string;
+	toGMTString(): string;
 
 	/**
 	 * Returns the date as a localized string.
@@ -796,19 +791,19 @@ declare class Date {
 	toLocaleDateString(): string;
 
 	/**
+	 * Returns a string value representing the date and time stored in the Date object in human readable format (localized).
+	 */
+	toLocaleString(): string;
+
+	/**
 	 * Returns the time as a localized string.
 	 */
 	toLocaleTimeString(): string;
 
 	/**
-	 * Returns the date and time adjusted to GMT (UTC) as a string.
+	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
 	 */
-	toGMTString(): string;
-
-	/**
-	 * Returns the date and time adjusted to UTC as a string.
-	 */
-	toUTCString(): string;
+	toSource(): string;
 
 	/**
 	 * Returns a string value representing the date and time stored in the Date object in human readable format.
@@ -817,14 +812,19 @@ declare class Date {
 	toString(): string;
 
 	/**
+	 * Returns the time as a string.
+	 */
+	toTimeString(): string;
+
+	/**
+	 * Returns the date and time adjusted to UTC as a string.
+	 */
+	toUTCString(): string;
+
+	/**
 	 * The valueOf() method returns the number of milliseconds that have passed since midnight, Returns an integer.
 	 */
 	valueOf(): number;
-
-	/**
-	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
-	 */
-	toSource(): string;
 
 }
 
@@ -833,22 +833,10 @@ declare class Date {
  */
 declare class Function {
 	/**
-	 * The Function constructor parses the argument list and creates a Function object.
-	 * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
-	 * @param body The body of the function to create.
-	 */
-	constructor(arguments: string, body: string);
-
-	/**
 	 * The function arguments, packed into an array.
 	 * This property is deprecated; use the arguments property within the function body.
 	 */
 	arguments: Object;
-
-	/**
-	 * The number of formal arguments.
-	 */
-	readonly length: number;
 
 	/**
 	 * The number of formal arguments.
@@ -857,9 +845,21 @@ declare class Function {
 	readonly arity: number;
 
 	/**
+	 * The number of formal arguments.
+	 */
+	readonly length: number;
+
+	/**
 	 * The function name.
 	 */
 	readonly name: string;
+
+	/**
+	 * The Function constructor parses the argument list and creates a Function object.
+	 * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
+	 * @param body The body of the function to create.
+	 */
+	constructor(arguments: string, body: string);
 
 	/**
 	 * Apply a this object and an argument list to a function.
@@ -894,123 +894,19 @@ declare class Function {
  */
 declare class global {
 	/**
-	 * The NaN global property is a predefined variable with the value NaN (Not-a-Number), as specified by the IEEE-754 standard.
-	 */
-	NaN: number;
-
-	/**
 	 * The Infinity global property is a predefined variable with the value for infinity.
 	 */
 	Infinity: number;
 
 	/**
+	 * The NaN global property is a predefined variable with the value NaN (Not-a-Number), as specified by the IEEE-754 standard.
+	 */
+	NaN: number;
+
+	/**
 	 * This global property is a predefined variable with the value for an undefined value.
 	 */
 	undefined: undefined;
-
-	/**
-	 * Encodes a string after RFC2396.
-	 * Create an UTF-8 ASCII encoded version of this string. The string is converted into UTF-8. Every non-alphanumeric character is encoded as a percent escape
-	 * character of the form %xx, where xx is the hex value of the character. After the conversion to UTF-8 encoding and escaping, it is guaranteed that the string does not contain characters codes greater than 127. The list of characters not to be encoded is -_.!~*'();/?:@&=+$,#. The method returns false on errors.
-	 * @param text The text to encode.
-	 */
-	encodeURI(text: string): string;
-
-	/**
-	 * Encodes a string after RFC2396.
-	 * Create an UTF-8 ASCII encoded version of this string. The string is converted into UTF-8. Every non-alphanumeric character is encoded as a percent escape
-	 * character of the form %xx, where xx is the hex value of the character. After the conversion to UTF-8 encoding and escaping, it is guaranteed that the string does not contain characters codes greater than 127. The list of characters not to be encoded is -_.!~*'(). The method returns false on errors.
-	 * @param text The text to encode.
-	 */
-	encodeURIComponent(text: string): string;
-
-	/**
-	 * Decodes a string created with encodeURI().
-	 * @param uri The text to decode.
-	 */
-	decodeURI(uri: string): string;
-
-	/**
-	 * Decodes a string created with encodeURIComponent().
-	 * @param uri The text to decode.
-	 */
-	decodeURIComponent(uri: string): string;
-
-	/**
-	 * Creates a URL-encoded string from aString.
-	 * In the new string, characters of aString that require URL encoding are replaced with the format %xx, where xx is the hexadecimal value of the character code in the Unicode character set.This format is used to transmit information appended to a URL during, for example, execution of the GET method.Use the unescape() global function to translate the string back into its original format. Returns a string which is aString URL-encoded.
-	 * @param aString The string to be encoded.
-	 */
-	escape(aString: string): string;
-
-	/**
-	 * Evaluates its argument as a JavaScript script, and returns the result of evaluation.
-	 * You can pass the result of an object's toSource() method to reconstruct that object.
-	 * @param stringExpression The string to evaluate.
-	 */
-	eval(stringExpression: string): any;
-
-	/**
-	 * Creates a source code representation of the supplied argument, and returns it as a string.
-	 * @param what The object to uneval.
-	 */
-	uneval(what: any): string;
-
-	/**
-	 * Evaluates an expression and reports whether the result is a finite number.
-	 * Returns true if the expression is a finite number, false otherwise. False if the value is infinity or negative infinity.
-	 * @param expression Any valid JavaScript expression.
-	 */
-	isFinite(expression: number): boolean;
-
-	/**
-	 * Evaluates an expression and reports whether the result is "Not-a-Number" (NaN).
-	 * Returns true if the result of evaluation is not a number (NaN), false if the value is a number.
-	 * @param expression Any valid JavaScript expression.
-	 */
-	isNaN(expression: number): boolean;
-
-	/**
-	 * Extracts an integer from a string.
-	 * Parses a string to find the first set of characters, in a specified base, that can be converted to an integer, and returns that integer, or NaN if it does not encounter characters that it can convert to a number.
-	 * @param text The string from which to extract an integer.
-	 * @param base The base of the string to parse (from base 2 to base 36). If not supplied, base is determined by the format of string.
-	 */
-	parseInt(text: string, base?: number): number;
-
-	/**
-	 * Extracts a floating-point number from a string.
-	 * Parses a string to find the first set of characters that can be converted to a floating point number, and returns that number, or NaN if it does not encounter characters that it can converted to a number.The function supports exponential notation.
-	 * @param text The string from which to extract a floating point number.
-	 */
-	parseFloat(text: string): number;
-
-	/**
-	 * Translates URL-encoded string into a regular string, and returns that string.
-	 * Use the escape() global function to URL-encode strings.
-	 * @param stringExpression The URL-encoded string to convert.
-	 */
-	unescape(stringExpression: string): string;
-
-	/**
-	 * Localizes a ZString-encoded string and merges additional arguments into the string.
-	 * @param what The string to localize. A ZString-encoded string that can contain placeholder for additional arguments in the form %1 to %n.
-	 * @param argument Optional argument(s) to be merged into the string. There may be more than one argument.
-	 */
-	localize(what: string, argument?: any): string;
-
-	/**
-	 * Returns true if the supplied string is a valid XML name.
-	 * @param name The XML name to test.
-	 */
-	isXMLName(name: string): boolean;
-
-	/**
-	 * Defines the default XML namespace.
-	 * This is a replacement function for the standard JavaScript statement set default xml namespace.
-	 * @param namespace The namespace to use. Omit this parameter to return to the empty namespace. This is either a Namespace object or a string.
-	 */
-	setDefaultXMLNamespace(namespace: Namespace): void;
 
 	/**
 	 * Displays an alert box
@@ -1029,6 +925,90 @@ declare class global {
 	confirm(message: string, noAsDefault: boolean, title?: string): boolean;
 
 	/**
+	 * Decodes a string created with encodeURI().
+	 * @param uri The text to decode.
+	 */
+	decodeURI(uri: string): string;
+
+	/**
+	 * Decodes a string created with encodeURIComponent().
+	 * @param uri The text to decode.
+	 */
+	decodeURIComponent(uri: string): string;
+
+	/**
+	 * Encodes a string after RFC2396.
+	 * Create an UTF-8 ASCII encoded version of this string. The string is converted into UTF-8. Every non-alphanumeric character is encoded as a percent escape
+	 * character of the form %xx, where xx is the hex value of the character. After the conversion to UTF-8 encoding and escaping, it is guaranteed that the string does not contain characters codes greater than 127. The list of characters not to be encoded is -_.!~*'();/?:@&=+$,#. The method returns false on errors.
+	 * @param text The text to encode.
+	 */
+	encodeURI(text: string): string;
+
+	/**
+	 * Encodes a string after RFC2396.
+	 * Create an UTF-8 ASCII encoded version of this string. The string is converted into UTF-8. Every non-alphanumeric character is encoded as a percent escape
+	 * character of the form %xx, where xx is the hex value of the character. After the conversion to UTF-8 encoding and escaping, it is guaranteed that the string does not contain characters codes greater than 127. The list of characters not to be encoded is -_.!~*'(). The method returns false on errors.
+	 * @param text The text to encode.
+	 */
+	encodeURIComponent(text: string): string;
+
+	/**
+	 * Creates a URL-encoded string from aString.
+	 * In the new string, characters of aString that require URL encoding are replaced with the format %xx, where xx is the hexadecimal value of the character code in the Unicode character set.This format is used to transmit information appended to a URL during, for example, execution of the GET method.Use the unescape() global function to translate the string back into its original format. Returns a string which is aString URL-encoded.
+	 * @param aString The string to be encoded.
+	 */
+	escape(aString: string): string;
+
+	/**
+	 * Evaluates its argument as a JavaScript script, and returns the result of evaluation.
+	 * You can pass the result of an object's toSource() method to reconstruct that object.
+	 * @param stringExpression The string to evaluate.
+	 */
+	eval(stringExpression: string): any;
+
+	/**
+	 * Evaluates an expression and reports whether the result is a finite number.
+	 * Returns true if the expression is a finite number, false otherwise. False if the value is infinity or negative infinity.
+	 * @param expression Any valid JavaScript expression.
+	 */
+	isFinite(expression: number): boolean;
+
+	/**
+	 * Evaluates an expression and reports whether the result is "Not-a-Number" (NaN).
+	 * Returns true if the result of evaluation is not a number (NaN), false if the value is a number.
+	 * @param expression Any valid JavaScript expression.
+	 */
+	isNaN(expression: number): boolean;
+
+	/**
+	 * Returns true if the supplied string is a valid XML name.
+	 * @param name The XML name to test.
+	 */
+	isXMLName(name: string): boolean;
+
+	/**
+	 * Localizes a ZString-encoded string and merges additional arguments into the string.
+	 * @param what The string to localize. A ZString-encoded string that can contain placeholder for additional arguments in the form %1 to %n.
+	 * @param argument Optional argument(s) to be merged into the string. There may be more than one argument.
+	 */
+	localize(what: string, argument?: any): string;
+
+	/**
+	 * Extracts a floating-point number from a string.
+	 * Parses a string to find the first set of characters that can be converted to a floating point number, and returns that number, or NaN if it does not encounter characters that it can converted to a number.The function supports exponential notation.
+	 * @param text The string from which to extract a floating point number.
+	 */
+	parseFloat(text: string): number;
+
+	/**
+	 * Extracts an integer from a string.
+	 * Parses a string to find the first set of characters, in a specified base, that can be converted to an integer, and returns that integer, or NaN if it does not encounter characters that it can convert to a number.
+	 * @param text The string from which to extract an integer.
+	 * @param base The base of the string to parse (from base 2 to base 36). If not supplied, base is determined by the format of string.
+	 */
+	parseInt(text: string, base?: number): number;
+
+	/**
 	 * Displays a dialog allowing the user to enter text
 	 * Returns null if the user cancelled the dialog, the text otherwise
 	 * @param prompt The text to display
@@ -1037,6 +1017,26 @@ declare class global {
 	 */
 	prompt(prompt: string, default_?: string, title?: string): string;
 
+	/**
+	 * Defines the default XML namespace.
+	 * This is a replacement function for the standard JavaScript statement set default xml namespace.
+	 * @param namespace The namespace to use. Omit this parameter to return to the empty namespace. This is either a Namespace object or a string.
+	 */
+	setDefaultXMLNamespace(namespace: Namespace): void;
+
+	/**
+	 * Translates URL-encoded string into a regular string, and returns that string.
+	 * Use the escape() global function to URL-encode strings.
+	 * @param stringExpression The URL-encoded string to convert.
+	 */
+	unescape(stringExpression: string): string;
+
+	/**
+	 * Creates a source code representation of the supplied argument, and returns it as a string.
+	 * @param what The object to uneval.
+	 */
+	uneval(what: any): string;
+
 }
 
 /**
@@ -1044,36 +1044,36 @@ declare class global {
  */
 declare class String {
 	/**
+	 * The length of the string.
+	 */
+	readonly length: number;
+
+	/**
 	 * Returns a string representation of the value given as an argument.
 	 * @param value A number, variable, or object to convert to a string.
 	 */
 	constructor(value: any);
 
 	/**
-	 * Returns a string created by concatenation one or more characters specified as ASCII values.
-	 * @param value1 One or more ASCII values.
+	 * Returns a string consisting of this string enclosed in a <a> tag.
+	 * @param name The text to be stored in the anchors' name attribute.
 	 */
-	static fromCharCode(value1: number): String;
+	anchor(name: string): string;
 
 	/**
-	 * The length of the string.
+	 * Returns a string consisting of this string enclosed in a <big> tag.
 	 */
-	readonly length: number;
+	big(): string;
 
 	/**
-	 * Returns itself.
+	 * Returns a string consisting of this string enclosed in a <blink> tag.
 	 */
-	toString(): string;
+	blink(): string;
 
 	/**
-	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
+	 * Returns a string consisting of this string enclosed in a <b> tag.
 	 */
-	toSource(): string;
-
-	/**
-	 * Returns itself.
-	 */
-	valueOf(): string;
+	bold(): string;
 
 	/**
 	 * Returns the character at the specified index.
@@ -1095,11 +1095,39 @@ declare class String {
 	concat(value: string): string;
 
 	/**
+	 * Returns a string consisting of this string enclosed in a <tt> tag.
+	 */
+	fixed(): string;
+
+	/**
+	 * Returns a string consisting of this string enclosed in a <font> tag.
+	 * @param color The value to be stored in the tag's color attribute.
+	 */
+	fontcolor(color: string): string;
+
+	/**
+	 * Returns a string consisting of this string enclosed in a <font> tag.
+	 * @param size The value to be stored in the tag's size attribute.
+	 */
+	fontsize(size: number): string;
+
+	/**
+	 * Returns a string created by concatenation one or more characters specified as ASCII values.
+	 * @param value1 One or more ASCII values.
+	 */
+	static fromCharCode(value1: number): String;
+
+	/**
 	 * Returns the index within the string of the first occurrence of the specified string, starting the search at fromIndex if provided.
 	 * @param searchValue The string for which to search.
 	 * @param offset The starting offset of the search.
 	 */
 	indexOf(searchValue: string, offset?: number): number;
+
+	/**
+	 * Returns a string consisting of this string enclosed in a <i> tag.
+	 */
+	italics(): string;
 
 	/**
 	 * Returns the index within the string of the last occurrence of the specified value.
@@ -1110,36 +1138,10 @@ declare class String {
 	lastIndexOf(searchValue: string, offset?: number): number;
 
 	/**
-	 * Extracts a substring of the given string and returns it as a new string.
-	 * The substring begins at startSlice, and includes all characters up to, but not including the character at the index endSlice. A negative value indexes from the end of the string.For example, a negative value for startSlice is resolved as: string. length + startSlice.The original string is unchanged.Returns a substring of characters from the given string, starting at startSlice and ending with endSlice-1.
-	 * @param startSlice The index at which to begin extraction.
-	 * @param endSlice The index at which to end extraction. If omitted, slice extracts to the end of the string.
+	 * Returns a string consisting of this string enclosed in a <a> tag.
+	 * @param href The value to be stored in the tag's href attribute.
 	 */
-	slice(startSlice: number, endSlice?: number): string;
-
-	/**
-	 * Returns a new string which contains all the characters of the original string converted to lowercase.
-	 * The original string is unchanged.
-	 */
-	toLowerCase(): string;
-
-	/**
-	 * Returns a new string which contains all the characters of the original string converted to uppercase.
-	 * The original string is unchanged.
-	 */
-	toUpperCase(): string;
-
-	/**
-	 * Returns a new string which contains all the characters of the original string converted to lowercase (localized).
-	 * The original string is unchanged.
-	 */
-	toLocaleLowerCase(): string;
-
-	/**
-	 * Returns a new string which contains all the characters of the original string converted to uppercase (localized).
-	 * The original string is unchanged.
-	 */
-	toLocaleUpperCase(): string;
+	link(href: string): string;
 
 	/**
 	 * Performs a localized comparison of two strings.
@@ -1167,12 +1169,35 @@ declare class String {
 	search(search: RegExp): number;
 
 	/**
+	 * Extracts a substring of the given string and returns it as a new string.
+	 * The substring begins at startSlice, and includes all characters up to, but not including the character at the index endSlice. A negative value indexes from the end of the string.For example, a negative value for startSlice is resolved as: string. length + startSlice.The original string is unchanged.Returns a substring of characters from the given string, starting at startSlice and ending with endSlice-1.
+	 * @param startSlice The index at which to begin extraction.
+	 * @param endSlice The index at which to end extraction. If omitted, slice extracts to the end of the string.
+	 */
+	slice(startSlice: number, endSlice?: number): string;
+
+	/**
+	 * Returns a string consisting of this string enclosed in a <small> tag.
+	 */
+	small(): string;
+
+	/**
 	 * Splits a string into a group of substrings, places those strings in an array, and returns the array.
 	 * The substrings are created by breaking the original string at places that match delimiter, the delimiter characters are removed.Returns an array whose elements are the substrings.
 	 * @param delimiter Specifies the string to use for delimiting. If delimiter is omitted, the array returned contains one element, consisting of the entire string.
 	 * @param limit 
 	 */
 	split(delimiter: string, limit: number): string;
+
+	/**
+	 * Returns a string consisting of this string enclosed in a <strike> tag.
+	 */
+	strike(): string;
+
+	/**
+	 * Returns a string consisting of this string enclosed in a <sub> tag.
+	 */
+	sub(): string;
 
 	/**
 	 * Returns a string containing the characters beginning at the specified index, start, through the specified number of characters.
@@ -1191,73 +1216,48 @@ declare class String {
 	substring(indexA: number, indexB: number): string;
 
 	/**
-	 * Returns a string consisting of this string enclosed in a <a> tag.
-	 * @param name The text to be stored in the anchors' name attribute.
-	 */
-	anchor(name: string): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <big> tag.
-	 */
-	big(): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <blink> tag.
-	 */
-	blink(): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <b> tag.
-	 */
-	bold(): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <tt> tag.
-	 */
-	fixed(): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <font> tag.
-	 * @param color The value to be stored in the tag's color attribute.
-	 */
-	fontcolor(color: string): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <font> tag.
-	 * @param size The value to be stored in the tag's size attribute.
-	 */
-	fontsize(size: number): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <i> tag.
-	 */
-	italics(): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <a> tag.
-	 * @param href The value to be stored in the tag's href attribute.
-	 */
-	link(href: string): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <small> tag.
-	 */
-	small(): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <strike> tag.
-	 */
-	strike(): string;
-
-	/**
-	 * Returns a string consisting of this string enclosed in a <sub> tag.
-	 */
-	sub(): string;
-
-	/**
 	 * Returns a string consisting of this string enclosed in a <sup> tag.
 	 */
 	sup(): string;
+
+	/**
+	 * Returns a new string which contains all the characters of the original string converted to lowercase (localized).
+	 * The original string is unchanged.
+	 */
+	toLocaleLowerCase(): string;
+
+	/**
+	 * Returns a new string which contains all the characters of the original string converted to uppercase (localized).
+	 * The original string is unchanged.
+	 */
+	toLocaleUpperCase(): string;
+
+	/**
+	 * Returns a new string which contains all the characters of the original string converted to lowercase.
+	 * The original string is unchanged.
+	 */
+	toLowerCase(): string;
+
+	/**
+	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
+	 */
+	toSource(): string;
+
+	/**
+	 * Returns itself.
+	 */
+	toString(): string;
+
+	/**
+	 * Returns a new string which contains all the characters of the original string converted to uppercase.
+	 * The original string is unchanged.
+	 */
+	toUpperCase(): string;
+
+	/**
+	 * Returns itself.
+	 */
+	valueOf(): string;
 
 }
 
@@ -1266,10 +1266,9 @@ declare class String {
  */
 declare class Number {
 	/**
-	 * Returns a new Number object set to the value of the argument converted to a number.
-	 * @param value The value of the object being created.
+	 * A constant representing the largest representable number.
 	 */
-	constructor(value: any);
+	static readonly MAX_VALUE: number;
 
 	/**
 	 * A constant representing the smallest representable number.
@@ -1277,9 +1276,9 @@ declare class Number {
 	static readonly MIN_VALUE: number;
 
 	/**
-	 * A constant representing the largest representable number.
+	 * A constant representing negative infinity.
 	 */
-	static readonly MAX_VALUE: number;
+	static readonly NEGATIVE_INFINITY: number;
 
 	/**
 	 * A constant representing the special "Not a Number" value.
@@ -1287,14 +1286,38 @@ declare class Number {
 	static readonly NaN: number;
 
 	/**
-	 * A constant representing negative infinity.
-	 */
-	static readonly NEGATIVE_INFINITY: number;
-
-	/**
 	 * A constant representing positive infinity.
 	 */
 	static readonly POSITIVE_INFINITY: number;
+
+	/**
+	 * Returns a new Number object set to the value of the argument converted to a number.
+	 * @param value The value of the object being created.
+	 */
+	constructor(value: any);
+
+	/**
+	 * Converts the Number object to a string in scientific notation.
+	 * @param decimals The number of decimals.
+	 */
+	toExponential(decimals: number): number;
+
+	/**
+	 * Converts the Number object to a string with fixed decimals.
+	 * @param decimals The number of decimals.
+	 */
+	toFixed(decimals: number): number;
+
+	/**
+	 * Returns the value of a Number object converted to a string, using localized conventions.
+	 */
+	toLocaleString(): number;
+
+	/**
+	 * Converts the Number object to a string in either scientific or fixed notation, epending on its value.
+	 * @param decimals The number of decimals.
+	 */
+	toPrecision(decimals: number): number;
 
 	/**
 	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
@@ -1306,29 +1329,6 @@ declare class Number {
 	 * @param radix The optional conversion radix.
 	 */
 	toString(radix?: number): number;
-
-	/**
-	 * Returns the value of a Number object converted to a string, using localized conventions.
-	 */
-	toLocaleString(): number;
-
-	/**
-	 * Converts the Number object to a string with fixed decimals.
-	 * @param decimals The number of decimals.
-	 */
-	toFixed(decimals: number): number;
-
-	/**
-	 * Converts the Number object to a string in scientific notation.
-	 * @param decimals The number of decimals.
-	 */
-	toExponential(decimals: number): number;
-
-	/**
-	 * Converts the Number object to a string in either scientific or fixed notation, epending on its value.
-	 * @param decimals The number of decimals.
-	 */
-	toPrecision(decimals: number): number;
 
 	/**
 	 * Returns the value of a Number object as a primitive number.
@@ -1370,13 +1370,6 @@ declare class Boolean {
  * Wraps a regular expression.
  */
 declare class RegExp {
-	/**
-	 * Creates and returns a new RegExp object set to the value of the argument converted to a regular expression.
-	 * @param pattern The pattern to convert.
-	 * @param flags Flags that control how the conversion is performed. A string containing any combination of the letters i, m, g: "i" -- ignore case in pattern matching "m" -- treat the string as multiple lines "g" -- do global pattern matching
-	 */
-	constructor(pattern: string, flags?: string);
-
 	/**
 	 * The matched subexpression #1.
 	 */
@@ -1423,6 +1416,21 @@ declare class RegExp {
 	static readonly $9: string;
 
 	/**
+	 * Indicates whether the match is a global match.
+	 */
+	static global: boolean;
+
+	/**
+	 * Indicates whether the match is not case sensitive.
+	 */
+	static ignoreCase: boolean;
+
+	/**
+	 * The original input string.
+	 */
+	static input: string;
+
+	/**
 	 * The last match.
 	 */
 	static readonly lastMatch: string;
@@ -1438,34 +1446,21 @@ declare class RegExp {
 	static readonly leftContext: string;
 
 	/**
-	 * The string after the match.
-	 */
-	static readonly rightContext: string;
-
-	/**
-	 * Indicates whether the match is a global match.
-	 */
-	static global: boolean;
-
-	/**
-	 * Indicates whether the match is not case sensitive.
-	 */
-	static ignoreCase: boolean;
-
-	/**
 	 * Indicates whether the match matches multiple lines.
 	 */
 	static multiline: boolean;
 
 	/**
-	 * The original input string.
+	 * The string after the match.
 	 */
-	static input: string;
+	static readonly rightContext: string;
 
 	/**
-	 * Converts this RegExp object to a string.
+	 * Creates and returns a new RegExp object set to the value of the argument converted to a regular expression.
+	 * @param pattern The pattern to convert.
+	 * @param flags Flags that control how the conversion is performed. A string containing any combination of the letters i, m, g: "i" -- ignore case in pattern matching "m" -- treat the string as multiple lines "g" -- do global pattern matching
 	 */
-	toString(): string;
+	constructor(pattern: string, flags?: string);
 
 	/**
 	 * Compiles a string to a regular expression. Returns true if the compilation was successful.
@@ -1486,12 +1481,22 @@ declare class RegExp {
 	 */
 	test(text: string): boolean;
 
+	/**
+	 * Converts this RegExp object to a string.
+	 */
+	toString(): string;
+
 }
 
 /**
  * Wraps a runtime error.
  */
 declare class Error {
+	/**
+	 * The error message.
+	 */
+	description: string;
+
 	/**
 	 * Creates a new Error object.
 	 * @param msg The error message.
@@ -1501,19 +1506,14 @@ declare class Error {
 	constructor(msg: string, file?: string, line?: number);
 
 	/**
-	 * The error message.
+	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
 	 */
-	description: string;
+	toSource(): string;
 
 	/**
 	 * Convert this object to a string.
 	 */
 	toString(): string;
-
-	/**
-	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
-	 */
-	toSource(): string;
 
 }
 
@@ -1522,59 +1522,9 @@ declare class Error {
  */
 declare class File {
 	/**
-	 * Creates and returns a new File object referring to a given file system location.
-	 * @param path The full or partial path name of the file,in platform-specific or URI format. The value stored in the object is the absolute path. The file that the path refers to does not need to exist.If the path refers to an existing folder: The File function returns a Folder object instead of a File object. The new operator returns a File object for a nonexisting file with the same name.
+	 * The full path name for the referenced file in URI notation.
 	 */
-	constructor(path?: string);
-
-	/**
-	 * The name of the file system.
-	 * This is a class property accessed through the File constructor. Valid values are "Windows", "Macintosh", and "Unix".
-	 */
-	static readonly fs: string;
-
-	/**
-	 * Encodes a string as required by RFC 2396, and returns the encoded string.
-	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
-	 * See also encodeURI().
-	 * @param name The string to encode.
-	 */
-	static encode(name: string): string;
-
-	/**
-	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
-	 * See also String.decodeURI().
-	 * @param uri The UTF-8 encoded string to decode.
-	 */
-	static decode(uri: string): string;
-
-	/**
-	 * Reports whether a given encoding is available.
-	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
-	 */
-	static isEncodingAvailable(name: string): boolean;
-
-	/**
-	 * Opens a dialog so the user can select one or more files to open.
-	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file or multiple files, and creates new File objects to represent the selected files.
-	 * If the user clicks OK, returns a File object for the selected file, or an array of objects if multiple files are selected.
-	 * If the user cancels, returns null.
-	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
-	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
-	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
-	 */
-	static openDialog(prompt: string, filter?: any, multiSelect?: boolean): File;
-
-	/**
-	 * Opens a dialog so the user can select a file name to save to.
-	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file location to which to save information, and creates a new File object to represent the selected file location.
-	 * If the user clicks OK, returns a File object for the selected file location.
-	 * If the user cancels, returns null.
-	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
-	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
-	 */
-	static saveDialog(prompt: string, filter?: any): File;
+	readonly absoluteURI: string;
 
 	/**
 	 * If true, the object refers to a file system alias or shortcut.
@@ -1587,96 +1537,14 @@ declare class File {
 	readonly created: Date;
 
 	/**
-	 * A string containing a message describing the most recent file system error.
-	 * Typically set by the file system, but a script can set it. Setting this value clears any error message and resets the error bit for opened files. Contains the empty string if there is no error.
-	 */
-	error: string;
-
-	/**
-	 * If true, this object refers to a file or file-system alias that actually exists in the file system.
-	 */
-	readonly exists: boolean;
-
-	/**
-	 * The platform-specific full path name for the referenced file.
-	 */
-	readonly fsName: string;
-
-	/**
-	 * The full path name for the referenced file in URI notation.
-	 */
-	readonly fullName: string;
-
-	/**
-	 * The full path name for the referenced file in URI notation.
-	 */
-	readonly absoluteURI: string;
-
-	/**
-	 * The path name for the object in URI notation, relative to the current folder.
-	 */
-	readonly relativeURI: string;
-
-	/**
-	 * The date of the referenced file's last modification, or null if the object does not refer to a file on the disk.
-	 */
-	readonly modified: Date;
-
-	/**
-	 * The file name portion of the absolute URI for the referenced file, without the path specification.
-	 */
-	readonly name: string;
-
-	/**
-	 * The localized name of the referenced file, without the path specification.
-	 */
-	readonly displayName: string;
-
-	/**
-	 * The path portion of the absolute URI for the referenced file, without the file name.
-	 */
-	readonly path: string;
-
-	/**
-	 * The Folder object for the folder that contains this file.
-	 */
-	readonly parent: Folder;
-
-	/**
-	 * The file type as a four-character string.
-	 * In Mac OS, the Mac OS file type.
-	 * In Windows, "appl" for .EXE files, "shlb" for .DLL files and "TEXT" for any other file.
-	 */
-	readonly type: string;
-
-	/**
 	 * In Mac OS, the file creator as a four-character string. In Windows or UNIX, value is "????".
 	 */
 	readonly creator: string;
 
 	/**
-	 * When true, the file is not shown in the platform-specific file browser.
-	 * If the object references a file-system alias or shortcut, the flag is altered on the alias, not on the original file.
+	 * The localized name of the referenced file, without the path specification.
 	 */
-	hidden: boolean;
-
-	/**
-	 * When true, prevents the file from being altered or deleted.
-	 * If the referenced file is a file-system alias or shortcut, the flag is altered on the alias, not on the original file.
-	 */
-	readonly: boolean;
-
-	/**
-	 * How line feed characters are written in the file system.
-	 * One of the values "Windows", "Macintosh", or "Unix".
-	 */
-	lineFeed: string;
-
-	/**
-	 * The size of the file in bytes.
-	 * Can be set only for a file that is not open, in which case it truncates or pads the file with 0-bytes to the new length.
-	 */
-	length: number;
+	readonly displayName: string;
 
 	/**
 	 * Gets or sets the encoding for subsequent read/write operations.
@@ -1690,30 +1558,142 @@ declare class File {
 	readonly eof: boolean;
 
 	/**
-	 * Attempts to resolve the file-system alias or shortcut that this object refers to.
-	 * If successful, creates and returns a new File object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.
+	 * A string containing a message describing the most recent file system error.
+	 * Typically set by the file system, but a script can set it. Setting this value clears any error message and resets the error bit for opened files. Contains the empty string if there is no error.
 	 */
-	resolve(): File;
+	error: string;
 
 	/**
-	 * Renames the associated file.
-	 * Does not resolve aliases, but renames the referenced alias or shortcut file itself. Returns true if the file was successfully renamed.
-	 * @param newName The new file name, with no path information.
+	 * If true, this object refers to a file or file-system alias that actually exists in the file system.
 	 */
-	rename(newName: string): boolean;
+	readonly exists: boolean;
 
 	/**
-	 * Deletes the file associated with this object from disk immediately, without moving it to the system trash.
-	 * Does not resolve aliases; instead, deletes the referenced alias or shortcut file itself. Returns true if the file was successfully removed.
-	 * IMPORTANT: Cannot be undone. It is recommended that you prompt the user for permission before deleting.
+	 * The name of the file system.
+	 * This is a class property accessed through the File constructor. Valid values are "Windows", "Macintosh", and "Unix".
 	 */
-	remove(): boolean;
+	static readonly fs: string;
+
+	/**
+	 * The platform-specific full path name for the referenced file.
+	 */
+	readonly fsName: string;
+
+	/**
+	 * The full path name for the referenced file in URI notation.
+	 */
+	readonly fullName: string;
+
+	/**
+	 * When true, the file is not shown in the platform-specific file browser.
+	 * If the object references a file-system alias or shortcut, the flag is altered on the alias, not on the original file.
+	 */
+	hidden: boolean;
+
+	/**
+	 * The size of the file in bytes.
+	 * Can be set only for a file that is not open, in which case it truncates or pads the file with 0-bytes to the new length.
+	 */
+	length: number;
+
+	/**
+	 * How line feed characters are written in the file system.
+	 * One of the values "Windows", "Macintosh", or "Unix".
+	 */
+	lineFeed: string;
+
+	/**
+	 * The date of the referenced file's last modification, or null if the object does not refer to a file on the disk.
+	 */
+	readonly modified: Date;
+
+	/**
+	 * The file name portion of the absolute URI for the referenced file, without the path specification.
+	 */
+	readonly name: string;
+
+	/**
+	 * The Folder object for the folder that contains this file.
+	 */
+	readonly parent: Folder;
+
+	/**
+	 * The path portion of the absolute URI for the referenced file, without the file name.
+	 */
+	readonly path: string;
+
+	/**
+	 * When true, prevents the file from being altered or deleted.
+	 * If the referenced file is a file-system alias or shortcut, the flag is altered on the alias, not on the original file.
+	 */
+	readonly: boolean;
+
+	/**
+	 * The path name for the object in URI notation, relative to the current folder.
+	 */
+	readonly relativeURI: string;
+
+	/**
+	 * The file type as a four-character string.
+	 * In Mac OS, the Mac OS file type.
+	 * In Windows, "appl" for .EXE files, "shlb" for .DLL files and "TEXT" for any other file.
+	 */
+	readonly type: string;
+
+	/**
+	 * Creates and returns a new File object referring to a given file system location.
+	 * @param path The full or partial path name of the file,in platform-specific or URI format. The value stored in the object is the absolute path. The file that the path refers to does not need to exist.If the path refers to an existing folder: The File function returns a Folder object instead of a File object. The new operator returns a File object for a nonexisting file with the same name.
+	 */
+	constructor(path?: string);
 
 	/**
 	 * Changes the path specification of the referenced file.
 	 * @param path A string containing the new path, absolute or relative to the current folder.
 	 */
 	changePath(path: string): boolean;
+
+	/**
+	 * Closes this open file.
+	 * Returns true if the file was closed successfully, false if an I/O error occurred.
+	 */
+	close(): boolean;
+
+	/**
+	 * Copies this object’s referenced file to the specified target location.
+	 * Resolves any aliases to find the source file. If a file exists at the target location, it is overwritten.
+	 * Returns true if the copy was successful.
+	 * @param target A string with the URI path to the target location, or a File object that references the target location.
+	 */
+	copy(target: string): boolean;
+
+	/**
+	 * Makes this file a file-system alias or shortcut to the specified file.
+	 * The referenced file for this object must not yet exist on disk. Returns true if the operation was successful.
+	 * @param path A string containing the path of the target file.
+	 */
+	createAlias(path: string): void;
+
+	/**
+	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
+	 * See also String.decodeURI().
+	 * @param uri The UTF-8 encoded string to decode.
+	 */
+	static decode(uri: string): string;
+
+	/**
+	 * Encodes a string as required by RFC 2396, and returns the encoded string.
+	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
+	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * See also encodeURI().
+	 * @param name The string to encode.
+	 */
+	static encode(name: string): string;
+
+	/**
+	 * Executes or opens this file using the appropriate application, as if it had been double-clicked in a file browser.
+	 * You can use this method to run scripts, launch applications, and so on.Returns true immediately if the application launch was successful.
+	 */
+	execute(): boolean;
 
 	/**
 	 * Retrieves and returns the path for this file, relative to the specified base path, in URI notation.
@@ -1723,49 +1703,10 @@ declare class File {
 	getRelativeURI(basePath: string): string;
 
 	/**
-	 * Executes or opens this file using the appropriate application, as if it had been double-clicked in a file browser.
-	 * You can use this method to run scripts, launch applications, and so on.Returns true immediately if the application launch was successful.
+	 * Reports whether a given encoding is available.
+	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
 	 */
-	execute(): boolean;
-
-	/**
-	 * Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file or files, and creates new File objects to represent the selected files.
-	 * Differs from the class method openDialog() in that it presets the current folder to this File object’s parent folder and the current file to this object’s associated file.
-	 * If the user clicks OK, returns a File or Folder object for the selected file or folder, or an array of objects.
-	 * If the user cancels, returns null.
-	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
-	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
-	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
-	 */
-	openDlg(prompt: string, filter?: any, multiSelect?: boolean): File;
-
-	/**
-	 * Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file location to which to save information, and creates a new File object to represent the selected file.
-	 * Differs from the class method saveDialog() in that it presets the current folder to this File object’s parent folder and the file to this object’s associated file.
-	 * If the user clicks OK, returns a File object for the selected file.
-	 * If the user cancels, returns null.
-	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
-	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
-	 */
-	saveDlg(prompt: string, filter?: any): File;
-
-	/**
-	 * Converts this object to a string.
-	 */
-	toString(): string;
-
-	/**
-	 * Creates and returns a serialized string representation of this object.
-	 * Pass the resulting string to eval() to recreate the object.
-	 */
-	toSource(): string;
-
-	/**
-	 * Makes this file a file-system alias or shortcut to the specified file.
-	 * The referenced file for this object must not yet exist on disk. Returns true if the operation was successful.
-	 * @param path A string containing the path of the target file.
-	 */
-	createAlias(path: string): void;
+	static isEncodingAvailable(name: string): boolean;
 
 	/**
 	 * Opens the referenced file for subsequent read/write operations. The method resolves any aliases to find the file.
@@ -1778,10 +1719,26 @@ declare class File {
 	open(mode: string, type?: string, creator?: string): boolean;
 
 	/**
-	 * Closes this open file.
-	 * Returns true if the file was closed successfully, false if an I/O error occurred.
+	 * Opens a dialog so the user can select one or more files to open.
+	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file or multiple files, and creates new File objects to represent the selected files.
+	 * If the user clicks OK, returns a File object for the selected file, or an array of objects if multiple files are selected.
+	 * If the user cancels, returns null.
+	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
+	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
+	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
 	 */
-	close(): boolean;
+	static openDialog(prompt: string, filter?: any, multiSelect?: boolean): File;
+
+	/**
+	 * Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file or files, and creates new File objects to represent the selected files.
+	 * Differs from the class method openDialog() in that it presets the current folder to this File object’s parent folder and the current file to this object’s associated file.
+	 * If the user clicks OK, returns a File or Folder object for the selected file or folder, or an array of objects.
+	 * If the user cancels, returns null.
+	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
+	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
+	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
+	 */
+	openDlg(prompt: string, filter?: any, multiSelect?: boolean): File;
 
 	/**
 	 * Reads the contents of the file, starting at the current position.
@@ -1803,18 +1760,44 @@ declare class File {
 	readln(): string;
 
 	/**
-	 * Writes the specified text to the file at the current position.
-	 * You can supply multiple text values; the strings are concatenated to form a single string.For encoded files, writing a single Unicode character may write multiple bytes. Returns true if the write was successful.IMPORTANT: Be careful not to write to a file that is open in another application or object, as this can overwrite existing data.
-	 * @param text A text string to be written.
+	 * Deletes the file associated with this object from disk immediately, without moving it to the system trash.
+	 * Does not resolve aliases; instead, deletes the referenced alias or shortcut file itself. Returns true if the file was successfully removed.
+	 * IMPORTANT: Cannot be undone. It is recommended that you prompt the user for permission before deleting.
 	 */
-	write(text: string): boolean;
+	remove(): boolean;
 
 	/**
-	 * Writes a string to the file at the current position and appends a line-feed sequence.
-	 * You can supply multiple text values. The strings are concatenated into a single string, which is written in the file followed by one line-feed sequence, of the style specified by this object's linefeed property.For encoded files, writing a single Unicode character may write multiple bytes.Returns true if the write was successful.IMPORTANT: Be careful not to write to a file that is open in another application or object, as this can overwrite existing data.
-	 * @param text A text string to be written.
+	 * Renames the associated file.
+	 * Does not resolve aliases, but renames the referenced alias or shortcut file itself. Returns true if the file was successfully renamed.
+	 * @param newName The new file name, with no path information.
 	 */
-	writeln(text: string): boolean;
+	rename(newName: string): boolean;
+
+	/**
+	 * Attempts to resolve the file-system alias or shortcut that this object refers to.
+	 * If successful, creates and returns a new File object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.
+	 */
+	resolve(): File;
+
+	/**
+	 * Opens a dialog so the user can select a file name to save to.
+	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file location to which to save information, and creates a new File object to represent the selected file location.
+	 * If the user clicks OK, returns a File object for the selected file location.
+	 * If the user cancels, returns null.
+	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
+	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
+	 */
+	static saveDialog(prompt: string, filter?: any): File;
+
+	/**
+	 * Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file location to which to save information, and creates a new File object to represent the selected file.
+	 * Differs from the class method saveDialog() in that it presets the current folder to this File object’s parent folder and the file to this object’s associated file.
+	 * If the user clicks OK, returns a File object for the selected file.
+	 * If the user cancels, returns null.
+	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
+	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
+	 */
+	saveDlg(prompt: string, filter?: any): File;
 
 	/**
 	 * Seeks to a given position in the file.
@@ -1831,12 +1814,29 @@ declare class File {
 	tell(): number;
 
 	/**
-	 * Copies this object’s referenced file to the specified target location.
-	 * Resolves any aliases to find the source file. If a file exists at the target location, it is overwritten.
-	 * Returns true if the copy was successful.
-	 * @param target A string with the URI path to the target location, or a File object that references the target location.
+	 * Creates and returns a serialized string representation of this object.
+	 * Pass the resulting string to eval() to recreate the object.
 	 */
-	copy(target: string): boolean;
+	toSource(): string;
+
+	/**
+	 * Converts this object to a string.
+	 */
+	toString(): string;
+
+	/**
+	 * Writes the specified text to the file at the current position.
+	 * You can supply multiple text values; the strings are concatenated to form a single string.For encoded files, writing a single Unicode character may write multiple bytes. Returns true if the write was successful.IMPORTANT: Be careful not to write to a file that is open in another application or object, as this can overwrite existing data.
+	 * @param text A text string to be written.
+	 */
+	write(text: string): boolean;
+
+	/**
+	 * Writes a string to the file at the current position and appends a line-feed sequence.
+	 * You can supply multiple text values. The strings are concatenated into a single string, which is written in the file followed by one line-feed sequence, of the style specified by this object's linefeed property.For encoded files, writing a single Unicode character may write multiple bytes.Returns true if the write was successful.IMPORTANT: Be careful not to write to a file that is open in another application or object, as this can overwrite existing data.
+	 * @param text A text string to be written.
+	 */
+	writeln(text: string): boolean;
 
 }
 
@@ -1845,58 +1845,14 @@ declare class File {
  */
 declare class Folder {
 	/**
-	 * Creates and returns a new Folder object referring to a given file-system location.
-	 * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
-	 * @param path The absolute or relative path to the folder associated with this object, specified in URI format. The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder: The Folder() function returns a File object instead of a Folder object. The new operator returns a Folder object for a nonexisting folder with the same name.
+	 * The full path name for the referenced folder in URI notation.
 	 */
-	constructor(path?: string);
+	readonly absoluteURI: string;
 
 	/**
-	 * The name of the current file system.
-	 * One of "Windows", "Macintosh", or "Unix".
+	 * When true, the object refers to a file system alias or shortcut.
 	 */
-	static readonly fs: string;
-
-	/**
-	 * A Folder object for the current folder.
-	 * Assign a Folder object or a string containing the new path name to set the current folder. This is a class property accessed through the Folder constructor.
-	 */
-	static current: Folder;
-
-	/**
-	 * A Folder object for the folder containing the executable image of the running application.
-	 */
-	static readonly startup: Folder;
-
-	/**
-	 * In Mac OS, a Folder object for the folder containing the bundle of the running application.
-	 */
-	static readonly appPackage: Folder;
-
-	/**
-	 * A Folder object for the folder containing the operating system files.
-	 * In Windows, the value of %windir% (by default, C:\\Windows)
-	 * In Mac OS, /System
-	 */
-	static readonly system: Folder;
-
-	/**
-	 * A Folder object for the folder containing deleted items. On Windows, the trash folder is a virtual
-	 * folder containing a database; therefore, the property value is null on Windows.
-	 */
-	static readonly trash: Folder;
-
-	/**
-	 * A Folder object for the default folder for temporary files.
-	 */
-	static readonly temp: Folder;
-
-	/**
-	 * A Folder object for the folder containing the user's application data.
-	 * In Windows, the value of %USERDATA% (by default, C:\\Documents and Settings\\username\\Application Data)
-	 * In Mac OS,~/Library/Application Support.
-	 */
-	static readonly userData: Folder;
+	readonly alias: boolean;
 
 	/**
 	 * The folder containing the application data for all users.
@@ -1906,6 +1862,11 @@ declare class Folder {
 	static readonly appData: Folder;
 
 	/**
+	 * In Mac OS, a Folder object for the folder containing the bundle of the running application.
+	 */
+	static readonly appPackage: Folder;
+
+	/**
 	 * A Folder object for the folder containing common files for all programs installed by the user.
 	 * In Windows, the value of %CommonProgramFiles% (by default, C:\\Program Files\\Common Files)
 	 * In Mac OS, /Library/Application Support
@@ -1913,11 +1874,15 @@ declare class Folder {
 	static readonly commonFiles: Folder;
 
 	/**
-	 * A folder pointing to the user's My Documents folder.
-	 * In Windows, C:\\Documents and Settings\\username\\My Documents
-	 * In Mac OS,~/Documents
+	 * The creation date of the referenced folder, or null if the object does not refer to a folder on disk.
 	 */
-	static readonly myDocuments: Folder;
+	readonly created: Date;
+
+	/**
+	 * A Folder object for the current folder.
+	 * Assign a Folder object or a string containing the new path name to set the current folder. This is a class property accessed through the Folder constructor.
+	 */
+	static current: Folder;
 
 	/**
 	 * A Folder object for the folder that contains the user’s desktop.
@@ -1927,45 +1892,9 @@ declare class Folder {
 	static readonly desktop: Folder;
 
 	/**
-	 * Encodes a string as required by RFC 2396, and returns the encoded string.
-	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
-	 * See also encodeURI().
-	 * @param name The string to encode.
+	 * The localized name portion of the absolute URI for the referenced folder, without the path specification.
 	 */
-	static encode(name: string): string;
-
-	/**
-	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
-	 * See also String.decodeURI().
-	 * @param uri The UTF-8 string to decode.
-	 */
-	static decode(uri: string): string;
-
-	/**
-	 * Reports whether a given encoding is available.
-	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
-	 */
-	static isEncodingAvailable(name: string): boolean;
-
-	/**
-	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
-	 * Differs from the object method selectDlg() in that it does not preselect a folder.
-	 * If the user clicks OK, returns a File or Folder object for the selected file or folder.
-	 * If the user cancels, returns null.
-	 * @param prompt The prompt text, if the dialog allows a prompt.
-	 */
-	static selectDialog(prompt: string): Folder;
-
-	/**
-	 * When true, the object refers to a file system alias or shortcut.
-	 */
-	readonly alias: boolean;
-
-	/**
-	 * The creation date of the referenced folder, or null if the object does not refer to a folder on disk.
-	 */
-	readonly created: Date;
+	readonly displayName: string;
 
 	/**
 	 * A message describing the most recent file system error.
@@ -1979,6 +1908,12 @@ declare class Folder {
 	readonly exists: boolean;
 
 	/**
+	 * The name of the current file system.
+	 * One of "Windows", "Macintosh", or "Unix".
+	 */
+	static readonly fs: string;
+
+	/**
 	 * The platform-specific name of the referenced folder as a full path name.
 	 */
 	readonly fsName: string;
@@ -1989,19 +1924,16 @@ declare class Folder {
 	readonly fullName: string;
 
 	/**
-	 * The full path name for the referenced folder in URI notation.
-	 */
-	readonly absoluteURI: string;
-
-	/**
-	 * The path name for the referenced folder in URI notation, relative to the current folder.
-	 */
-	readonly relativeURI: string;
-
-	/**
 	 * The date of the referenced folder's last modification, or null if the object does not refer to a folder on disk.
 	 */
 	readonly modified: Date;
+
+	/**
+	 * A folder pointing to the user's My Documents folder.
+	 * In Windows, C:\\Documents and Settings\\username\\My Documents
+	 * In Mac OS,~/Documents
+	 */
+	static readonly myDocuments: Folder;
 
 	/**
 	 * The folder name portion of the absolute URI for the referenced file, without the path specification.
@@ -2009,9 +1941,9 @@ declare class Folder {
 	readonly name: string;
 
 	/**
-	 * The localized name portion of the absolute URI for the referenced folder, without the path specification.
+	 * TThe Folder object for the folder that contains this folder, or null if this object refers to the root folder of a volume.
 	 */
-	readonly displayName: string;
+	readonly parent: Folder;
 
 	/**
 	 * The path portion of the object absolute URI for the referenced file, without the folder name.
@@ -2019,35 +1951,87 @@ declare class Folder {
 	readonly path: string;
 
 	/**
-	 * TThe Folder object for the folder that contains this folder, or null if this object refers to the root folder of a volume.
+	 * The path name for the referenced folder in URI notation, relative to the current folder.
 	 */
-	readonly parent: Folder;
+	readonly relativeURI: string;
 
 	/**
-	 * Attempts to resolve the file-system alias or shortcut that this object refers to.
-	 * If successful, creates and returns a new Folder object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.
+	 * A Folder object for the folder containing the executable image of the running application.
 	 */
-	resolve(): Folder;
+	static readonly startup: Folder;
 
 	/**
-	 * Renames the associated folder.
-	 * Does not resolve aliases, but renames the referenced alias or shortcut file itself. Returns true if the folder was successfully renamed.
-	 * @param newName The new folder name, with no path information.
+	 * A Folder object for the folder containing the operating system files.
+	 * In Windows, the value of %windir% (by default, C:\\Windows)
+	 * In Mac OS, /System
 	 */
-	rename(newName: string): boolean;
+	static readonly system: Folder;
 
 	/**
-	 * Deletes the folder associated with this object from disk immediately, without moving it to the system trash.
-	 * Folders must be empty before they can be deleted. Does not resolve aliases; instead, deletes the referenced alias or shortcut file itself. Returns true if the file was successfully removed.
-	 * IMPORTANT: Cannot be undone. It is recommended that you prompt the user for permission before deleting.
+	 * A Folder object for the default folder for temporary files.
 	 */
-	remove(): boolean;
+	static readonly temp: Folder;
+
+	/**
+	 * A Folder object for the folder containing deleted items. On Windows, the trash folder is a virtual
+	 * folder containing a database; therefore, the property value is null on Windows.
+	 */
+	static readonly trash: Folder;
+
+	/**
+	 * A Folder object for the folder containing the user's application data.
+	 * In Windows, the value of %USERDATA% (by default, C:\\Documents and Settings\\username\\Application Data)
+	 * In Mac OS,~/Library/Application Support.
+	 */
+	static readonly userData: Folder;
+
+	/**
+	 * Creates and returns a new Folder object referring to a given file-system location.
+	 * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
+	 * @param path The absolute or relative path to the folder associated with this object, specified in URI format. The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder: The Folder() function returns a File object instead of a Folder object. The new operator returns a Folder object for a nonexisting folder with the same name.
+	 */
+	constructor(path?: string);
 
 	/**
 	 * Changes the path specification of the referenced folder.
 	 * @param path A string containing the new path, absolute or relative to the current folder.
 	 */
 	changePath(path: string): boolean;
+
+	/**
+	 * Creates a folder at the location given by this object's path property.
+	 * Returns true if the folder was created.
+	 */
+	create(): boolean;
+
+	/**
+	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
+	 * See also String.decodeURI().
+	 * @param uri The UTF-8 string to decode.
+	 */
+	static decode(uri: string): string;
+
+	/**
+	 * Encodes a string as required by RFC 2396, and returns the encoded string.
+	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
+	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * See also encodeURI().
+	 * @param name The string to encode.
+	 */
+	static encode(name: string): string;
+
+	/**
+	 * Opens this folder in the platform-specific file browser (as if it had been double-clicked in the file browser).
+	 * Returns true immediately if the folder was opened successfully.
+	 */
+	execute(): boolean;
+
+	/**
+	 * Retrieves the contents of this folder, filtered by the supplied mask.
+	 * Returns an array of File and Folder objects, or null if this object's referenced folder does not exist.
+	 * @param mask A search mask for file names, specified as a string or a function. A mask string can contain question mark (?) and asterisk (*) wild cards. Default is "*", which matches all file names. Can also be the name of a function that takes a File or Folder object as its argument. It is called for each file or folder found in the search; if it returns true, the object is added to the return array. NOTE: In Windows, all aliases end with the extension .lnk. ExtendScript strips this from the file name when found, in order to preserve compatibility with other operating systems. You can search for all aliases by supplying the search mask "*.lnk", but note that such code is not portable.
+	 */
+	getFiles(mask: any): Array;
 
 	/**
 	 * Retrieves and returns the path for this file, relative to the specified base path, in URI notation.
@@ -2057,21 +2041,39 @@ declare class Folder {
 	getRelativeURI(basePath?: string): string;
 
 	/**
-	 * Opens this folder in the platform-specific file browser (as if it had been double-clicked in the file browser).
-	 * Returns true immediately if the folder was opened successfully.
+	 * Reports whether a given encoding is available.
+	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
 	 */
-	execute(): boolean;
+	static isEncodingAvailable(name: string): boolean;
 
 	/**
-	 * Converts this object to a string.
+	 * Deletes the folder associated with this object from disk immediately, without moving it to the system trash.
+	 * Folders must be empty before they can be deleted. Does not resolve aliases; instead, deletes the referenced alias or shortcut file itself. Returns true if the file was successfully removed.
+	 * IMPORTANT: Cannot be undone. It is recommended that you prompt the user for permission before deleting.
 	 */
-	toString(): string;
+	remove(): boolean;
 
 	/**
-	 * Creates and returns a serialized string representation of this object.
-	 * Pass the resulting string to eval() to recreate the object.
+	 * Renames the associated folder.
+	 * Does not resolve aliases, but renames the referenced alias or shortcut file itself. Returns true if the folder was successfully renamed.
+	 * @param newName The new folder name, with no path information.
 	 */
-	toSource(): string;
+	rename(newName: string): boolean;
+
+	/**
+	 * Attempts to resolve the file-system alias or shortcut that this object refers to.
+	 * If successful, creates and returns a new Folder object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.
+	 */
+	resolve(): Folder;
+
+	/**
+	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
+	 * Differs from the object method selectDlg() in that it does not preselect a folder.
+	 * If the user clicks OK, returns a File or Folder object for the selected file or folder.
+	 * If the user cancels, returns null.
+	 * @param prompt The prompt text, if the dialog allows a prompt.
+	 */
+	static selectDialog(prompt: string): Folder;
 
 	/**
 	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
@@ -2083,17 +2085,15 @@ declare class Folder {
 	selectDlg(prompt: string): Folder;
 
 	/**
-	 * Retrieves the contents of this folder, filtered by the supplied mask.
-	 * Returns an array of File and Folder objects, or null if this object's referenced folder does not exist.
-	 * @param mask A search mask for file names, specified as a string or a function. A mask string can contain question mark (?) and asterisk (*) wild cards. Default is "*", which matches all file names. Can also be the name of a function that takes a File or Folder object as its argument. It is called for each file or folder found in the search; if it returns true, the object is added to the return array. NOTE: In Windows, all aliases end with the extension .lnk. ExtendScript strips this from the file name when found, in order to preserve compatibility with other operating systems. You can search for all aliases by supplying the search mask "*.lnk", but note that such code is not portable.
+	 * Creates and returns a serialized string representation of this object.
+	 * Pass the resulting string to eval() to recreate the object.
 	 */
-	getFiles(mask: any): Array;
+	toSource(): string;
 
 	/**
-	 * Creates a folder at the location given by this object's path property.
-	 * Returns true if the folder was created.
+	 * Converts this object to a string.
 	 */
-	create(): boolean;
+	toString(): string;
 
 }
 
@@ -2102,15 +2102,9 @@ declare class Folder {
  */
 declare class Socket {
 	/**
-	 * Creates a new Socket object.
+	 * When true, the connection is active.
 	 */
-	constructor();
-
-	/**
-	 * The name of the remote computer when a connection is established.
-	 * If the connection is shut down or does not exist, the property contains the empty string.
-	 */
-	readonly host: string;
+	readonly connected: boolean;
 
 	/**
 	 * Sets or retrieves the name of the encoding used to transmit data.
@@ -2119,19 +2113,20 @@ declare class Socket {
 	encoding: string;
 
 	/**
-	 * A message describing the most recent error. Setting this value clears any error message.
-	 */
-	error: string;
-
-	/**
 	 * When true, the receive buffer is empty.
 	 */
 	readonly eof: boolean;
 
 	/**
-	 * When true, the connection is active.
+	 * A message describing the most recent error. Setting this value clears any error message.
 	 */
-	readonly connected: boolean;
+	error: string;
+
+	/**
+	 * The name of the remote computer when a connection is established.
+	 * If the connection is shut down or does not exist, the property contains the empty string.
+	 */
+	readonly host: string;
 
 	/**
 	 * The timeout in seconds to be applied to read or write operations.
@@ -2139,12 +2134,16 @@ declare class Socket {
 	timeout: number;
 
 	/**
-	 * Opens the connection for subsequent read/write operations.
-	 * The call to open() and the call to listen() are mutually exclusive. Call one function or the other, not both.
-	 * @param host The server to connect to. This can be a DNS name, an IPv4 address, or an IPv6 address, followed by a colon and a port number.
-	 * @param encoding The encoding to be used for the connection Typical values are "ASCII", "binary", or "UTF-8".
+	 * Creates a new Socket object.
 	 */
-	open(host: string, encoding?: string): boolean;
+	constructor();
+
+	/**
+	 * Terminates the open connection.
+	 * Returns true if the connection was closed, false on I/O errors.
+	 * Deleting the object also closes the connection, but not until JavaScript garbage-collects the object. The connection might stay open longer than you wish if you do not close it explicitly.
+	 */
+	close(): boolean;
 
 	/**
 	 * Instructs the object to start listening for an incoming connection.
@@ -2155,11 +2154,18 @@ declare class Socket {
 	listen(port: number, encoding?: string): boolean;
 
 	/**
-	 * Terminates the open connection.
-	 * Returns true if the connection was closed, false on I/O errors.
-	 * Deleting the object also closes the connection, but not until JavaScript garbage-collects the object. The connection might stay open longer than you wish if you do not close it explicitly.
+	 * Opens the connection for subsequent read/write operations.
+	 * The call to open() and the call to listen() are mutually exclusive. Call one function or the other, not both.
+	 * @param host The server to connect to. This can be a DNS name, an IPv4 address, or an IPv6 address, followed by a colon and a port number.
+	 * @param encoding The encoding to be used for the connection Typical values are "ASCII", "binary", or "UTF-8".
 	 */
-	close(): boolean;
+	open(host: string, encoding?: string): boolean;
+
+	/**
+	 * Checks a listening object for a new incoming connection.
+	 * If a connection request was detected, the method returns a new Socket object that wraps the new connection. Use this connection object to communicate with the remote computer. After use, close the connection and delete the JavaScript object. If no new connection request was detected, the method returns null.
+	 */
+	poll(): Socket;
 
 	/**
 	 * Reads up to the specified number of characters from the connection. CR characters are ignored unless the encoding is set to "BINARY".
@@ -2186,12 +2192,6 @@ declare class Socket {
 	 */
 	writeln(text: string): boolean;
 
-	/**
-	 * Checks a listening object for a new incoming connection.
-	 * If a connection request was detected, the method returns a new Socket object that wraps the new connection. Use this connection object to communicate with the remote computer. After use, close the connection and delete the JavaScript object. If no new connection request was detected, the method returns null.
-	 */
-	poll(): Socket;
-
 }
 
 /**
@@ -2199,20 +2199,9 @@ declare class Socket {
  */
 declare class ReflectionInfo {
 	/**
-	 * The class object that this element belongs to.
+	 * The description of method or function arguments.
 	 */
-	readonly parent: Reflection;
-
-	/**
-	 * The element name.
-	 */
-	readonly name: string;
-
-	/**
-	 * The element type.
-	 * One of unknown, readonly, readwrite, createonly, method or parameter.
-	 */
-	readonly type: string;
+	readonly arguments: ReflectionInfo[];
 
 	/**
 	 * The data type.
@@ -2220,29 +2209,9 @@ declare class ReflectionInfo {
 	readonly dataType: string;
 
 	/**
-	 * The description of method or function arguments.
-	 */
-	readonly arguments: ReflectionInfo[];
-
-	/**
-	 * The minimum value.
-	 */
-	readonly min: number;
-
-	/**
-	 * The maximum value.
-	 */
-	readonly max: number;
-
-	/**
 	 * The default value.
 	 */
 	readonly defaultValue: any;
-
-	/**
-	 * Contains true if the class describes a collection class.
-	 */
-	readonly isCollection: boolean;
 
 	/**
 	 * The long description text.
@@ -2255,6 +2224,31 @@ declare class ReflectionInfo {
 	readonly help: string;
 
 	/**
+	 * Contains true if the class describes a collection class.
+	 */
+	readonly isCollection: boolean;
+
+	/**
+	 * The maximum value.
+	 */
+	readonly max: number;
+
+	/**
+	 * The minimum value.
+	 */
+	readonly min: number;
+
+	/**
+	 * The element name.
+	 */
+	readonly name: string;
+
+	/**
+	 * The class object that this element belongs to.
+	 */
+	readonly parent: Reflection;
+
+	/**
 	 * Sample code, if present.
 	 */
 	readonly sampleCode: string;
@@ -2264,6 +2258,12 @@ declare class ReflectionInfo {
 	 */
 	readonly sampleFile: File;
 
+	/**
+	 * The element type.
+	 * One of unknown, readonly, readwrite, createonly, method or parameter.
+	 */
+	readonly type: string;
+
 }
 
 /**
@@ -2271,9 +2271,14 @@ declare class ReflectionInfo {
  */
 declare class Reflection {
 	/**
-	 * The class name.
+	 * The long description text.
 	 */
-	readonly name: string;
+	readonly description: string;
+
+	/**
+	 * The short description text.
+	 */
+	readonly help: string;
 
 	/**
 	 * An array of method descriptions.
@@ -2281,9 +2286,24 @@ declare class Reflection {
 	readonly methods: ReflectionInfo[];
 
 	/**
+	 * The class name.
+	 */
+	readonly name: string;
+
+	/**
 	 * An array of property descriptions.
 	 */
 	readonly properties: ReflectionInfo[];
+
+	/**
+	 * Sample code, if present.
+	 */
+	readonly sampleCode: string;
+
+	/**
+	 * A file containing sample code. May be null.
+	 */
+	readonly sampleFile: File;
 
 	/**
 	 * An array of class method descriptions.
@@ -2294,26 +2314,6 @@ declare class Reflection {
 	 * An array of class property descriptions.
 	 */
 	readonly staticProperties: ReflectionInfo[];
-
-	/**
-	 * The long description text.
-	 */
-	readonly description: string;
-
-	/**
-	 * The short description text.
-	 */
-	readonly help: string;
-
-	/**
-	 * Sample code, if present.
-	 */
-	readonly sampleCode: string;
-
-	/**
-	 * A file containing sample code. May be null.
-	 */
-	readonly sampleFile: File;
 
 	/**
 	 * Finds an element description by name.
@@ -2333,11 +2333,9 @@ declare class Reflection {
  */
 declare class QName {
 	/**
-	 * Creates a QName object.
-	 * @param uri The URI, specified as a Namespace object, an existing QName object, or string. If this is a Namespace object, the URI is set to the namespace URI, and there is no local name. If this is a QName object, the URI and localName is set to those of that object. If this is a string, the URI is set to that string.
-	 * @param name The local name. Used only if URI is given as a string.
+	 * The local name part of the qualified name.
 	 */
-	constructor(uri: any, name?: string);
+	readonly localName: string;
 
 	/**
 	 * The URI part of the qualified name.
@@ -2345,9 +2343,11 @@ declare class QName {
 	readonly uri: string;
 
 	/**
-	 * The local name part of the qualified name.
+	 * Creates a QName object.
+	 * @param uri The URI, specified as a Namespace object, an existing QName object, or string. If this is a Namespace object, the URI is set to the namespace URI, and there is no local name. If this is a QName object, the URI and localName is set to those of that object. If this is a string, the URI is set to that string.
+	 * @param name The local name. Used only if URI is given as a string.
 	 */
-	readonly localName: string;
+	constructor(uri: any, name?: string);
 
 }
 
@@ -2355,13 +2355,6 @@ declare class QName {
  * A XML namespace object.
  */
 declare class Namespace {
-	/**
-	 * Creates a Namespace object.
-	 * @param prefix The URIprefix, specified as an existing Namespace object, QName object, or string. If this is a Namespace or a QName object, the URI and prefix are set to that of the object. If this is a string, the prefix is set to that string, and the URI must be specified.
-	 * @param uri The URI if the prefix is specified as a string.
-	 */
-	constructor(prefix: any, uri?: string);
-
 	/**
 	 * The named prefix.
 	 */
@@ -2372,18 +2365,19 @@ declare class Namespace {
 	 */
 	readonly uri: string;
 
+	/**
+	 * Creates a Namespace object.
+	 * @param prefix The URIprefix, specified as an existing Namespace object, QName object, or string. If this is a Namespace or a QName object, the URI and prefix are set to that of the object. If this is a string, the prefix is set to that string, and the URI must be specified.
+	 * @param uri The URI if the prefix is specified as a string.
+	 */
+	constructor(prefix: any, uri?: string);
+
 }
 
 /**
  * Wraps XML into an object.
  */
 declare class XML {
-	/**
-	 * Parses an XML string. Throws an error if the XML is incorrect.
-	 * @param text The text to parse.
-	 */
-	constructor(text: string);
-
 	/**
 	 * Controls whether XML comments should be parsed (false) or ignored (true).
 	 */
@@ -2400,30 +2394,20 @@ declare class XML {
 	static ignoreWhitespace: boolean;
 
 	/**
-	 * When true, XML is pretty-printed when converting to a string.
-	 */
-	static prettyPrinting: boolean;
-
-	/**
 	 * The number of spaces used to indent pretty-printed XML.
 	 */
 	static prettyIndent: number;
 
 	/**
-	 * Returns an object containing the current parsing and print settings for XML.
+	 * When true, XML is pretty-printed when converting to a string.
 	 */
-	static settings(): Object;
+	static prettyPrinting: boolean;
 
 	/**
-	 * Sets the parsing and print setting for XML using an object returned by the settings() method.
-	 * @param obj The object containing the settings to set.
+	 * Parses an XML string. Throws an error if the XML is incorrect.
+	 * @param text The text to parse.
 	 */
-	static setSettings(obj: Object): void;
-
-	/**
-	 * Returns an object containing the default parsing and print settings for XML.
-	 */
-	static defaultSettings(): Object;
+	constructor(text: string);
 
 	/**
 	 * Adds a namespace declaration to the node. Returns the XML object itself.
@@ -2481,6 +2465,11 @@ declare class XML {
 	 * Creates a copy of this XML object.
 	 */
 	copy(): XML;
+
+	/**
+	 * Returns an object containing the default parsing and print settings for XML.
+	 */
+	static defaultSettings(): Object;
 
 	/**
 	 * Returns all the XML-valued descendants of this XML object with the given name.
@@ -2572,17 +2561,17 @@ declare class XML {
 	parent(): XML;
 
 	/**
+	 * Inserts a given child into this object before its existing XML properties, and returns this XML object.
+	 * @param child The XML to insert.
+	 */
+	prependChild(child: XML): XML;
+
+	/**
 	 * Returns a list of preprocessing instructions.
 	 * Collects processing-instructions with the given name, if supplied. Otherwise, returns an XML list containing all the children of this XML object that are processing-instructions regardless of their name.
 	 * @param name The name of the preprocessing instruction to return.
 	 */
 	processingInstructions(name?: string): XML;
-
-	/**
-	 * Inserts a given child into this object before its existing XML properties, and returns this XML object.
-	 * @param child The XML to insert.
-	 */
-	prependChild(child: XML): XML;
 
 	/**
 	 * Removes the given namespace from this XML, and returns this XML.
@@ -2623,6 +2612,17 @@ declare class XML {
 	 * @param namespace The namespace to set.
 	 */
 	setNamespace(namespace: Namespace): void;
+
+	/**
+	 * Sets the parsing and print setting for XML using an object returned by the settings() method.
+	 * @param obj The object containing the settings to set.
+	 */
+	static setSettings(obj: Object): void;
+
+	/**
+	 * Returns an object containing the current parsing and print settings for XML.
+	 */
+	static settings(): Object;
 
 	/**
 	 * Returns an XML list containing all XML properties of this XML object that represent XML text nodes.
@@ -2667,6 +2667,11 @@ declare class UnitValue {
 	static baseUnit: UnitValue;
 
 	/**
+	 * The base unit.
+	 */
+	baseUnit: UnitValue;
+
+	/**
 	 * The unit name.
 	 */
 	readonly type: string;
@@ -2677,21 +2682,16 @@ declare class UnitValue {
 	value: number;
 
 	/**
-	 * The base unit.
+	 * Returns this instance as a different unit.
+	 * @param unitName The unit name.
 	 */
-	baseUnit: UnitValue;
+	as(unitName: string): UnitValue;
 
 	/**
 	 * Converts this instance to a different unit.
 	 * @param unitName The unit name.
 	 */
 	convert(unitName: string): any;
-
-	/**
-	 * Returns this instance as a different unit.
-	 * @param unitName The unit name.
-	 */
-	as(unitName: string): UnitValue;
 
 }
 
