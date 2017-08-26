@@ -10632,3 +10632,5 @@ declare enum ElementPlacement {
 
 }
 
+type UnitPoint = [number, number];
+type UnitRect = [number, number, number, number];
