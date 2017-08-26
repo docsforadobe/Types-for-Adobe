@@ -2208,7 +2208,7 @@ declare class ListItem {
 	 * text: A display string for the corresponding label.
 	 * image: An ScriptUIImage object for the corresponding label.
 	 */
-	readonly subItems: Array;
+	readonly subItems: any[];
 
 	/**
 	 * The label text to display for the item, a localizable string.
