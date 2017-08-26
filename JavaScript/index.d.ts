@@ -1039,20 +1039,33 @@ declare class global {
 
 }
 
+interface StringConstructor {
+  new(value?: any): String;
+  readonly prototype: String;
+  
+  /**
+   * Returns a string representation of the value given as an argument.
+   * @param value A number, variable, or object to convert to a string.
+   */
+  (value: any): string;
+	
+  /**
+   * Returns a string created by concatenation one or more characters specified as ASCII values.
+   * @param value1 One or more ASCII values.
+   */
+  fromCharCode(value1: number): String;
+	
+}
+declare const String: StringConstructor;
+
 /**
  * A character string. Each character is adressable by index.
  */
-declare class String {
+interface String {
 	/**
 	 * The length of the string.
 	 */
 	readonly length: number;
-
-	/**
-	 * Returns a string representation of the value given as an argument.
-	 * @param value A number, variable, or object to convert to a string.
-	 */
-	constructor(value: any);
 
 	/**
 	 * Returns a string consisting of this string enclosed in a <a> tag.
@@ -1110,13 +1123,7 @@ declare class String {
 	 * @param size The value to be stored in the tag's size attribute.
 	 */
 	fontsize(size: number): string;
-
-	/**
-	 * Returns a string created by concatenation one or more characters specified as ASCII values.
-	 * @param value1 One or more ASCII values.
-	 */
-	static fromCharCode(value1: number): String;
-
+	
 	/**
 	 * Returns the index within the string of the first occurrence of the specified string, starting the search at fromIndex if provided.
 	 * @param searchValue The string for which to search.
