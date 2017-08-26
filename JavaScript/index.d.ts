@@ -890,20 +890,20 @@ declare class Function {
 }
 
 interface StringConstructor {
-  new(value?: any): String;
-  readonly prototype: String;
-  
-  /**
-   * Returns a string representation of the value given as an argument.
-   * @param value A number, variable, or object to convert to a string.
-   */
-  (value: any): string;
+	new(value?: any): String;
+	readonly prototype: String;
 	
-  /**
-   * Returns a string created by concatenation one or more characters specified as ASCII values.
-   * @param value1 One or more ASCII values.
-   */
-  fromCharCode(value1: number): String;
+	/**
+	 * Returns a string representation of the value given as an argument.
+	 * @param value A number, variable, or object to convert to a string.
+	 */
+	(value: any): string;
+	
+	/**
+	 * Returns a string created by concatenation one or more characters specified as ASCII values.
+	 * @param value1 One or more ASCII values.
+	 */
+	fromCharCode(value1: number): String;
 	
 }
 declare const String: StringConstructor;
@@ -1195,15 +1195,15 @@ declare class Number {
 }
 
 interface BooleanConstructor {
-  new(value?: any): Boolean;
-  readonly prototype: Boolean;
+	new(value?: any): Boolean;
+	readonly prototype: Boolean;
 
-  /**
-   * Creates and returns a new Boolean object set to the value of the argument converted to a boolean.
-   * @param value The value to be converted to a Boolean.
-   */
-  (value: any): boolean;
-  
+	/**
+	 * Creates and returns a new Boolean object set to the value of the argument converted to a boolean.
+	 * @param value The value to be converted to a Boolean.
+	 */
+	(value: any): boolean;
+	
 }
 declare const Boolean: BooleanConstructor;
 
