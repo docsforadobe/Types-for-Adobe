@@ -1,5 +1,7 @@
 /// <reference path="../JavaScript/index.d.ts" />
 
+declare var app: Application;
+
 /**
  * Document formats that Photoshop can open.
  */
