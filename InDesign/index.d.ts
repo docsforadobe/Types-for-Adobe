@@ -4488,7 +4488,7 @@ declare class Document {
 	 * @param linkTextStories Whether to create linked text for duplicated text stories.
 	 * @param layoutRule What layout rule to set on the pages.
 	 */
-	createAlternateLayout(spreadItems: Spread[], name: string, width: string[] | number, height: string[] | number, createTextStyles: boolean, linkTextStories: boolean, layoutRule: LayoutRuleOptions): void;
+	createAlternateLayout(spreadItems: Spread[], name: string, width: string | number, height: string | number, createTextStyles: boolean, linkTextStories: boolean, layoutRule: LayoutRuleOptions): void;
 
 	/**
 	 * Create Email QR Code on the page item or document
@@ -4584,7 +4584,7 @@ declare class Document {
 	 * @param absoluteDistributeMeasurement The distance to use when distributing page items. Required when 'align distribute bounds' specifies 'key object'. 
 	 * @param reference The reference or key object to align to distribute relative to. Required when 'align distribute bounds' specifies 'key object'. 
 	 */
-	distribute(alignDistributeItems: PageItem[], distributeOption: DistributeOptions, alignDistributeBounds: AlignDistributeBounds, useDistributeMeasurement: boolean, absoluteDistributeMeasurement: string[] | number, reference: PageItem): void;
+	distribute(alignDistributeItems: PageItem[], distributeOption: DistributeOptions, alignDistributeBounds: AlignDistributeBounds, useDistributeMeasurement: boolean, absoluteDistributeMeasurement: string | number, reference: PageItem): void;
 
 	/**
 	 * Embed this profile to the document.
@@ -6542,7 +6542,7 @@ declare class TrapPreset {
 	/**
 	 * The black width. (Range depends on unit. For points: 0.0 to 8.0; picas: 0p0 to 0p8; inches: 0 to 0.1111; mm: 0 to 2.822; cm: 0 to .2822; ciceros: 0c0 to 0c7.507)
 	 */
-	blackWidth: string[] | number;
+	blackWidth: string | number;
 
 	/**
 	 * The degree (as a percentage) to which components from abutting colors are used to reduce the trap color. (Range: 0 to 100) Note: 0% makes a trap whose neutral density is equal to the neutral density of the darker color.
@@ -6552,7 +6552,7 @@ declare class TrapPreset {
 	/**
 	 * The default width for trapping all colors except those involving solid black. (Range depends on unit. For points: 0.0 to 8.0; picas: 0p0 to 0p8; inches: 0 to 0.1111; mm: 0 to 2.822; cm: 0 to .2822; ciceros: 0c0 to 0c7.507)
 	 */
-	defaultTrapWidth: string[] | number;
+	defaultTrapWidth: string | number;
 
 	/**
 	 * A collection of event listeners.
@@ -32701,7 +32701,7 @@ declare class Spread {
 	 * @param removeExisting If true, removes existing guides when creating new ones. 
 	 * @param layer The layer on which to create the guides. 
 	 */
-	createGuides(numberOfRows?: number, numberOfColumns?: number, rowGutter?: string[] | number, columnGutter?: string[] | number, guideColor?: [number, number, number] | UIColors, fitMargins?: boolean, removeExisting?: boolean, layer?: Layer): void;
+	createGuides(numberOfRows?: number, numberOfColumns?: number, rowGutter?: string | number, columnGutter?: string | number, guideColor?: [number, number, number] | UIColors, fitMargins?: boolean, removeExisting?: boolean, layer?: Layer): void;
 
 	/**
 	 * Detaches an overridden master page item from the master page.
@@ -33689,7 +33689,7 @@ declare class MasterSpread {
 	 * @param removeExisting If true, removes existing guides when creating new ones. 
 	 * @param layer The layer on which to create the guides. 
 	 */
-	createGuides(numberOfRows?: number, numberOfColumns?: number, rowGutter?: string[] | number, columnGutter?: string[] | number, guideColor?: [number, number, number] | UIColors, fitMargins?: boolean, removeExisting?: boolean, layer?: Layer): void;
+	createGuides(numberOfRows?: number, numberOfColumns?: number, rowGutter?: string | number, columnGutter?: string | number, guideColor?: [number, number, number] | UIColors, fitMargins?: boolean, removeExisting?: boolean, layer?: Layer): void;
 
 	/**
 	 * Detaches an overridden master page item from the master page.
@@ -34000,7 +34000,7 @@ declare class PageItem {
 	/**
 	 * The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes
 	 */
-	bottomLeftCornerRadius: string[] | number;
+	bottomLeftCornerRadius: string | number;
 
 	/**
 	 * The shape to apply to the bottom right corner of rectangular shapes.
@@ -34010,7 +34010,7 @@ declare class PageItem {
 	/**
 	 * The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes
 	 */
-	bottomRightCornerRadius: string[] | number;
+	bottomRightCornerRadius: string | number;
 
 	/**
 	 * Transparency settings for the content of the PageItem.
@@ -34080,7 +34080,7 @@ declare class PageItem {
 	/**
 	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the PageItem.
 	 */
-	gradientFillLength: string[] | number;
+	gradientFillLength: string | number;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the PageItem, in the format [x, y].
@@ -34095,7 +34095,7 @@ declare class PageItem {
 	/**
 	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the PageItem.
 	 */
-	gradientStrokeLength: string[] | number;
+	gradientStrokeLength: string | number;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the PageItem, in the format [x, y].
@@ -34270,7 +34270,7 @@ declare class PageItem {
 	/**
 	 * The weight (in points) to apply to the PageItem's stroke.
 	 */
-	strokeWeight: string[] | number;
+	strokeWeight: string | number;
 
 	/**
 	 * The text wrap preference properties that define the default formatting for wrapping text around objects.
@@ -34290,7 +34290,7 @@ declare class PageItem {
 	/**
 	 * The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes
 	 */
-	topLeftCornerRadius: string[] | number;
+	topLeftCornerRadius: string | number;
 
 	/**
 	 * The shape to apply to the top right corner of rectangular shapes
@@ -34300,7 +34300,7 @@ declare class PageItem {
 	/**
 	 * The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes
 	 */
-	topRightCornerRadius: string[] | number;
+	topRightCornerRadius: string | number;
 
 	/**
 	 * Transparency settings.
@@ -34392,7 +34392,7 @@ declare class PageItem {
 	 * @param insetPercentage The star inset percentage for the resulting polygon. (Range: 0.0 to 100.0)
 	 * @param cornerRadius The corner radius of the resulting rectangle. 
 	 */
-	convertShape(given: ConvertShapeOptions, numberOfSides: number, insetPercentage: number, cornerRadius: string[] | number): void;
+	convertShape(given: ConvertShapeOptions, numberOfSides: number, insetPercentage: number, cornerRadius: string | number): void;
 
 	/**
 	 * Create Email QR Code on the page item or document
@@ -36430,7 +36430,7 @@ declare class FrameFittingOption extends Preference {
 	/**
 	 * The amount in measurement units to crop the bottom edge of a graphic.
 	 */
-	bottomCrop: string[] | number;
+	bottomCrop: string | number;
 
 	/**
 	 * The point with which to align the image empty when fitting in a frame. For information, see frame fitting options.
@@ -36445,17 +36445,17 @@ declare class FrameFittingOption extends Preference {
 	/**
 	 * The amount in measurement units to crop the left edge of a graphic.
 	 */
-	leftCrop: string[] | number;
+	leftCrop: string | number;
 
 	/**
 	 * The amount in measurement units to crop the right edge of a graphic.
 	 */
-	rightCrop: string[] | number;
+	rightCrop: string | number;
 
 	/**
 	 * The amount in measurement units to crop the top edge of a graphic.
 	 */
-	topCrop: string[] | number;
+	topCrop: string | number;
 
 }
 
@@ -36501,7 +36501,7 @@ declare class Guide {
 	/**
 	 * The zone of the guide.
 	 */
-	guideZone: string[] | number;
+	guideZone: string | number;
 
 	/**
 	 * The unique ID of the Guide.
@@ -36531,7 +36531,7 @@ declare class Guide {
 	/**
 	 * The location at which to place the guide relative to the current ruler zero point.
 	 */
-	location: string[] | number;
+	location: string | number;
 
 	/**
 	 * If true, the Guide is locked.
@@ -40285,7 +40285,7 @@ declare class ObjectStyle {
 	/**
 	 * The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes
 	 */
-	bottomLeftCornerRadius: string[] | number;
+	bottomLeftCornerRadius: string | number;
 
 	/**
 	 * The shape to apply to the bottom right corner of rectangular shapes.
@@ -40295,7 +40295,7 @@ declare class ObjectStyle {
 	/**
 	 * The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes
 	 */
-	bottomRightCornerRadius: string[] | number;
+	bottomRightCornerRadius: string | number;
 
 	/**
 	 * The content effects enabling settings.
@@ -40580,7 +40580,7 @@ declare class ObjectStyle {
 	/**
 	 * The weight (in points) to apply to the ObjectStyle's stroke.
 	 */
-	strokeWeight: string[] | number;
+	strokeWeight: string | number;
 
 	/**
 	 * Text frame preference settings.
@@ -40600,7 +40600,7 @@ declare class ObjectStyle {
 	/**
 	 * The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes
 	 */
-	topLeftCornerRadius: string[] | number;
+	topLeftCornerRadius: string | number;
 
 	/**
 	 * The shape to apply to the top right corner of rectangular shapes
@@ -40610,7 +40610,7 @@ declare class ObjectStyle {
 	/**
 	 * The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes
 	 */
-	topRightCornerRadius: string[] | number;
+	topRightCornerRadius: string | number;
 
 	/**
 	 * Transparency settings.
@@ -40967,7 +40967,7 @@ declare class StoryPreference extends Preference {
 	/**
 	 * The point size used as the basis for calculating optical margin alignment. (Range: 0.1 to 1296)
 	 */
-	opticalMarginSize: string[] | number;
+	opticalMarginSize: string | number;
 
 	/**
 	 * The direction of the story.
@@ -41008,17 +41008,17 @@ declare class TextFramePreference extends Preference {
 	/**
 	 * The minimum distance between the baseline of the text and the top inset of the text frame or cell.
 	 */
-	minimumFirstBaselineOffset: string[] | number;
+	minimumFirstBaselineOffset: string | number;
 
 	/**
 	 * The minimum height for auto-sizing of the text frame.
 	 */
-	minimumHeightForAutoSizing: string[] | number;
+	minimumHeightForAutoSizing: string | number;
 
 	/**
 	 * The minimum width for auto-sizing of the text frame.
 	 */
-	minimumWidthForAutoSizing: string[] | number;
+	minimumWidthForAutoSizing: string | number;
 
 	/**
 	 * The number of columns in the text frame. Note: Depending on the value of use fixed column width, the number of columns can change automatically when the text frame size changes.
@@ -41028,17 +41028,17 @@ declare class TextFramePreference extends Preference {
 	/**
 	 * The column width of the columns in the text frame.
 	 */
-	textColumnFixedWidth: string[] | number;
+	textColumnFixedWidth: string | number;
 
 	/**
 	 * The space between columns in the text frame.
 	 */
-	textColumnGutter: string[] | number;
+	textColumnGutter: string | number;
 
 	/**
 	 * The maximum column width of the columns in the text frame. Use 0 to indicate no upper limit.
 	 */
-	textColumnMaxWidth: string[] | number;
+	textColumnMaxWidth: string | number;
 
 	/**
 	 * If true, maintains column width when the text frame is resized. If false, causes columns to resize when the text frame is resized. Note: When true, resizing the frame can change the number of columns in the frame.
@@ -41078,7 +41078,7 @@ declare class TextFramePreference extends Preference {
 	/**
 	 * The maximum amount of vertical space between two paragraphs. Note: Valid only when vertical justification is justified; the specified amount is applied in addition to the space before or space after values defined for the paragraph.
 	 */
-	verticalThreshold: string[] | number;
+	verticalThreshold: string | number;
 
 }
 
@@ -41099,7 +41099,7 @@ declare class TextPreference extends Preference {
 	/**
 	 * The amount that the baseline shift increases each time the user presses the option/alt-shift-up arrow keys or decreases each time the user presses the option/alt-shift-down arrow keys. (Range: .001 to 100)
 	 */
-	baselineShiftKeyIncrement: string[] | number;
+	baselineShiftKeyIncrement: string | number;
 
 	/**
 	 * Enable auto-deletion of pages containing empty threaded text frames.
@@ -41154,7 +41154,7 @@ declare class TextPreference extends Preference {
 	/**
 	 * The amount that leading increases each time the user presses the option/alt-up arrow keys or decreases each time the user presses the option/alt-down arrow keys. (Range: .001 to 100)
 	 */
-	leadingKeyIncrement: string[] | number;
+	leadingKeyIncrement: string | number;
 
 	/**
 	 * Restrict the adding of pages during smart text reflow to overridden master text frames.
@@ -41310,7 +41310,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The baseline shift applied to the text.
 	 */
-	baselineShift: string[] | number;
+	baselineShift: string | number;
 
 	/**
 	 * Bullet character.
@@ -41435,7 +41435,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The amount to indent the first line.
 	 */
-	firstLineIndent: string[] | number;
+	firstLineIndent: string | number;
 
 	/**
 	 * The name of the font style.
@@ -41545,7 +41545,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The amount of white space allowed at the end of a line of non-justified text before hypenation begins. Note: Valid when composer is single-line composer.
 	 */
-	hyphenationZone: string[] | number;
+	hyphenationZone: string | number;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
@@ -41720,7 +41720,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: string[] | number;
+	lastLineIndent: string | number;
 
 	/**
 	 * The leading applied to the text. Can return: Unit or Leading enumerator.
@@ -41740,7 +41740,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The width of the left indent.
 	 */
-	leftIndent: string[] | number;
+	leftIndent: string | number;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
@@ -41980,7 +41980,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to offset the bottom edge of the paragraph.
 	 */
-	paragraphShadingBottomOffset: string[] | number;
+	paragraphShadingBottomOffset: string | number;
 
 	/**
 	 * The basis (descent or baseline) used to calculate the bottom origin of the paragraph shading.
@@ -42000,7 +42000,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to offset the left edge of the paragraph.
 	 */
-	paragraphShadingLeftOffset: string[] | number;
+	paragraphShadingLeftOffset: string | number;
 
 	/**
 	 * If true, the paragraph shading is On.
@@ -42015,7 +42015,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to offset the right edge of the paragraph.
 	 */
-	paragraphShadingRightOffset: string[] | number;
+	paragraphShadingRightOffset: string | number;
 
 	/**
 	 * If true, suppress printing of the shading of the paragraph.
@@ -42030,7 +42030,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to offset the top edge of the paragraph.
 	 */
-	paragraphShadingTopOffset: string[] | number;
+	paragraphShadingTopOffset: string | number;
 
 	/**
 	 * The basis (cap height, ascent or baseline) used to calculate the top origin of the paragraph shading.
@@ -42045,7 +42045,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The text size.
 	 */
-	pointSize: string[] | number;
+	pointSize: string | number;
 
 	/**
 	 * The text position relative to the baseline.
@@ -42070,7 +42070,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The width of the right indent.
 	 */
-	rightIndent: string[] | number;
+	rightIndent: string | number;
 
 	/**
 	 * If true, rotates Roman characters in vertical text.
@@ -42240,17 +42240,17 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to indent the left edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveLeftIndent: string[] | number;
+	ruleAboveLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule above.
 	 */
-	ruleAboveLineWeight: string[] | number;
+	ruleAboveLineWeight: string | number;
 
 	/**
 	 * The amount to offset the paragraph rule above from the baseline of the first line the paragraph.
 	 */
-	ruleAboveOffset: string[] | number;
+	ruleAboveOffset: string | number;
 
 	/**
 	 * If true, the paragraph rule above will overprint.
@@ -42260,7 +42260,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to indent the right edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveRightIndent: string[] | number;
+	ruleAboveRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule above. (Range: 0 to 100)
@@ -42305,17 +42305,17 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to indent the left edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowLeftIndent: string[] | number;
+	ruleBelowLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule below.
 	 */
-	ruleBelowLineWeight: string[] | number;
+	ruleBelowLineWeight: string | number;
 
 	/**
 	 * The amount to offset the the paragraph rule below from the baseline of the last line of the paragraph.
 	 */
-	ruleBelowOffset: string[] | number;
+	ruleBelowOffset: string | number;
 
 	/**
 	 * If true, the rule below will overprint.
@@ -42325,7 +42325,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The distance to indent the right edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowRightIndent: string[] | number;
+	ruleBelowRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule below. (Range: 0 to 100)
@@ -42380,22 +42380,22 @@ declare class TextDefault extends Preference {
 	/**
 	 * The height of the paragraph space below.
 	 */
-	spaceAfter: string[] | number;
+	spaceAfter: string | number;
 
 	/**
 	 * The height of the paragraph space above.
 	 */
-	spaceBefore: string[] | number;
+	spaceBefore: string | number;
 
 	/**
 	 * The minimum space after a span or a split column
 	 */
-	spanColumnMinSpaceAfter: string[] | number;
+	spanColumnMinSpaceAfter: string | number;
 
 	/**
 	 * The minimum space before a span or a split column
 	 */
-	spanColumnMinSpaceBefore: string[] | number;
+	spanColumnMinSpaceBefore: string | number;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns
@@ -42410,12 +42410,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The inside gutter if the paragraph splits columns
 	 */
-	splitColumnInsideGutter: string[] | number;
+	splitColumnInsideGutter: string | number;
 
 	/**
 	 * The outside gutter if the paragraph splits columns
 	 */
-	splitColumnOutsideGutter: string[] | number;
+	splitColumnOutsideGutter: string | number;
 
 	/**
 	 * The location at which to start the paragraph.
@@ -42445,7 +42445,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: string[] | number;
+	strikeThroughOffset: string | number;
 
 	/**
 	 * If true, the strikethrough stroke will overprint.
@@ -42465,7 +42465,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: string[] | number;
+	strikeThroughWeight: string | number;
 
 	/**
 	 * If true, draws a strikethrough line through the text.
@@ -42490,7 +42490,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: string[] | number;
+	strokeWeight: string | number;
 
 	/**
 	 * A list of the tab stops in the paragraph. Can return: Array of Arrays of Property Name/Value Pairs.
@@ -42565,7 +42565,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: string[] | number;
+	underlineOffset: string | number;
 
 	/**
 	 * If true, the underline stroke color will overprint.
@@ -42585,7 +42585,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: string[] | number;
+	underlineWeight: string | number;
 
 	/**
 	 * The vertical scaling applied to the TextDefault.
@@ -42671,22 +42671,22 @@ declare class DocumentPreference extends Preference {
 	/**
 	 * The amount to offset the bottom document bleed. Note: To set the bleed bottom offset, document bleed uniform size must be false.
 	 */
-	documentBleedBottomOffset: string[] | number;
+	documentBleedBottomOffset: string | number;
 
 	/**
 	 * The amount to offset the inside or left document bleed. Note: To set the bleed inside or left offset, document bleed uniform size must be false.
 	 */
-	documentBleedInsideOrLeftOffset: string[] | number;
+	documentBleedInsideOrLeftOffset: string | number;
 
 	/**
 	 * The amount to offset the outside or right document bleed. Note: To set the bleed outside or right offset, document bleed uniform size must be false.
 	 */
-	documentBleedOutsideOrRightOffset: string[] | number;
+	documentBleedOutsideOrRightOffset: string | number;
 
 	/**
 	 * The amount to offset the top document bleed.
 	 */
-	documentBleedTopOffset: string[] | number;
+	documentBleedTopOffset: string | number;
 
 	/**
 	 * If true, uses the document bleed top offset value for bleed offset measurements on all sides of the document. The default setting is true.
@@ -42726,7 +42726,7 @@ declare class DocumentPreference extends Preference {
 	/**
 	 * The height of the page.
 	 */
-	pageHeight: string[] | number;
+	pageHeight: string | number;
 
 	/**
 	 * The page orientation.
@@ -42741,7 +42741,7 @@ declare class DocumentPreference extends Preference {
 	/**
 	 * The width of the page.
 	 */
-	pageWidth: string[] | number;
+	pageWidth: string | number;
 
 	/**
 	 * The number of pages in the document. (Range: 1 to 9999)
@@ -42756,22 +42756,22 @@ declare class DocumentPreference extends Preference {
 	/**
 	 * The amount to offset the bottom slug. Note: To set the slug bottom offset, document slug uniform size must be false.
 	 */
-	slugBottomOffset: string[] | number;
+	slugBottomOffset: string | number;
 
 	/**
 	 * The amount to offset the inside or left slug. Note: To set the slug inside or left offset, document slug uniform size must be false.
 	 */
-	slugInsideOrLeftOffset: string[] | number;
+	slugInsideOrLeftOffset: string | number;
 
 	/**
 	 * The amount to offset the outside or right slug. Note: To set the slug right or outside offset, document slug uniform size must be false.
 	 */
-	slugRightOrOutsideOffset: string[] | number;
+	slugRightOrOutsideOffset: string | number;
 
 	/**
 	 * The amount to offset the top slug.
 	 */
-	slugTopOffset: string[] | number;
+	slugTopOffset: string | number;
 
 	/**
 	 * If true, causes UI-based snippet import to use original location for page items.
@@ -42797,7 +42797,7 @@ declare class GridPreference extends Preference {
 	/**
 	 * The amount of space between baseline grid lines.
 	 */
-	baselineDivision: string[] | number;
+	baselineDivision: string | number;
 
 	/**
 	 * The zero point for the baseline grid offset.
@@ -42812,7 +42812,7 @@ declare class GridPreference extends Preference {
 	/**
 	 * The amount to offset the baseline grid from the zero point.
 	 */
-	baselineStart: string[] | number;
+	baselineStart: string | number;
 
 	/**
 	 * The magnification (as a percentage) less than which ruler guides do not appear. (Range: 5 to 4000)
@@ -42847,7 +42847,7 @@ declare class GridPreference extends Preference {
 	/**
 	 * The amount of space between major horizontal lines in the document grid.
 	 */
-	horizontalGridlineDivision: string[] | number;
+	horizontalGridlineDivision: string | number;
 
 	/**
 	 * The number of columns into which to subdivide the space between vertical document grid lines.
@@ -42857,7 +42857,7 @@ declare class GridPreference extends Preference {
 	/**
 	 * The amount of space between major vertical lines in the document grid.
 	 */
-	verticalGridlineDivision: string[] | number;
+	verticalGridlineDivision: string | number;
 
 }
 
@@ -42904,7 +42904,7 @@ declare class MarginPreference extends Preference {
 	/**
 	 * The bottom edge of the MarginPreference.
 	 */
-	bottom: string[] | number;
+	bottom: string | number;
 
 	/**
 	 * The number of columns to place on the page.
@@ -42919,7 +42919,7 @@ declare class MarginPreference extends Preference {
 	/**
 	 * The distance between columns.
 	 */
-	columnGutter: string[] | number;
+	columnGutter: string | number;
 
 	/**
 	 * The distance that each column guide is placed from the left margin, formatted as an array in the format [guide1, guide2, guide3].
@@ -42934,17 +42934,17 @@ declare class MarginPreference extends Preference {
 	/**
 	 * The left edge of the MarginPreference.
 	 */
-	left: string[] | number;
+	left: string | number;
 
 	/**
 	 * The right edge of the MarginPreference.
 	 */
-	right: string[] | number;
+	right: string | number;
 
 	/**
 	 * The top edge of the MarginPreference.
 	 */
-	top: string[] | number;
+	top: string | number;
 
 }
 
@@ -42986,7 +42986,7 @@ declare class ViewPreference extends Preference {
 	/**
 	 * The distance to move a specified object when an arrow key is pressed. (Range depends on the measurement unit. For points: 0.001 to 100; picas: 0p0.001 to 8p4; mm: 0 to 35.278; cm: 0 to 3.5278; inches: 0 to 1.3889; ciceros: 0c0.001 to 7c9.839)
 	 */
-	cursorKeyIncrement: string[] | number;
+	cursorKeyIncrement: string | number;
 
 	/**
 	 * The range (in pixels) within which an object snaps to guides. (Range: 1 to 36) Note: Snapping occurs only when guides are shown.
@@ -43067,7 +43067,7 @@ declare class DocumentPreset {
 	/**
 	 * The bottom edge of the DocumentPreset.
 	 */
-	bottom: string[] | number;
+	bottom: string | number;
 
 	/**
 	 * The number of columns to place on the page.
@@ -43077,7 +43077,7 @@ declare class DocumentPreset {
 	/**
 	 * The distance between columns.
 	 */
-	columnGutter: string[] | number;
+	columnGutter: string | number;
 
 	/**
 	 * If true, the document A-master has primary text frames when a new document is created.
@@ -43087,22 +43087,22 @@ declare class DocumentPreset {
 	/**
 	 * The amount to offset the bottom document bleed. Note: To set the bleed bottom offset, document bleed uniform size must be false.
 	 */
-	documentBleedBottomOffset: string[] | number;
+	documentBleedBottomOffset: string | number;
 
 	/**
 	 * The amount to offset the inside or left document bleed. Note: To set the bleed inside or left offset, document bleed uniform size must be false.
 	 */
-	documentBleedInsideOrLeftOffset: string[] | number;
+	documentBleedInsideOrLeftOffset: string | number;
 
 	/**
 	 * The amount to offset the outside or right document bleed. Note: To set the bleed outside or right offset, document bleed uniform size must be false.
 	 */
-	documentBleedOutsideOrRightOffset: string[] | number;
+	documentBleedOutsideOrRightOffset: string | number;
 
 	/**
 	 * The amount to offset the top document bleed.
 	 */
-	documentBleedTopOffset: string[] | number;
+	documentBleedTopOffset: string | number;
 
 	/**
 	 * If true, uses the document bleed top offset value for bleed offset measurements on all sides of the document. The default setting is true.
@@ -43157,7 +43157,7 @@ declare class DocumentPreset {
 	/**
 	 * The left edge of the DocumentPreset.
 	 */
-	left: string[] | number;
+	left: string | number;
 
 	/**
 	 * The name of the DocumentPreset.
@@ -43167,7 +43167,7 @@ declare class DocumentPreset {
 	/**
 	 * The height of the page.
 	 */
-	pageHeight: string[] | number;
+	pageHeight: string | number;
 
 	/**
 	 * The page orientation.
@@ -43182,7 +43182,7 @@ declare class DocumentPreset {
 	/**
 	 * The width of the page.
 	 */
-	pageWidth: string[] | number;
+	pageWidth: string | number;
 
 	/**
 	 * The number of pages in the document. (Range: 1 to 9999)
@@ -43202,27 +43202,27 @@ declare class DocumentPreset {
 	/**
 	 * The right edge of the DocumentPreset.
 	 */
-	right: string[] | number;
+	right: string | number;
 
 	/**
 	 * The amount to offset the bottom slug. Note: To set the slug bottom offset, document slug uniform size must be false.
 	 */
-	slugBottomOffset: string[] | number;
+	slugBottomOffset: string | number;
 
 	/**
 	 * The amount to offset the inside or left slug. Note: To set the slug inside or left offset, document slug uniform size must be false.
 	 */
-	slugInsideOrLeftOffset: string[] | number;
+	slugInsideOrLeftOffset: string | number;
 
 	/**
 	 * The amount to offset the outside or right slug. Note: To set the slug right or outside offset, document slug uniform size must be false.
 	 */
-	slugRightOrOutsideOffset: string[] | number;
+	slugRightOrOutsideOffset: string | number;
 
 	/**
 	 * The amount to offset the top slug.
 	 */
-	slugTopOffset: string[] | number;
+	slugTopOffset: string | number;
 
 	/**
 	 * The starting page number for a document. This is the same as the starting page number for the first section of a document. Default value is 1.
@@ -43232,7 +43232,7 @@ declare class DocumentPreset {
 	/**
 	 * The top edge of the DocumentPreset.
 	 */
-	top: string[] | number;
+	top: string | number;
 
 	/**
 	 * Adds an event listener.
@@ -43422,7 +43422,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The height of the bleed area at the bottom of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedBottom: string[] | number;
+	bleedBottom: string | number;
 
 	/**
 	 * If true, forces all bleed area settings to be the same, using the most recent bleed measurement setting. If false, allows bleed top, bleed bottom, bleed inside, and bleed outside to have different measurements.
@@ -43432,7 +43432,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The width of the bleed area at the inside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedInside: string[] | number;
+	bleedInside: string | number;
 
 	/**
 	 * If true, print bleed marks.
@@ -43442,12 +43442,12 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The width of the bleed area at the outside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedOutside: string[] | number;
+	bleedOutside: string | number;
 
 	/**
 	 * The height of the bleed area at the top of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedTop: string[] | number;
+	bleedTop: string | number;
 
 	/**
 	 * If true, collate printed copies.
@@ -43557,7 +43557,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The distance to offset the page marks from the edge of the page.
 	 */
-	markOffset: string[] | number;
+	markOffset: string | number;
 
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
@@ -43607,7 +43607,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The space between document pages on the printing medium.
 	 */
-	paperGap: string[] | number;
+	paperGap: string | number;
 
 	/**
 	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
@@ -43617,7 +43617,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The amount of space to offset the page from the left edge of the imageable area.
 	 */
-	paperOffset: string[] | number;
+	paperOffset: string | number;
 
 	/**
 	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
@@ -43863,7 +43863,7 @@ declare class PrintBookletOption extends Preference {
 	/**
 	 * The amount of bleed between pages.
 	 */
-	bleedBetweenPages: string[] | number;
+	bleedBetweenPages: string | number;
 
 	/**
 	 * The type of booklet.
@@ -43873,17 +43873,17 @@ declare class PrintBookletOption extends Preference {
 	/**
 	 * Bottom margin of the printed booklet.
 	 */
-	bottomMargin: string[] | number;
+	bottomMargin: string | number;
 
 	/**
 	 * The amount of creep (binding adjustment based on paper thickness) to add.
 	 */
-	creep: string[] | number;
+	creep: string | number;
 
 	/**
 	 * Left margin of the printed booklet.
 	 */
-	leftMargin: string[] | number;
+	leftMargin: string | number;
 
 	/**
 	 * If true, make all margins equal to the top margin.
@@ -43903,7 +43903,7 @@ declare class PrintBookletOption extends Preference {
 	/**
 	 * Right margin of the printed booklet.
 	 */
-	rightMargin: string[] | number;
+	rightMargin: string | number;
 
 	/**
 	 * The signature size of booklet (for perfect binding).
@@ -43913,12 +43913,12 @@ declare class PrintBookletOption extends Preference {
 	/**
 	 * The amount of space between pages.
 	 */
-	spaceBetweenPages: string[] | number;
+	spaceBetweenPages: string | number;
 
 	/**
 	 * Top margin of the printed booklet.
 	 */
-	topMargin: string[] | number;
+	topMargin: string | number;
 
 }
 
@@ -43959,7 +43959,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The height of the bleed area at the bottom of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedBottom: string[] | number;
+	bleedBottom: string | number;
 
 	/**
 	 * If true, forces all bleed area settings to be the same, using the most recent bleed measurement setting. If false, allows bleed top, bleed bottom, bleed inside, and bleed outside to have different measurements.
@@ -43969,7 +43969,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The width of the bleed area at the inside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedInside: string[] | number;
+	bleedInside: string | number;
 
 	/**
 	 * If true, print bleed marks.
@@ -43979,12 +43979,12 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The width of the bleed area at the outside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedOutside: string[] | number;
+	bleedOutside: string | number;
 
 	/**
 	 * The height of the bleed area at the top of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedTop: string[] | number;
+	bleedTop: string | number;
 
 	/**
 	 * If true, collate printed copies.
@@ -44089,7 +44089,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The distance to offset the page marks from the edge of the page.
 	 */
-	markOffset: string[] | number;
+	markOffset: string | number;
 
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
@@ -44134,7 +44134,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The space between document pages on the printing medium.
 	 */
-	paperGap: string[] | number;
+	paperGap: string | number;
 
 	/**
 	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
@@ -44144,7 +44144,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The amount of space to offset the page from the left edge of the imageable area.
 	 */
-	paperOffset: string[] | number;
+	paperOffset: string | number;
 
 	/**
 	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
@@ -44350,22 +44350,22 @@ declare class EPSExportPreference extends Preference {
 	/**
 	 * The height of the bleed area at the bottom of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedBottom: string[] | number;
+	bleedBottom: string | number;
 
 	/**
 	 * The width of the bleed area at the inside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedInside: string[] | number;
+	bleedInside: string | number;
 
 	/**
 	 * The width of the bleed area at the outside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedOutside: string[] | number;
+	bleedOutside: string | number;
 
 	/**
 	 * The height of the bleed area at the top of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedTop: string[] | number;
+	bleedTop: string | number;
 
 	/**
 	 * The format in which to send image data to the printer.
@@ -44529,7 +44529,7 @@ declare class ClippingPathSettings extends Preference {
 	/**
 	 * Shrinks the area enclosed by the clipping path by the specified amount. (Range depends on the unit. For points: -10000 to 10000; picas: -833p4 to 833p4; inches: -138.8889 to 138.8889; mm: -3527.778 to 3527.778; cm: -352.7778 to 352.7778; ciceros: -781c11.889 to 781c11.889)
 	 */
-	insetFrame: string[] | number;
+	insetFrame: string | number;
 
 	/**
 	 * If true, inverts the clipping path.
@@ -44858,12 +44858,12 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The height of the bleed area at the bottom of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedBottom: string[] | number;
+	bleedBottom: string | number;
 
 	/**
 	 * The width of the bleed area at the inside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedInside: string[] | number;
+	bleedInside: string | number;
 
 	/**
 	 * If true, print bleed marks.
@@ -44873,12 +44873,12 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The width of the bleed area at the outside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedOutside: string[] | number;
+	bleedOutside: string | number;
 
 	/**
 	 * The height of the bleed area at the top of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedTop: string[] | number;
+	bleedTop: string | number;
 
 	/**
 	 * Changes the open document password to the specified string. Valid only when use security is true. Note: A script can set but not get this value.
@@ -45163,7 +45163,7 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The offset from the edge of the page for page marks.
 	 */
-	pageMarksOffset: string[] | number;
+	pageMarksOffset: string | number;
 
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
@@ -45279,12 +45279,12 @@ declare class PDFExportPreset {
 	/**
 	 * The height of the bleed area at the bottom of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedBottom: string[] | number;
+	bleedBottom: string | number;
 
 	/**
 	 * The width of the bleed area at the inside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedInside: string[] | number;
+	bleedInside: string | number;
 
 	/**
 	 * If true, print bleed marks.
@@ -45294,12 +45294,12 @@ declare class PDFExportPreset {
 	/**
 	 * The width of the bleed area at the outside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedOutside: string[] | number;
+	bleedOutside: string | number;
 
 	/**
 	 * The height of the bleed area at the top of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedTop: string[] | number;
+	bleedTop: string | number;
 
 	/**
 	 * If true, add small squares of color representing the CMYK inks and tints of gray in 10% increments.
@@ -45559,7 +45559,7 @@ declare class PDFExportPreset {
 	/**
 	 * The offset from the edge of the page for page marks.
 	 */
-	pageMarksOffset: string[] | number;
+	pageMarksOffset: string | number;
 
 	/**
 	 * The parent of the PDFExportPreset (a Application).
@@ -45943,7 +45943,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes
 	 */
-	bottomLeftCornerRadius: string[] | number;
+	bottomLeftCornerRadius: string | number;
 
 	/**
 	 * The shape to apply to the bottom right corner of rectangular shapes.
@@ -45953,7 +45953,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes
 	 */
-	bottomRightCornerRadius: string[] | number;
+	bottomRightCornerRadius: string | number;
 
 	/**
 	 * Transparency settings for the content of the PageItemDefault.
@@ -46073,7 +46073,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The weight (in points) to apply to the PageItemDefault's stroke.
 	 */
-	strokeWeight: string[] | number;
+	strokeWeight: string | number;
 
 	/**
 	 * The shape to be applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes.Note: corner option differs from end join in which you can set a radius for a corner option, whereas the rounded or beveled effect of an end join depends on the stroke weight.
@@ -46083,7 +46083,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes
 	 */
-	topLeftCornerRadius: string[] | number;
+	topLeftCornerRadius: string | number;
 
 	/**
 	 * The shape to apply to the top right corner of rectangular shapes
@@ -46093,7 +46093,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes
 	 */
-	topRightCornerRadius: string[] | number;
+	topRightCornerRadius: string | number;
 
 	/**
 	 * Transparency settings.
@@ -46609,7 +46609,7 @@ declare class LayoutAdjustmentPreference extends Preference {
 	/**
 	 * The range within which an object snaps to guides.
 	 */
-	snapZone: string[] | number;
+	snapZone: string | number;
 
 }
 
@@ -54568,7 +54568,7 @@ declare class PrinterPreset {
 	/**
 	 * The height of the bleed area at the bottom of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedBottom: string[] | number;
+	bleedBottom: string | number;
 
 	/**
 	 * If true, forces all bleed area settings to be the same, using the most recent bleed measurement setting. If false, allows bleed top, bleed bottom, bleed inside, and bleed outside to have different measurements.
@@ -54578,7 +54578,7 @@ declare class PrinterPreset {
 	/**
 	 * The width of the bleed area at the inside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedInside: string[] | number;
+	bleedInside: string | number;
 
 	/**
 	 * If true, print bleed marks.
@@ -54588,12 +54588,12 @@ declare class PrinterPreset {
 	/**
 	 * The width of the bleed area at the outside of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedOutside: string[] | number;
+	bleedOutside: string | number;
 
 	/**
 	 * The height of the bleed area at the top of the page. Note: Valid only when use document bleed to print is true.
 	 */
-	bleedTop: string[] | number;
+	bleedTop: string | number;
 
 	/**
 	 * If true, collate printed copies.
@@ -54723,7 +54723,7 @@ declare class PrinterPreset {
 	/**
 	 * The distance to offset the page marks from the edge of the page.
 	 */
-	markOffset: string[] | number;
+	markOffset: string | number;
 
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
@@ -54773,7 +54773,7 @@ declare class PrinterPreset {
 	/**
 	 * The space between document pages on the printing medium.
 	 */
-	paperGap: string[] | number;
+	paperGap: string | number;
 
 	/**
 	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
@@ -54783,7 +54783,7 @@ declare class PrinterPreset {
 	/**
 	 * The amount of space to offset the page from the left edge of the imageable area.
 	 */
-	paperOffset: string[] | number;
+	paperOffset: string | number;
 
 	/**
 	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
@@ -55423,12 +55423,12 @@ declare class AnchoredObjectDefault extends Preference {
 	/**
 	 * The initial height of a new anchored object.
 	 */
-	initialAnchorHeight: string[] | number;
+	initialAnchorHeight: string | number;
 
 	/**
 	 * The initial width of a new anchored object.
 	 */
-	initialAnchorWidth: string[] | number;
+	initialAnchorWidth: string | number;
 
 }
 
@@ -55444,17 +55444,17 @@ declare class AnchoredObjectSetting extends Preference {
 	/**
 	 * The space above an above-line anchored object.
 	 */
-	anchorSpaceAbove: string[] | number;
+	anchorSpaceAbove: string | number;
 
 	/**
 	 * The horizontal (x) offset of the anchored object.
 	 */
-	anchorXoffset: string[] | number;
+	anchorXoffset: string | number;
 
 	/**
 	 * The vertical (y) offset of the anchored object. Corresponds to the space after property for above line positioning.
 	 */
-	anchorYoffset: string[] | number;
+	anchorYoffset: string | number;
 
 	/**
 	 * The position of the anchored object relative to the anchor.
@@ -55522,7 +55522,7 @@ declare class BaselineFrameGridOption extends Preference {
 	/**
 	 * The distance between grid lines.
 	 */
-	baselineFrameGridIncrement: string[] | number;
+	baselineFrameGridIncrement: string | number;
 
 	/**
 	 * The location (top of page, top margin, top of frame, or frame inset) on which to base the custom baseline grid.
@@ -55532,7 +55532,7 @@ declare class BaselineFrameGridOption extends Preference {
 	/**
 	 * The amount to offset the baseline grid.
 	 */
-	startingOffsetForBaselineFrameGrid: string[] | number;
+	startingOffsetForBaselineFrameGrid: string | number;
 
 	/**
 	 * If true, uses a custom baseline frame grid.
@@ -55568,17 +55568,17 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The amount to left indent the rule above continued footnote text. Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleLeftIndent: string[] | number;
+	continuingRuleLeftIndent: string | number;
 
 	/**
 	 * The stroke weight of the rule above continued footnote text. (Range: 0 to 1000) Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleLineWeight: string[] | number;
+	continuingRuleLineWeight: string | number;
 
 	/**
 	 * The vertical offset of the rule above continued footnote text. Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleOffset: string[] | number;
+	continuingRuleOffset: string | number;
 
 	/**
 	 * If true, draws a rule above footnote text that continues from a previous column. Note: Valid when no splitting is false or undefined.
@@ -55603,7 +55603,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The length of the rule above continued footnote text. Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleWidth: string[] | number;
+	continuingRuleWidth: string | number;
 
 	/**
 	 * If true, footnotes at the end of the story are placed just below the text. If false, footnotes at the end of the story are placed at the bottom of the column.
@@ -55623,7 +55623,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The minimum distance between the baseline of the text and the top of the footnote container.
 	 */
-	footnoteMinimumFirstBaselineOffset: string[] | number;
+	footnoteMinimumFirstBaselineOffset: string | number;
 
 	/**
 	 * The footnote numbering style. Can return: FootnoteNumberingStyle enumerator or String.
@@ -55678,17 +55678,17 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The amount to left indent the rule above the first footnote in the column. Note: Valid when rule on is true.
 	 */
-	ruleLeftIndent: string[] | number;
+	ruleLeftIndent: string | number;
 
 	/**
 	 * The stroke weight of the rule above the first footnote in the column. (Range: 0 to 1000) Note: Valid when rule on is true.
 	 */
-	ruleLineWeight: string[] | number;
+	ruleLineWeight: string | number;
 
 	/**
 	 * The vertical offset of the rule above the first footnote in the column. Note: Valid when rule on is true.
 	 */
-	ruleOffset: string[] | number;
+	ruleOffset: string | number;
 
 	/**
 	 * If true, draws a rule between the text and the first footnote in the column.
@@ -55713,7 +55713,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The length of the rule above the first footnote in the column. Note: Valid when rule on is true.
 	 */
-	ruleWidth: string[] | number;
+	ruleWidth: string | number;
 
 	/**
 	 * The text to insert between the footnote marker number and the footnote text. (Range: 0 to 100 characters)
@@ -55728,12 +55728,12 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The amount of vertical space between footnotes. Note: The space before and space after defined for the paragraph style applied to the footnote is ignored.
 	 */
-	spaceBetween: string[] | number;
+	spaceBetween: string | number;
 
 	/**
 	 * The minimum amount of vertical space between the bottom of the text column and the first footnote. Note: The space before amount defined in the paragraph style applied to the footnote is ignored for the first footnote.
 	 */
-	spacer: string[] | number;
+	spacer: string | number;
 
 	/**
 	 * The number at which to start footnote numbering.
@@ -56007,7 +56007,7 @@ declare class GridDataInformation extends Preference {
 	/**
 	 * The text size.
 	 */
-	pointSize: string[] | number;
+	pointSize: string | number;
 
 	/**
 	 * The vertical scaling applied to the GridDataInformation.
@@ -56048,7 +56048,7 @@ declare class LayoutGridDataInformation extends Preference {
 	/**
 	 * The text size.
 	 */
-	pointSize: string[] | number;
+	pointSize: string | number;
 
 	/**
 	 * The vertical scaling applied to the LayoutGridDataInformation.
@@ -56119,7 +56119,7 @@ declare class StoryGridDataInformation extends Preference {
 	/**
 	 * The text size.
 	 */
-	pointSize: string[] | number;
+	pointSize: string | number;
 
 	/**
 	 * The vertical scaling applied to the StoryGridDataInformation.
@@ -56252,12 +56252,12 @@ declare class GalleyPreference extends Preference {
 	/**
 	 * Size to use for text display.
 	 */
-	displayFontSize: string[] | number;
+	displayFontSize: string | number;
 
 	/**
 	 * Info column width.
 	 */
-	infoColumnWidth: string[] | number;
+	infoColumnWidth: string | number;
 
 	/**
 	 * Amount of spacing between lines.
@@ -56809,7 +56809,7 @@ declare class DropShadowSetting extends Preference {
 	/**
 	 * The distance between the item and its shadow
 	 */
-	distance: string[] | number;
+	distance: string | number;
 
 	/**
 	 * The color applied to the drop shadow, specified as a swatch (color, gradient, tint, or mixed ink), or as an array of color values. The color mode dictates the array values: for RGB, specify three values, each in the range 0 to 255, in the format [R,G,B]; for CMYK, specify four values, each as a percentage and each in the range 0 to 100, in the format [C,M,Y,K]; for LAB, specify three values in the format [L,A,B], with L in the range 0 to 100 and A and B in the range -128 to 127.
@@ -56844,7 +56844,7 @@ declare class DropShadowSetting extends Preference {
 	/**
 	 * The radius (in pixels) of the blur applied to the drop shadow. (Range depends on the unit type. For points: 0 to 144; for picas: 0p0 to 12p0; for inches: 0 to 2; for mm: 0 to 50.08; for cm: 0 to 5.08; for ciceros: 0c0 to 11c3.128.)
 	 */
-	size: string[] | number;
+	size: string | number;
 
 	/**
 	 * The amount (as a percentage of the blur width) to spread the footprint of the drop shadow and reduce the radius of the blur. (Range: 0 to 100)
@@ -56859,12 +56859,12 @@ declare class DropShadowSetting extends Preference {
 	/**
 	 * The horizontal offset of the drop shadow. Range depends on the unit type. For points: -1000 to 1000; for picas: -83p4 to 83p4; for inches: -13.8889 to 13.8889; for mm: -352.778 to 352.778; for cm: -35.277 to 35.277; for ciceros: -78c2.389 to 78c2.389.
 	 */
-	xOffset: string[] | number;
+	xOffset: string | number;
 
 	/**
 	 * The vertical offset of the drop shadow. (Range depends on the unit type. For points: -1000 to 1000; for picas: -83p4 to 83p4; for inches: -13.8889 to 13.8889; for mm: -352.778 to 352.778; for cm: -35.277 to 35.277; for ciceros: -78c2.389 to 78c2.389)
 	 */
-	yOffset: string[] | number;
+	yOffset: string | number;
 
 }
 
@@ -56895,7 +56895,7 @@ declare class FeatherSetting extends Preference {
 	/**
 	 * The feather width. (Range depends on the unit type. For points: 0 to 1000; for picas: 0 to 83p4; for inches: 0 to 13.8889; for mm: 0 to 352.778; for cm: 0 to 35.277; for ciceros: 0 to 78c2.389.)
 	 */
-	width: string[] | number;
+	width: string | number;
 
 }
 
@@ -56926,7 +56926,7 @@ declare class InnerShadowSetting extends Preference {
 	/**
 	 * The distance between the InnerShadowSetting and the shadow.
 	 */
-	distance: string[] | number;
+	distance: string | number;
 
 	/**
 	 * The color applied to the inner shadow, specified as a swatch (color, gradient, tint, or mixed ink), or as an array of color values. The color mode dictates the array values: for RGB, specify three values, each in the range 0 to 255, in the format [R,G,B]; for CMYK, specify four values, each as a percentage and each in the range 0 to 100, in the format [C,M,Y,K]; for LAB, specify three values in the format [L,A,B], with L in the range 0 to 100 and A and B in the range -128 to 127.
@@ -56946,7 +56946,7 @@ declare class InnerShadowSetting extends Preference {
 	/**
 	 * The size of the inner shadow.
 	 */
-	size: string[] | number;
+	size: string | number;
 
 	/**
 	 * If true, the global light angle is used.
@@ -56956,12 +56956,12 @@ declare class InnerShadowSetting extends Preference {
 	/**
 	 * The horizontal offset of the shadow
 	 */
-	xOffset: string[] | number;
+	xOffset: string | number;
 
 	/**
 	 * The vertical offset of the shadow
 	 */
-	yOffset: string[] | number;
+	yOffset: string | number;
 
 }
 
@@ -56997,7 +56997,7 @@ declare class OuterGlowSetting extends Preference {
 	/**
 	 * The size of the outer glow.
 	 */
-	size: string[] | number;
+	size: string | number;
 
 	/**
 	 * The amount of spread (as a percentage of the outer glow size). (Range: 0 to 100)
@@ -57043,7 +57043,7 @@ declare class InnerGlowSetting extends Preference {
 	/**
 	 * The size of the inner glow.
 	 */
-	size: string[] | number;
+	size: string | number;
 
 	/**
 	 * The light source of the inner glow effect.
@@ -57124,12 +57124,12 @@ declare class BevelAndEmbossSetting extends Preference {
 	/**
 	 * The size of the bevel or emboss.
 	 */
-	size: string[] | number;
+	size: string | number;
 
 	/**
 	 * The amount (in pixels) of softening.
 	 */
-	soften: string[] | number;
+	soften: string | number;
 
 	/**
 	 * The style of bevel or emboss.
@@ -57170,7 +57170,7 @@ declare class SatinSetting extends Preference {
 	/**
 	 * The distance (in pixels) from the SatinSetting to the satin effect.
 	 */
-	distance: string[] | number;
+	distance: string | number;
 
 	/**
 	 * The color applied to the satin effect, specified as a swatch (color, gradient, tint, or mixed ink), a color library color, a hex value, or as an array of color values. The color mode dictates the array values: for RGB, specify three values, each in the range 0 to 255, in the format [R,G,B]; for CMYK, specify four values, each as a percentage and each in the range 0 to 100, in the format [C,M,Y,K]; for LAB, specify three values in the format [L,A,B], with L in the range 0 to 100 and A and B in the range -128 to 127; for HSB, specify three colors in the format [H,S,B], with H in the range 0 to 360 and S and B as percentages in the range 0 to 100.
@@ -57190,7 +57190,7 @@ declare class SatinSetting extends Preference {
 	/**
 	 * The width (in pixels) of the satin effect.
 	 */
-	size: string[] | number;
+	size: string | number;
 
 }
 
@@ -57272,7 +57272,7 @@ declare class DirectionalFeatherSetting extends Preference {
 	/**
 	 * The feather width (in pixels) on the bottom side of the object DirectionalFeatherSetting. (Range: .2 to 250)
 	 */
-	bottomWidth: string[] | number;
+	bottomWidth: string | number;
 
 	/**
 	 * The amount to choke the directional feather (as a percentage of the feather width). (Range: 0 to 100)
@@ -57287,7 +57287,7 @@ declare class DirectionalFeatherSetting extends Preference {
 	/**
 	 * The feather width (in pixels) on the left side of the DirectionalFeatherSetting.
 	 */
-	leftWidth: string[] | number;
+	leftWidth: string | number;
 
 	/**
 	 * The amount of noise (as a percentage) applied to the feather region. (Range: 0 to 100)
@@ -57297,12 +57297,12 @@ declare class DirectionalFeatherSetting extends Preference {
 	/**
 	 * The feather width (in pixels) on the right side of the DirectionalFeatherSetting. (Range: .2 to 250)
 	 */
-	rightWidth: string[] | number;
+	rightWidth: string | number;
 
 	/**
 	 * The feather width (in pixels) on the top side of the object DirectionalFeatherSetting. (Range: .2 to 250)
 	 */
-	topWidth: string[] | number;
+	topWidth: string | number;
 
 }
 
@@ -57333,12 +57333,12 @@ declare class GradientFeatherSetting extends Preference {
 	/**
 	 * The hilite length of the radial gradient feather.
 	 */
-	hiliteLength: string[] | number;
+	hiliteLength: string | number;
 
 	/**
 	 * The length of the axial gradient, or radius of the radial gradient.
 	 */
-	length: string[] | number;
+	length: string | number;
 
 	/**
 	 * A collection of opacity gradient stops.
@@ -58431,7 +58431,7 @@ declare class WatermarkPreference extends Preference {
 	/**
 	 * Watermark horizontal offset for a document
 	 */
-	watermarkHorizontalOffset: string[] | number;
+	watermarkHorizontalOffset: string | number;
 
 	/**
 	 * Watermark horizontal position enum for a document
@@ -58456,7 +58456,7 @@ declare class WatermarkPreference extends Preference {
 	/**
 	 * Watermark vertical offset for a document
 	 */
-	watermarkVerticalOffset: string[] | number;
+	watermarkVerticalOffset: string | number;
 
 	/**
 	 * Watermark vertical position enum for a document
@@ -58988,17 +58988,17 @@ declare class DataMergePreference extends Preference {
 	/**
 	 * The offset value of the bottom margin in the target document.
 	 */
-	bottomMargin: string[] | number;
+	bottomMargin: string | number;
 
 	/**
 	 * The amount of space between columns of records in the target document.
 	 */
-	columnSpacing: string[] | number;
+	columnSpacing: string | number;
 
 	/**
 	 * The offset value of the left margin in the target document.
 	 */
-	leftMargin: string[] | number;
+	leftMargin: string | number;
 
 	/**
 	 * The number of the record to merge. Note: Valid only when record selection is one record.
@@ -59023,17 +59023,17 @@ declare class DataMergePreference extends Preference {
 	/**
 	 * The offset value of the right margin in the target document.
 	 */
-	rightMargin: string[] | number;
+	rightMargin: string | number;
 
 	/**
 	 * The amount of space between rows of records in the target document.
 	 */
-	rowSpacing: string[] | number;
+	rowSpacing: string | number;
 
 	/**
 	 * The offset value of the top margin in the target document.
 	 */
-	topMargin: string[] | number;
+	topMargin: string | number;
 
 	/**
 	 * If true, lists missing images in the specified output file.
@@ -59419,7 +59419,7 @@ declare class AlignDistributePreference extends Preference {
 	/**
 	 * The distance to use when distributing page items.
 	 */
-	distributeAbsoluteMeasurement: string[] | number;
+	distributeAbsoluteMeasurement: string | number;
 
 	/**
 	 * If true, distribute space between page items and ignore the bounds setting.
@@ -59429,7 +59429,7 @@ declare class AlignDistributePreference extends Preference {
 	/**
 	 * The distance to use when distributing page items.
 	 */
-	distributeSpaceAbsoluteMeasurement: string[] | number;
+	distributeSpaceAbsoluteMeasurement: string | number;
 
 }
 
@@ -63268,12 +63268,12 @@ declare class Cell {
 	/**
 	 * The stroke weight of the bottom edge border stroke.
 	 */
-	bottomEdgeStrokeWeight: string[] | number;
+	bottomEdgeStrokeWeight: string | number;
 
 	/**
 	 * The bottom inset of the cell.The API has been deprecated. Use TextBottomInset or GraphicBottomInset
 	 */
-	bottomInset: string[] | number;
+	bottomInset: string | number;
 
 	/**
 	 * A collection of buttons.
@@ -63383,7 +63383,7 @@ declare class Cell {
 	/**
 	 * The diagonal line stroke weight.
 	 */
-	diagonalLineStrokeWeight: string[] | number;
+	diagonalLineStrokeWeight: string | number;
 
 	/**
 	 * EPSTexts
@@ -63438,12 +63438,12 @@ declare class Cell {
 	/**
 	 * The bottom inset of the graphic cell.
 	 */
-	graphicBottomInset: string[] | number;
+	graphicBottomInset: string | number;
 
 	/**
 	 * The left inset of the graphic cell.
 	 */
-	graphicLeftInset: string[] | number;
+	graphicLeftInset: string | number;
 
 	/**
 	 * A collection of graphic lines.
@@ -63453,12 +63453,12 @@ declare class Cell {
 	/**
 	 * The right inset of the graphic cell.
 	 */
-	graphicRightInset: string[] | number;
+	graphicRightInset: string | number;
 
 	/**
 	 * The top inset of the graphic cell.
 	 */
-	graphicTopInset: string[] | number;
+	graphicTopInset: string | number;
 
 	/**
 	 * A collection of groups.
@@ -63468,7 +63468,7 @@ declare class Cell {
 	/**
 	 * The height of the Cell. For a table or column, specifies the sum of the row heights.
 	 */
-	height: string[] | number;
+	height: string | number;
 
 	/**
 	 * A collection of hidden text objects.
@@ -63523,7 +63523,7 @@ declare class Cell {
 	/**
 	 * The stroke weight of the inner column border stroke.
 	 */
-	innerColumnStrokeWeight: string[] | number;
+	innerColumnStrokeWeight: string | number;
 
 	/**
 	 * The color, specified as a swatch, of the inner row border stroke.
@@ -63563,7 +63563,7 @@ declare class Cell {
 	/**
 	 * The stroke weight of the inner row border strokes.
 	 */
-	innerRowStrokeWeight: string[] | number;
+	innerRowStrokeWeight: string | number;
 
 	/**
 	 * A collection of insertion points.
@@ -63623,12 +63623,12 @@ declare class Cell {
 	/**
 	 * The stroke weight of the left edge border stroke.
 	 */
-	leftEdgeStrokeWeight: string[] | number;
+	leftEdgeStrokeWeight: string | number;
 
 	/**
 	 * The left inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicLeftInset
 	 */
-	leftInset: string[] | number;
+	leftInset: string | number;
 
 	/**
 	 * A collection of lines.
@@ -63643,17 +63643,17 @@ declare class Cell {
 	/**
 	 * The maximum height to which cells in the Cell may grow. Note: The maximum height cannot be exceeded even when auto grow is set to true. Also, the maximum height can affect redistribution.
 	 */
-	maximumHeight: string[] | number;
+	maximumHeight: string | number;
 
 	/**
 	 * The space between the baseline of the text and the top inset of the frame or cell.
 	 */
-	minimumFirstBaselineOffset: string[] | number;
+	minimumFirstBaselineOffset: string | number;
 
 	/**
 	 * The minimum height of the cells in the Cell. Note: When auto grow is true, cells can automatically grow larger than this amount when content is added. Also, the minimum height can affect redistribution.
 	 */
-	minimumHeight: string[] | number;
+	minimumHeight: string | number;
 
 	/**
 	 * A collection of multi-state objects.
@@ -63693,7 +63693,7 @@ declare class Cell {
 	/**
 	 * The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified.
 	 */
-	paragraphSpacingLimit: string[] | number;
+	paragraphSpacingLimit: string | number;
 
 	/**
 	 * A collection of paragraphs.
@@ -63773,12 +63773,12 @@ declare class Cell {
 	/**
 	 * The stroke weight of the right edge border stroke.
 	 */
-	rightEdgeStrokeWeight: string[] | number;
+	rightEdgeStrokeWeight: string | number;
 
 	/**
 	 * The right inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicRightInset
 	 */
-	rightInset: string[] | number;
+	rightInset: string | number;
 
 	/**
 	 * The rotation angle (in degrees) of the cell, specified as one of the following values: 0, 90, 180, or 270.
@@ -63823,7 +63823,7 @@ declare class Cell {
 	/**
 	 * The bottom inset of the text cell.
 	 */
-	textBottomInset: string[] | number;
+	textBottomInset: string | number;
 
 	/**
 	 * A collection of text boxes.
@@ -63843,12 +63843,12 @@ declare class Cell {
 	/**
 	 * The left inset of the text cell.
 	 */
-	textLeftInset: string[] | number;
+	textLeftInset: string | number;
 
 	/**
 	 * The right inset of the text cell.
 	 */
-	textRightInset: string[] | number;
+	textRightInset: string | number;
 
 	/**
 	 * A collection of text style ranges.
@@ -63858,7 +63858,7 @@ declare class Cell {
 	/**
 	 * The top inset of the text cell.
 	 */
-	textTopInset: string[] | number;
+	textTopInset: string | number;
 
 	/**
 	 * A collection of text variable instances.
@@ -63908,12 +63908,12 @@ declare class Cell {
 	/**
 	 * The stroke weight of the top edge border stroke.
 	 */
-	topEdgeStrokeWeight: string[] | number;
+	topEdgeStrokeWeight: string | number;
 
 	/**
 	 * The top inset of the cell. The API has been deprecated. Use TextTopInset or GraphicTopInset
 	 */
-	topInset: string[] | number;
+	topInset: string | number;
 
 	/**
 	 * If true, draws a diagonal line starting from the top left.
@@ -63933,7 +63933,7 @@ declare class Cell {
 	/**
 	 * The width of the Cell. For a table or row, specifies the sum of the column widths.
 	 */
-	width: string[] | number;
+	width: string | number;
 
 	/**
 	 * A collection of words.
@@ -64262,7 +64262,7 @@ declare class Table {
 	/**
 	 * The stroke weight of the bottom border stroke.
 	 */
-	bottomBorderStrokeWeight: string[] | number;
+	bottomBorderStrokeWeight: string | number;
 
 	/**
 	 * The footer placement.
@@ -64402,7 +64402,7 @@ declare class Table {
 	/**
 	 * The stroke weight of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.
 	 */
-	endColumnStrokeWeight: string[] | number;
+	endColumnStrokeWeight: string | number;
 
 	/**
 	 * The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of rows in the second alternating fills group. Note: Valid when alternating fills are defined for table rows.
@@ -64467,7 +64467,7 @@ declare class Table {
 	/**
 	 * The stroke weight of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.
 	 */
-	endRowStrokeWeight: string[] | number;
+	endRowStrokeWeight: string | number;
 
 	/**
 	 * EPSTexts
@@ -64497,12 +64497,12 @@ declare class Table {
 	/**
 	 * The bottom inset of the graphic cell.
 	 */
-	graphicBottomInset: string[] | number;
+	graphicBottomInset: string | number;
 
 	/**
 	 * The left inset of the graphic cell.
 	 */
-	graphicLeftInset: string[] | number;
+	graphicLeftInset: string | number;
 
 	/**
 	 * A collection of graphic lines.
@@ -64512,12 +64512,12 @@ declare class Table {
 	/**
 	 * The right inset of the graphic cell.
 	 */
-	graphicRightInset: string[] | number;
+	graphicRightInset: string | number;
 
 	/**
 	 * The top inset of the graphic cell.
 	 */
-	graphicTopInset: string[] | number;
+	graphicTopInset: string | number;
 
 	/**
 	 * A collection of groups.
@@ -64532,7 +64532,7 @@ declare class Table {
 	/**
 	 * The height of the Table. For a table or column, specifies the sum of the row heights.
 	 */
-	height: string[] | number;
+	height: string | number;
 
 	/**
 	 * A collection of hidden text objects.
@@ -64597,7 +64597,7 @@ declare class Table {
 	/**
 	 * The stroke weight of the left border stroke.
 	 */
-	leftBorderStrokeWeight: string[] | number;
+	leftBorderStrokeWeight: string | number;
 
 	/**
 	 * A collection of listboxes.
@@ -64692,7 +64692,7 @@ declare class Table {
 	/**
 	 * The stroke weight of the right border stroke.
 	 */
-	rightBorderStrokeWeight: string[] | number;
+	rightBorderStrokeWeight: string | number;
 
 	/**
 	 * A collection of table rows.
@@ -64757,12 +64757,12 @@ declare class Table {
 	/**
 	 * The space below the table.
 	 */
-	spaceAfter: string[] | number;
+	spaceAfter: string | number;
 
 	/**
 	 * The space above the table.
 	 */
-	spaceBefore: string[] | number;
+	spaceBefore: string | number;
 
 	/**
 	 * The spline items collection.
@@ -64832,7 +64832,7 @@ declare class Table {
 	/**
 	 * The stroke weight of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.
 	 */
-	startColumnStrokeWeight: string[] | number;
+	startColumnStrokeWeight: string | number;
 
 	/**
 	 * The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of rows in the first alternating fills group. Note: Valid when alternating fills are defined for table rows.
@@ -64897,7 +64897,7 @@ declare class Table {
 	/**
 	 * The stroke weight of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.
 	 */
-	startRowStrokeWeight: string[] | number;
+	startRowStrokeWeight: string | number;
 
 	/**
 	 * The insertion point before the table in the story containing the table.
@@ -64917,7 +64917,7 @@ declare class Table {
 	/**
 	 * The bottom inset of the text cell.
 	 */
-	textBottomInset: string[] | number;
+	textBottomInset: string | number;
 
 	/**
 	 * A collection of text boxes.
@@ -64932,17 +64932,17 @@ declare class Table {
 	/**
 	 * The left inset of the text cell.
 	 */
-	textLeftInset: string[] | number;
+	textLeftInset: string | number;
 
 	/**
 	 * The right inset of the text cell.
 	 */
-	textRightInset: string[] | number;
+	textRightInset: string | number;
 
 	/**
 	 * The top inset of the text cell.
 	 */
-	textTopInset: string[] | number;
+	textTopInset: string | number;
 
 	/**
 	 * A collection of text variable instances.
@@ -64987,12 +64987,12 @@ declare class Table {
 	/**
 	 * The stroke weight of the table's top border stroke.
 	 */
-	topBorderStrokeWeight: string[] | number;
+	topBorderStrokeWeight: string | number;
 
 	/**
 	 * The width of the Table. For a table or row, specifies the sum of the column widths.
 	 */
-	width: string[] | number;
+	width: string | number;
 
 	/**
 	 * Adds an event listener.
@@ -65287,12 +65287,12 @@ declare class Column {
 	/**
 	 * The stroke weight of the bottom edge border stroke.
 	 */
-	bottomEdgeStrokeWeight: string[] | number;
+	bottomEdgeStrokeWeight: string | number;
 
 	/**
 	 * The bottom inset of the cell.The API has been deprecated. Use TextBottomInset or GraphicBottomInset
 	 */
-	bottomInset: string[] | number;
+	bottomInset: string | number;
 
 	/**
 	 * A collection of table cells.
@@ -65372,7 +65372,7 @@ declare class Column {
 	/**
 	 * The diagonal line stroke weight.
 	 */
-	diagonalLineStrokeWeight: string[] | number;
+	diagonalLineStrokeWeight: string | number;
 
 	/**
 	 * A collection of event listeners.
@@ -65417,27 +65417,27 @@ declare class Column {
 	/**
 	 * The bottom inset of the graphic cell.
 	 */
-	graphicBottomInset: string[] | number;
+	graphicBottomInset: string | number;
 
 	/**
 	 * The left inset of the graphic cell.
 	 */
-	graphicLeftInset: string[] | number;
+	graphicLeftInset: string | number;
 
 	/**
 	 * The right inset of the graphic cell.
 	 */
-	graphicRightInset: string[] | number;
+	graphicRightInset: string | number;
 
 	/**
 	 * The top inset of the graphic cell.
 	 */
-	graphicTopInset: string[] | number;
+	graphicTopInset: string | number;
 
 	/**
 	 * The height of the Column. For a table or column, specifies the sum of the row heights.
 	 */
-	height: string[] | number;
+	height: string | number;
 
 	/**
 	 * The index of the Column within its containing object.
@@ -65482,7 +65482,7 @@ declare class Column {
 	/**
 	 * The stroke weight of the inner column border stroke.
 	 */
-	innerColumnStrokeWeight: string[] | number;
+	innerColumnStrokeWeight: string | number;
 
 	/**
 	 * The color, specified as a swatch, of the inner row border stroke.
@@ -65522,7 +65522,7 @@ declare class Column {
 	/**
 	 * The stroke weight of the inner row border strokes.
 	 */
-	innerRowStrokeWeight: string[] | number;
+	innerRowStrokeWeight: string | number;
 
 	/**
 	 * Returns true if the object specifier resolves to valid objects.
@@ -65572,27 +65572,27 @@ declare class Column {
 	/**
 	 * The stroke weight of the left edge border stroke.
 	 */
-	leftEdgeStrokeWeight: string[] | number;
+	leftEdgeStrokeWeight: string | number;
 
 	/**
 	 * The left inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicLeftInset
 	 */
-	leftInset: string[] | number;
+	leftInset: string | number;
 
 	/**
 	 * The maximum height to which cells in the Column may grow. Note: The maximum height cannot be exceeded even when auto grow is set to true. Also, the maximum height can affect redistribution.
 	 */
-	maximumHeight: string[] | number;
+	maximumHeight: string | number;
 
 	/**
 	 * The space between the baseline of the text and the top inset of the frame or cell.
 	 */
-	minimumFirstBaselineOffset: string[] | number;
+	minimumFirstBaselineOffset: string | number;
 
 	/**
 	 * The minimum height of the cells in the Column. Note: When auto grow is true, cells can automatically grow larger than this amount when content is added. Also, the minimum height can affect redistribution.
 	 */
-	minimumHeight: string[] | number;
+	minimumHeight: string | number;
 
 	/**
 	 * The name of the Column.
@@ -65612,7 +65612,7 @@ declare class Column {
 	/**
 	 * The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified.
 	 */
-	paragraphSpacingLimit: string[] | number;
+	paragraphSpacingLimit: string | number;
 
 	/**
 	 * The parent of the Column (a Table).
@@ -65672,12 +65672,12 @@ declare class Column {
 	/**
 	 * The stroke weight of the right edge border stroke.
 	 */
-	rightEdgeStrokeWeight: string[] | number;
+	rightEdgeStrokeWeight: string | number;
 
 	/**
 	 * The right inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicRightInset
 	 */
-	rightInset: string[] | number;
+	rightInset: string | number;
 
 	/**
 	 * The rotation angle (in degrees) of the cell, specified as one of the following values: 0, 90, 180, or 270.
@@ -65707,22 +65707,22 @@ declare class Column {
 	/**
 	 * The bottom inset of the text cell.
 	 */
-	textBottomInset: string[] | number;
+	textBottomInset: string | number;
 
 	/**
 	 * The left inset of the text cell.
 	 */
-	textLeftInset: string[] | number;
+	textLeftInset: string | number;
 
 	/**
 	 * The right inset of the text cell.
 	 */
-	textRightInset: string[] | number;
+	textRightInset: string | number;
 
 	/**
 	 * The top inset of the text cell.
 	 */
-	textTopInset: string[] | number;
+	textTopInset: string | number;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the top edge border stroke.
@@ -65762,12 +65762,12 @@ declare class Column {
 	/**
 	 * The stroke weight of the top edge border stroke.
 	 */
-	topEdgeStrokeWeight: string[] | number;
+	topEdgeStrokeWeight: string | number;
 
 	/**
 	 * The top inset of the cell. The API has been deprecated. Use TextTopInset or GraphicTopInset
 	 */
-	topInset: string[] | number;
+	topInset: string | number;
 
 	/**
 	 * If true, draws a diagonal line starting from the top left.
@@ -65787,7 +65787,7 @@ declare class Column {
 	/**
 	 * The width of the Column. For a table or row, specifies the sum of the column widths.
 	 */
-	width: string[] | number;
+	width: string | number;
 
 	/**
 	 * The direction of the text in the cell.
@@ -66059,12 +66059,12 @@ declare class Row {
 	/**
 	 * The stroke weight of the bottom edge border stroke.
 	 */
-	bottomEdgeStrokeWeight: string[] | number;
+	bottomEdgeStrokeWeight: string | number;
 
 	/**
 	 * The bottom inset of the cell.The API has been deprecated. Use TextBottomInset or GraphicBottomInset
 	 */
-	bottomInset: string[] | number;
+	bottomInset: string | number;
 
 	/**
 	 * A collection of table cells.
@@ -66144,7 +66144,7 @@ declare class Row {
 	/**
 	 * The diagonal line stroke weight.
 	 */
-	diagonalLineStrokeWeight: string[] | number;
+	diagonalLineStrokeWeight: string | number;
 
 	/**
 	 * A collection of event listeners.
@@ -66189,27 +66189,27 @@ declare class Row {
 	/**
 	 * The bottom inset of the graphic cell.
 	 */
-	graphicBottomInset: string[] | number;
+	graphicBottomInset: string | number;
 
 	/**
 	 * The left inset of the graphic cell.
 	 */
-	graphicLeftInset: string[] | number;
+	graphicLeftInset: string | number;
 
 	/**
 	 * The right inset of the graphic cell.
 	 */
-	graphicRightInset: string[] | number;
+	graphicRightInset: string | number;
 
 	/**
 	 * The top inset of the graphic cell.
 	 */
-	graphicTopInset: string[] | number;
+	graphicTopInset: string | number;
 
 	/**
 	 * The height of the Row. For a table or column, specifies the sum of the row heights.
 	 */
-	height: string[] | number;
+	height: string | number;
 
 	/**
 	 * The index of the Row within its containing object.
@@ -66254,7 +66254,7 @@ declare class Row {
 	/**
 	 * The stroke weight of the inner column border stroke.
 	 */
-	innerColumnStrokeWeight: string[] | number;
+	innerColumnStrokeWeight: string | number;
 
 	/**
 	 * The color, specified as a swatch, of the inner row border stroke.
@@ -66294,7 +66294,7 @@ declare class Row {
 	/**
 	 * The stroke weight of the inner row border strokes.
 	 */
-	innerRowStrokeWeight: string[] | number;
+	innerRowStrokeWeight: string | number;
 
 	/**
 	 * Returns true if the object specifier resolves to valid objects.
@@ -66344,27 +66344,27 @@ declare class Row {
 	/**
 	 * The stroke weight of the left edge border stroke.
 	 */
-	leftEdgeStrokeWeight: string[] | number;
+	leftEdgeStrokeWeight: string | number;
 
 	/**
 	 * The left inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicLeftInset
 	 */
-	leftInset: string[] | number;
+	leftInset: string | number;
 
 	/**
 	 * The maximum height to which cells in the Row may grow. Note: The maximum height cannot be exceeded even when auto grow is set to true. Also, the maximum height can affect redistribution.
 	 */
-	maximumHeight: string[] | number;
+	maximumHeight: string | number;
 
 	/**
 	 * The space between the baseline of the text and the top inset of the frame or cell.
 	 */
-	minimumFirstBaselineOffset: string[] | number;
+	minimumFirstBaselineOffset: string | number;
 
 	/**
 	 * The minimum height of the cells in the Row. Note: When auto grow is true, cells can automatically grow larger than this amount when content is added. Also, the minimum height can affect redistribution.
 	 */
-	minimumHeight: string[] | number;
+	minimumHeight: string | number;
 
 	/**
 	 * The name of the Row.
@@ -66384,7 +66384,7 @@ declare class Row {
 	/**
 	 * The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified.
 	 */
-	paragraphSpacingLimit: string[] | number;
+	paragraphSpacingLimit: string | number;
 
 	/**
 	 * The parent of the Row (a Table).
@@ -66444,12 +66444,12 @@ declare class Row {
 	/**
 	 * The stroke weight of the right edge border stroke.
 	 */
-	rightEdgeStrokeWeight: string[] | number;
+	rightEdgeStrokeWeight: string | number;
 
 	/**
 	 * The right inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicRightInset
 	 */
-	rightInset: string[] | number;
+	rightInset: string | number;
 
 	/**
 	 * The rotation angle (in degrees) of the cell, specified as one of the following values: 0, 90, 180, or 270.
@@ -66479,22 +66479,22 @@ declare class Row {
 	/**
 	 * The bottom inset of the text cell.
 	 */
-	textBottomInset: string[] | number;
+	textBottomInset: string | number;
 
 	/**
 	 * The left inset of the text cell.
 	 */
-	textLeftInset: string[] | number;
+	textLeftInset: string | number;
 
 	/**
 	 * The right inset of the text cell.
 	 */
-	textRightInset: string[] | number;
+	textRightInset: string | number;
 
 	/**
 	 * The top inset of the text cell.
 	 */
-	textTopInset: string[] | number;
+	textTopInset: string | number;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the top edge border stroke.
@@ -66534,12 +66534,12 @@ declare class Row {
 	/**
 	 * The stroke weight of the top edge border stroke.
 	 */
-	topEdgeStrokeWeight: string[] | number;
+	topEdgeStrokeWeight: string | number;
 
 	/**
 	 * The top inset of the cell. The API has been deprecated. Use TextTopInset or GraphicTopInset
 	 */
-	topInset: string[] | number;
+	topInset: string | number;
 
 	/**
 	 * If true, draws a diagonal line starting from the top left.
@@ -66559,7 +66559,7 @@ declare class Row {
 	/**
 	 * The width of the Row. For a table or row, specifies the sum of the column widths.
 	 */
-	width: string[] | number;
+	width: string | number;
 
 	/**
 	 * The direction of the text in the cell.
@@ -66836,7 +66836,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of the bottom border stroke.
 	 */
-	bottomBorderStrokeWeight: string[] | number;
+	bottomBorderStrokeWeight: string | number;
 
 	/**
 	 * If true, clips the graphic cell's content to width and height of the cell.
@@ -66916,7 +66916,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.
 	 */
-	endColumnStrokeWeight: string[] | number;
+	endColumnStrokeWeight: string | number;
 
 	/**
 	 * The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of rows in the second alternating fills group. Note: Valid when alternating fills are defined for table rows.
@@ -66981,7 +66981,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.
 	 */
-	endRowStrokeWeight: string[] | number;
+	endRowStrokeWeight: string | number;
 
 	/**
 	 * A collection of event listeners.
@@ -67006,22 +67006,22 @@ declare class TableStyle {
 	/**
 	 * The bottom inset of the graphic cell.
 	 */
-	graphicBottomInset: string[] | number;
+	graphicBottomInset: string | number;
 
 	/**
 	 * The left inset of the graphic cell.
 	 */
-	graphicLeftInset: string[] | number;
+	graphicLeftInset: string | number;
 
 	/**
 	 * The right inset of the graphic cell.
 	 */
-	graphicRightInset: string[] | number;
+	graphicRightInset: string | number;
 
 	/**
 	 * The top inset of the graphic cell.
 	 */
-	graphicTopInset: string[] | number;
+	graphicTopInset: string | number;
 
 	/**
 	 * The cell style of the header region. Can also accept: String.
@@ -67091,7 +67091,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of the left border stroke.
 	 */
-	leftBorderStrokeWeight: string[] | number;
+	leftBorderStrokeWeight: string | number;
 
 	/**
 	 * The cell style of the left column region. Can also accept: String.
@@ -67156,7 +67156,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of the right border stroke.
 	 */
-	rightBorderStrokeWeight: string[] | number;
+	rightBorderStrokeWeight: string | number;
 
 	/**
 	 * The cell style of the right column region. Can also accept: String.
@@ -67211,12 +67211,12 @@ declare class TableStyle {
 	/**
 	 * The space below the table.
 	 */
-	spaceAfter: string[] | number;
+	spaceAfter: string | number;
 
 	/**
 	 * The space above the table.
 	 */
-	spaceBefore: string[] | number;
+	spaceBefore: string | number;
 
 	/**
 	 * The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of columns in the first alternating fills group. Note: Valid when alternating fills are defined for table columns.
@@ -67281,7 +67281,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.
 	 */
-	startColumnStrokeWeight: string[] | number;
+	startColumnStrokeWeight: string | number;
 
 	/**
 	 * The fill color, specified as a swatch (color, gradient, tint, or mixed ink), of rows in the first alternating fills group. Note: Valid when alternating fills are defined for table rows.
@@ -67346,7 +67346,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.
 	 */
-	startRowStrokeWeight: string[] | number;
+	startRowStrokeWeight: string | number;
 
 	/**
 	 * The order in which to display row and column strokes at corners.
@@ -67356,22 +67356,22 @@ declare class TableStyle {
 	/**
 	 * The bottom inset of the text cell.
 	 */
-	textBottomInset: string[] | number;
+	textBottomInset: string | number;
 
 	/**
 	 * The left inset of the text cell.
 	 */
-	textLeftInset: string[] | number;
+	textLeftInset: string | number;
 
 	/**
 	 * The right inset of the text cell.
 	 */
-	textRightInset: string[] | number;
+	textRightInset: string | number;
 
 	/**
 	 * The top inset of the text cell.
 	 */
-	textTopInset: string[] | number;
+	textTopInset: string | number;
 
 	/**
 	 * The color, specified as a swatch (color, gradient, tint, or mixed ink), of the table's top border stroke.
@@ -67411,7 +67411,7 @@ declare class TableStyle {
 	/**
 	 * The stroke weight of the table's top border stroke.
 	 */
-	topBorderStrokeWeight: string[] | number;
+	topBorderStrokeWeight: string | number;
 
 	/**
 	 * Adds an event listener.
@@ -68978,7 +68978,7 @@ declare class Text {
 	/**
 	 * The maximum ascent of any character in the text.
 	 */
-	readonly ascent: string[] | number;
+	readonly ascent: string | number;
 
 	/**
 	 * The XML elements associated with the Text.
@@ -69008,12 +69008,12 @@ declare class Text {
 	/**
 	 * The vertical offset of the text.
 	 */
-	readonly baseline: string[] | number;
+	readonly baseline: string | number;
 
 	/**
 	 * The baseline shift applied to the text.
 	 */
-	baselineShift: string[] | number;
+	baselineShift: string | number;
 
 	/**
 	 * Bullet character.
@@ -69103,7 +69103,7 @@ declare class Text {
 	/**
 	 * The maximum descent of any character in the text.
 	 */
-	readonly descent: string[] | number;
+	readonly descent: string | number;
 
 	/**
 	 * The desired width (as a percentage) of individual characters. (Range: 50 to 200)
@@ -69153,12 +69153,12 @@ declare class Text {
 	/**
 	 * Vertical offset of the end of the text.
 	 */
-	readonly endBaseline: string[] | number;
+	readonly endBaseline: string | number;
 
 	/**
 	 * Horizontal offset of the end of the text.
 	 */
-	readonly endHorizontalOffset: string[] | number;
+	readonly endHorizontalOffset: string | number;
 
 	/**
 	 * The stroke join type applied to the characters of the text.
@@ -69193,7 +69193,7 @@ declare class Text {
 	/**
 	 * The amount to indent the first line.
 	 */
-	firstLineIndent: string[] | number;
+	firstLineIndent: string | number;
 
 	/**
 	 * The name of the font style.
@@ -69278,7 +69278,7 @@ declare class Text {
 	/**
 	 * The horizontal offset of the text.
 	 */
-	readonly horizontalOffset: string[] | number;
+	readonly horizontalOffset: string | number;
 
 	/**
 	 * The horizontal scaling applied to the Text.
@@ -69333,7 +69333,7 @@ declare class Text {
 	/**
 	 * The amount of white space allowed at the end of a line of non-justified text before hypenation begins. Note: Valid when composer is single-line composer.
 	 */
-	hyphenationZone: string[] | number;
+	hyphenationZone: string | number;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
@@ -69528,7 +69528,7 @@ declare class Text {
 	/**
 	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: string[] | number;
+	lastLineIndent: string | number;
 
 	/**
 	 * The leading applied to the text. Can return: Unit or Leading enumerator.
@@ -69548,7 +69548,7 @@ declare class Text {
 	/**
 	 * The width of the left indent.
 	 */
-	leftIndent: string[] | number;
+	leftIndent: string | number;
 
 	/**
 	 * The number of objects in the collection.
@@ -69828,7 +69828,7 @@ declare class Text {
 	/**
 	 * The distance to offset the bottom edge of the paragraph.
 	 */
-	paragraphShadingBottomOffset: string[] | number;
+	paragraphShadingBottomOffset: string | number;
 
 	/**
 	 * The basis (descent or baseline) used to calculate the bottom origin of the paragraph shading.
@@ -69848,7 +69848,7 @@ declare class Text {
 	/**
 	 * The distance to offset the left edge of the paragraph.
 	 */
-	paragraphShadingLeftOffset: string[] | number;
+	paragraphShadingLeftOffset: string | number;
 
 	/**
 	 * If true, the paragraph shading is On.
@@ -69863,7 +69863,7 @@ declare class Text {
 	/**
 	 * The distance to offset the right edge of the paragraph.
 	 */
-	paragraphShadingRightOffset: string[] | number;
+	paragraphShadingRightOffset: string | number;
 
 	/**
 	 * If true, suppress printing of the shading of the paragraph.
@@ -69878,7 +69878,7 @@ declare class Text {
 	/**
 	 * The distance to offset the top edge of the paragraph.
 	 */
-	paragraphShadingTopOffset: string[] | number;
+	paragraphShadingTopOffset: string | number;
 
 	/**
 	 * The basis (cap height, ascent or baseline) used to calculate the top origin of the paragraph shading.
@@ -69913,7 +69913,7 @@ declare class Text {
 	/**
 	 * The text size.
 	 */
-	pointSize: string[] | number;
+	pointSize: string | number;
 
 	/**
 	 * A collection of polygons.
@@ -69958,7 +69958,7 @@ declare class Text {
 	/**
 	 * The width of the right indent.
 	 */
-	rightIndent: string[] | number;
+	rightIndent: string | number;
 
 	/**
 	 * If true, rotates Roman characters in vertical text.
@@ -70138,17 +70138,17 @@ declare class Text {
 	/**
 	 * The distance to indent the left edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveLeftIndent: string[] | number;
+	ruleAboveLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule above.
 	 */
-	ruleAboveLineWeight: string[] | number;
+	ruleAboveLineWeight: string | number;
 
 	/**
 	 * The amount to offset the paragraph rule above from the baseline of the first line the paragraph.
 	 */
-	ruleAboveOffset: string[] | number;
+	ruleAboveOffset: string | number;
 
 	/**
 	 * If true, the paragraph rule above will overprint.
@@ -70158,7 +70158,7 @@ declare class Text {
 	/**
 	 * The distance to indent the right edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveRightIndent: string[] | number;
+	ruleAboveRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule above. (Range: 0 to 100)
@@ -70203,17 +70203,17 @@ declare class Text {
 	/**
 	 * The distance to indent the left edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowLeftIndent: string[] | number;
+	ruleBelowLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule below.
 	 */
-	ruleBelowLineWeight: string[] | number;
+	ruleBelowLineWeight: string | number;
 
 	/**
 	 * The amount to offset the the paragraph rule below from the baseline of the last line of the paragraph.
 	 */
-	ruleBelowOffset: string[] | number;
+	ruleBelowOffset: string | number;
 
 	/**
 	 * If true, the rule below will overprint.
@@ -70223,7 +70223,7 @@ declare class Text {
 	/**
 	 * The distance to indent the right edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowRightIndent: string[] | number;
+	ruleBelowRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule below. (Range: 0 to 100)
@@ -70283,22 +70283,22 @@ declare class Text {
 	/**
 	 * The height of the paragraph space below.
 	 */
-	spaceAfter: string[] | number;
+	spaceAfter: string | number;
 
 	/**
 	 * The height of the paragraph space above.
 	 */
-	spaceBefore: string[] | number;
+	spaceBefore: string | number;
 
 	/**
 	 * The minimum space after a span or a split column
 	 */
-	spanColumnMinSpaceAfter: string[] | number;
+	spanColumnMinSpaceAfter: string | number;
 
 	/**
 	 * The minimum space before a span or a split column
 	 */
-	spanColumnMinSpaceBefore: string[] | number;
+	spanColumnMinSpaceBefore: string | number;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns
@@ -70318,12 +70318,12 @@ declare class Text {
 	/**
 	 * The inside gutter if the paragraph splits columns
 	 */
-	splitColumnInsideGutter: string[] | number;
+	splitColumnInsideGutter: string | number;
 
 	/**
 	 * The outside gutter if the paragraph splits columns
 	 */
-	splitColumnOutsideGutter: string[] | number;
+	splitColumnOutsideGutter: string | number;
 
 	/**
 	 * The location at which to start the paragraph.
@@ -70353,7 +70353,7 @@ declare class Text {
 	/**
 	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: string[] | number;
+	strikeThroughOffset: string | number;
 
 	/**
 	 * If true, the strikethrough stroke will overprint.
@@ -70373,7 +70373,7 @@ declare class Text {
 	/**
 	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: string[] | number;
+	strikeThroughWeight: string | number;
 
 	/**
 	 * If true, draws a strikethrough line through the text.
@@ -70398,7 +70398,7 @@ declare class Text {
 	/**
 	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: string[] | number;
+	strokeWeight: string | number;
 
 	/**
 	 * If true, the applied style has been overridden with additional attributes.
@@ -70513,7 +70513,7 @@ declare class Text {
 	/**
 	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: string[] | number;
+	underlineOffset: string | number;
 
 	/**
 	 * If true, the underline stroke color will overprint.
@@ -70533,7 +70533,7 @@ declare class Text {
 	/**
 	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: string[] | number;
+	underlineWeight: string | number;
 
 	/**
 	 * The vertical scaling applied to the Text.
@@ -72124,7 +72124,7 @@ declare class Story {
 	/**
 	 * The baseline shift applied to the text.
 	 */
-	baselineShift: string[] | number;
+	baselineShift: string | number;
 
 	/**
 	 * Bullet character.
@@ -72304,7 +72304,7 @@ declare class Story {
 	/**
 	 * The amount to indent the first line.
 	 */
-	firstLineIndent: string[] | number;
+	firstLineIndent: string | number;
 
 	/**
 	 * The name of the font style.
@@ -72444,7 +72444,7 @@ declare class Story {
 	/**
 	 * The amount of white space allowed at the end of a line of non-justified text before hypenation begins. Note: Valid when composer is single-line composer.
 	 */
-	hyphenationZone: string[] | number;
+	hyphenationZone: string | number;
 
 	/**
 	 * The unique ID of the Story.
@@ -72659,7 +72659,7 @@ declare class Story {
 	/**
 	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: string[] | number;
+	lastLineIndent: string | number;
 
 	/**
 	 * The leading applied to the text. Can return: Unit or Leading enumerator.
@@ -72679,7 +72679,7 @@ declare class Story {
 	/**
 	 * The width of the left indent.
 	 */
-	leftIndent: string[] | number;
+	leftIndent: string | number;
 
 	/**
 	 * The number of objects in the collection.
@@ -72984,7 +72984,7 @@ declare class Story {
 	/**
 	 * The distance to offset the bottom edge of the paragraph.
 	 */
-	paragraphShadingBottomOffset: string[] | number;
+	paragraphShadingBottomOffset: string | number;
 
 	/**
 	 * The basis (descent or baseline) used to calculate the bottom origin of the paragraph shading.
@@ -73004,7 +73004,7 @@ declare class Story {
 	/**
 	 * The distance to offset the left edge of the paragraph.
 	 */
-	paragraphShadingLeftOffset: string[] | number;
+	paragraphShadingLeftOffset: string | number;
 
 	/**
 	 * If true, the paragraph shading is On.
@@ -73019,7 +73019,7 @@ declare class Story {
 	/**
 	 * The distance to offset the right edge of the paragraph.
 	 */
-	paragraphShadingRightOffset: string[] | number;
+	paragraphShadingRightOffset: string | number;
 
 	/**
 	 * If true, suppress printing of the shading of the paragraph.
@@ -73034,7 +73034,7 @@ declare class Story {
 	/**
 	 * The distance to offset the top edge of the paragraph.
 	 */
-	paragraphShadingTopOffset: string[] | number;
+	paragraphShadingTopOffset: string | number;
 
 	/**
 	 * The basis (cap height, ascent or baseline) used to calculate the top origin of the paragraph shading.
@@ -73059,7 +73059,7 @@ declare class Story {
 	/**
 	 * The text size.
 	 */
-	pointSize: string[] | number;
+	pointSize: string | number;
 
 	/**
 	 * A collection of polygons.
@@ -73104,7 +73104,7 @@ declare class Story {
 	/**
 	 * The width of the right indent.
 	 */
-	rightIndent: string[] | number;
+	rightIndent: string | number;
 
 	/**
 	 * If true, rotates Roman characters in vertical text.
@@ -73284,17 +73284,17 @@ declare class Story {
 	/**
 	 * The distance to indent the left edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveLeftIndent: string[] | number;
+	ruleAboveLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule above.
 	 */
-	ruleAboveLineWeight: string[] | number;
+	ruleAboveLineWeight: string | number;
 
 	/**
 	 * The amount to offset the paragraph rule above from the baseline of the first line the paragraph.
 	 */
-	ruleAboveOffset: string[] | number;
+	ruleAboveOffset: string | number;
 
 	/**
 	 * If true, the paragraph rule above will overprint.
@@ -73304,7 +73304,7 @@ declare class Story {
 	/**
 	 * The distance to indent the right edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveRightIndent: string[] | number;
+	ruleAboveRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule above. (Range: 0 to 100)
@@ -73349,17 +73349,17 @@ declare class Story {
 	/**
 	 * The distance to indent the left edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowLeftIndent: string[] | number;
+	ruleBelowLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule below.
 	 */
-	ruleBelowLineWeight: string[] | number;
+	ruleBelowLineWeight: string | number;
 
 	/**
 	 * The amount to offset the the paragraph rule below from the baseline of the last line of the paragraph.
 	 */
-	ruleBelowOffset: string[] | number;
+	ruleBelowOffset: string | number;
 
 	/**
 	 * If true, the rule below will overprint.
@@ -73369,7 +73369,7 @@ declare class Story {
 	/**
 	 * The distance to indent the right edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowRightIndent: string[] | number;
+	ruleBelowRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule below. (Range: 0 to 100)
@@ -73429,22 +73429,22 @@ declare class Story {
 	/**
 	 * The height of the paragraph space below.
 	 */
-	spaceAfter: string[] | number;
+	spaceAfter: string | number;
 
 	/**
 	 * The height of the paragraph space above.
 	 */
-	spaceBefore: string[] | number;
+	spaceBefore: string | number;
 
 	/**
 	 * The minimum space after a span or a split column
 	 */
-	spanColumnMinSpaceAfter: string[] | number;
+	spanColumnMinSpaceAfter: string | number;
 
 	/**
 	 * The minimum space before a span or a split column
 	 */
-	spanColumnMinSpaceBefore: string[] | number;
+	spanColumnMinSpaceBefore: string | number;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns
@@ -73464,12 +73464,12 @@ declare class Story {
 	/**
 	 * The inside gutter if the paragraph splits columns
 	 */
-	splitColumnInsideGutter: string[] | number;
+	splitColumnInsideGutter: string | number;
 
 	/**
 	 * The outside gutter if the paragraph splits columns
 	 */
-	splitColumnOutsideGutter: string[] | number;
+	splitColumnOutsideGutter: string | number;
 
 	/**
 	 * The location at which to start the paragraph.
@@ -73514,7 +73514,7 @@ declare class Story {
 	/**
 	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: string[] | number;
+	strikeThroughOffset: string | number;
 
 	/**
 	 * If true, the strikethrough stroke will overprint.
@@ -73534,7 +73534,7 @@ declare class Story {
 	/**
 	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: string[] | number;
+	strikeThroughWeight: string | number;
 
 	/**
 	 * If true, draws a strikethrough line through the text.
@@ -73559,7 +73559,7 @@ declare class Story {
 	/**
 	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: string[] | number;
+	strokeWeight: string | number;
 
 	/**
 	 * If true, the applied style has been overridden with additional attributes.
@@ -73689,7 +73689,7 @@ declare class Story {
 	/**
 	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: string[] | number;
+	underlineOffset: string | number;
 
 	/**
 	 * If true, the underline stroke color will overprint.
@@ -73709,7 +73709,7 @@ declare class Story {
 	/**
 	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: string[] | number;
+	underlineWeight: string | number;
 
 	/**
 	 * Indicates whether the text is user or placeholder text.
@@ -74119,7 +74119,7 @@ declare class ParagraphStyle {
 	/**
 	 * The baseline shift applied to the text.
 	 */
-	baselineShift: string[] | number;
+	baselineShift: string | number;
 
 	/**
 	 * Bullet character.
@@ -74259,7 +74259,7 @@ declare class ParagraphStyle {
 	/**
 	 * The amount to indent the first line.
 	 */
-	firstLineIndent: string[] | number;
+	firstLineIndent: string | number;
 
 	/**
 	 * The name of the font style.
@@ -74369,7 +74369,7 @@ declare class ParagraphStyle {
 	/**
 	 * The amount of white space allowed at the end of a line of non-justified text before hypenation begins. Note: Valid when composer is single-line composer.
 	 */
-	hyphenationZone: string[] | number;
+	hyphenationZone: string | number;
 
 	/**
 	 * The unique ID of the ParagraphStyle.
@@ -74569,7 +74569,7 @@ declare class ParagraphStyle {
 	/**
 	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: string[] | number;
+	lastLineIndent: string | number;
 
 	/**
 	 * The leading applied to the text. Can return: Unit or Leading enumerator.
@@ -74589,7 +74589,7 @@ declare class ParagraphStyle {
 	/**
 	 * The width of the left indent.
 	 */
-	leftIndent: string[] | number;
+	leftIndent: string | number;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
@@ -74839,7 +74839,7 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to offset the bottom edge of the paragraph.
 	 */
-	paragraphShadingBottomOffset: string[] | number;
+	paragraphShadingBottomOffset: string | number;
 
 	/**
 	 * The basis (descent or baseline) used to calculate the bottom origin of the paragraph shading.
@@ -74859,7 +74859,7 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to offset the left edge of the paragraph.
 	 */
-	paragraphShadingLeftOffset: string[] | number;
+	paragraphShadingLeftOffset: string | number;
 
 	/**
 	 * If true, the paragraph shading is On.
@@ -74874,7 +74874,7 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to offset the right edge of the paragraph.
 	 */
-	paragraphShadingRightOffset: string[] | number;
+	paragraphShadingRightOffset: string | number;
 
 	/**
 	 * If true, suppress printing of the shading of the paragraph.
@@ -74889,7 +74889,7 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to offset the top edge of the paragraph.
 	 */
-	paragraphShadingTopOffset: string[] | number;
+	paragraphShadingTopOffset: string | number;
 
 	/**
 	 * The basis (cap height, ascent or baseline) used to calculate the top origin of the paragraph shading.
@@ -74909,7 +74909,7 @@ declare class ParagraphStyle {
 	/**
 	 * The text size.
 	 */
-	pointSize: string[] | number;
+	pointSize: string | number;
 
 	/**
 	 * The text position relative to the baseline.
@@ -74944,7 +74944,7 @@ declare class ParagraphStyle {
 	/**
 	 * The width of the right indent.
 	 */
-	rightIndent: string[] | number;
+	rightIndent: string | number;
 
 	/**
 	 * If true, rotates Roman characters in vertical text.
@@ -75114,17 +75114,17 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to indent the left edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveLeftIndent: string[] | number;
+	ruleAboveLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule above.
 	 */
-	ruleAboveLineWeight: string[] | number;
+	ruleAboveLineWeight: string | number;
 
 	/**
 	 * The amount to offset the paragraph rule above from the baseline of the first line the paragraph.
 	 */
-	ruleAboveOffset: string[] | number;
+	ruleAboveOffset: string | number;
 
 	/**
 	 * If true, the paragraph rule above will overprint.
@@ -75134,7 +75134,7 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to indent the right edge of the paragraph rule above (based on either the text width or the column width of the first line in the paragraph.
 	 */
-	ruleAboveRightIndent: string[] | number;
+	ruleAboveRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule above. (Range: 0 to 100)
@@ -75179,17 +75179,17 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to indent the left edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowLeftIndent: string[] | number;
+	ruleBelowLeftIndent: string | number;
 
 	/**
 	 * The line weight of the rule below.
 	 */
-	ruleBelowLineWeight: string[] | number;
+	ruleBelowLineWeight: string | number;
 
 	/**
 	 * The amount to offset the the paragraph rule below from the baseline of the last line of the paragraph.
 	 */
-	ruleBelowOffset: string[] | number;
+	ruleBelowOffset: string | number;
 
 	/**
 	 * If true, the rule below will overprint.
@@ -75199,7 +75199,7 @@ declare class ParagraphStyle {
 	/**
 	 * The distance to indent the right edge of the paragraph rule below (based on either the text width or the column width of the last line in the paragraph.
 	 */
-	ruleBelowRightIndent: string[] | number;
+	ruleBelowRightIndent: string | number;
 
 	/**
 	 * The tint (as a percentage) of the paragraph rule below. (Range: 0 to 100)
@@ -75254,22 +75254,22 @@ declare class ParagraphStyle {
 	/**
 	 * The height of the paragraph space below.
 	 */
-	spaceAfter: string[] | number;
+	spaceAfter: string | number;
 
 	/**
 	 * The height of the paragraph space above.
 	 */
-	spaceBefore: string[] | number;
+	spaceBefore: string | number;
 
 	/**
 	 * The minimum space after a span or a split column
 	 */
-	spanColumnMinSpaceAfter: string[] | number;
+	spanColumnMinSpaceAfter: string | number;
 
 	/**
 	 * The minimum space before a span or a split column
 	 */
-	spanColumnMinSpaceBefore: string[] | number;
+	spanColumnMinSpaceBefore: string | number;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns
@@ -75284,12 +75284,12 @@ declare class ParagraphStyle {
 	/**
 	 * The inside gutter if the paragraph splits columns
 	 */
-	splitColumnInsideGutter: string[] | number;
+	splitColumnInsideGutter: string | number;
 
 	/**
 	 * The outside gutter if the paragraph splits columns
 	 */
-	splitColumnOutsideGutter: string[] | number;
+	splitColumnOutsideGutter: string | number;
 
 	/**
 	 * Split Document (EPUB only)
@@ -75324,7 +75324,7 @@ declare class ParagraphStyle {
 	/**
 	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: string[] | number;
+	strikeThroughOffset: string | number;
 
 	/**
 	 * If true, the strikethrough stroke will overprint.
@@ -75344,7 +75344,7 @@ declare class ParagraphStyle {
 	/**
 	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: string[] | number;
+	strikeThroughWeight: string | number;
 
 	/**
 	 * If true, draws a strikethrough line through the text.
@@ -75369,7 +75369,7 @@ declare class ParagraphStyle {
 	/**
 	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: string[] | number;
+	strokeWeight: string | number;
 
 	/**
 	 * A collection of style export tag maps.
@@ -75454,7 +75454,7 @@ declare class ParagraphStyle {
 	/**
 	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: string[] | number;
+	underlineOffset: string | number;
 
 	/**
 	 * If true, the underline stroke color will overprint.
@@ -75474,7 +75474,7 @@ declare class ParagraphStyle {
 	/**
 	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: string[] | number;
+	underlineWeight: string | number;
 
 	/**
 	 * The vertical scaling applied to the ParagraphStyle.
@@ -76736,7 +76736,7 @@ declare class TabStop {
 	/**
 	 * The position of the tab stop.
 	 */
-	position: string[] | number;
+	position: string | number;
 
 	/**
 	 * A property that allows setting of several properties at the same time.
