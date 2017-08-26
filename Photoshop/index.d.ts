@@ -7426,7 +7426,7 @@ declare class Application {
 	/**
 	 * Files in the Recent Files list.
 	 */
-	readonly recentFiles: FileArray;
+	readonly recentFiles: File[];
 
 	/**
 	 * The build date of the scripting interface.
