@@ -867,15 +867,15 @@ declare class Function {
 	 * @param thisObj The object to be used as this.
 	 * @param args An array of arguments.
 	 */
-	apply(thisObj: Object, args: Array): any;
+	apply(thisObj: Object, args: any): any;
 
 	/**
 	 * Apply a this object and arguments to a function.
 	 * This function is different from apply(); here, the arguments are supplied one by one.
 	 * @param thisObj The object to be used as this.
-	 * @param argument The first agument to the function. Add as many as needed.
+	 * @param arguments The first agument to the function. Add as many as needed.
 	 */
-	call(thisObj: Object, argument: any): any;
+	call(thisObj: Object, ...arguments: any[]): any;
 
 	/**
 	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with JavaScript functions.
