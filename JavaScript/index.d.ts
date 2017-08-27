@@ -542,10 +542,9 @@ declare class Math {
 
 }
 
-/**
- * A date/time object.
- */
-declare class Date {
+interface DateConstructor {
+	readonly prototype: Date;
+	
 	/**
 	 * Returns a new Date object holding the current date and time.
 	 * If parameters are supplied, returns a new Date object holding the supplied date and time.
@@ -557,8 +556,17 @@ declare class Date {
 	 * @param sec An Integer value from 0 to 59. If this argument is not supplied, its value is set to 0.
 	 * @param ms An integer value from 0 to 999. If this argument is not supplied, its value is set to 0.
 	 */
-	constructor(year: number, month?: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number);
-
+	new(): Date;
+	new(value: number): Date;
+	new(value: string): Date;
+	new(year: number, month: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number);
+	
+	/**
+	 * Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().
+	 * @param text The string to parse.
+	 */
+	parse(text: string): Date;
+	
 	/**
 	 * Returns the number of milliseconds between midnight January 1, 1970, UTC, and the specified time.
 	 * @param year The year expressed in four digits, for example, 2001. To indicate for a year from 1900 to 1999, you can specify a value from 0 to 99.
@@ -569,8 +577,15 @@ declare class Date {
 	 * @param sec An Integer value from 0 to 59. If this argument is not supplied, its value is set to 0.
 	 * @param ms An integer value from 0 to 999. If this argument is not supplied, its value is set to 0.
 	 */
-	static UTC(year: number, month?: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number): Date;
+	UTC(year: number, month?: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number): Date;
+	
+}
+declare const Date: DateConstructor;
 
+/**
+ * A date/time object.
+ */
+interface Date {
 	/**
 	 * Returns the day of the month of the specified Date object in local time.
 	 */
@@ -666,12 +681,6 @@ declare class Date {
 	 * Returns the year of the specified Date object, as a difference from 1900, in local time.
 	 */
 	getYear(): number;
-
-	/**
-	 * Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().
-	 * @param text The string to parse.
-	 */
-	static parse(text: string): Date;
 
 	/**
 	 * Sets the day of the month of a specified Date object according to local time.
