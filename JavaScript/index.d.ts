@@ -848,10 +848,24 @@ interface Date {
 
 }
 
+interface FunctionConstructor {
+  readonly prototype: Function;
+	
+  /**
+   * The Function constructor parses the argument list and creates a Function object.
+   * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
+   * @param body The body of the function to create.
+   */
+  (arguments: string, body: string): Function;
+  new(arguments: string, body: string): Function;
+
+}
+declare const Function: FunctionConstructor;
+
 /**
  * Wraps a built-in or JavaScript function.
  */
-declare class Function {
+interface Function {
 	/**
 	 * The function arguments, packed into an array.
 	 * This property is deprecated; use the arguments property within the function body.
@@ -873,13 +887,6 @@ declare class Function {
 	 * The function name.
 	 */
 	readonly name: string;
-
-	/**
-	 * The Function constructor parses the argument list and creates a Function object.
-	 * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
-	 * @param body The body of the function to create.
-	 */
-	constructor(arguments: string, body: string);
 
 	/**
 	 * Apply a this object and an argument list to a function.
