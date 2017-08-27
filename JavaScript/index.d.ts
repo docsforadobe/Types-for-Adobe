@@ -274,23 +274,33 @@ declare class Object {
 
 }
 
-/**
- * An array with integer indexing and a length property.
- */
-declare class Array<T> {
-	/**
-	 * The length of the array
-	 */
-	length: number;
-
+interface ArrayConstructor {
+	readonly prototype: Array<any>;
+	
 	/**
 	 * Creates and returns a new array.
 	 * Takes any number of parameters, which become the elements of the array, or a single value which becomes the length of an empty array. Note that you cannot create a one-element array, as the single parameter value is interpreted as the length. Returns the new array.
 	 * @param length If no other parameters are passed, the initial length of the empty array. Otherwise, the first element.
 	 * @param values If there is more than one parameter, the array is initialized with the given parameters.
 	 */
-	constructor(length: number, ...values: T[]);
+	new(arrayLength?: number): any[];
+	new <T>(arrayLength: number): T[];
+	new <T>(...values: T[]): T[];
+	(arrayLength?: number): any[];
+	<T>(arrayLength: number): T[];
+	<T>(...values: T[]): T[];
+}
+declare const Array: ArrayConstructor;
 
+/**
+ * An array with integer indexing and a length property.
+ */
+interface Array<T> {
+	/**
+	 * The length of the array
+	 */
+	length: number;
+	
 	/**
 	 * Returns a new array created by concatenating the given values to the end of the original array.
 	 * The original array is unchanged.If an array is provided as a parameter to concat(), each of its elements are appended as separate array elements at the end of the new array.Returns a new array, the result of concatenation the given values to the end of the original array.
