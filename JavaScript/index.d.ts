@@ -856,8 +856,8 @@ interface FunctionConstructor {
 	 * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
 	 * @param body The body of the function to create.
 	 */
-	(arguments: string, body: string): Function;
 	new(arguments: string, body: string): Function;
+	(arguments: string, body: string): Function;
 
 }
 declare const Function: FunctionConstructor;
@@ -923,8 +923,8 @@ interface StringConstructor {
 	 * Returns a string representation of the value given as an argument.
 	 * @param value A number, variable, or object to convert to a string.
 	 */
-	(value: any): string;
 	new(value?: any): String;
+	(value: any): string;
 	
 	/**
 	 * Returns a string created by concatenation one or more characters specified as ASCII values.
@@ -1152,8 +1152,8 @@ interface NumberConstructor {
 	 * Returns a new Number object set to the value of the argument converted to a number.
 	 * @param value The value of the object being created.
 	 */
-	(value: any): number;
 	new(value?: any): Number;
+	(value: any): number;
 	
 	/**
 	 * A constant representing the largest representable number.
@@ -1235,8 +1235,8 @@ interface BooleanConstructor {
 	 * Creates and returns a new Boolean object set to the value of the argument converted to a boolean.
 	 * @param value The value to be converted to a Boolean.
 	 */
-	(value: any): boolean;
 	new(value?: any): Boolean;
+	(value: any): boolean;
 	
 }
 declare const Boolean: BooleanConstructor;
@@ -1405,8 +1405,8 @@ interface ErrorConstructor {
 	 * @param file The name of the file.
 	 * @param line The line number.
 	 */
-	(msg: string, file?: string, line?: number): Error;
 	new(msg: string, file?: string, line?: number): Error;
+	(msg: string, file?: string, line?: number): Error;
 
 }
 declare const Error: ErrorConstructor;
@@ -1439,8 +1439,8 @@ interface FileConstructor {
 	 * Creates and returns a new File object referring to a given file system location.
 	 * @param path The full or partial path name of the file,in platform-specific or URI format. The value stored in the object is the absolute path. The file that the path refers to does not need to exist.If the path refers to an existing folder: The File function returns a Folder object instead of a File object. The new operator returns a File object for a nonexisting file with the same name.
 	 */
-	(path?: string): File;
 	new(path?: string): File;
+	(path?: string): File;
 
 	/**
 	 * The name of the file system.
@@ -1770,8 +1770,8 @@ interface FolderConstructor {
 	 * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
 	 * @param path The absolute or relative path to the folder associated with this object, specified in URI format. The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder: The Folder() function returns a File object instead of a Folder object. The new operator returns a Folder object for a nonexisting folder with the same name.
 	 */
+	new(path?: string): Folder;
 	(path?: string): Folder;
-	new (path?: string): Folder;
 	
 	/**
 	 * The folder containing the application data for all users.
