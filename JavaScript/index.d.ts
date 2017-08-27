@@ -1755,10 +1755,16 @@ interface File {
 
 }
 
+interface FolderConstructor {
+  readonly prototype: Folder;
+	
+}
+declare const Folder: FolderConstructor;
+
 /**
  * Represents a file-system folder or directory in a platform-independent manner.
  */
-declare class Folder {
+interface Folder {
 	/**
 	 * The full path name for the referenced folder in URI notation.
 	 */
