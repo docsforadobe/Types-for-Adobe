@@ -391,155 +391,155 @@ interface Array<T> {
 /**
  * A global object containing a set of math functions and constants.
  */
-declare class Math {
+interface Math {
 	/**
 	 * Euler's constant and the base of natural logarithms.
 	 */
-	static readonly E: number;
+	readonly E: number;
 
 	/**
 	 * The natural logarithm of 10.
 	 */
-	static readonly LN10: number;
+	readonly LN10: number;
 
 	/**
 	 * The natural logarithm of 2.
 	 */
-	static readonly LN2: number;
+	readonly LN2: number;
 
 	/**
 	 * The base 10 logarithm of e.
 	 */
-	static readonly LOG10E: number;
+	readonly LOG10E: number;
 
 	/**
 	 * The base 2 logarithm of e.
 	 */
-	static readonly LOG2E: number;
+	readonly LOG2E: number;
 
 	/**
 	 * The ratio of the circumference of a circle to its diameter.
 	 */
-	static readonly PI: number;
+	readonly PI: number;
 
 	/**
 	 * The reciprocal of the square root of 1/2.
 	 */
-	static readonly SQRT1_2: number;
+	readonly SQRT1_2: number;
 
 	/**
 	 * The square root of 2.
 	 */
-	static readonly SQRT2: number;
+	readonly SQRT2: number;
 
 	/**
 	 * Returns the absolute value of a number.
 	 * @param x A number.
 	 */
-	static abs(x: number): number;
+	abs(x: number): number;
 
 	/**
 	 * Returns the arc cosine(in radians) of a number.
 	 * @param x A number.
 	 */
-	static acos(x: number): number;
+	acos(x: number): number;
 
 	/**
 	 * Returns the arc sin(in radians) of a number.
 	 * @param x A number.
 	 */
-	static asin(x: number): number;
+	asin(x: number): number;
 
 	/**
 	 * Returns the arc tangent(in radians) of a number.
 	 * @param x A number.
 	 */
-	static atan(x: number): number;
+	atan(x: number): number;
 
 	/**
 	 * Returns the arc tangent of the quotient of its arguments (y/x).
 	 * @param y A number.
 	 * @param x A number.
 	 */
-	static atan2(y: number, x: number): number;
+	atan2(y: number, x: number): number;
 
 	/**
 	 * Rounds the number up to the nearest integer.
 	 * @param x A number.
 	 */
-	static ceil(x: number): number;
+	ceil(x: number): number;
 
 	/**
 	 * Returns the cosine of an angle provided in radians.
 	 * @param x An angle, in radians.
 	 */
-	static cos(x: number): number;
+	cos(x: number): number;
 
 	/**
 	 * Returns Math.E raised to the power of a number.
 	 * @param x A number.
 	 */
-	static exp(x: number): number;
+	exp(x: number): number;
 
 	/**
 	 * Rounds a number down to the nearest integer.
 	 * @param x A number.
 	 */
-	static floor(x: number): number;
+	floor(x: number): number;
 
 	/**
 	 * Returns the natural logarithm of a number.
 	 * @param x A number.
 	 */
-	static log(x: number): number;
+	log(x: number): number;
 
 	/**
 	 * Returns the largest of zero or more numbers.
 	 * @param ...rest Numbers.
 	 */
-	static max(...rest: number[]): number;
+	max(...rest: number[]): number;
 
 	/**
 	 * Returns the smallest of zero or more numbers.
 	 * @param ...rest Numbers.
 	 */
-	static min(...rest: number[]): number;
+	min(...rest: number[]): number;
 
 	/**
 	 * Returns x raised to the power of y.
 	 * @param x Numbers.
 	 * @param y 
 	 */
-	static pow(x: number, y: number): number;
+	pow(x: number, y: number): number;
 
 	/**
 	 * Returns a pseudo-random number from 0.0 up to but not including 1.0.
 	 */
-	static random(): number;
+	random(): number;
 
 	/**
 	 * Rounds a number to the nearest integer.
 	 * @param x A number.
 	 */
-	static round(x: number): number;
+	round(x: number): number;
 
 	/**
 	 * Returns the sine of an angle provided in radians.
 	 * @param x An angle, in radians.
 	 */
-	static sin(x: number): number;
+	sin(x: number): number;
 
 	/**
 	 * Returns the square root of a number.
 	 * @param x A number.
 	 */
-	static sqrt(x: number): number;
+	sqrt(x: number): number;
 
 	/**
 	 * Returns the tangent of an angle provided in radians.
 	 * @param x An angle, in radians.
 	 */
-	static tan(x: number): number;
+	tan(x: number): number;
 
 }
 
