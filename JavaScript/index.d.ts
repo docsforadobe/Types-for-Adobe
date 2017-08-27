@@ -289,6 +289,7 @@ interface ArrayConstructor {
 	(arrayLength?: number): any[];
 	<T>(arrayLength: number): T[];
 	<T>(...values: T[]): T[];
+	
 }
 declare const Array: ArrayConstructor;
 
@@ -1171,6 +1172,7 @@ interface NumberConstructor {
 	 * A constant representing positive infinity.
 	 */
 	readonly POSITIVE_INFINITY: number;
+	
 }
 declare const Number: NumberConstructor;
 
