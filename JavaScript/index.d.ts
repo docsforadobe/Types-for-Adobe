@@ -900,7 +900,6 @@ declare class Function {
 }
 
 interface StringConstructor {
-	new(value?: any): String;
 	readonly prototype: String;
 	
 	/**
@@ -908,6 +907,7 @@ interface StringConstructor {
 	 * @param value A number, variable, or object to convert to a string.
 	 */
 	(value: any): string;
+	new(value?: any): String;
 	
 	/**
 	 * Returns a string created by concatenation one or more characters specified as ASCII values.
@@ -1129,7 +1129,6 @@ interface String {
 }
 
 interface NumberConstructor {
-	new(value?: any): Number;
 	readonly prototype: Number;
 
 	/**
@@ -1137,6 +1136,7 @@ interface NumberConstructor {
 	 * @param value The value of the object being created.
 	 */
 	(value: any): number;
+	new(value?: any): Number;
 	
 	/**
 	 * A constant representing the largest representable number.
@@ -1211,7 +1211,6 @@ interface Number {
 }
 
 interface BooleanConstructor {
-	new(value?: any): Boolean;
 	readonly prototype: Boolean;
 
 	/**
@@ -1219,6 +1218,7 @@ interface BooleanConstructor {
 	 * @param value The value to be converted to a Boolean.
 	 */
 	(value: any): boolean;
+	new(value?: any): Boolean;
 	
 }
 declare const Boolean: BooleanConstructor;
