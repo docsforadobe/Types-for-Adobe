@@ -2134,7 +2134,7 @@ declare class Socket {
 /**
  * Provides information about a method, a property or a method parameters.
  */
-declare class ReflectionInfo {
+interface ReflectionInfo {
 	/**
 	 * The description of method or function arguments.
 	 */
