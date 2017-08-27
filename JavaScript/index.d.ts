@@ -2280,10 +2280,24 @@ declare class QName {
 
 }
 
+interface NamespaceConstructor {
+	readonly prototype: Namespace;
+
+	/**
+	 * Creates a Namespace object.
+	 * @param prefix The URIprefix, specified as an existing Namespace object, QName object, or string. If this is a Namespace or a QName object, the URI and prefix are set to that of the object. If this is a string, the prefix is set to that string, and the URI must be specified.
+	 * @param uri The URI if the prefix is specified as a string.
+	 */
+	new(prefix: any, uri?: string): Namespace;
+	(prefix: any, uri?: string): Namespace;
+	
+}
+declare const Namespace: NamespaceConstructor;
+
 /**
  * A XML namespace object.
  */
-declare class Namespace {
+interface Namespace {
 	/**
 	 * The named prefix.
 	 */
@@ -2293,13 +2307,6 @@ declare class Namespace {
 	 * The URI.
 	 */
 	readonly uri: string;
-
-	/**
-	 * Creates a Namespace object.
-	 * @param prefix The URIprefix, specified as an existing Namespace object, QName object, or string. If this is a Namespace or a QName object, the URI and prefix are set to that of the object. If this is a string, the prefix is set to that string, and the URI must be specified.
-	 * @param uri The URI if the prefix is specified as a string.
-	 */
-	constructor(prefix: any, uri?: string);
 
 }
 
