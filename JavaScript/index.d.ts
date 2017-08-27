@@ -1425,10 +1425,72 @@ interface Error {
 
 }
 
+interface FileConstructor {
+	readonly prototype: File;
+
+	/**
+	 * Creates and returns a new File object referring to a given file system location.
+	 * @param path The full or partial path name of the file,in platform-specific or URI format. The value stored in the object is the absolute path. The file that the path refers to does not need to exist.If the path refers to an existing folder: The File function returns a Folder object instead of a File object. The new operator returns a File object for a nonexisting file with the same name.
+	 */
+	(path?: string): File;
+	new(path?: string): File;
+
+	/**
+	 * The name of the file system.
+	 * This is a class property accessed through the File constructor. Valid values are "Windows", "Macintosh", and "Unix".
+	 */
+	readonly fs: string;
+	
+	/**
+	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
+	 * See also String.decodeURI().
+	 * @param uri The UTF-8 encoded string to decode.
+	 */
+	decode(uri: string): string;
+
+	/**
+	 * Encodes a string as required by RFC 2396, and returns the encoded string.
+	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
+	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * See also encodeURI().
+	 * @param name The string to encode.
+	 */
+	encode(name: string): string;
+	
+	/**
+	 * Reports whether a given encoding is available.
+	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
+	 */
+	isEncodingAvailable(name: string): boolean;
+	
+	/**
+	 * Opens a dialog so the user can select one or more files to open.
+	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file or multiple files, and creates new File objects to represent the selected files.
+	 * If the user clicks OK, returns a File object for the selected file, or an array of objects if multiple files are selected.
+	 * If the user cancels, returns null.
+	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
+	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
+	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
+	 */
+	openDialog(prompt: string, filter?: any, multiSelect?: boolean): File;
+	
+	/**
+	 * Opens a dialog so the user can select a file name to save to.
+	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file location to which to save information, and creates a new File object to represent the selected file location.
+	 * If the user clicks OK, returns a File object for the selected file location.
+	 * If the user cancels, returns null.
+	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
+	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
+	 */
+	saveDialog(prompt: string, filter?: any): File;
+
+}
+declare const File: FileConstructor;
+
 /**
  * Represents a file in the local file system in a platform-independent manner.
  */
-declare class File {
+interface File {
 	/**
 	 * The full path name for the referenced file in URI notation.
 	 */
@@ -1475,12 +1537,6 @@ declare class File {
 	 * If true, this object refers to a file or file-system alias that actually exists in the file system.
 	 */
 	readonly exists: boolean;
-
-	/**
-	 * The name of the file system.
-	 * This is a class property accessed through the File constructor. Valid values are "Windows", "Macintosh", and "Unix".
-	 */
-	static readonly fs: string;
 
 	/**
 	 * The platform-specific full path name for the referenced file.
@@ -1549,12 +1605,6 @@ declare class File {
 	readonly type: string;
 
 	/**
-	 * Creates and returns a new File object referring to a given file system location.
-	 * @param path The full or partial path name of the file,in platform-specific or URI format. The value stored in the object is the absolute path. The file that the path refers to does not need to exist.If the path refers to an existing folder: The File function returns a Folder object instead of a File object. The new operator returns a File object for a nonexisting file with the same name.
-	 */
-	constructor(path?: string);
-
-	/**
 	 * Changes the path specification of the referenced file.
 	 * @param path A string containing the new path, absolute or relative to the current folder.
 	 */
@@ -1582,22 +1632,6 @@ declare class File {
 	createAlias(path: string): void;
 
 	/**
-	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
-	 * See also String.decodeURI().
-	 * @param uri The UTF-8 encoded string to decode.
-	 */
-	static decode(uri: string): string;
-
-	/**
-	 * Encodes a string as required by RFC 2396, and returns the encoded string.
-	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
-	 * See also encodeURI().
-	 * @param name The string to encode.
-	 */
-	static encode(name: string): string;
-
-	/**
 	 * Executes or opens this file using the appropriate application, as if it had been double-clicked in a file browser.
 	 * You can use this method to run scripts, launch applications, and so on.Returns true immediately if the application launch was successful.
 	 */
@@ -1611,12 +1645,6 @@ declare class File {
 	getRelativeURI(basePath: string): string;
 
 	/**
-	 * Reports whether a given encoding is available.
-	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
-	 */
-	static isEncodingAvailable(name: string): boolean;
-
-	/**
 	 * Opens the referenced file for subsequent read/write operations. The method resolves any aliases to find the file.
 	 * Returns true if the file was opened successfully.The method attempts to detect the encoding of the open file. It reads a few bytes at the current location and tries to detect the Byte Order Mark character 0xFFFE. If found, the current position is advanced behind the detected character and the encoding property is set to one of the strings UCS-2BE, UCS-2LE, UCS4-BE, UCS-4LE, or UTF-8. If the marker character is not found, it checks for zero bytes at the current location and makes an assumption about one of the above formats (except UTF-8). If everything fails, the encoding property is set to the system encoding.
 	 * IMPORTANT: Be careful about opening a file more than once. The operating system usually permits you to do so, but if you start writing to the file using two different File objects, you can destroy your data.
@@ -1625,17 +1653,6 @@ declare class File {
 	 * @param creator In Mac OS, the creator of a newly created file, a 4-character string. Ignored in Windows and UNIX.
 	 */
 	open(mode: string, type?: string, creator?: string): boolean;
-
-	/**
-	 * Opens a dialog so the user can select one or more files to open.
-	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file or multiple files, and creates new File objects to represent the selected files.
-	 * If the user clicks OK, returns a File object for the selected file, or an array of objects if multiple files are selected.
-	 * If the user cancels, returns null.
-	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
-	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
-	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
-	 */
-	static openDialog(prompt: string, filter?: any, multiSelect?: boolean): File;
 
 	/**
 	 * Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file or files, and creates new File objects to represent the selected files.
@@ -1686,16 +1703,6 @@ declare class File {
 	 * If successful, creates and returns a new File object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.
 	 */
 	resolve(): File;
-
-	/**
-	 * Opens a dialog so the user can select a file name to save to.
-	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file location to which to save information, and creates a new File object to represent the selected file location.
-	 * If the user clicks OK, returns a File object for the selected file location.
-	 * If the user cancels, returns null.
-	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
-	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
-	 */
-	static saveDialog(prompt: string, filter?: any): File;
 
 	/**
 	 * Opens the built-in platform-specific file-browsing dialog, in which the user can select an existing file location to which to save information, and creates a new File object to represent the selected file.
