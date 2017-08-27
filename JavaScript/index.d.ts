@@ -1,37 +1,37 @@
 /**
  * The $ object provides a number of debugging facilities and informational methods.
  */
-declare class $ {
+interface $ {
 	/**
 	 * The ExtendScript build information.
 	 */
-	static readonly build: string;
+	readonly build: string;
 
 	/**
 	 * The ExtendScript build date.
 	 */
-	static readonly buildDate: Date;
+	readonly buildDate: Date;
 
 	/**
 	 * The character used as the decimal point character in formatted numeric output.
 	 */
-	static decimalPoint: string;
+	decimalPoint: string;
 
 	/**
 	 * The name of the current ExtendScript engine, if set.
 	 */
-	static readonly engineName: string;
+	readonly engineName: string;
 
 	/**
 	 * The most recent run-time error information.
 	 * Assigning error text to this property generates a run-time error; however, the preferred way to generate a run-time error is to throw an Error object.
 	 */
-	static error: Error;
+	error: Error;
 
 	/**
 	 * The file name of the current script.
 	 */
-	static readonly fileName: string;
+	readonly fileName: string;
 
 	/**
 	 * Gets or sets low-level debug output flags.
@@ -42,144 +42,144 @@ declare class $ {
 	 * 0x0100 (256): Enables extended error handling (see strict).
 	 * 0x0200 (512): Enables the localization feature of the toString method. Equivalent to the localize property.
 	 */
-	static flags: number;
+	flags: number;
 
 	/**
 	 * A reference to the global object, which contains the JavaScript global namespace.
 	 */
-	static readonly global: Object;
+	readonly global: Object;
 
 	/**
 	 * A high-resolution timer, measuring the time in microseconds. The timer starts when ExtendScript is
 	 * initialized during the application startup sequence. Every read access resets the timer to Zero.
 	 */
-	static readonly hiresTimer: number;
+	readonly hiresTimer: number;
 
 	/**
 	 * The path for include files for the current script.
 	 */
-	static readonly includePath: string;
+	readonly includePath: string;
 
 	/**
 	 * The current debugging level, which enables or disables the JavaScript debugger.
 	 * One of 0 (no debugging), 1 (break on runtime errors), or 2 (full debug mode).
 	 */
-	static level: number;
+	level: number;
 
 	/**
 	 * The current line number of the currently executing script.
 	 */
-	static readonly line: number;
+	readonly line: number;
 
 	/**
 	 * Gets or sets the current locale.
 	 * The string contains five characters in the form LL_RR, where LL is an ISO 639 language specifier, and RR is an ISO 3166 region specifier.Initially, this is the value that the application or the platform returns for the current user. You can set it to temporarily change the locale for testing. To return to the application or platform setting, set to undefined, null, or the empty string.
 	 */
-	static locale: string;
+	locale: string;
 
 	/**
 	 * Set to true to enable the extended localization features of the built-in toString() method.
 	 */
-	static localize: boolean;
+	localize: boolean;
 
 	/**
 	 * The ExtendScript memory cache size, in bytes.
 	 */
-	static memCache: number;
+	memCache: number;
 
 	/**
 	 * The current operating system version information.
 	 */
-	static readonly os: string;
+	readonly os: string;
 
 	/**
 	 * An array of objects containing information about the display screens attached to your computer.
 	 * Each object has the properties left, top, right, bottom, which contain the four corners of each screen in global coordinates.A property primary is true if that object describes the primary display.
 	 */
-	static readonly screens: Object[];
+	readonly screens: Object[];
 
 	/**
 	 * The current stack trace.
 	 */
-	static readonly stack: string;
+	readonly stack: string;
 
 	/**
 	 * Sets or clears strict mode for object modification.
 	 * When true, any attempt to write to a read-only property causes a runtime error. Some objects do not permit the creation of new properties when true.
 	 */
-	static strict: any;
+	strict: any;
 
 	/**
 	 * The version number of the ExtendScript engine.
 	 * Formatted as a three-part number and description; for example: "3.92.95 (debug)".
 	 */
-	static readonly version: string;
+	readonly version: string;
 
 	/**
 	 * Shows an About box for the ExtendScript component, and returns the text for the box.
 	 */
-	static about(): string;
+	about(): string;
 
 	/**
 	 * Breaks execution at the current position.
 	 * @param condition A string containing a JavaScript statement to be used as a condition. If the statement evaluates to true or nonzero when this point is reached, execution stops.
 	 */
-	static bp(condition?: any): void;
+	bp(condition?: any): void;
 
 	/**
 	 * Invokes the platform-specific color selection dialog, and returns the selected color.
 	 * @param color The color to be preselected in the dialog, as 0xRRGGBB, or -1 for the platform default.
 	 */
-	static colorPicker(color: number): number;
+	colorPicker(color: number): number;
 
 	/**
 	 * Loads and evaluates a file.
 	 * @param file The file to load.
 	 * @param timeout An optional timeout in milliseconds.
 	 */
-	static evalFile(file: File, timeout?: number): any;
+	evalFile(file: File, timeout?: number): any;
 
 	/**
 	 * Initiates garbage collection in the ExtendScript engine.
 	 */
-	static gc(): void;
+	gc(): void;
 
 	/**
 	 * Retrieves the value of an environment variable.
 	 * @param name The name of the variable.
 	 */
-	static getenv(name: string): string;
+	getenv(name: string): string;
 
 	/**
 	 * Sets the value of an environment variable.
 	 * @param name The name of the variable.
 	 * @param value The value of the variable.
 	 */
-	static setenv(name: string, value: string): void;
+	setenv(name: string, value: string): void;
 
 	/**
 	 * Suspends the calling thread for a number of milliseconds.
 	 * During a sleep period, checks at 100 millisecond intervals to see whether the sleep should be terminated. This can happen if there is a break request, or if the script timeout has expired.
 	 * @param msecs Number of milliseconds to sleep.
 	 */
-	static sleep(msecs: number): void;
+	sleep(msecs: number): void;
 
 	/**
 	 * Converts this object to a string.
 	 */
-	static toString(): string;
+	toString(): string;
 
 	/**
 	 * Prints text to the Console.
 	 * @param text The text to print. All arguments are concatenated.
 	 */
-	static write(text: any): void;
+	write(text: any): void;
 
 	/**
 	 * Prints text to the Console, and adds a newline character.
 	 * @param text The text to print. All arguments are concatenated.
 	 */
-	static writeln(text: any): void;
+	writeln(text: any): void;
 
 }
 
