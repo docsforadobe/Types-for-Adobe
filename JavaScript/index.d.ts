@@ -1398,8 +1398,8 @@ interface ErrorConstructor {
 	 * @param file The name of the file.
 	 * @param line The line number.
 	 */
-	(msg: string, file?: string, line?: number);
-	new(msg: string, file?: string, line?: number);
+	(msg: string, file?: string, line?: number): Error;
+	new(msg: string, file?: string, line?: number): Error;
 
 }
 declare const Error: ErrorConstructor;
