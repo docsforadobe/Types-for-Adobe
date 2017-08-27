@@ -2206,7 +2206,7 @@ declare class ReflectionInfo {
 /**
  * Provides information about a class.
  */
-declare class Reflection {
+interface Reflection {
 	/**
 	 * The long description text.
 	 */
