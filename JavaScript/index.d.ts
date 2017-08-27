@@ -1758,6 +1758,120 @@ interface File {
 interface FolderConstructor {
   readonly prototype: Folder;
 	
+  /**
+   * Creates and returns a new Folder object referring to a given file-system location.
+   * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
+   * @param path The absolute or relative path to the folder associated with this object, specified in URI format. The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder: The Folder() function returns a File object instead of a Folder object. The new operator returns a Folder object for a nonexisting folder with the same name.
+   */
+  (path?: string): Folder;
+  new (path?: string): Folder;
+	
+  /**
+   * The folder containing the application data for all users.
+   * In Windows, the value of %APPDATA% (by default, C:\\Documents and Settings\\All Users\\Application Data)
+   * In Mac OS, /Library/Application Support
+   */
+  readonly appData: Folder;
+
+  /**
+   * In Mac OS, a Folder object for the folder containing the bundle of the running application.
+   */
+  readonly appPackage: Folder;
+
+  /**
+   * A Folder object for the folder containing common files for all programs installed by the user.
+   * In Windows, the value of %CommonProgramFiles% (by default, C:\\Program Files\\Common Files)
+   * In Mac OS, /Library/Application Support
+   */
+  readonly commonFiles: Folder;
+
+  /**
+   * A Folder object for the current folder.
+   * Assign a Folder object or a string containing the new path name to set the current folder. This is a class property accessed through the Folder constructor.
+   */
+  current: Folder;
+
+  /**
+   * A Folder object for the folder that contains the user’s desktop.
+   * In Windows, C:\\Documents and Settings\\username\\Desktop
+   * In Mac OS, ~/Desktop
+   */
+  readonly desktop: Folder;
+
+  /**
+   * The name of the current file system.
+   * One of "Windows", "Macintosh", or "Unix".
+   */
+  readonly fs: string;
+	
+  /**
+   * A folder pointing to the user's My Documents folder.
+   * In Windows, C:\\Documents and Settings\\username\\My Documents
+   * In Mac OS,~/Documents
+   */
+  readonly myDocuments: Folder;
+
+  /**
+   * A Folder object for the folder containing the executable image of the running application.
+   */
+  readonly startup: Folder;
+
+  /**
+   * A Folder object for the folder containing the operating system files.
+   * In Windows, the value of %windir% (by default, C:\\Windows)
+   * In Mac OS, /System
+   */
+  readonly system: Folder;
+
+  /**
+   * A Folder object for the default folder for temporary files.
+   */
+  readonly temp: Folder;
+
+  /**
+   * A Folder object for the folder containing deleted items. On Windows, the trash folder is a virtual
+   * folder containing a database; therefore, the property value is null on Windows.
+   */
+  readonly trash: Folder;
+
+  /**
+   * A Folder object for the folder containing the user's application data.
+   * In Windows, the value of %USERDATA% (by default, C:\\Documents and Settings\\username\\Application Data)
+   * In Mac OS,~/Library/Application Support.
+   */
+  readonly userData: Folder;
+
+  /**
+   * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
+   * See also String.decodeURI().
+   * @param uri The UTF-8 string to decode.
+   */
+  decode(uri: string): string;
+
+  /**
+   * Encodes a string as required by RFC 2396, and returns the encoded string.
+   * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
+   * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+   * See also encodeURI().
+   * @param name The string to encode.
+   */
+  encode(name: string): string;
+
+  /**
+   * Reports whether a given encoding is available.
+   * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
+   */
+  isEncodingAvailable(name: string): boolean;
+
+  /**
+   * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
+   * Differs from the object method selectDlg() in that it does not preselect a folder.
+   * If the user clicks OK, returns a File or Folder object for the selected file or folder.
+   * If the user cancels, returns null.
+   * @param prompt The prompt text, if the dialog allows a prompt.
+   */
+  selectDialog(prompt: string): Folder;
+  
 }
 declare const Folder: FolderConstructor;
 
@@ -1776,41 +1890,9 @@ interface Folder {
 	readonly alias: boolean;
 
 	/**
-	 * The folder containing the application data for all users.
-	 * In Windows, the value of %APPDATA% (by default, C:\\Documents and Settings\\All Users\\Application Data)
-	 * In Mac OS, /Library/Application Support
-	 */
-	static readonly appData: Folder;
-
-	/**
-	 * In Mac OS, a Folder object for the folder containing the bundle of the running application.
-	 */
-	static readonly appPackage: Folder;
-
-	/**
-	 * A Folder object for the folder containing common files for all programs installed by the user.
-	 * In Windows, the value of %CommonProgramFiles% (by default, C:\\Program Files\\Common Files)
-	 * In Mac OS, /Library/Application Support
-	 */
-	static readonly commonFiles: Folder;
-
-	/**
 	 * The creation date of the referenced folder, or null if the object does not refer to a folder on disk.
 	 */
 	readonly created: Date;
-
-	/**
-	 * A Folder object for the current folder.
-	 * Assign a Folder object or a string containing the new path name to set the current folder. This is a class property accessed through the Folder constructor.
-	 */
-	static current: Folder;
-
-	/**
-	 * A Folder object for the folder that contains the user’s desktop.
-	 * In Windows, C:\\Documents and Settings\\username\\Desktop
-	 * In Mac OS, ~/Desktop
-	 */
-	static readonly desktop: Folder;
 
 	/**
 	 * The localized name portion of the absolute URI for the referenced folder, without the path specification.
@@ -1829,12 +1911,6 @@ interface Folder {
 	readonly exists: boolean;
 
 	/**
-	 * The name of the current file system.
-	 * One of "Windows", "Macintosh", or "Unix".
-	 */
-	static readonly fs: string;
-
-	/**
 	 * The platform-specific name of the referenced folder as a full path name.
 	 */
 	readonly fsName: string;
@@ -1848,13 +1924,6 @@ interface Folder {
 	 * The date of the referenced folder's last modification, or null if the object does not refer to a folder on disk.
 	 */
 	readonly modified: Date;
-
-	/**
-	 * A folder pointing to the user's My Documents folder.
-	 * In Windows, C:\\Documents and Settings\\username\\My Documents
-	 * In Mac OS,~/Documents
-	 */
-	static readonly myDocuments: Folder;
 
 	/**
 	 * The folder name portion of the absolute URI for the referenced file, without the path specification.
@@ -1877,43 +1946,6 @@ interface Folder {
 	readonly relativeURI: string;
 
 	/**
-	 * A Folder object for the folder containing the executable image of the running application.
-	 */
-	static readonly startup: Folder;
-
-	/**
-	 * A Folder object for the folder containing the operating system files.
-	 * In Windows, the value of %windir% (by default, C:\\Windows)
-	 * In Mac OS, /System
-	 */
-	static readonly system: Folder;
-
-	/**
-	 * A Folder object for the default folder for temporary files.
-	 */
-	static readonly temp: Folder;
-
-	/**
-	 * A Folder object for the folder containing deleted items. On Windows, the trash folder is a virtual
-	 * folder containing a database; therefore, the property value is null on Windows.
-	 */
-	static readonly trash: Folder;
-
-	/**
-	 * A Folder object for the folder containing the user's application data.
-	 * In Windows, the value of %USERDATA% (by default, C:\\Documents and Settings\\username\\Application Data)
-	 * In Mac OS,~/Library/Application Support.
-	 */
-	static readonly userData: Folder;
-
-	/**
-	 * Creates and returns a new Folder object referring to a given file-system location.
-	 * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
-	 * @param path The absolute or relative path to the folder associated with this object, specified in URI format. The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder: The Folder() function returns a File object instead of a Folder object. The new operator returns a Folder object for a nonexisting folder with the same name.
-	 */
-	constructor(path?: string);
-
-	/**
 	 * Changes the path specification of the referenced folder.
 	 * @param path A string containing the new path, absolute or relative to the current folder.
 	 */
@@ -1924,22 +1956,6 @@ interface Folder {
 	 * Returns true if the folder was created.
 	 */
 	create(): boolean;
-
-	/**
-	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
-	 * See also String.decodeURI().
-	 * @param uri The UTF-8 string to decode.
-	 */
-	static decode(uri: string): string;
-
-	/**
-	 * Encodes a string as required by RFC 2396, and returns the encoded string.
-	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
-	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
-	 * See also encodeURI().
-	 * @param name The string to encode.
-	 */
-	static encode(name: string): string;
 
 	/**
 	 * Opens this folder in the platform-specific file browser (as if it had been double-clicked in the file browser).
@@ -1962,12 +1978,6 @@ interface Folder {
 	getRelativeURI(basePath?: string): string;
 
 	/**
-	 * Reports whether a given encoding is available.
-	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
-	 */
-	static isEncodingAvailable(name: string): boolean;
-
-	/**
 	 * Deletes the folder associated with this object from disk immediately, without moving it to the system trash.
 	 * Folders must be empty before they can be deleted. Does not resolve aliases; instead, deletes the referenced alias or shortcut file itself. Returns true if the file was successfully removed.
 	 * IMPORTANT: Cannot be undone. It is recommended that you prompt the user for permission before deleting.
@@ -1986,15 +1996,6 @@ interface Folder {
 	 * If successful, creates and returns a new Folder object that points to the resolved file system element. Returns null if this object does not refer to an alias, or if the alias could not be resolved.
 	 */
 	resolve(): Folder;
-
-	/**
-	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
-	 * Differs from the object method selectDlg() in that it does not preselect a folder.
-	 * If the user clicks OK, returns a File or Folder object for the selected file or folder.
-	 * If the user cancels, returns null.
-	 * @param prompt The prompt text, if the dialog allows a prompt.
-	 */
-	static selectDialog(prompt: string): Folder;
 
 	/**
 	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
