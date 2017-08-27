@@ -2265,10 +2265,24 @@ declare class Reflection {
 
 }
 
+interface QNameConstructor {
+	readonly prototype: QName;
+
+	/**
+	 * Creates a QName object.
+	 * @param uri The URI, specified as a Namespace object, an existing QName object, or string. If this is a Namespace object, the URI is set to the namespace URI, and there is no local name. If this is a QName object, the URI and localName is set to those of that object. If this is a string, the URI is set to that string.
+	 * @param name The local name. Used only if URI is given as a string.
+	 */
+	new(uri: any, name?: string): QName;
+	(uri: any, name?: string): QName;
+
+}
+declare const QName: QNameConstructor;
+
 /**
  * A qualified XML name, containing the URI and the local name.
  */
-declare class QName {
+interface QName {
 	/**
 	 * The local name part of the qualified name.
 	 */
@@ -2278,13 +2292,6 @@ declare class QName {
 	 * The URI part of the qualified name.
 	 */
 	readonly uri: string;
-
-	/**
-	 * Creates a QName object.
-	 * @param uri The URI, specified as a Namespace object, an existing QName object, or string. If this is a Namespace object, the URI is set to the namespace URI, and there is no local name. If this is a QName object, the URI and localName is set to those of that object. If this is a string, the URI is set to that string.
-	 * @param name The local name. Used only if URI is given as a string.
-	 */
-	constructor(uri: any, name?: string);
 
 }
 
