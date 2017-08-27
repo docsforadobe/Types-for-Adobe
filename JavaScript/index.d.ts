@@ -849,15 +849,15 @@ interface Date {
 }
 
 interface FunctionConstructor {
-  readonly prototype: Function;
+	readonly prototype: Function;
 	
-  /**
-   * The Function constructor parses the argument list and creates a Function object.
-   * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
-   * @param body The body of the function to create.
-   */
-  (arguments: string, body: string): Function;
-  new(arguments: string, body: string): Function;
+	/**
+	 * The Function constructor parses the argument list and creates a Function object.
+	 * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
+	 * @param body The body of the function to create.
+	 */
+	(arguments: string, body: string): Function;
+	new(arguments: string, body: string): Function;
 
 }
 declare const Function: FunctionConstructor;
@@ -1763,122 +1763,122 @@ interface File {
 }
 
 interface FolderConstructor {
-  readonly prototype: Folder;
+	readonly prototype: Folder;
 	
-  /**
-   * Creates and returns a new Folder object referring to a given file-system location.
-   * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
-   * @param path The absolute or relative path to the folder associated with this object, specified in URI format. The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder: The Folder() function returns a File object instead of a Folder object. The new operator returns a Folder object for a nonexisting folder with the same name.
-   */
-  (path?: string): Folder;
-  new (path?: string): Folder;
+	/**
+	 * Creates and returns a new Folder object referring to a given file-system location.
+	 * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
+	 * @param path The absolute or relative path to the folder associated with this object, specified in URI format. The value stored in the object is the absolute path.The path need not refer to an existing folder. If the path refers to an existing file, rather than a folder: The Folder() function returns a File object instead of a Folder object. The new operator returns a Folder object for a nonexisting folder with the same name.
+	 */
+	(path?: string): Folder;
+	new (path?: string): Folder;
 	
-  /**
-   * The folder containing the application data for all users.
-   * In Windows, the value of %APPDATA% (by default, C:\\Documents and Settings\\All Users\\Application Data)
-   * In Mac OS, /Library/Application Support
-   */
-  readonly appData: Folder;
+	/**
+	 * The folder containing the application data for all users.
+	 * In Windows, the value of %APPDATA% (by default, C:\\Documents and Settings\\All Users\\Application Data)
+	 * In Mac OS, /Library/Application Support
+	 */
+	readonly appData: Folder;
 
-  /**
-   * In Mac OS, a Folder object for the folder containing the bundle of the running application.
-   */
-  readonly appPackage: Folder;
+	/**
+	 * In Mac OS, a Folder object for the folder containing the bundle of the running application.
+	 */
+	readonly appPackage: Folder;
 
-  /**
-   * A Folder object for the folder containing common files for all programs installed by the user.
-   * In Windows, the value of %CommonProgramFiles% (by default, C:\\Program Files\\Common Files)
-   * In Mac OS, /Library/Application Support
-   */
-  readonly commonFiles: Folder;
+	/**
+	 * A Folder object for the folder containing common files for all programs installed by the user.
+	 * In Windows, the value of %CommonProgramFiles% (by default, C:\\Program Files\\Common Files)
+	 * In Mac OS, /Library/Application Support
+	 */
+	readonly commonFiles: Folder;
 
-  /**
-   * A Folder object for the current folder.
-   * Assign a Folder object or a string containing the new path name to set the current folder. This is a class property accessed through the Folder constructor.
-   */
-  current: Folder;
+	/**
+	 * A Folder object for the current folder.
+	 * Assign a Folder object or a string containing the new path name to set the current folder. This is a class property accessed through the Folder constructor.
+	 */
+	current: Folder;
 
-  /**
-   * A Folder object for the folder that contains the user’s desktop.
-   * In Windows, C:\\Documents and Settings\\username\\Desktop
-   * In Mac OS, ~/Desktop
-   */
-  readonly desktop: Folder;
+	/**
+	 * A Folder object for the folder that contains the user’s desktop.
+	 * In Windows, C:\\Documents and Settings\\username\\Desktop
+	 * In Mac OS, ~/Desktop
+	 */
+	readonly desktop: Folder;
 
-  /**
-   * The name of the current file system.
-   * One of "Windows", "Macintosh", or "Unix".
-   */
-  readonly fs: string;
+	/**
+	 * The name of the current file system.
+	 * One of "Windows", "Macintosh", or "Unix".
+	 */
+	readonly fs: string;
 	
-  /**
-   * A folder pointing to the user's My Documents folder.
-   * In Windows, C:\\Documents and Settings\\username\\My Documents
-   * In Mac OS,~/Documents
-   */
-  readonly myDocuments: Folder;
+	/**
+	 * A folder pointing to the user's My Documents folder.
+	 * In Windows, C:\\Documents and Settings\\username\\My Documents
+	 * In Mac OS,~/Documents
+	 */
+	readonly myDocuments: Folder;
 
-  /**
-   * A Folder object for the folder containing the executable image of the running application.
-   */
-  readonly startup: Folder;
+	/**
+	 * A Folder object for the folder containing the executable image of the running application.
+	 */
+	readonly startup: Folder;
 
-  /**
-   * A Folder object for the folder containing the operating system files.
-   * In Windows, the value of %windir% (by default, C:\\Windows)
-   * In Mac OS, /System
-   */
-  readonly system: Folder;
+	/**
+	 * A Folder object for the folder containing the operating system files.
+	 * In Windows, the value of %windir% (by default, C:\\Windows)
+	 * In Mac OS, /System
+	 */
+	readonly system: Folder;
 
-  /**
-   * A Folder object for the default folder for temporary files.
-   */
-  readonly temp: Folder;
+	/**
+	 * A Folder object for the default folder for temporary files.
+	 */
+	readonly temp: Folder;
 
-  /**
-   * A Folder object for the folder containing deleted items. On Windows, the trash folder is a virtual
-   * folder containing a database; therefore, the property value is null on Windows.
-   */
-  readonly trash: Folder;
+	/**
+	 * A Folder object for the folder containing deleted items. On Windows, the trash folder is a virtual
+	 * folder containing a database; therefore, the property value is null on Windows.
+	 */
+	readonly trash: Folder;
 
-  /**
-   * A Folder object for the folder containing the user's application data.
-   * In Windows, the value of %USERDATA% (by default, C:\\Documents and Settings\\username\\Application Data)
-   * In Mac OS,~/Library/Application Support.
-   */
-  readonly userData: Folder;
+	/**
+	 * A Folder object for the folder containing the user's application data.
+	 * In Windows, the value of %USERDATA% (by default, C:\\Documents and Settings\\username\\Application Data)
+	 * In Mac OS,~/Library/Application Support.
+	 */
+	readonly userData: Folder;
 
-  /**
-   * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
-   * See also String.decodeURI().
-   * @param uri The UTF-8 string to decode.
-   */
-  decode(uri: string): string;
+	/**
+	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
+	 * See also String.decodeURI().
+	 * @param uri The UTF-8 string to decode.
+	 */
+	decode(uri: string): string;
 
-  /**
-   * Encodes a string as required by RFC 2396, and returns the encoded string.
-   * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
-   * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
-   * See also encodeURI().
-   * @param name The string to encode.
-   */
-  encode(name: string): string;
+	/**
+	 * Encodes a string as required by RFC 2396, and returns the encoded string.
+	 * All special characters are encoded in UTF-8 and stored as escaped characters starting with the percent sign followed by two hexadecimal digits. For example, the string "my file" is encoded as "my%20file".
+	 * Special characters are those with a numeric value greater than 127, except the following: / - _ . ! ~ * ' ( )
+	 * See also encodeURI().
+	 * @param name The string to encode.
+	 */
+	encode(name: string): string;
 
-  /**
-   * Reports whether a given encoding is available.
-   * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
-   */
-  isEncodingAvailable(name: string): boolean;
+	/**
+	 * Reports whether a given encoding is available.
+	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
+	 */
+	isEncodingAvailable(name: string): boolean;
 
-  /**
-   * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
-   * Differs from the object method selectDlg() in that it does not preselect a folder.
-   * If the user clicks OK, returns a File or Folder object for the selected file or folder.
-   * If the user cancels, returns null.
-   * @param prompt The prompt text, if the dialog allows a prompt.
-   */
-  selectDialog(prompt: string): Folder;
-  
+	/**
+	 * Opens the built-in platform-specific file-browsing dialog, and creates a new File or Folder object for the selected file or folder.
+	 * Differs from the object method selectDlg() in that it does not preselect a folder.
+	 * If the user clicks OK, returns a File or Folder object for the selected file or folder.
+	 * If the user cancels, returns null.
+	 * @param prompt The prompt text, if the dialog allows a prompt.
+	 */
+	selectDialog(prompt: string): Folder;
+	
 }
 declare const Folder: FolderConstructor;
 
