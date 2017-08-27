@@ -1387,22 +1387,29 @@ interface RegExpExecArray extends Array<string> {
 	input: string;
 }
 
-/**
- * Wraps a runtime error.
- */
-declare class Error {
-	/**
-	 * The error message.
-	 */
-	description: string;
-
+interface ErrorConstructor {
+	readonly prototype: Error;
+	
 	/**
 	 * Creates a new Error object.
 	 * @param msg The error message.
 	 * @param file The name of the file.
 	 * @param line The line number.
 	 */
-	constructor(msg: string, file?: string, line?: number);
+	(msg: string, file?: string, line?: number);
+	new(msg: string, file?: string, line?: number);
+
+}
+declare const Error: ErrorConstructor;
+
+/**
+ * Wraps a runtime error.
+ */
+interface Error {
+	/**
+	 * The error message.
+	 */
+	description: string;
 
 	/**
 	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
