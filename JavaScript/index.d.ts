@@ -183,15 +183,35 @@ declare class $ {
 
 }
 
+interface ObjectConstructor {
+	readonly prototype: Object;
+
+	/**
+	 * Creates and returns a new object of a given type.
+	 * @param what The object type.
+	 */
+	new(what: any): Object;
+	(): any;
+	(what: any): any;
+	
+	/**
+	 * Reports whether an object is still valid.
+	 * @param what The object to check.
+	 */
+	isValid(what: Object): boolean;
+	
+}
+declare const Object: ObjectConstructor;
+
 /**
  * The base class of all JavaScript objects.
  */
-declare class Object {
+interface Object {
 	/**
 	 * Points to the constructor function that created this object.
 	 * Note that this property is treated as an XML element in the XML class.
 	 */
-	readonly 'constructor': Function;
+	readonly constructor: Function;
 
 	/**
 	 * Points to the prototype object for this object.
@@ -206,12 +226,6 @@ declare class Object {
 	readonly reflect: Reflection;
 
 	/**
-	 * Creates and returns a new object of a given type.
-	 * @param what The object type.
-	 */
-	constructor(what: any);
-
-	/**
 	 * Reports whether a given property is defined with an instance or within the prototype chain.
 	 * @param name The name of the property to check.
 	 */
@@ -222,12 +236,6 @@ declare class Object {
 	 * @param what The object to check.
 	 */
 	isPrototypeOf(what: Object): boolean;
-
-	/**
-	 * Reports whether an object is still valid.
-	 * @param what The object to check.
-	 */
-	static isValid(what: Object): boolean;
 
 	/**
 	 * Reports whether a given property is enumerable.
