@@ -2338,41 +2338,64 @@ interface Namespace {
 
 }
 
-/**
- * Wraps XML into an object.
- */
-declare class XML {
-	/**
-	 * Controls whether XML comments should be parsed (false) or ignored (true).
-	 */
-	static ignoreComments: boolean;
-
-	/**
-	 * Controls whether XML preprocessing instructions should be parsed (false) or ignored (true).
-	 */
-	static ignoreProcessingInstructions: boolean;
-
-	/**
-	 * Controls whether whitespace should be parsed (false) or ignored (true).
-	 */
-	static ignoreWhitespace: boolean;
-
-	/**
-	 * The number of spaces used to indent pretty-printed XML.
-	 */
-	static prettyIndent: number;
-
-	/**
-	 * When true, XML is pretty-printed when converting to a string.
-	 */
-	static prettyPrinting: boolean;
+interface XMLConstructor {
+	readonly prototype: XML;
 
 	/**
 	 * Parses an XML string. Throws an error if the XML is incorrect.
 	 * @param text The text to parse.
 	 */
-	constructor(text: string);
+	new(text: string): XML;
+	(text: string): XML;
 
+	/**
+	 * Controls whether XML comments should be parsed (false) or ignored (true).
+	 */
+	ignoreComments: boolean;
+
+	/**
+	 * Controls whether XML preprocessing instructions should be parsed (false) or ignored (true).
+	 */
+	ignoreProcessingInstructions: boolean;
+
+	/**
+	 * Controls whether whitespace should be parsed (false) or ignored (true).
+	 */
+	ignoreWhitespace: boolean;
+
+	/**
+	 * The number of spaces used to indent pretty-printed XML.
+	 */
+	prettyIndent: number;
+
+	/**
+	 * When true, XML is pretty-printed when converting to a string.
+	 */
+	prettyPrinting: boolean;
+
+	/**
+	 * Returns an object containing the default parsing and print settings for XML.
+	 */
+	defaultSettings(): Object;
+	
+	/**
+	 * Sets the parsing and print setting for XML using an object returned by the settings() method.
+	 * @param obj The object containing the settings to set.
+	 */
+	setSettings(obj: Object): void;
+
+	/**
+	 * Returns an object containing the current parsing and print settings for XML.
+	 */
+	settings(): Object;
+	
+}
+declare const XML: XMLConstructor;
+
+/**
+ * Wraps XML into an object.
+ */
+interface XML {
 	/**
 	 * Adds a namespace declaration to the node. Returns the XML object itself.
 	 * @param namespace The namespace to add.
@@ -2429,11 +2452,6 @@ declare class XML {
 	 * Creates a copy of this XML object.
 	 */
 	copy(): XML;
-
-	/**
-	 * Returns an object containing the default parsing and print settings for XML.
-	 */
-	static defaultSettings(): Object;
 
 	/**
 	 * Returns all the XML-valued descendants of this XML object with the given name.
@@ -2576,17 +2594,6 @@ declare class XML {
 	 * @param namespace The namespace to set.
 	 */
 	setNamespace(namespace: Namespace): void;
-
-	/**
-	 * Sets the parsing and print setting for XML using an object returned by the settings() method.
-	 * @param obj The object containing the settings to set.
-	 */
-	static setSettings(obj: Object): void;
-
-	/**
-	 * Returns an object containing the current parsing and print settings for XML.
-	 */
-	static settings(): Object;
 
 	/**
 	 * Returns an XML list containing all XML properties of this XML object that represent XML text nodes.
