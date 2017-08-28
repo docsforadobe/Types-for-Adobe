@@ -2040,10 +2040,22 @@ interface Folder {
 
 }
 
+interface SocketConstructor {
+	readonly prototype: Socket;
+	
+	/**
+	 * Creates a new Socket object.
+	 */
+	new(): Socket;
+	(): Socket;
+	
+}
+declare const Socket: SocketConstructor;
+
 /**
  * Creates a TCP/IP connection, or establishes a TCP/IP server.
  */
-declare class Socket {
+interface Socket {
 	/**
 	 * When true, the connection is active.
 	 */
@@ -2075,11 +2087,6 @@ declare class Socket {
 	 * The timeout in seconds to be applied to read or write operations.
 	 */
 	timeout: number;
-
-	/**
-	 * Creates a new Socket object.
-	 */
-	constructor();
 
 	/**
 	 * Terminates the open connection.
