@@ -2620,16 +2620,28 @@ declare class XML {
 declare class XMLList {
 }
 
+interface UnitValueConstructor {
+	readonly prototype: UnitValue;
+
+	/**
+	 * Creates a new UnitValue object.
+	 */
+	new(value: string | UnitValue): UnitValue;
+	(value: string | UnitValue): UnitValue;
+
+	/**
+	 * The base unit for all conversions.
+	 */
+	baseUnit: UnitValue;
+
+}
+declare const UnitValue: UnitValueConstructor;
+
 /**
  * Represents a measurement as a combination of values and unit.
  * Note that this object is not available in all applications.
  */
-declare class UnitValue {
-	/**
-	 * The base unit for all conversions.
-	 */
-	static baseUnit: UnitValue;
-
+interface UnitValue {
 	/**
 	 * The base unit.
 	 */
