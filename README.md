@@ -9,7 +9,7 @@ cd test
 npm init -y
 npm i pravdomil/types-for-adobe
 printf '{"compilerOptions":{"module":"none","noLib":true,"types":["types-for-adobe/illustrator"]},"exclude":["node_modules"]}' > tsconfig.json
-printf 'app.activeDocument' > index.ts
+printf 'alert(app)' > index.ts
 tsc -p .
 # open index.ts your favourite TypeScript editor and start scripting
 # run index.js in Adobe Illustrator
