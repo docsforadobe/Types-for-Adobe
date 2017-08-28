@@ -2624,7 +2624,7 @@ interface XML {
  * An XML list object.
  * In this implementation, an XMLList object is synonymous to the XML object. The constructor accepts an XML list, but everything else works like theXML object.
  */
-declare class XMLList {
+interface XMLList {
 }
 
 interface UnitValueConstructor {
