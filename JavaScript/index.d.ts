@@ -1272,102 +1272,108 @@ interface Boolean {
 
 }
 
-/**
- * Wraps a regular expression.
- */
-declare class RegExp {
-	/**
-	 * The matched subexpression #1.
-	 */
-	static readonly $1: string;
-
-	/**
-	 * The matched subexpression #2.
-	 */
-	static readonly $2: string;
-
-	/**
-	 * The matched subexpression #3.
-	 */
-	static readonly $3: string;
-
-	/**
-	 * The matched subexpression #4.
-	 */
-	static readonly $4: string;
-
-	/**
-	 * The matched subexpression #5.
-	 */
-	static readonly $5: string;
-
-	/**
-	 * The matched subexpression #6.
-	 */
-	static readonly $6: string;
-
-	/**
-	 * The matched subexpression #7.
-	 */
-	static readonly $7: string;
-
-	/**
-	 * The matched subexpression #8.
-	 */
-	static readonly $8: string;
-
-	/**
-	 * The matched subexpression #9.
-	 */
-	static readonly $9: string;
-
-	/**
-	 * Indicates whether the match is a global match.
-	 */
-	static global: boolean;
-
-	/**
-	 * Indicates whether the match is not case sensitive.
-	 */
-	static ignoreCase: boolean;
-
-	/**
-	 * The original input string.
-	 */
-	static input: string;
-
-	/**
-	 * The last match.
-	 */
-	static readonly lastMatch: string;
-
-	/**
-	 * The value of the last matched subexpression.
-	 */
-	static readonly lastParen: string;
-
-	/**
-	 * The string before the match.
-	 */
-	static readonly leftContext: string;
-
-	/**
-	 * Indicates whether the match matches multiple lines.
-	 */
-	static multiline: boolean;
-
-	/**
-	 * The string after the match.
-	 */
-	static readonly rightContext: string;
+interface RegExpConstructor {
+	readonly prototype: RegExp;
 
 	/**
 	 * Creates and returns a new RegExp object set to the value of the argument converted to a regular expression.
 	 * @param pattern The pattern to convert.
 	 * @param flags Flags that control how the conversion is performed. A string containing any combination of the letters i, m, g: "i" -- ignore case in pattern matching "m" -- treat the string as multiple lines "g" -- do global pattern matching
 	 */
-	constructor(pattern: string, flags?: string);
+	new(pattern: string | RegExp, flags?: string): RegExp;
+	(pattern: string | RegExp, flags?: string): RegExp;
 
+	/**
+	 * The matched subexpression #1.
+	 */
+	readonly $1: string;
+
+	/**
+	 * The matched subexpression #2.
+	 */
+	readonly $2: string;
+
+	/**
+	 * The matched subexpression #3.
+	 */
+	readonly $3: string;
+
+	/**
+	 * The matched subexpression #4.
+	 */
+	readonly $4: string;
+
+	/**
+	 * The matched subexpression #5.
+	 */
+	readonly $5: string;
+
+	/**
+	 * The matched subexpression #6.
+	 */
+	readonly $6: string;
+
+	/**
+	 * The matched subexpression #7.
+	 */
+	readonly $7: string;
+
+	/**
+	 * The matched subexpression #8.
+	 */
+	readonly $8: string;
+
+	/**
+	 * The matched subexpression #9.
+	 */
+	readonly $9: string;
+
+	/**
+	 * Indicates whether the match is a global match.
+	 */
+	global: boolean;
+
+	/**
+	 * Indicates whether the match is not case sensitive.
+	 */
+	ignoreCase: boolean;
+
+	/**
+	 * The original input string.
+	 */
+	input: string;
+
+	/**
+	 * The last match.
+	 */
+	readonly lastMatch: string;
+
+	/**
+	 * The value of the last matched subexpression.
+	 */
+	readonly lastParen: string;
+
+	/**
+	 * The string before the match.
+	 */
+	readonly leftContext: string;
+
+	/**
+	 * Indicates whether the match matches multiple lines.
+	 */
+	multiline: boolean;
+
+	/**
+	 * The string after the match.
+	 */
+	readonly rightContext: string;
+}
+declare const RegExp: RegExpConstructor;
+
+/**
+ * Wraps a regular expression.
+ */
+interface RegExp {
 	/**
 	 * Compiles a string to a regular expression. Returns true if the compilation was successful.
 	 * @param pattern The pattern to compile.
