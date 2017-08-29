@@ -103,7 +103,7 @@ declare class Assignment {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -147,7 +147,7 @@ declare class Assignment {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -217,7 +217,7 @@ declare class Assignments {
 
 	/**
 	 * Returns the Assignment with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Assignment;
 
@@ -235,8 +235,8 @@ declare class Assignments {
 
 	/**
 	 * Returns the Assignments within the specified range.
-	 * @param from The Assignment, index, or name at the beginning of the range. Can accept: Assignment, Long Integer or String.
-	 * @param to The Assignment, index, or name at the end of the range. Can accept: Assignment, Long Integer or String.
+	 * @param from The Assignment, index, or name at the beginning of the range.
+	 * @param to The Assignment, index, or name at the end of the range.
 	 */
 	itemByRange(from: Assignment | number | String, to: Assignment | number | String): Assignment[];
 
@@ -331,7 +331,7 @@ declare class AssignedStory {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -357,14 +357,14 @@ declare class AssignedStory {
 	/**
 	 * Moves the assigned story to the specified location.
 	 * @param to The location of the assigned story relative to the reference object or within the containing object. 
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Assignment or AssignedStory. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to?: LocationOptions, reference?: Assignment | AssignedStory): AssignedStory;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -418,7 +418,7 @@ declare class AssignedStories {
 
 	/**
 	 * Returns the AssignedStory with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): AssignedStory;
 
@@ -436,8 +436,8 @@ declare class AssignedStories {
 
 	/**
 	 * Returns the AssignedStories within the specified range.
-	 * @param from The AssignedStory, index, or name at the beginning of the range. Can accept: AssignedStory, Long Integer or String.
-	 * @param to The AssignedStory, index, or name at the end of the range. Can accept: AssignedStory, Long Integer or String.
+	 * @param from The AssignedStory, index, or name at the beginning of the range.
+	 * @param to The AssignedStory, index, or name at the end of the range.
 	 */
 	itemByRange(from: AssignedStory | number | String, to: AssignedStory | number | String): AssignedStory[];
 
@@ -637,7 +637,7 @@ declare class PlaceGun extends Preference {
 
 	/**
 	 * Load the place gun with one or more files.
-	 * @param fileName One or more files to place. Can accept: File or Array of Files.
+	 * @param fileName One or more files to place.
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
@@ -753,7 +753,7 @@ declare class EventListeners {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 * @param withProperties Initial values for properties of the new EventListener 
 	 */
@@ -781,7 +781,7 @@ declare class EventListeners {
 
 	/**
 	 * Returns the EventListener with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): EventListener;
 
@@ -799,8 +799,8 @@ declare class EventListeners {
 
 	/**
 	 * Returns the EventListeners within the specified range.
-	 * @param from The EventListener, index, or name at the beginning of the range. Can accept: EventListener, Long Integer or String.
-	 * @param to The EventListener, index, or name at the end of the range. Can accept: EventListener, Long Integer or String.
+	 * @param from The EventListener, index, or name at the beginning of the range.
+	 * @param to The EventListener, index, or name at the end of the range.
 	 */
 	itemByRange(from: EventListener | number | String, to: EventListener | number | String): EventListener[];
 
@@ -1111,7 +1111,7 @@ declare class Events {
 
 	/**
 	 * Returns the Event with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Event;
 
@@ -1123,8 +1123,8 @@ declare class Events {
 
 	/**
 	 * Returns the Events within the specified range.
-	 * @param from The Event, index, or name at the beginning of the range. Can accept: Event, Long Integer or String.
-	 * @param to The Event, index, or name at the end of the range. Can accept: Event, Long Integer or String.
+	 * @param from The Event, index, or name at the beginning of the range.
+	 * @param to The Event, index, or name at the end of the range.
 	 */
 	itemByRange(from: Event | number | String, to: Event | number | String): Event[];
 
@@ -1256,7 +1256,7 @@ declare class IdleTask {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -1287,7 +1287,7 @@ declare class IdleTask {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -1347,7 +1347,7 @@ declare class IdleTasks {
 
 	/**
 	 * Returns the IdleTask with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): IdleTask;
 
@@ -1365,8 +1365,8 @@ declare class IdleTasks {
 
 	/**
 	 * Returns the IdleTasks within the specified range.
-	 * @param from The IdleTask, index, or name at the beginning of the range. Can accept: IdleTask, Long Integer or String.
-	 * @param to The IdleTask, index, or name at the end of the range. Can accept: IdleTask, Long Integer or String.
+	 * @param from The IdleTask, index, or name at the beginning of the range.
+	 * @param to The IdleTask, index, or name at the end of the range.
 	 */
 	itemByRange(from: IdleTask | number | String, to: IdleTask | number | String): IdleTask[];
 
@@ -2569,7 +2569,7 @@ declare class Application {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -2675,7 +2675,7 @@ declare class Application {
 
 	/**
 	 * Executes the script in the specified language as a single transaction.
-	 * @param script The script to execute. Can accept: File, String or JavaScript Function.
+	 * @param script The script to execute.
 	 * @param language The language of the script to execute. If not specified, uses the language used to call this method. 
 	 * @param withArguments An array of arguments passed to the script. 
 	 * @param undoMode How to undo this script. 
@@ -2888,7 +2888,7 @@ declare class Application {
 
 	/**
 	 * Opens the specified document, book, or library.
-	 * @param from The file path(s) to the document, book, or library. Can accept: File or Array of Files.
+	 * @param from The file path(s) to the document, book, or library.
 	 * @param showingWindow If true, opens the document in a window. If false, the document is opened but is not displayed in a window. 
 	 * @param openOption How to open the document. 
 	 */
@@ -2936,25 +2936,25 @@ declare class Application {
 
 	/**
 	 * Gets the current value of the specified performance metric.
-	 * @param for The status to get from InDesign. Can accept: Long Integer or PerformanceMetricOptions enumerator.
+	 * @param for The status to get from InDesign.
 	 */
 	performanceMetric(for_: number | PerformanceMetricOptions): any;
 
 	/**
 	 * Gets the long name of the specified performance metric.
-	 * @param for The status to get from InDesign. Can accept: Long Integer or PerformanceMetricOptions enumerator.
+	 * @param for The status to get from InDesign.
 	 */
 	performanceMetricLongName(for_: number | PerformanceMetricOptions): string;
 
 	/**
 	 * Gets the short name of the specified performance metric.
-	 * @param for The status to get from InDesign. Can accept: Long Integer or PerformanceMetricOptions enumerator.
+	 * @param for The status to get from InDesign.
 	 */
 	performanceMetricShortName(for_: number | PerformanceMetricOptions): string;
 
 	/**
 	 * Place one or more files following the behavior of the place menu item. This may load the place gun or replace the selected object, depending on current preferences.
-	 * @param fileName One or more files to place. Can accept: File or Array of Files.
+	 * @param fileName One or more files to place.
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
@@ -2962,9 +2962,9 @@ declare class Application {
 
 	/**
 	 * Prints the specified file(s).
-	 * @param from One or more file paths. Can accept: File or Array of Files.
+	 * @param from One or more file paths.
 	 * @param printDialog Whether to invoke the print dialog 
-	 * @param using Printer preset to use. Can accept: PrinterPresetTypes enumerator or PrinterPreset. 
+	 * @param using Printer preset to use.
 	 */
 	print(from: File | File[], printDialog: boolean, using: PrinterPresetTypes | PrinterPreset): void;
 
@@ -2982,7 +2982,7 @@ declare class Application {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -3019,14 +3019,14 @@ declare class Application {
 
 	/**
 	 * Selects the specified object(s).
-	 * @param selectableItems The objects to select. Can accept: Object, Array of Objects, NothingEnum enumerator or SelectAll enumerator.
+	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the Application in relation to previously selected objects. 
 	 */
 	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
 
 	/**
 	 * Sets the application's preferences.
-	 * @param applicationPreferences The IDML defaults file or enumeration. Can accept: File or LanguageAndRegion enumerator.
+	 * @param applicationPreferences The IDML defaults file or enumeration.
 	 */
 	setApplicationPreferences(applicationPreferences: File | LanguageAndRegion): void;
 
@@ -3160,7 +3160,7 @@ declare class BackgroundTask {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -3184,7 +3184,7 @@ declare class BackgroundTask {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -3243,7 +3243,7 @@ declare class BackgroundTasks {
 
 	/**
 	 * Returns the BackgroundTask with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): BackgroundTask;
 
@@ -3261,8 +3261,8 @@ declare class BackgroundTasks {
 
 	/**
 	 * Returns the BackgroundTasks within the specified range.
-	 * @param from The BackgroundTask, index, or name at the beginning of the range. Can accept: BackgroundTask, Long Integer or String.
-	 * @param to The BackgroundTask, index, or name at the end of the range. Can accept: BackgroundTask, Long Integer or String.
+	 * @param from The BackgroundTask, index, or name at the beginning of the range.
+	 * @param to The BackgroundTask, index, or name at the end of the range.
 	 */
 	itemByRange(from: BackgroundTask | number | String, to: BackgroundTask | number | String): BackgroundTask[];
 
@@ -4392,7 +4392,7 @@ declare class Document {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -4408,7 +4408,7 @@ declare class Document {
 
 	/**
 	 * asynchronously exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -4498,7 +4498,7 @@ declare class Document {
 	 * @param emailAddress QR code Email Address 
 	 * @param subject QR code Email Subject 
 	 * @param body QR code Email Body Message 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
 	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -4506,7 +4506,7 @@ declare class Document {
 	/**
 	 * Create Hyperlink QR Code on the page item or document
 	 * @param urlLink QR code Hyperlink URL
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
 	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -4522,7 +4522,7 @@ declare class Document {
 	/**
 	 * Create Plain Text QR Code on the page item
 	 * @param plainText QR code Plain Text
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
 	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -4542,7 +4542,7 @@ declare class Document {
 	 * Create Text Msg QR Code on the page item or document
 	 * @param cellNumber QR code Text Phone Number 
 	 * @param textMessage QR code Text Message 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
 	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -4562,7 +4562,7 @@ declare class Document {
 	 * @param country QR code Business Card Country 
 	 * @param postalCode QR code Business Card Postal Code 
 	 * @param website QR code Business Card URL 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
 	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -4591,13 +4591,13 @@ declare class Document {
 
 	/**
 	 * Embed this profile to the document.
-	 * @param using The preflight profile to embed. Can accept: String or PreflightProfile.
+	 * @param using The preflight profile to embed.
 	 */
 	embed(using: String | PreflightProfile): PreflightProfile;
 
 	/**
 	 * Exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -4763,7 +4763,7 @@ declare class Document {
 
 	/**
 	 * Place one or more files following the behavior of the place menu item. This may load the place gun or replace the selected object, depending on current preferences.
-	 * @param fileName One or more files to place. Can accept: File or Array of Files.
+	 * @param fileName One or more files to place.
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
@@ -4785,14 +4785,14 @@ declare class Document {
 	/**
 	 * Prints the Document(s).
 	 * @param printDialog Whether to invoke the print dialog 
-	 * @param using Printer preset to use. Can accept: PrinterPresetTypes enumerator or PrinterPreset. 
+	 * @param using Printer preset to use.
 	 */
 	print(printDialog: boolean, using: PrinterPresetTypes | PrinterPreset): void;
 
 	/**
 	 * Print the Booklet using current document and Booklet and Print settings in the document
 	 * @param printBookletDialog Whether to invoke the print booklet dialog 
-	 * @param using Printer preset to use. Can accept: PrinterPresetTypes enumerator or PrinterPreset. 
+	 * @param using Printer preset to use.
 	 */
 	printBooklet(printBookletDialog?: boolean, using?: PrinterPresetTypes | PrinterPreset): void;
 
@@ -4809,7 +4809,7 @@ declare class Document {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -4870,7 +4870,7 @@ declare class Document {
 
 	/**
 	 * Selects the specified object(s).
-	 * @param selectableItems The objects to select. Can accept: Object, Array of Objects, NothingEnum enumerator or SelectAll enumerator.
+	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the Document in relation to previously selected objects. 
 	 */
 	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
@@ -4949,7 +4949,7 @@ declare class Documents {
 
 	/**
 	 * Returns the Document with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Document;
 
@@ -4967,8 +4967,8 @@ declare class Documents {
 
 	/**
 	 * Returns the Documents within the specified range.
-	 * @param from The Document, index, or name at the beginning of the range. Can accept: Document, Long Integer or String.
-	 * @param to The Document, index, or name at the end of the range. Can accept: Document, Long Integer or String.
+	 * @param from The Document, index, or name at the beginning of the range.
+	 * @param to The Document, index, or name at the end of the range.
 	 */
 	itemByRange(from: Document | number | String, to: Document | number | String): Document[];
 
@@ -5098,7 +5098,7 @@ declare class Window {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -5131,7 +5131,7 @@ declare class Window {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -5143,7 +5143,7 @@ declare class Window {
 
 	/**
 	 * Selects the specified object(s).
-	 * @param selectableItems The objects to select. Can accept: Object, Array of Objects, NothingEnum enumerator or SelectAll enumerator.
+	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the Window in relation to previously selected objects. 
 	 */
 	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
@@ -5203,7 +5203,7 @@ declare class Windows {
 
 	/**
 	 * Returns the Window with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Window;
 
@@ -5215,8 +5215,8 @@ declare class Windows {
 
 	/**
 	 * Returns the Windows within the specified range.
-	 * @param from The Window, index, or name at the beginning of the range. Can accept: Window, Long Integer or String.
-	 * @param to The Window, index, or name at the end of the range. Can accept: Window, Long Integer or String.
+	 * @param from The Window, index, or name at the beginning of the range.
+	 * @param to The Window, index, or name at the end of the range.
 	 */
 	itemByRange(from: Window | number | String, to: Window | number | String): Window[];
 
@@ -5363,7 +5363,7 @@ declare class LayoutWindows {
 
 	/**
 	 * Returns the LayoutWindow with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): LayoutWindow;
 
@@ -5375,8 +5375,8 @@ declare class LayoutWindows {
 
 	/**
 	 * Returns the LayoutWindows within the specified range.
-	 * @param from The LayoutWindow, index, or name at the beginning of the range. Can accept: LayoutWindow, Long Integer or String.
-	 * @param to The LayoutWindow, index, or name at the end of the range. Can accept: LayoutWindow, Long Integer or String.
+	 * @param from The LayoutWindow, index, or name at the beginning of the range.
+	 * @param to The LayoutWindow, index, or name at the end of the range.
 	 */
 	itemByRange(from: LayoutWindow | number | String, to: LayoutWindow | number | String): LayoutWindow[];
 
@@ -5452,7 +5452,7 @@ declare class StoryWindows {
 
 	/**
 	 * Returns the StoryWindow with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): StoryWindow;
 
@@ -5464,8 +5464,8 @@ declare class StoryWindows {
 
 	/**
 	 * Returns the StoryWindows within the specified range.
-	 * @param from The StoryWindow, index, or name at the beginning of the range. Can accept: StoryWindow, Long Integer or String.
-	 * @param to The StoryWindow, index, or name at the end of the range. Can accept: StoryWindow, Long Integer or String.
+	 * @param from The StoryWindow, index, or name at the beginning of the range.
+	 * @param to The StoryWindow, index, or name at the end of the range.
 	 */
 	itemByRange(from: StoryWindow | number | String, to: StoryWindow | number | String): StoryWindow[];
 
@@ -5823,7 +5823,7 @@ declare class Book {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -5839,7 +5839,7 @@ declare class Book {
 
 	/**
 	 * Exports the book to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The file to which to export the book. 
 	 * @param showingOptions Used to specify if the PDF Export Options Dialog needs to be shown or not 
 	 * @param using Used to specify the presets for the export which can be the object of the preset type, enumeration for existing presets or user defined presets, or a string naming the preset to be used, but in case Showing Options is true, the preset specified in the Export Dialog will over ride this parameter 
@@ -5895,14 +5895,14 @@ declare class Book {
 	/**
 	 * Prints the Book(s).
 	 * @param printDialog Whether to invoke the print dialog 
-	 * @param using Printer preset to use. Can accept: PrinterPresetTypes enumerator or PrinterPreset. 
+	 * @param using Printer preset to use.
 	 */
 	print(printDialog: boolean, using: PrinterPresetTypes | PrinterPreset): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -5996,7 +5996,7 @@ declare class Books {
 
 	/**
 	 * Returns the Book with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Book;
 
@@ -6008,8 +6008,8 @@ declare class Books {
 
 	/**
 	 * Returns the Books within the specified range.
-	 * @param from The Book, index, or name at the beginning of the range. Can accept: Book, Long Integer or String.
-	 * @param to The Book, index, or name at the end of the range. Can accept: Book, Long Integer or String.
+	 * @param from The Book, index, or name at the beginning of the range.
+	 * @param to The Book, index, or name at the end of the range.
 	 */
 	itemByRange(from: Book | number | String, to: Book | number | String): Book[];
 
@@ -6124,7 +6124,7 @@ declare class BookContent {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -6169,7 +6169,7 @@ declare class BookContent {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -6242,7 +6242,7 @@ declare class BookContents {
 
 	/**
 	 * Returns the BookContent with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): BookContent;
 
@@ -6260,8 +6260,8 @@ declare class BookContents {
 
 	/**
 	 * Returns the BookContents within the specified range.
-	 * @param from The BookContent, index, or name at the beginning of the range. Can accept: BookContent, Long Integer or String.
-	 * @param to The BookContent, index, or name at the end of the range. Can accept: BookContent, Long Integer or String.
+	 * @param from The BookContent, index, or name at the beginning of the range.
+	 * @param to The BookContent, index, or name at the end of the range.
 	 */
 	itemByRange(from: BookContent | number | String, to: BookContent | number | String): BookContent[];
 
@@ -6396,7 +6396,7 @@ declare class Ink {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -6422,7 +6422,7 @@ declare class Ink {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -6476,7 +6476,7 @@ declare class Inks {
 
 	/**
 	 * Returns the Ink with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Ink;
 
@@ -6494,8 +6494,8 @@ declare class Inks {
 
 	/**
 	 * Returns the Inks within the specified range.
-	 * @param from The Ink, index, or name at the beginning of the range. Can accept: Ink, Long Integer or String.
-	 * @param to The Ink, index, or name at the end of the range. Can accept: Ink, Long Integer or String.
+	 * @param from The Ink, index, or name at the beginning of the range.
+	 * @param to The Ink, index, or name at the end of the range.
 	 */
 	itemByRange(from: Ink | number | String, to: Ink | number | String): Ink[];
 
@@ -6650,7 +6650,7 @@ declare class TrapPreset {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -6687,7 +6687,7 @@ declare class TrapPreset {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -6747,7 +6747,7 @@ declare class TrapPresets {
 
 	/**
 	 * Returns the TrapPreset with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TrapPreset;
 
@@ -6765,8 +6765,8 @@ declare class TrapPresets {
 
 	/**
 	 * Returns the TrapPresets within the specified range.
-	 * @param from The TrapPreset, index, or name at the beginning of the range. Can accept: TrapPreset, Long Integer or String.
-	 * @param to The TrapPreset, index, or name at the end of the range. Can accept: TrapPreset, Long Integer or String.
+	 * @param from The TrapPreset, index, or name at the beginning of the range.
+	 * @param to The TrapPreset, index, or name at the end of the range.
 	 */
 	itemByRange(from: TrapPreset | number | String, to: TrapPreset | number | String): TrapPreset[];
 
@@ -6847,7 +6847,7 @@ declare class MixedInks {
 
 	/**
 	 * Creates a new mixed ink swatch.
-	 * @param inkList The inks to mix. Note: Must contain at least two process inks and one spot ink. Can accept: Array of Inks or MixedInkGroup.
+	 * @param inkList The inks to mix. Note: Must contain at least two process inks and one spot ink.
 	 * @param inkPercentages The percent to use of each ink in the ink list. (Range: 0 to 100 for each ink)
 	 * @param withProperties Initial values for properties of the new MixedInk 
 	 */
@@ -6875,7 +6875,7 @@ declare class MixedInks {
 
 	/**
 	 * Returns the MixedInk with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MixedInk;
 
@@ -6893,8 +6893,8 @@ declare class MixedInks {
 
 	/**
 	 * Returns the MixedInks within the specified range.
-	 * @param from The MixedInk, index, or name at the beginning of the range. Can accept: MixedInk, Long Integer or String.
-	 * @param to The MixedInk, index, or name at the end of the range. Can accept: MixedInk, Long Integer or String.
+	 * @param from The MixedInk, index, or name at the beginning of the range.
+	 * @param to The MixedInk, index, or name at the end of the range.
 	 */
 	itemByRange(from: MixedInk | number | String, to: MixedInk | number | String): MixedInk[];
 
@@ -6990,7 +6990,7 @@ declare class MixedInkGroups {
 
 	/**
 	 * Returns the MixedInkGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MixedInkGroup;
 
@@ -7008,8 +7008,8 @@ declare class MixedInkGroups {
 
 	/**
 	 * Returns the MixedInkGroups within the specified range.
-	 * @param from The MixedInkGroup, index, or name at the beginning of the range. Can accept: MixedInkGroup, Long Integer or String.
-	 * @param to The MixedInkGroup, index, or name at the end of the range. Can accept: MixedInkGroup, Long Integer or String.
+	 * @param from The MixedInkGroup, index, or name at the beginning of the range.
+	 * @param to The MixedInkGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: MixedInkGroup | number | String, to: MixedInkGroup | number | String): MixedInkGroup[];
 
@@ -7101,7 +7101,7 @@ declare class Gradients {
 
 	/**
 	 * Returns the Gradient with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Gradient;
 
@@ -7119,8 +7119,8 @@ declare class Gradients {
 
 	/**
 	 * Returns the Gradients within the specified range.
-	 * @param from The Gradient, index, or name at the beginning of the range. Can accept: Gradient, Long Integer or String.
-	 * @param to The Gradient, index, or name at the end of the range. Can accept: Gradient, Long Integer or String.
+	 * @param from The Gradient, index, or name at the beginning of the range.
+	 * @param to The Gradient, index, or name at the end of the range.
 	 */
 	itemByRange(from: Gradient | number | String, to: Gradient | number | String): Gradient[];
 
@@ -7205,7 +7205,7 @@ declare class GradientStop {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -7223,7 +7223,7 @@ declare class GradientStop {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -7283,14 +7283,14 @@ declare class GradientStops {
 
 	/**
 	 * Returns the GradientStop with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GradientStop;
 
 	/**
 	 * Returns the GradientStops within the specified range.
-	 * @param from The GradientStop, index, or name at the beginning of the range. Can accept: GradientStop, Long Integer or String.
-	 * @param to The GradientStop, index, or name at the end of the range. Can accept: GradientStop, Long Integer or String.
+	 * @param from The GradientStop, index, or name at the beginning of the range.
+	 * @param to The GradientStop, index, or name at the end of the range.
 	 */
 	itemByRange(from: GradientStop | number | String, to: GradientStop | number | String): GradientStop[];
 
@@ -7380,7 +7380,7 @@ declare class Swatch {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -7410,7 +7410,7 @@ declare class Swatch {
 
 	/**
 	 * Merges the specified swatches with the swatch.
-	 * @param with The swatches to merge. Can accept: Array of Swatches, Swatch or String.
+	 * @param with The swatches to merge.
 	 */
 	merge(with_: Swatch[] | Swatch | String): Swatch;
 
@@ -7423,7 +7423,7 @@ declare class Swatch {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -7477,7 +7477,7 @@ declare class Swatches {
 
 	/**
 	 * Returns the Swatch with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Swatch;
 
@@ -7495,8 +7495,8 @@ declare class Swatches {
 
 	/**
 	 * Returns the Swatches within the specified range.
-	 * @param from The Swatch, index, or name at the beginning of the range. Can accept: Swatch, Long Integer or String.
-	 * @param to The Swatch, index, or name at the end of the range. Can accept: Swatch, Long Integer or String.
+	 * @param from The Swatch, index, or name at the beginning of the range.
+	 * @param to The Swatch, index, or name at the end of the range.
 	 */
 	itemByRange(from: Swatch | number | String, to: Swatch | number | String): Swatch[];
 
@@ -7593,7 +7593,7 @@ declare class Colors {
 
 	/**
 	 * Returns the Color with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Color;
 
@@ -7611,8 +7611,8 @@ declare class Colors {
 
 	/**
 	 * Returns the Colors within the specified range.
-	 * @param from The Color, index, or name at the beginning of the range. Can accept: Color, Long Integer or String.
-	 * @param to The Color, index, or name at the end of the range. Can accept: Color, Long Integer or String.
+	 * @param from The Color, index, or name at the beginning of the range.
+	 * @param to The Color, index, or name at the end of the range.
 	 */
 	itemByRange(from: Color | number | String, to: Color | number | String): Color[];
 
@@ -7705,7 +7705,7 @@ declare class Tints {
 
 	/**
 	 * Returns the Tint with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Tint;
 
@@ -7723,8 +7723,8 @@ declare class Tints {
 
 	/**
 	 * Returns the Tints within the specified range.
-	 * @param from The Tint, index, or name at the beginning of the range. Can accept: Tint, Long Integer or String.
-	 * @param to The Tint, index, or name at the end of the range. Can accept: Tint, Long Integer or String.
+	 * @param from The Tint, index, or name at the beginning of the range.
+	 * @param to The Tint, index, or name at the end of the range.
 	 */
 	itemByRange(from: Tint | number | String, to: Tint | number | String): Tint[];
 
@@ -7814,7 +7814,7 @@ declare class ColorGroup {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -7850,7 +7850,7 @@ declare class ColorGroup {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -7917,7 +7917,7 @@ declare class ColorGroups {
 
 	/**
 	 * Returns the ColorGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ColorGroup;
 
@@ -7935,8 +7935,8 @@ declare class ColorGroups {
 
 	/**
 	 * Returns the ColorGroups within the specified range.
-	 * @param from The ColorGroup, index, or name at the beginning of the range. Can accept: ColorGroup, Long Integer or String.
-	 * @param to The ColorGroup, index, or name at the end of the range. Can accept: ColorGroup, Long Integer or String.
+	 * @param from The ColorGroup, index, or name at the beginning of the range.
+	 * @param to The ColorGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: ColorGroup | number | String, to: ColorGroup | number | String): ColorGroup[];
 
@@ -8016,7 +8016,7 @@ declare class ColorGroupSwatch {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -8029,7 +8029,7 @@ declare class ColorGroupSwatch {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -8090,7 +8090,7 @@ declare class ColorGroupSwatches {
 
 	/**
 	 * Returns the ColorGroupSwatch with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ColorGroupSwatch;
 
@@ -8102,8 +8102,8 @@ declare class ColorGroupSwatches {
 
 	/**
 	 * Returns the ColorGroupSwatches within the specified range.
-	 * @param from The ColorGroupSwatch, index, or name at the beginning of the range. Can accept: ColorGroupSwatch, Long Integer or String.
-	 * @param to The ColorGroupSwatch, index, or name at the end of the range. Can accept: ColorGroupSwatch, Long Integer or String.
+	 * @param from The ColorGroupSwatch, index, or name at the beginning of the range.
+	 * @param to The ColorGroupSwatch, index, or name at the end of the range.
 	 */
 	itemByRange(from: ColorGroupSwatch | number | String, to: ColorGroupSwatch | number | String): ColorGroupSwatch[];
 
@@ -8188,7 +8188,7 @@ declare class OpacityGradientStop {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -8206,7 +8206,7 @@ declare class OpacityGradientStop {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -8266,14 +8266,14 @@ declare class OpacityGradientStops {
 
 	/**
 	 * Returns the OpacityGradientStop with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): OpacityGradientStop;
 
 	/**
 	 * Returns the OpacityGradientStops within the specified range.
-	 * @param from The OpacityGradientStop, index, or name at the beginning of the range. Can accept: OpacityGradientStop, Long Integer or String.
-	 * @param to The OpacityGradientStop, index, or name at the end of the range. Can accept: OpacityGradientStop, Long Integer or String.
+	 * @param from The OpacityGradientStop, index, or name at the beginning of the range.
+	 * @param to The OpacityGradientStop, index, or name at the end of the range.
 	 */
 	itemByRange(from: OpacityGradientStop | number | String, to: OpacityGradientStop | number | String): OpacityGradientStop[];
 
@@ -8363,7 +8363,7 @@ declare class DataMergeTextPlaceholder {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -8376,7 +8376,7 @@ declare class DataMergeTextPlaceholder {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -8411,7 +8411,7 @@ declare class DataMergeTextPlaceholders {
 	/**
 	 * Creates a data merge text placeholder.
 	 * @param parentStory The story in which to insert the placeholder.
-	 * @param storyOffset The position within the story at which to insert the placeholder, specified as an offset number or an insertion point. Can accept: InsertionPoint or Long Integer.
+	 * @param storyOffset The position within the story at which to insert the placeholder, specified as an offset number or an insertion point.
 	 * @param field The field to insert.
 	 * @param withProperties Initial values for properties of the new DataMergeTextPlaceholder 
 	 */
@@ -8439,14 +8439,14 @@ declare class DataMergeTextPlaceholders {
 
 	/**
 	 * Returns the DataMergeTextPlaceholder with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DataMergeTextPlaceholder;
 
 	/**
 	 * Returns the DataMergeTextPlaceholders within the specified range.
-	 * @param from The DataMergeTextPlaceholder, index, or name at the beginning of the range. Can accept: DataMergeTextPlaceholder, Long Integer or String.
-	 * @param to The DataMergeTextPlaceholder, index, or name at the end of the range. Can accept: DataMergeTextPlaceholder, Long Integer or String.
+	 * @param from The DataMergeTextPlaceholder, index, or name at the beginning of the range.
+	 * @param to The DataMergeTextPlaceholder, index, or name at the end of the range.
 	 */
 	itemByRange(from: DataMergeTextPlaceholder | number | String, to: DataMergeTextPlaceholder | number | String): DataMergeTextPlaceholder[];
 
@@ -8526,7 +8526,7 @@ declare class DataMergeImagePlaceholder {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -8539,7 +8539,7 @@ declare class DataMergeImagePlaceholder {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -8601,14 +8601,14 @@ declare class DataMergeImagePlaceholders {
 
 	/**
 	 * Returns the DataMergeImagePlaceholder with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DataMergeImagePlaceholder;
 
 	/**
 	 * Returns the DataMergeImagePlaceholders within the specified range.
-	 * @param from The DataMergeImagePlaceholder, index, or name at the beginning of the range. Can accept: DataMergeImagePlaceholder, Long Integer or String.
-	 * @param to The DataMergeImagePlaceholder, index, or name at the end of the range. Can accept: DataMergeImagePlaceholder, Long Integer or String.
+	 * @param from The DataMergeImagePlaceholder, index, or name at the beginning of the range.
+	 * @param to The DataMergeImagePlaceholder, index, or name at the end of the range.
 	 */
 	itemByRange(from: DataMergeImagePlaceholder | number | String, to: DataMergeImagePlaceholder | number | String): DataMergeImagePlaceholder[];
 
@@ -8688,7 +8688,7 @@ declare class DataMergeField {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -8701,7 +8701,7 @@ declare class DataMergeField {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -8755,14 +8755,14 @@ declare class DataMergeFields {
 
 	/**
 	 * Returns the DataMergeField with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DataMergeField;
 
 	/**
 	 * Returns the DataMergeFields within the specified range.
-	 * @param from The DataMergeField, index, or name at the beginning of the range. Can accept: DataMergeField, Long Integer or String.
-	 * @param to The DataMergeField, index, or name at the end of the range. Can accept: DataMergeField, Long Integer or String.
+	 * @param from The DataMergeField, index, or name at the beginning of the range.
+	 * @param to The DataMergeField, index, or name at the end of the range.
 	 */
 	itemByRange(from: DataMergeField | number | String, to: DataMergeField | number | String): DataMergeField[];
 
@@ -8842,7 +8842,7 @@ declare class DataMergeQrcodePlaceholder {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -8855,7 +8855,7 @@ declare class DataMergeQrcodePlaceholder {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -8917,14 +8917,14 @@ declare class DataMergeQrcodePlaceholders {
 
 	/**
 	 * Returns the DataMergeQrcodePlaceholder with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DataMergeQrcodePlaceholder;
 
 	/**
 	 * Returns the DataMergeQrcodePlaceholders within the specified range.
-	 * @param from The DataMergeQrcodePlaceholder, index, or name at the beginning of the range. Can accept: DataMergeQrcodePlaceholder, Long Integer or String.
-	 * @param to The DataMergeQrcodePlaceholder, index, or name at the end of the range. Can accept: DataMergeQrcodePlaceholder, Long Integer or String.
+	 * @param from The DataMergeQrcodePlaceholder, index, or name at the beginning of the range.
+	 * @param to The DataMergeQrcodePlaceholder, index, or name at the end of the range.
 	 */
 	itemByRange(from: DataMergeQrcodePlaceholder | number | String, to: DataMergeQrcodePlaceholder | number | String): DataMergeQrcodePlaceholder[];
 
@@ -22069,7 +22069,7 @@ declare class Hyperlink {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -22100,7 +22100,7 @@ declare class Hyperlink {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -22144,7 +22144,7 @@ declare class Hyperlinks {
 
 	/**
 	 * Creates a new hyperlink.
-	 * @param hyperlinkSource The hyperlinked object. Can accept: HyperlinkPageItemSource, HyperlinkTextSource or CrossReferenceSource.
+	 * @param hyperlinkSource The hyperlinked object.
 	 * @param hyperlinkDestination The destination that the hyperlink points to. Can accept: Ordered array containing fileName:String, volumn:String, directoryId:Long Integer, dataLinkClassId:Long Integer, destinationUid:Long Integer, HyperlinkTextDestination, HyperlinkPageDestination, HyperlinkExternalPageDestination, HyperlinkURLDestination or ParagraphDestination. 
 	 * @param withProperties Initial values for properties of the new Hyperlink 
 	 */
@@ -22172,7 +22172,7 @@ declare class Hyperlinks {
 
 	/**
 	 * Returns the Hyperlink with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Hyperlink;
 
@@ -22190,8 +22190,8 @@ declare class Hyperlinks {
 
 	/**
 	 * Returns the Hyperlinks within the specified range.
-	 * @param from The Hyperlink, index, or name at the beginning of the range. Can accept: Hyperlink, Long Integer or String.
-	 * @param to The Hyperlink, index, or name at the end of the range. Can accept: Hyperlink, Long Integer or String.
+	 * @param from The Hyperlink, index, or name at the beginning of the range.
+	 * @param to The Hyperlink, index, or name at the end of the range.
 	 */
 	itemByRange(from: Hyperlink | number | String, to: Hyperlink | number | String): Hyperlink[];
 
@@ -22291,7 +22291,7 @@ declare class Bookmark {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -22317,7 +22317,7 @@ declare class Bookmark {
 	/**
 	 * Moves the bookmark to the specified location.
 	 * @param to The bookmark location relative to the reference object or within the containing object. 
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Bookmark, Document or Bookmark. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to?: LocationOptions, reference?: Bookmark | Document | Bookmark): Bookmark;
 
@@ -22329,7 +22329,7 @@ declare class Bookmark {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -22368,7 +22368,7 @@ declare class Bookmarks {
 
 	/**
 	 * Creates a new bookmark.
-	 * @param destination The bookmark destination. Can accept: HyperlinkTextDestination, HyperlinkPageDestination, HyperlinkExternalPageDestination or Page.
+	 * @param destination The bookmark destination.
 	 * @param withProperties Initial values for properties of the new Bookmark 
 	 */
 	add(destination: HyperlinkTextDestination | HyperlinkPageDestination | HyperlinkExternalPageDestination | Page, withProperties: Object): Bookmark;
@@ -22395,7 +22395,7 @@ declare class Bookmarks {
 
 	/**
 	 * Returns the Bookmark with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Bookmark;
 
@@ -22413,8 +22413,8 @@ declare class Bookmarks {
 
 	/**
 	 * Returns the Bookmarks within the specified range.
-	 * @param from The Bookmark, index, or name at the beginning of the range. Can accept: Bookmark, Long Integer or String.
-	 * @param to The Bookmark, index, or name at the end of the range. Can accept: Bookmark, Long Integer or String.
+	 * @param from The Bookmark, index, or name at the beginning of the range.
+	 * @param to The Bookmark, index, or name at the end of the range.
 	 */
 	itemByRange(from: Bookmark | number | String, to: Bookmark | number | String): Bookmark[];
 
@@ -22509,7 +22509,7 @@ declare class HyperlinkPageItemSource {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -22540,7 +22540,7 @@ declare class HyperlinkPageItemSource {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -22606,7 +22606,7 @@ declare class HyperlinkPageItemSources {
 
 	/**
 	 * Returns the HyperlinkPageItemSource with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HyperlinkPageItemSource;
 
@@ -22624,8 +22624,8 @@ declare class HyperlinkPageItemSources {
 
 	/**
 	 * Returns the HyperlinkPageItemSources within the specified range.
-	 * @param from The HyperlinkPageItemSource, index, or name at the beginning of the range. Can accept: HyperlinkPageItemSource, Long Integer or String.
-	 * @param to The HyperlinkPageItemSource, index, or name at the end of the range. Can accept: HyperlinkPageItemSource, Long Integer or String.
+	 * @param from The HyperlinkPageItemSource, index, or name at the beginning of the range.
+	 * @param to The HyperlinkPageItemSource, index, or name at the end of the range.
 	 */
 	itemByRange(from: HyperlinkPageItemSource | number | String, to: HyperlinkPageItemSource | number | String): HyperlinkPageItemSource[];
 
@@ -22725,7 +22725,7 @@ declare class HyperlinkTextSource {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -22756,7 +22756,7 @@ declare class HyperlinkTextSource {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -22822,7 +22822,7 @@ declare class HyperlinkTextSources {
 
 	/**
 	 * Returns the HyperlinkTextSource with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HyperlinkTextSource;
 
@@ -22840,8 +22840,8 @@ declare class HyperlinkTextSources {
 
 	/**
 	 * Returns the HyperlinkTextSources within the specified range.
-	 * @param from The HyperlinkTextSource, index, or name at the beginning of the range. Can accept: HyperlinkTextSource, Long Integer or String.
-	 * @param to The HyperlinkTextSource, index, or name at the end of the range. Can accept: HyperlinkTextSource, Long Integer or String.
+	 * @param from The HyperlinkTextSource, index, or name at the beginning of the range.
+	 * @param to The HyperlinkTextSource, index, or name at the end of the range.
 	 */
 	itemByRange(from: HyperlinkTextSource | number | String, to: HyperlinkTextSource | number | String): HyperlinkTextSource[];
 
@@ -22936,7 +22936,7 @@ declare class HyperlinkTextDestination {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -22967,7 +22967,7 @@ declare class HyperlinkTextDestination {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -23033,7 +23033,7 @@ declare class HyperlinkTextDestinations {
 
 	/**
 	 * Returns the HyperlinkTextDestination with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HyperlinkTextDestination;
 
@@ -23051,8 +23051,8 @@ declare class HyperlinkTextDestinations {
 
 	/**
 	 * Returns the HyperlinkTextDestinations within the specified range.
-	 * @param from The HyperlinkTextDestination, index, or name at the beginning of the range. Can accept: HyperlinkTextDestination, Long Integer or String.
-	 * @param to The HyperlinkTextDestination, index, or name at the end of the range. Can accept: HyperlinkTextDestination, Long Integer or String.
+	 * @param from The HyperlinkTextDestination, index, or name at the beginning of the range.
+	 * @param to The HyperlinkTextDestination, index, or name at the end of the range.
 	 */
 	itemByRange(from: HyperlinkTextDestination | number | String, to: HyperlinkTextDestination | number | String): HyperlinkTextDestination[];
 
@@ -23167,7 +23167,7 @@ declare class HyperlinkPageDestination {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -23198,7 +23198,7 @@ declare class HyperlinkPageDestination {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -23264,7 +23264,7 @@ declare class HyperlinkPageDestinations {
 
 	/**
 	 * Returns the HyperlinkPageDestination with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HyperlinkPageDestination;
 
@@ -23282,8 +23282,8 @@ declare class HyperlinkPageDestinations {
 
 	/**
 	 * Returns the HyperlinkPageDestinations within the specified range.
-	 * @param from The HyperlinkPageDestination, index, or name at the beginning of the range. Can accept: HyperlinkPageDestination, Long Integer or String.
-	 * @param to The HyperlinkPageDestination, index, or name at the end of the range. Can accept: HyperlinkPageDestination, Long Integer or String.
+	 * @param from The HyperlinkPageDestination, index, or name at the beginning of the range.
+	 * @param to The HyperlinkPageDestination, index, or name at the end of the range.
 	 */
 	itemByRange(from: HyperlinkPageDestination | number | String, to: HyperlinkPageDestination | number | String): HyperlinkPageDestination[];
 
@@ -23398,7 +23398,7 @@ declare class HyperlinkExternalPageDestination {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -23429,7 +23429,7 @@ declare class HyperlinkExternalPageDestination {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -23495,7 +23495,7 @@ declare class HyperlinkExternalPageDestinations {
 
 	/**
 	 * Returns the HyperlinkExternalPageDestination with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HyperlinkExternalPageDestination;
 
@@ -23513,8 +23513,8 @@ declare class HyperlinkExternalPageDestinations {
 
 	/**
 	 * Returns the HyperlinkExternalPageDestinations within the specified range.
-	 * @param from The HyperlinkExternalPageDestination, index, or name at the beginning of the range. Can accept: HyperlinkExternalPageDestination, Long Integer or String.
-	 * @param to The HyperlinkExternalPageDestination, index, or name at the end of the range. Can accept: HyperlinkExternalPageDestination, Long Integer or String.
+	 * @param from The HyperlinkExternalPageDestination, index, or name at the beginning of the range.
+	 * @param to The HyperlinkExternalPageDestination, index, or name at the end of the range.
 	 */
 	itemByRange(from: HyperlinkExternalPageDestination | number | String, to: HyperlinkExternalPageDestination | number | String): HyperlinkExternalPageDestination[];
 
@@ -23609,7 +23609,7 @@ declare class HyperlinkURLDestination {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -23640,7 +23640,7 @@ declare class HyperlinkURLDestination {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -23706,7 +23706,7 @@ declare class HyperlinkURLDestinations {
 
 	/**
 	 * Returns the HyperlinkURLDestination with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HyperlinkURLDestination;
 
@@ -23724,8 +23724,8 @@ declare class HyperlinkURLDestinations {
 
 	/**
 	 * Returns the HyperlinkURLDestinations within the specified range.
-	 * @param from The HyperlinkURLDestination, index, or name at the beginning of the range. Can accept: HyperlinkURLDestination, Long Integer or String.
-	 * @param to The HyperlinkURLDestination, index, or name at the end of the range. Can accept: HyperlinkURLDestination, Long Integer or String.
+	 * @param from The HyperlinkURLDestination, index, or name at the beginning of the range.
+	 * @param to The HyperlinkURLDestination, index, or name at the end of the range.
 	 */
 	itemByRange(from: HyperlinkURLDestination | number | String, to: HyperlinkURLDestination | number | String): HyperlinkURLDestination[];
 
@@ -23820,7 +23820,7 @@ declare class CrossReferenceFormat {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -23851,7 +23851,7 @@ declare class CrossReferenceFormat {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -23912,7 +23912,7 @@ declare class CrossReferenceFormats {
 
 	/**
 	 * Returns the CrossReferenceFormat with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CrossReferenceFormat;
 
@@ -23930,8 +23930,8 @@ declare class CrossReferenceFormats {
 
 	/**
 	 * Returns the CrossReferenceFormats within the specified range.
-	 * @param from The CrossReferenceFormat, index, or name at the beginning of the range. Can accept: CrossReferenceFormat, Long Integer or String.
-	 * @param to The CrossReferenceFormat, index, or name at the end of the range. Can accept: CrossReferenceFormat, Long Integer or String.
+	 * @param from The CrossReferenceFormat, index, or name at the beginning of the range.
+	 * @param to The CrossReferenceFormat, index, or name at the end of the range.
 	 */
 	itemByRange(from: CrossReferenceFormat | number | String, to: CrossReferenceFormat | number | String): CrossReferenceFormat[];
 
@@ -24025,7 +24025,7 @@ declare class CrossReferenceSources {
 
 	/**
 	 * Returns the CrossReferenceSource with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CrossReferenceSource;
 
@@ -24043,8 +24043,8 @@ declare class CrossReferenceSources {
 
 	/**
 	 * Returns the CrossReferenceSources within the specified range.
-	 * @param from The CrossReferenceSource, index, or name at the beginning of the range. Can accept: CrossReferenceSource, Long Integer or String.
-	 * @param to The CrossReferenceSource, index, or name at the end of the range. Can accept: CrossReferenceSource, Long Integer or String.
+	 * @param from The CrossReferenceSource, index, or name at the beginning of the range.
+	 * @param to The CrossReferenceSource, index, or name at the end of the range.
 	 */
 	itemByRange(from: CrossReferenceSource | number | String, to: CrossReferenceSource | number | String): CrossReferenceSource[];
 
@@ -24139,7 +24139,7 @@ declare class BuildingBlock {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -24157,7 +24157,7 @@ declare class BuildingBlock {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -24220,14 +24220,14 @@ declare class BuildingBlocks {
 
 	/**
 	 * Returns the BuildingBlock with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): BuildingBlock;
 
 	/**
 	 * Returns the BuildingBlocks within the specified range.
-	 * @param from The BuildingBlock, index, or name at the beginning of the range. Can accept: BuildingBlock, Long Integer or String.
-	 * @param to The BuildingBlock, index, or name at the end of the range. Can accept: BuildingBlock, Long Integer or String.
+	 * @param from The BuildingBlock, index, or name at the beginning of the range.
+	 * @param to The BuildingBlock, index, or name at the end of the range.
 	 */
 	itemByRange(from: BuildingBlock | number | String, to: BuildingBlock | number | String): BuildingBlock[];
 
@@ -24310,7 +24310,7 @@ declare class ParagraphDestinations {
 
 	/**
 	 * Returns the ParagraphDestination with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ParagraphDestination;
 
@@ -24328,8 +24328,8 @@ declare class ParagraphDestinations {
 
 	/**
 	 * Returns the ParagraphDestinations within the specified range.
-	 * @param from The ParagraphDestination, index, or name at the beginning of the range. Can accept: ParagraphDestination, Long Integer or String.
-	 * @param to The ParagraphDestination, index, or name at the end of the range. Can accept: ParagraphDestination, Long Integer or String.
+	 * @param from The ParagraphDestination, index, or name at the beginning of the range.
+	 * @param to The ParagraphDestination, index, or name at the end of the range.
 	 */
 	itemByRange(from: ParagraphDestination | number | String, to: ParagraphDestination | number | String): ParagraphDestination[];
 
@@ -24429,7 +24429,7 @@ declare class Index {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -24448,7 +24448,7 @@ declare class Index {
 
 	/**
 	 * Generates a new index story.
-	 * @param on The spread or page on which to place the story. Can accept: Page, Spread or MasterSpread. 
+	 * @param on The spread or page on which to place the story.
 	 * @param placePoint The coordinates of the upper left corner of the story bounding box, in the format [x, y]. 
 	 * @param destinationLayer The layer on which to place the story. 
 	 * @param autoflowing If true, allows the story to flow onto subsequent pages if the story does not fit on the specified page. If no subsequent pages exist in the document, creates the necessary pages. 
@@ -24477,7 +24477,7 @@ declare class Index {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -24547,7 +24547,7 @@ declare class Indexes {
 
 	/**
 	 * Returns the Index with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Index;
 
@@ -24565,8 +24565,8 @@ declare class Indexes {
 
 	/**
 	 * Returns the Indexes within the specified range.
-	 * @param from The Index, index, or name at the beginning of the range. Can accept: Index, Long Integer or String.
-	 * @param to The Index, index, or name at the end of the range. Can accept: Index, Long Integer or String.
+	 * @param from The Index, index, or name at the beginning of the range.
+	 * @param to The Index, index, or name at the end of the range.
 	 */
 	itemByRange(from: Index | number | String, to: Index | number | String): Index[];
 
@@ -24777,7 +24777,7 @@ declare class Topic {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -24801,7 +24801,7 @@ declare class Topic {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -24863,7 +24863,7 @@ declare class Topics {
 
 	/**
 	 * Returns the Topic with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Topic;
 
@@ -24875,8 +24875,8 @@ declare class Topics {
 
 	/**
 	 * Returns the Topics within the specified range.
-	 * @param from The Topic, index, or name at the beginning of the range. Can accept: Topic, Long Integer or String.
-	 * @param to The Topic, index, or name at the end of the range. Can accept: Topic, Long Integer or String.
+	 * @param from The Topic, index, or name at the beginning of the range.
+	 * @param to The Topic, index, or name at the end of the range.
 	 */
 	itemByRange(from: Topic | number | String, to: Topic | number | String): Topic[];
 
@@ -24976,7 +24976,7 @@ declare class CrossReference {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -25007,7 +25007,7 @@ declare class CrossReference {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -25070,7 +25070,7 @@ declare class CrossReferences {
 
 	/**
 	 * Returns the CrossReference with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CrossReference;
 
@@ -25088,8 +25088,8 @@ declare class CrossReferences {
 
 	/**
 	 * Returns the CrossReferences within the specified range.
-	 * @param from The CrossReference, index, or name at the beginning of the range. Can accept: CrossReference, Long Integer or String.
-	 * @param to The CrossReference, index, or name at the end of the range. Can accept: CrossReference, Long Integer or String.
+	 * @param from The CrossReference, index, or name at the beginning of the range.
+	 * @param to The CrossReference, index, or name at the end of the range.
 	 */
 	itemByRange(from: CrossReference | number | String, to: CrossReference | number | String): CrossReference[];
 
@@ -25194,7 +25194,7 @@ declare class PageReference {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -25225,7 +25225,7 @@ declare class PageReference {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -25261,7 +25261,7 @@ declare class PageReferences {
 	 * Creates a new page reference.
 	 * @param source The text or insertion point to which the page reference points.
 	 * @param pageReferenceType The page number for an index page reference or the last page in an index page reference page range. 
-	 * @param pageReferenceLimit The paragraph style or number of paragraphs or pages that defines the last page in a page range. Valid only when page reference type specifies the next use of a paragraph style or a number of paragraphs or pages. . Can accept: ParagraphStyle or Long Integer. 
+	 * @param pageReferenceLimit The paragraph style or number of paragraphs or pages that defines the last page in a page range. Valid only when page reference type specifies the next use of a paragraph style or a number of paragraphs or pages. .
 	 * @param pageNumberStyleOverride The style override for the page number.
 	 * @param withProperties Initial values for properties of the new PageReference 
 	 */
@@ -25289,7 +25289,7 @@ declare class PageReferences {
 
 	/**
 	 * Returns the PageReference with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PageReference;
 
@@ -25307,8 +25307,8 @@ declare class PageReferences {
 
 	/**
 	 * Returns the PageReferences within the specified range.
-	 * @param from The PageReference, index, or name at the beginning of the range. Can accept: PageReference, Long Integer or String.
-	 * @param to The PageReference, index, or name at the end of the range. Can accept: PageReference, Long Integer or String.
+	 * @param from The PageReference, index, or name at the beginning of the range.
+	 * @param to The PageReference, index, or name at the end of the range.
 	 */
 	itemByRange(from: PageReference | number | String, to: PageReference | number | String): PageReference[];
 
@@ -25403,7 +25403,7 @@ declare class IndexSection {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -25429,7 +25429,7 @@ declare class IndexSection {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -25483,7 +25483,7 @@ declare class IndexSections {
 
 	/**
 	 * Returns the IndexSection with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): IndexSection;
 
@@ -25501,8 +25501,8 @@ declare class IndexSections {
 
 	/**
 	 * Returns the IndexSections within the specified range.
-	 * @param from The IndexSection, index, or name at the beginning of the range. Can accept: IndexSection, Long Integer or String.
-	 * @param to The IndexSection, index, or name at the end of the range. Can accept: IndexSection, Long Integer or String.
+	 * @param from The IndexSection, index, or name at the beginning of the range.
+	 * @param to The IndexSection, index, or name at the end of the range.
 	 */
 	itemByRange(from: IndexSection | number | String, to: IndexSection | number | String): IndexSection[];
 
@@ -25575,7 +25575,7 @@ declare class FormFields {
 	 * Creates a new FormField
 	 * @param layer The layer on which to create the FormField. 
 	 * @param at The location at which to insert the FormField relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new FormField 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): FormField;
@@ -25602,7 +25602,7 @@ declare class FormFields {
 
 	/**
 	 * Returns the FormField with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): FormField;
 
@@ -25620,8 +25620,8 @@ declare class FormFields {
 
 	/**
 	 * Returns the FormFields within the specified range.
-	 * @param from The FormField, index, or name at the beginning of the range. Can accept: FormField, Long Integer or String.
-	 * @param to The FormField, index, or name at the end of the range. Can accept: FormField, Long Integer or String.
+	 * @param from The FormField, index, or name at the beginning of the range.
+	 * @param to The FormField, index, or name at the end of the range.
 	 */
 	itemByRange(from: FormField | number | String, to: FormField | number | String): FormField[];
 
@@ -25911,7 +25911,7 @@ declare class Buttons {
 	 * Creates a new Button
 	 * @param layer The layer on which to create the Button. 
 	 * @param at The location at which to insert the Button relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Button 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Button;
@@ -25938,7 +25938,7 @@ declare class Buttons {
 
 	/**
 	 * Returns the Button with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Button;
 
@@ -25956,8 +25956,8 @@ declare class Buttons {
 
 	/**
 	 * Returns the Buttons within the specified range.
-	 * @param from The Button, index, or name at the beginning of the range. Can accept: Button, Long Integer or String.
-	 * @param to The Button, index, or name at the end of the range. Can accept: Button, Long Integer or String.
+	 * @param from The Button, index, or name at the beginning of the range.
+	 * @param to The Button, index, or name at the end of the range.
 	 */
 	itemByRange(from: Button | number | String, to: Button | number | String): Button[];
 
@@ -26127,7 +26127,7 @@ declare class State {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -26162,7 +26162,7 @@ declare class State {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -26222,7 +26222,7 @@ declare class States {
 
 	/**
 	 * Returns the State with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): State;
 
@@ -26240,8 +26240,8 @@ declare class States {
 
 	/**
 	 * Returns the States within the specified range.
-	 * @param from The State, index, or name at the beginning of the range. Can accept: State, Long Integer or String.
-	 * @param to The State, index, or name at the end of the range. Can accept: State, Long Integer or String.
+	 * @param from The State, index, or name at the beginning of the range.
+	 * @param to The State, index, or name at the end of the range.
 	 */
 	itemByRange(from: State | number | String, to: State | number | String): State[];
 
@@ -26422,7 +26422,7 @@ declare class MultiStateObjects {
 	 * Creates a new MultiStateObject
 	 * @param layer The layer on which to create the MultiStateObject. 
 	 * @param at The location at which to insert the MultiStateObject relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new MultiStateObject 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): MultiStateObject;
@@ -26449,7 +26449,7 @@ declare class MultiStateObjects {
 
 	/**
 	 * Returns the MultiStateObject with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MultiStateObject;
 
@@ -26467,8 +26467,8 @@ declare class MultiStateObjects {
 
 	/**
 	 * Returns the MultiStateObjects within the specified range.
-	 * @param from The MultiStateObject, index, or name at the beginning of the range. Can accept: MultiStateObject, Long Integer or String.
-	 * @param to The MultiStateObject, index, or name at the end of the range. Can accept: MultiStateObject, Long Integer or String.
+	 * @param from The MultiStateObject, index, or name at the beginning of the range.
+	 * @param to The MultiStateObject, index, or name at the end of the range.
 	 */
 	itemByRange(from: MultiStateObject | number | String, to: MultiStateObject | number | String): MultiStateObject[];
 
@@ -26748,7 +26748,7 @@ declare class CheckBoxes {
 	 * Creates a new CheckBox
 	 * @param layer The layer on which to create the CheckBox. 
 	 * @param at The location at which to insert the CheckBox relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new CheckBox 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): CheckBox;
@@ -26775,7 +26775,7 @@ declare class CheckBoxes {
 
 	/**
 	 * Returns the CheckBox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CheckBox;
 
@@ -26793,8 +26793,8 @@ declare class CheckBoxes {
 
 	/**
 	 * Returns the CheckBoxes within the specified range.
-	 * @param from The CheckBox, index, or name at the beginning of the range. Can accept: CheckBox, Long Integer or String.
-	 * @param to The CheckBox, index, or name at the end of the range. Can accept: CheckBox, Long Integer or String.
+	 * @param from The CheckBox, index, or name at the beginning of the range.
+	 * @param to The CheckBox, index, or name at the end of the range.
 	 */
 	itemByRange(from: CheckBox | number | String, to: CheckBox | number | String): CheckBox[];
 
@@ -27079,7 +27079,7 @@ declare class ComboBoxes {
 	 * Creates a new ComboBox
 	 * @param layer The layer on which to create the ComboBox. 
 	 * @param at The location at which to insert the ComboBox relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new ComboBox 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): ComboBox;
@@ -27106,7 +27106,7 @@ declare class ComboBoxes {
 
 	/**
 	 * Returns the ComboBox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ComboBox;
 
@@ -27124,8 +27124,8 @@ declare class ComboBoxes {
 
 	/**
 	 * Returns the ComboBoxes within the specified range.
-	 * @param from The ComboBox, index, or name at the beginning of the range. Can accept: ComboBox, Long Integer or String.
-	 * @param to The ComboBox, index, or name at the end of the range. Can accept: ComboBox, Long Integer or String.
+	 * @param from The ComboBox, index, or name at the beginning of the range.
+	 * @param to The ComboBox, index, or name at the end of the range.
 	 */
 	itemByRange(from: ComboBox | number | String, to: ComboBox | number | String): ComboBox[];
 
@@ -27415,7 +27415,7 @@ declare class ListBoxes {
 	 * Creates a new ListBox
 	 * @param layer The layer on which to create the ListBox. 
 	 * @param at The location at which to insert the ListBox relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new ListBox 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): ListBox;
@@ -27442,7 +27442,7 @@ declare class ListBoxes {
 
 	/**
 	 * Returns the ListBox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ListBox;
 
@@ -27460,8 +27460,8 @@ declare class ListBoxes {
 
 	/**
 	 * Returns the ListBoxes within the specified range.
-	 * @param from The ListBox, index, or name at the beginning of the range. Can accept: ListBox, Long Integer or String.
-	 * @param to The ListBox, index, or name at the end of the range. Can accept: ListBox, Long Integer or String.
+	 * @param from The ListBox, index, or name at the beginning of the range.
+	 * @param to The ListBox, index, or name at the end of the range.
 	 */
 	itemByRange(from: ListBox | number | String, to: ListBox | number | String): ListBox[];
 
@@ -27741,7 +27741,7 @@ declare class RadioButtons {
 	 * Creates a new RadioButton
 	 * @param layer The layer on which to create the RadioButton. 
 	 * @param at The location at which to insert the RadioButton relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new RadioButton 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): RadioButton;
@@ -27768,7 +27768,7 @@ declare class RadioButtons {
 
 	/**
 	 * Returns the RadioButton with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): RadioButton;
 
@@ -27786,8 +27786,8 @@ declare class RadioButtons {
 
 	/**
 	 * Returns the RadioButtons within the specified range.
-	 * @param from The RadioButton, index, or name at the beginning of the range. Can accept: RadioButton, Long Integer or String.
-	 * @param to The RadioButton, index, or name at the end of the range. Can accept: RadioButton, Long Integer or String.
+	 * @param from The RadioButton, index, or name at the beginning of the range.
+	 * @param to The RadioButton, index, or name at the end of the range.
 	 */
 	itemByRange(from: RadioButton | number | String, to: RadioButton | number | String): RadioButton[];
 
@@ -28077,7 +28077,7 @@ declare class TextBoxes {
 	 * Creates a new TextBox
 	 * @param layer The layer on which to create the TextBox. 
 	 * @param at The location at which to insert the TextBox relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new TextBox 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): TextBox;
@@ -28104,7 +28104,7 @@ declare class TextBoxes {
 
 	/**
 	 * Returns the TextBox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextBox;
 
@@ -28122,8 +28122,8 @@ declare class TextBoxes {
 
 	/**
 	 * Returns the TextBoxes within the specified range.
-	 * @param from The TextBox, index, or name at the beginning of the range. Can accept: TextBox, Long Integer or String.
-	 * @param to The TextBox, index, or name at the end of the range. Can accept: TextBox, Long Integer or String.
+	 * @param from The TextBox, index, or name at the beginning of the range.
+	 * @param to The TextBox, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextBox | number | String, to: TextBox | number | String): TextBox[];
 
@@ -28388,7 +28388,7 @@ declare class SignatureFields {
 	 * Creates a new SignatureField
 	 * @param layer The layer on which to create the SignatureField. 
 	 * @param at The location at which to insert the SignatureField relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new SignatureField 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): SignatureField;
@@ -28415,7 +28415,7 @@ declare class SignatureFields {
 
 	/**
 	 * Returns the SignatureField with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): SignatureField;
 
@@ -28433,8 +28433,8 @@ declare class SignatureFields {
 
 	/**
 	 * Returns the SignatureFields within the specified range.
-	 * @param from The SignatureField, index, or name at the beginning of the range. Can accept: SignatureField, Long Integer or String.
-	 * @param to The SignatureField, index, or name at the end of the range. Can accept: SignatureField, Long Integer or String.
+	 * @param from The SignatureField, index, or name at the beginning of the range.
+	 * @param to The SignatureField, index, or name at the end of the range.
 	 */
 	itemByRange(from: SignatureField | number | String, to: SignatureField | number | String): SignatureField[];
 
@@ -28614,7 +28614,7 @@ declare class Movies {
 	 * Creates a new Movie
 	 * @param layer The layer on which to create the Movie. 
 	 * @param at The location at which to insert the Movie relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Movie 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Movie;
@@ -28641,7 +28641,7 @@ declare class Movies {
 
 	/**
 	 * Returns the Movie with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Movie;
 
@@ -28659,8 +28659,8 @@ declare class Movies {
 
 	/**
 	 * Returns the Movies within the specified range.
-	 * @param from The Movie, index, or name at the beginning of the range. Can accept: Movie, Long Integer or String.
-	 * @param to The Movie, index, or name at the end of the range. Can accept: Movie, Long Integer or String.
+	 * @param from The Movie, index, or name at the beginning of the range.
+	 * @param to The Movie, index, or name at the end of the range.
 	 */
 	itemByRange(from: Movie | number | String, to: Movie | number | String): Movie[];
 
@@ -28745,7 +28745,7 @@ declare class NavigationPoint {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -28763,7 +28763,7 @@ declare class NavigationPoint {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -28823,7 +28823,7 @@ declare class NavigationPoints {
 
 	/**
 	 * Returns the NavigationPoint with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): NavigationPoint;
 
@@ -28841,8 +28841,8 @@ declare class NavigationPoints {
 
 	/**
 	 * Returns the NavigationPoints within the specified range.
-	 * @param from The NavigationPoint, index, or name at the beginning of the range. Can accept: NavigationPoint, Long Integer or String.
-	 * @param to The NavigationPoint, index, or name at the end of the range. Can accept: NavigationPoint, Long Integer or String.
+	 * @param from The NavigationPoint, index, or name at the beginning of the range.
+	 * @param to The NavigationPoint, index, or name at the end of the range.
 	 */
 	itemByRange(from: NavigationPoint | number | String, to: NavigationPoint | number | String): NavigationPoint[];
 
@@ -28987,7 +28987,7 @@ declare class Sounds {
 	 * Creates a new Sound
 	 * @param layer The layer on which to create the Sound. 
 	 * @param at The location at which to insert the Sound relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Sound 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Sound;
@@ -29014,7 +29014,7 @@ declare class Sounds {
 
 	/**
 	 * Returns the Sound with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Sound;
 
@@ -29032,8 +29032,8 @@ declare class Sounds {
 
 	/**
 	 * Returns the Sounds within the specified range.
-	 * @param from The Sound, index, or name at the beginning of the range. Can accept: Sound, Long Integer or String.
-	 * @param to The Sound, index, or name at the end of the range. Can accept: Sound, Long Integer or String.
+	 * @param from The Sound, index, or name at the beginning of the range.
+	 * @param to The Sound, index, or name at the end of the range.
 	 */
 	itemByRange(from: Sound | number | String, to: Sound | number | String): Sound[];
 
@@ -29128,7 +29128,7 @@ declare class Behavior {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -29159,7 +29159,7 @@ declare class Behavior {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -29213,7 +29213,7 @@ declare class Behaviors {
 
 	/**
 	 * Returns the Behavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Behavior;
 
@@ -29231,8 +29231,8 @@ declare class Behaviors {
 
 	/**
 	 * Returns the Behaviors within the specified range.
-	 * @param from The Behavior, index, or name at the beginning of the range. Can accept: Behavior, Long Integer or String.
-	 * @param to The Behavior, index, or name at the end of the range. Can accept: Behavior, Long Integer or String.
+	 * @param from The Behavior, index, or name at the beginning of the range.
+	 * @param to The Behavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: Behavior | number | String, to: Behavior | number | String): Behavior[];
 
@@ -29319,7 +29319,7 @@ declare class GotoFirstPageBehaviors {
 
 	/**
 	 * Returns the GotoFirstPageBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoFirstPageBehavior;
 
@@ -29337,8 +29337,8 @@ declare class GotoFirstPageBehaviors {
 
 	/**
 	 * Returns the GotoFirstPageBehaviors within the specified range.
-	 * @param from The GotoFirstPageBehavior, index, or name at the beginning of the range. Can accept: GotoFirstPageBehavior, Long Integer or String.
-	 * @param to The GotoFirstPageBehavior, index, or name at the end of the range. Can accept: GotoFirstPageBehavior, Long Integer or String.
+	 * @param from The GotoFirstPageBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoFirstPageBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoFirstPageBehavior | number | String, to: GotoFirstPageBehavior | number | String): GotoFirstPageBehavior[];
 
@@ -29425,7 +29425,7 @@ declare class GotoLastPageBehaviors {
 
 	/**
 	 * Returns the GotoLastPageBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoLastPageBehavior;
 
@@ -29443,8 +29443,8 @@ declare class GotoLastPageBehaviors {
 
 	/**
 	 * Returns the GotoLastPageBehaviors within the specified range.
-	 * @param from The GotoLastPageBehavior, index, or name at the beginning of the range. Can accept: GotoLastPageBehavior, Long Integer or String.
-	 * @param to The GotoLastPageBehavior, index, or name at the end of the range. Can accept: GotoLastPageBehavior, Long Integer or String.
+	 * @param from The GotoLastPageBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoLastPageBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoLastPageBehavior | number | String, to: GotoLastPageBehavior | number | String): GotoLastPageBehavior[];
 
@@ -29531,7 +29531,7 @@ declare class GotoNextPageBehaviors {
 
 	/**
 	 * Returns the GotoNextPageBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoNextPageBehavior;
 
@@ -29549,8 +29549,8 @@ declare class GotoNextPageBehaviors {
 
 	/**
 	 * Returns the GotoNextPageBehaviors within the specified range.
-	 * @param from The GotoNextPageBehavior, index, or name at the beginning of the range. Can accept: GotoNextPageBehavior, Long Integer or String.
-	 * @param to The GotoNextPageBehavior, index, or name at the end of the range. Can accept: GotoNextPageBehavior, Long Integer or String.
+	 * @param from The GotoNextPageBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoNextPageBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoNextPageBehavior | number | String, to: GotoNextPageBehavior | number | String): GotoNextPageBehavior[];
 
@@ -29637,7 +29637,7 @@ declare class GotoPreviousPageBehaviors {
 
 	/**
 	 * Returns the GotoPreviousPageBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoPreviousPageBehavior;
 
@@ -29655,8 +29655,8 @@ declare class GotoPreviousPageBehaviors {
 
 	/**
 	 * Returns the GotoPreviousPageBehaviors within the specified range.
-	 * @param from The GotoPreviousPageBehavior, index, or name at the beginning of the range. Can accept: GotoPreviousPageBehavior, Long Integer or String.
-	 * @param to The GotoPreviousPageBehavior, index, or name at the end of the range. Can accept: GotoPreviousPageBehavior, Long Integer or String.
+	 * @param from The GotoPreviousPageBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoPreviousPageBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoPreviousPageBehavior | number | String, to: GotoPreviousPageBehavior | number | String): GotoPreviousPageBehavior[];
 
@@ -29743,7 +29743,7 @@ declare class GotoNextViewBehaviors {
 
 	/**
 	 * Returns the GotoNextViewBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoNextViewBehavior;
 
@@ -29761,8 +29761,8 @@ declare class GotoNextViewBehaviors {
 
 	/**
 	 * Returns the GotoNextViewBehaviors within the specified range.
-	 * @param from The GotoNextViewBehavior, index, or name at the beginning of the range. Can accept: GotoNextViewBehavior, Long Integer or String.
-	 * @param to The GotoNextViewBehavior, index, or name at the end of the range. Can accept: GotoNextViewBehavior, Long Integer or String.
+	 * @param from The GotoNextViewBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoNextViewBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoNextViewBehavior | number | String, to: GotoNextViewBehavior | number | String): GotoNextViewBehavior[];
 
@@ -29849,7 +29849,7 @@ declare class GotoPreviousViewBehaviors {
 
 	/**
 	 * Returns the GotoPreviousViewBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoPreviousViewBehavior;
 
@@ -29867,8 +29867,8 @@ declare class GotoPreviousViewBehaviors {
 
 	/**
 	 * Returns the GotoPreviousViewBehaviors within the specified range.
-	 * @param from The GotoPreviousViewBehavior, index, or name at the beginning of the range. Can accept: GotoPreviousViewBehavior, Long Integer or String.
-	 * @param to The GotoPreviousViewBehavior, index, or name at the end of the range. Can accept: GotoPreviousViewBehavior, Long Integer or String.
+	 * @param from The GotoPreviousViewBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoPreviousViewBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoPreviousViewBehavior | number | String, to: GotoPreviousViewBehavior | number | String): GotoPreviousViewBehavior[];
 
@@ -29955,7 +29955,7 @@ declare class GotoURLBehaviors {
 
 	/**
 	 * Returns the GotoURLBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoURLBehavior;
 
@@ -29973,8 +29973,8 @@ declare class GotoURLBehaviors {
 
 	/**
 	 * Returns the GotoURLBehaviors within the specified range.
-	 * @param from The GotoURLBehavior, index, or name at the beginning of the range. Can accept: GotoURLBehavior, Long Integer or String.
-	 * @param to The GotoURLBehavior, index, or name at the end of the range. Can accept: GotoURLBehavior, Long Integer or String.
+	 * @param from The GotoURLBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoURLBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoURLBehavior | number | String, to: GotoURLBehavior | number | String): GotoURLBehavior[];
 
@@ -30071,7 +30071,7 @@ declare class MovieBehaviors {
 
 	/**
 	 * Returns the MovieBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MovieBehavior;
 
@@ -30089,8 +30089,8 @@ declare class MovieBehaviors {
 
 	/**
 	 * Returns the MovieBehaviors within the specified range.
-	 * @param from The MovieBehavior, index, or name at the beginning of the range. Can accept: MovieBehavior, Long Integer or String.
-	 * @param to The MovieBehavior, index, or name at the end of the range. Can accept: MovieBehavior, Long Integer or String.
+	 * @param from The MovieBehavior, index, or name at the beginning of the range.
+	 * @param to The MovieBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: MovieBehavior | number | String, to: MovieBehavior | number | String): MovieBehavior[];
 
@@ -30182,7 +30182,7 @@ declare class ShowHideFieldsBehaviors {
 
 	/**
 	 * Returns the ShowHideFieldsBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ShowHideFieldsBehavior;
 
@@ -30200,8 +30200,8 @@ declare class ShowHideFieldsBehaviors {
 
 	/**
 	 * Returns the ShowHideFieldsBehaviors within the specified range.
-	 * @param from The ShowHideFieldsBehavior, index, or name at the beginning of the range. Can accept: ShowHideFieldsBehavior, Long Integer or String.
-	 * @param to The ShowHideFieldsBehavior, index, or name at the end of the range. Can accept: ShowHideFieldsBehavior, Long Integer or String.
+	 * @param from The ShowHideFieldsBehavior, index, or name at the beginning of the range.
+	 * @param to The ShowHideFieldsBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: ShowHideFieldsBehavior | number | String, to: ShowHideFieldsBehavior | number | String): ShowHideFieldsBehavior[];
 
@@ -30298,7 +30298,7 @@ declare class AnimationBehaviors {
 
 	/**
 	 * Returns the AnimationBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): AnimationBehavior;
 
@@ -30316,8 +30316,8 @@ declare class AnimationBehaviors {
 
 	/**
 	 * Returns the AnimationBehaviors within the specified range.
-	 * @param from The AnimationBehavior, index, or name at the beginning of the range. Can accept: AnimationBehavior, Long Integer or String.
-	 * @param to The AnimationBehavior, index, or name at the end of the range. Can accept: AnimationBehavior, Long Integer or String.
+	 * @param from The AnimationBehavior, index, or name at the beginning of the range.
+	 * @param to The AnimationBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: AnimationBehavior | number | String, to: AnimationBehavior | number | String): AnimationBehavior[];
 
@@ -30404,7 +30404,7 @@ declare class OpenFileBehaviors {
 
 	/**
 	 * Returns the OpenFileBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): OpenFileBehavior;
 
@@ -30422,8 +30422,8 @@ declare class OpenFileBehaviors {
 
 	/**
 	 * Returns the OpenFileBehaviors within the specified range.
-	 * @param from The OpenFileBehavior, index, or name at the beginning of the range. Can accept: OpenFileBehavior, Long Integer or String.
-	 * @param to The OpenFileBehavior, index, or name at the end of the range. Can accept: OpenFileBehavior, Long Integer or String.
+	 * @param from The OpenFileBehavior, index, or name at the beginning of the range.
+	 * @param to The OpenFileBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: OpenFileBehavior | number | String, to: OpenFileBehavior | number | String): OpenFileBehavior[];
 
@@ -30515,7 +30515,7 @@ declare class GotoNextStateBehaviors {
 
 	/**
 	 * Returns the GotoNextStateBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoNextStateBehavior;
 
@@ -30533,8 +30533,8 @@ declare class GotoNextStateBehaviors {
 
 	/**
 	 * Returns the GotoNextStateBehaviors within the specified range.
-	 * @param from The GotoNextStateBehavior, index, or name at the beginning of the range. Can accept: GotoNextStateBehavior, Long Integer or String.
-	 * @param to The GotoNextStateBehavior, index, or name at the end of the range. Can accept: GotoNextStateBehavior, Long Integer or String.
+	 * @param from The GotoNextStateBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoNextStateBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoNextStateBehavior | number | String, to: GotoNextStateBehavior | number | String): GotoNextStateBehavior[];
 
@@ -30626,7 +30626,7 @@ declare class GotoPreviousStateBehaviors {
 
 	/**
 	 * Returns the GotoPreviousStateBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoPreviousStateBehavior;
 
@@ -30644,8 +30644,8 @@ declare class GotoPreviousStateBehaviors {
 
 	/**
 	 * Returns the GotoPreviousStateBehaviors within the specified range.
-	 * @param from The GotoPreviousStateBehavior, index, or name at the beginning of the range. Can accept: GotoPreviousStateBehavior, Long Integer or String.
-	 * @param to The GotoPreviousStateBehavior, index, or name at the end of the range. Can accept: GotoPreviousStateBehavior, Long Integer or String.
+	 * @param from The GotoPreviousStateBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoPreviousStateBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoPreviousStateBehavior | number | String, to: GotoPreviousStateBehavior | number | String): GotoPreviousStateBehavior[];
 
@@ -30742,7 +30742,7 @@ declare class GotoStateBehaviors {
 
 	/**
 	 * Returns the GotoStateBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoStateBehavior;
 
@@ -30760,8 +30760,8 @@ declare class GotoStateBehaviors {
 
 	/**
 	 * Returns the GotoStateBehaviors within the specified range.
-	 * @param from The GotoStateBehavior, index, or name at the beginning of the range. Can accept: GotoStateBehavior, Long Integer or String.
-	 * @param to The GotoStateBehavior, index, or name at the end of the range. Can accept: GotoStateBehavior, Long Integer or String.
+	 * @param from The GotoStateBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoStateBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoStateBehavior | number | String, to: GotoStateBehavior | number | String): GotoStateBehavior[];
 
@@ -30848,7 +30848,7 @@ declare class ViewZoomBehaviors {
 
 	/**
 	 * Returns the ViewZoomBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ViewZoomBehavior;
 
@@ -30866,8 +30866,8 @@ declare class ViewZoomBehaviors {
 
 	/**
 	 * Returns the ViewZoomBehaviors within the specified range.
-	 * @param from The ViewZoomBehavior, index, or name at the beginning of the range. Can accept: ViewZoomBehavior, Long Integer or String.
-	 * @param to The ViewZoomBehavior, index, or name at the end of the range. Can accept: ViewZoomBehavior, Long Integer or String.
+	 * @param from The ViewZoomBehavior, index, or name at the beginning of the range.
+	 * @param to The ViewZoomBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: ViewZoomBehavior | number | String, to: ViewZoomBehavior | number | String): ViewZoomBehavior[];
 
@@ -30959,7 +30959,7 @@ declare class SoundBehaviors {
 
 	/**
 	 * Returns the SoundBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): SoundBehavior;
 
@@ -30977,8 +30977,8 @@ declare class SoundBehaviors {
 
 	/**
 	 * Returns the SoundBehaviors within the specified range.
-	 * @param from The SoundBehavior, index, or name at the beginning of the range. Can accept: SoundBehavior, Long Integer or String.
-	 * @param to The SoundBehavior, index, or name at the end of the range. Can accept: SoundBehavior, Long Integer or String.
+	 * @param from The SoundBehavior, index, or name at the beginning of the range.
+	 * @param to The SoundBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: SoundBehavior | number | String, to: SoundBehavior | number | String): SoundBehavior[];
 
@@ -31080,7 +31080,7 @@ declare class GotoAnchorBehaviors {
 
 	/**
 	 * Returns the GotoAnchorBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoAnchorBehavior;
 
@@ -31098,8 +31098,8 @@ declare class GotoAnchorBehaviors {
 
 	/**
 	 * Returns the GotoAnchorBehaviors within the specified range.
-	 * @param from The GotoAnchorBehavior, index, or name at the beginning of the range. Can accept: GotoAnchorBehavior, Long Integer or String.
-	 * @param to The GotoAnchorBehavior, index, or name at the end of the range. Can accept: GotoAnchorBehavior, Long Integer or String.
+	 * @param from The GotoAnchorBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoAnchorBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoAnchorBehavior | number | String, to: GotoAnchorBehavior | number | String): GotoAnchorBehavior[];
 
@@ -31191,7 +31191,7 @@ declare class GotoPageBehaviors {
 
 	/**
 	 * Returns the GotoPageBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GotoPageBehavior;
 
@@ -31209,8 +31209,8 @@ declare class GotoPageBehaviors {
 
 	/**
 	 * Returns the GotoPageBehaviors within the specified range.
-	 * @param from The GotoPageBehavior, index, or name at the beginning of the range. Can accept: GotoPageBehavior, Long Integer or String.
-	 * @param to The GotoPageBehavior, index, or name at the end of the range. Can accept: GotoPageBehavior, Long Integer or String.
+	 * @param from The GotoPageBehavior, index, or name at the beginning of the range.
+	 * @param to The GotoPageBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: GotoPageBehavior | number | String, to: GotoPageBehavior | number | String): GotoPageBehavior[];
 
@@ -31292,7 +31292,7 @@ declare class ClearFormBehaviors {
 
 	/**
 	 * Returns the ClearFormBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ClearFormBehavior;
 
@@ -31310,8 +31310,8 @@ declare class ClearFormBehaviors {
 
 	/**
 	 * Returns the ClearFormBehaviors within the specified range.
-	 * @param from The ClearFormBehavior, index, or name at the beginning of the range. Can accept: ClearFormBehavior, Long Integer or String.
-	 * @param to The ClearFormBehavior, index, or name at the end of the range. Can accept: ClearFormBehavior, Long Integer or String.
+	 * @param from The ClearFormBehavior, index, or name at the beginning of the range.
+	 * @param to The ClearFormBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: ClearFormBehavior | number | String, to: ClearFormBehavior | number | String): ClearFormBehavior[];
 
@@ -31393,7 +31393,7 @@ declare class PrintFormBehaviors {
 
 	/**
 	 * Returns the PrintFormBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PrintFormBehavior;
 
@@ -31411,8 +31411,8 @@ declare class PrintFormBehaviors {
 
 	/**
 	 * Returns the PrintFormBehaviors within the specified range.
-	 * @param from The PrintFormBehavior, index, or name at the beginning of the range. Can accept: PrintFormBehavior, Long Integer or String.
-	 * @param to The PrintFormBehavior, index, or name at the end of the range. Can accept: PrintFormBehavior, Long Integer or String.
+	 * @param from The PrintFormBehavior, index, or name at the beginning of the range.
+	 * @param to The PrintFormBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: PrintFormBehavior | number | String, to: PrintFormBehavior | number | String): PrintFormBehavior[];
 
@@ -31499,7 +31499,7 @@ declare class SubmitFormBehaviors {
 
 	/**
 	 * Returns the SubmitFormBehavior with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): SubmitFormBehavior;
 
@@ -31517,8 +31517,8 @@ declare class SubmitFormBehaviors {
 
 	/**
 	 * Returns the SubmitFormBehaviors within the specified range.
-	 * @param from The SubmitFormBehavior, index, or name at the beginning of the range. Can accept: SubmitFormBehavior, Long Integer or String.
-	 * @param to The SubmitFormBehavior, index, or name at the end of the range. Can accept: SubmitFormBehavior, Long Integer or String.
+	 * @param from The SubmitFormBehavior, index, or name at the beginning of the range.
+	 * @param to The SubmitFormBehavior, index, or name at the end of the range.
 	 */
 	itemByRange(from: SubmitFormBehavior | number | String, to: SubmitFormBehavior | number | String): SubmitFormBehavior[];
 
@@ -31614,7 +31614,7 @@ declare class TimingList {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -31632,7 +31632,7 @@ declare class TimingList {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -31693,14 +31693,14 @@ declare class TimingLists {
 
 	/**
 	 * Returns the TimingList with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TimingList;
 
 	/**
 	 * Returns the TimingLists within the specified range.
-	 * @param from The TimingList, index, or name at the beginning of the range. Can accept: TimingList, Long Integer or String.
-	 * @param to The TimingList, index, or name at the end of the range. Can accept: TimingList, Long Integer or String.
+	 * @param from The TimingList, index, or name at the beginning of the range.
+	 * @param to The TimingList, index, or name at the end of the range.
 	 */
 	itemByRange(from: TimingList | number | String, to: TimingList | number | String): TimingList[];
 
@@ -31790,7 +31790,7 @@ declare class TimingGroup {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -31803,7 +31803,7 @@ declare class TimingGroup {
 	/**
 	 * Moves the timing group or target to the specified location.
 	 * @param to The location in relation to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. . Can accept: TimingGroup, TimingTarget or TimingList. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. .
 	 */
 	move(to: LocationOptions, reference: TimingGroup | TimingTarget | TimingList): TimingGroup;
 
@@ -31815,7 +31815,7 @@ declare class TimingGroup {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -31854,7 +31854,7 @@ declare class TimingGroups {
 
 	/**
 	 * Adds a new timing group.
-	 * @param dynamicTarget A page item target that is an animation, media, or mso. Can accept: PageItem, Graphic, Behavior or MediaItem.
+	 * @param dynamicTarget A page item target that is an animation, media, or mso.
 	 * @param delaySeconds The time delay in seconds for a target. 
 	 * @param withProperties Initial values for properties of the new TimingGroup 
 	 */
@@ -31882,14 +31882,14 @@ declare class TimingGroups {
 
 	/**
 	 * Returns the TimingGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TimingGroup;
 
 	/**
 	 * Returns the TimingGroups within the specified range.
-	 * @param from The TimingGroup, index, or name at the beginning of the range. Can accept: TimingGroup, Long Integer or String.
-	 * @param to The TimingGroup, index, or name at the end of the range. Can accept: TimingGroup, Long Integer or String.
+	 * @param from The TimingGroup, index, or name at the beginning of the range.
+	 * @param to The TimingGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: TimingGroup | number | String, to: TimingGroup | number | String): TimingGroup[];
 
@@ -31974,7 +31974,7 @@ declare class TimingTarget {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -31987,7 +31987,7 @@ declare class TimingTarget {
 	/**
 	 * Moves the timing group or target to the specified location.
 	 * @param to The location in relation to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. . Can accept: TimingGroup, TimingTarget or TimingList. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. .
 	 */
 	move(to: LocationOptions, reference: TimingGroup | TimingTarget | TimingList): TimingTarget;
 
@@ -31999,7 +31999,7 @@ declare class TimingTarget {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -32038,7 +32038,7 @@ declare class TimingTargets {
 
 	/**
 	 * Adds a new target item.
-	 * @param dynamicTarget A page item target that is an animation, media, or mso. Can accept: PageItem, Graphic, Behavior or MediaItem.
+	 * @param dynamicTarget A page item target that is an animation, media, or mso.
 	 * @param delaySeconds The time delay in seconds for a target. 
 	 * @param withProperties Initial values for properties of the new TimingTarget 
 	 */
@@ -32066,14 +32066,14 @@ declare class TimingTargets {
 
 	/**
 	 * Returns the TimingTarget with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TimingTarget;
 
 	/**
 	 * Returns the TimingTargets within the specified range.
-	 * @param from The TimingTarget, index, or name at the beginning of the range. Can accept: TimingTarget, Long Integer or String.
-	 * @param to The TimingTarget, index, or name at the end of the range. Can accept: TimingTarget, Long Integer or String.
+	 * @param from The TimingTarget, index, or name at the beginning of the range.
+	 * @param to The TimingTarget, index, or name at the end of the range.
 	 */
 	itemByRange(from: TimingTarget | number | String, to: TimingTarget | number | String): TimingTarget[];
 
@@ -32298,7 +32298,7 @@ declare class Layer {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -32347,7 +32347,7 @@ declare class Layer {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -32407,7 +32407,7 @@ declare class Layers {
 
 	/**
 	 * Returns the Layer with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Layer;
 
@@ -32425,8 +32425,8 @@ declare class Layers {
 
 	/**
 	 * Returns the Layers within the specified range.
-	 * @param from The Layer, index, or name at the beginning of the range. Can accept: Layer, Long Integer or String.
-	 * @param to The Layer, index, or name at the end of the range. Can accept: Layer, Long Integer or String.
+	 * @param from The Layer, index, or name at the beginning of the range.
+	 * @param to The Layer, index, or name at the end of the range.
 	 */
 	itemByRange(from: Layer | number | String, to: Layer | number | String): Layer[];
 
@@ -32676,7 +32676,7 @@ declare class Spread {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -32699,7 +32699,7 @@ declare class Spread {
 	 * @param numberOfColumns The number of columns to create on each page.
 	 * @param rowGutter The height of the gutter between rows. 
 	 * @param columnGutter The width of the gutter between columns. 
-	 * @param guideColor The color to make the guides, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color. Can accept: Array of 3 Reals (0 - 255) or UIColors enumerator. 
+	 * @param guideColor The color to make the guides, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color.
 	 * @param fitMargins If true, the row height and column width are calculated based on the space within the page margins. If false, row height and column width are calculated based on the full page. 
 	 * @param removeExisting If true, removes existing guides when creating new ones. 
 	 * @param layer The layer on which to create the guides. 
@@ -32714,7 +32714,7 @@ declare class Spread {
 	/**
 	 * Duplicates the spread.
 	 * @param to The location of the spread relative to the reference object or within the document. 
-	 * @param reference The reference object. Note: Required only when the to parameter specifies before or after. Can accept: Spread, Document or MasterSpread. 
+	 * @param reference The reference object. Note: Required only when the to parameter specifies before or after.
 	 */
 	duplicate(to?: LocationOptions, reference?: Spread | Document | MasterSpread): any;
 
@@ -32739,7 +32739,7 @@ declare class Spread {
 	/**
 	 * Moves the spread.
 	 * @param to The location of the spread relative to the reference object or within the document.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Spread, Page or Document. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to?: LocationOptions, reference?: Spread | Page | Document): Spread;
 
@@ -32779,7 +32779,7 @@ declare class Spread {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -32791,7 +32791,7 @@ declare class Spread {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
+	 * @param location The location requested.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
@@ -32823,9 +32823,9 @@ declare class Spread {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-	 * @param withMatrix Transform matrix. Can accept: Array of 6 Reals or TransformationMatrix.
-	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two. Can accept: MatrixContent enumerator, Array of MatrixContent enumerators or Long Integer. 
+	 * @param from The temporary origin during the transformation.
+	 * @param withMatrix Transform matrix.
+	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
 	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
@@ -32856,7 +32856,7 @@ declare class Spreads {
 	/**
 	 * Creates a new spread.
 	 * @param at The location of the spread relative to the reference object or within the document.
-	 * @param reference The reference object. Note: Required when the at parameter specifies before or after. Can accept: Spread or Document. 
+	 * @param reference The reference object. Note: Required when the at parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new Spread 
 	 */
 	add(at?: LocationOptions, reference?: Spread | Document, withProperties?: Object): Spread;
@@ -32883,7 +32883,7 @@ declare class Spreads {
 
 	/**
 	 * Returns the Spread with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Spread;
 
@@ -32901,8 +32901,8 @@ declare class Spreads {
 
 	/**
 	 * Returns the Spreads within the specified range.
-	 * @param from The Spread, index, or name at the beginning of the range. Can accept: Spread, Long Integer or String.
-	 * @param to The Spread, index, or name at the end of the range. Can accept: Spread, Long Integer or String.
+	 * @param from The Spread, index, or name at the beginning of the range.
+	 * @param to The Spread, index, or name at the end of the range.
 	 */
 	itemByRange(from: Spread | number | String, to: Spread | number | String): Spread[];
 
@@ -33177,7 +33177,7 @@ declare class Page {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -33212,7 +33212,7 @@ declare class Page {
 	/**
 	 * Duplicates the page.
 	 * @param to The location at which to place the duplicate page relative to the reference object or within the document or spread.
-	 * @param reference The reference object. Note: Required when the to value specifies before or after. Can accept: Page or Spread. 
+	 * @param reference The reference object. Note: Required when the to value specifies before or after.
 	 */
 	duplicate(to?: LocationOptions, reference?: Page | Spread): Page;
 
@@ -33237,7 +33237,7 @@ declare class Page {
 	/**
 	 * Moves the page.
 	 * @param to The new location of the page relative to the reference object or within the document or spread.
-	 * @param reference The reference object. Note: Required when the to parameter value specifies before or after. Can accept: Page or Spread. 
+	 * @param reference The reference object. Note: Required when the to parameter value specifies before or after.
 	 * @param binding The location of the binding spine in spreads. 
 	 */
 	move(to?: LocationOptions, reference?: Page | Spread, binding?: BindingOptions): Page;
@@ -33285,7 +33285,7 @@ declare class Page {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -33298,9 +33298,9 @@ declare class Page {
 	/**
 	 * Resize the page item.
 	 * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
-	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
+	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}.
 	 * @param by How the current dimensions are affected by the given values
-	 * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method). Can accept: Array of Reals, ResizeConstraints enumerators or CoordinateSpaces enumerators.
+	 * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method).
 	 * @param resizeIndividually If false and multiple page items are targeted, the new dimensions are attained only by moving the individual items rather than resizing them. 
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
@@ -33308,7 +33308,7 @@ declare class Page {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
+	 * @param location The location requested.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
@@ -33345,9 +33345,9 @@ declare class Page {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-	 * @param withMatrix Transform matrix. Can accept: Array of 6 Reals or TransformationMatrix.
-	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two. Can accept: MatrixContent enumerator, Array of MatrixContent enumerators or Long Integer. 
+	 * @param from The temporary origin during the transformation.
+	 * @param withMatrix Transform matrix.
+	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
 	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
@@ -33378,7 +33378,7 @@ declare class Pages {
 	/**
 	 * Creates a new page.
 	 * @param at The location of the new page relative to the reference object or within the document or spread.
-	 * @param reference The reference object. Note: Required when the at parameter value specifies before or after. Can accept: Page, Spread, MasterSpread or Document. 
+	 * @param reference The reference object. Note: Required when the at parameter value specifies before or after.
 	 * @param withProperties Initial values for properties of the new Page 
 	 */
 	add(at?: LocationOptions, reference?: Page | Spread | MasterSpread | Document, withProperties?: Object): Page;
@@ -33405,7 +33405,7 @@ declare class Pages {
 
 	/**
 	 * Returns the Page with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Page;
 
@@ -33423,8 +33423,8 @@ declare class Pages {
 
 	/**
 	 * Returns the Pages within the specified range.
-	 * @param from The Page, index, or name at the beginning of the range. Can accept: Page, Long Integer or String.
-	 * @param to The Page, index, or name at the end of the range. Can accept: Page, Long Integer or String.
+	 * @param from The Page, index, or name at the beginning of the range.
+	 * @param to The Page, index, or name at the end of the range.
 	 */
 	itemByRange(from: Page | number | String, to: Page | number | String): Page[];
 
@@ -33664,7 +33664,7 @@ declare class MasterSpread {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -33687,7 +33687,7 @@ declare class MasterSpread {
 	 * @param numberOfColumns The number of columns to create on each page.
 	 * @param rowGutter The height of the gutter between rows. 
 	 * @param columnGutter The width of the gutter between columns. 
-	 * @param guideColor The color to make the guides, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color. Can accept: Array of 3 Reals (0 - 255) or UIColors enumerator. 
+	 * @param guideColor The color to make the guides, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color.
 	 * @param fitMargins If true, the row height and column width are calculated based on the space within the page margins. If false, row height and column width are calculated based on the full page. 
 	 * @param removeExisting If true, removes existing guides when creating new ones. 
 	 * @param layer The layer on which to create the guides. 
@@ -33702,7 +33702,7 @@ declare class MasterSpread {
 	/**
 	 * Duplicates the spread.
 	 * @param to The location of the spread relative to the reference object or within the document. 
-	 * @param reference The reference object. Note: Required only when the to parameter specifies before or after. Can accept: MasterSpread, Document or MasterSpread. 
+	 * @param reference The reference object. Note: Required only when the to parameter specifies before or after.
 	 */
 	duplicate(to?: LocationOptions, reference?: MasterSpread | Document | MasterSpread): any;
 
@@ -33752,7 +33752,7 @@ declare class MasterSpread {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -33764,7 +33764,7 @@ declare class MasterSpread {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
+	 * @param location The location requested.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
@@ -33789,9 +33789,9 @@ declare class MasterSpread {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-	 * @param withMatrix Transform matrix. Can accept: Array of 6 Reals or TransformationMatrix.
-	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two. Can accept: MatrixContent enumerator, Array of MatrixContent enumerators or Long Integer. 
+	 * @param from The temporary origin during the transformation.
+	 * @param withMatrix Transform matrix.
+	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
 	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
@@ -33848,7 +33848,7 @@ declare class MasterSpreads {
 
 	/**
 	 * Returns the MasterSpread with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MasterSpread;
 
@@ -33866,8 +33866,8 @@ declare class MasterSpreads {
 
 	/**
 	 * Returns the MasterSpreads within the specified range.
-	 * @param from The MasterSpread, index, or name at the beginning of the range. Can accept: MasterSpread, Long Integer or String.
-	 * @param to The MasterSpread, index, or name at the end of the range. Can accept: MasterSpread, Long Integer or String.
+	 * @param from The MasterSpread, index, or name at the beginning of the range.
+	 * @param to The MasterSpread, index, or name at the end of the range.
 	 */
 	itemByRange(from: MasterSpread | number | String, to: MasterSpread | number | String): MasterSpread[];
 
@@ -34333,7 +34333,7 @@ declare class PageItem {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -34348,7 +34348,7 @@ declare class PageItem {
 
 	/**
 	 * asynchronously exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -34402,7 +34402,7 @@ declare class PageItem {
 	 * @param emailAddress QR code Email Address 
 	 * @param subject QR code Email Subject 
 	 * @param body QR code Email Body Message 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
 	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -34410,7 +34410,7 @@ declare class PageItem {
 	/**
 	 * Create Hyperlink QR Code on the page item or document
 	 * @param urlLink QR code Hyperlink URL
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
 	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -34418,7 +34418,7 @@ declare class PageItem {
 	/**
 	 * Create Plain Text QR Code on the page item
 	 * @param plainText QR code Plain Text
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
 	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -34427,7 +34427,7 @@ declare class PageItem {
 	 * Create Text Msg QR Code on the page item or document
 	 * @param cellNumber QR code Text Phone Number 
 	 * @param textMessage QR code Text Message 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
 	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -34447,7 +34447,7 @@ declare class PageItem {
 	 * @param country QR code Business Card Country 
 	 * @param postalCode QR code Business Card Postal Code 
 	 * @param website QR code Business Card URL 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
 	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -34459,14 +34459,14 @@ declare class PageItem {
 
 	/**
 	 * Duplicates the PageItem at the specified location or offset.
-	 * @param to The location of the new PageItem, specified in coordinates in the format [x, y]. Can accept: Array of 2 Units, Spread, Page or Layer. 
+	 * @param to The location of the new PageItem, specified in coordinates in the format [x, y].
 	 * @param by Amount by which to offset the new PageItem from the original PageItem's position. 
 	 */
 	duplicate(to: [number | string, number | string] | Spread | Page | Layer, by: string[] | number[]): PageItem;
 
 	/**
 	 * Exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -34496,7 +34496,7 @@ declare class PageItem {
 	/**
 	 * Flips the PageItem.
 	 * @param given The axis around which to flip the PageItem.
-	 * @param around The point around which to flip the PageItem. Can accept: Array of 2 Units or AnchorPoint enumerator. 
+	 * @param around The point around which to flip the PageItem.
 	 */
 	flipItem(given: Flip, around: [number | string, number | string] | AnchorPoint): void;
 
@@ -34520,7 +34520,7 @@ declare class PageItem {
 
 	/**
 	 * Moves the PageItem to a new location. Note: Either the 'to' or 'by' parameter is required; if both parameters are defined, only the to value is used.
-	 * @param to The new location of the PageItem,in the format (x, y). Can accept: Array of 2 Units, Spread, Page or Layer. 
+	 * @param to The new location of the PageItem,in the format (x, y).
 	 * @param by The amount (in measurement units) to move the PageItem relative to its current position, in the format (x, y). 
 	 */
 	move(to: [number | string, number | string] | Spread | Page | Layer, by: string[] | number[]): void;
@@ -34566,7 +34566,7 @@ declare class PageItem {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -34579,9 +34579,9 @@ declare class PageItem {
 	/**
 	 * Resize the page item.
 	 * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
-	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
+	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}.
 	 * @param by How the current dimensions are affected by the given values
-	 * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method). Can accept: Array of Reals, ResizeConstraints enumerators or CoordinateSpaces enumerators.
+	 * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method).
 	 * @param resizeIndividually If false and multiple page items are targeted, the new dimensions are attained only by moving the individual items rather than resizing them. 
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
@@ -34589,7 +34589,7 @@ declare class PageItem {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
+	 * @param location The location requested.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
@@ -34621,9 +34621,9 @@ declare class PageItem {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-	 * @param withMatrix Transform matrix. Can accept: Array of 6 Reals or TransformationMatrix.
-	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two. Can accept: MatrixContent enumerator, Array of MatrixContent enumerators or Long Integer. 
+	 * @param from The temporary origin during the transformation.
+	 * @param withMatrix Transform matrix.
+	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
 	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
@@ -34693,7 +34693,7 @@ declare class PageItems {
 
 	/**
 	 * Returns the PageItem with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PageItem;
 
@@ -34711,8 +34711,8 @@ declare class PageItems {
 
 	/**
 	 * Returns the PageItems within the specified range.
-	 * @param from The PageItem, index, or name at the beginning of the range. Can accept: PageItem, Long Integer or String.
-	 * @param to The PageItem, index, or name at the end of the range. Can accept: PageItem, Long Integer or String.
+	 * @param from The PageItem, index, or name at the beginning of the range.
+	 * @param to The PageItem, index, or name at the end of the range.
 	 */
 	itemByRange(from: PageItem | number | String, to: PageItem | number | String): PageItem[];
 
@@ -34790,7 +34790,7 @@ declare class Ovals {
 	 * Creates a new Oval
 	 * @param layer The layer on which to create the Oval. 
 	 * @param at The location at which to insert the Oval relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Oval 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Oval;
@@ -34817,7 +34817,7 @@ declare class Ovals {
 
 	/**
 	 * Returns the Oval with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Oval;
 
@@ -34835,8 +34835,8 @@ declare class Ovals {
 
 	/**
 	 * Returns the Ovals within the specified range.
-	 * @param from The Oval, index, or name at the beginning of the range. Can accept: Oval, Long Integer or String.
-	 * @param to The Oval, index, or name at the end of the range. Can accept: Oval, Long Integer or String.
+	 * @param from The Oval, index, or name at the beginning of the range.
+	 * @param to The Oval, index, or name at the end of the range.
 	 */
 	itemByRange(from: Oval | number | String, to: Oval | number | String): Oval[];
 
@@ -34914,7 +34914,7 @@ declare class Rectangles {
 	 * Creates a new Rectangle
 	 * @param layer The layer on which to create the Rectangle. 
 	 * @param at The location at which to insert the Rectangle relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Rectangle 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Rectangle;
@@ -34941,7 +34941,7 @@ declare class Rectangles {
 
 	/**
 	 * Returns the Rectangle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Rectangle;
 
@@ -34959,8 +34959,8 @@ declare class Rectangles {
 
 	/**
 	 * Returns the Rectangles within the specified range.
-	 * @param from The Rectangle, index, or name at the beginning of the range. Can accept: Rectangle, Long Integer or String.
-	 * @param to The Rectangle, index, or name at the end of the range. Can accept: Rectangle, Long Integer or String.
+	 * @param from The Rectangle, index, or name at the beginning of the range.
+	 * @param to The Rectangle, index, or name at the end of the range.
 	 */
 	itemByRange(from: Rectangle | number | String, to: Rectangle | number | String): Rectangle[];
 
@@ -35018,7 +35018,7 @@ declare class GraphicLines {
 	 * Creates a new GraphicLine
 	 * @param layer The layer on which to create the GraphicLine. 
 	 * @param at The location at which to insert the GraphicLine relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new GraphicLine 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): GraphicLine;
@@ -35045,7 +35045,7 @@ declare class GraphicLines {
 
 	/**
 	 * Returns the GraphicLine with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GraphicLine;
 
@@ -35063,8 +35063,8 @@ declare class GraphicLines {
 
 	/**
 	 * Returns the GraphicLines within the specified range.
-	 * @param from The GraphicLine, index, or name at the beginning of the range. Can accept: GraphicLine, Long Integer or String.
-	 * @param to The GraphicLine, index, or name at the end of the range. Can accept: GraphicLine, Long Integer or String.
+	 * @param from The GraphicLine, index, or name at the beginning of the range.
+	 * @param to The GraphicLine, index, or name at the end of the range.
 	 */
 	itemByRange(from: GraphicLine | number | String, to: GraphicLine | number | String): GraphicLine[];
 
@@ -35144,7 +35144,7 @@ declare class Polygons {
 	 * @param numberOfSides The number of sides to give the Polygon. (Range: 3 to 100) 
 	 * @param insetPercentage The star inset percentage applied to the Polygon. 
 	 * @param at The location at which to insert the Polygon relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Polygon 
 	 */
 	add(layer: Layer, numberOfSides: number, insetPercentage: number, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Polygon;
@@ -35171,7 +35171,7 @@ declare class Polygons {
 
 	/**
 	 * Returns the Polygon with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Polygon;
 
@@ -35189,8 +35189,8 @@ declare class Polygons {
 
 	/**
 	 * Returns the Polygons within the specified range.
-	 * @param from The Polygon, index, or name at the beginning of the range. Can accept: Polygon, Long Integer or String.
-	 * @param to The Polygon, index, or name at the end of the range. Can accept: Polygon, Long Integer or String.
+	 * @param from The Polygon, index, or name at the beginning of the range.
+	 * @param to The Polygon, index, or name at the end of the range.
 	 */
 	itemByRange(from: Polygon | number | String, to: Polygon | number | String): Polygon[];
 
@@ -35381,7 +35381,7 @@ declare class Groups {
 	 * @param groupItems The objects to group.
 	 * @param layer The layer on which to create the Group. 
 	 * @param at The location at which to insert the Group relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Group 
 	 */
 	add(groupItems: PageItem[], layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Group;
@@ -35408,7 +35408,7 @@ declare class Groups {
 
 	/**
 	 * Returns the Group with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Group;
 
@@ -35426,8 +35426,8 @@ declare class Groups {
 
 	/**
 	 * Returns the Groups within the specified range.
-	 * @param from The Group, index, or name at the beginning of the range. Can accept: Group, Long Integer or String.
-	 * @param to The Group, index, or name at the end of the range. Can accept: Group, Long Integer or String.
+	 * @param from The Group, index, or name at the beginning of the range.
+	 * @param to The Group, index, or name at the end of the range.
 	 */
 	itemByRange(from: Group | number | String, to: Group | number | String): Group[];
 
@@ -35548,7 +35548,7 @@ declare class Images {
 
 	/**
 	 * Returns the Image with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Image;
 
@@ -35566,8 +35566,8 @@ declare class Images {
 
 	/**
 	 * Returns the Images within the specified range.
-	 * @param from The Image, index, or name at the beginning of the range. Can accept: Image, Long Integer or String.
-	 * @param to The Image, index, or name at the end of the range. Can accept: Image, Long Integer or String.
+	 * @param from The Image, index, or name at the beginning of the range.
+	 * @param to The Image, index, or name at the end of the range.
 	 */
 	itemByRange(from: Image | number | String, to: Image | number | String): Image[];
 
@@ -35678,7 +35678,7 @@ declare class EPSs {
 
 	/**
 	 * Returns the EPS with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): EPS;
 
@@ -35696,8 +35696,8 @@ declare class EPSs {
 
 	/**
 	 * Returns the EPSs within the specified range.
-	 * @param from The EPS, index, or name at the beginning of the range. Can accept: EPS, Long Integer or String.
-	 * @param to The EPS, index, or name at the end of the range. Can accept: EPS, Long Integer or String.
+	 * @param from The EPS, index, or name at the beginning of the range.
+	 * @param to The EPS, index, or name at the end of the range.
 	 */
 	itemByRange(from: EPS | number | String, to: EPS | number | String): EPS[];
 
@@ -35803,7 +35803,7 @@ declare class PDFs {
 
 	/**
 	 * Returns the PDF with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PDF;
 
@@ -35821,8 +35821,8 @@ declare class PDFs {
 
 	/**
 	 * Returns the PDFs within the specified range.
-	 * @param from The PDF, index, or name at the beginning of the range. Can accept: PDF, Long Integer or String.
-	 * @param to The PDF, index, or name at the end of the range. Can accept: PDF, Long Integer or String.
+	 * @param from The PDF, index, or name at the beginning of the range.
+	 * @param to The PDF, index, or name at the end of the range.
 	 */
 	itemByRange(from: PDF | number | String, to: PDF | number | String): PDF[];
 
@@ -35903,7 +35903,7 @@ declare class WMFs {
 
 	/**
 	 * Returns the WMF with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): WMF;
 
@@ -35921,8 +35921,8 @@ declare class WMFs {
 
 	/**
 	 * Returns the WMFs within the specified range.
-	 * @param from The WMF, index, or name at the beginning of the range. Can accept: WMF, Long Integer or String.
-	 * @param to The WMF, index, or name at the end of the range. Can accept: WMF, Long Integer or String.
+	 * @param from The WMF, index, or name at the beginning of the range.
+	 * @param to The WMF, index, or name at the end of the range.
 	 */
 	itemByRange(from: WMF | number | String, to: WMF | number | String): WMF[];
 
@@ -36003,7 +36003,7 @@ declare class PICTs {
 
 	/**
 	 * Returns the PICT with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PICT;
 
@@ -36021,8 +36021,8 @@ declare class PICTs {
 
 	/**
 	 * Returns the PICTs within the specified range.
-	 * @param from The PICT, index, or name at the beginning of the range. Can accept: PICT, Long Integer or String.
-	 * @param to The PICT, index, or name at the end of the range. Can accept: PICT, Long Integer or String.
+	 * @param from The PICT, index, or name at the beginning of the range.
+	 * @param to The PICT, index, or name at the end of the range.
 	 */
 	itemByRange(from: PICT | number | String, to: PICT | number | String): PICT[];
 
@@ -36114,7 +36114,7 @@ declare class Graphics {
 
 	/**
 	 * Returns the Graphic with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Graphic;
 
@@ -36132,8 +36132,8 @@ declare class Graphics {
 
 	/**
 	 * Returns the Graphics within the specified range.
-	 * @param from The Graphic, index, or name at the beginning of the range. Can accept: Graphic, Long Integer or String.
-	 * @param to The Graphic, index, or name at the end of the range. Can accept: Graphic, Long Integer or String.
+	 * @param from The Graphic, index, or name at the beginning of the range.
+	 * @param to The Graphic, index, or name at the end of the range.
 	 */
 	itemByRange(from: Graphic | number | String, to: Graphic | number | String): Graphic[];
 
@@ -36248,7 +36248,7 @@ declare class TransformationMatrix {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -36278,7 +36278,7 @@ declare class TransformationMatrix {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -36348,7 +36348,7 @@ declare class TransformationMatrices {
 	 * @param horizontalTranslation The horizontal translation of the transformation matrix 
 	 * @param verticalTranslation The vertical translation of the transformation matrix 
 	 * @param matrixValues The values of the transformation matrix 
-	 * @param matrixMapping The mapping the transformation matrix performs on the unit triangle. Can accept: Array of Array of 2 Arrays of 2 Reals. 
+	 * @param matrixMapping The mapping the transformation matrix performs on the unit triangle.
 	 * @param withProperties Initial values for properties of the new TransformationMatrix 
 	 */
 	add(horizontalScaleFactor: number, verticalScaleFactor: number, clockwiseShearAngle: number, counterclockwiseRotationAngle: number, horizontalTranslation: number, verticalTranslation: number, matrixValues: number[], matrixMapping: [number, number], withProperties: Object): TransformationMatrix;
@@ -36375,7 +36375,7 @@ declare class TransformationMatrices {
 
 	/**
 	 * Returns the TransformationMatrix with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TransformationMatrix;
 
@@ -36387,8 +36387,8 @@ declare class TransformationMatrices {
 
 	/**
 	 * Returns the TransformationMatrices within the specified range.
-	 * @param from The TransformationMatrix, index, or name at the beginning of the range. Can accept: TransformationMatrix, Long Integer or String.
-	 * @param to The TransformationMatrix, index, or name at the end of the range. Can accept: TransformationMatrix, Long Integer or String.
+	 * @param from The TransformationMatrix, index, or name at the beginning of the range.
+	 * @param to The TransformationMatrix, index, or name at the end of the range.
 	 */
 	itemByRange(from: TransformationMatrix | number | String, to: TransformationMatrix | number | String): TransformationMatrix[];
 
@@ -36584,7 +36584,7 @@ declare class Guide {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -36638,7 +36638,7 @@ declare class Guide {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -36650,7 +36650,7 @@ declare class Guide {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
+	 * @param location The location requested.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
@@ -36724,7 +36724,7 @@ declare class Guides {
 
 	/**
 	 * Returns the Guide with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Guide;
 
@@ -36742,8 +36742,8 @@ declare class Guides {
 
 	/**
 	 * Returns the Guides within the specified range.
-	 * @param from The Guide, index, or name at the beginning of the range. Can accept: Guide, Long Integer or String.
-	 * @param to The Guide, index, or name at the end of the range. Can accept: Guide, Long Integer or String.
+	 * @param from The Guide, index, or name at the beginning of the range.
+	 * @param to The Guide, index, or name at the end of the range.
 	 */
 	itemByRange(from: Guide | number | String, to: Guide | number | String): Guide[];
 
@@ -36960,7 +36960,7 @@ declare class Section {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -36991,7 +36991,7 @@ declare class Section {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -37052,7 +37052,7 @@ declare class Sections {
 
 	/**
 	 * Returns the Section with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Section;
 
@@ -37070,8 +37070,8 @@ declare class Sections {
 
 	/**
 	 * Returns the Sections within the specified range.
-	 * @param from The Section, index, or name at the beginning of the range. Can accept: Section, Long Integer or String.
-	 * @param to The Section, index, or name at the end of the range. Can accept: Section, Long Integer or String.
+	 * @param from The Section, index, or name at the beginning of the range.
+	 * @param to The Section, index, or name at the end of the range.
 	 */
 	itemByRange(from: Section | number | String, to: Section | number | String): Section[];
 
@@ -37156,7 +37156,7 @@ declare class Path {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -37174,7 +37174,7 @@ declare class Path {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -37239,14 +37239,14 @@ declare class Paths {
 
 	/**
 	 * Returns the Path with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Path;
 
 	/**
 	 * Returns the Paths within the specified range.
-	 * @param from The Path, index, or name at the beginning of the range. Can accept: Path, Long Integer or String.
-	 * @param to The Path, index, or name at the end of the range. Can accept: Path, Long Integer or String.
+	 * @param from The Path, index, or name at the beginning of the range.
+	 * @param to The Path, index, or name at the end of the range.
 	 */
 	itemByRange(from: Path | number | String, to: Path | number | String): Path[];
 
@@ -37336,7 +37336,7 @@ declare class PathPoint {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -37361,7 +37361,7 @@ declare class PathPoint {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -37421,14 +37421,14 @@ declare class PathPoints {
 
 	/**
 	 * Returns the PathPoint with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PathPoint;
 
 	/**
 	 * Returns the PathPoints within the specified range.
-	 * @param from The PathPoint, index, or name at the beginning of the range. Can accept: PathPoint, Long Integer or String.
-	 * @param to The PathPoint, index, or name at the end of the range. Can accept: PathPoint, Long Integer or String.
+	 * @param from The PathPoint, index, or name at the beginning of the range.
+	 * @param to The PathPoint, index, or name at the end of the range.
 	 */
 	itemByRange(from: PathPoint | number | String, to: PathPoint | number | String): PathPoint[];
 
@@ -37759,7 +37759,7 @@ declare class SplineItems {
 
 	/**
 	 * Returns the SplineItem with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): SplineItem;
 
@@ -37777,8 +37777,8 @@ declare class SplineItems {
 
 	/**
 	 * Returns the SplineItems within the specified range.
-	 * @param from The SplineItem, index, or name at the beginning of the range. Can accept: SplineItem, Long Integer or String.
-	 * @param to The SplineItem, index, or name at the end of the range. Can accept: SplineItem, Long Integer or String.
+	 * @param from The SplineItem, index, or name at the beginning of the range.
+	 * @param to The SplineItem, index, or name at the end of the range.
 	 */
 	itemByRange(from: SplineItem | number | String, to: SplineItem | number | String): SplineItem[];
 
@@ -37886,7 +37886,7 @@ declare class EPSTexts {
 
 	/**
 	 * Returns the EPSText with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): EPSText;
 
@@ -37904,8 +37904,8 @@ declare class EPSTexts {
 
 	/**
 	 * Returns the EPSTexts within the specified range.
-	 * @param from The EPSText, index, or name at the beginning of the range. Can accept: EPSText, Long Integer or String.
-	 * @param to The EPSText, index, or name at the end of the range. Can accept: EPSText, Long Integer or String.
+	 * @param from The EPSText, index, or name at the beginning of the range.
+	 * @param to The EPSText, index, or name at the end of the range.
 	 */
 	itemByRange(from: EPSText | number | String, to: EPSText | number | String): EPSText[];
 
@@ -38012,7 +38012,7 @@ declare class ImportedPages {
 
 	/**
 	 * Returns the ImportedPage with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ImportedPage;
 
@@ -38030,8 +38030,8 @@ declare class ImportedPages {
 
 	/**
 	 * Returns the ImportedPages within the specified range.
-	 * @param from The ImportedPage, index, or name at the beginning of the range. Can accept: ImportedPage, Long Integer or String.
-	 * @param to The ImportedPage, index, or name at the end of the range. Can accept: ImportedPage, Long Integer or String.
+	 * @param from The ImportedPage, index, or name at the beginning of the range.
+	 * @param to The ImportedPage, index, or name at the end of the range.
 	 */
 	itemByRange(from: ImportedPage | number | String, to: ImportedPage | number | String): ImportedPage[];
 
@@ -38117,7 +38117,7 @@ declare class MediaItems {
 
 	/**
 	 * Returns the MediaItem with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MediaItem;
 
@@ -38135,8 +38135,8 @@ declare class MediaItems {
 
 	/**
 	 * Returns the MediaItems within the specified range.
-	 * @param from The MediaItem, index, or name at the beginning of the range. Can accept: MediaItem, Long Integer or String.
-	 * @param to The MediaItem, index, or name at the end of the range. Can accept: MediaItem, Long Integer or String.
+	 * @param from The MediaItem, index, or name at the beginning of the range.
+	 * @param to The MediaItem, index, or name at the end of the range.
 	 */
 	itemByRange(from: MediaItem | number | String, to: MediaItem | number | String): MediaItem[];
 
@@ -38346,7 +38346,7 @@ declare class Snippet {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -38377,7 +38377,7 @@ declare class Snippet {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -38431,7 +38431,7 @@ declare class Snippets {
 
 	/**
 	 * Returns the Snippet with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Snippet;
 
@@ -38449,8 +38449,8 @@ declare class Snippets {
 
 	/**
 	 * Returns the Snippets within the specified range.
-	 * @param from The Snippet, index, or name at the beginning of the range. Can accept: Snippet, Long Integer or String.
-	 * @param to The Snippet, index, or name at the end of the range. Can accept: Snippet, Long Integer or String.
+	 * @param from The Snippet, index, or name at the beginning of the range.
+	 * @param to The Snippet, index, or name at the end of the range.
 	 */
 	itemByRange(from: Snippet | number | String, to: Snippet | number | String): Snippet[];
 
@@ -38540,7 +38540,7 @@ declare class MotionPreset {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -38577,7 +38577,7 @@ declare class MotionPreset {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -38643,7 +38643,7 @@ declare class MotionPresets {
 
 	/**
 	 * Returns the MotionPreset with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MotionPreset;
 
@@ -38661,8 +38661,8 @@ declare class MotionPresets {
 
 	/**
 	 * Returns the MotionPresets within the specified range.
-	 * @param from The MotionPreset, index, or name at the beginning of the range. Can accept: MotionPreset, Long Integer or String.
-	 * @param to The MotionPreset, index, or name at the end of the range. Can accept: MotionPreset, Long Integer or String.
+	 * @param from The MotionPreset, index, or name at the beginning of the range.
+	 * @param to The MotionPreset, index, or name at the end of the range.
 	 */
 	itemByRange(from: MotionPreset | number | String, to: MotionPreset | number | String): MotionPreset[];
 
@@ -38762,7 +38762,7 @@ declare class Article {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -38800,7 +38800,7 @@ declare class Article {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -38864,7 +38864,7 @@ declare class Articles {
 
 	/**
 	 * Returns the Article with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Article;
 
@@ -38882,8 +38882,8 @@ declare class Articles {
 
 	/**
 	 * Returns the Articles within the specified range.
-	 * @param from The Article, index, or name at the beginning of the range. Can accept: Article, Long Integer or String.
-	 * @param to The Article, index, or name at the end of the range. Can accept: Article, Long Integer or String.
+	 * @param from The Article, index, or name at the beginning of the range.
+	 * @param to The Article, index, or name at the end of the range.
 	 */
 	itemByRange(from: Article | number | String, to: Article | number | String): Article[];
 
@@ -38963,7 +38963,7 @@ declare class ArticleMember {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -38988,7 +38988,7 @@ declare class ArticleMember {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -39051,7 +39051,7 @@ declare class ArticleMembers {
 
 	/**
 	 * Returns the ArticleMember with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ArticleMember;
 
@@ -39063,8 +39063,8 @@ declare class ArticleMembers {
 
 	/**
 	 * Returns the ArticleMembers within the specified range.
-	 * @param from The ArticleMember, index, or name at the beginning of the range. Can accept: ArticleMember, Long Integer or String.
-	 * @param to The ArticleMember, index, or name at the end of the range. Can accept: ArticleMember, Long Integer or String.
+	 * @param from The ArticleMember, index, or name at the beginning of the range.
+	 * @param to The ArticleMember, index, or name at the end of the range.
 	 */
 	itemByRange(from: ArticleMember | number | String, to: ArticleMember | number | String): ArticleMember[];
 
@@ -39144,7 +39144,7 @@ declare class ArticleChild {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -39164,7 +39164,7 @@ declare class ArticleChild {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -39218,7 +39218,7 @@ declare class ArticleChildren {
 
 	/**
 	 * Returns the ArticleChild with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ArticleChild;
 
@@ -39230,8 +39230,8 @@ declare class ArticleChildren {
 
 	/**
 	 * Returns the ArticleChildren within the specified range.
-	 * @param from The ArticleChild, index, or name at the beginning of the range. Can accept: ArticleChild, Long Integer or String.
-	 * @param to The ArticleChild, index, or name at the end of the range. Can accept: ArticleChild, Long Integer or String.
+	 * @param from The ArticleChild, index, or name at the beginning of the range.
+	 * @param to The ArticleChild, index, or name at the end of the range.
 	 */
 	itemByRange(from: ArticleChild | number | String, to: ArticleChild | number | String): ArticleChild[];
 
@@ -39299,7 +39299,7 @@ declare class HtmlItems {
 	 * Creates a new HtmlItem
 	 * @param layer The layer on which to create the HtmlItem. 
 	 * @param at The location at which to insert the HtmlItem relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new HtmlItem 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): HtmlItem;
@@ -39326,7 +39326,7 @@ declare class HtmlItems {
 
 	/**
 	 * Returns the HtmlItem with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HtmlItem;
 
@@ -39344,8 +39344,8 @@ declare class HtmlItems {
 
 	/**
 	 * Returns the HtmlItems within the specified range.
-	 * @param from The HtmlItem, index, or name at the beginning of the range. Can accept: HtmlItem, Long Integer or String.
-	 * @param to The HtmlItem, index, or name at the end of the range. Can accept: HtmlItem, Long Integer or String.
+	 * @param from The HtmlItem, index, or name at the beginning of the range.
+	 * @param to The HtmlItem, index, or name at the end of the range.
 	 */
 	itemByRange(from: HtmlItem | number | String, to: HtmlItem | number | String): HtmlItem[];
 
@@ -39440,7 +39440,7 @@ declare class Library {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -39458,14 +39458,14 @@ declare class Library {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
 
 	/**
 	 * Stores the specified object in the library.
-	 * @param using The page item(s) to store. Can accept: Array of PageItems, Movies, Sounds, Graphics or XMLElements.
+	 * @param using The page item(s) to store.
 	 * @param withProperties Initial values for properties of the new Library 
 	 */
 	store(using: PageItem[] | Movies | Sounds | Graphics | XMLElements, withProperties: Object): Asset;
@@ -39526,7 +39526,7 @@ declare class Libraries {
 
 	/**
 	 * Returns the Library with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Library;
 
@@ -39538,8 +39538,8 @@ declare class Libraries {
 
 	/**
 	 * Returns the Libraries within the specified range.
-	 * @param from The Library, index, or name at the beginning of the range. Can accept: Library, Long Integer or String.
-	 * @param to The Library, index, or name at the end of the range. Can accept: Library, Long Integer or String.
+	 * @param from The Library, index, or name at the beginning of the range.
+	 * @param to The Library, index, or name at the end of the range.
 	 */
 	itemByRange(from: Library | number | String, to: Library | number | String): Library[];
 
@@ -39639,7 +39639,7 @@ declare class Asset {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -39664,7 +39664,7 @@ declare class Asset {
 
 	/**
 	 * Places the asset in the specified document or text.
-	 * @param on The document or text object in which to place the asset. Can accept: Document or Text.
+	 * @param on The document or text object in which to place the asset.
 	 */
 	placeAsset(on: Document | Text): any[];
 
@@ -39676,7 +39676,7 @@ declare class Asset {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -39736,7 +39736,7 @@ declare class Assets {
 
 	/**
 	 * Returns the Asset with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Asset;
 
@@ -39754,8 +39754,8 @@ declare class Assets {
 
 	/**
 	 * Returns the Assets within the specified range.
-	 * @param from The Asset, index, or name at the beginning of the range. Can accept: Asset, Long Integer or String.
-	 * @param to The Asset, index, or name at the end of the range. Can accept: Asset, Long Integer or String.
+	 * @param from The Asset, index, or name at the beginning of the range.
+	 * @param to The Asset, index, or name at the end of the range.
 	 */
 	itemByRange(from: Asset | number | String, to: Asset | number | String): Asset[];
 
@@ -39970,7 +39970,7 @@ declare class Link {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -40020,14 +40020,14 @@ declare class Link {
 
 	/**
 	 * Points the link to a new source file.
-	 * @param to The full path name of the new source file. Can accept: File or String.
+	 * @param to The full path name of the new source file.
 	 */
 	relink(to: File | String): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -40114,7 +40114,7 @@ declare class Links {
 
 	/**
 	 * Returns the Link with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Link;
 
@@ -40132,8 +40132,8 @@ declare class Links {
 
 	/**
 	 * Returns the Links within the specified range.
-	 * @param from The Link, index, or name at the beginning of the range. Can accept: Link, Long Integer or String.
-	 * @param to The Link, index, or name at the end of the range. Can accept: Link, Long Integer or String.
+	 * @param from The Link, index, or name at the beginning of the range.
+	 * @param to The Link, index, or name at the end of the range.
 	 */
 	itemByRange(from: Link | number | String, to: Link | number | String): Link[];
 
@@ -40623,7 +40623,7 @@ declare class ObjectStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -40654,7 +40654,7 @@ declare class ObjectStyle {
 	/**
 	 * Moves the ObjectStyle to the specified location.
 	 * @param to The new location relative to the reference object or within the container object.
-	 * @param reference The reference object. Note: Required when the to parameter is before or after. Can accept: ObjectStyle, ObjectStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter is before or after.
 	 */
 	move(to: LocationOptions, reference: ObjectStyle | ObjectStyleGroup | Document | Application): ObjectStyle;
 
@@ -40667,7 +40667,7 @@ declare class ObjectStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -40727,7 +40727,7 @@ declare class ObjectStyles {
 
 	/**
 	 * Returns the ObjectStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ObjectStyle;
 
@@ -40745,8 +40745,8 @@ declare class ObjectStyles {
 
 	/**
 	 * Returns the ObjectStyles within the specified range.
-	 * @param from The ObjectStyle, index, or name at the beginning of the range. Can accept: ObjectStyle, Long Integer or String.
-	 * @param to The ObjectStyle, index, or name at the end of the range. Can accept: ObjectStyle, Long Integer or String.
+	 * @param from The ObjectStyle, index, or name at the beginning of the range.
+	 * @param to The ObjectStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: ObjectStyle | number | String, to: ObjectStyle | number | String): ObjectStyle[];
 
@@ -40836,7 +40836,7 @@ declare class ObjectStyleExportTagMap {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -40854,7 +40854,7 @@ declare class ObjectStyleExportTagMap {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -40918,14 +40918,14 @@ declare class ObjectStyleExportTagMaps {
 
 	/**
 	 * Returns the ObjectStyleExportTagMap with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ObjectStyleExportTagMap;
 
 	/**
 	 * Returns the ObjectStyleExportTagMaps within the specified range.
-	 * @param from The ObjectStyleExportTagMap, index, or name at the beginning of the range. Can accept: ObjectStyleExportTagMap, Long Integer or String.
-	 * @param to The ObjectStyleExportTagMap, index, or name at the end of the range. Can accept: ObjectStyleExportTagMap, Long Integer or String.
+	 * @param from The ObjectStyleExportTagMap, index, or name at the beginning of the range.
+	 * @param to The ObjectStyleExportTagMap, index, or name at the end of the range.
 	 */
 	itemByRange(from: ObjectStyleExportTagMap | number | String, to: ObjectStyleExportTagMap | number | String): ObjectStyleExportTagMap[];
 
@@ -43240,7 +43240,7 @@ declare class DocumentPreset {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -43276,7 +43276,7 @@ declare class DocumentPreset {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -43336,7 +43336,7 @@ declare class DocumentPresets {
 
 	/**
 	 * Returns the DocumentPreset with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DocumentPreset;
 
@@ -43354,8 +43354,8 @@ declare class DocumentPresets {
 
 	/**
 	 * Returns the DocumentPresets within the specified range.
-	 * @param from The DocumentPreset, index, or name at the beginning of the range. Can accept: DocumentPreset, Long Integer or String.
-	 * @param to The DocumentPreset, index, or name at the end of the range. Can accept: DocumentPreset, Long Integer or String.
+	 * @param from The DocumentPreset, index, or name at the beginning of the range.
+	 * @param to The DocumentPreset, index, or name at the end of the range.
 	 */
 	itemByRange(from: DocumentPreset | number | String, to: DocumentPreset | number | String): DocumentPreset[];
 
@@ -44709,7 +44709,7 @@ declare class GraphicLayer {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -44722,7 +44722,7 @@ declare class GraphicLayer {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -44776,7 +44776,7 @@ declare class GraphicLayers {
 
 	/**
 	 * Returns the GraphicLayer with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): GraphicLayer;
 
@@ -44794,8 +44794,8 @@ declare class GraphicLayers {
 
 	/**
 	 * Returns the GraphicLayers within the specified range.
-	 * @param from The GraphicLayer, index, or name at the beginning of the range. Can accept: GraphicLayer, Long Integer or String.
-	 * @param to The GraphicLayer, index, or name at the end of the range. Can accept: GraphicLayer, Long Integer or String.
+	 * @param from The GraphicLayer, index, or name at the beginning of the range.
+	 * @param to The GraphicLayer, index, or name at the end of the range.
 	 */
 	itemByRange(from: GraphicLayer | number | String, to: GraphicLayer | number | String): GraphicLayer[];
 
@@ -45657,7 +45657,7 @@ declare class PDFExportPreset {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -45680,7 +45680,7 @@ declare class PDFExportPreset {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -45740,7 +45740,7 @@ declare class PDFExportPresets {
 
 	/**
 	 * Returns the PDFExportPreset with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PDFExportPreset;
 
@@ -45752,8 +45752,8 @@ declare class PDFExportPresets {
 
 	/**
 	 * Returns the PDFExportPresets within the specified range.
-	 * @param from The PDFExportPreset, index, or name at the beginning of the range. Can accept: PDFExportPreset, Long Integer or String.
-	 * @param to The PDFExportPreset, index, or name at the end of the range. Can accept: PDFExportPreset, Long Integer or String.
+	 * @param from The PDFExportPreset, index, or name at the beginning of the range.
+	 * @param to The PDFExportPreset, index, or name at the end of the range.
 	 */
 	itemByRange(from: PDFExportPreset | number | String, to: PDFExportPreset | number | String): PDFExportPreset[];
 
@@ -46648,7 +46648,7 @@ declare class Preference {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -46661,7 +46661,7 @@ declare class Preference {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -46715,14 +46715,14 @@ declare class Preferences {
 
 	/**
 	 * Returns the Preference with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Preference;
 
 	/**
 	 * Returns the Preferences within the specified range.
-	 * @param from The Preference, index, or name at the beginning of the range. Can accept: Preference, Long Integer or String.
-	 * @param to The Preference, index, or name at the end of the range. Can accept: Preference, Long Integer or String.
+	 * @param from The Preference, index, or name at the beginning of the range.
+	 * @param to The Preference, index, or name at the end of the range.
 	 */
 	itemByRange(from: Preference | number | String, to: Preference | number | String): Preference[];
 
@@ -55021,7 +55021,7 @@ declare class PrinterPreset {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -55044,7 +55044,7 @@ declare class PrinterPreset {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -55104,7 +55104,7 @@ declare class PrinterPresets {
 
 	/**
 	 * Returns the PrinterPreset with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PrinterPreset;
 
@@ -55116,8 +55116,8 @@ declare class PrinterPresets {
 
 	/**
 	 * Returns the PrinterPresets within the specified range.
-	 * @param from The PrinterPreset, index, or name at the beginning of the range. Can accept: PrinterPreset, Long Integer or String.
-	 * @param to The PrinterPreset, index, or name at the end of the range. Can accept: PrinterPreset, Long Integer or String.
+	 * @param from The PrinterPreset, index, or name at the beginning of the range.
+	 * @param to The PrinterPreset, index, or name at the end of the range.
 	 */
 	itemByRange(from: PrinterPreset | number | String, to: PrinterPreset | number | String): PrinterPreset[];
 
@@ -56381,7 +56381,7 @@ declare class FlattenerPreset {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -56417,7 +56417,7 @@ declare class FlattenerPreset {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -56477,7 +56477,7 @@ declare class FlattenerPresets {
 
 	/**
 	 * Returns the FlattenerPreset with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): FlattenerPreset;
 
@@ -56495,8 +56495,8 @@ declare class FlattenerPresets {
 
 	/**
 	 * Returns the FlattenerPresets within the specified range.
-	 * @param from The FlattenerPreset, index, or name at the beginning of the range. Can accept: FlattenerPreset, Long Integer or String.
-	 * @param to The FlattenerPreset, index, or name at the end of the range. Can accept: FlattenerPreset, Long Integer or String.
+	 * @param from The FlattenerPreset, index, or name at the beginning of the range.
+	 * @param to The FlattenerPreset, index, or name at the end of the range.
 	 */
 	itemByRange(from: FlattenerPreset | number | String, to: FlattenerPreset | number | String): FlattenerPreset[];
 
@@ -58105,7 +58105,7 @@ declare class DisplaySetting {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -58118,7 +58118,7 @@ declare class DisplaySetting {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -58172,14 +58172,14 @@ declare class DisplaySettings {
 
 	/**
 	 * Returns the DisplaySetting with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DisplaySetting;
 
 	/**
 	 * Returns the DisplaySettings within the specified range.
-	 * @param from The DisplaySetting, index, or name at the beginning of the range. Can accept: DisplaySetting, Long Integer or String.
-	 * @param to The DisplaySetting, index, or name at the end of the range. Can accept: DisplaySetting, Long Integer or String.
+	 * @param from The DisplaySetting, index, or name at the beginning of the range.
+	 * @param to The DisplaySetting, index, or name at the end of the range.
 	 */
 	itemByRange(from: DisplaySetting | number | String, to: DisplaySetting | number | String): DisplaySetting[];
 
@@ -60444,7 +60444,7 @@ declare class ParaStyleMapping {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -60462,7 +60462,7 @@ declare class ParaStyleMapping {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -60525,14 +60525,14 @@ declare class ParaStyleMappings {
 
 	/**
 	 * Returns the ParaStyleMapping with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ParaStyleMapping;
 
 	/**
 	 * Returns the ParaStyleMappings within the specified range.
-	 * @param from The ParaStyleMapping, index, or name at the beginning of the range. Can accept: ParaStyleMapping, Long Integer or String.
-	 * @param to The ParaStyleMapping, index, or name at the end of the range. Can accept: ParaStyleMapping, Long Integer or String.
+	 * @param from The ParaStyleMapping, index, or name at the beginning of the range.
+	 * @param to The ParaStyleMapping, index, or name at the end of the range.
 	 */
 	itemByRange(from: ParaStyleMapping | number | String, to: ParaStyleMapping | number | String): ParaStyleMapping[];
 
@@ -60617,7 +60617,7 @@ declare class CellStyleMapping {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -60635,7 +60635,7 @@ declare class CellStyleMapping {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -60698,14 +60698,14 @@ declare class CellStyleMappings {
 
 	/**
 	 * Returns the CellStyleMapping with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CellStyleMapping;
 
 	/**
 	 * Returns the CellStyleMappings within the specified range.
-	 * @param from The CellStyleMapping, index, or name at the beginning of the range. Can accept: CellStyleMapping, Long Integer or String.
-	 * @param to The CellStyleMapping, index, or name at the end of the range. Can accept: CellStyleMapping, Long Integer or String.
+	 * @param from The CellStyleMapping, index, or name at the beginning of the range.
+	 * @param to The CellStyleMapping, index, or name at the end of the range.
 	 */
 	itemByRange(from: CellStyleMapping | number | String, to: CellStyleMapping | number | String): CellStyleMapping[];
 
@@ -60790,7 +60790,7 @@ declare class CharStyleMapping {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -60808,7 +60808,7 @@ declare class CharStyleMapping {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -60871,14 +60871,14 @@ declare class CharStyleMappings {
 
 	/**
 	 * Returns the CharStyleMapping with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CharStyleMapping;
 
 	/**
 	 * Returns the CharStyleMappings within the specified range.
-	 * @param from The CharStyleMapping, index, or name at the beginning of the range. Can accept: CharStyleMapping, Long Integer or String.
-	 * @param to The CharStyleMapping, index, or name at the end of the range. Can accept: CharStyleMapping, Long Integer or String.
+	 * @param from The CharStyleMapping, index, or name at the beginning of the range.
+	 * @param to The CharStyleMapping, index, or name at the end of the range.
 	 */
 	itemByRange(from: CharStyleMapping | number | String, to: CharStyleMapping | number | String): CharStyleMapping[];
 
@@ -60963,7 +60963,7 @@ declare class TableStyleMapping {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -60981,7 +60981,7 @@ declare class TableStyleMapping {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -61044,14 +61044,14 @@ declare class TableStyleMappings {
 
 	/**
 	 * Returns the TableStyleMapping with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TableStyleMapping;
 
 	/**
 	 * Returns the TableStyleMappings within the specified range.
-	 * @param from The TableStyleMapping, index, or name at the beginning of the range. Can accept: TableStyleMapping, Long Integer or String.
-	 * @param to The TableStyleMapping, index, or name at the end of the range. Can accept: TableStyleMapping, Long Integer or String.
+	 * @param from The TableStyleMapping, index, or name at the beginning of the range.
+	 * @param to The TableStyleMapping, index, or name at the end of the range.
 	 */
 	itemByRange(from: TableStyleMapping | number | String, to: TableStyleMapping | number | String): TableStyleMapping[];
 
@@ -61182,7 +61182,7 @@ declare class PreflightRule {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -61195,7 +61195,7 @@ declare class PreflightRule {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -61249,7 +61249,7 @@ declare class PreflightRules {
 
 	/**
 	 * Returns the PreflightRule with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PreflightRule;
 
@@ -61267,8 +61267,8 @@ declare class PreflightRules {
 
 	/**
 	 * Returns the PreflightRules within the specified range.
-	 * @param from The PreflightRule, index, or name at the beginning of the range. Can accept: PreflightRule, Long Integer or String.
-	 * @param to The PreflightRule, index, or name at the end of the range. Can accept: PreflightRule, Long Integer or String.
+	 * @param from The PreflightRule, index, or name at the beginning of the range.
+	 * @param to The PreflightRule, index, or name at the end of the range.
 	 */
 	itemByRange(from: PreflightRule | number | String, to: PreflightRule | number | String): PreflightRule[];
 
@@ -61358,7 +61358,7 @@ declare class RuleDataObject {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -61376,7 +61376,7 @@ declare class RuleDataObject {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -61439,7 +61439,7 @@ declare class RuleDataObjects {
 
 	/**
 	 * Returns the RuleDataObject with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): RuleDataObject;
 
@@ -61457,8 +61457,8 @@ declare class RuleDataObjects {
 
 	/**
 	 * Returns the RuleDataObjects within the specified range.
-	 * @param from The RuleDataObject, index, or name at the beginning of the range. Can accept: RuleDataObject, Long Integer or String.
-	 * @param to The RuleDataObject, index, or name at the end of the range. Can accept: RuleDataObject, Long Integer or String.
+	 * @param from The RuleDataObject, index, or name at the beginning of the range.
+	 * @param to The RuleDataObject, index, or name at the end of the range.
 	 */
 	itemByRange(from: RuleDataObject | number | String, to: RuleDataObject | number | String): RuleDataObject[];
 
@@ -61541,7 +61541,7 @@ declare class PreflightRuleInstances {
 
 	/**
 	 * Returns the PreflightRuleInstance with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PreflightRuleInstance;
 
@@ -61559,8 +61559,8 @@ declare class PreflightRuleInstances {
 
 	/**
 	 * Returns the PreflightRuleInstances within the specified range.
-	 * @param from The PreflightRuleInstance, index, or name at the beginning of the range. Can accept: PreflightRuleInstance, Long Integer or String.
-	 * @param to The PreflightRuleInstance, index, or name at the end of the range. Can accept: PreflightRuleInstance, Long Integer or String.
+	 * @param from The PreflightRuleInstance, index, or name at the beginning of the range.
+	 * @param to The PreflightRuleInstance, index, or name at the end of the range.
 	 */
 	itemByRange(from: PreflightRuleInstance | number | String, to: PreflightRuleInstance | number | String): PreflightRuleInstance[];
 
@@ -61660,7 +61660,7 @@ declare class PreflightProfile {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -61696,7 +61696,7 @@ declare class PreflightProfile {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -61724,7 +61724,7 @@ declare class PreflightProfile {
 
 	/**
 	 * Update the preflight profile by copying from another profile.
-	 * @param using The preflight profile to copy. Can accept: String or PreflightProfile. 
+	 * @param using The preflight profile to copy.
 	 */
 	update(using: String | PreflightProfile): void;
 
@@ -61773,7 +61773,7 @@ declare class PreflightProfiles {
 
 	/**
 	 * Returns the PreflightProfile with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PreflightProfile;
 
@@ -61791,8 +61791,8 @@ declare class PreflightProfiles {
 
 	/**
 	 * Returns the PreflightProfiles within the specified range.
-	 * @param from The PreflightProfile, index, or name at the beginning of the range. Can accept: PreflightProfile, Long Integer or String.
-	 * @param to The PreflightProfile, index, or name at the end of the range. Can accept: PreflightProfile, Long Integer or String.
+	 * @param from The PreflightProfile, index, or name at the beginning of the range.
+	 * @param to The PreflightProfile, index, or name at the end of the range.
 	 */
 	itemByRange(from: PreflightProfile | number | String, to: PreflightProfile | number | String): PreflightProfile[];
 
@@ -61892,7 +61892,7 @@ declare class PreflightProcess {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -61910,7 +61910,7 @@ declare class PreflightProcess {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -61986,14 +61986,14 @@ declare class PreflightProcesses {
 
 	/**
 	 * Returns the PreflightProcess with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PreflightProcess;
 
 	/**
 	 * Returns the PreflightProcesses within the specified range.
-	 * @param from The PreflightProcess, index, or name at the beginning of the range. Can accept: PreflightProcess, Long Integer or String.
-	 * @param to The PreflightProcess, index, or name at the end of the range. Can accept: PreflightProcess, Long Integer or String.
+	 * @param from The PreflightProcess, index, or name at the beginning of the range.
+	 * @param to The PreflightProcess, index, or name at the end of the range.
 	 */
 	itemByRange(from: PreflightProcess | number | String, to: PreflightProcess | number | String): PreflightProcess[];
 
@@ -62093,7 +62093,7 @@ declare class PreflightProfileRule {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -62124,7 +62124,7 @@ declare class PreflightProfileRule {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -62185,7 +62185,7 @@ declare class PreflightProfileRules {
 
 	/**
 	 * Returns the PreflightProfileRule with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PreflightProfileRule;
 
@@ -62203,8 +62203,8 @@ declare class PreflightProfileRules {
 
 	/**
 	 * Returns the PreflightProfileRules within the specified range.
-	 * @param from The PreflightProfileRule, index, or name at the beginning of the range. Can accept: PreflightProfileRule, Long Integer or String.
-	 * @param to The PreflightProfileRule, index, or name at the end of the range. Can accept: PreflightProfileRule, Long Integer or String.
+	 * @param from The PreflightProfileRule, index, or name at the beginning of the range.
+	 * @param to The PreflightProfileRule, index, or name at the end of the range.
 	 */
 	itemByRange(from: PreflightProfileRule | number | String, to: PreflightProfileRule | number | String): PreflightProfileRule[];
 
@@ -62289,7 +62289,7 @@ declare class StrokeStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -62306,14 +62306,14 @@ declare class StrokeStyle {
 
 	/**
 	 * Deletes the stroke style.
-	 * @param replacingWith The stroke style to apply in place of the deleted style. . Can accept: StrokeStyle or String. 
+	 * @param replacingWith The stroke style to apply in place of the deleted style. .
 	 */
 	remove(replacingWith: StrokeStyle | String): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -62367,7 +62367,7 @@ declare class StrokeStyles {
 
 	/**
 	 * Returns the StrokeStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): StrokeStyle;
 
@@ -62385,8 +62385,8 @@ declare class StrokeStyles {
 
 	/**
 	 * Returns the StrokeStyles within the specified range.
-	 * @param from The StrokeStyle, index, or name at the beginning of the range. Can accept: StrokeStyle, Long Integer or String.
-	 * @param to The StrokeStyle, index, or name at the end of the range. Can accept: StrokeStyle, Long Integer or String.
+	 * @param from The StrokeStyle, index, or name at the beginning of the range.
+	 * @param to The StrokeStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: StrokeStyle | number | String, to: StrokeStyle | number | String): StrokeStyle[];
 
@@ -62483,7 +62483,7 @@ declare class DashedStrokeStyles {
 
 	/**
 	 * Returns the DashedStrokeStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DashedStrokeStyle;
 
@@ -62501,8 +62501,8 @@ declare class DashedStrokeStyles {
 
 	/**
 	 * Returns the DashedStrokeStyles within the specified range.
-	 * @param from The DashedStrokeStyle, index, or name at the beginning of the range. Can accept: DashedStrokeStyle, Long Integer or String.
-	 * @param to The DashedStrokeStyle, index, or name at the end of the range. Can accept: DashedStrokeStyle, Long Integer or String.
+	 * @param from The DashedStrokeStyle, index, or name at the beginning of the range.
+	 * @param to The DashedStrokeStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: DashedStrokeStyle | number | String, to: DashedStrokeStyle | number | String): DashedStrokeStyle[];
 
@@ -62594,7 +62594,7 @@ declare class DottedStrokeStyles {
 
 	/**
 	 * Returns the DottedStrokeStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DottedStrokeStyle;
 
@@ -62612,8 +62612,8 @@ declare class DottedStrokeStyles {
 
 	/**
 	 * Returns the DottedStrokeStyles within the specified range.
-	 * @param from The DottedStrokeStyle, index, or name at the beginning of the range. Can accept: DottedStrokeStyle, Long Integer or String.
-	 * @param to The DottedStrokeStyle, index, or name at the end of the range. Can accept: DottedStrokeStyle, Long Integer or String.
+	 * @param from The DottedStrokeStyle, index, or name at the beginning of the range.
+	 * @param to The DottedStrokeStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: DottedStrokeStyle | number | String, to: DottedStrokeStyle | number | String): DottedStrokeStyle[];
 
@@ -62700,7 +62700,7 @@ declare class StripedStrokeStyles {
 
 	/**
 	 * Returns the StripedStrokeStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): StripedStrokeStyle;
 
@@ -62718,8 +62718,8 @@ declare class StripedStrokeStyles {
 
 	/**
 	 * Returns the StripedStrokeStyles within the specified range.
-	 * @param from The StripedStrokeStyle, index, or name at the beginning of the range. Can accept: StripedStrokeStyle, Long Integer or String.
-	 * @param to The StripedStrokeStyle, index, or name at the end of the range. Can accept: StripedStrokeStyle, Long Integer or String.
+	 * @param from The StripedStrokeStyle, index, or name at the beginning of the range.
+	 * @param to The StripedStrokeStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: StripedStrokeStyle | number | String, to: StripedStrokeStyle | number | String): StripedStrokeStyle[];
 
@@ -62854,7 +62854,7 @@ declare class TOCStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -62890,7 +62890,7 @@ declare class TOCStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -62950,7 +62950,7 @@ declare class TOCStyles {
 
 	/**
 	 * Returns the TOCStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TOCStyle;
 
@@ -62968,8 +62968,8 @@ declare class TOCStyles {
 
 	/**
 	 * Returns the TOCStyles within the specified range.
-	 * @param from The TOCStyle, index, or name at the beginning of the range. Can accept: TOCStyle, Long Integer or String.
-	 * @param to The TOCStyle, index, or name at the end of the range. Can accept: TOCStyle, Long Integer or String.
+	 * @param from The TOCStyle, index, or name at the beginning of the range.
+	 * @param to The TOCStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: TOCStyle | number | String, to: TOCStyle | number | String): TOCStyle[];
 
@@ -63079,7 +63079,7 @@ declare class TOCStyleEntry {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -63097,7 +63097,7 @@ declare class TOCStyleEntry {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -63158,7 +63158,7 @@ declare class TOCStyleEntries {
 
 	/**
 	 * Returns the TOCStyleEntry with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TOCStyleEntry;
 
@@ -63170,8 +63170,8 @@ declare class TOCStyleEntries {
 
 	/**
 	 * Returns the TOCStyleEntries within the specified range.
-	 * @param from The TOCStyleEntry, index, or name at the beginning of the range. Can accept: TOCStyleEntry, Long Integer or String.
-	 * @param to The TOCStyleEntry, index, or name at the end of the range. Can accept: TOCStyleEntry, Long Integer or String.
+	 * @param from The TOCStyleEntry, index, or name at the beginning of the range.
+	 * @param to The TOCStyleEntry, index, or name at the end of the range.
 	 */
 	itemByRange(from: TOCStyleEntry | number | String, to: TOCStyleEntry | number | String): TOCStyleEntry[];
 
@@ -63951,7 +63951,7 @@ declare class Cell {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -64053,7 +64053,7 @@ declare class Cell {
 
 	/**
 	 * Merges the cells.
-	 * @param with The cell(s) to merge with. Can accept: Cell, Row or Column. 
+	 * @param with The cell(s) to merge with.
 	 */
 	merge(with_: Cell | Row | Column): Cell;
 
@@ -64070,7 +64070,7 @@ declare class Cell {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -64141,7 +64141,7 @@ declare class Cells {
 
 	/**
 	 * Returns the Cell with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Cell;
 
@@ -64159,8 +64159,8 @@ declare class Cells {
 
 	/**
 	 * Returns the Cells within the specified range.
-	 * @param from The Cell, index, or name at the beginning of the range. Can accept: Cell, Long Integer or String.
-	 * @param to The Cell, index, or name at the end of the range. Can accept: Cell, Long Integer or String.
+	 * @param from The Cell, index, or name at the beginning of the range.
+	 * @param to The Cell, index, or name at the end of the range.
 	 */
 	itemByRange(from: Cell | number | String, to: Cell | number | String): Cell[];
 
@@ -65000,7 +65000,7 @@ declare class Table {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -65118,7 +65118,7 @@ declare class Table {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -65164,7 +65164,7 @@ declare class Tables {
 	/**
 	 * Creates a new table.
 	 * @param to The location of the new table relative to the reference object or within the container object.
-	 * @param reference The reference object. Note: Required when the to value specifies before or after. Can accept: Table, XMLElement, XmlStory, TextFrame, Text, InsertionPoint, TextStyleRange, Paragraph, TextColumn, Line, Word, Character, Story or Cell. 
+	 * @param reference The reference object. Note: Required when the to value specifies before or after.
 	 * @param withProperties Initial values for properties of the new Table 
 	 */
 	add(to?: LocationOptions, reference?: Table | XMLElement | XmlStory | TextFrame | Text | InsertionPoint | TextStyleRange | Paragraph | TextColumn | Line | Word | Character | Story | Cell, withProperties?: Object): Table;
@@ -65191,7 +65191,7 @@ declare class Tables {
 
 	/**
 	 * Returns the Table with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Table;
 
@@ -65209,8 +65209,8 @@ declare class Tables {
 
 	/**
 	 * Returns the Tables within the specified range.
-	 * @param from The Table, index, or name at the beginning of the range. Can accept: Table, Long Integer or String.
-	 * @param to The Table, index, or name at the end of the range. Can accept: Table, Long Integer or String.
+	 * @param from The Table, index, or name at the beginning of the range.
+	 * @param to The Table, index, or name at the end of the range.
 	 */
 	itemByRange(from: Table | number | String, to: Table | number | String): Table[];
 
@@ -65800,7 +65800,7 @@ declare class Column {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -65866,7 +65866,7 @@ declare class Column {
 
 	/**
 	 * Merges the cells.
-	 * @param with The cell(s) to merge with. Can accept: Cell, Row or Column. 
+	 * @param with The cell(s) to merge with.
 	 */
 	merge(with_: Cell | Row | Column): Cell;
 
@@ -65878,7 +65878,7 @@ declare class Column {
 	/**
 	 * Redistributes the specified range of Columns so that the Columns have a uniform size. Note: The maximum or minimum height or width specified for some of the cells in the range may prevent them from being exactly even.
 	 * @param using The direction in which to redistribute.
-	 * @param thru The last Column in the range. Can accept: Cell, Column or Row. 
+	 * @param thru The last Column in the range.
 	 */
 	redistribute(using: HorizontalOrVertical, thru: Cell | Column | Row): void;
 
@@ -65890,7 +65890,7 @@ declare class Column {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -65942,7 +65942,7 @@ declare class Columns {
 	/**
 	 * Creates a new Column.
 	 * @param at The Column's location relative to the reference object or within the table.
-	 * @param reference The reference object. Note: The reference object must be within the table. Required only when the at value contains before or after. Can accept: Row, Column, Cell or Table. 
+	 * @param reference The reference object. Note: The reference object must be within the table. Required only when the at value contains before or after.
 	 * @param withProperties Initial values for properties of the new Column 
 	 */
 	add(at?: LocationOptions, reference?: Row | Column | Cell | Table, withProperties?: Object): any;
@@ -65969,7 +65969,7 @@ declare class Columns {
 
 	/**
 	 * Returns the Column with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Column;
 
@@ -65981,8 +65981,8 @@ declare class Columns {
 
 	/**
 	 * Returns the Columns within the specified range.
-	 * @param from The Column, index, or name at the beginning of the range. Can accept: Column, Long Integer or String.
-	 * @param to The Column, index, or name at the end of the range. Can accept: Column, Long Integer or String.
+	 * @param from The Column, index, or name at the beginning of the range.
+	 * @param to The Column, index, or name at the end of the range.
 	 */
 	itemByRange(from: Column | number | String, to: Column | number | String): Column[];
 
@@ -66572,7 +66572,7 @@ declare class Row {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -66638,7 +66638,7 @@ declare class Row {
 
 	/**
 	 * Merges the cells.
-	 * @param with The cell(s) to merge with. Can accept: Cell, Row or Column. 
+	 * @param with The cell(s) to merge with.
 	 */
 	merge(with_: Cell | Row | Column): Cell;
 
@@ -66650,7 +66650,7 @@ declare class Row {
 	/**
 	 * Redistributes the specified range of Rows so that the Rows have a uniform size. Note: The maximum or minimum height or width specified for some of the cells in the range may prevent them from being exactly even.
 	 * @param using The direction in which to redistribute.
-	 * @param thru The last Row in the range. Can accept: Cell, Column or Row. 
+	 * @param thru The last Row in the range.
 	 */
 	redistribute(using: HorizontalOrVertical, thru: Cell | Column | Row): void;
 
@@ -66662,7 +66662,7 @@ declare class Row {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -66714,7 +66714,7 @@ declare class Rows {
 	/**
 	 * Creates a new Row.
 	 * @param at The Row's location relative to the reference object or within the table.
-	 * @param reference The reference object. Note: The reference object must be within the table. Required only when the at value contains before or after. Can accept: Row, Column, Cell or Table. 
+	 * @param reference The reference object. Note: The reference object must be within the table. Required only when the at value contains before or after.
 	 * @param withProperties Initial values for properties of the new Row 
 	 */
 	add(at?: LocationOptions, reference?: Row | Column | Cell | Table, withProperties?: Object): any;
@@ -66741,7 +66741,7 @@ declare class Rows {
 
 	/**
 	 * Returns the Row with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Row;
 
@@ -66753,8 +66753,8 @@ declare class Rows {
 
 	/**
 	 * Returns the Rows within the specified range.
-	 * @param from The Row, index, or name at the beginning of the range. Can accept: Row, Long Integer or String.
-	 * @param to The Row, index, or name at the end of the range. Can accept: Row, Long Integer or String.
+	 * @param from The Row, index, or name at the beginning of the range.
+	 * @param to The Row, index, or name at the end of the range.
 	 */
 	itemByRange(from: Row | number | String, to: Row | number | String): Row[];
 
@@ -67419,7 +67419,7 @@ declare class TableStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -67450,7 +67450,7 @@ declare class TableStyle {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): TableStyle;
 
@@ -67463,7 +67463,7 @@ declare class TableStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -67523,7 +67523,7 @@ declare class TableStyles {
 
 	/**
 	 * Returns the TableStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TableStyle;
 
@@ -67541,8 +67541,8 @@ declare class TableStyles {
 
 	/**
 	 * Returns the TableStyles within the specified range.
-	 * @param from The TableStyle, index, or name at the beginning of the range. Can accept: TableStyle, Long Integer or String.
-	 * @param to The TableStyle, index, or name at the end of the range. Can accept: TableStyle, Long Integer or String.
+	 * @param from The TableStyle, index, or name at the beginning of the range.
+	 * @param to The TableStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: TableStyle | number | String, to: TableStyle | number | String): TableStyle[];
 
@@ -67642,7 +67642,7 @@ declare class TableStyleGroup {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -67673,20 +67673,20 @@ declare class TableStyleGroup {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): TableStyleGroup;
 
 	/**
 	 * Deletes the style.
-	 * @param replacingWith The style to apply in place of the deleted style. Can accept: ParagraphStyle or CharacterStyle. 
+	 * @param replacingWith The style to apply in place of the deleted style.
 	 */
 	remove(replacingWith: ParagraphStyle | CharacterStyle): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -67746,7 +67746,7 @@ declare class TableStyleGroups {
 
 	/**
 	 * Returns the TableStyleGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TableStyleGroup;
 
@@ -67764,8 +67764,8 @@ declare class TableStyleGroups {
 
 	/**
 	 * Returns the TableStyleGroups within the specified range.
-	 * @param from The TableStyleGroup, index, or name at the beginning of the range. Can accept: TableStyleGroup, Long Integer or String.
-	 * @param to The TableStyleGroup, index, or name at the end of the range. Can accept: TableStyleGroup, Long Integer or String.
+	 * @param from The TableStyleGroup, index, or name at the beginning of the range.
+	 * @param to The TableStyleGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: TableStyleGroup | number | String, to: TableStyleGroup | number | String): TableStyleGroup[];
 
@@ -68205,7 +68205,7 @@ declare class CellStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -68236,7 +68236,7 @@ declare class CellStyle {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): CellStyle;
 
@@ -68249,7 +68249,7 @@ declare class CellStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -68309,7 +68309,7 @@ declare class CellStyles {
 
 	/**
 	 * Returns the CellStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CellStyle;
 
@@ -68327,8 +68327,8 @@ declare class CellStyles {
 
 	/**
 	 * Returns the CellStyles within the specified range.
-	 * @param from The CellStyle, index, or name at the beginning of the range. Can accept: CellStyle, Long Integer or String.
-	 * @param to The CellStyle, index, or name at the end of the range. Can accept: CellStyle, Long Integer or String.
+	 * @param from The CellStyle, index, or name at the beginning of the range.
+	 * @param to The CellStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: CellStyle | number | String, to: CellStyle | number | String): CellStyle[];
 
@@ -68428,7 +68428,7 @@ declare class CellStyleGroup {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -68459,20 +68459,20 @@ declare class CellStyleGroup {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): CellStyleGroup;
 
 	/**
 	 * Deletes the style.
-	 * @param replacingWith The style to apply in place of the deleted style. Can accept: ParagraphStyle or CharacterStyle. 
+	 * @param replacingWith The style to apply in place of the deleted style.
 	 */
 	remove(replacingWith: ParagraphStyle | CharacterStyle): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -68532,7 +68532,7 @@ declare class CellStyleGroups {
 
 	/**
 	 * Returns the CellStyleGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CellStyleGroup;
 
@@ -68550,8 +68550,8 @@ declare class CellStyleGroups {
 
 	/**
 	 * Returns the CellStyleGroups within the specified range.
-	 * @param from The CellStyleGroup, index, or name at the beginning of the range. Can accept: CellStyleGroup, Long Integer or String.
-	 * @param to The CellStyleGroup, index, or name at the end of the range. Can accept: CellStyleGroup, Long Integer or String.
+	 * @param from The CellStyleGroup, index, or name at the beginning of the range.
+	 * @param to The CellStyleGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: CellStyleGroup | number | String, to: CellStyleGroup | number | String): CellStyleGroup[];
 
@@ -68636,7 +68636,7 @@ declare class NestedLineStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -68654,7 +68654,7 @@ declare class NestedLineStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -68714,14 +68714,14 @@ declare class NestedLineStyles {
 
 	/**
 	 * Returns the NestedLineStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): NestedLineStyle;
 
 	/**
 	 * Returns the NestedLineStyles within the specified range.
-	 * @param from The NestedLineStyle, index, or name at the beginning of the range. Can accept: NestedLineStyle, Long Integer or String.
-	 * @param to The NestedLineStyle, index, or name at the end of the range. Can accept: NestedLineStyle, Long Integer or String.
+	 * @param from The NestedLineStyle, index, or name at the beginning of the range.
+	 * @param to The NestedLineStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: NestedLineStyle | number | String, to: NestedLineStyle | number | String): NestedLineStyle[];
 
@@ -68801,7 +68801,7 @@ declare class NestedGrepStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -68819,7 +68819,7 @@ declare class NestedGrepStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -68879,14 +68879,14 @@ declare class NestedGrepStyles {
 
 	/**
 	 * Returns the NestedGrepStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): NestedGrepStyle;
 
 	/**
 	 * Returns the NestedGrepStyles within the specified range.
-	 * @param from The NestedGrepStyle, index, or name at the beginning of the range. Can accept: NestedGrepStyle, Long Integer or String.
-	 * @param to The NestedGrepStyle, index, or name at the end of the range. Can accept: NestedGrepStyle, Long Integer or String.
+	 * @param from The NestedGrepStyle, index, or name at the beginning of the range.
+	 * @param to The NestedGrepStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: NestedGrepStyle | number | String, to: NestedGrepStyle | number | String): NestedGrepStyle[];
 
@@ -70596,7 +70596,7 @@ declare class Text {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -70623,7 +70623,7 @@ declare class Text {
 
 	/**
 	 * asynchronously exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -70696,7 +70696,7 @@ declare class Text {
 	 * @param emailAddress QR code Email Address 
 	 * @param subject QR code Email Subject 
 	 * @param body QR code Email Body Message 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
 	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -70704,7 +70704,7 @@ declare class Text {
 	/**
 	 * Create Hyperlink QR Code on the page item or document
 	 * @param urlLink QR code Hyperlink URL
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
 	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -70718,7 +70718,7 @@ declare class Text {
 	/**
 	 * Create Plain Text QR Code on the page item
 	 * @param plainText QR code Plain Text
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
 	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -70738,7 +70738,7 @@ declare class Text {
 	 * Create Text Msg QR Code on the page item or document
 	 * @param cellNumber QR code Text Phone Number 
 	 * @param textMessage QR code Text Message 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
 	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -70768,7 +70768,7 @@ declare class Text {
 	 * @param country QR code Business Card Country 
 	 * @param postalCode QR code Business Card Postal Code 
 	 * @param website QR code Business Card URL 
-	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic . Can accept: Swatch or String. 
+	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
 	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
@@ -70776,13 +70776,13 @@ declare class Text {
 	/**
 	 * Duplicates the text in the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Text, Story, Cell, Row, Column, Table or PageItem. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	duplicate(to: LocationOptions, reference: Text | Story | Cell | Row | Column | Table | PageItem): Text;
 
 	/**
 	 * Exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -70835,7 +70835,7 @@ declare class Text {
 	/**
 	 * Moves the text to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Text, Story, Cell, Row, Column, Table or PageItem. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: Text | Story | Cell | Row | Column | Table | PageItem): Text;
 
@@ -70860,7 +70860,7 @@ declare class Text {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -70931,14 +70931,14 @@ declare class Texts {
 
 	/**
 	 * Returns the Text with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Text;
 
 	/**
 	 * Returns the Texts within the specified range.
-	 * @param from The Text, index, or name at the beginning of the range. Can accept: Text, Long Integer or String.
-	 * @param to The Text, index, or name at the end of the range. Can accept: Text, Long Integer or String.
+	 * @param from The Text, index, or name at the beginning of the range.
+	 * @param to The Text, index, or name at the end of the range.
 	 */
 	itemByRange(from: Text | number | String, to: Text | number | String): Text[];
 
@@ -71014,14 +71014,14 @@ declare class Characters {
 
 	/**
 	 * Returns the Character with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Character;
 
 	/**
 	 * Returns the Characters within the specified range.
-	 * @param from The Character, index, or name at the beginning of the range. Can accept: Character, Long Integer or String.
-	 * @param to The Character, index, or name at the end of the range. Can accept: Character, Long Integer or String.
+	 * @param from The Character, index, or name at the beginning of the range.
+	 * @param to The Character, index, or name at the end of the range.
 	 */
 	itemByRange(from: Character | number | String, to: Character | number | String): Character[];
 
@@ -71097,14 +71097,14 @@ declare class Words {
 
 	/**
 	 * Returns the Word with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Word;
 
 	/**
 	 * Returns the Words within the specified range.
-	 * @param from The Word, index, or name at the beginning of the range. Can accept: Word, Long Integer or String.
-	 * @param to The Word, index, or name at the end of the range. Can accept: Word, Long Integer or String.
+	 * @param from The Word, index, or name at the beginning of the range.
+	 * @param to The Word, index, or name at the end of the range.
 	 */
 	itemByRange(from: Word | number | String, to: Word | number | String): Word[];
 
@@ -71180,14 +71180,14 @@ declare class Lines {
 
 	/**
 	 * Returns the Line with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Line;
 
 	/**
 	 * Returns the Lines within the specified range.
-	 * @param from The Line, index, or name at the beginning of the range. Can accept: Line, Long Integer or String.
-	 * @param to The Line, index, or name at the end of the range. Can accept: Line, Long Integer or String.
+	 * @param from The Line, index, or name at the beginning of the range.
+	 * @param to The Line, index, or name at the end of the range.
 	 */
 	itemByRange(from: Line | number | String, to: Line | number | String): Line[];
 
@@ -71263,14 +71263,14 @@ declare class TextColumns {
 
 	/**
 	 * Returns the TextColumn with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextColumn;
 
 	/**
 	 * Returns the TextColumns within the specified range.
-	 * @param from The TextColumn, index, or name at the beginning of the range. Can accept: TextColumn, Long Integer or String.
-	 * @param to The TextColumn, index, or name at the end of the range. Can accept: TextColumn, Long Integer or String.
+	 * @param from The TextColumn, index, or name at the beginning of the range.
+	 * @param to The TextColumn, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextColumn | number | String, to: TextColumn | number | String): TextColumn[];
 
@@ -71356,14 +71356,14 @@ declare class Paragraphs {
 
 	/**
 	 * Returns the Paragraph with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Paragraph;
 
 	/**
 	 * Returns the Paragraphs within the specified range.
-	 * @param from The Paragraph, index, or name at the beginning of the range. Can accept: Paragraph, Long Integer or String.
-	 * @param to The Paragraph, index, or name at the end of the range. Can accept: Paragraph, Long Integer or String.
+	 * @param from The Paragraph, index, or name at the beginning of the range.
+	 * @param to The Paragraph, index, or name at the end of the range.
 	 */
 	itemByRange(from: Paragraph | number | String, to: Paragraph | number | String): Paragraph[];
 
@@ -71439,14 +71439,14 @@ declare class TextStyleRanges {
 
 	/**
 	 * Returns the TextStyleRange with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextStyleRange;
 
 	/**
 	 * Returns the TextStyleRanges within the specified range.
-	 * @param from The TextStyleRange, index, or name at the beginning of the range. Can accept: TextStyleRange, Long Integer or String.
-	 * @param to The TextStyleRange, index, or name at the end of the range. Can accept: TextStyleRange, Long Integer or String.
+	 * @param from The TextStyleRange, index, or name at the beginning of the range.
+	 * @param to The TextStyleRange, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextStyleRange | number | String, to: TextStyleRange | number | String): TextStyleRange[];
 
@@ -71522,14 +71522,14 @@ declare class InsertionPoints {
 
 	/**
 	 * Returns the InsertionPoint with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): InsertionPoint;
 
 	/**
 	 * Returns the InsertionPoints within the specified range.
-	 * @param from The InsertionPoint, index, or name at the beginning of the range. Can accept: InsertionPoint, Long Integer or String.
-	 * @param to The InsertionPoint, index, or name at the end of the range. Can accept: InsertionPoint, Long Integer or String.
+	 * @param from The InsertionPoint, index, or name at the beginning of the range.
+	 * @param to The InsertionPoint, index, or name at the end of the range.
 	 */
 	itemByRange(from: InsertionPoint | number | String, to: InsertionPoint | number | String): InsertionPoint[];
 
@@ -71951,7 +71951,7 @@ declare class TextFrames {
 	 * Creates a new TextFrame
 	 * @param layer The layer on which to create the TextFrame. 
 	 * @param at The location at which to insert the TextFrame relative to the reference object or within the container object. 
-	 * @param reference The reference object. Note: Required when the at parameter is before or after. Can accept: Document, Spread, MasterSpread, Page, Layer or PageItem. 
+	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new TextFrame 
 	 */
 	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): TextFrame;
@@ -71978,7 +71978,7 @@ declare class TextFrames {
 
 	/**
 	 * Returns the TextFrame with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextFrame;
 
@@ -71996,8 +71996,8 @@ declare class TextFrames {
 
 	/**
 	 * Returns the TextFrames within the specified range.
-	 * @param from The TextFrame, index, or name at the beginning of the range. Can accept: TextFrame, Long Integer or String.
-	 * @param to The TextFrame, index, or name at the end of the range. Can accept: TextFrame, Long Integer or String.
+	 * @param from The TextFrame, index, or name at the beginning of the range.
+	 * @param to The TextFrame, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextFrame | number | String, to: TextFrame | number | String): TextFrame[];
 
@@ -73777,14 +73777,14 @@ declare class Story {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
 
 	/**
 	 * asynchronously exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -73860,13 +73860,13 @@ declare class Story {
 	/**
 	 * Duplicates the text in the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Text, Story, Cell, Row, Column, Table or PageItem. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	duplicate(to: LocationOptions, reference: Text | Story | Cell | Row | Column | Table | PageItem): Text;
 
 	/**
 	 * Exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -73926,7 +73926,7 @@ declare class Story {
 	/**
 	 * Moves the text to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Text, Story, Cell, Row, Column, Table or PageItem. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: Text | Story | Cell | Row | Column | Table | PageItem): Text;
 
@@ -73949,7 +73949,7 @@ declare class Story {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -74013,7 +74013,7 @@ declare class Stories {
 
 	/**
 	 * Returns the Story with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Story;
 
@@ -74031,8 +74031,8 @@ declare class Stories {
 
 	/**
 	 * Returns the Stories within the specified range.
-	 * @param from The Story, index, or name at the beginning of the range. Can accept: Story, Long Integer or String.
-	 * @param to The Story, index, or name at the end of the range. Can accept: Story, Long Integer or String.
+	 * @param from The Story, index, or name at the beginning of the range.
+	 * @param to The Story, index, or name at the end of the range.
 	 */
 	itemByRange(from: Story | number | String, to: Story | number | String): Story[];
 
@@ -75532,7 +75532,7 @@ declare class ParagraphStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -75584,7 +75584,7 @@ declare class ParagraphStyle {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): ParagraphStyle;
 
@@ -75597,7 +75597,7 @@ declare class ParagraphStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -75657,7 +75657,7 @@ declare class ParagraphStyles {
 
 	/**
 	 * Returns the ParagraphStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ParagraphStyle;
 
@@ -75675,8 +75675,8 @@ declare class ParagraphStyles {
 
 	/**
 	 * Returns the ParagraphStyles within the specified range.
-	 * @param from The ParagraphStyle, index, or name at the beginning of the range. Can accept: ParagraphStyle, Long Integer or String.
-	 * @param to The ParagraphStyle, index, or name at the end of the range. Can accept: ParagraphStyle, Long Integer or String.
+	 * @param from The ParagraphStyle, index, or name at the beginning of the range.
+	 * @param to The ParagraphStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: ParagraphStyle | number | String, to: ParagraphStyle | number | String): ParagraphStyle[];
 
@@ -76526,7 +76526,7 @@ declare class CharacterStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -76567,7 +76567,7 @@ declare class CharacterStyle {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): CharacterStyle;
 
@@ -76580,7 +76580,7 @@ declare class CharacterStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -76640,7 +76640,7 @@ declare class CharacterStyles {
 
 	/**
 	 * Returns the CharacterStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CharacterStyle;
 
@@ -76658,8 +76658,8 @@ declare class CharacterStyles {
 
 	/**
 	 * Returns the CharacterStyles within the specified range.
-	 * @param from The CharacterStyle, index, or name at the beginning of the range. Can accept: CharacterStyle, Long Integer or String.
-	 * @param to The CharacterStyle, index, or name at the end of the range. Can accept: CharacterStyle, Long Integer or String.
+	 * @param from The CharacterStyle, index, or name at the beginning of the range.
+	 * @param to The CharacterStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: CharacterStyle | number | String, to: CharacterStyle | number | String): CharacterStyle[];
 
@@ -76749,7 +76749,7 @@ declare class TabStop {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -76767,7 +76767,7 @@ declare class TabStop {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -76827,14 +76827,14 @@ declare class TabStops {
 
 	/**
 	 * Returns the TabStop with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TabStop;
 
 	/**
 	 * Returns the TabStops within the specified range.
-	 * @param from The TabStop, index, or name at the beginning of the range. Can accept: TabStop, Long Integer or String.
-	 * @param to The TabStop, index, or name at the end of the range. Can accept: TabStop, Long Integer or String.
+	 * @param from The TabStop, index, or name at the beginning of the range.
+	 * @param to The TabStop, index, or name at the end of the range.
 	 */
 	itemByRange(from: TabStop | number | String, to: TabStop | number | String): TabStop[];
 
@@ -76924,7 +76924,7 @@ declare class NestedStyle {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -76942,7 +76942,7 @@ declare class NestedStyle {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -77002,14 +77002,14 @@ declare class NestedStyles {
 
 	/**
 	 * Returns the NestedStyle with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): NestedStyle;
 
 	/**
 	 * Returns the NestedStyles within the specified range.
-	 * @param from The NestedStyle, index, or name at the beginning of the range. Can accept: NestedStyle, Long Integer or String.
-	 * @param to The NestedStyle, index, or name at the end of the range. Can accept: NestedStyle, Long Integer or String.
+	 * @param from The NestedStyle, index, or name at the beginning of the range.
+	 * @param to The NestedStyle, index, or name at the end of the range.
 	 */
 	itemByRange(from: NestedStyle | number | String, to: NestedStyle | number | String): NestedStyle[];
 
@@ -77124,7 +77124,7 @@ declare class Language {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -77150,7 +77150,7 @@ declare class Language {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -77204,7 +77204,7 @@ declare class Languages {
 
 	/**
 	 * Returns the Language with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Language;
 
@@ -77222,8 +77222,8 @@ declare class Languages {
 
 	/**
 	 * Returns the Languages within the specified range.
-	 * @param from The Language, index, or name at the beginning of the range. Can accept: Language, Long Integer or String.
-	 * @param to The Language, index, or name at the end of the range. Can accept: Language, Long Integer or String.
+	 * @param from The Language, index, or name at the beginning of the range.
+	 * @param to The Language, index, or name at the end of the range.
 	 */
 	itemByRange(from: Language | number | String, to: Language | number | String): Language[];
 
@@ -77364,7 +77364,7 @@ declare class LanguageWithVendors {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -77396,7 +77396,7 @@ declare class LanguageWithVendors {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -77450,7 +77450,7 @@ declare class LanguagesWithVendors {
 
 	/**
 	 * Returns the LanguageWithVendors with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): LanguageWithVendors;
 
@@ -77468,8 +77468,8 @@ declare class LanguagesWithVendors {
 
 	/**
 	 * Returns the LanguagesWithVendors within the specified range.
-	 * @param from The LanguageWithVendors, index, or name at the beginning of the range. Can accept: LanguageWithVendors, Long Integer or String.
-	 * @param to The LanguageWithVendors, index, or name at the end of the range. Can accept: LanguageWithVendors, Long Integer or String.
+	 * @param from The LanguageWithVendors, index, or name at the beginning of the range.
+	 * @param to The LanguageWithVendors, index, or name at the end of the range.
 	 */
 	itemByRange(from: LanguageWithVendors | number | String, to: LanguageWithVendors | number | String): LanguageWithVendors[];
 
@@ -77639,14 +77639,14 @@ declare class Font {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
 
 	/**
 	 * Checks whether the font supports the specified OpenType feature.
-	 * @param using The OpenType feature to check for, specified either as an OpenType feature or a string. Can accept: OpenTypeFeature enumerator or String.
+	 * @param using The OpenType feature to check for, specified either as an OpenType feature or a string.
 	 */
 	checkOpenTypeFeature(using: OpenTypeFeature | String): boolean;
 
@@ -77665,7 +77665,7 @@ declare class Font {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -77719,7 +77719,7 @@ declare class Fonts {
 
 	/**
 	 * Returns the Font with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Font;
 
@@ -77731,8 +77731,8 @@ declare class Fonts {
 
 	/**
 	 * Returns the Fonts within the specified range.
-	 * @param from The Font, index, or name at the beginning of the range. Can accept: Font, Long Integer or String.
-	 * @param to The Font, index, or name at the end of the range. Can accept: Font, Long Integer or String.
+	 * @param from The Font, index, or name at the beginning of the range.
+	 * @param to The Font, index, or name at the end of the range.
 	 */
 	itemByRange(from: Font | number | String, to: Font | number | String): Font[];
 
@@ -77837,7 +77837,7 @@ declare class KinsokuTable {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -77868,7 +77868,7 @@ declare class KinsokuTable {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -77929,7 +77929,7 @@ declare class KinsokuTables {
 
 	/**
 	 * Returns the KinsokuTable with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): KinsokuTable;
 
@@ -77947,8 +77947,8 @@ declare class KinsokuTables {
 
 	/**
 	 * Returns the KinsokuTables within the specified range.
-	 * @param from The KinsokuTable, index, or name at the beginning of the range. Can accept: KinsokuTable, Long Integer or String.
-	 * @param to The KinsokuTable, index, or name at the end of the range. Can accept: KinsokuTable, Long Integer or String.
+	 * @param from The KinsokuTable, index, or name at the beginning of the range.
+	 * @param to The KinsokuTable, index, or name at the end of the range.
 	 */
 	itemByRange(from: KinsokuTable | number | String, to: KinsokuTable | number | String): KinsokuTable[];
 
@@ -78043,7 +78043,7 @@ declare class MojikumiTable {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -78074,7 +78074,7 @@ declare class MojikumiTable {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -78135,7 +78135,7 @@ declare class MojikumiTables {
 
 	/**
 	 * Returns the MojikumiTable with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MojikumiTable;
 
@@ -78153,8 +78153,8 @@ declare class MojikumiTables {
 
 	/**
 	 * Returns the MojikumiTables within the specified range.
-	 * @param from The MojikumiTable, index, or name at the beginning of the range. Can accept: MojikumiTable, Long Integer or String.
-	 * @param to The MojikumiTable, index, or name at the end of the range. Can accept: MojikumiTable, Long Integer or String.
+	 * @param from The MojikumiTable, index, or name at the beginning of the range.
+	 * @param to The MojikumiTable, index, or name at the end of the range.
 	 */
 	itemByRange(from: MojikumiTable | number | String, to: MojikumiTable | number | String): MojikumiTable[];
 
@@ -78239,7 +78239,7 @@ declare class HyphenationException {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -78259,7 +78259,7 @@ declare class HyphenationException {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -78320,7 +78320,7 @@ declare class HyphenationExceptions {
 
 	/**
 	 * Returns the HyphenationException with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HyphenationException;
 
@@ -78332,8 +78332,8 @@ declare class HyphenationExceptions {
 
 	/**
 	 * Returns the HyphenationExceptions within the specified range.
-	 * @param from The HyphenationException, index, or name at the beginning of the range. Can accept: HyphenationException, Long Integer or String.
-	 * @param to The HyphenationException, index, or name at the end of the range. Can accept: HyphenationException, Long Integer or String.
+	 * @param from The HyphenationException, index, or name at the beginning of the range.
+	 * @param to The HyphenationException, index, or name at the end of the range.
 	 */
 	itemByRange(from: HyphenationException | number | String, to: HyphenationException | number | String): HyphenationException[];
 
@@ -78418,7 +78418,7 @@ declare class UserDictionary {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -78438,7 +78438,7 @@ declare class UserDictionary {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -78499,7 +78499,7 @@ declare class UserDictionaries {
 
 	/**
 	 * Returns the UserDictionary with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): UserDictionary;
 
@@ -78511,8 +78511,8 @@ declare class UserDictionaries {
 
 	/**
 	 * Returns the UserDictionaries within the specified range.
-	 * @param from The UserDictionary, index, or name at the beginning of the range. Can accept: UserDictionary, Long Integer or String.
-	 * @param to The UserDictionary, index, or name at the end of the range. Can accept: UserDictionary, Long Integer or String.
+	 * @param from The UserDictionary, index, or name at the beginning of the range.
+	 * @param to The UserDictionary, index, or name at the end of the range.
 	 */
 	itemByRange(from: UserDictionary | number | String, to: UserDictionary | number | String): UserDictionary[];
 
@@ -78592,7 +78592,7 @@ declare class AutoCorrectTable {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -78605,7 +78605,7 @@ declare class AutoCorrectTable {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -78659,7 +78659,7 @@ declare class AutoCorrectTables {
 
 	/**
 	 * Returns the AutoCorrectTable with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): AutoCorrectTable;
 
@@ -78671,8 +78671,8 @@ declare class AutoCorrectTables {
 
 	/**
 	 * Returns the AutoCorrectTables within the specified range.
-	 * @param from The AutoCorrectTable, index, or name at the beginning of the range. Can accept: AutoCorrectTable, Long Integer or String.
-	 * @param to The AutoCorrectTable, index, or name at the end of the range. Can accept: AutoCorrectTable, Long Integer or String.
+	 * @param from The AutoCorrectTable, index, or name at the beginning of the range.
+	 * @param to The AutoCorrectTable, index, or name at the end of the range.
 	 */
 	itemByRange(from: AutoCorrectTable | number | String, to: AutoCorrectTable | number | String): AutoCorrectTable[];
 
@@ -78812,7 +78812,7 @@ declare class Change {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -78830,7 +78830,7 @@ declare class Change {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -78884,14 +78884,14 @@ declare class Changes {
 
 	/**
 	 * Returns the Change with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Change;
 
 	/**
 	 * Returns the Changes within the specified range.
-	 * @param from The Change, index, or name at the beginning of the range. Can accept: Change, Long Integer or String.
-	 * @param to The Change, index, or name at the end of the range. Can accept: Change, Long Integer or String.
+	 * @param from The Change, index, or name at the beginning of the range.
+	 * @param to The Change, index, or name at the end of the range.
 	 */
 	itemByRange(from: Change | number | String, to: Change | number | String): Change[];
 
@@ -79106,7 +79106,7 @@ declare class TextPath {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -79185,7 +79185,7 @@ declare class TextPath {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -79245,7 +79245,7 @@ declare class TextPaths {
 
 	/**
 	 * Returns the TextPath with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextPath;
 
@@ -79263,8 +79263,8 @@ declare class TextPaths {
 
 	/**
 	 * Returns the TextPaths within the specified range.
-	 * @param from The TextPath, index, or name at the beginning of the range. Can accept: TextPath, Long Integer or String.
-	 * @param to The TextPath, index, or name at the end of the range. Can accept: TextPath, Long Integer or String.
+	 * @param from The TextPath, index, or name at the beginning of the range.
+	 * @param to The TextPath, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextPath | number | String, to: TextPath | number | String): TextPath[];
 
@@ -79424,7 +79424,7 @@ declare class Note {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -79455,7 +79455,7 @@ declare class Note {
 	/**
 	 * Moves the note to the specified location.
 	 * @param to The new location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: Text or Story. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: Text | Story): Note;
 
@@ -79467,7 +79467,7 @@ declare class Note {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -79502,7 +79502,7 @@ declare class Notes {
 	/**
 	 * Creates a new note.
 	 * @param at The location relative to the reference object or within the containing object. 
-	 * @param reference The reference object. Note: Required when the at parameter specifies before or after. Can accept: Note or InsertionPoint. 
+	 * @param reference The reference object. Note: Required when the at parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new Note 
 	 */
 	add(at?: LocationOptions, reference?: Note | InsertionPoint, withProperties?: Object): Note;
@@ -79529,7 +79529,7 @@ declare class Notes {
 
 	/**
 	 * Returns the Note with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Note;
 
@@ -79547,8 +79547,8 @@ declare class Notes {
 
 	/**
 	 * Returns the Notes within the specified range.
-	 * @param from The Note, index, or name at the beginning of the range. Can accept: Note, Long Integer or String.
-	 * @param to The Note, index, or name at the end of the range. Can accept: Note, Long Integer or String.
+	 * @param from The Note, index, or name at the beginning of the range.
+	 * @param to The Note, index, or name at the end of the range.
 	 */
 	itemByRange(from: Note | number | String, to: Note | number | String): Note[];
 
@@ -79748,7 +79748,7 @@ declare class Footnote {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -79784,7 +79784,7 @@ declare class Footnote {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -79819,7 +79819,7 @@ declare class Footnotes {
 	/**
 	 * Creates a new footnote.
 	 * @param at The location of the footnote reference number in the main text relative to the reference object or within the story. 
-	 * @param reference The reference object. Note: Must be an insertion point or a note. Required when the at parameter specifies before or after. Can accept: Note or InsertionPoint. 
+	 * @param reference The reference object. Note: Must be an insertion point or a note. Required when the at parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new Footnote 
 	 */
 	add(at?: LocationOptions, reference?: Note | InsertionPoint, withProperties?: Object): Footnote;
@@ -79846,7 +79846,7 @@ declare class Footnotes {
 
 	/**
 	 * Returns the Footnote with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Footnote;
 
@@ -79864,8 +79864,8 @@ declare class Footnotes {
 
 	/**
 	 * Returns the Footnotes within the specified range.
-	 * @param from The Footnote, index, or name at the beginning of the range. Can accept: Footnote, Long Integer or String.
-	 * @param to The Footnote, index, or name at the end of the range. Can accept: Footnote, Long Integer or String.
+	 * @param from The Footnote, index, or name at the beginning of the range.
+	 * @param to The Footnote, index, or name at the end of the range.
 	 */
 	itemByRange(from: Footnote | number | String, to: Footnote | number | String): Footnote[];
 
@@ -79960,7 +79960,7 @@ declare class TextVariable {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -79983,7 +79983,7 @@ declare class TextVariable {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -80043,7 +80043,7 @@ declare class TextVariables {
 
 	/**
 	 * Returns the TextVariable with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextVariable;
 
@@ -80055,8 +80055,8 @@ declare class TextVariables {
 
 	/**
 	 * Returns the TextVariables within the specified range.
-	 * @param from The TextVariable, index, or name at the beginning of the range. Can accept: TextVariable, Long Integer or String.
-	 * @param to The TextVariable, index, or name at the end of the range. Can accept: TextVariable, Long Integer or String.
+	 * @param from The TextVariable, index, or name at the beginning of the range.
+	 * @param to The TextVariable, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextVariable | number | String, to: TextVariable | number | String): TextVariable[];
 
@@ -80156,7 +80156,7 @@ declare class TextVariableInstance {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -80192,7 +80192,7 @@ declare class TextVariableInstance {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -80227,7 +80227,7 @@ declare class TextVariableInstances {
 	/**
 	 * Creates a text variable instance at the specified location.
 	 * @param to The location relative to the reference object or within the containing object. 
-	 * @param reference The reference object. Note: Required only when the to parameter specifies before or after. Can accept: TextVariableInstance, XmlStory, TextFrame, Story, Note, Cell, Footnote, Table, TextColumn, TextStyleRange, Text, InsertionPoint, Paragraph, Line, Word, Character or Change. 
+	 * @param reference The reference object. Note: Required only when the to parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new TextVariableInstance 
 	 */
 	add(to?: LocationOptions, reference?: TextVariableInstance | XmlStory | TextFrame | Story | Note | Cell | Footnote | Table | TextColumn | TextStyleRange | Text | InsertionPoint | Paragraph | Line | Word | Character | Change, withProperties?: Object): TextVariableInstance;
@@ -80254,7 +80254,7 @@ declare class TextVariableInstances {
 
 	/**
 	 * Returns the TextVariableInstance with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextVariableInstance;
 
@@ -80272,8 +80272,8 @@ declare class TextVariableInstances {
 
 	/**
 	 * Returns the TextVariableInstances within the specified range.
-	 * @param from The TextVariableInstance, index, or name at the beginning of the range. Can accept: TextVariableInstance, Long Integer or String.
-	 * @param to The TextVariableInstance, index, or name at the end of the range. Can accept: TextVariableInstance, Long Integer or String.
+	 * @param from The TextVariableInstance, index, or name at the beginning of the range.
+	 * @param to The TextVariableInstance, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextVariableInstance | number | String, to: TextVariableInstance | number | String): TextVariableInstance[];
 
@@ -80363,7 +80363,7 @@ declare class StyleExportTagMap {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -80381,7 +80381,7 @@ declare class StyleExportTagMap {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -80445,14 +80445,14 @@ declare class StyleExportTagMaps {
 
 	/**
 	 * Returns the StyleExportTagMap with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): StyleExportTagMap;
 
 	/**
 	 * Returns the StyleExportTagMaps within the specified range.
-	 * @param from The StyleExportTagMap, index, or name at the beginning of the range. Can accept: StyleExportTagMap, Long Integer or String.
-	 * @param to The StyleExportTagMap, index, or name at the end of the range. Can accept: StyleExportTagMap, Long Integer or String.
+	 * @param from The StyleExportTagMap, index, or name at the beginning of the range.
+	 * @param to The StyleExportTagMap, index, or name at the end of the range.
 	 */
 	itemByRange(from: StyleExportTagMap | number | String, to: StyleExportTagMap | number | String): StyleExportTagMap[];
 
@@ -80552,7 +80552,7 @@ declare class ParagraphStyleGroup {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -80583,20 +80583,20 @@ declare class ParagraphStyleGroup {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): ParagraphStyleGroup;
 
 	/**
 	 * Deletes the style.
-	 * @param replacingWith The style to apply in place of the deleted style. Can accept: ParagraphStyle or CharacterStyle. 
+	 * @param replacingWith The style to apply in place of the deleted style.
 	 */
 	remove(replacingWith: ParagraphStyle | CharacterStyle): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -80656,7 +80656,7 @@ declare class ParagraphStyleGroups {
 
 	/**
 	 * Returns the ParagraphStyleGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ParagraphStyleGroup;
 
@@ -80674,8 +80674,8 @@ declare class ParagraphStyleGroups {
 
 	/**
 	 * Returns the ParagraphStyleGroups within the specified range.
-	 * @param from The ParagraphStyleGroup, index, or name at the beginning of the range. Can accept: ParagraphStyleGroup, Long Integer or String.
-	 * @param to The ParagraphStyleGroup, index, or name at the end of the range. Can accept: ParagraphStyleGroup, Long Integer or String.
+	 * @param from The ParagraphStyleGroup, index, or name at the beginning of the range.
+	 * @param to The ParagraphStyleGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: ParagraphStyleGroup | number | String, to: ParagraphStyleGroup | number | String): ParagraphStyleGroup[];
 
@@ -80775,7 +80775,7 @@ declare class CharacterStyleGroup {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -80806,20 +80806,20 @@ declare class CharacterStyleGroup {
 	/**
 	 * Moves the style to the specified location.
 	 * @param to The location relative to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. Can accept: ParagraphStyle, ParagraphStyleGroup, CharacterStyle, CharacterStyleGroup, CellStyle, CellStyleGroup, TableStyle, TableStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after.
 	 */
 	move(to: LocationOptions, reference: ParagraphStyle | ParagraphStyleGroup | CharacterStyle | CharacterStyleGroup | CellStyle | CellStyleGroup | TableStyle | TableStyleGroup | Document | Application): CharacterStyleGroup;
 
 	/**
 	 * Deletes the style.
-	 * @param replacingWith The style to apply in place of the deleted style. Can accept: ParagraphStyle or CharacterStyle. 
+	 * @param replacingWith The style to apply in place of the deleted style.
 	 */
 	remove(replacingWith: ParagraphStyle | CharacterStyle): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -80879,7 +80879,7 @@ declare class CharacterStyleGroups {
 
 	/**
 	 * Returns the CharacterStyleGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CharacterStyleGroup;
 
@@ -80897,8 +80897,8 @@ declare class CharacterStyleGroups {
 
 	/**
 	 * Returns the CharacterStyleGroups within the specified range.
-	 * @param from The CharacterStyleGroup, index, or name at the beginning of the range. Can accept: CharacterStyleGroup, Long Integer or String.
-	 * @param to The CharacterStyleGroup, index, or name at the end of the range. Can accept: CharacterStyleGroup, Long Integer or String.
+	 * @param from The CharacterStyleGroup, index, or name at the beginning of the range.
+	 * @param to The CharacterStyleGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: CharacterStyleGroup | number | String, to: CharacterStyleGroup | number | String): CharacterStyleGroup[];
 
@@ -80988,7 +80988,7 @@ declare class CompositeFont {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -81019,7 +81019,7 @@ declare class CompositeFont {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -81079,7 +81079,7 @@ declare class CompositeFonts {
 
 	/**
 	 * Returns the CompositeFont with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CompositeFont;
 
@@ -81097,8 +81097,8 @@ declare class CompositeFonts {
 
 	/**
 	 * Returns the CompositeFonts within the specified range.
-	 * @param from The CompositeFont, index, or name at the beginning of the range. Can accept: CompositeFont, Long Integer or String.
-	 * @param to The CompositeFont, index, or name at the end of the range. Can accept: CompositeFont, Long Integer or String.
+	 * @param from The CompositeFont, index, or name at the beginning of the range.
+	 * @param to The CompositeFont, index, or name at the end of the range.
 	 */
 	itemByRange(from: CompositeFont | number | String, to: CompositeFont | number | String): CompositeFont[];
 
@@ -81228,7 +81228,7 @@ declare class CompositeFontEntry {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -81259,7 +81259,7 @@ declare class CompositeFontEntry {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -81319,7 +81319,7 @@ declare class CompositeFontEntries {
 
 	/**
 	 * Returns the CompositeFontEntry with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CompositeFontEntry;
 
@@ -81337,8 +81337,8 @@ declare class CompositeFontEntries {
 
 	/**
 	 * Returns the CompositeFontEntries within the specified range.
-	 * @param from The CompositeFontEntry, index, or name at the beginning of the range. Can accept: CompositeFontEntry, Long Integer or String.
-	 * @param to The CompositeFontEntry, index, or name at the end of the range. Can accept: CompositeFontEntry, Long Integer or String.
+	 * @param from The CompositeFontEntry, index, or name at the beginning of the range.
+	 * @param to The CompositeFontEntry, index, or name at the end of the range.
 	 */
 	itemByRange(from: CompositeFontEntry | number | String, to: CompositeFontEntry | number | String): CompositeFontEntry[];
 
@@ -81433,7 +81433,7 @@ declare class NamedGrid {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -81464,7 +81464,7 @@ declare class NamedGrid {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -81524,7 +81524,7 @@ declare class NamedGrids {
 
 	/**
 	 * Returns the NamedGrid with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): NamedGrid;
 
@@ -81542,8 +81542,8 @@ declare class NamedGrids {
 
 	/**
 	 * Returns the NamedGrids within the specified range.
-	 * @param from The NamedGrid, index, or name at the beginning of the range. Can accept: NamedGrid, Long Integer or String.
-	 * @param to The NamedGrid, index, or name at the end of the range. Can accept: NamedGrid, Long Integer or String.
+	 * @param from The NamedGrid, index, or name at the beginning of the range.
+	 * @param to The NamedGrid, index, or name at the end of the range.
 	 */
 	itemByRange(from: NamedGrid | number | String, to: NamedGrid | number | String): NamedGrid[];
 
@@ -81633,7 +81633,7 @@ declare class IndexingSortOption {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -81646,7 +81646,7 @@ declare class IndexingSortOption {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -81700,7 +81700,7 @@ declare class IndexingSortOptions {
 
 	/**
 	 * Returns the IndexingSortOption with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): IndexingSortOption;
 
@@ -81712,8 +81712,8 @@ declare class IndexingSortOptions {
 
 	/**
 	 * Returns the IndexingSortOptions within the specified range.
-	 * @param from The IndexingSortOption, index, or name at the beginning of the range. Can accept: IndexingSortOption, Long Integer or String.
-	 * @param to The IndexingSortOption, index, or name at the end of the range. Can accept: IndexingSortOption, Long Integer or String.
+	 * @param from The IndexingSortOption, index, or name at the beginning of the range.
+	 * @param to The IndexingSortOption, index, or name at the end of the range.
 	 */
 	itemByRange(from: IndexingSortOption | number | String, to: IndexingSortOption | number | String): IndexingSortOption[];
 
@@ -81855,7 +81855,7 @@ declare class NumberingList {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -81887,7 +81887,7 @@ declare class NumberingList {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -81950,7 +81950,7 @@ declare class NumberingLists {
 
 	/**
 	 * Returns the NumberingList with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): NumberingList;
 
@@ -81968,8 +81968,8 @@ declare class NumberingLists {
 
 	/**
 	 * Returns the NumberingLists within the specified range.
-	 * @param from The NumberingList, index, or name at the beginning of the range. Can accept: NumberingList, Long Integer or String.
-	 * @param to The NumberingList, index, or name at the end of the range. Can accept: NumberingList, Long Integer or String.
+	 * @param from The NumberingList, index, or name at the beginning of the range.
+	 * @param to The NumberingList, index, or name at the end of the range.
 	 */
 	itemByRange(from: NumberingList | number | String, to: NumberingList | number | String): NumberingList[];
 
@@ -82069,7 +82069,7 @@ declare class ObjectStyleGroup {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -82100,7 +82100,7 @@ declare class ObjectStyleGroup {
 	/**
 	 * Moves the ObjectStyleGroup to the specified location.
 	 * @param to The new location relative to the reference object or within the container object.
-	 * @param reference The reference object. Note: Required when the to parameter is before or after. Can accept: ObjectStyle, ObjectStyleGroup, Document or Application. 
+	 * @param reference The reference object. Note: Required when the to parameter is before or after.
 	 */
 	move(to: LocationOptions, reference: ObjectStyle | ObjectStyleGroup | Document | Application): ObjectStyleGroup;
 
@@ -82113,7 +82113,7 @@ declare class ObjectStyleGroup {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -82173,7 +82173,7 @@ declare class ObjectStyleGroups {
 
 	/**
 	 * Returns the ObjectStyleGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ObjectStyleGroup;
 
@@ -82191,8 +82191,8 @@ declare class ObjectStyleGroups {
 
 	/**
 	 * Returns the ObjectStyleGroups within the specified range.
-	 * @param from The ObjectStyleGroup, index, or name at the beginning of the range. Can accept: ObjectStyleGroup, Long Integer or String.
-	 * @param to The ObjectStyleGroup, index, or name at the end of the range. Can accept: ObjectStyleGroup, Long Integer or String.
+	 * @param from The ObjectStyleGroup, index, or name at the beginning of the range.
+	 * @param to The ObjectStyleGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: ObjectStyleGroup | number | String, to: ObjectStyleGroup | number | String): ObjectStyleGroup[];
 
@@ -82297,7 +82297,7 @@ declare class Condition {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -82322,14 +82322,14 @@ declare class Condition {
 
 	/**
 	 * Delete the condition.
-	 * @param replacingWith The condition to apply to text in place of the deleted condition. By default, no condition is applied in place of the deleted condition. Can accept: Condition or String. 
+	 * @param replacingWith The condition to apply to text in place of the deleted condition. By default, no condition is applied in place of the deleted condition.
 	 */
 	remove(replacingWith: Condition | String): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -82389,7 +82389,7 @@ declare class Conditions {
 
 	/**
 	 * Returns the Condition with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Condition;
 
@@ -82407,8 +82407,8 @@ declare class Conditions {
 
 	/**
 	 * Returns the Conditions within the specified range.
-	 * @param from The Condition, index, or name at the beginning of the range. Can accept: Condition, Long Integer or String.
-	 * @param to The Condition, index, or name at the end of the range. Can accept: Condition, Long Integer or String.
+	 * @param from The Condition, index, or name at the beginning of the range.
+	 * @param to The Condition, index, or name at the end of the range.
 	 */
 	itemByRange(from: Condition | number | String, to: Condition | number | String): Condition[];
 
@@ -82538,7 +82538,7 @@ declare class HiddenText {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -82564,7 +82564,7 @@ declare class HiddenText {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -82618,7 +82618,7 @@ declare class HiddenTexts {
 
 	/**
 	 * Returns the HiddenText with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): HiddenText;
 
@@ -82636,8 +82636,8 @@ declare class HiddenTexts {
 
 	/**
 	 * Returns the HiddenTexts within the specified range.
-	 * @param from The HiddenText, index, or name at the beginning of the range. Can accept: HiddenText, Long Integer or String.
-	 * @param to The HiddenText, index, or name at the end of the range. Can accept: HiddenText, Long Integer or String.
+	 * @param from The HiddenText, index, or name at the beginning of the range.
+	 * @param to The HiddenText, index, or name at the end of the range.
 	 */
 	itemByRange(from: HiddenText | number | String, to: HiddenText | number | String): HiddenText[];
 
@@ -82727,7 +82727,7 @@ declare class ConditionSet {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -82757,14 +82757,14 @@ declare class ConditionSet {
 
 	/**
 	 * Delete a condition set for conditional text.
-	 * @param replacingWith The condition set to apply to the text in place of the deleted condition set. By default, no condition set is applied in place of the deleted condition set. Can accept: ConditionSet or String. 
+	 * @param replacingWith The condition set to apply to the text in place of the deleted condition set. By default, no condition set is applied in place of the deleted condition set.
 	 */
 	remove(replacingWith: ConditionSet | String): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -82824,7 +82824,7 @@ declare class ConditionSets {
 
 	/**
 	 * Returns the ConditionSet with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ConditionSet;
 
@@ -82842,8 +82842,8 @@ declare class ConditionSets {
 
 	/**
 	 * Returns the ConditionSets within the specified range.
-	 * @param from The ConditionSet, index, or name at the beginning of the range. Can accept: ConditionSet, Long Integer or String.
-	 * @param to The ConditionSet, index, or name at the end of the range. Can accept: ConditionSet, Long Integer or String.
+	 * @param from The ConditionSet, index, or name at the beginning of the range.
+	 * @param to The ConditionSet, index, or name at the end of the range.
 	 */
 	itemByRange(from: ConditionSet | number | String, to: ConditionSet | number | String): ConditionSet[];
 
@@ -82963,7 +82963,7 @@ declare class LibraryPanel extends Panel {
 
 	/**
 	 * Selects the specified object(s).
-	 * @param selectableItems The objects to select. Can accept: Object, Array of Objects, NothingEnum enumerator or SelectAll enumerator.
+	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the LibraryPanel in relation to previously selected objects. 
 	 */
 	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
@@ -83057,7 +83057,7 @@ declare class MenuAction {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -83088,7 +83088,7 @@ declare class MenuAction {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -83142,7 +83142,7 @@ declare class MenuActions {
 
 	/**
 	 * Returns the MenuAction with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MenuAction;
 
@@ -83160,8 +83160,8 @@ declare class MenuActions {
 
 	/**
 	 * Returns the MenuActions within the specified range.
-	 * @param from The MenuAction, index, or name at the beginning of the range. Can accept: MenuAction, Long Integer or String.
-	 * @param to The MenuAction, index, or name at the end of the range. Can accept: MenuAction, Long Integer or String.
+	 * @param from The MenuAction, index, or name at the beginning of the range.
+	 * @param to The MenuAction, index, or name at the end of the range.
 	 */
 	itemByRange(from: MenuAction | number | String, to: MenuAction | number | String): MenuAction[];
 
@@ -83259,7 +83259,7 @@ declare class ScriptMenuActions {
 
 	/**
 	 * Returns the ScriptMenuAction with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ScriptMenuAction;
 
@@ -83277,8 +83277,8 @@ declare class ScriptMenuActions {
 
 	/**
 	 * Returns the ScriptMenuActions within the specified range.
-	 * @param from The ScriptMenuAction, index, or name at the beginning of the range. Can accept: ScriptMenuAction, Long Integer or String.
-	 * @param to The ScriptMenuAction, index, or name at the end of the range. Can accept: ScriptMenuAction, Long Integer or String.
+	 * @param from The ScriptMenuAction, index, or name at the beginning of the range.
+	 * @param to The ScriptMenuAction, index, or name at the end of the range.
 	 */
 	itemByRange(from: ScriptMenuAction | number | String, to: ScriptMenuAction | number | String): ScriptMenuAction[];
 
@@ -83383,7 +83383,7 @@ declare class Menu {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -83396,7 +83396,7 @@ declare class Menu {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -83450,7 +83450,7 @@ declare class Menus {
 
 	/**
 	 * Returns the Menu with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Menu;
 
@@ -83462,8 +83462,8 @@ declare class Menus {
 
 	/**
 	 * Returns the Menus within the specified range.
-	 * @param from The Menu, index, or name at the beginning of the range. Can accept: Menu, Long Integer or String.
-	 * @param to The Menu, index, or name at the end of the range. Can accept: Menu, Long Integer or String.
+	 * @param from The Menu, index, or name at the beginning of the range.
+	 * @param to The Menu, index, or name at the end of the range.
 	 */
 	itemByRange(from: Menu | number | String, to: Menu | number | String): Menu[];
 
@@ -83533,7 +83533,7 @@ declare class MenuElement {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -83551,7 +83551,7 @@ declare class MenuElement {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -83605,14 +83605,14 @@ declare class MenuElements {
 
 	/**
 	 * Returns the MenuElement with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MenuElement;
 
 	/**
 	 * Returns the MenuElements within the specified range.
-	 * @param from The MenuElement, index, or name at the beginning of the range. Can accept: MenuElement, Long Integer or String.
-	 * @param to The MenuElement, index, or name at the end of the range. Can accept: MenuElement, Long Integer or String.
+	 * @param from The MenuElement, index, or name at the beginning of the range.
+	 * @param to The MenuElement, index, or name at the end of the range.
 	 */
 	itemByRange(from: MenuElement | number | String, to: MenuElement | number | String): MenuElement[];
 
@@ -83732,7 +83732,7 @@ declare class Submenus {
 
 	/**
 	 * Returns the Submenu with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Submenu;
 
@@ -83744,8 +83744,8 @@ declare class Submenus {
 
 	/**
 	 * Returns the Submenus within the specified range.
-	 * @param from The Submenu, index, or name at the beginning of the range. Can accept: Submenu, Long Integer or String.
-	 * @param to The Submenu, index, or name at the end of the range. Can accept: Submenu, Long Integer or String.
+	 * @param from The Submenu, index, or name at the beginning of the range.
+	 * @param to The Submenu, index, or name at the end of the range.
 	 */
 	itemByRange(from: Submenu | number | String, to: Submenu | number | String): Submenu[];
 
@@ -83865,7 +83865,7 @@ declare class MenuItems {
 
 	/**
 	 * Returns the MenuItem with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MenuItem;
 
@@ -83883,8 +83883,8 @@ declare class MenuItems {
 
 	/**
 	 * Returns the MenuItems within the specified range.
-	 * @param from The MenuItem, index, or name at the beginning of the range. Can accept: MenuItem, Long Integer or String.
-	 * @param to The MenuItem, index, or name at the end of the range. Can accept: MenuItem, Long Integer or String.
+	 * @param from The MenuItem, index, or name at the beginning of the range.
+	 * @param to The MenuItem, index, or name at the end of the range.
 	 */
 	itemByRange(from: MenuItem | number | String, to: MenuItem | number | String): MenuItem[];
 
@@ -83973,7 +83973,7 @@ declare class MenuSeparators {
 
 	/**
 	 * Returns the MenuSeparator with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MenuSeparator;
 
@@ -83985,8 +83985,8 @@ declare class MenuSeparators {
 
 	/**
 	 * Returns the MenuSeparators within the specified range.
-	 * @param from The MenuSeparator, index, or name at the beginning of the range. Can accept: MenuSeparator, Long Integer or String.
-	 * @param to The MenuSeparator, index, or name at the end of the range. Can accept: MenuSeparator, Long Integer or String.
+	 * @param from The MenuSeparator, index, or name at the beginning of the range.
+	 * @param to The MenuSeparator, index, or name at the end of the range.
 	 */
 	itemByRange(from: MenuSeparator | number | String, to: MenuSeparator | number | String): MenuSeparator[];
 
@@ -84066,7 +84066,7 @@ declare class Panel {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -84079,7 +84079,7 @@ declare class Panel {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -84133,7 +84133,7 @@ declare class Panels {
 
 	/**
 	 * Returns the Panel with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Panel;
 
@@ -84145,8 +84145,8 @@ declare class Panels {
 
 	/**
 	 * Returns the Panels within the specified range.
-	 * @param from The Panel, index, or name at the beginning of the range. Can accept: Panel, Long Integer or String.
-	 * @param to The Panel, index, or name at the end of the range. Can accept: Panel, Long Integer or String.
+	 * @param from The Panel, index, or name at the beginning of the range.
+	 * @param to The Panel, index, or name at the end of the range.
 	 */
 	itemByRange(from: Panel | number | String, to: Panel | number | String): Panel[];
 
@@ -84241,7 +84241,7 @@ declare class Dialog {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -84272,7 +84272,7 @@ declare class Dialog {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -84337,7 +84337,7 @@ declare class Dialogs {
 
 	/**
 	 * Returns the Dialog with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Dialog;
 
@@ -84355,8 +84355,8 @@ declare class Dialogs {
 
 	/**
 	 * Returns the Dialogs within the specified range.
-	 * @param from The Dialog, index, or name at the beginning of the range. Can accept: Dialog, Long Integer or String.
-	 * @param to The Dialog, index, or name at the end of the range. Can accept: Dialog, Long Integer or String.
+	 * @param from The Dialog, index, or name at the beginning of the range.
+	 * @param to The Dialog, index, or name at the end of the range.
 	 */
 	itemByRange(from: Dialog | number | String, to: Dialog | number | String): Dialog[];
 
@@ -84436,7 +84436,7 @@ declare class Widget {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -84449,7 +84449,7 @@ declare class Widget {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -84503,7 +84503,7 @@ declare class Widgets {
 
 	/**
 	 * Returns the Widget with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Widget;
 
@@ -84515,8 +84515,8 @@ declare class Widgets {
 
 	/**
 	 * Returns the Widgets within the specified range.
-	 * @param from The Widget, index, or name at the beginning of the range. Can accept: Widget, Long Integer or String.
-	 * @param to The Widget, index, or name at the end of the range. Can accept: Widget, Long Integer or String.
+	 * @param from The Widget, index, or name at the beginning of the range.
+	 * @param to The Widget, index, or name at the end of the range.
 	 */
 	itemByRange(from: Widget | number | String, to: Widget | number | String): Widget[];
 
@@ -84603,7 +84603,7 @@ declare class TextEditboxes {
 
 	/**
 	 * Returns the TextEditbox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): TextEditbox;
 
@@ -84615,8 +84615,8 @@ declare class TextEditboxes {
 
 	/**
 	 * Returns the TextEditboxes within the specified range.
-	 * @param from The TextEditbox, index, or name at the beginning of the range. Can accept: TextEditbox, Long Integer or String.
-	 * @param to The TextEditbox, index, or name at the end of the range. Can accept: TextEditbox, Long Integer or String.
+	 * @param from The TextEditbox, index, or name at the beginning of the range.
+	 * @param to The TextEditbox, index, or name at the end of the range.
 	 */
 	itemByRange(from: TextEditbox | number | String, to: TextEditbox | number | String): TextEditbox[];
 
@@ -84708,7 +84708,7 @@ declare class StaticTexts {
 
 	/**
 	 * Returns the StaticText with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): StaticText;
 
@@ -84720,8 +84720,8 @@ declare class StaticTexts {
 
 	/**
 	 * Returns the StaticTexts within the specified range.
-	 * @param from The StaticText, index, or name at the beginning of the range. Can accept: StaticText, Long Integer or String.
-	 * @param to The StaticText, index, or name at the end of the range. Can accept: StaticText, Long Integer or String.
+	 * @param from The StaticText, index, or name at the beginning of the range.
+	 * @param to The StaticText, index, or name at the end of the range.
 	 */
 	itemByRange(from: StaticText | number | String, to: StaticText | number | String): StaticText[];
 
@@ -84813,7 +84813,7 @@ declare class Dropdowns {
 
 	/**
 	 * Returns the Dropdown with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): Dropdown;
 
@@ -84825,8 +84825,8 @@ declare class Dropdowns {
 
 	/**
 	 * Returns the Dropdowns within the specified range.
-	 * @param from The Dropdown, index, or name at the beginning of the range. Can accept: Dropdown, Long Integer or String.
-	 * @param to The Dropdown, index, or name at the end of the range. Can accept: Dropdown, Long Integer or String.
+	 * @param from The Dropdown, index, or name at the beginning of the range.
+	 * @param to The Dropdown, index, or name at the end of the range.
 	 */
 	itemByRange(from: Dropdown | number | String, to: Dropdown | number | String): Dropdown[];
 
@@ -84918,7 +84918,7 @@ declare class CheckboxControls {
 
 	/**
 	 * Returns the CheckboxControl with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): CheckboxControl;
 
@@ -84930,8 +84930,8 @@ declare class CheckboxControls {
 
 	/**
 	 * Returns the CheckboxControls within the specified range.
-	 * @param from The CheckboxControl, index, or name at the beginning of the range. Can accept: CheckboxControl, Long Integer or String.
-	 * @param to The CheckboxControl, index, or name at the end of the range. Can accept: CheckboxControl, Long Integer or String.
+	 * @param from The CheckboxControl, index, or name at the beginning of the range.
+	 * @param to The CheckboxControl, index, or name at the end of the range.
 	 */
 	itemByRange(from: CheckboxControl | number | String, to: CheckboxControl | number | String): CheckboxControl[];
 
@@ -85101,7 +85101,7 @@ declare class DialogColumn {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -85114,7 +85114,7 @@ declare class DialogColumn {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -85174,7 +85174,7 @@ declare class DialogColumns {
 
 	/**
 	 * Returns the DialogColumn with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DialogColumn;
 
@@ -85186,8 +85186,8 @@ declare class DialogColumns {
 
 	/**
 	 * Returns the DialogColumns within the specified range.
-	 * @param from The DialogColumn, index, or name at the beginning of the range. Can accept: DialogColumn, Long Integer or String.
-	 * @param to The DialogColumn, index, or name at the end of the range. Can accept: DialogColumn, Long Integer or String.
+	 * @param from The DialogColumn, index, or name at the beginning of the range.
+	 * @param to The DialogColumn, index, or name at the end of the range.
 	 */
 	itemByRange(from: DialogColumn | number | String, to: DialogColumn | number | String): DialogColumn[];
 
@@ -85284,7 +85284,7 @@ declare class RadiobuttonGroups {
 
 	/**
 	 * Returns the RadiobuttonGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): RadiobuttonGroup;
 
@@ -85296,8 +85296,8 @@ declare class RadiobuttonGroups {
 
 	/**
 	 * Returns the RadiobuttonGroups within the specified range.
-	 * @param from The RadiobuttonGroup, index, or name at the beginning of the range. Can accept: RadiobuttonGroup, Long Integer or String.
-	 * @param to The RadiobuttonGroup, index, or name at the end of the range. Can accept: RadiobuttonGroup, Long Integer or String.
+	 * @param from The RadiobuttonGroup, index, or name at the beginning of the range.
+	 * @param to The RadiobuttonGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: RadiobuttonGroup | number | String, to: RadiobuttonGroup | number | String): RadiobuttonGroup[];
 
@@ -85389,7 +85389,7 @@ declare class RadiobuttonControls {
 
 	/**
 	 * Returns the RadiobuttonControl with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): RadiobuttonControl;
 
@@ -85401,8 +85401,8 @@ declare class RadiobuttonControls {
 
 	/**
 	 * Returns the RadiobuttonControls within the specified range.
-	 * @param from The RadiobuttonControl, index, or name at the beginning of the range. Can accept: RadiobuttonControl, Long Integer or String.
-	 * @param to The RadiobuttonControl, index, or name at the end of the range. Can accept: RadiobuttonControl, Long Integer or String.
+	 * @param from The RadiobuttonControl, index, or name at the beginning of the range.
+	 * @param to The RadiobuttonControl, index, or name at the end of the range.
 	 */
 	itemByRange(from: RadiobuttonControl | number | String, to: RadiobuttonControl | number | String): RadiobuttonControl[];
 
@@ -85514,7 +85514,7 @@ declare class IntegerEditboxes {
 
 	/**
 	 * Returns the IntegerEditbox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): IntegerEditbox;
 
@@ -85526,8 +85526,8 @@ declare class IntegerEditboxes {
 
 	/**
 	 * Returns the IntegerEditboxes within the specified range.
-	 * @param from The IntegerEditbox, index, or name at the beginning of the range. Can accept: IntegerEditbox, Long Integer or String.
-	 * @param to The IntegerEditbox, index, or name at the end of the range. Can accept: IntegerEditbox, Long Integer or String.
+	 * @param from The IntegerEditbox, index, or name at the beginning of the range.
+	 * @param to The IntegerEditbox, index, or name at the end of the range.
 	 */
 	itemByRange(from: IntegerEditbox | number | String, to: IntegerEditbox | number | String): IntegerEditbox[];
 
@@ -85644,7 +85644,7 @@ declare class IntegerComboboxes {
 
 	/**
 	 * Returns the IntegerCombobox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): IntegerCombobox;
 
@@ -85656,8 +85656,8 @@ declare class IntegerComboboxes {
 
 	/**
 	 * Returns the IntegerComboboxes within the specified range.
-	 * @param from The IntegerCombobox, index, or name at the beginning of the range. Can accept: IntegerCombobox, Long Integer or String.
-	 * @param to The IntegerCombobox, index, or name at the end of the range. Can accept: IntegerCombobox, Long Integer or String.
+	 * @param from The IntegerCombobox, index, or name at the beginning of the range.
+	 * @param to The IntegerCombobox, index, or name at the end of the range.
 	 */
 	itemByRange(from: IntegerCombobox | number | String, to: IntegerCombobox | number | String): IntegerCombobox[];
 
@@ -85844,7 +85844,7 @@ declare class EnablingGroups {
 
 	/**
 	 * Returns the EnablingGroup with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): EnablingGroup;
 
@@ -85856,8 +85856,8 @@ declare class EnablingGroups {
 
 	/**
 	 * Returns the EnablingGroups within the specified range.
-	 * @param from The EnablingGroup, index, or name at the beginning of the range. Can accept: EnablingGroup, Long Integer or String.
-	 * @param to The EnablingGroup, index, or name at the end of the range. Can accept: EnablingGroup, Long Integer or String.
+	 * @param from The EnablingGroup, index, or name at the beginning of the range.
+	 * @param to The EnablingGroup, index, or name at the end of the range.
 	 */
 	itemByRange(from: EnablingGroup | number | String, to: EnablingGroup | number | String): EnablingGroup[];
 
@@ -85974,7 +85974,7 @@ declare class AngleComboboxes {
 
 	/**
 	 * Returns the AngleCombobox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): AngleCombobox;
 
@@ -85986,8 +85986,8 @@ declare class AngleComboboxes {
 
 	/**
 	 * Returns the AngleComboboxes within the specified range.
-	 * @param from The AngleCombobox, index, or name at the beginning of the range. Can accept: AngleCombobox, Long Integer or String.
-	 * @param to The AngleCombobox, index, or name at the end of the range. Can accept: AngleCombobox, Long Integer or String.
+	 * @param from The AngleCombobox, index, or name at the beginning of the range.
+	 * @param to The AngleCombobox, index, or name at the end of the range.
 	 */
 	itemByRange(from: AngleCombobox | number | String, to: AngleCombobox | number | String): AngleCombobox[];
 
@@ -86104,7 +86104,7 @@ declare class PercentComboboxes {
 
 	/**
 	 * Returns the PercentCombobox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PercentCombobox;
 
@@ -86116,8 +86116,8 @@ declare class PercentComboboxes {
 
 	/**
 	 * Returns the PercentComboboxes within the specified range.
-	 * @param from The PercentCombobox, index, or name at the beginning of the range. Can accept: PercentCombobox, Long Integer or String.
-	 * @param to The PercentCombobox, index, or name at the end of the range. Can accept: PercentCombobox, Long Integer or String.
+	 * @param from The PercentCombobox, index, or name at the beginning of the range.
+	 * @param to The PercentCombobox, index, or name at the end of the range.
 	 */
 	itemByRange(from: PercentCombobox | number | String, to: PercentCombobox | number | String): PercentCombobox[];
 
@@ -86229,7 +86229,7 @@ declare class RealEditboxes {
 
 	/**
 	 * Returns the RealEditbox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): RealEditbox;
 
@@ -86241,8 +86241,8 @@ declare class RealEditboxes {
 
 	/**
 	 * Returns the RealEditboxes within the specified range.
-	 * @param from The RealEditbox, index, or name at the beginning of the range. Can accept: RealEditbox, Long Integer or String.
-	 * @param to The RealEditbox, index, or name at the end of the range. Can accept: RealEditbox, Long Integer or String.
+	 * @param from The RealEditbox, index, or name at the beginning of the range.
+	 * @param to The RealEditbox, index, or name at the end of the range.
 	 */
 	itemByRange(from: RealEditbox | number | String, to: RealEditbox | number | String): RealEditbox[];
 
@@ -86354,7 +86354,7 @@ declare class PercentEditboxes {
 
 	/**
 	 * Returns the PercentEditbox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): PercentEditbox;
 
@@ -86366,8 +86366,8 @@ declare class PercentEditboxes {
 
 	/**
 	 * Returns the PercentEditboxes within the specified range.
-	 * @param from The PercentEditbox, index, or name at the beginning of the range. Can accept: PercentEditbox, Long Integer or String.
-	 * @param to The PercentEditbox, index, or name at the end of the range. Can accept: PercentEditbox, Long Integer or String.
+	 * @param from The PercentEditbox, index, or name at the beginning of the range.
+	 * @param to The PercentEditbox, index, or name at the end of the range.
 	 */
 	itemByRange(from: PercentEditbox | number | String, to: PercentEditbox | number | String): PercentEditbox[];
 
@@ -86479,7 +86479,7 @@ declare class AngleEditboxes {
 
 	/**
 	 * Returns the AngleEditbox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): AngleEditbox;
 
@@ -86491,8 +86491,8 @@ declare class AngleEditboxes {
 
 	/**
 	 * Returns the AngleEditboxes within the specified range.
-	 * @param from The AngleEditbox, index, or name at the beginning of the range. Can accept: AngleEditbox, Long Integer or String.
-	 * @param to The AngleEditbox, index, or name at the end of the range. Can accept: AngleEditbox, Long Integer or String.
+	 * @param from The AngleEditbox, index, or name at the beginning of the range.
+	 * @param to The AngleEditbox, index, or name at the end of the range.
 	 */
 	itemByRange(from: AngleEditbox | number | String, to: AngleEditbox | number | String): AngleEditbox[];
 
@@ -86609,7 +86609,7 @@ declare class RealComboboxes {
 
 	/**
 	 * Returns the RealCombobox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): RealCombobox;
 
@@ -86621,8 +86621,8 @@ declare class RealComboboxes {
 
 	/**
 	 * Returns the RealComboboxes within the specified range.
-	 * @param from The RealCombobox, index, or name at the beginning of the range. Can accept: RealCombobox, Long Integer or String.
-	 * @param to The RealCombobox, index, or name at the end of the range. Can accept: RealCombobox, Long Integer or String.
+	 * @param from The RealCombobox, index, or name at the beginning of the range.
+	 * @param to The RealCombobox, index, or name at the end of the range.
 	 */
 	itemByRange(from: RealCombobox | number | String, to: RealCombobox | number | String): RealCombobox[];
 
@@ -86744,7 +86744,7 @@ declare class MeasurementComboboxes {
 
 	/**
 	 * Returns the MeasurementCombobox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MeasurementCombobox;
 
@@ -86756,8 +86756,8 @@ declare class MeasurementComboboxes {
 
 	/**
 	 * Returns the MeasurementComboboxes within the specified range.
-	 * @param from The MeasurementCombobox, index, or name at the beginning of the range. Can accept: MeasurementCombobox, Long Integer or String.
-	 * @param to The MeasurementCombobox, index, or name at the end of the range. Can accept: MeasurementCombobox, Long Integer or String.
+	 * @param from The MeasurementCombobox, index, or name at the beginning of the range.
+	 * @param to The MeasurementCombobox, index, or name at the end of the range.
 	 */
 	itemByRange(from: MeasurementCombobox | number | String, to: MeasurementCombobox | number | String): MeasurementCombobox[];
 
@@ -86874,7 +86874,7 @@ declare class MeasurementEditboxes {
 
 	/**
 	 * Returns the MeasurementEditbox with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): MeasurementEditbox;
 
@@ -86886,8 +86886,8 @@ declare class MeasurementEditboxes {
 
 	/**
 	 * Returns the MeasurementEditboxes within the specified range.
-	 * @param from The MeasurementEditbox, index, or name at the beginning of the range. Can accept: MeasurementEditbox, Long Integer or String.
-	 * @param to The MeasurementEditbox, index, or name at the end of the range. Can accept: MeasurementEditbox, Long Integer or String.
+	 * @param from The MeasurementEditbox, index, or name at the beginning of the range.
+	 * @param to The MeasurementEditbox, index, or name at the end of the range.
 	 */
 	itemByRange(from: MeasurementEditbox | number | String, to: MeasurementEditbox | number | String): MeasurementEditbox[];
 
@@ -87064,7 +87064,7 @@ declare class BorderPanels {
 
 	/**
 	 * Returns the BorderPanel with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): BorderPanel;
 
@@ -87076,8 +87076,8 @@ declare class BorderPanels {
 
 	/**
 	 * Returns the BorderPanels within the specified range.
-	 * @param from The BorderPanel, index, or name at the beginning of the range. Can accept: BorderPanel, Long Integer or String.
-	 * @param to The BorderPanel, index, or name at the end of the range. Can accept: BorderPanel, Long Integer or String.
+	 * @param from The BorderPanel, index, or name at the beginning of the range.
+	 * @param to The BorderPanel, index, or name at the end of the range.
 	 */
 	itemByRange(from: BorderPanel | number | String, to: BorderPanel | number | String): BorderPanel[];
 
@@ -87247,7 +87247,7 @@ declare class DialogRow {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -87260,7 +87260,7 @@ declare class DialogRow {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -87320,7 +87320,7 @@ declare class DialogRows {
 
 	/**
 	 * Returns the DialogRow with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DialogRow;
 
@@ -87332,8 +87332,8 @@ declare class DialogRows {
 
 	/**
 	 * Returns the DialogRows within the specified range.
-	 * @param from The DialogRow, index, or name at the beginning of the range. Can accept: DialogRow, Long Integer or String.
-	 * @param to The DialogRow, index, or name at the end of the range. Can accept: DialogRow, Long Integer or String.
+	 * @param from The DialogRow, index, or name at the beginning of the range.
+	 * @param to The DialogRow, index, or name at the end of the range.
 	 */
 	itemByRange(from: DialogRow | number | String, to: DialogRow | number | String): DialogRow[];
 
@@ -87512,20 +87512,20 @@ declare class XMLElement extends XMLItem {
 
 	/**
 	 * Applies a cell style to the table cells associated with the XMLElement.
-	 * @param using The cell style to apply. Can accept: String or CellStyle.
+	 * @param using The cell style to apply.
 	 * @param clearingOverrides If true, removes local formatting before applying the cell style. 
 	 */
 	applyCellStyle(using: String | CellStyle, clearingOverrides?: boolean): void;
 
 	/**
 	 * Applies the specified character style to the text content of the XMLElement.
-	 * @param using The character style to apply. Can accept: String or CharacterStyle.
+	 * @param using The character style to apply.
 	 */
 	applyCharacterStyle(using: String | CharacterStyle): void;
 
 	/**
 	 * Applies an object style to the frame associated with the XMLElement.
-	 * @param using The object style to apply. Can accept: String or ObjectStyle.
+	 * @param using The object style to apply.
 	 * @param clearingOverrides If true, removes local formatting before applying the object style. 
 	 * @param clearingOverridesThroughRootObjectStyle If true, clears unchecked category attributes through the root style. 
 	 */
@@ -87533,21 +87533,21 @@ declare class XMLElement extends XMLItem {
 
 	/**
 	 * Applies the specified paragraph style to the text content of the XMLElement.
-	 * @param using The paragraph style to apply. Can accept: String or ParagraphStyle.
+	 * @param using The paragraph style to apply.
 	 * @param clearingOverrides If true, clears any attributes before applying the style. 
 	 */
 	applyParagraphStyle(using: String | ParagraphStyle, clearingOverrides?: boolean): void;
 
 	/**
 	 * Applies a table style to the table associated with the XMLElement.
-	 * @param using The table style to apply. Can accept: String or TableStyle.
+	 * @param using The table style to apply.
 	 * @param clearingOverrides If true, removes local formatting before applying the table style. 
 	 */
 	applyTableStyle(using: String | TableStyle, clearingOverrides?: boolean): void;
 
 	/**
 	 * asynchronously exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -87590,13 +87590,13 @@ declare class XMLElement extends XMLItem {
 	/**
 	 * Evaluates an XPath expression starting at this XML element in the structure.
 	 * @param using The XPath expression.
-	 * @param prefixMappingTable The namespace mapping table. Can accept: Array of Arrays of 2 Strings. 
+	 * @param prefixMappingTable The namespace mapping table.
 	 */
 	evaluateXPathExpression(using: string, prefixMappingTable: [string, string]): XMLItem[];
 
 	/**
 	 * Exports the object(s) to a file.
-	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog. Can accept: ExportFormat enumerator or String.
+	 * @param format The export format, specified as an enumeration value or as an extension that appears in the Save as type or Format menu in the Export dialog.
 	 * @param to The path to the export file.
 	 * @param showingOptions If true, displays the export options dialog. 
 	 * @param using The export style. 
@@ -87631,27 +87631,27 @@ declare class XMLElement extends XMLItem {
 
 	/**
 	 * Inserts the specified text as content before, in, or after the XML element.
-	 * @param using The text to be inserted. Can accept: String or SpecialCharacters enumerator.
+	 * @param using The text to be inserted.
 	 * @param position The position at which to insert the text. Note that text inserted before or after the element does not become part of the content of the element. Instead, it becomes content of the parent of the element.
 	 */
 	insertTextAsContent(using: String | SpecialCharacters, position: XMLElementPosition): Text;
 
 	/**
 	 * Associates the object with the specified XML element while preserving existing content.
-	 * @param using The object to mark up. Can accept: PageItem, Movie, Sound, Graphic, Story, Text or Table.
+	 * @param using The object to mark up.
 	 */
 	markup(using: PageItem | Movie | Sound | Graphic | Story | Text | Table): void;
 
 	/**
 	 * Moves the element to the specified location.
 	 * @param to The location in relation to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. . Can accept: XMLItem or Text. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. .
 	 */
 	move(to: LocationOptions, reference: XMLItem | Text): XMLElement;
 
 	/**
 	 * Associates the XML element with a copy of a page item.
-	 * @param on The page or spread on which to create the new page item. Can accept: Spread, Page or MasterSpread.
+	 * @param on The page or spread on which to create the new page item.
 	 * @param placePoint The page coordinates of the top left corner of the page item, in the format [y1, x1]
 	 * @param copyItem The page item to copy.
 	 * @param retainExistingFrame If true, associates the XML element with the existing page item and moves the page item (rather than a copy of the page item). 
@@ -87660,7 +87660,7 @@ declare class XMLElement extends XMLItem {
 
 	/**
 	 * Places the XML element into a new rectangular page item. If the XML element was already associated with a page item, that page item is deleted.
-	 * @param on The page or spread on which to create the new page item. Can accept: Spread, Page or MasterSpread.
+	 * @param on The page or spread on which to create the new page item.
 	 * @param geometricBounds The bounds of the page item excluding the stroke width, in the format [y1, x1, y2, x2].
 	 */
 	placeIntoFrame(on: Spread | Page | MasterSpread, geometricBounds: string[] | number[]): PageItem;
@@ -87680,7 +87680,7 @@ declare class XMLElement extends XMLItem {
 
 	/**
 	 * Places XML content into the story, replacing the existing content.
-	 * @param using The object to place into. Can accept: Story, PageItem, Graphic, Movie or Sound.
+	 * @param using The object to place into.
 	 */
 	placeXML(using: Story | PageItem | Graphic | Movie | Sound): void;
 
@@ -87728,8 +87728,8 @@ declare class XMLElements {
 
 	/**
 	 * Creates a new XML element.
-	 * @param markupTag The XML tag used to identify the element. Can accept: String or XMLTag.
-	 * @param xmlContent The content to be marked up. Can accept: Text, Story, PageItem, Movie, Sound, Graphic, Table or Cell. 
+	 * @param markupTag The XML tag used to identify the element.
+	 * @param xmlContent The content to be marked up.
 	 * @param withProperties Initial values for properties of the new XMLElement 
 	 */
 	add(markupTag: String | XMLTag, xmlContent: Text | Story | PageItem | Movie | Sound | Graphic | Table | Cell, withProperties: Object): XMLElement;
@@ -87756,7 +87756,7 @@ declare class XMLElements {
 
 	/**
 	 * Returns the XMLElement with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLElement;
 
@@ -87768,8 +87768,8 @@ declare class XMLElements {
 
 	/**
 	 * Returns the XMLElements within the specified range.
-	 * @param from The XMLElement, index, or name at the beginning of the range. Can accept: XMLElement, Long Integer or String.
-	 * @param to The XMLElement, index, or name at the end of the range. Can accept: XMLElement, Long Integer or String.
+	 * @param from The XMLElement, index, or name at the beginning of the range.
+	 * @param to The XMLElement, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLElement | number | String, to: XMLElement | number | String): XMLElement[];
 
@@ -87849,7 +87849,7 @@ declare class XMLAttribute {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -87874,7 +87874,7 @@ declare class XMLAttribute {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -87942,7 +87942,7 @@ declare class XMLAttributes {
 
 	/**
 	 * Returns the XMLAttribute with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLAttribute;
 
@@ -87954,8 +87954,8 @@ declare class XMLAttributes {
 
 	/**
 	 * Returns the XMLAttributes within the specified range.
-	 * @param from The XMLAttribute, index, or name at the beginning of the range. Can accept: XMLAttribute, Long Integer or String.
-	 * @param to The XMLAttribute, index, or name at the end of the range. Can accept: XMLAttribute, Long Integer or String.
+	 * @param from The XMLAttribute, index, or name at the beginning of the range.
+	 * @param to The XMLAttribute, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLAttribute | number | String, to: XMLAttribute | number | String): XMLAttribute[];
 
@@ -88045,7 +88045,7 @@ declare class XMLTag {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -88070,14 +88070,14 @@ declare class XMLTag {
 
 	/**
 	 * Deletes the tag.
-	 * @param replacingWith The tag to substitute. Can accept: XMLTag or String.
+	 * @param replacingWith The tag to substitute.
 	 */
 	remove(replacingWith: XMLTag | String): void;
 
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -88112,7 +88112,7 @@ declare class XMLTags {
 	/**
 	 * Creates a tag.
 	 * @param name The name of the tag. 
-	 * @param tagColor The dolor of the tag, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color. Can accept: Array of 3 Reals (0 - 255) or UIColors enumerator. 
+	 * @param tagColor The dolor of the tag, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color.
 	 * @param withProperties Initial values for properties of the new XMLTag 
 	 */
 	add(name: string, tagColor: [number, number, number] | UIColors, withProperties: Object): XMLTag;
@@ -88139,7 +88139,7 @@ declare class XMLTags {
 
 	/**
 	 * Returns the XMLTag with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLTag;
 
@@ -88157,8 +88157,8 @@ declare class XMLTags {
 
 	/**
 	 * Returns the XMLTags within the specified range.
-	 * @param from The XMLTag, index, or name at the beginning of the range. Can accept: XMLTag, Long Integer or String.
-	 * @param to The XMLTag, index, or name at the end of the range. Can accept: XMLTag, Long Integer or String.
+	 * @param from The XMLTag, index, or name at the beginning of the range.
+	 * @param to The XMLTag, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLTag | number | String, to: XMLTag | number | String): XMLTag[];
 
@@ -88238,7 +88238,7 @@ declare class XMLImportMap {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -88256,7 +88256,7 @@ declare class XMLImportMap {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -88290,8 +88290,8 @@ declare class XMLImportMaps {
 
 	/**
 	 * Create a new mapping
-	 * @param markupTag The tag to map. Can accept: XMLTag or String.
-	 * @param mappedStyle the mapped style. Can accept: ParagraphStyle, CharacterStyle, TableStyle, CellStyle or String.
+	 * @param markupTag The tag to map.
+	 * @param mappedStyle the mapped style.
 	 * @param withProperties Initial values for properties of the new XMLImportMap 
 	 */
 	add(markupTag: XMLTag | String, mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | String, withProperties: Object): XMLImportMap;
@@ -88318,14 +88318,14 @@ declare class XMLImportMaps {
 
 	/**
 	 * Returns the XMLImportMap with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLImportMap;
 
 	/**
 	 * Returns the XMLImportMaps within the specified range.
-	 * @param from The XMLImportMap, index, or name at the beginning of the range. Can accept: XMLImportMap, Long Integer or String.
-	 * @param to The XMLImportMap, index, or name at the end of the range. Can accept: XMLImportMap, Long Integer or String.
+	 * @param from The XMLImportMap, index, or name at the beginning of the range.
+	 * @param to The XMLImportMap, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLImportMap | number | String, to: XMLImportMap | number | String): XMLImportMap[];
 
@@ -88420,7 +88420,7 @@ declare class XMLExportMap {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -88438,7 +88438,7 @@ declare class XMLExportMap {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -88472,8 +88472,8 @@ declare class XMLExportMaps {
 
 	/**
 	 * Create a new mapping
-	 * @param mappedStyle The mapped style. Can accept: ParagraphStyle, CharacterStyle, TableStyle, CellStyle or String.
-	 * @param markupTag The tag to map. Can accept: XMLTag or String.
+	 * @param mappedStyle The mapped style.
+	 * @param markupTag The tag to map.
 	 * @param withProperties Initial values for properties of the new XMLExportMap 
 	 */
 	add(mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | String, markupTag: XMLTag | String, withProperties: Object): XMLExportMap;
@@ -88500,14 +88500,14 @@ declare class XMLExportMaps {
 
 	/**
 	 * Returns the XMLExportMap with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLExportMap;
 
 	/**
 	 * Returns the XMLExportMaps within the specified range.
-	 * @param from The XMLExportMap, index, or name at the beginning of the range. Can accept: XMLExportMap, Long Integer or String.
-	 * @param to The XMLExportMap, index, or name at the end of the range. Can accept: XMLExportMap, Long Integer or String.
+	 * @param from The XMLExportMap, index, or name at the beginning of the range.
+	 * @param to The XMLExportMap, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLExportMap | number | String, to: XMLExportMap | number | String): XMLExportMap[];
 
@@ -88592,7 +88592,7 @@ declare class ValidationError {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -88605,7 +88605,7 @@ declare class ValidationError {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -88659,14 +88659,14 @@ declare class ValidationErrors {
 
 	/**
 	 * Returns the ValidationError with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): ValidationError;
 
 	/**
 	 * Returns the ValidationErrors within the specified range.
-	 * @param from The ValidationError, index, or name at the beginning of the range. Can accept: ValidationError, Long Integer or String.
-	 * @param to The ValidationError, index, or name at the end of the range. Can accept: ValidationError, Long Integer or String.
+	 * @param from The ValidationError, index, or name at the beginning of the range.
+	 * @param to The ValidationError, index, or name at the end of the range.
 	 */
 	itemByRange(from: ValidationError | number | String, to: ValidationError | number | String): ValidationError[];
 
@@ -88716,7 +88716,7 @@ declare class XMLComment extends XMLItem {
 	/**
 	 * Moves the element to the specified location.
 	 * @param to The location in relation to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. . Can accept: XMLItem or Text. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. .
 	 */
 	move(to: LocationOptions, reference: XMLItem | Text): XMLComment;
 
@@ -88740,7 +88740,7 @@ declare class XMLComments {
 	/**
 	 * Creates a new XML comment.
 	 * @param value The value of the comment. 
-	 * @param storyOffset The location within the story, specified as an insertion point. Can accept: InsertionPoint or Long Integer. 
+	 * @param storyOffset The location within the story, specified as an insertion point.
 	 * @param withProperties Initial values for properties of the new XMLComment 
 	 */
 	add(value?: string, storyOffset?: InsertionPoint | number, withProperties?: Object): XMLComment;
@@ -88767,7 +88767,7 @@ declare class XMLComments {
 
 	/**
 	 * Returns the XMLComment with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLComment;
 
@@ -88779,8 +88779,8 @@ declare class XMLComments {
 
 	/**
 	 * Returns the XMLComments within the specified range.
-	 * @param from The XMLComment, index, or name at the beginning of the range. Can accept: XMLComment, Long Integer or String.
-	 * @param to The XMLComment, index, or name at the end of the range. Can accept: XMLComment, Long Integer or String.
+	 * @param from The XMLComment, index, or name at the beginning of the range.
+	 * @param to The XMLComment, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLComment | number | String, to: XMLComment | number | String): XMLComment[];
 
@@ -88835,7 +88835,7 @@ declare class XMLInstruction extends XMLItem {
 	/**
 	 * Moves the element to the specified location.
 	 * @param to The location in relation to the reference object or within the containing object.
-	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. . Can accept: XMLItem or Text. 
+	 * @param reference The reference object. Note: Required when the to parameter specifies before or after. .
 	 */
 	move(to: LocationOptions, reference: XMLItem | Text): XMLInstruction;
 
@@ -88860,7 +88860,7 @@ declare class XMLInstructions {
 	 * Creates a new XML processing instruction.
 	 * @param target A name that identifies the processing instruction to an application reading the exported XML file.
 	 * @param data A value that tells the application what to do with the processing instruction identified in the target. 
-	 * @param storyOffset The location within the story, specified as an insertion point. Can accept: InsertionPoint or Long Integer. 
+	 * @param storyOffset The location within the story, specified as an insertion point.
 	 * @param withProperties Initial values for properties of the new XMLInstruction 
 	 */
 	add(target: string, data?: string, storyOffset?: InsertionPoint | number, withProperties?: Object): XMLInstruction;
@@ -88887,7 +88887,7 @@ declare class XMLInstructions {
 
 	/**
 	 * Returns the XMLInstruction with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLInstruction;
 
@@ -88899,8 +88899,8 @@ declare class XMLInstructions {
 
 	/**
 	 * Returns the XMLInstructions within the specified range.
-	 * @param from The XMLInstruction, index, or name at the beginning of the range. Can accept: XMLInstruction, Long Integer or String.
-	 * @param to The XMLInstruction, index, or name at the end of the range. Can accept: XMLInstruction, Long Integer or String.
+	 * @param from The XMLInstruction, index, or name at the beginning of the range.
+	 * @param to The XMLInstruction, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLInstruction | number | String, to: XMLInstruction | number | String): XMLInstruction[];
 
@@ -88975,7 +88975,7 @@ declare class XMLItem {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -88998,7 +88998,7 @@ declare class XMLItem {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -89058,7 +89058,7 @@ declare class XMLItems {
 
 	/**
 	 * Returns the XMLItem with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLItem;
 
@@ -89070,8 +89070,8 @@ declare class XMLItems {
 
 	/**
 	 * Returns the XMLItems within the specified range.
-	 * @param from The XMLItem, index, or name at the beginning of the range. Can accept: XMLItem, Long Integer or String.
-	 * @param to The XMLItem, index, or name at the end of the range. Can accept: XMLItem, Long Integer or String.
+	 * @param from The XMLItem, index, or name at the beginning of the range.
+	 * @param to The XMLItem, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLItem | number | String, to: XMLItem | number | String): XMLItem[];
 
@@ -89167,7 +89167,7 @@ declare class DTDs {
 
 	/**
 	 * Returns the DTD with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): DTD;
 
@@ -89179,8 +89179,8 @@ declare class DTDs {
 
 	/**
 	 * Returns the DTDs within the specified range.
-	 * @param from The DTD, index, or name at the beginning of the range. Can accept: DTD, Long Integer or String.
-	 * @param to The DTD, index, or name at the end of the range. Can accept: DTD, Long Integer or String.
+	 * @param from The DTD, index, or name at the beginning of the range.
+	 * @param to The DTD, index, or name at the end of the range.
 	 */
 	itemByRange(from: DTD | number | String, to: DTD | number | String): DTD[];
 
@@ -89256,7 +89256,7 @@ declare class XmlStories {
 
 	/**
 	 * Returns the XmlStory with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XmlStory;
 
@@ -89274,8 +89274,8 @@ declare class XmlStories {
 
 	/**
 	 * Returns the XmlStories within the specified range.
-	 * @param from The XmlStory, index, or name at the beginning of the range. Can accept: XmlStory, Long Integer or String.
-	 * @param to The XmlStory, index, or name at the end of the range. Can accept: XmlStory, Long Integer or String.
+	 * @param from The XmlStory, index, or name at the beginning of the range.
+	 * @param to The XmlStory, index, or name at the end of the range.
 	 */
 	itemByRange(from: XmlStory | number | String, to: XmlStory | number | String): XmlStory[];
 
@@ -89370,7 +89370,7 @@ declare class XMLRuleProcessor {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -89416,7 +89416,7 @@ declare class XMLRuleProcessor {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
@@ -89467,7 +89467,7 @@ declare class XMLRuleProcessors {
 	/**
 	 * Create a new XMLRuleProcessor
 	 * @param rulePaths The XPath condition paths of the rules in the rule set.
-	 * @param prefixMappingTable The namespace mapping table. Can accept: Array of Arrays of 2 Strings. 
+	 * @param prefixMappingTable The namespace mapping table.
 	 * @param withProperties Initial values for properties of the new XMLRuleProcessor 
 	 */
 	add(rulePaths: string[], prefixMappingTable: [string, string], withProperties: Object): XMLRuleProcessor;
@@ -89494,7 +89494,7 @@ declare class XMLRuleProcessors {
 
 	/**
 	 * Returns the XMLRuleProcessor with the specified index or name.
-	 * @param index The index or name. Can accept: Long Integer or String.
+	 * @param index The index or name.
 	 */
 	item(index: number | String): XMLRuleProcessor;
 
@@ -89512,8 +89512,8 @@ declare class XMLRuleProcessors {
 
 	/**
 	 * Returns the XMLRuleProcessors within the specified range.
-	 * @param from The XMLRuleProcessor, index, or name at the beginning of the range. Can accept: XMLRuleProcessor, Long Integer or String.
-	 * @param to The XMLRuleProcessor, index, or name at the end of the range. Can accept: XMLRuleProcessor, Long Integer or String.
+	 * @param from The XMLRuleProcessor, index, or name at the beginning of the range.
+	 * @param to The XMLRuleProcessor, index, or name at the end of the range.
 	 */
 	itemByRange(from: XMLRuleProcessor | number | String, to: XMLRuleProcessor | number | String): XMLRuleProcessor[];
 
@@ -89593,7 +89593,7 @@ declare class XMLRuleMatchData {
 	/**
 	 * Adds an event listener.
 	 * @param eventType The event type.
-	 * @param handler The event handler. Can accept: File or JavaScript Function.
+	 * @param handler The event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	addEventListener(eventType: string, handler: File | Function, captures?: boolean): EventListener;
@@ -89606,7 +89606,7 @@ declare class XMLRuleMatchData {
 	/**
 	 * Removes the event listener.
 	 * @param eventType The registered event type.
-	 * @param handler The registered event handler. Can accept: File or JavaScript Function.
+	 * @param handler The registered event handler.
 	 * @param captures This parameter is obsolete. 
 	 */
 	removeEventListener(eventType: string, handler: File | Function, captures?: boolean): boolean;
