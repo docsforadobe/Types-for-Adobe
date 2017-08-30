@@ -46787,7 +46787,7 @@ declare class ScriptPreference extends Preference {
 	/**
 	 * The version of the scripting environment.
 	 */
-	version: string | Real;
+	version: string | number;
 
 }
 
