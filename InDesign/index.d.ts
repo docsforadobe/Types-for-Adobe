@@ -32791,11 +32791,11 @@ declare class Spread {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested.
+	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	resolve(location: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
+	resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
 
 	/**
 	 * Selects the object.
@@ -32823,12 +32823,12 @@ declare class Spread {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation.
+	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param withMatrix Transform matrix.
 	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
+	transform(in_: CoordinateSpaces, from: any, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
 
 	/**
 	 * Get the transformation values of the page item.
@@ -33298,21 +33298,21 @@ declare class Page {
 	/**
 	 * Resize the page item.
 	 * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
-	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}.
+	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param by How the current dimensions are affected by the given values
 	 * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method).
 	 * @param resizeIndividually If false and multiple page items are targeted, the new dimensions are attained only by moving the individual items rather than resizing them. 
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	resize(in_: any, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, by: ResizeMethods, values: number[] | ResizeConstraints | CoordinateSpaces, resizeIndividually?: boolean, consideringRulerUnits?: boolean): void;
+	resize(in_: any, from: any, by: ResizeMethods, values: number[] | ResizeConstraints | CoordinateSpaces, resizeIndividually?: boolean, consideringRulerUnits?: boolean): void;
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested.
+	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	resolve(location: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
+	resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
 
 	/**
 	 * Selects the object.
@@ -33345,12 +33345,12 @@ declare class Page {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation.
+	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param withMatrix Transform matrix.
 	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
+	transform(in_: CoordinateSpaces, from: any, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
 
 	/**
 	 * Get the transformation values of the page item.
@@ -33764,11 +33764,11 @@ declare class MasterSpread {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested.
+	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	resolve(location: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
+	resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
 
 	/**
 	 * Selects the object.
@@ -33789,12 +33789,12 @@ declare class MasterSpread {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation.
+	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param withMatrix Transform matrix.
 	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
+	transform(in_: CoordinateSpaces, from: any, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
 
 	/**
 	 * Get the transformation values of the page item.
@@ -34579,21 +34579,21 @@ declare class PageItem {
 	/**
 	 * Resize the page item.
 	 * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
-	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}.
+	 * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param by How the current dimensions are affected by the given values
 	 * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method).
 	 * @param resizeIndividually If false and multiple page items are targeted, the new dimensions are attained only by moving the individual items rather than resizing them. 
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	resize(in_: any, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, by: ResizeMethods, values: number[] | ResizeConstraints | CoordinateSpaces, resizeIndividually?: boolean, consideringRulerUnits?: boolean): void;
+	resize(in_: any, from: any, by: ResizeMethods, values: number[] | ResizeConstraints | CoordinateSpaces, resizeIndividually?: boolean, consideringRulerUnits?: boolean): void;
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested.
+	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	resolve(location: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
+	resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
 
 	/**
 	 * Selects the object.
@@ -34621,12 +34621,12 @@ declare class PageItem {
 	/**
 	 * Transform the page item.
 	 * @param in The coordinate space to use
-	 * @param from The temporary origin during the transformation.
+	 * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param withMatrix Transform matrix.
 	 * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
 	 * @param consideringRulerUnits If true then a ruler based origin is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	transform(in_: CoordinateSpaces, from: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
+	transform(in_: CoordinateSpaces, from: any, withMatrix: [number, number, number, number, number, number] | TransformationMatrix, replacingCurrent: MatrixContent | MatrixContent[] | number, consideringRulerUnits?: boolean): void;
 
 	/**
 	 * Transforms the PageItem using the last transformation performed on any object. Transformations include moving, rotating, shearing, scaling, and flipping.
@@ -36348,10 +36348,10 @@ declare class TransformationMatrices {
 	 * @param horizontalTranslation The horizontal translation of the transformation matrix 
 	 * @param verticalTranslation The vertical translation of the transformation matrix 
 	 * @param matrixValues The values of the transformation matrix 
-	 * @param matrixMapping The mapping the transformation matrix performs on the unit triangle.
+	 * @param matrixMapping The mapping the transformation matrix performs on the unit triangle. Can accept: Array of Array of 2 Arrays of 2 Reals. 
 	 * @param withProperties Initial values for properties of the new TransformationMatrix 
 	 */
-	add(horizontalScaleFactor: number, verticalScaleFactor: number, clockwiseShearAngle: number, counterclockwiseRotationAngle: number, horizontalTranslation: number, verticalTranslation: number, matrixValues: number[], matrixMapping: [number, number], withProperties: Object): TransformationMatrix;
+	add(horizontalScaleFactor: number, verticalScaleFactor: number, clockwiseShearAngle: number, counterclockwiseRotationAngle: number, horizontalTranslation: number, verticalTranslation: number, matrixValues: number[], matrixMapping: any[], withProperties: Object): TransformationMatrix;
 
 	/**
 	 * Returns any TransformationMatrix in the collection.
@@ -36650,11 +36650,11 @@ declare class Guide {
 
 	/**
 	 * Get the coordinates of the given location in the specified coordinate system.
-	 * @param location The location requested.
+	 * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
 	 * @param in The coordinate space to use.
 	 * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page. 
 	 */
-	resolve(location: [number, number] | AnchorPoint | [number, number] | CoordinateSpaces | AnchorPoint | BoundingBoxLimits | number, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
+	resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any;
 
 	/**
 	 * Selects the object.
@@ -87590,9 +87590,9 @@ declare class XMLElement extends XMLItem {
 	/**
 	 * Evaluates an XPath expression starting at this XML element in the structure.
 	 * @param using The XPath expression.
-	 * @param prefixMappingTable The namespace mapping table.
+	 * @param prefixMappingTable The namespace mapping table. Can accept: Array of Arrays of 2 Strings. 
 	 */
-	evaluateXPathExpression(using: string, prefixMappingTable: [string, string]): XMLItem[];
+	evaluateXPathExpression(using: string, prefixMappingTable: any[]): XMLItem[];
 
 	/**
 	 * Exports the object(s) to a file.
@@ -89467,10 +89467,10 @@ declare class XMLRuleProcessors {
 	/**
 	 * Create a new XMLRuleProcessor
 	 * @param rulePaths The XPath condition paths of the rules in the rule set.
-	 * @param prefixMappingTable The namespace mapping table.
+	 * @param prefixMappingTable The namespace mapping table. Can accept: Array of Arrays of 2 Strings. 
 	 * @param withProperties Initial values for properties of the new XMLRuleProcessor 
 	 */
-	add(rulePaths: string[], prefixMappingTable: [string, string], withProperties: Object): XMLRuleProcessor;
+	add(rulePaths: string[], prefixMappingTable: any[], withProperties: Object): XMLRuleProcessor;
 
 	/**
 	 * Returns any XMLRuleProcessor in the collection.
