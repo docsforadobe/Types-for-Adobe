@@ -5048,7 +5048,7 @@ declare class Window {
 	/**
 	 * The bounds of the window (specified in pixels) in the form [top, left, bottom, right].
 	 */
-	bounds: number[];
+	bounds: [number, number, number, number];
 
 	/**
 	 * A collection of event listeners.
