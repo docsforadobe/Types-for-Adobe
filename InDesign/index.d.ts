@@ -36,9 +36,9 @@ declare class Assignment {
 	exportOptions: AssignmentExportOptions;
 
 	/**
-	 * The file path (colon delimited on the Mac OS). Can also accept: File.
+	 * The file path (colon delimited on the Mac OS).
 	 */
-	readonly filePath: string;
+	readonly filePath: string | File;
 
 	/**
 	 * The color of the assignment's frames. Can return: Array of 3 Reals (0 - 255) or UIColors enumerator or NothingEnum enumerator.
@@ -284,9 +284,9 @@ declare class AssignedStory {
 	readonly events: Events;
 
 	/**
-	 * The file path (colon delimited on the Mac OS). Can also accept: File.
+	 * The file path (colon delimited on the Mac OS).
 	 */
-	readonly filePath: string;
+	readonly filePath: string | File;
 
 	/**
 	 * The unique ID of the AssignedStory.
@@ -1632,29 +1632,29 @@ declare class Application {
 	readonly cellStyles: CellStyles;
 
 	/**
-	 * Change glyph preferences. Can also accept: NothingEnum enumerator.
+	 * Change glyph preferences.
 	 */
-	changeGlyphPreferences: ChangeGlyphPreference;
+	changeGlyphPreferences: ChangeGlyphPreference | NothingEnum;
 
 	/**
-	 * Change grep preferences. Can also accept: NothingEnum enumerator.
+	 * Change grep preferences.
 	 */
-	changeGrepPreferences: ChangeGrepPreference;
+	changeGrepPreferences: ChangeGrepPreference | NothingEnum;
 
 	/**
-	 * Change object preferences. Can also accept: NothingEnum enumerator.
+	 * Change object preferences.
 	 */
-	changeObjectPreferences: ChangeObjectPreference;
+	changeObjectPreferences: ChangeObjectPreference | NothingEnum;
 
 	/**
-	 * Change text preferences. Can also accept: NothingEnum enumerator.
+	 * Change text preferences.
 	 */
-	changeTextPreferences: ChangeTextPreference;
+	changeTextPreferences: ChangeTextPreference | NothingEnum;
 
 	/**
-	 * Change transliterate preferences. Can also accept: NothingEnum enumerator.
+	 * Change transliterate preferences.
 	 */
-	changeTransliteratePreferences: ChangeTransliteratePreference;
+	changeTransliteratePreferences: ChangeTransliteratePreference | NothingEnum;
 
 	/**
 	 * A collection of char style mappings.
@@ -1822,54 +1822,54 @@ declare class Application {
 	readonly filePath: File;
 
 	/**
-	 * Find/change glyph options. Can also accept: NothingEnum enumerator.
+	 * Find/change glyph options.
 	 */
-	findChangeGlyphOptions: FindChangeGlyphOption;
+	findChangeGlyphOptions: FindChangeGlyphOption | NothingEnum;
 
 	/**
-	 * Find/change grep options. Can also accept: NothingEnum enumerator.
+	 * Find/change grep options.
 	 */
-	findChangeGrepOptions: FindChangeGrepOption;
+	findChangeGrepOptions: FindChangeGrepOption | NothingEnum;
 
 	/**
-	 * Find/change object options. Can also accept: NothingEnum enumerator.
+	 * Find/change object options.
 	 */
-	findChangeObjectOptions: FindChangeObjectOption;
+	findChangeObjectOptions: FindChangeObjectOption | NothingEnum;
 
 	/**
-	 * Find/change text options. Can also accept: NothingEnum enumerator.
+	 * Find/change text options.
 	 */
-	findChangeTextOptions: FindChangeTextOption;
+	findChangeTextOptions: FindChangeTextOption | NothingEnum;
 
 	/**
-	 * Find/change transliterate options. Can also accept: NothingEnum enumerator.
+	 * Find/change transliterate options.
 	 */
-	findChangeTransliterateOptions: FindChangeTransliterateOption;
+	findChangeTransliterateOptions: FindChangeTransliterateOption | NothingEnum;
 
 	/**
-	 * Find glyph preferences. Can also accept: NothingEnum enumerator.
+	 * Find glyph preferences.
 	 */
-	findGlyphPreferences: FindGlyphPreference;
+	findGlyphPreferences: FindGlyphPreference | NothingEnum;
 
 	/**
-	 * Find grep preferences. Can also accept: NothingEnum enumerator.
+	 * Find grep preferences.
 	 */
-	findGrepPreferences: FindGrepPreference;
+	findGrepPreferences: FindGrepPreference | NothingEnum;
 
 	/**
-	 * Find object preferences. Can also accept: NothingEnum enumerator.
+	 * Find object preferences.
 	 */
-	findObjectPreferences: FindObjectPreference;
+	findObjectPreferences: FindObjectPreference | NothingEnum;
 
 	/**
-	 * Find text preferences. Can also accept: NothingEnum enumerator.
+	 * Find text preferences.
 	 */
-	findTextPreferences: FindTextPreference;
+	findTextPreferences: FindTextPreference | NothingEnum;
 
 	/**
-	 * Find transliterate preferences. Can also accept: NothingEnum enumerator.
+	 * Find transliterate preferences.
 	 */
-	findTransliteratePreferences: FindTransliteratePreference;
+	findTransliteratePreferences: FindTransliteratePreference | NothingEnum;
 
 	/**
 	 * A collection of transparency flattener presets.
@@ -2272,14 +2272,14 @@ declare class Application {
 	readonly scriptPreferences: ScriptPreference;
 
 	/**
-	 * The selected object(s). Can also accept: Object or NothingEnum enumerator.
+	 * The selected object(s).
 	 */
-	selection: Object[];
+	selection: Object[] | Object | NothingEnum;
 
 	/**
-	 * The key object of the selection. Can also accept: NothingEnum enumerator.
+	 * The key object of the selection.
 	 */
-	selectionKeyObject: PageItem;
+	selectionKeyObject: PageItem | NothingEnum;
 
 	/**
 	 * The user's serial number.
@@ -3410,9 +3410,9 @@ declare class Document {
 	accurateLABSpots: boolean;
 
 	/**
-	 * The active layer. Can also accept: String.
+	 * The active layer.
 	 */
-	activeLayer: Layer;
+	activeLayer: Layer | String;
 
 	/**
 	 * The active preflight process for this document.
@@ -4140,14 +4140,14 @@ declare class Document {
 	readonly sections: Sections;
 
 	/**
-	 * The selected object(s). Can also accept: Object or NothingEnum enumerator.
+	 * The selected object(s).
 	 */
-	selection: Object[];
+	selection: Object[] | Object | NothingEnum;
 
 	/**
-	 * The key object of the selection. Can also accept: NothingEnum enumerator.
+	 * The key object of the selection.
 	 */
-	selectionKeyObject: PageItem;
+	selectionKeyObject: PageItem | NothingEnum;
 
 	/**
 	 * A collection of signature fields.
@@ -5086,14 +5086,14 @@ declare class Window {
 	properties: Object;
 
 	/**
-	 * The selected object(s). Can also accept: Object or NothingEnum enumerator.
+	 * The selected object(s).
 	 */
-	selection: Object[];
+	selection: Object[] | Object | NothingEnum;
 
 	/**
-	 * The key object of the selection. Can also accept: NothingEnum enumerator.
+	 * The key object of the selection.
 	 */
-	selectionKeyObject: PageItem;
+	selectionKeyObject: PageItem | NothingEnum;
 
 	/**
 	 * Adds an event listener.
@@ -5254,9 +5254,9 @@ declare class Windows {
  */
 declare class LayoutWindow extends Window {
 	/**
-	 * The active layer. Can also accept: String.
+	 * The active layer.
 	 */
-	activeLayer: Layer;
+	activeLayer: Layer | String;
 
 	/**
 	 * The front-most page.
@@ -22879,9 +22879,9 @@ declare class HyperlinkTextSources {
  */
 declare class HyperlinkTextDestination {
 	/**
-	 * The text or insertion point that the hyperlink points to. Can also accept: Text.
+	 * The text or insertion point that the hyperlink points to.
 	 */
-	destinationText: InsertionPoint;
+	destinationText: InsertionPoint | Text;
 
 	/**
 	 * A collection of event listeners.
@@ -24709,9 +24709,9 @@ declare class IndexOptions extends Preference {
 	title: string;
 
 	/**
-	 * The paragraph style applied to the title of the generated index. Can also accept: String.
+	 * The paragraph style applied to the title of the generated index.
 	 */
-	titleStyle: ParagraphStyle;
+	titleStyle: ParagraphStyle | String;
 
 }
 
@@ -28487,9 +28487,9 @@ declare class Movie extends MediaItem {
 	embedInPDF: boolean;
 
 	/**
-	 * The file path (colon delimited on the Mac OS). Can also accept: File.
+	 * The file path (colon delimited on the Mac OS).
 	 */
-	filePath: string;
+	filePath: string | File;
 
 	/**
 	 * If true, opens a new window to play the movie. If false, plays the movie in the poster frame on the PDF document page.
@@ -28895,9 +28895,9 @@ declare class Sound extends MediaItem {
 	embedInPDF: boolean;
 
 	/**
-	 * The file path (colon delimited on the Mac OS). Can also accept: File.
+	 * The file path (colon delimited on the Mac OS).
 	 */
-	filePath: string;
+	filePath: string | File;
 
 	/**
 	 * A collection of imported graphics in any graphic file format (vector, metafile, or bitmap).
@@ -30355,9 +30355,9 @@ declare class AnimationBehaviors {
  */
 declare class OpenFileBehavior extends Behavior {
 	/**
-	 * The file path (colon delimited on the Mac OS). Can also accept: File.
+	 * The file path (colon delimited on the Mac OS).
 	 */
-	filePath: string;
+	filePath: string | File;
 
 }
 
@@ -31026,9 +31026,9 @@ declare class GotoAnchorBehavior extends Behavior {
 	readonly anchorName: string;
 
 	/**
-	 * The file path (colon delimited on the Mac OS). Can also accept: File.
+	 * The file path (colon delimited on the Mac OS).
 	 */
-	filePath: string;
+	filePath: string | File;
 
 	/**
 	 * The zoom setting.
@@ -32479,9 +32479,9 @@ declare class Spread {
 	allowPageShuffle: boolean;
 
 	/**
-	 * The master spread applied to the Spread. Can also accept: NothingEnum enumerator.
+	 * The master spread applied to the Spread.
 	 */
-	appliedMaster: MasterSpread;
+	appliedMaster: MasterSpread | NothingEnum;
 
 	/**
 	 * A collection of buttons.
@@ -32955,9 +32955,9 @@ declare class Page {
 	readonly appliedAlternateLayout: Section;
 
 	/**
-	 * The master spread applied to the Page. Can also accept: NothingEnum enumerator.
+	 * The master spread applied to the Page.
 	 */
-	appliedMaster: MasterSpread;
+	appliedMaster: MasterSpread | NothingEnum;
 
 	/**
 	 * The section to which the page belongs.
@@ -32965,9 +32965,9 @@ declare class Page {
 	readonly appliedSection: Section;
 
 	/**
-	 * The trap preset applied to the page. Can also accept: String.
+	 * The trap preset applied to the page.
 	 */
-	appliedTrapPreset: TrapPreset;
+	appliedTrapPreset: TrapPreset | String;
 
 	/**
 	 * The bounds of the Page, in the format [y1, x1, y2, x2].
@@ -33472,9 +33472,9 @@ declare class MasterSpread {
 	readonly allPageItems: PageItem[];
 
 	/**
-	 * The master spread applied to the MasterSpread. Can also accept: NothingEnum enumerator.
+	 * The master spread applied to the MasterSpread.
 	 */
-	appliedMaster: MasterSpread;
+	appliedMaster: MasterSpread | NothingEnum;
 
 	/**
 	 * The name of the master spread.
@@ -33612,9 +33612,9 @@ declare class MasterSpread {
 	readonly preferences: Preferences;
 
 	/**
-	 * The primary text frame through which text flows on the MasterSpread. Must be a text frame or a type on a path spline. Can also accept: NothingEnum enumerator.
+	 * The primary text frame through which text flows on the MasterSpread. Must be a text frame or a type on a path spline.
 	 */
-	primaryTextFrame: PageItem;
+	primaryTextFrame: PageItem | NothingEnum;
 
 	/**
 	 * A property that allows setting of several properties at the same time.
@@ -34041,9 +34041,9 @@ declare class PageItem {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the PageItem. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the PageItem. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The percent of tint to use in the PageItem's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -34241,9 +34241,9 @@ declare class PageItem {
 	strokeAlignment: StrokeAlignment;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the PageItem. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the PageItem.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * The corner adjustment applied to the PageItem.
@@ -34266,9 +34266,9 @@ declare class PageItem {
 	readonly strokeTransparencySettings: StrokeTransparencySetting;
 
 	/**
-	 * The name of the stroke style to apply. Can also accept: String.
+	 * The name of the stroke style to apply.
 	 */
-	strokeType: StrokeStyle;
+	strokeType: StrokeStyle | String;
 
 	/**
 	 * The weight (in points) to apply to the PageItem's stroke.
@@ -39888,9 +39888,9 @@ declare class Link {
 	readonly events: Events;
 
 	/**
-	 * The file path (colon delimited on the Mac OS). Can also accept: File.
+	 * The file path (colon delimited on the Mac OS).
 	 */
-	readonly filePath: string;
+	readonly filePath: string | File;
 
 	/**
 	 * The unique ID of the Link.
@@ -40261,9 +40261,9 @@ declare class ObjectStyle {
 	anchoredObjectSettings: AnchoredObjectSetting;
 
 	/**
-	 * The paragraph style applied to the text. Can also accept: String.
+	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle;
+	appliedParagraphStyle: ParagraphStyle | String;
 
 	/**
 	 * If true, applies paragraph styles using Next Paragraph Style settings, beginning with the Next Paragraph Style defined in the paragraph style associated with the object style (if any).
@@ -40411,9 +40411,9 @@ declare class ObjectStyle {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ObjectStyle. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ObjectStyle. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The fill effects enabling settings.
@@ -40556,9 +40556,9 @@ declare class ObjectStyle {
 	strokeAlignment: StrokeAlignment;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ObjectStyle. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ObjectStyle.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * The stroke effects enabling settings.
@@ -40576,9 +40576,9 @@ declare class ObjectStyle {
 	readonly strokeTransparencySettings: StrokeTransparencySetting;
 
 	/**
-	 * The name of the stroke style to apply. Can also accept: String.
+	 * The name of the stroke style to apply.
 	 */
-	strokeType: StrokeStyle;
+	strokeType: StrokeStyle | String;
 
 	/**
 	 * The weight (in points) to apply to the ObjectStyle's stroke.
@@ -41261,9 +41261,9 @@ declare class TextDefault extends Preference {
 	allowArbitraryHyphenation: boolean;
 
 	/**
-	 * The character style applied to the text. Can also accept: String.
+	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle;
+	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The font applied to the TextDefault, specified as either a font object or the name of font family. Can return: Font or String.
@@ -41286,9 +41286,9 @@ declare class TextDefault extends Preference {
 	appliedNumberingList: any;
 
 	/**
-	 * The paragraph style applied to the text. Can also accept: String.
+	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle;
+	appliedParagraphStyle: ParagraphStyle | String;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -41411,9 +41411,9 @@ declare class TextDefault extends Preference {
 	dropCapLines: number;
 
 	/**
-	 * The character style to apply to the drop cap. Can also accept: String.
+	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle;
+	dropCapStyle: CharacterStyle | String;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -41426,9 +41426,9 @@ declare class TextDefault extends Preference {
 	endJoin: OutlineJoin;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the TextDefault. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the TextDefault. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the TextDefault. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -42481,9 +42481,9 @@ declare class TextDefault extends Preference {
 	strokeAlignment: TextStrokeAlign;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the TextDefault. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the TextDefault.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the TextDefault. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -45079,9 +45079,9 @@ declare class PDFExportPreference extends Preference {
 	includeHyperlinks: boolean;
 
 	/**
-	 * The ICC Profiles to include in the exported PDF document. Can also accept: Boolean.
+	 * The ICC Profiles to include in the exported PDF document.
 	 */
-	includeICCProfiles: ICCProfiles;
+	includeICCProfiles: ICCProfiles | Boolean;
 
 	/**
 	 * If true, includes the document's slug area in the PDF document.
@@ -45465,9 +45465,9 @@ declare class PDFExportPreset {
 	includeHyperlinks: boolean;
 
 	/**
-	 * The ICC Profiles to include in the exported PDF document. Can also accept: Boolean.
+	 * The ICC Profiles to include in the exported PDF document.
 	 */
-	includeICCProfiles: ICCProfiles;
+	includeICCProfiles: ICCProfiles | Boolean;
 
 	/**
 	 * If true, includes the document's slug area in the PDF document.
@@ -45924,19 +45924,19 @@ declare class TaggedPDFPreference extends Preference {
  */
 declare class PageItemDefault extends Preference {
 	/**
-	 * The default graphic object style applied to the PageItemDefault. Can also accept: String.
+	 * The default graphic object style applied to the PageItemDefault.
 	 */
-	appliedGraphicObjectStyle: ObjectStyle;
+	appliedGraphicObjectStyle: ObjectStyle | String;
 
 	/**
-	 * The default frame grid object style applied to the PageItemDefault. Can also accept: String.
+	 * The default frame grid object style applied to the PageItemDefault.
 	 */
-	appliedGridObjectStyle: ObjectStyle;
+	appliedGridObjectStyle: ObjectStyle | String;
 
 	/**
-	 * The default text object style applied to the PageItemDefault. Can also accept: String.
+	 * The default text object style applied to the PageItemDefault.
 	 */
-	appliedTextObjectStyle: ObjectStyle;
+	appliedTextObjectStyle: ObjectStyle | String;
 
 	/**
 	 * The shape to apply to the bottom left corner of rectangular shapes.
@@ -45974,9 +45974,9 @@ declare class PageItemDefault extends Preference {
 	endJoin: EndJoin;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the PageItemDefault. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the PageItemDefault. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The percent of tint to use in the PageItemDefault's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -46054,9 +46054,9 @@ declare class PageItemDefault extends Preference {
 	strokeAlignment: StrokeAlignment;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the PageItemDefault. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the PageItemDefault.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * The percent of tint to use in object's stroke color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -46069,9 +46069,9 @@ declare class PageItemDefault extends Preference {
 	readonly strokeTransparencySettings: StrokeTransparencySetting;
 
 	/**
-	 * The name of the stroke style to apply. Can also accept: String.
+	 * The name of the stroke style to apply.
 	 */
-	strokeType: StrokeStyle;
+	strokeType: StrokeStyle | String;
 
 	/**
 	 * The weight (in points) to apply to the PageItemDefault's stroke.
@@ -46564,14 +46564,14 @@ declare class StrokeFillProxySetting extends Preference {
 	active: StrokeFillProxyOptions;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the StrokeFillProxySetting. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the StrokeFillProxySetting. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the StrokeFillProxySetting. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the StrokeFillProxySetting.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * Which target is affected by changes to the stroke/fill proxy.
@@ -46785,9 +46785,9 @@ declare class ScriptPreference extends Preference {
 	userInteractionLevel: UserInteractionLevels;
 
 	/**
-	 * The version of the scripting environment. Can also accept: Real.
+	 * The version of the scripting environment.
 	 */
-	version: string;
+	version: string | Real;
 
 }
 
@@ -55849,9 +55849,9 @@ declare class FileNameVariablePreference extends Preference {
  */
 declare class MatchCharacterStylePreference extends Preference {
 	/**
-	 * The character style applied to the text. Can also accept: String.
+	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle;
+	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The case of the matched text.
@@ -55885,9 +55885,9 @@ declare class MatchCharacterStylePreference extends Preference {
  */
 declare class MatchParagraphStylePreference extends Preference {
 	/**
-	 * The paragraph style applied to the text. Can also accept: String.
+	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle;
+	appliedParagraphStyle: ParagraphStyle | String;
 
 	/**
 	 * The case of the matched text.
@@ -63219,9 +63219,9 @@ declare class Cell {
 	readonly allPageItems: PageItem[];
 
 	/**
-	 * The cell style applied to the cell. Can also accept: String.
+	 * The cell style applied to the cell.
 	 */
-	appliedCellStyle: CellStyle;
+	appliedCellStyle: CellStyle | String;
 
 	/**
 	 * The XML element associated with the Cell.
@@ -63264,9 +63264,9 @@ declare class Cell {
 	bottomEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the bottom edge. Can also accept: String.
+	 * The stroke type of the bottom edge.
 	 */
-	bottomEdgeStrokeType: StrokeStyle;
+	bottomEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the bottom edge border stroke.
@@ -63379,9 +63379,9 @@ declare class Cell {
 	diagonalLineStrokeTint: number;
 
 	/**
-	 * The stroke type of the diagonal line(s). Can also accept: String.
+	 * The stroke type of the diagonal line(s).
 	 */
-	diagonalLineStrokeType: StrokeStyle;
+	diagonalLineStrokeType: StrokeStyle | String;
 
 	/**
 	 * The diagonal line stroke weight.
@@ -63404,9 +63404,9 @@ declare class Cell {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object.
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the fill of the object.
@@ -63519,9 +63519,9 @@ declare class Cell {
 	innerColumnStrokeTint: number;
 
 	/**
-	 * The stroke type of the inner column. Can also accept: String.
+	 * The stroke type of the inner column.
 	 */
-	innerColumnStrokeType: StrokeStyle;
+	innerColumnStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the inner column border stroke.
@@ -63559,9 +63559,9 @@ declare class Cell {
 	innerRowStrokeTint: number;
 
 	/**
-	 * The stroke type of the inner row. Can also accept: String.
+	 * The stroke type of the inner row.
 	 */
-	innerRowStrokeType: StrokeStyle;
+	innerRowStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the inner row border strokes.
@@ -63619,9 +63619,9 @@ declare class Cell {
 	leftEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the left edge. Can also accept: String.
+	 * The stroke type of the left edge.
 	 */
-	leftEdgeStrokeType: StrokeStyle;
+	leftEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the left edge border stroke.
@@ -63769,9 +63769,9 @@ declare class Cell {
 	rightEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the right edge. Can also accept: String.
+	 * The stroke type of the right edge.
 	 */
-	rightEdgeStrokeType: StrokeStyle;
+	rightEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the right edge border stroke.
@@ -63904,9 +63904,9 @@ declare class Cell {
 	topEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the top edge. Can also accept: String.
+	 * The stroke type of the top edge.
 	 */
-	topEdgeStrokeType: StrokeStyle;
+	topEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the top edge border stroke.
@@ -64213,9 +64213,9 @@ declare class Table {
 	alternatingFills: AlternatingFillsTypes;
 
 	/**
-	 * The table style applied to the table. Can also accept: String.
+	 * The table style applied to the table.
 	 */
-	appliedTableStyle: TableStyle;
+	appliedTableStyle: TableStyle | String;
 
 	/**
 	 * The XML element associated with the Table.
@@ -64258,9 +64258,9 @@ declare class Table {
 	bottomBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the bottom border. Can also accept: String.
+	 * The stroke type of the bottom border.
 	 */
-	bottomBorderStrokeType: StrokeStyle;
+	bottomBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the bottom border stroke.
@@ -64363,9 +64363,9 @@ declare class Table {
 	endColumnFillTint: number;
 
 	/**
-	 * The stroke type of columns in the second alternating strokes group. Can also accept: String.
+	 * The stroke type of columns in the second alternating strokes group.
 	 */
-	endColumnLineStyle: StrokeStyle;
+	endColumnLineStyle: StrokeStyle | String;
 
 	/**
 	 * The stroke color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.
@@ -64463,9 +64463,9 @@ declare class Table {
 	endRowStrokeTint: number;
 
 	/**
-	 * The stroke type of rows in the second alternating strokes group. Can also accept: String.
+	 * The stroke type of rows in the second alternating strokes group.
 	 */
-	endRowStrokeType: StrokeStyle;
+	endRowStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.
@@ -64593,9 +64593,9 @@ declare class Table {
 	leftBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the left border. Can also accept: String.
+	 * The stroke type of the left border.
 	 */
-	leftBorderStrokeType: StrokeStyle;
+	leftBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the left border stroke.
@@ -64688,9 +64688,9 @@ declare class Table {
 	rightBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the right border. Can also accept: String.
+	 * The stroke type of the right border.
 	 */
-	rightBorderStrokeType: StrokeStyle;
+	rightBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the right border stroke.
@@ -64828,9 +64828,9 @@ declare class Table {
 	startColumnStrokeTint: number;
 
 	/**
-	 * The stroke type of columns in the first alternating strokes group. Can also accept: String.
+	 * The stroke type of columns in the first alternating strokes group.
 	 */
-	startColumnStrokeType: StrokeStyle;
+	startColumnStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.
@@ -64893,9 +64893,9 @@ declare class Table {
 	startRowStrokeTint: number;
 
 	/**
-	 * The stroke type of rows in the first alternating strokes group. Can also accept: String.
+	 * The stroke type of rows in the first alternating strokes group.
 	 */
-	startRowStrokeType: StrokeStyle;
+	startRowStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.
@@ -64983,9 +64983,9 @@ declare class Table {
 	topBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the top border. Can also accept: String.
+	 * The stroke type of the top border.
 	 */
-	topBorderStrokeType: StrokeStyle;
+	topBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the table's top border stroke.
@@ -65283,9 +65283,9 @@ declare class Column {
 	bottomEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the bottom edge. Can also accept: String.
+	 * The stroke type of the bottom edge.
 	 */
-	bottomEdgeStrokeType: StrokeStyle;
+	bottomEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the bottom edge border stroke.
@@ -65368,9 +65368,9 @@ declare class Column {
 	diagonalLineStrokeTint: number;
 
 	/**
-	 * The stroke type of the diagonal line(s). Can also accept: String.
+	 * The stroke type of the diagonal line(s).
 	 */
-	diagonalLineStrokeType: StrokeStyle;
+	diagonalLineStrokeType: StrokeStyle | String;
 
 	/**
 	 * The diagonal line stroke weight.
@@ -65388,9 +65388,9 @@ declare class Column {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object.
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the fill of the object.
@@ -65478,9 +65478,9 @@ declare class Column {
 	innerColumnStrokeTint: number;
 
 	/**
-	 * The stroke type of the inner column. Can also accept: String.
+	 * The stroke type of the inner column.
 	 */
-	innerColumnStrokeType: StrokeStyle;
+	innerColumnStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the inner column border stroke.
@@ -65518,9 +65518,9 @@ declare class Column {
 	innerRowStrokeTint: number;
 
 	/**
-	 * The stroke type of the inner row. Can also accept: String.
+	 * The stroke type of the inner row.
 	 */
-	innerRowStrokeType: StrokeStyle;
+	innerRowStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the inner row border strokes.
@@ -65568,9 +65568,9 @@ declare class Column {
 	leftEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the left edge. Can also accept: String.
+	 * The stroke type of the left edge.
 	 */
-	leftEdgeStrokeType: StrokeStyle;
+	leftEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the left edge border stroke.
@@ -65668,9 +65668,9 @@ declare class Column {
 	rightEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the right edge. Can also accept: String.
+	 * The stroke type of the right edge.
 	 */
-	rightEdgeStrokeType: StrokeStyle;
+	rightEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the right edge border stroke.
@@ -65758,9 +65758,9 @@ declare class Column {
 	topEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the top edge. Can also accept: String.
+	 * The stroke type of the top edge.
 	 */
-	topEdgeStrokeType: StrokeStyle;
+	topEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the top edge border stroke.
@@ -66055,9 +66055,9 @@ declare class Row {
 	bottomEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the bottom edge. Can also accept: String.
+	 * The stroke type of the bottom edge.
 	 */
-	bottomEdgeStrokeType: StrokeStyle;
+	bottomEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the bottom edge border stroke.
@@ -66140,9 +66140,9 @@ declare class Row {
 	diagonalLineStrokeTint: number;
 
 	/**
-	 * The stroke type of the diagonal line(s). Can also accept: String.
+	 * The stroke type of the diagonal line(s).
 	 */
-	diagonalLineStrokeType: StrokeStyle;
+	diagonalLineStrokeType: StrokeStyle | String;
 
 	/**
 	 * The diagonal line stroke weight.
@@ -66160,9 +66160,9 @@ declare class Row {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object.
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the fill of the object.
@@ -66250,9 +66250,9 @@ declare class Row {
 	innerColumnStrokeTint: number;
 
 	/**
-	 * The stroke type of the inner column. Can also accept: String.
+	 * The stroke type of the inner column.
 	 */
-	innerColumnStrokeType: StrokeStyle;
+	innerColumnStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the inner column border stroke.
@@ -66290,9 +66290,9 @@ declare class Row {
 	innerRowStrokeTint: number;
 
 	/**
-	 * The stroke type of the inner row. Can also accept: String.
+	 * The stroke type of the inner row.
 	 */
-	innerRowStrokeType: StrokeStyle;
+	innerRowStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the inner row border strokes.
@@ -66340,9 +66340,9 @@ declare class Row {
 	leftEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the left edge. Can also accept: String.
+	 * The stroke type of the left edge.
 	 */
-	leftEdgeStrokeType: StrokeStyle;
+	leftEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the left edge border stroke.
@@ -66440,9 +66440,9 @@ declare class Row {
 	rightEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the right edge. Can also accept: String.
+	 * The stroke type of the right edge.
 	 */
-	rightEdgeStrokeType: StrokeStyle;
+	rightEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the right edge border stroke.
@@ -66530,9 +66530,9 @@ declare class Row {
 	topEdgeStrokeTint: number;
 
 	/**
-	 * The stroke type of the top edge. Can also accept: String.
+	 * The stroke type of the top edge.
 	 */
-	topEdgeStrokeType: StrokeStyle;
+	topEdgeStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the top edge border stroke.
@@ -66797,9 +66797,9 @@ declare class TableStyle {
 	basedOn: any;
 
 	/**
-	 * The cell style of the body region. Can also accept: String.
+	 * The cell style of the body region.
 	 */
-	bodyRegionCellStyle: CellStyle;
+	bodyRegionCellStyle: CellStyle | String;
 
 	/**
 	 * The color, specified as a swatch (color, gradient, tint, or mixed ink), of the bottom border stroke.
@@ -66832,9 +66832,9 @@ declare class TableStyle {
 	bottomBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the bottom border. Can also accept: String.
+	 * The stroke type of the bottom border.
 	 */
-	bottomBorderStrokeType: StrokeStyle;
+	bottomBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the bottom border stroke.
@@ -66877,9 +66877,9 @@ declare class TableStyle {
 	endColumnFillTint: number;
 
 	/**
-	 * The stroke type of columns in the second alternating strokes group. Can also accept: String.
+	 * The stroke type of columns in the second alternating strokes group.
 	 */
-	endColumnLineStyle: StrokeStyle;
+	endColumnLineStyle: StrokeStyle | String;
 
 	/**
 	 * The stroke color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.
@@ -66977,9 +66977,9 @@ declare class TableStyle {
 	endRowStrokeTint: number;
 
 	/**
-	 * The stroke type of rows in the second alternating strokes group. Can also accept: String.
+	 * The stroke type of rows in the second alternating strokes group.
 	 */
-	endRowStrokeType: StrokeStyle;
+	endRowStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.
@@ -66997,9 +66997,9 @@ declare class TableStyle {
 	readonly events: Events;
 
 	/**
-	 * The cell style of the footer region. Can also accept: String.
+	 * The cell style of the footer region.
 	 */
-	footerRegionCellStyle: CellStyle;
+	footerRegionCellStyle: CellStyle | String;
 
 	/**
 	 * If true, uses the cell style of the body region for the footer region.
@@ -67027,9 +67027,9 @@ declare class TableStyle {
 	graphicTopInset: string | number;
 
 	/**
-	 * The cell style of the header region. Can also accept: String.
+	 * The cell style of the header region.
 	 */
-	headerRegionCellStyle: CellStyle;
+	headerRegionCellStyle: CellStyle | String;
 
 	/**
 	 * If true, use the cell style of the body region for the header region.
@@ -67087,9 +67087,9 @@ declare class TableStyle {
 	leftBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the left border. Can also accept: String.
+	 * The stroke type of the left border.
 	 */
-	leftBorderStrokeType: StrokeStyle;
+	leftBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the left border stroke.
@@ -67097,9 +67097,9 @@ declare class TableStyle {
 	leftBorderStrokeWeight: string | number;
 
 	/**
-	 * The cell style of the left column region. Can also accept: String.
+	 * The cell style of the left column region.
 	 */
-	leftColumnRegionCellStyle: CellStyle;
+	leftColumnRegionCellStyle: CellStyle | String;
 
 	/**
 	 * If true, uses the cell style of the body region for the left column region.
@@ -67152,9 +67152,9 @@ declare class TableStyle {
 	rightBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the right border. Can also accept: String.
+	 * The stroke type of the right border.
 	 */
-	rightBorderStrokeType: StrokeStyle;
+	rightBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the right border stroke.
@@ -67162,9 +67162,9 @@ declare class TableStyle {
 	rightBorderStrokeWeight: string | number;
 
 	/**
-	 * The cell style of the right column region. Can also accept: String.
+	 * The cell style of the right column region.
 	 */
-	rightColumnRegionCellStyle: CellStyle;
+	rightColumnRegionCellStyle: CellStyle | String;
 
 	/**
 	 * If true, uses the cell style of the body region for the right column region.
@@ -67277,9 +67277,9 @@ declare class TableStyle {
 	startColumnStrokeTint: number;
 
 	/**
-	 * The stroke type of columns in the first alternating strokes group. Can also accept: String.
+	 * The stroke type of columns in the first alternating strokes group.
 	 */
-	startColumnStrokeType: StrokeStyle;
+	startColumnStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.
@@ -67342,9 +67342,9 @@ declare class TableStyle {
 	startRowStrokeTint: number;
 
 	/**
-	 * The stroke type of rows in the first alternating strokes group. Can also accept: String.
+	 * The stroke type of rows in the first alternating strokes group.
 	 */
-	startRowStrokeType: StrokeStyle;
+	startRowStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.
@@ -67407,9 +67407,9 @@ declare class TableStyle {
 	topBorderStrokeTint: number;
 
 	/**
-	 * The stroke type of the top border. Can also accept: String.
+	 * The stroke type of the top border.
 	 */
-	topBorderStrokeType: StrokeStyle;
+	topBorderStrokeType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the table's top border stroke.
@@ -68589,9 +68589,9 @@ declare class CellStyleGroups {
  */
 declare class NestedLineStyle {
 	/**
-	 * The character style applied to the text. Can also accept: String.
+	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle;
+	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * A collection of event listeners.
@@ -68759,9 +68759,9 @@ declare class NestedLineStyles {
  */
 declare class NestedGrepStyle {
 	/**
-	 * The character style applied to the text. Can also accept: String.
+	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle;
+	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * A collection of event listeners.
@@ -68944,9 +68944,9 @@ declare class Text {
 	allowArbitraryHyphenation: boolean;
 
 	/**
-	 * The character style applied to the text. Can also accept: String.
+	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle;
+	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The applied conditions.
@@ -68974,9 +68974,9 @@ declare class Text {
 	appliedNumberingList: any;
 
 	/**
-	 * The paragraph style applied to the text. Can also accept: String.
+	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle;
+	appliedParagraphStyle: ParagraphStyle | String;
 
 	/**
 	 * The maximum ascent of any character in the text.
@@ -69144,9 +69144,9 @@ declare class Text {
 	dropCapLines: number;
 
 	/**
-	 * The character style to apply to the drop cap. Can also accept: String.
+	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle;
+	dropCapStyle: CharacterStyle | String;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -69184,9 +69184,9 @@ declare class Text {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the Text. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the Text. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the Text. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -70389,9 +70389,9 @@ declare class Text {
 	strokeAlignment: TextStrokeAlign;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the Text. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the Text.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the Text. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -72065,9 +72065,9 @@ declare class Story {
 	allowArbitraryHyphenation: boolean;
 
 	/**
-	 * The character style applied to the text. Can also accept: String.
+	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle;
+	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The font applied to the Story, specified as either a font object or the name of font family. Can return: Font or String.
@@ -72095,9 +72095,9 @@ declare class Story {
 	appliedNumberingList: any;
 
 	/**
-	 * The paragraph style applied to the text. Can also accept: String.
+	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle;
+	appliedParagraphStyle: ParagraphStyle | String;
 
 	/**
 	 * The XML element associated with the Story.
@@ -72265,9 +72265,9 @@ declare class Story {
 	dropCapLines: number;
 
 	/**
-	 * The character style to apply to the drop cap. Can also accept: String.
+	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle;
+	dropCapStyle: CharacterStyle | String;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -72295,9 +72295,9 @@ declare class Story {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the Story. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the Story. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the Story. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -73550,9 +73550,9 @@ declare class Story {
 	strokeAlignment: TextStrokeAlign;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the Story. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the Story.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the Story. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -74220,9 +74220,9 @@ declare class ParagraphStyle {
 	dropCapLines: number;
 
 	/**
-	 * The character style to apply to the drop cap. Can also accept: String.
+	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle;
+	dropCapStyle: CharacterStyle | String;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -74250,9 +74250,9 @@ declare class ParagraphStyle {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ParagraphStyle. . Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ParagraphStyle. .
 	 */
-	fillColor: Swatch;
+	fillColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the ParagraphStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -75360,9 +75360,9 @@ declare class ParagraphStyle {
 	strokeAlignment: TextStrokeAlign;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ParagraphStyle. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ParagraphStyle.
 	 */
-	strokeColor: Swatch;
+	strokeColor: Swatch | String;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the ParagraphStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -76872,9 +76872,9 @@ declare class TabStops {
  */
 declare class NestedStyle {
 	/**
-	 * The character style applied to the text. Can also accept: String.
+	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle;
+	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The delimiting expression that indicates how deeply into the paragraph the nested style is applied. Can return: String or NestedStyleDelimiters enumerator.
@@ -82947,9 +82947,9 @@ declare class LibraryPanel extends Panel {
 	readonly associatedLibrary: Library;
 
 	/**
-	 * The selected object(s). Can also accept: Object or NothingEnum enumerator.
+	 * The selected object(s).
 	 */
-	selection: Object[];
+	selection: Object[] | Object | NothingEnum;
 
 	/**
 	 * The sort order of the assets in the LibraryPanel
@@ -87411,9 +87411,9 @@ declare class XMLElement extends XMLItem {
 	readonly lines: Lines;
 
 	/**
-	 * The XML tag applied to the element. Can also accept: String.
+	 * The XML tag applied to the element.
 	 */
-	markupTag: XMLTag;
+	markupTag: XMLTag | String;
 
 	/**
 	 * The page items collection, which can be used to process all page items in a container (such as a document, page, or group), regardless of type.
@@ -88221,9 +88221,9 @@ declare class XMLImportMap {
 	mappedStyle: any;
 
 	/**
-	 * The XML tag applied to the element. Can also accept: String.
+	 * The XML tag applied to the element.
 	 */
-	readonly markupTag: XMLTag;
+	readonly markupTag: XMLTag | String;
 
 	/**
 	 * The parent of the XMLImportMap (a Application or Document).
@@ -88403,9 +88403,9 @@ declare class XMLExportMap {
 	readonly mappedStyle: any;
 
 	/**
-	 * The XML tag applied to the element. Can also accept: String.
+	 * The XML tag applied to the element.
 	 */
-	markupTag: XMLTag;
+	markupTag: XMLTag | String;
 
 	/**
 	 * The parent of the XMLExportMap (a Application or Document).
