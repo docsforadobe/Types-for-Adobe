@@ -8,7 +8,7 @@ declare class ScriptUI {
 	 * Collects the enumerated values that can be used in the alignment and alignChildren properties of controls and containers.
 	 * Predefined alignment values are: TOP, BOTTOM, LEFT, RIGHT, FILL, CENTER
 	 */
-	static readonly Alignment: String;
+	static readonly Alignment: string;
 
 	/**
 	 * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
@@ -30,7 +30,7 @@ declare class ScriptUI {
 	/**
 	 * A string containing the internal version number of the ScriptUI module.
 	 */
-	static readonly coreVersion: String;
+	static readonly coreVersion: string;
 
 	/**
 	 * An object whose properties define attributes of the environment in which ScriptUI operates.
@@ -46,7 +46,7 @@ declare class ScriptUI {
 	/**
 	 * A string containing the name of the UI component framework with which this version of ScriptUI is compatible.
 	 */
-	static readonly frameworkName: String;
+	static readonly frameworkName: string;
 
 	/**
 	 * A string containing the version number of the ScriptUI component framework
@@ -58,7 +58,7 @@ declare class ScriptUI {
 	 * If no string resource matches the given text, the text itself is returned.
 	 * @param text The text to match.
 	 */
-	static getResourceText(text: String): String;
+	static getResourceText(text: string): string;
 
 	/**
 	 * Creates a new font object for use in text controls and titles.
@@ -66,7 +66,7 @@ declare class ScriptUI {
 	 * @param style The font style; can be string, or one of the values of ScriptUI.FontStyle.
 	 * @param size The font size in points.
 	 */
-	static newFont(name: String, style: String, size: Number): ScriptUIFont;
+	static newFont(name: string, style: string, size: number): ScriptUIFont;
 
 	/**
 	 * Loads a new image from resources or disk files into an image object.
@@ -76,7 +76,7 @@ declare class ScriptUI {
 	 * @param pressed The resource name, or the file-system path to the image used for the pressed state.
 	 * @param rollover The resource name, or the file-system path to the image used for the rollover state.
 	 */
-	static newImage(normal: String, disabled?: String, pressed?: String, rollover?: String): ScriptUIImage;
+	static newImage(normal: string, disabled?: string, pressed?: string, rollover?: string): ScriptUIImage;
 
 }
 
@@ -91,13 +91,13 @@ declare class Window {
 	 * An active palette is the front-most window.
 	 * An active control is the one with focus—that is, the one that accepts keystrokes, or in the case of a Button, be selected when the user typesReturn or Enter.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
 	 * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
 	 */
-	alignChildren: String;
+	alignChildren: string;
 
 	/**
 	 * The alignment style for child elements of a container. If defined, this value overrides the alignChildren setting for the parent container.
@@ -106,7 +106,7 @@ declare class Window {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The bounds of the window's drawable area, excluding the frame, in screen coordinates.
@@ -122,7 +122,7 @@ declare class Window {
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the window.
 	 */
-	characters: Number;
+	characters: number;
 
 	/**
 	 * The collection of UI elements that have been added to this container.
@@ -140,7 +140,7 @@ declare class Window {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The bounds of the window frame in screen coordinates.
@@ -162,7 +162,7 @@ declare class Window {
 	/**
 	 * Deprecated. Use ScriptUI.frameworkName instead.
 	 */
-	static readonly frameworkName: String;
+	static readonly frameworkName: string;
 
 	/**
 	 * The graphics object that can be used to customize the window’s appearance, in response to the onDraw event.
@@ -172,18 +172,18 @@ declare class Window {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The default text justification style for child text elements.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
-	justify: String;
+	justify: string;
 
 	/**
 	 * The layout manager for this container.
@@ -201,12 +201,12 @@ declare class Window {
 	 * The number of pixels between the edges of a container and the outermost child elements.
 	 * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
 	 */
-	margins: Number;
+	margins: number;
 
 	/**
 	 * True if the window is expanded.
 	 */
-	maximized: Boolean;
+	maximized: boolean;
 
 	/**
 	 * The largest rectangle to which the window can be resized.
@@ -216,7 +216,7 @@ declare class Window {
 	/**
 	 * True if the window is minimized or iconified.
 	 */
-	minimized: Boolean;
+	minimized: boolean;
 
 	/**
 	 * The smallest rectangle to which the window can be resized.
@@ -227,13 +227,13 @@ declare class Window {
 	 * The opacity of the window, in the range [0..1].
 	 * A value of 1.0 (the default) makes the window completely opaque, a value of 0 makes it completely transparent. Intermediate values make it partially transparent to any degree.
 	 */
-	opacity: Number;
+	opacity: number;
 
 	/**
 	 * The layout orientation of children in a container.
 	 * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
 	 */
-	orientation: String;
+	orientation: string;
 
 	/**
 	 * The immediate parent element.
@@ -259,7 +259,7 @@ declare class Window {
 	/**
 	 * The keypress combination that invokes this element's onShortcutKey() callback.
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current size and location of the content area of the window in screen coordinates.
@@ -270,18 +270,18 @@ declare class Window {
 	 * The number of pixels separating one child element from its adjacent sibling element.
 	 * Because each container holds only a single row or column of children, only a single spacing value is needed for a container. The default value is based on the type of container, and is chosen to match standard Adobe UI guidelines.
 	 */
-	spacing: Number;
+	spacing: number;
 
 	/**
 	 * The title, label, or displayed text, a localizeable string.
 	 * Does not apply to containers of type group.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The element type; "dialog", "palette", or "window".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * Deprecated. Use ScriptUI.version instead.
@@ -292,7 +292,7 @@ declare class Window {
 	 * When true, the element is shown, when false it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -311,7 +311,7 @@ declare class Window {
 	 * @param bounds The window's position and size.
 	 * @param properties An object containing creation-only properties. Can contain any of these properties: resizeable: When true, the window can be resized by the user. Default is false. su1PanelCoordinates: Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting. closeButton:When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs. maximizeButton:When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs. minimizeButton: When true, the title bar includes a button to minimize or iconify the window, if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Main windows cannot have a minimize button in Mac OS. Not used for dialogs. independent:When true, a window of type window is independent of other application windows, and can be hidden behind them in Windows. In Mac OS, has no effect. Default is false. borderless:When true, the window has no title bar or borders. Properties that control those features are ignored.
 	 */
-	constructor(type: String, title?: String, bounds?: Bounds, properties?: Object);
+	constructor(type: string, title?: string, bounds?: Bounds, properties?: Object);
 
 	/**
 	 * Creates and returns a new control or container object and adds it to the children of this window.
@@ -320,7 +320,7 @@ declare class Window {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: String, bounds?: Bounds, text?: String, properties?: Object): Object;
+	add(type: string, bounds?: Bounds, text?: string, properties?: Object): Object;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this window.
@@ -328,7 +328,7 @@ declare class Window {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase?: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase?: boolean): boolean;
 
 	/**
 	 * Displays a platform-standard dialog containing a short message and an OK button.
@@ -336,7 +336,7 @@ declare class Window {
 	 * @param title A string to appear as the title of the dialog, if the platform supports a title. Ignored in Mac OS, which does not support titles for alert dialogs. The default title string is "Script Alert".
 	 * @param errorIcon When true, the platform-standard alert icon is replaced by the platform-standard error icon in the dialog. Ignored in Mac OS, which does not support icons for alert dialogs.
 	 */
-	static alert(message: String, title?: String, errorIcon?: Boolean): void;
+	static alert(message: string, title?: string, errorIcon?: boolean): void;
 
 	/**
 	 * Centers this window on screen or with repect to another window.
@@ -358,7 +358,7 @@ declare class Window {
 	 * @param noAsDefault When true, the No button is the default choice, selected when the user types Enter. Default is false, meaning that Yes is the default choice.
 	 * @param title A string to appear as the title of the dialog, if the platform supports a title. Ignored in Mac OS, which does not support titles for alert dialogs. The default title string is "Script Alert".
 	 */
-	static confirm(message: String, noAsDefault: Boolean, title?: String): Boolean;
+	static confirm(message: string, noAsDefault: boolean, title?: string): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -372,7 +372,7 @@ declare class Window {
 	 * @param type The name of a predefined resource available to JavaScript in the current application; or the window type. If a title is specified, the type is used if more than one window with that title is found. Can be null or the empty string.
 	 * @param title The window title.
 	 */
-	static find(type: String, title: String): Window;
+	static find(type: string, title: string): Window;
 
 	/**
 	 * Hides this windows.
@@ -384,7 +384,7 @@ declare class Window {
 	 * Sends a notification message to all listeners, simulating the specified user interaction event.
 	 * @param eventName The event name; if omitted, the default event is sent. One of: onClose, onMove, onMoving, onResize, onResizing, onShow
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the window acquires the keyboard focus.
@@ -396,7 +396,7 @@ declare class Window {
 	 * An event-handler callback function, calledwhen the window is about to be closed.
 	 * Called when a request is made to close the window, either by an explicit call to the close() function or by a user action (clicking the OS-specific close icon in the title bar). The function is called before the window actually closes; it can return false to cancel the close operation.
 	 */
-	onClose(): Boolean;
+	onClose(): boolean;
 
 	/**
 	 * An event-handler callback function, called when the window loses the keyboard focus.
@@ -444,7 +444,7 @@ declare class Window {
 	 * @param default The initial value to be displayed in the text edit field.
 	 * @param title A string to appear as the title of the dialog. In Windows, this appears in the window’s frame; in Mac OS it appears above the message. The default title string is "Script Prompt".
 	 */
-	static prompt(prompt: String, default_?: String, title?: String): String;
+	static prompt(prompt: string, default_?: string, title?: string): string;
 
 	/**
 	 * Removes the specified child control from this window’s children array.
@@ -460,7 +460,7 @@ declare class Window {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Makes this window visible.
@@ -499,24 +499,24 @@ declare class ScriptUIPen {
 	 * The pen color.
 	 * The paint color to use when the type is SOLID_COLOR. An array in the form [R, B, G, A] specifying the red, green, blue values of the color and the opacity (alpha channel) value as numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque.
 	 */
-	readonly color: Number[];
+	readonly color: number[];
 
 	/**
 	 * The pixel width of the drawing line.
 	 */
-	lineWidth: Number;
+	lineWidth: number;
 
 	/**
 	 * The theme name.
 	 * The name of a color theme to use for drawing when the type is THEME_COLOR. Theme colors are defined by the host application.
 	 */
-	readonly theme: String;
+	readonly theme: string;
 
 	/**
 	 * The pen type, solid or theme.
 	 * One of these constants: ScriptUIGraphics.PenType.SOLID_COLOR or ScriptUIGraphics.PenType.THEME_COLOR
 	 */
-	readonly type: String;
+	readonly type: string;
 
 }
 
@@ -529,19 +529,19 @@ declare class ScriptUIBrush {
 	 * The brush color.
 	 * The paint color to use when the type is SOLID_COLOR. An array in the form [R, B, G, A] specifying the red, green, blue values of the color and the opacity (alpha channel) value as numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque.
 	 */
-	readonly color: Number[];
+	readonly color: number[];
 
 	/**
 	 * The theme name.
 	 * The name of a color theme to use for drawing when the type is THEME_COLOR. Theme colors are defined by the host application.
 	 */
-	readonly theme: String;
+	readonly theme: string;
 
 	/**
 	 * The brush type, solid or theme.
 	 * One of these constants: ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR
 	 */
-	readonly type: Number;
+	readonly type: number;
 
 }
 
@@ -621,7 +621,7 @@ declare class ScriptUIGraphics {
 	 * @param width The width of the region in pixels.
 	 * @param height The height of the region in pixels.
 	 */
-	drawFocusRing(left: Number, top: Number, width: Number, height: Number): void;
+	drawFocusRing(left: number, top: number, width: number, height: number): void;
 
 	/**
 	 * Draws an image within a given region of the element.
@@ -632,7 +632,7 @@ declare class ScriptUIGraphics {
 	 * @param width The width in pixels. If provided, the image is stretched or shrunk to fit. If omitted, uses the original image width.
 	 * @param height The height in pixels. If provided, the image is stretched or shrunk to fit. If omitted, uses the original image height.
 	 */
-	drawImage(image: ScriptUIImage, left: Number, top: Number, width?: Number, height?: Number): void;
+	drawImage(image: ScriptUIImage, left: number, top: number, width?: number, height?: number): void;
 
 	/**
 	 * Draw the platform-specific control associated with this element.
@@ -647,7 +647,7 @@ declare class ScriptUIGraphics {
 	 * @param y The top coordinate, relative to the origin of this element.
 	 * @param font The font to use. Default is the  font value in this object.
 	 */
-	drawString(text: String, pen: ScriptUIPen, x: Number, y: Number, font?: ScriptUIFont): void;
+	drawString(text: string, pen: ScriptUIPen, x: number, y: number, font?: ScriptUIFont): void;
 
 	/**
 	 * Defines an elliptical path within a given rectangular area in the currentPath object, which can be filled using fillPath() or stroked using strokePath().
@@ -657,7 +657,7 @@ declare class ScriptUIGraphics {
 	 * @param width The width of the region in pixels.
 	 * @param height The height of the region in pixels.
 	 */
-	ellipsePath(left: Number, top: Number, width: Number, height: Number): Point;
+	ellipsePath(left: number, top: number, width: number, height: number): Point;
 
 	/**
 	 * Fills a path using a given painting brush.
@@ -672,7 +672,7 @@ declare class ScriptUIGraphics {
 	 * @param x The X coordinate for the destination point, relative to the origin of this element.
 	 * @param y The Y coordinate for the destination point, relative to the origin of this element.
 	 */
-	lineTo(x: Number, y: Number): Point;
+	lineTo(x: number, y: number): Point;
 
 	/**
 	 * Calculates the size needed to display a string using the given font.
@@ -681,7 +681,7 @@ declare class ScriptUIGraphics {
 	 * @param font The font to use. Default is the font value in this object.
 	 * @param boundingWidth The bounding width.
 	 */
-	measureString(text: String, font?: ScriptUIFont, boundingWidth?: Number): Dimension;
+	measureString(text: string, font?: ScriptUIFont, boundingWidth?: number): Dimension;
 
 	/**
 	 * Adds a given point to the currentPath, and makes it the current drawing position.
@@ -689,14 +689,14 @@ declare class ScriptUIGraphics {
 	 * @param x The X coordinate for the new point, relative to the origin of this element.
 	 * @param y The Y coordinate for the new point, relative to the origin of this element.
 	 */
-	moveTo(x: Number, y: Number): Point;
+	moveTo(x: number, y: number): Point;
 
 	/**
 	 * Creates a new painting brush object.
 	 * @param type The brush type, solid or theme. One of the constants ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR.
 	 * @param color The brush color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
 	 */
-	newBrush(type: Number, color: Number[]): ScriptUIBrush;
+	newBrush(type: number, color: number[]): ScriptUIBrush;
 
 	/**
 	 * Creates a new, empty path object.
@@ -710,7 +710,7 @@ declare class ScriptUIGraphics {
 	 * @param color The pen color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
 	 * @param width The width of the pen line in pixels. The line is centered around the current point. For example, if the value is 2, drawing a line from (0, 10) to (5, 10) paints the two rows of pixels directly above and below y-position 10.
 	 */
-	newPen(type: Number, color: Number[], width: Number): ScriptUIPen;
+	newPen(type: number, color: number[], width: number): ScriptUIPen;
 
 	/**
 	 * Defines a rectangular path in the currentPath object.
@@ -720,7 +720,7 @@ declare class ScriptUIGraphics {
 	 * @param width The width in pixels.
 	 * @param height The height in pixels.
 	 */
-	rectPath(left: Number, top: Number, width: Number, height: Number): Point;
+	rectPath(left: number, top: number, width: number, height: number): Point;
 
 	/**
 	 * Strokes the path segments of a path with a given drawing pen.
@@ -739,62 +739,62 @@ declare class DrawState {
 	/**
 	 * True if the Alt key is being pressed (in Windows only).
 	 */
-	readonly altKeyPressed: Boolean;
+	readonly altKeyPressed: boolean;
 
 	/**
 	 * True if the Caps Lock key is being pressed.
 	 */
-	readonly capsLockKeyPressed: Boolean;
+	readonly capsLockKeyPressed: boolean;
 
 	/**
 	 * True if the Command key is being pressed (in Mac OS only).
 	 */
-	readonly cmdKeyPressed: Boolean;
+	readonly cmdKeyPressed: boolean;
 
 	/**
 	 * True if the Ctrl key is being pressed.
 	 */
-	readonly ctrlKeyPressed: Boolean;
+	readonly ctrlKeyPressed: boolean;
 
 	/**
 	 * True if the element has the input focus.
 	 */
-	readonly hasFocus: Boolean;
+	readonly hasFocus: boolean;
 
 	/**
 	 * True if the left mouse button is being pressed.
 	 */
-	readonly leftButtonPressed: Boolean;
+	readonly leftButtonPressed: boolean;
 
 	/**
 	 * True if the middle mouse button is being pressed.
 	 */
-	readonly middleButtonPressed: Boolean;
+	readonly middleButtonPressed: boolean;
 
 	/**
 	 * True if the cursor is hovering over this element.
 	 */
-	readonly mouseOver: Boolean;
+	readonly mouseOver: boolean;
 
 	/**
 	 * True if the Num Lock key is being pressed.
 	 */
-	readonly numLockKeyPressed: Boolean;
+	readonly numLockKeyPressed: boolean;
 
 	/**
 	 * True if the Option key is being pressed (in Mac OS only).
 	 */
-	readonly optKeyPressed: Boolean;
+	readonly optKeyPressed: boolean;
 
 	/**
 	 * True if the right mouse button is being pressed.
 	 */
-	readonly rightButtonPressed: Boolean;
+	readonly rightButtonPressed: boolean;
 
 	/**
 	 * True if the Shift key is being pressed.
 	 */
-	readonly shiftKeyPressed: Boolean;
+	readonly shiftKeyPressed: boolean;
 
 }
 
@@ -806,17 +806,17 @@ declare class ScriptUIFont {
 	/**
 	 * The font family name.
 	 */
-	readonly family: String;
+	readonly family: string;
 
 	/**
 	 * The complete font name, consisting of the family and style, if specified.
 	 */
-	readonly name: String;
+	readonly name: string;
 
 	/**
 	 * The font point size.
 	 */
-	readonly size: Number;
+	readonly size: number;
 
 	/**
 	 * The font style. One of the constants in ScriptUIGraphics.FontStyle.
@@ -826,7 +826,7 @@ declare class ScriptUIFont {
 	/**
 	 * The name of a substitution font, a fallback font to substitute for this font if the requested font family or style is not available.
 	 */
-	readonly substitute: String;
+	readonly substitute: string;
 
 }
 
@@ -838,17 +838,17 @@ declare class ScriptUIImage {
 	/**
 	 * The image format. One of: resource, JPEG, GIF, TIFF, PNG, or PICT (Macintosh).
 	 */
-	readonly format: String;
+	readonly format: string;
 
 	/**
 	 * The image name. Either the file name, or the resource name.
 	 */
-	readonly name: String;
+	readonly name: string;
 
 	/**
 	 * The full path to the file that contains the image.
 	 */
-	readonly pathname: String;
+	readonly pathname: string;
 
 	/**
 	 * The image size in pixels.
@@ -865,7 +865,7 @@ declare class StaticText {
 	 * Always false. This element cannot have input focus.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -874,7 +874,7 @@ declare class StaticText {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -885,7 +885,7 @@ declare class StaticText {
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
-	characters: Number;
+	characters: number;
 
 	/**
 	 * An array of child elements.
@@ -896,7 +896,7 @@ declare class StaticText {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -906,19 +906,19 @@ declare class StaticText {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The text justification style.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
-	justify: String;
+	justify: string;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -958,7 +958,7 @@ declare class StaticText {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -969,18 +969,18 @@ declare class StaticText {
 	/**
 	 * The text to display, a localizable string.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The element type, "statictext".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -998,7 +998,7 @@ declare class StaticText {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1015,7 +1015,7 @@ declare class StaticText {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the window is about to be drawn.
@@ -1036,7 +1036,7 @@ declare class StaticText {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1055,7 +1055,7 @@ declare class Button {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -1064,7 +1064,7 @@ declare class Button {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -1075,7 +1075,7 @@ declare class Button {
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
-	characters: Number;
+	characters: number;
 
 	/**
 	 * An array of child elements.
@@ -1086,7 +1086,7 @@ declare class Button {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1096,19 +1096,19 @@ declare class Button {
 	/**
 	 * The help string that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The text justification style.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
-	justify: String;
+	justify: string;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -1146,7 +1146,7 @@ declare class Button {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -1157,18 +1157,18 @@ declare class Button {
 	/**
 	 * The text to display, a localizable string.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The element type; "button".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1186,7 +1186,7 @@ declare class Button {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1203,7 +1203,7 @@ declare class Button {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -1241,7 +1241,7 @@ declare class Button {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1260,7 +1260,7 @@ declare class IconButton {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -1269,7 +1269,7 @@ declare class IconButton {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -1286,7 +1286,7 @@ declare class IconButton {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1296,7 +1296,7 @@ declare class IconButton {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The image object that defines the image to be drawn.
@@ -1307,7 +1307,7 @@ declare class IconButton {
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -1346,7 +1346,7 @@ declare class IconButton {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -1357,13 +1357,13 @@ declare class IconButton {
 	/**
 	 * The element type; "iconbutton".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1381,7 +1381,7 @@ declare class IconButton {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1398,7 +1398,7 @@ declare class IconButton {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -1436,7 +1436,7 @@ declare class IconButton {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1455,7 +1455,7 @@ declare class EditText {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -1464,7 +1464,7 @@ declare class EditText {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -1475,7 +1475,7 @@ declare class EditText {
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
-	characters: Number;
+	characters: number;
 
 	/**
 	 * An array of child elements.
@@ -1486,7 +1486,7 @@ declare class EditText {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1496,19 +1496,19 @@ declare class EditText {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The text justification style.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
-	justify: String;
+	justify: string;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -1551,7 +1551,7 @@ declare class EditText {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -1562,24 +1562,24 @@ declare class EditText {
 	/**
 	 * The current text displayed in the field, a localizable string.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The currently selected text, or the empty string if there is no text selected.
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
-	textselection: String;
+	textselection: string;
 
 	/**
 	 * The element type; "edittext".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1597,7 +1597,7 @@ declare class EditText {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1614,7 +1614,7 @@ declare class EditText {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -1659,7 +1659,7 @@ declare class EditText {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1678,7 +1678,7 @@ declare class ListBox {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -1687,7 +1687,7 @@ declare class ListBox {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -1713,7 +1713,7 @@ declare class ListBox {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1723,13 +1723,13 @@ declare class ListBox {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The width and height in pixels of each item in the list.
@@ -1793,7 +1793,7 @@ declare class ListBox {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -1804,13 +1804,13 @@ declare class ListBox {
 	/**
 	 * The element type; "listbox".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1828,7 +1828,7 @@ declare class ListBox {
 	 * @param type The type of the child element, the string "item".
 	 * @param text The localizable text label for the item.
 	 */
-	add(type: String, text?: String): ListItem;
+	add(type: string, text?: string): ListItem;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -1836,7 +1836,7 @@ declare class ListBox {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1848,7 +1848,7 @@ declare class ListBox {
 	 * Retrieves an item object from the list that has a given text label.
 	 * @param text The text string to match.
 	 */
-	find(text: String): ListItem;
+	find(text: string): ListItem;
 
 	/**
 	 * Hides this element.
@@ -1859,7 +1859,7 @@ declare class ListBox {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -1914,7 +1914,7 @@ declare class ListBox {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1933,7 +1933,7 @@ declare class DropDownList {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -1942,7 +1942,7 @@ declare class DropDownList {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -1959,7 +1959,7 @@ declare class DropDownList {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1969,13 +1969,13 @@ declare class DropDownList {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The width and height in pixels of each item in the list.
@@ -2032,7 +2032,7 @@ declare class DropDownList {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -2043,13 +2043,13 @@ declare class DropDownList {
 	/**
 	 * The element type; "dropdownlist".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -2067,7 +2067,7 @@ declare class DropDownList {
 	 * @param type The type of the child element. Either item (a basic, selectable item with a text label) or separator
 	 * @param text The localizable text label for the item.
 	 */
-	add(type: String, text?: String): ListItem;
+	add(type: string, text?: string): ListItem;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -2075,7 +2075,7 @@ declare class DropDownList {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -2087,7 +2087,7 @@ declare class DropDownList {
 	 * Retrieves an item object from the list that has a given text label.
 	 * @param text The text string to match.
 	 */
-	find(text: String): ListItem;
+	find(text: string): ListItem;
 
 	/**
 	 * Hides this element.
@@ -2098,7 +2098,7 @@ declare class DropDownList {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -2147,7 +2147,7 @@ declare class DropDownList {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2166,13 +2166,13 @@ declare class ListItem {
 	 * The checked state of an item in a list.
 	 * When true, the item is marked with the platform-appropriate checkmark. When false, no checkmark is drawn, but space is reserved for it in the left margin, so that the item lines up with other checkable items. When undefined, no space is reserved for a checkmark.
 	 */
-	checked: Boolean;
+	checked: boolean;
 
 	/**
 	 * The expansion state of an item of type node that is a child of a TreeView list control.
 	 * When true, the item is in the expanded state and its children are shown, when false, it is collapsed and children are hidden.
 	 */
-	expanded: Boolean;
+	expanded: boolean;
 
 	/**
 	 * An image object for an icon to display in the item.
@@ -2183,7 +2183,7 @@ declare class ListItem {
 	/**
 	 * The 0-based index of this item in the items collection of its parent list control.
 	 */
-	readonly index: Number;
+	readonly index: number;
 
 	/**
 	 * The parent element, a list control.
@@ -2200,7 +2200,7 @@ declare class ListItem {
 	 * The selection state of this item.
 	 * When true, the item is part of the selection for its parent list. When false, the item is not selected. Set to true to select this item in a single-selection list, or to add it to the selection array for a multi-selection list.
 	 */
-	selected: Boolean;
+	selected: boolean;
 
 	/**
 	 * When the parent is a multi-column ListBox, this describes the labels for this selectable row in additional columns.
@@ -2208,19 +2208,19 @@ declare class ListItem {
 	 * text: A display string for the corresponding label.
 	 * image: An ScriptUIImage object for the corresponding label.
 	 */
-	readonly subItems: any[];
+	readonly subItems: Array;
 
 	/**
 	 * The label text to display for the item, a localizable string.
 	 * If the parent is a multi-column list box, this describes the label in the first column. Labels in additional columns are described by the subitems property.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The element type.
 	 * Normally "item", but an item whose parent is a DropDownList control can have type "separator". A separator item is not mouse-sensitive and is drawn as a horizontal line across the drop-down or pop-up menu.
 	 */
-	readonly type: String;
+	readonly type: string;
 
 }
 
@@ -2233,7 +2233,7 @@ declare class Checkbox {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -2242,7 +2242,7 @@ declare class Checkbox {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -2253,7 +2253,7 @@ declare class Checkbox {
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
-	characters: Number;
+	characters: number;
 
 	/**
 	 * An array of child elements.
@@ -2264,7 +2264,7 @@ declare class Checkbox {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -2274,19 +2274,19 @@ declare class Checkbox {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The default text justification style for child text elements.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
-	justify: String;
+	justify: string;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -2324,7 +2324,7 @@ declare class Checkbox {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -2335,24 +2335,24 @@ declare class Checkbox {
 	/**
 	 * The text to display, a localizable string.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The element type; "checkbox".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * The selection state of the control.
 	 * When true, the control is in the selected or set state and displays the check mark. When false, shows an empty box.
 	 */
-	value: Boolean;
+	value: boolean;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -2370,7 +2370,7 @@ declare class Checkbox {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -2387,7 +2387,7 @@ declare class Checkbox {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -2425,7 +2425,7 @@ declare class Checkbox {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2445,7 +2445,7 @@ declare class Scrollbar {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -2454,7 +2454,7 @@ declare class Scrollbar {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -2471,7 +2471,7 @@ declare class Scrollbar {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -2481,19 +2481,19 @@ declare class Scrollbar {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The amount to increment or decrement a scrollbar indicator's position when the user clicks ahead or behind the moveable element.
 	 * Default is 20% of the range between the maxvalue and minvalue property values.
 	 */
-	jumpdelta: Number;
+	jumpdelta: number;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -2510,7 +2510,7 @@ declare class Scrollbar {
 	 * The maximum value allowed in the value property.
 	 * Together with minvalue, sets the scrolling range. Default is 100.
 	 */
-	maxvalue: Number;
+	maxvalue: number;
 
 	/**
 	 * The minimum height and width to which the element can be resized.
@@ -2521,7 +2521,7 @@ declare class Scrollbar {
 	 * The minimum value allowed in the value property.
 	 * Together with  maxvalue, sets the scrolling range.Default is 0.
 	 */
-	minvalue: Number;
+	minvalue: number;
 
 	/**
 	 * The parent element.
@@ -2543,7 +2543,7 @@ declare class Scrollbar {
 	/**
 	 * The key sequence that invokes the  onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -2554,24 +2554,24 @@ declare class Scrollbar {
 	/**
 	 * The amount by which to increment or decrement a scrollbar element's position when the user clicks a stepper button.
 	 */
-	stepdelta: Number;
+	stepdelta: number;
 
 	/**
 	 * The element type, "scrollbar".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * The current position of the indicator.
 	 * If set to a value outside the range specified by minvalue and maxvalue, it is automatically reset to the closest boundary.
 	 */
-	value: Number;
+	value: number;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -2589,7 +2589,7 @@ declare class Scrollbar {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -2606,7 +2606,7 @@ declare class Scrollbar {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -2650,7 +2650,7 @@ declare class Scrollbar {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2669,7 +2669,7 @@ declare class RadioButton {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -2678,7 +2678,7 @@ declare class RadioButton {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -2689,7 +2689,7 @@ declare class RadioButton {
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
-	characters: Number;
+	characters: number;
 
 	/**
 	 * An array of child elements.
@@ -2700,7 +2700,7 @@ declare class RadioButton {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw event.
@@ -2710,19 +2710,19 @@ declare class RadioButton {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The default text justification style for child text elements.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
-	justify: String;
+	justify: string;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -2760,7 +2760,7 @@ declare class RadioButton {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -2771,23 +2771,23 @@ declare class RadioButton {
 	/**
 	 * The label text for this button, a localizable string.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The element type; "radiobutton".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * The selection state of this button, selected when true.
 	 */
-	value: Boolean;
+	value: boolean;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -2805,7 +2805,7 @@ declare class RadioButton {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -2822,7 +2822,7 @@ declare class RadioButton {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -2860,7 +2860,7 @@ declare class RadioButton {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2879,7 +2879,7 @@ declare class Slider {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -2888,7 +2888,7 @@ declare class Slider {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -2905,7 +2905,7 @@ declare class Slider {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -2915,13 +2915,13 @@ declare class Slider {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -2938,7 +2938,7 @@ declare class Slider {
 	 * The maximum value allowed in the value property.
 	 * Together with minvalue, sets therange.Default is 100.
 	 */
-	maxvalue: Number;
+	maxvalue: number;
 
 	/**
 	 * The minimum height and width to which the element can be resized.
@@ -2949,7 +2949,7 @@ declare class Slider {
 	 * The minimum value allowed in the value property.
 	 * Together with maxvalue, sets the range.Default is 0.
 	 */
-	minvalue: Number;
+	minvalue: number;
 
 	/**
 	 * The parent element.
@@ -2971,7 +2971,7 @@ declare class Slider {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -2982,19 +2982,19 @@ declare class Slider {
 	/**
 	 * The element type, "slider".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * The current position of the indicator.
 	 * If set to a value outside the range specified by minvalue and maxvalue, it is automatically reset to the closest boundary.
 	 */
-	value: Number;
+	value: number;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -3012,7 +3012,7 @@ declare class Slider {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -3029,7 +3029,7 @@ declare class Slider {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -3073,7 +3073,7 @@ declare class Slider {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -3095,7 +3095,7 @@ declare class Progressbar {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -3112,7 +3112,7 @@ declare class Progressbar {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -3122,13 +3122,13 @@ declare class Progressbar {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -3144,7 +3144,7 @@ declare class Progressbar {
 	/**
 	 * The maximum value in the range. Default is 100.
 	 */
-	maxvalue: Number;
+	maxvalue: number;
 
 	/**
 	 * The minimum height and width to which the element can be resized.
@@ -3154,7 +3154,7 @@ declare class Progressbar {
 	/**
 	 * The minimum value in the range; always 0. If set to a different value, it is ignored.
 	 */
-	minvalue: Number;
+	minvalue: number;
 
 	/**
 	 * The parent element.
@@ -3182,19 +3182,19 @@ declare class Progressbar {
 	/**
 	 * The element type, "progessbar".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * The current position of the indicator.
 	 * If set to a value outside the range specified by 0 to maxvalue, it is automatically reset to the closest boundary.
 	 */
-	value: Number;
+	value: number;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -3212,7 +3212,7 @@ declare class Progressbar {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -3238,7 +3238,7 @@ declare class Progressbar {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -3257,7 +3257,7 @@ declare class TreeView {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -3266,7 +3266,7 @@ declare class TreeView {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -3283,7 +3283,7 @@ declare class TreeView {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -3293,13 +3293,13 @@ declare class TreeView {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The width and height in pixels of each item in the list.
@@ -3356,7 +3356,7 @@ declare class TreeView {
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
-	shortcutKey: String;
+	shortcutKey: string;
 
 	/**
 	 * The current dimensions of this element.
@@ -3367,13 +3367,13 @@ declare class TreeView {
 	/**
 	 * The element type, "treeview".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -3391,7 +3391,7 @@ declare class TreeView {
 	 * @param type The type of the child element, the string "item".
 	 * @param text The localizable text label for the item.
 	 */
-	add(type: String, text?: String): ListItem;
+	add(type: string, text?: string): ListItem;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -3399,7 +3399,7 @@ declare class TreeView {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -3411,7 +3411,7 @@ declare class TreeView {
 	 * Retrieves an item object from the list that has a given text label.
 	 * @param text The text string to match.
 	 */
-	find(text: String): ListItem;
+	find(text: string): ListItem;
 
 	/**
 	 * Hides this element.
@@ -3422,7 +3422,7 @@ declare class TreeView {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -3483,7 +3483,7 @@ declare class TreeView {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -3502,7 +3502,7 @@ declare class FlashPlayer {
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
-	active: Boolean;
+	active: boolean;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -3511,7 +3511,7 @@ declare class FlashPlayer {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -3523,18 +3523,18 @@ declare class FlashPlayer {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -3578,13 +3578,13 @@ declare class FlashPlayer {
 	/**
 	 * The element type, "flashplayer".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -3602,7 +3602,7 @@ declare class FlashPlayer {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * A function definition for a callback from the Flash ActionScript environment.
@@ -3627,7 +3627,7 @@ declare class FlashPlayer {
 	 * @param name The name of a Flash ActionScript function that has been registered with the ExternalInterface object by the currently loaded SWF file.
 	 * @param argument An argument to pass through to the function. There can be any number of arguments. An argument must be one of these data types:Number, String, Boolean, null, undefined, Object, Array. No other data types are supported.
 	 */
-	invokePlayerFunction(name: String, argument?: any): any;
+	invokePlayerFunction(name: string, argument?: any): any;
 
 	/**
 	 * Loads a movie into the Flash Player, and begins playing it.
@@ -3639,14 +3639,14 @@ declare class FlashPlayer {
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
-	notify(eventName?: String): void;
+	notify(eventName?: string): void;
 
 	/**
 	 * Restarts a movie that has been stopped.
 	 * Do not use on a movie that is currently playing.The stopMovie()-playMovie() sequence does not work for SWF files produced by Flex, or for some files produced by Flash Authoring (depending on how they were implemented).
 	 * @param rewind When true, restarts the movie from the beginning; otherwise, starts playing from the	point where it was stopped.
 	 */
-	playMovie(rewind: Boolean): void;
+	playMovie(rewind: boolean): void;
 
 	/**
 	 * Unregisters an event handler for a particular type of event occuring in this element.
@@ -3655,7 +3655,7 @@ declare class FlashPlayer {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -3680,7 +3680,7 @@ declare class Group {
 	 * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
 	 * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
 	 */
-	alignChildren: String;
+	alignChildren: string;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -3689,7 +3689,7 @@ declare class Group {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -3706,7 +3706,7 @@ declare class Group {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -3716,13 +3716,13 @@ declare class Group {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The layout manager for this container.
@@ -3740,7 +3740,7 @@ declare class Group {
 	 * The number of pixels between the edges of a container and the outermost child elements.
 	 * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
 	 */
-	margins: Number;
+	margins: number;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -3756,7 +3756,7 @@ declare class Group {
 	 * The layout orientation of children in a container.
 	 * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
 	 */
-	orientation: String;
+	orientation: string;
 
 	/**
 	 * The parent element.
@@ -3785,18 +3785,18 @@ declare class Group {
 	 * The number of pixels separating one child element from its adjacent sibling element.
 	 * Because each container holds only a single row or column of children, only a single spacing value is needed for a container. The default value is based on the type of container, and is chosen to match standard Adobe UI guidelines.
 	 */
-	spacing: Number;
+	spacing: number;
 
 	/**
 	 * The element type; "group".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -3816,7 +3816,7 @@ declare class Group {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: String, bounds?: Bounds, text?: String, properties?: Object): Object;
+	add(type: string, bounds?: Bounds, text?: string, properties?: Object): Object;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -3824,7 +3824,7 @@ declare class Group {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -3857,7 +3857,7 @@ declare class Group {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -3875,7 +3875,7 @@ declare class Panel {
 	/**
 	 * Specifies how to align the child elements.
 	 */
-	alignChildren: String;
+	alignChildren: string;
 
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
@@ -3884,7 +3884,7 @@ declare class Panel {
 	 * For orientation=column: left, right, fill
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
-	alignment: String;
+	alignment: string;
 
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
@@ -3895,7 +3895,7 @@ declare class Panel {
 	/**
 	 * Reserve space for the specified number of characters; affects calculation of preferredSize .
 	 */
-	characters: Number;
+	characters: number;
 
 	/**
 	 * An array of child elements.
@@ -3906,7 +3906,7 @@ declare class Panel {
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
-	enabled: Boolean;
+	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -3916,19 +3916,19 @@ declare class Panel {
 	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
-	helpTip: String;
+	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
-	indent: Number;
+	indent: number;
 
 	/**
 	 * The default text justification style for child text elements.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
-	justify: String;
+	justify: string;
 
 	/**
 	 * The layout manager for this container.
@@ -3946,7 +3946,7 @@ declare class Panel {
 	 * The number of pixels between the edges of a container and the outermost child elements.
 	 * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
 	 */
-	margins: Number;
+	margins: number;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -3962,7 +3962,7 @@ declare class Panel {
 	 * The layout orientation of children in a container.
 	 * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
 	 */
-	orientation: String;
+	orientation: string;
 
 	/**
 	 * The parent element.
@@ -3993,23 +3993,23 @@ declare class Panel {
 	 * The number of pixels separating one child element from its adjacent sibling element.
 	 * Because each container holds only a single row or column of children, only a single spacing value is needed for a container. The default value is based on the type of container, and is chosen to match standard Adobe UI guidelines.
 	 */
-	spacing: Number;
+	spacing: number;
 
 	/**
 	 * The title or label text, a localizable string.
 	 */
-	text: String;
+	text: string;
 
 	/**
 	 * The element type; "panel".
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
-	visible: Boolean;
+	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -4029,7 +4029,7 @@ declare class Panel {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: String, bounds?: Bounds, text?: String, properties?: Object): Object;
+	add(type: string, bounds?: Bounds, text?: string, properties?: Object): Object;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -4037,7 +4037,7 @@ declare class Panel {
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
-	addEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -4070,7 +4070,7 @@ declare class Panel {
 	 * @param handler The function that handles the event.
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
-	removeEventListener(eventName: String, handler: Function, capturePhase: Boolean): Boolean;
+	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -4089,27 +4089,27 @@ declare class Point {
 	/**
 	 * The left coordinate.
 	 */
-	left: Number;
+	left: number;
 
 	/**
 	 * The array length.
 	 */
-	readonly length: Number;
+	readonly length: number;
 
 	/**
 	 * The top coordinate.
 	 */
-	top: Number;
+	top: number;
 
 	/**
 	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
-	x: Number;
+	x: number;
 
 	/**
 	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
-	y: Number;
+	y: number;
 
 }
 
@@ -4121,17 +4121,17 @@ declare class Dimension {
 	/**
 	 * The height in pixels.
 	 */
-	height: Number;
+	height: number;
 
 	/**
 	 * The array length.
 	 */
-	readonly length: Number;
+	readonly length: number;
 
 	/**
 	 * The width in pixels.
 	 */
-	width: Number;
+	width: number;
 
 }
 
@@ -4143,47 +4143,47 @@ declare class Bounds {
 	/**
 	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
-	bottom: Number;
+	bottom: number;
 
 	/**
 	 * The height in pixels.
 	 */
-	height: Number;
+	height: number;
 
 	/**
 	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
-	left: Number;
+	left: number;
 
 	/**
 	 * The array length.
 	 */
-	readonly length: Number;
+	readonly length: number;
 
 	/**
 	 * The width in pixels.
 	 */
-	right: Number;
+	right: number;
 
 	/**
 	 * The height in pixels.
 	 */
-	top: Number;
+	top: number;
 
 	/**
 	 * The width in pixels.
 	 */
-	width: Number;
+	width: number;
 
 	/**
 	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
-	x: Number;
+	x: number;
 
 	/**
 	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
-	y: Number;
+	y: number;
 
 }
 
@@ -4195,22 +4195,22 @@ declare class UIEvent {
 	/**
 	 * True if the event is of a type that bubbles.
 	 */
-	readonly bubbles: Boolean;
+	readonly bubbles: boolean;
 
 	/**
 	 * True if the default action associated with the event can be canceled with preventDefault().
 	 */
-	readonly cancelable: Boolean;
+	readonly cancelable: boolean;
 
 	/**
 	 * True if this event can be captured.
 	 */
-	readonly captures: Boolean;
+	readonly captures: boolean;
 
 	/**
 	 * The event target object which is currently handling the event. During capturing and bubbling, this is different from the property target.
 	 */
-	readonly currentTarget: Boolean;
+	readonly currentTarget: boolean;
 
 	/**
 	 * The click count for a mouse-click event.
@@ -4220,7 +4220,7 @@ declare class UIEvent {
 	/**
 	 * The current phase of event propagation; one of none, target, capture, bubble.
 	 */
-	readonly eventPhase: String;
+	readonly eventPhase: string;
 
 	/**
 	 * The event target object for this event.
@@ -4236,7 +4236,7 @@ declare class UIEvent {
 	 * The name of the event that thisobject represents.
 	 * Event types are listed in the JavaScript Tools Guide.
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * The ScriptUI element that this event relates to.
@@ -4252,7 +4252,7 @@ declare class UIEvent {
 	 * @param view The ScriptUI element that this event relates to.
 	 * @param detail The click count for a mouse-click event.
 	 */
-	constructor(type: String, captures: Boolean, bubbles: Boolean, view?: Object, detail?: Number);
+	constructor(type: string, captures: boolean, bubbles: boolean, view?: Object, detail?: number);
 
 	/**
 	 * Initializes a UI event as a core W3C event.
@@ -4261,7 +4261,7 @@ declare class UIEvent {
 	 * @param bubbles Set to true if the event bubbles.
 	 * @param cancelable Set to true if the default action is cancelable.
 	 */
-	initEvent(type: String, captures: Boolean, bubbles: Boolean, cancelable: Boolean): void;
+	initEvent(type: string, captures: boolean, bubbles: boolean, cancelable: boolean): void;
 
 	/**
 	 * Initializes an event.
@@ -4271,7 +4271,7 @@ declare class UIEvent {
 	 * @param view The ScriptUI element that this event relates to.
 	 * @param detail The click count for a mouse-click event.
 	 */
-	initUIEvent(type: String, captures: Boolean, bubbles: Boolean, view?: Object, detail?: Number): void;
+	initUIEvent(type: string, captures: boolean, bubbles: boolean, view?: Object, detail?: number): void;
 
 	/**
 	 * Prevents the default action associated with this event from being called.
@@ -4313,27 +4313,27 @@ declare class Event {
 	/**
 	 * True if the event is of a type that bubbles.
 	 */
-	readonly bubbles: Boolean;
+	readonly bubbles: boolean;
 
 	/**
 	 * True if the default action associated with the event can be canceled with preventDefault().
 	 */
-	readonly cancelable: Boolean;
+	readonly cancelable: boolean;
 
 	/**
 	 * True if this event can be captured.
 	 */
-	readonly captures: Boolean;
+	readonly captures: boolean;
 
 	/**
 	 * The event target object which is currently handling the event. During capturing and bubbling, this is different from the property target.
 	 */
-	readonly currentTarget: Boolean;
+	readonly currentTarget: boolean;
 
 	/**
 	 * The current phase of event propagation; one of none, target, capture, bubble.
 	 */
-	readonly eventPhase: String;
+	readonly eventPhase: string;
 
 	/**
 	 * The event target object for this event.
@@ -4349,7 +4349,7 @@ declare class Event {
 	 * The name of the event that this object represents.
 	 * Event types are listed in the JavaScript Tools Guide.
 	 */
-	readonly type: String;
+	readonly type: string;
 
 	/**
 	 * Prevents the default action associated with this event from being called.
@@ -4389,7 +4389,7 @@ declare class Events {
 	 * function in order to simulate a user-interaction event.
 	 * @param eventType The name of an event type: one of "UIEvent", "KeyboardEvent", or "MouseEvent".
 	 */
-	createEvent(eventType: String): Event;
+	createEvent(eventType: string): Event;
 
 }
 
@@ -4402,27 +4402,27 @@ declare class KeyboardState {
 	/**
 	 * True if the Alt or Option key is pressed.
 	 */
-	readonly altKey: Boolean;
+	readonly altKey: boolean;
 
 	/**
 	 * True if the Ctrl key is pressed.
 	 */
-	readonly ctrlKey: Boolean;
+	readonly ctrlKey: boolean;
 
 	/**
 	 * A string containing the name of the currently pressed key, such as "a", or an empty string.
 	 */
-	readonly keyName: String;
+	readonly keyName: string;
 
 	/**
 	 * True if the Cmd key (in Mac OS) or Windows key (in Windows) is pressed.
 	 */
-	readonly metaKey: Boolean;
+	readonly metaKey: boolean;
 
 	/**
 	 * True if the Shift key is pressed.
 	 */
-	readonly shiftKey: Boolean;
+	readonly shiftKey: boolean;
 
 }
 
