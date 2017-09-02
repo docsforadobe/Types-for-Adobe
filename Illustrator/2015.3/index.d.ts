@@ -1,4 +1,4 @@
-/// <reference path="../global/index.d.ts" />
+/// <reference path="../../global/index.d.ts" />
 
 /**
  * The screen mode.

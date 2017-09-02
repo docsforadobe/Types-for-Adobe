@@ -1,4 +1,4 @@
-/// <reference path="../global/index.d.ts" />
+/// <reference path="../../global/index.d.ts" />
 
 /**
  * Document formats that Photoshop can open.
