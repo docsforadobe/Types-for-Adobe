@@ -7198,9 +7198,9 @@ declare class GradientStop {
 	properties: Object;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gradient stop. Can return: MixedInk or Color.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gradient stop.
 	 */
-	stopColor: any;
+	stopColor: MixedInk | Color;
 
 	/**
 	 * Adds an event listener.
@@ -41266,9 +41266,9 @@ declare class TextDefault extends Preference {
 	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
-	 * The font applied to the TextDefault, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the TextDefault, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
@@ -41621,14 +41621,14 @@ declare class TextDefault extends Preference {
 	kentenCustomCharacter: string;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: any;
+	kentenFillColor: Swatch | String;
 
 	/**
-	 * The font to use for kenten characters. Can return: Font or String.
+	 * The font to use for kenten characters.
 	 */
-	kentenFont: any;
+	kentenFont: Font | String;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -41666,9 +41666,9 @@ declare class TextDefault extends Preference {
 	kentenPosition: RubyKentenPosition;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: any;
+	kentenStrokeColor: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -41996,9 +41996,9 @@ declare class TextDefault extends Preference {
 	paragraphShadingClipToFrame: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: any;
+	paragraphShadingColor: Swatch | String;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -42111,14 +42111,14 @@ declare class TextDefault extends Preference {
 	rubyAutoTcyIncludeRoman: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: any;
+	rubyFill: Swatch | String;
 
 	/**
-	 * The font applied to ruby characters. Can return: Font or String.
+	 * The font applied to ruby characters.
 	 */
-	rubyFont: any;
+	rubyFont: Font | String;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -42171,9 +42171,9 @@ declare class TextDefault extends Preference {
 	rubyPosition: RubyKentenPosition;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: any;
+	rubyStroke: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -42221,14 +42221,14 @@ declare class TextDefault extends Preference {
 	ruleAbove: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: any;
+	ruleAboveColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: any;
+	ruleAboveGapColor: Swatch | String;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -42286,14 +42286,14 @@ declare class TextDefault extends Preference {
 	ruleBelow: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: any;
+	ruleBelowColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: any;
+	ruleBelowGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -42426,14 +42426,14 @@ declare class TextDefault extends Preference {
 	startParagraph: StartParagraph;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: any;
+	strikeThroughColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: any;
+	strikeThroughGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -42546,14 +42546,14 @@ declare class TextDefault extends Preference {
 	underline: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: any;
+	underlineColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: any;
+	underlineGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -55549,14 +55549,14 @@ declare class BaselineFrameGridOption extends Preference {
  */
 declare class FootnoteOption extends Preference {
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the rule above continued footnote text. Note: Valid when continuing rule on is true. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the rule above continued footnote text. Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleColor: any;
+	continuingRuleColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above continued footnote text. Note: Valid when continuing rule type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above continued footnote text. Note: Valid when continuing rule type is not solid.
 	 */
-	continuingRuleGapColor: any;
+	continuingRuleGapColor: Swatch | String;
 
 	/**
 	 * If true, overprints the gap color of the rule above continued footnote text. Note: Valid when continuing rule type is not solid.
@@ -55659,14 +55659,14 @@ declare class FootnoteOption extends Preference {
 	restartNumbering: any;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the rule above the first footnote in the column. Note: Valid when rule on is true. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the rule above the first footnote in the column. Note: Valid when rule on is true.
 	 */
-	ruleColor: any;
+	ruleColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above the first footnote in the column. Note: Valid when rule type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above the first footnote in the column. Note: Valid when rule type is not solid.
 	 */
-	ruleGapColor: any;
+	ruleGapColor: Swatch | String;
 
 	/**
 	 * If true, overprints the gap color of the rule above the first footnote in the column. Note: Valid when rule type is not solid.
@@ -55953,9 +55953,9 @@ declare class CaptionMetadataVariablePreference extends Preference {
  */
 declare class GridDataInformation extends Preference {
 	/**
-	 * The font applied to the GridDataInformation, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the GridDataInformation, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The amount of white space between characters.
@@ -56024,9 +56024,9 @@ declare class GridDataInformation extends Preference {
  */
 declare class LayoutGridDataInformation extends Preference {
 	/**
-	 * The font applied to the LayoutGridDataInformation, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the LayoutGridDataInformation, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The amount of white space between characters.
@@ -56065,9 +56065,9 @@ declare class LayoutGridDataInformation extends Preference {
  */
 declare class StoryGridDataInformation extends Preference {
 	/**
-	 * The font applied to the StoryGridDataInformation, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the StoryGridDataInformation, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The amount of white space between characters.
@@ -68954,9 +68954,9 @@ declare class Text {
 	appliedConditions: Condition[];
 
 	/**
-	 * The font applied to the Text, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the Text, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
@@ -69424,14 +69424,14 @@ declare class Text {
 	kentenCustomCharacter: string;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: any;
+	kentenFillColor: Swatch | String;
 
 	/**
-	 * The font to use for kenten characters. Can return: Font or String.
+	 * The font to use for kenten characters.
 	 */
-	kentenFont: any;
+	kentenFont: Font | String;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -69469,9 +69469,9 @@ declare class Text {
 	kentenPosition: RubyKentenPosition;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: any;
+	kentenStrokeColor: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -69844,9 +69844,9 @@ declare class Text {
 	paragraphShadingClipToFrame: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: any;
+	paragraphShadingColor: Swatch | String;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -69999,9 +69999,9 @@ declare class Text {
 	rubyAutoTcyIncludeRoman: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: any;
+	rubyFill: Swatch | String;
 
 	/**
 	 * If true, ruby is on.
@@ -70009,9 +70009,9 @@ declare class Text {
 	rubyFlag: boolean;
 
 	/**
-	 * The font applied to ruby characters. Can return: Font or String.
+	 * The font applied to ruby characters.
 	 */
-	rubyFont: any;
+	rubyFont: Font | String;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -70069,9 +70069,9 @@ declare class Text {
 	rubyString: string;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: any;
+	rubyStroke: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -70119,14 +70119,14 @@ declare class Text {
 	ruleAbove: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: any;
+	ruleAboveColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: any;
+	ruleAboveGapColor: Swatch | String;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -70184,14 +70184,14 @@ declare class Text {
 	ruleBelow: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: any;
+	ruleBelowColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: any;
+	ruleBelowGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -70334,14 +70334,14 @@ declare class Text {
 	startParagraph: StartParagraph;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: any;
+	strikeThroughColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: any;
+	strikeThroughGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -70494,14 +70494,14 @@ declare class Text {
 	underline: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: any;
+	underlineColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: any;
+	underlineGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -72070,9 +72070,9 @@ declare class Story {
 	appliedCharacterStyle: CharacterStyle | String;
 
 	/**
-	 * The font applied to the Story, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the Story, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
@@ -72555,14 +72555,14 @@ declare class Story {
 	kentenCustomCharacter: string;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: any;
+	kentenFillColor: Swatch | String;
 
 	/**
-	 * The font to use for kenten characters. Can return: Font or String.
+	 * The font to use for kenten characters.
 	 */
-	kentenFont: any;
+	kentenFont: Font | String;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -72600,9 +72600,9 @@ declare class Story {
 	kentenPosition: RubyKentenPosition;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: any;
+	kentenStrokeColor: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -73000,9 +73000,9 @@ declare class Story {
 	paragraphShadingClipToFrame: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: any;
+	paragraphShadingColor: Swatch | String;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -73145,9 +73145,9 @@ declare class Story {
 	rubyAutoTcyIncludeRoman: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: any;
+	rubyFill: Swatch | String;
 
 	/**
 	 * If true, ruby is on.
@@ -73155,9 +73155,9 @@ declare class Story {
 	rubyFlag: boolean;
 
 	/**
-	 * The font applied to ruby characters. Can return: Font or String.
+	 * The font applied to ruby characters.
 	 */
-	rubyFont: any;
+	rubyFont: Font | String;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -73215,9 +73215,9 @@ declare class Story {
 	rubyString: string;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: any;
+	rubyStroke: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -73265,14 +73265,14 @@ declare class Story {
 	ruleAbove: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: any;
+	ruleAboveColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: any;
+	ruleAboveGapColor: Swatch | String;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -73330,14 +73330,14 @@ declare class Story {
 	ruleBelow: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: any;
+	ruleBelowColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: any;
+	ruleBelowGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -73495,14 +73495,14 @@ declare class Story {
 	readonly storyType: StoryTypes;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: any;
+	strikeThroughColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: any;
+	strikeThroughGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -73670,14 +73670,14 @@ declare class Story {
 	underline: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: any;
+	underlineColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: any;
+	underlineGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -74080,9 +74080,9 @@ declare class ParagraphStyle {
 	allowArbitraryHyphenation: boolean;
 
 	/**
-	 * The font applied to the ParagraphStyle, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the ParagraphStyle, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
@@ -74465,14 +74465,14 @@ declare class ParagraphStyle {
 	kentenCustomCharacter: string;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: any;
+	kentenFillColor: Swatch | String;
 
 	/**
-	 * The font to use for kenten characters. Can return: Font or String.
+	 * The font to use for kenten characters.
 	 */
-	kentenFont: any;
+	kentenFont: Font | String;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -74510,9 +74510,9 @@ declare class ParagraphStyle {
 	kentenPosition: RubyKentenPosition;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: any;
+	kentenStrokeColor: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -74855,9 +74855,9 @@ declare class ParagraphStyle {
 	paragraphShadingClipToFrame: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: any;
+	paragraphShadingColor: Swatch | String;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -74985,14 +74985,14 @@ declare class ParagraphStyle {
 	rubyAutoTcyIncludeRoman: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: any;
+	rubyFill: Swatch | String;
 
 	/**
-	 * The font applied to ruby characters. Can return: Font or String.
+	 * The font applied to ruby characters.
 	 */
-	rubyFont: any;
+	rubyFont: Font | String;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -75045,9 +75045,9 @@ declare class ParagraphStyle {
 	rubyPosition: RubyKentenPosition;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: any;
+	rubyStroke: Swatch | String;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -75095,14 +75095,14 @@ declare class ParagraphStyle {
 	ruleAbove: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: any;
+	ruleAboveColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: any;
+	ruleAboveGapColor: Swatch | String;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -75160,14 +75160,14 @@ declare class ParagraphStyle {
 	ruleBelow: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: any;
+	ruleBelowColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: any;
+	ruleBelowGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -75305,14 +75305,14 @@ declare class ParagraphStyle {
 	startParagraph: StartParagraph;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: any;
+	strikeThroughColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: any;
+	strikeThroughGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -75435,14 +75435,14 @@ declare class ParagraphStyle {
 	underline: boolean;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: any;
+	underlineColor: Swatch | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid. Can return: Swatch or String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: any;
+	underlineGapColor: Swatch | String;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -81136,9 +81136,9 @@ declare class CompositeFonts {
  */
 declare class CompositeFontEntry {
 	/**
-	 * The font applied to the CompositeFontEntry, specified as either a font object or the name of font family. Can return: Font or String.
+	 * The font applied to the CompositeFontEntry, specified as either a font object or the name of font family.
 	 */
-	appliedFont: any;
+	appliedFont: Font | String;
 
 	/**
 	 * The amount of baseline shift.
