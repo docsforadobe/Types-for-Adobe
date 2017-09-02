@@ -40271,9 +40271,9 @@ declare class ObjectStyle {
 	applyNextParagraphStyle: boolean;
 
 	/**
-	 * The style that this style is based on. Can return: ObjectStyle or String.
+	 * The style that this style is based on.
 	 */
-	basedOn: any;
+	basedOn: ObjectStyle | String;
 
 	/**
 	 * Baseline frame grid option settings.
@@ -42271,9 +42271,9 @@ declare class TextDefault extends Preference {
 	ruleAboveTint: number;
 
 	/**
-	 * The stroke type of the rule above the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: any;
+	ruleAboveType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -42336,9 +42336,9 @@ declare class TextDefault extends Preference {
 	ruleBelowTint: number;
 
 	/**
-	 * The stroke type of the rule below the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: any;
+	ruleBelowType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -42461,9 +42461,9 @@ declare class TextDefault extends Preference {
 	strikeThroughTint: number;
 
 	/**
-	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: any;
+	strikeThroughType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -42581,9 +42581,9 @@ declare class TextDefault extends Preference {
 	underlineTint: number;
 
 	/**
-	 * The stroke type of the underline stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the underline stroke.
 	 */
-	underlineType: any;
+	underlineType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -55599,9 +55599,9 @@ declare class FootnoteOption extends Preference {
 	continuingRuleTint: number;
 
 	/**
-	 * The stroke type of the rule above continued footnote text. Note: Valid when continuing rule on is true. Can return: StrokeStyle or String.
+	 * The stroke type of the rule above continued footnote text. Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleType: any;
+	continuingRuleType: StrokeStyle | String;
 
 	/**
 	 * The length of the rule above continued footnote text. Note: Valid when continuing rule on is true.
@@ -55709,9 +55709,9 @@ declare class FootnoteOption extends Preference {
 	ruleTint: number;
 
 	/**
-	 * The stroke type of the rule above the first footnote in a column. Note: Valid when rule on is true. Can return: StrokeStyle or String.
+	 * The stroke type of the rule above the first footnote in a column. Note: Valid when rule on is true.
 	 */
-	ruleType: any;
+	ruleType: StrokeStyle | String;
 
 	/**
 	 * The length of the rule above the first footnote in the column. Note: Valid when rule on is true.
@@ -66792,9 +66792,9 @@ declare class Rows {
  */
 declare class TableStyle {
 	/**
-	 * The style that this style is based on. Can return: TableStyle or String.
+	 * The style that this style is based on.
 	 */
-	basedOn: any;
+	basedOn: TableStyle | String;
 
 	/**
 	 * The cell style of the body region.
@@ -67808,9 +67808,9 @@ declare class CellStyle {
 	appliedParagraphStyle: any;
 
 	/**
-	 * The style that this style is based on. Can return: CellStyle or String.
+	 * The style that this style is based on.
 	 */
-	basedOn: any;
+	basedOn: CellStyle | String;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the bottom edge border stroke. Can return: Swatch or NothingEnum enumerator.
@@ -70169,9 +70169,9 @@ declare class Text {
 	ruleAboveTint: number;
 
 	/**
-	 * The stroke type of the rule above the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: any;
+	ruleAboveType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -70234,9 +70234,9 @@ declare class Text {
 	ruleBelowTint: number;
 
 	/**
-	 * The stroke type of the rule below the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: any;
+	ruleBelowType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -70369,9 +70369,9 @@ declare class Text {
 	strikeThroughTint: number;
 
 	/**
-	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: any;
+	strikeThroughType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -70529,9 +70529,9 @@ declare class Text {
 	underlineTint: number;
 
 	/**
-	 * The stroke type of the underline stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the underline stroke.
 	 */
-	underlineType: any;
+	underlineType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -71607,9 +71607,9 @@ declare class TextFrame extends PageItem {
 	contents: any;
 
 	/**
-	 * The last text frame in the thread. Can return: TextFrame or TextPath.
+	 * The last text frame in the thread.
 	 */
-	readonly endTextFrame: any;
+	readonly endTextFrame: TextFrame | TextPath;
 
 	/**
 	 * EPSTexts
@@ -71742,9 +71742,9 @@ declare class TextFrame extends PageItem {
 	readonly splineItems: SplineItems;
 
 	/**
-	 * The first text frame in the thread. Can return: TextFrame or TextPath.
+	 * The first text frame in the thread.
 	 */
-	readonly startTextFrame: any;
+	readonly startTextFrame: TextFrame | TextPath;
 
 	/**
 	 * A collection of tables.
@@ -73315,9 +73315,9 @@ declare class Story {
 	ruleAboveTint: number;
 
 	/**
-	 * The stroke type of the rule above the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: any;
+	ruleAboveType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -73380,9 +73380,9 @@ declare class Story {
 	ruleBelowTint: number;
 
 	/**
-	 * The stroke type of the rule below the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: any;
+	ruleBelowType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -73530,9 +73530,9 @@ declare class Story {
 	strikeThroughTint: number;
 
 	/**
-	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: any;
+	strikeThroughType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -73705,9 +73705,9 @@ declare class Story {
 	underlineTint: number;
 
 	/**
-	 * The stroke type of the underline stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the underline stroke.
 	 */
-	underlineType: any;
+	underlineType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -75145,9 +75145,9 @@ declare class ParagraphStyle {
 	ruleAboveTint: number;
 
 	/**
-	 * The stroke type of the rule above the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: any;
+	ruleAboveType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -75210,9 +75210,9 @@ declare class ParagraphStyle {
 	ruleBelowTint: number;
 
 	/**
-	 * The stroke type of the rule below the paragraph. Can return: StrokeStyle or String.
+	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: any;
+	ruleBelowType: StrokeStyle | String;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -75340,9 +75340,9 @@ declare class ParagraphStyle {
 	strikeThroughTint: number;
 
 	/**
-	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: any;
+	strikeThroughType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -75470,9 +75470,9 @@ declare class ParagraphStyle {
 	underlineTint: number;
 
 	/**
-	 * The stroke type of the underline stroke. Can return: StrokeStyle or String.
+	 * The stroke type of the underline stroke.
 	 */
-	underlineType: any;
+	underlineType: StrokeStyle | String;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -78959,9 +78959,9 @@ declare class TextPath {
 	endBracket: number;
 
 	/**
-	 * The last text frame in the thread. Can return: TextFrame or TextPath.
+	 * The last text frame in the thread.
 	 */
-	readonly endTextFrame: any;
+	readonly endTextFrame: TextFrame | TextPath;
 
 	/**
 	 * A collection of event listeners.
@@ -79069,9 +79069,9 @@ declare class TextPath {
 	startBracket: number;
 
 	/**
-	 * The first text frame in the thread. Can return: TextFrame or TextPath.
+	 * The first text frame in the thread.
 	 */
-	readonly startTextFrame: any;
+	readonly startTextFrame: TextFrame | TextPath;
 
 	/**
 	 * The alignment applied to the type on a path.
