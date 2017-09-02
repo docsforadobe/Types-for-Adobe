@@ -219,7 +219,7 @@ declare class Assignments {
 	 * Returns the Assignment with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Assignment;
+	item(index: number | string): Assignment;
 
 	/**
 	 * Returns the Assignment with the specified ID.
@@ -238,7 +238,7 @@ declare class Assignments {
 	 * @param from The Assignment, index, or name at the beginning of the range.
 	 * @param to The Assignment, index, or name at the end of the range.
 	 */
-	itemByRange(from: Assignment | number | String, to: Assignment | number | String): Assignment[];
+	itemByRange(from: Assignment | number | string, to: Assignment | number | string): Assignment[];
 
 	/**
 	 * Returns the last Assignment in the collection.
@@ -420,7 +420,7 @@ declare class AssignedStories {
 	 * Returns the AssignedStory with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): AssignedStory;
+	item(index: number | string): AssignedStory;
 
 	/**
 	 * Returns the AssignedStory with the specified ID.
@@ -439,7 +439,7 @@ declare class AssignedStories {
 	 * @param from The AssignedStory, index, or name at the beginning of the range.
 	 * @param to The AssignedStory, index, or name at the end of the range.
 	 */
-	itemByRange(from: AssignedStory | number | String, to: AssignedStory | number | String): AssignedStory[];
+	itemByRange(from: AssignedStory | number | string, to: AssignedStory | number | string): AssignedStory[];
 
 	/**
 	 * Returns the last AssignedStory in the collection.
@@ -783,7 +783,7 @@ declare class EventListeners {
 	 * Returns the EventListener with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): EventListener;
+	item(index: number | string): EventListener;
 
 	/**
 	 * Returns the EventListener with the specified ID.
@@ -802,7 +802,7 @@ declare class EventListeners {
 	 * @param from The EventListener, index, or name at the beginning of the range.
 	 * @param to The EventListener, index, or name at the end of the range.
 	 */
-	itemByRange(from: EventListener | number | String, to: EventListener | number | String): EventListener[];
+	itemByRange(from: EventListener | number | string, to: EventListener | number | string): EventListener[];
 
 	/**
 	 * Returns the last EventListener in the collection.
@@ -1113,7 +1113,7 @@ declare class Events {
 	 * Returns the Event with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Event;
+	item(index: number | string): Event;
 
 	/**
 	 * Returns the Event with the specified ID.
@@ -1126,7 +1126,7 @@ declare class Events {
 	 * @param from The Event, index, or name at the beginning of the range.
 	 * @param to The Event, index, or name at the end of the range.
 	 */
-	itemByRange(from: Event | number | String, to: Event | number | String): Event[];
+	itemByRange(from: Event | number | string, to: Event | number | string): Event[];
 
 	/**
 	 * Returns the last Event in the collection.
@@ -1349,7 +1349,7 @@ declare class IdleTasks {
 	 * Returns the IdleTask with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): IdleTask;
+	item(index: number | string): IdleTask;
 
 	/**
 	 * Returns the IdleTask with the specified ID.
@@ -1368,7 +1368,7 @@ declare class IdleTasks {
 	 * @param from The IdleTask, index, or name at the beginning of the range.
 	 * @param to The IdleTask, index, or name at the end of the range.
 	 */
-	itemByRange(from: IdleTask | number | String, to: IdleTask | number | String): IdleTask[];
+	itemByRange(from: IdleTask | number | string, to: IdleTask | number | string): IdleTask[];
 
 	/**
 	 * Returns the last IdleTask in the collection.
@@ -2681,7 +2681,7 @@ declare class Application {
 	 * @param undoMode How to undo this script. 
 	 * @param undoName The name of the undo step for entire script undo mode. 
 	 */
-	doScript(script: File | String | Function, language?: ScriptLanguage, withArguments?: any[], undoMode?: UndoModes, undoName?: string): any;
+	doScript(script: File | string | Function, language?: ScriptLanguage, withArguments?: any[], undoMode?: UndoModes, undoName?: string): any;
 
 	/**
 	 * Dumps memory allocations from all marks in the specified range.
@@ -3245,7 +3245,7 @@ declare class BackgroundTasks {
 	 * Returns the BackgroundTask with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): BackgroundTask;
+	item(index: number | string): BackgroundTask;
 
 	/**
 	 * Returns the BackgroundTask with the specified ID.
@@ -3264,7 +3264,7 @@ declare class BackgroundTasks {
 	 * @param from The BackgroundTask, index, or name at the beginning of the range.
 	 * @param to The BackgroundTask, index, or name at the end of the range.
 	 */
-	itemByRange(from: BackgroundTask | number | String, to: BackgroundTask | number | String): BackgroundTask[];
+	itemByRange(from: BackgroundTask | number | string, to: BackgroundTask | number | string): BackgroundTask[];
 
 	/**
 	 * Returns the last BackgroundTask in the collection.
@@ -3412,7 +3412,7 @@ declare class Document {
 	/**
 	 * The active layer.
 	 */
-	activeLayer: Layer | String;
+	activeLayer: Layer | string;
 
 	/**
 	 * The active preflight process for this document.
@@ -4415,7 +4415,7 @@ declare class Document {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	asynchronousExportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
+	asynchronousExportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
 
 	/**
 	 * Change comoser to optyca
@@ -4501,7 +4501,7 @@ declare class Document {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
-	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create Hyperlink QR Code on the page item or document
@@ -4509,7 +4509,7 @@ declare class Document {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
-	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create a missing font object.
@@ -4525,7 +4525,7 @@ declare class Document {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
-	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Creates a table of contents.
@@ -4545,7 +4545,7 @@ declare class Document {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
-	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create Business Card QR Code on the page item or load on document's placegun
@@ -4565,7 +4565,7 @@ declare class Document {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Document. Above parameters can also be passed as properties 
 	 */
-	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Deletes an alternate layout.
@@ -4593,7 +4593,7 @@ declare class Document {
 	 * Embed this profile to the document.
 	 * @param using The preflight profile to embed.
 	 */
-	embed(using: String | PreflightProfile): PreflightProfile;
+	embed(using: string | PreflightProfile): PreflightProfile;
 
 	/**
 	 * Exports the object(s) to a file.
@@ -4604,7 +4604,7 @@ declare class Document {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	exportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
+	exportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
 
 	/**
 	 * Exports stroke styles or presets.
@@ -4951,7 +4951,7 @@ declare class Documents {
 	 * Returns the Document with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Document;
+	item(index: number | string): Document;
 
 	/**
 	 * Returns the Document with the specified ID.
@@ -4970,7 +4970,7 @@ declare class Documents {
 	 * @param from The Document, index, or name at the beginning of the range.
 	 * @param to The Document, index, or name at the end of the range.
 	 */
-	itemByRange(from: Document | number | String, to: Document | number | String): Document[];
+	itemByRange(from: Document | number | string, to: Document | number | string): Document[];
 
 	/**
 	 * Returns the last Document in the collection.
@@ -5205,7 +5205,7 @@ declare class Windows {
 	 * Returns the Window with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Window;
+	item(index: number | string): Window;
 
 	/**
 	 * Returns the Window with the specified name.
@@ -5218,7 +5218,7 @@ declare class Windows {
 	 * @param from The Window, index, or name at the beginning of the range.
 	 * @param to The Window, index, or name at the end of the range.
 	 */
-	itemByRange(from: Window | number | String, to: Window | number | String): Window[];
+	itemByRange(from: Window | number | string, to: Window | number | string): Window[];
 
 	/**
 	 * Returns the last Window in the collection.
@@ -5256,7 +5256,7 @@ declare class LayoutWindow extends Window {
 	/**
 	 * The active layer.
 	 */
-	activeLayer: Layer | String;
+	activeLayer: Layer | string;
 
 	/**
 	 * The front-most page.
@@ -5365,7 +5365,7 @@ declare class LayoutWindows {
 	 * Returns the LayoutWindow with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): LayoutWindow;
+	item(index: number | string): LayoutWindow;
 
 	/**
 	 * Returns the LayoutWindow with the specified name.
@@ -5378,7 +5378,7 @@ declare class LayoutWindows {
 	 * @param from The LayoutWindow, index, or name at the beginning of the range.
 	 * @param to The LayoutWindow, index, or name at the end of the range.
 	 */
-	itemByRange(from: LayoutWindow | number | String, to: LayoutWindow | number | String): LayoutWindow[];
+	itemByRange(from: LayoutWindow | number | string, to: LayoutWindow | number | string): LayoutWindow[];
 
 	/**
 	 * Returns the last LayoutWindow in the collection.
@@ -5454,7 +5454,7 @@ declare class StoryWindows {
 	 * Returns the StoryWindow with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): StoryWindow;
+	item(index: number | string): StoryWindow;
 
 	/**
 	 * Returns the StoryWindow with the specified name.
@@ -5467,7 +5467,7 @@ declare class StoryWindows {
 	 * @param from The StoryWindow, index, or name at the beginning of the range.
 	 * @param to The StoryWindow, index, or name at the end of the range.
 	 */
-	itemByRange(from: StoryWindow | number | String, to: StoryWindow | number | String): StoryWindow[];
+	itemByRange(from: StoryWindow | number | string, to: StoryWindow | number | string): StoryWindow[];
 
 	/**
 	 * Returns the last StoryWindow in the collection.
@@ -5847,7 +5847,7 @@ declare class Book {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	exportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, whichDocuments?: BookContent[], versionComments?: string, forceSave?: boolean): void;
+	exportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, whichDocuments?: BookContent[], versionComments?: string, forceSave?: boolean): void;
 
 	/**
 	 * Gets the label value associated with the specified key.
@@ -5998,7 +5998,7 @@ declare class Books {
 	 * Returns the Book with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Book;
+	item(index: number | string): Book;
 
 	/**
 	 * Returns the Book with the specified name.
@@ -6011,7 +6011,7 @@ declare class Books {
 	 * @param from The Book, index, or name at the beginning of the range.
 	 * @param to The Book, index, or name at the end of the range.
 	 */
-	itemByRange(from: Book | number | String, to: Book | number | String): Book[];
+	itemByRange(from: Book | number | string, to: Book | number | string): Book[];
 
 	/**
 	 * Returns the last Book in the collection.
@@ -6244,7 +6244,7 @@ declare class BookContents {
 	 * Returns the BookContent with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): BookContent;
+	item(index: number | string): BookContent;
 
 	/**
 	 * Returns the BookContent with the specified ID.
@@ -6263,7 +6263,7 @@ declare class BookContents {
 	 * @param from The BookContent, index, or name at the beginning of the range.
 	 * @param to The BookContent, index, or name at the end of the range.
 	 */
-	itemByRange(from: BookContent | number | String, to: BookContent | number | String): BookContent[];
+	itemByRange(from: BookContent | number | string, to: BookContent | number | string): BookContent[];
 
 	/**
 	 * Returns the last BookContent in the collection.
@@ -6478,7 +6478,7 @@ declare class Inks {
 	 * Returns the Ink with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Ink;
+	item(index: number | string): Ink;
 
 	/**
 	 * Returns the Ink with the specified ID.
@@ -6497,7 +6497,7 @@ declare class Inks {
 	 * @param from The Ink, index, or name at the beginning of the range.
 	 * @param to The Ink, index, or name at the end of the range.
 	 */
-	itemByRange(from: Ink | number | String, to: Ink | number | String): Ink[];
+	itemByRange(from: Ink | number | string, to: Ink | number | string): Ink[];
 
 	/**
 	 * Returns the last Ink in the collection.
@@ -6749,7 +6749,7 @@ declare class TrapPresets {
 	 * Returns the TrapPreset with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TrapPreset;
+	item(index: number | string): TrapPreset;
 
 	/**
 	 * Returns the TrapPreset with the specified ID.
@@ -6768,7 +6768,7 @@ declare class TrapPresets {
 	 * @param from The TrapPreset, index, or name at the beginning of the range.
 	 * @param to The TrapPreset, index, or name at the end of the range.
 	 */
-	itemByRange(from: TrapPreset | number | String, to: TrapPreset | number | String): TrapPreset[];
+	itemByRange(from: TrapPreset | number | string, to: TrapPreset | number | string): TrapPreset[];
 
 	/**
 	 * Returns the last TrapPreset in the collection.
@@ -6877,7 +6877,7 @@ declare class MixedInks {
 	 * Returns the MixedInk with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MixedInk;
+	item(index: number | string): MixedInk;
 
 	/**
 	 * Returns the MixedInk with the specified ID.
@@ -6896,7 +6896,7 @@ declare class MixedInks {
 	 * @param from The MixedInk, index, or name at the beginning of the range.
 	 * @param to The MixedInk, index, or name at the end of the range.
 	 */
-	itemByRange(from: MixedInk | number | String, to: MixedInk | number | String): MixedInk[];
+	itemByRange(from: MixedInk | number | string, to: MixedInk | number | string): MixedInk[];
 
 	/**
 	 * Returns the last MixedInk in the collection.
@@ -6992,7 +6992,7 @@ declare class MixedInkGroups {
 	 * Returns the MixedInkGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MixedInkGroup;
+	item(index: number | string): MixedInkGroup;
 
 	/**
 	 * Returns the MixedInkGroup with the specified ID.
@@ -7011,7 +7011,7 @@ declare class MixedInkGroups {
 	 * @param from The MixedInkGroup, index, or name at the beginning of the range.
 	 * @param to The MixedInkGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: MixedInkGroup | number | String, to: MixedInkGroup | number | String): MixedInkGroup[];
+	itemByRange(from: MixedInkGroup | number | string, to: MixedInkGroup | number | string): MixedInkGroup[];
 
 	/**
 	 * Returns the last MixedInkGroup in the collection.
@@ -7103,7 +7103,7 @@ declare class Gradients {
 	 * Returns the Gradient with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Gradient;
+	item(index: number | string): Gradient;
 
 	/**
 	 * Returns the Gradient with the specified ID.
@@ -7122,7 +7122,7 @@ declare class Gradients {
 	 * @param from The Gradient, index, or name at the beginning of the range.
 	 * @param to The Gradient, index, or name at the end of the range.
 	 */
-	itemByRange(from: Gradient | number | String, to: Gradient | number | String): Gradient[];
+	itemByRange(from: Gradient | number | string, to: Gradient | number | string): Gradient[];
 
 	/**
 	 * Returns the last Gradient in the collection.
@@ -7285,14 +7285,14 @@ declare class GradientStops {
 	 * Returns the GradientStop with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GradientStop;
+	item(index: number | string): GradientStop;
 
 	/**
 	 * Returns the GradientStops within the specified range.
 	 * @param from The GradientStop, index, or name at the beginning of the range.
 	 * @param to The GradientStop, index, or name at the end of the range.
 	 */
-	itemByRange(from: GradientStop | number | String, to: GradientStop | number | String): GradientStop[];
+	itemByRange(from: GradientStop | number | string, to: GradientStop | number | string): GradientStop[];
 
 	/**
 	 * Returns the last GradientStop in the collection.
@@ -7412,7 +7412,7 @@ declare class Swatch {
 	 * Merges the specified swatches with the swatch.
 	 * @param with The swatches to merge.
 	 */
-	merge(with_: Swatch[] | Swatch | String): Swatch;
+	merge(with_: Swatch[] | Swatch | string): Swatch;
 
 	/**
 	 * Deletes the swatch.
@@ -7479,7 +7479,7 @@ declare class Swatches {
 	 * Returns the Swatch with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Swatch;
+	item(index: number | string): Swatch;
 
 	/**
 	 * Returns the Swatch with the specified ID.
@@ -7498,7 +7498,7 @@ declare class Swatches {
 	 * @param from The Swatch, index, or name at the beginning of the range.
 	 * @param to The Swatch, index, or name at the end of the range.
 	 */
-	itemByRange(from: Swatch | number | String, to: Swatch | number | String): Swatch[];
+	itemByRange(from: Swatch | number | string, to: Swatch | number | string): Swatch[];
 
 	/**
 	 * Returns the last Swatch in the collection.
@@ -7595,7 +7595,7 @@ declare class Colors {
 	 * Returns the Color with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Color;
+	item(index: number | string): Color;
 
 	/**
 	 * Returns the Color with the specified ID.
@@ -7614,7 +7614,7 @@ declare class Colors {
 	 * @param from The Color, index, or name at the beginning of the range.
 	 * @param to The Color, index, or name at the end of the range.
 	 */
-	itemByRange(from: Color | number | String, to: Color | number | String): Color[];
+	itemByRange(from: Color | number | string, to: Color | number | string): Color[];
 
 	/**
 	 * Returns the last Color in the collection.
@@ -7707,7 +7707,7 @@ declare class Tints {
 	 * Returns the Tint with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Tint;
+	item(index: number | string): Tint;
 
 	/**
 	 * Returns the Tint with the specified ID.
@@ -7726,7 +7726,7 @@ declare class Tints {
 	 * @param from The Tint, index, or name at the beginning of the range.
 	 * @param to The Tint, index, or name at the end of the range.
 	 */
-	itemByRange(from: Tint | number | String, to: Tint | number | String): Tint[];
+	itemByRange(from: Tint | number | string, to: Tint | number | string): Tint[];
 
 	/**
 	 * Returns the last Tint in the collection.
@@ -7919,7 +7919,7 @@ declare class ColorGroups {
 	 * Returns the ColorGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ColorGroup;
+	item(index: number | string): ColorGroup;
 
 	/**
 	 * Returns the ColorGroup with the specified ID.
@@ -7938,7 +7938,7 @@ declare class ColorGroups {
 	 * @param from The ColorGroup, index, or name at the beginning of the range.
 	 * @param to The ColorGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: ColorGroup | number | String, to: ColorGroup | number | String): ColorGroup[];
+	itemByRange(from: ColorGroup | number | string, to: ColorGroup | number | string): ColorGroup[];
 
 	/**
 	 * Returns the last ColorGroup in the collection.
@@ -8092,7 +8092,7 @@ declare class ColorGroupSwatches {
 	 * Returns the ColorGroupSwatch with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ColorGroupSwatch;
+	item(index: number | string): ColorGroupSwatch;
 
 	/**
 	 * Returns the ColorGroupSwatch with the specified ID.
@@ -8105,7 +8105,7 @@ declare class ColorGroupSwatches {
 	 * @param from The ColorGroupSwatch, index, or name at the beginning of the range.
 	 * @param to The ColorGroupSwatch, index, or name at the end of the range.
 	 */
-	itemByRange(from: ColorGroupSwatch | number | String, to: ColorGroupSwatch | number | String): ColorGroupSwatch[];
+	itemByRange(from: ColorGroupSwatch | number | string, to: ColorGroupSwatch | number | string): ColorGroupSwatch[];
 
 	/**
 	 * Returns the last ColorGroupSwatch in the collection.
@@ -8268,14 +8268,14 @@ declare class OpacityGradientStops {
 	 * Returns the OpacityGradientStop with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): OpacityGradientStop;
+	item(index: number | string): OpacityGradientStop;
 
 	/**
 	 * Returns the OpacityGradientStops within the specified range.
 	 * @param from The OpacityGradientStop, index, or name at the beginning of the range.
 	 * @param to The OpacityGradientStop, index, or name at the end of the range.
 	 */
-	itemByRange(from: OpacityGradientStop | number | String, to: OpacityGradientStop | number | String): OpacityGradientStop[];
+	itemByRange(from: OpacityGradientStop | number | string, to: OpacityGradientStop | number | string): OpacityGradientStop[];
 
 	/**
 	 * Returns the last OpacityGradientStop in the collection.
@@ -8441,14 +8441,14 @@ declare class DataMergeTextPlaceholders {
 	 * Returns the DataMergeTextPlaceholder with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DataMergeTextPlaceholder;
+	item(index: number | string): DataMergeTextPlaceholder;
 
 	/**
 	 * Returns the DataMergeTextPlaceholders within the specified range.
 	 * @param from The DataMergeTextPlaceholder, index, or name at the beginning of the range.
 	 * @param to The DataMergeTextPlaceholder, index, or name at the end of the range.
 	 */
-	itemByRange(from: DataMergeTextPlaceholder | number | String, to: DataMergeTextPlaceholder | number | String): DataMergeTextPlaceholder[];
+	itemByRange(from: DataMergeTextPlaceholder | number | string, to: DataMergeTextPlaceholder | number | string): DataMergeTextPlaceholder[];
 
 	/**
 	 * Returns the last DataMergeTextPlaceholder in the collection.
@@ -8603,14 +8603,14 @@ declare class DataMergeImagePlaceholders {
 	 * Returns the DataMergeImagePlaceholder with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DataMergeImagePlaceholder;
+	item(index: number | string): DataMergeImagePlaceholder;
 
 	/**
 	 * Returns the DataMergeImagePlaceholders within the specified range.
 	 * @param from The DataMergeImagePlaceholder, index, or name at the beginning of the range.
 	 * @param to The DataMergeImagePlaceholder, index, or name at the end of the range.
 	 */
-	itemByRange(from: DataMergeImagePlaceholder | number | String, to: DataMergeImagePlaceholder | number | String): DataMergeImagePlaceholder[];
+	itemByRange(from: DataMergeImagePlaceholder | number | string, to: DataMergeImagePlaceholder | number | string): DataMergeImagePlaceholder[];
 
 	/**
 	 * Returns the last DataMergeImagePlaceholder in the collection.
@@ -8757,14 +8757,14 @@ declare class DataMergeFields {
 	 * Returns the DataMergeField with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DataMergeField;
+	item(index: number | string): DataMergeField;
 
 	/**
 	 * Returns the DataMergeFields within the specified range.
 	 * @param from The DataMergeField, index, or name at the beginning of the range.
 	 * @param to The DataMergeField, index, or name at the end of the range.
 	 */
-	itemByRange(from: DataMergeField | number | String, to: DataMergeField | number | String): DataMergeField[];
+	itemByRange(from: DataMergeField | number | string, to: DataMergeField | number | string): DataMergeField[];
 
 	/**
 	 * Returns the last DataMergeField in the collection.
@@ -8919,14 +8919,14 @@ declare class DataMergeQrcodePlaceholders {
 	 * Returns the DataMergeQrcodePlaceholder with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DataMergeQrcodePlaceholder;
+	item(index: number | string): DataMergeQrcodePlaceholder;
 
 	/**
 	 * Returns the DataMergeQrcodePlaceholders within the specified range.
 	 * @param from The DataMergeQrcodePlaceholder, index, or name at the beginning of the range.
 	 * @param to The DataMergeQrcodePlaceholder, index, or name at the end of the range.
 	 */
-	itemByRange(from: DataMergeQrcodePlaceholder | number | String, to: DataMergeQrcodePlaceholder | number | String): DataMergeQrcodePlaceholder[];
+	itemByRange(from: DataMergeQrcodePlaceholder | number | string, to: DataMergeQrcodePlaceholder | number | string): DataMergeQrcodePlaceholder[];
 
 	/**
 	 * Returns the last DataMergeQrcodePlaceholder in the collection.
@@ -22174,7 +22174,7 @@ declare class Hyperlinks {
 	 * Returns the Hyperlink with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Hyperlink;
+	item(index: number | string): Hyperlink;
 
 	/**
 	 * Returns the Hyperlink with the specified ID.
@@ -22193,7 +22193,7 @@ declare class Hyperlinks {
 	 * @param from The Hyperlink, index, or name at the beginning of the range.
 	 * @param to The Hyperlink, index, or name at the end of the range.
 	 */
-	itemByRange(from: Hyperlink | number | String, to: Hyperlink | number | String): Hyperlink[];
+	itemByRange(from: Hyperlink | number | string, to: Hyperlink | number | string): Hyperlink[];
 
 	/**
 	 * Returns the last Hyperlink in the collection.
@@ -22397,7 +22397,7 @@ declare class Bookmarks {
 	 * Returns the Bookmark with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Bookmark;
+	item(index: number | string): Bookmark;
 
 	/**
 	 * Returns the Bookmark with the specified ID.
@@ -22416,7 +22416,7 @@ declare class Bookmarks {
 	 * @param from The Bookmark, index, or name at the beginning of the range.
 	 * @param to The Bookmark, index, or name at the end of the range.
 	 */
-	itemByRange(from: Bookmark | number | String, to: Bookmark | number | String): Bookmark[];
+	itemByRange(from: Bookmark | number | string, to: Bookmark | number | string): Bookmark[];
 
 	/**
 	 * Returns the last Bookmark in the collection.
@@ -22608,7 +22608,7 @@ declare class HyperlinkPageItemSources {
 	 * Returns the HyperlinkPageItemSource with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HyperlinkPageItemSource;
+	item(index: number | string): HyperlinkPageItemSource;
 
 	/**
 	 * Returns the HyperlinkPageItemSource with the specified ID.
@@ -22627,7 +22627,7 @@ declare class HyperlinkPageItemSources {
 	 * @param from The HyperlinkPageItemSource, index, or name at the beginning of the range.
 	 * @param to The HyperlinkPageItemSource, index, or name at the end of the range.
 	 */
-	itemByRange(from: HyperlinkPageItemSource | number | String, to: HyperlinkPageItemSource | number | String): HyperlinkPageItemSource[];
+	itemByRange(from: HyperlinkPageItemSource | number | string, to: HyperlinkPageItemSource | number | string): HyperlinkPageItemSource[];
 
 	/**
 	 * Returns the last HyperlinkPageItemSource in the collection.
@@ -22824,7 +22824,7 @@ declare class HyperlinkTextSources {
 	 * Returns the HyperlinkTextSource with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HyperlinkTextSource;
+	item(index: number | string): HyperlinkTextSource;
 
 	/**
 	 * Returns the HyperlinkTextSource with the specified ID.
@@ -22843,7 +22843,7 @@ declare class HyperlinkTextSources {
 	 * @param from The HyperlinkTextSource, index, or name at the beginning of the range.
 	 * @param to The HyperlinkTextSource, index, or name at the end of the range.
 	 */
-	itemByRange(from: HyperlinkTextSource | number | String, to: HyperlinkTextSource | number | String): HyperlinkTextSource[];
+	itemByRange(from: HyperlinkTextSource | number | string, to: HyperlinkTextSource | number | string): HyperlinkTextSource[];
 
 	/**
 	 * Returns the last HyperlinkTextSource in the collection.
@@ -23035,7 +23035,7 @@ declare class HyperlinkTextDestinations {
 	 * Returns the HyperlinkTextDestination with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HyperlinkTextDestination;
+	item(index: number | string): HyperlinkTextDestination;
 
 	/**
 	 * Returns the HyperlinkTextDestination with the specified ID.
@@ -23054,7 +23054,7 @@ declare class HyperlinkTextDestinations {
 	 * @param from The HyperlinkTextDestination, index, or name at the beginning of the range.
 	 * @param to The HyperlinkTextDestination, index, or name at the end of the range.
 	 */
-	itemByRange(from: HyperlinkTextDestination | number | String, to: HyperlinkTextDestination | number | String): HyperlinkTextDestination[];
+	itemByRange(from: HyperlinkTextDestination | number | string, to: HyperlinkTextDestination | number | string): HyperlinkTextDestination[];
 
 	/**
 	 * Returns the last HyperlinkTextDestination in the collection.
@@ -23266,7 +23266,7 @@ declare class HyperlinkPageDestinations {
 	 * Returns the HyperlinkPageDestination with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HyperlinkPageDestination;
+	item(index: number | string): HyperlinkPageDestination;
 
 	/**
 	 * Returns the HyperlinkPageDestination with the specified ID.
@@ -23285,7 +23285,7 @@ declare class HyperlinkPageDestinations {
 	 * @param from The HyperlinkPageDestination, index, or name at the beginning of the range.
 	 * @param to The HyperlinkPageDestination, index, or name at the end of the range.
 	 */
-	itemByRange(from: HyperlinkPageDestination | number | String, to: HyperlinkPageDestination | number | String): HyperlinkPageDestination[];
+	itemByRange(from: HyperlinkPageDestination | number | string, to: HyperlinkPageDestination | number | string): HyperlinkPageDestination[];
 
 	/**
 	 * Returns the last HyperlinkPageDestination in the collection.
@@ -23497,7 +23497,7 @@ declare class HyperlinkExternalPageDestinations {
 	 * Returns the HyperlinkExternalPageDestination with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HyperlinkExternalPageDestination;
+	item(index: number | string): HyperlinkExternalPageDestination;
 
 	/**
 	 * Returns the HyperlinkExternalPageDestination with the specified ID.
@@ -23516,7 +23516,7 @@ declare class HyperlinkExternalPageDestinations {
 	 * @param from The HyperlinkExternalPageDestination, index, or name at the beginning of the range.
 	 * @param to The HyperlinkExternalPageDestination, index, or name at the end of the range.
 	 */
-	itemByRange(from: HyperlinkExternalPageDestination | number | String, to: HyperlinkExternalPageDestination | number | String): HyperlinkExternalPageDestination[];
+	itemByRange(from: HyperlinkExternalPageDestination | number | string, to: HyperlinkExternalPageDestination | number | string): HyperlinkExternalPageDestination[];
 
 	/**
 	 * Returns the last HyperlinkExternalPageDestination in the collection.
@@ -23708,7 +23708,7 @@ declare class HyperlinkURLDestinations {
 	 * Returns the HyperlinkURLDestination with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HyperlinkURLDestination;
+	item(index: number | string): HyperlinkURLDestination;
 
 	/**
 	 * Returns the HyperlinkURLDestination with the specified ID.
@@ -23727,7 +23727,7 @@ declare class HyperlinkURLDestinations {
 	 * @param from The HyperlinkURLDestination, index, or name at the beginning of the range.
 	 * @param to The HyperlinkURLDestination, index, or name at the end of the range.
 	 */
-	itemByRange(from: HyperlinkURLDestination | number | String, to: HyperlinkURLDestination | number | String): HyperlinkURLDestination[];
+	itemByRange(from: HyperlinkURLDestination | number | string, to: HyperlinkURLDestination | number | string): HyperlinkURLDestination[];
 
 	/**
 	 * Returns the last HyperlinkURLDestination in the collection.
@@ -23914,7 +23914,7 @@ declare class CrossReferenceFormats {
 	 * Returns the CrossReferenceFormat with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CrossReferenceFormat;
+	item(index: number | string): CrossReferenceFormat;
 
 	/**
 	 * Returns the CrossReferenceFormat with the specified ID.
@@ -23933,7 +23933,7 @@ declare class CrossReferenceFormats {
 	 * @param from The CrossReferenceFormat, index, or name at the beginning of the range.
 	 * @param to The CrossReferenceFormat, index, or name at the end of the range.
 	 */
-	itemByRange(from: CrossReferenceFormat | number | String, to: CrossReferenceFormat | number | String): CrossReferenceFormat[];
+	itemByRange(from: CrossReferenceFormat | number | string, to: CrossReferenceFormat | number | string): CrossReferenceFormat[];
 
 	/**
 	 * Returns the last CrossReferenceFormat in the collection.
@@ -24027,7 +24027,7 @@ declare class CrossReferenceSources {
 	 * Returns the CrossReferenceSource with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CrossReferenceSource;
+	item(index: number | string): CrossReferenceSource;
 
 	/**
 	 * Returns the CrossReferenceSource with the specified ID.
@@ -24046,7 +24046,7 @@ declare class CrossReferenceSources {
 	 * @param from The CrossReferenceSource, index, or name at the beginning of the range.
 	 * @param to The CrossReferenceSource, index, or name at the end of the range.
 	 */
-	itemByRange(from: CrossReferenceSource | number | String, to: CrossReferenceSource | number | String): CrossReferenceSource[];
+	itemByRange(from: CrossReferenceSource | number | string, to: CrossReferenceSource | number | string): CrossReferenceSource[];
 
 	/**
 	 * Returns the last CrossReferenceSource in the collection.
@@ -24222,14 +24222,14 @@ declare class BuildingBlocks {
 	 * Returns the BuildingBlock with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): BuildingBlock;
+	item(index: number | string): BuildingBlock;
 
 	/**
 	 * Returns the BuildingBlocks within the specified range.
 	 * @param from The BuildingBlock, index, or name at the beginning of the range.
 	 * @param to The BuildingBlock, index, or name at the end of the range.
 	 */
-	itemByRange(from: BuildingBlock | number | String, to: BuildingBlock | number | String): BuildingBlock[];
+	itemByRange(from: BuildingBlock | number | string, to: BuildingBlock | number | string): BuildingBlock[];
 
 	/**
 	 * Returns the last BuildingBlock in the collection.
@@ -24312,7 +24312,7 @@ declare class ParagraphDestinations {
 	 * Returns the ParagraphDestination with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ParagraphDestination;
+	item(index: number | string): ParagraphDestination;
 
 	/**
 	 * Returns the ParagraphDestination with the specified ID.
@@ -24331,7 +24331,7 @@ declare class ParagraphDestinations {
 	 * @param from The ParagraphDestination, index, or name at the beginning of the range.
 	 * @param to The ParagraphDestination, index, or name at the end of the range.
 	 */
-	itemByRange(from: ParagraphDestination | number | String, to: ParagraphDestination | number | String): ParagraphDestination[];
+	itemByRange(from: ParagraphDestination | number | string, to: ParagraphDestination | number | string): ParagraphDestination[];
 
 	/**
 	 * Returns the last ParagraphDestination in the collection.
@@ -24549,7 +24549,7 @@ declare class Indexes {
 	 * Returns the Index with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Index;
+	item(index: number | string): Index;
 
 	/**
 	 * Returns the Index with the specified ID.
@@ -24568,7 +24568,7 @@ declare class Indexes {
 	 * @param from The Index, index, or name at the beginning of the range.
 	 * @param to The Index, index, or name at the end of the range.
 	 */
-	itemByRange(from: Index | number | String, to: Index | number | String): Index[];
+	itemByRange(from: Index | number | string, to: Index | number | string): Index[];
 
 	/**
 	 * Returns the last Index in the collection.
@@ -24711,7 +24711,7 @@ declare class IndexOptions extends Preference {
 	/**
 	 * The paragraph style applied to the title of the generated index.
 	 */
-	titleStyle: ParagraphStyle | String;
+	titleStyle: ParagraphStyle | string;
 
 }
 
@@ -24865,7 +24865,7 @@ declare class Topics {
 	 * Returns the Topic with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Topic;
+	item(index: number | string): Topic;
 
 	/**
 	 * Returns the Topic with the specified name.
@@ -24878,7 +24878,7 @@ declare class Topics {
 	 * @param from The Topic, index, or name at the beginning of the range.
 	 * @param to The Topic, index, or name at the end of the range.
 	 */
-	itemByRange(from: Topic | number | String, to: Topic | number | String): Topic[];
+	itemByRange(from: Topic | number | string, to: Topic | number | string): Topic[];
 
 	/**
 	 * Returns the last Topic in the collection.
@@ -25072,7 +25072,7 @@ declare class CrossReferences {
 	 * Returns the CrossReference with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CrossReference;
+	item(index: number | string): CrossReference;
 
 	/**
 	 * Returns the CrossReference with the specified ID.
@@ -25091,7 +25091,7 @@ declare class CrossReferences {
 	 * @param from The CrossReference, index, or name at the beginning of the range.
 	 * @param to The CrossReference, index, or name at the end of the range.
 	 */
-	itemByRange(from: CrossReference | number | String, to: CrossReference | number | String): CrossReference[];
+	itemByRange(from: CrossReference | number | string, to: CrossReference | number | string): CrossReference[];
 
 	/**
 	 * Returns the last CrossReference in the collection.
@@ -25291,7 +25291,7 @@ declare class PageReferences {
 	 * Returns the PageReference with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PageReference;
+	item(index: number | string): PageReference;
 
 	/**
 	 * Returns the PageReference with the specified ID.
@@ -25310,7 +25310,7 @@ declare class PageReferences {
 	 * @param from The PageReference, index, or name at the beginning of the range.
 	 * @param to The PageReference, index, or name at the end of the range.
 	 */
-	itemByRange(from: PageReference | number | String, to: PageReference | number | String): PageReference[];
+	itemByRange(from: PageReference | number | string, to: PageReference | number | string): PageReference[];
 
 	/**
 	 * Returns the last PageReference in the collection.
@@ -25485,7 +25485,7 @@ declare class IndexSections {
 	 * Returns the IndexSection with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): IndexSection;
+	item(index: number | string): IndexSection;
 
 	/**
 	 * Returns the IndexSection with the specified ID.
@@ -25504,7 +25504,7 @@ declare class IndexSections {
 	 * @param from The IndexSection, index, or name at the beginning of the range.
 	 * @param to The IndexSection, index, or name at the end of the range.
 	 */
-	itemByRange(from: IndexSection | number | String, to: IndexSection | number | String): IndexSection[];
+	itemByRange(from: IndexSection | number | string, to: IndexSection | number | string): IndexSection[];
 
 	/**
 	 * Returns the last IndexSection in the collection.
@@ -25604,7 +25604,7 @@ declare class FormFields {
 	 * Returns the FormField with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): FormField;
+	item(index: number | string): FormField;
 
 	/**
 	 * Returns the FormField with the specified ID.
@@ -25623,7 +25623,7 @@ declare class FormFields {
 	 * @param from The FormField, index, or name at the beginning of the range.
 	 * @param to The FormField, index, or name at the end of the range.
 	 */
-	itemByRange(from: FormField | number | String, to: FormField | number | String): FormField[];
+	itemByRange(from: FormField | number | string, to: FormField | number | string): FormField[];
 
 	/**
 	 * Returns the last FormField in the collection.
@@ -25940,7 +25940,7 @@ declare class Buttons {
 	 * Returns the Button with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Button;
+	item(index: number | string): Button;
 
 	/**
 	 * Returns the Button with the specified ID.
@@ -25959,7 +25959,7 @@ declare class Buttons {
 	 * @param from The Button, index, or name at the beginning of the range.
 	 * @param to The Button, index, or name at the end of the range.
 	 */
-	itemByRange(from: Button | number | String, to: Button | number | String): Button[];
+	itemByRange(from: Button | number | string, to: Button | number | string): Button[];
 
 	/**
 	 * Returns the last Button in the collection.
@@ -26224,7 +26224,7 @@ declare class States {
 	 * Returns the State with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): State;
+	item(index: number | string): State;
 
 	/**
 	 * Returns the State with the specified ID.
@@ -26243,7 +26243,7 @@ declare class States {
 	 * @param from The State, index, or name at the beginning of the range.
 	 * @param to The State, index, or name at the end of the range.
 	 */
-	itemByRange(from: State | number | String, to: State | number | String): State[];
+	itemByRange(from: State | number | string, to: State | number | string): State[];
 
 	/**
 	 * Returns the last State in the collection.
@@ -26451,7 +26451,7 @@ declare class MultiStateObjects {
 	 * Returns the MultiStateObject with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MultiStateObject;
+	item(index: number | string): MultiStateObject;
 
 	/**
 	 * Returns the MultiStateObject with the specified ID.
@@ -26470,7 +26470,7 @@ declare class MultiStateObjects {
 	 * @param from The MultiStateObject, index, or name at the beginning of the range.
 	 * @param to The MultiStateObject, index, or name at the end of the range.
 	 */
-	itemByRange(from: MultiStateObject | number | String, to: MultiStateObject | number | String): MultiStateObject[];
+	itemByRange(from: MultiStateObject | number | string, to: MultiStateObject | number | string): MultiStateObject[];
 
 	/**
 	 * Returns the last MultiStateObject in the collection.
@@ -26777,7 +26777,7 @@ declare class CheckBoxes {
 	 * Returns the CheckBox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CheckBox;
+	item(index: number | string): CheckBox;
 
 	/**
 	 * Returns the CheckBox with the specified ID.
@@ -26796,7 +26796,7 @@ declare class CheckBoxes {
 	 * @param from The CheckBox, index, or name at the beginning of the range.
 	 * @param to The CheckBox, index, or name at the end of the range.
 	 */
-	itemByRange(from: CheckBox | number | String, to: CheckBox | number | String): CheckBox[];
+	itemByRange(from: CheckBox | number | string, to: CheckBox | number | string): CheckBox[];
 
 	/**
 	 * Returns the last CheckBox in the collection.
@@ -27108,7 +27108,7 @@ declare class ComboBoxes {
 	 * Returns the ComboBox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ComboBox;
+	item(index: number | string): ComboBox;
 
 	/**
 	 * Returns the ComboBox with the specified ID.
@@ -27127,7 +27127,7 @@ declare class ComboBoxes {
 	 * @param from The ComboBox, index, or name at the beginning of the range.
 	 * @param to The ComboBox, index, or name at the end of the range.
 	 */
-	itemByRange(from: ComboBox | number | String, to: ComboBox | number | String): ComboBox[];
+	itemByRange(from: ComboBox | number | string, to: ComboBox | number | string): ComboBox[];
 
 	/**
 	 * Returns the last ComboBox in the collection.
@@ -27444,7 +27444,7 @@ declare class ListBoxes {
 	 * Returns the ListBox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ListBox;
+	item(index: number | string): ListBox;
 
 	/**
 	 * Returns the ListBox with the specified ID.
@@ -27463,7 +27463,7 @@ declare class ListBoxes {
 	 * @param from The ListBox, index, or name at the beginning of the range.
 	 * @param to The ListBox, index, or name at the end of the range.
 	 */
-	itemByRange(from: ListBox | number | String, to: ListBox | number | String): ListBox[];
+	itemByRange(from: ListBox | number | string, to: ListBox | number | string): ListBox[];
 
 	/**
 	 * Returns the last ListBox in the collection.
@@ -27770,7 +27770,7 @@ declare class RadioButtons {
 	 * Returns the RadioButton with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): RadioButton;
+	item(index: number | string): RadioButton;
 
 	/**
 	 * Returns the RadioButton with the specified ID.
@@ -27789,7 +27789,7 @@ declare class RadioButtons {
 	 * @param from The RadioButton, index, or name at the beginning of the range.
 	 * @param to The RadioButton, index, or name at the end of the range.
 	 */
-	itemByRange(from: RadioButton | number | String, to: RadioButton | number | String): RadioButton[];
+	itemByRange(from: RadioButton | number | string, to: RadioButton | number | string): RadioButton[];
 
 	/**
 	 * Returns the last RadioButton in the collection.
@@ -28106,7 +28106,7 @@ declare class TextBoxes {
 	 * Returns the TextBox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextBox;
+	item(index: number | string): TextBox;
 
 	/**
 	 * Returns the TextBox with the specified ID.
@@ -28125,7 +28125,7 @@ declare class TextBoxes {
 	 * @param from The TextBox, index, or name at the beginning of the range.
 	 * @param to The TextBox, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextBox | number | String, to: TextBox | number | String): TextBox[];
+	itemByRange(from: TextBox | number | string, to: TextBox | number | string): TextBox[];
 
 	/**
 	 * Returns the last TextBox in the collection.
@@ -28417,7 +28417,7 @@ declare class SignatureFields {
 	 * Returns the SignatureField with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): SignatureField;
+	item(index: number | string): SignatureField;
 
 	/**
 	 * Returns the SignatureField with the specified ID.
@@ -28436,7 +28436,7 @@ declare class SignatureFields {
 	 * @param from The SignatureField, index, or name at the beginning of the range.
 	 * @param to The SignatureField, index, or name at the end of the range.
 	 */
-	itemByRange(from: SignatureField | number | String, to: SignatureField | number | String): SignatureField[];
+	itemByRange(from: SignatureField | number | string, to: SignatureField | number | string): SignatureField[];
 
 	/**
 	 * Returns the last SignatureField in the collection.
@@ -28643,7 +28643,7 @@ declare class Movies {
 	 * Returns the Movie with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Movie;
+	item(index: number | string): Movie;
 
 	/**
 	 * Returns the Movie with the specified ID.
@@ -28662,7 +28662,7 @@ declare class Movies {
 	 * @param from The Movie, index, or name at the beginning of the range.
 	 * @param to The Movie, index, or name at the end of the range.
 	 */
-	itemByRange(from: Movie | number | String, to: Movie | number | String): Movie[];
+	itemByRange(from: Movie | number | string, to: Movie | number | string): Movie[];
 
 	/**
 	 * Returns the last Movie in the collection.
@@ -28825,7 +28825,7 @@ declare class NavigationPoints {
 	 * Returns the NavigationPoint with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): NavigationPoint;
+	item(index: number | string): NavigationPoint;
 
 	/**
 	 * Returns the NavigationPoint with the specified ID.
@@ -28844,7 +28844,7 @@ declare class NavigationPoints {
 	 * @param from The NavigationPoint, index, or name at the beginning of the range.
 	 * @param to The NavigationPoint, index, or name at the end of the range.
 	 */
-	itemByRange(from: NavigationPoint | number | String, to: NavigationPoint | number | String): NavigationPoint[];
+	itemByRange(from: NavigationPoint | number | string, to: NavigationPoint | number | string): NavigationPoint[];
 
 	/**
 	 * Returns the last NavigationPoint in the collection.
@@ -29016,7 +29016,7 @@ declare class Sounds {
 	 * Returns the Sound with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Sound;
+	item(index: number | string): Sound;
 
 	/**
 	 * Returns the Sound with the specified ID.
@@ -29035,7 +29035,7 @@ declare class Sounds {
 	 * @param from The Sound, index, or name at the beginning of the range.
 	 * @param to The Sound, index, or name at the end of the range.
 	 */
-	itemByRange(from: Sound | number | String, to: Sound | number | String): Sound[];
+	itemByRange(from: Sound | number | string, to: Sound | number | string): Sound[];
 
 	/**
 	 * Returns the last Sound in the collection.
@@ -29215,7 +29215,7 @@ declare class Behaviors {
 	 * Returns the Behavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Behavior;
+	item(index: number | string): Behavior;
 
 	/**
 	 * Returns the Behavior with the specified ID.
@@ -29234,7 +29234,7 @@ declare class Behaviors {
 	 * @param from The Behavior, index, or name at the beginning of the range.
 	 * @param to The Behavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: Behavior | number | String, to: Behavior | number | String): Behavior[];
+	itemByRange(from: Behavior | number | string, to: Behavior | number | string): Behavior[];
 
 	/**
 	 * Returns the last Behavior in the collection.
@@ -29321,7 +29321,7 @@ declare class GotoFirstPageBehaviors {
 	 * Returns the GotoFirstPageBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoFirstPageBehavior;
+	item(index: number | string): GotoFirstPageBehavior;
 
 	/**
 	 * Returns the GotoFirstPageBehavior with the specified ID.
@@ -29340,7 +29340,7 @@ declare class GotoFirstPageBehaviors {
 	 * @param from The GotoFirstPageBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoFirstPageBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoFirstPageBehavior | number | String, to: GotoFirstPageBehavior | number | String): GotoFirstPageBehavior[];
+	itemByRange(from: GotoFirstPageBehavior | number | string, to: GotoFirstPageBehavior | number | string): GotoFirstPageBehavior[];
 
 	/**
 	 * Returns the last GotoFirstPageBehavior in the collection.
@@ -29427,7 +29427,7 @@ declare class GotoLastPageBehaviors {
 	 * Returns the GotoLastPageBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoLastPageBehavior;
+	item(index: number | string): GotoLastPageBehavior;
 
 	/**
 	 * Returns the GotoLastPageBehavior with the specified ID.
@@ -29446,7 +29446,7 @@ declare class GotoLastPageBehaviors {
 	 * @param from The GotoLastPageBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoLastPageBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoLastPageBehavior | number | String, to: GotoLastPageBehavior | number | String): GotoLastPageBehavior[];
+	itemByRange(from: GotoLastPageBehavior | number | string, to: GotoLastPageBehavior | number | string): GotoLastPageBehavior[];
 
 	/**
 	 * Returns the last GotoLastPageBehavior in the collection.
@@ -29533,7 +29533,7 @@ declare class GotoNextPageBehaviors {
 	 * Returns the GotoNextPageBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoNextPageBehavior;
+	item(index: number | string): GotoNextPageBehavior;
 
 	/**
 	 * Returns the GotoNextPageBehavior with the specified ID.
@@ -29552,7 +29552,7 @@ declare class GotoNextPageBehaviors {
 	 * @param from The GotoNextPageBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoNextPageBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoNextPageBehavior | number | String, to: GotoNextPageBehavior | number | String): GotoNextPageBehavior[];
+	itemByRange(from: GotoNextPageBehavior | number | string, to: GotoNextPageBehavior | number | string): GotoNextPageBehavior[];
 
 	/**
 	 * Returns the last GotoNextPageBehavior in the collection.
@@ -29639,7 +29639,7 @@ declare class GotoPreviousPageBehaviors {
 	 * Returns the GotoPreviousPageBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoPreviousPageBehavior;
+	item(index: number | string): GotoPreviousPageBehavior;
 
 	/**
 	 * Returns the GotoPreviousPageBehavior with the specified ID.
@@ -29658,7 +29658,7 @@ declare class GotoPreviousPageBehaviors {
 	 * @param from The GotoPreviousPageBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoPreviousPageBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoPreviousPageBehavior | number | String, to: GotoPreviousPageBehavior | number | String): GotoPreviousPageBehavior[];
+	itemByRange(from: GotoPreviousPageBehavior | number | string, to: GotoPreviousPageBehavior | number | string): GotoPreviousPageBehavior[];
 
 	/**
 	 * Returns the last GotoPreviousPageBehavior in the collection.
@@ -29745,7 +29745,7 @@ declare class GotoNextViewBehaviors {
 	 * Returns the GotoNextViewBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoNextViewBehavior;
+	item(index: number | string): GotoNextViewBehavior;
 
 	/**
 	 * Returns the GotoNextViewBehavior with the specified ID.
@@ -29764,7 +29764,7 @@ declare class GotoNextViewBehaviors {
 	 * @param from The GotoNextViewBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoNextViewBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoNextViewBehavior | number | String, to: GotoNextViewBehavior | number | String): GotoNextViewBehavior[];
+	itemByRange(from: GotoNextViewBehavior | number | string, to: GotoNextViewBehavior | number | string): GotoNextViewBehavior[];
 
 	/**
 	 * Returns the last GotoNextViewBehavior in the collection.
@@ -29851,7 +29851,7 @@ declare class GotoPreviousViewBehaviors {
 	 * Returns the GotoPreviousViewBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoPreviousViewBehavior;
+	item(index: number | string): GotoPreviousViewBehavior;
 
 	/**
 	 * Returns the GotoPreviousViewBehavior with the specified ID.
@@ -29870,7 +29870,7 @@ declare class GotoPreviousViewBehaviors {
 	 * @param from The GotoPreviousViewBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoPreviousViewBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoPreviousViewBehavior | number | String, to: GotoPreviousViewBehavior | number | String): GotoPreviousViewBehavior[];
+	itemByRange(from: GotoPreviousViewBehavior | number | string, to: GotoPreviousViewBehavior | number | string): GotoPreviousViewBehavior[];
 
 	/**
 	 * Returns the last GotoPreviousViewBehavior in the collection.
@@ -29957,7 +29957,7 @@ declare class GotoURLBehaviors {
 	 * Returns the GotoURLBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoURLBehavior;
+	item(index: number | string): GotoURLBehavior;
 
 	/**
 	 * Returns the GotoURLBehavior with the specified ID.
@@ -29976,7 +29976,7 @@ declare class GotoURLBehaviors {
 	 * @param from The GotoURLBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoURLBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoURLBehavior | number | String, to: GotoURLBehavior | number | String): GotoURLBehavior[];
+	itemByRange(from: GotoURLBehavior | number | string, to: GotoURLBehavior | number | string): GotoURLBehavior[];
 
 	/**
 	 * Returns the last GotoURLBehavior in the collection.
@@ -30073,7 +30073,7 @@ declare class MovieBehaviors {
 	 * Returns the MovieBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MovieBehavior;
+	item(index: number | string): MovieBehavior;
 
 	/**
 	 * Returns the MovieBehavior with the specified ID.
@@ -30092,7 +30092,7 @@ declare class MovieBehaviors {
 	 * @param from The MovieBehavior, index, or name at the beginning of the range.
 	 * @param to The MovieBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: MovieBehavior | number | String, to: MovieBehavior | number | String): MovieBehavior[];
+	itemByRange(from: MovieBehavior | number | string, to: MovieBehavior | number | string): MovieBehavior[];
 
 	/**
 	 * Returns the last MovieBehavior in the collection.
@@ -30184,7 +30184,7 @@ declare class ShowHideFieldsBehaviors {
 	 * Returns the ShowHideFieldsBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ShowHideFieldsBehavior;
+	item(index: number | string): ShowHideFieldsBehavior;
 
 	/**
 	 * Returns the ShowHideFieldsBehavior with the specified ID.
@@ -30203,7 +30203,7 @@ declare class ShowHideFieldsBehaviors {
 	 * @param from The ShowHideFieldsBehavior, index, or name at the beginning of the range.
 	 * @param to The ShowHideFieldsBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: ShowHideFieldsBehavior | number | String, to: ShowHideFieldsBehavior | number | String): ShowHideFieldsBehavior[];
+	itemByRange(from: ShowHideFieldsBehavior | number | string, to: ShowHideFieldsBehavior | number | string): ShowHideFieldsBehavior[];
 
 	/**
 	 * Returns the last ShowHideFieldsBehavior in the collection.
@@ -30300,7 +30300,7 @@ declare class AnimationBehaviors {
 	 * Returns the AnimationBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): AnimationBehavior;
+	item(index: number | string): AnimationBehavior;
 
 	/**
 	 * Returns the AnimationBehavior with the specified ID.
@@ -30319,7 +30319,7 @@ declare class AnimationBehaviors {
 	 * @param from The AnimationBehavior, index, or name at the beginning of the range.
 	 * @param to The AnimationBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: AnimationBehavior | number | String, to: AnimationBehavior | number | String): AnimationBehavior[];
+	itemByRange(from: AnimationBehavior | number | string, to: AnimationBehavior | number | string): AnimationBehavior[];
 
 	/**
 	 * Returns the last AnimationBehavior in the collection.
@@ -30406,7 +30406,7 @@ declare class OpenFileBehaviors {
 	 * Returns the OpenFileBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): OpenFileBehavior;
+	item(index: number | string): OpenFileBehavior;
 
 	/**
 	 * Returns the OpenFileBehavior with the specified ID.
@@ -30425,7 +30425,7 @@ declare class OpenFileBehaviors {
 	 * @param from The OpenFileBehavior, index, or name at the beginning of the range.
 	 * @param to The OpenFileBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: OpenFileBehavior | number | String, to: OpenFileBehavior | number | String): OpenFileBehavior[];
+	itemByRange(from: OpenFileBehavior | number | string, to: OpenFileBehavior | number | string): OpenFileBehavior[];
 
 	/**
 	 * Returns the last OpenFileBehavior in the collection.
@@ -30517,7 +30517,7 @@ declare class GotoNextStateBehaviors {
 	 * Returns the GotoNextStateBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoNextStateBehavior;
+	item(index: number | string): GotoNextStateBehavior;
 
 	/**
 	 * Returns the GotoNextStateBehavior with the specified ID.
@@ -30536,7 +30536,7 @@ declare class GotoNextStateBehaviors {
 	 * @param from The GotoNextStateBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoNextStateBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoNextStateBehavior | number | String, to: GotoNextStateBehavior | number | String): GotoNextStateBehavior[];
+	itemByRange(from: GotoNextStateBehavior | number | string, to: GotoNextStateBehavior | number | string): GotoNextStateBehavior[];
 
 	/**
 	 * Returns the last GotoNextStateBehavior in the collection.
@@ -30628,7 +30628,7 @@ declare class GotoPreviousStateBehaviors {
 	 * Returns the GotoPreviousStateBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoPreviousStateBehavior;
+	item(index: number | string): GotoPreviousStateBehavior;
 
 	/**
 	 * Returns the GotoPreviousStateBehavior with the specified ID.
@@ -30647,7 +30647,7 @@ declare class GotoPreviousStateBehaviors {
 	 * @param from The GotoPreviousStateBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoPreviousStateBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoPreviousStateBehavior | number | String, to: GotoPreviousStateBehavior | number | String): GotoPreviousStateBehavior[];
+	itemByRange(from: GotoPreviousStateBehavior | number | string, to: GotoPreviousStateBehavior | number | string): GotoPreviousStateBehavior[];
 
 	/**
 	 * Returns the last GotoPreviousStateBehavior in the collection.
@@ -30744,7 +30744,7 @@ declare class GotoStateBehaviors {
 	 * Returns the GotoStateBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoStateBehavior;
+	item(index: number | string): GotoStateBehavior;
 
 	/**
 	 * Returns the GotoStateBehavior with the specified ID.
@@ -30763,7 +30763,7 @@ declare class GotoStateBehaviors {
 	 * @param from The GotoStateBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoStateBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoStateBehavior | number | String, to: GotoStateBehavior | number | String): GotoStateBehavior[];
+	itemByRange(from: GotoStateBehavior | number | string, to: GotoStateBehavior | number | string): GotoStateBehavior[];
 
 	/**
 	 * Returns the last GotoStateBehavior in the collection.
@@ -30850,7 +30850,7 @@ declare class ViewZoomBehaviors {
 	 * Returns the ViewZoomBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ViewZoomBehavior;
+	item(index: number | string): ViewZoomBehavior;
 
 	/**
 	 * Returns the ViewZoomBehavior with the specified ID.
@@ -30869,7 +30869,7 @@ declare class ViewZoomBehaviors {
 	 * @param from The ViewZoomBehavior, index, or name at the beginning of the range.
 	 * @param to The ViewZoomBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: ViewZoomBehavior | number | String, to: ViewZoomBehavior | number | String): ViewZoomBehavior[];
+	itemByRange(from: ViewZoomBehavior | number | string, to: ViewZoomBehavior | number | string): ViewZoomBehavior[];
 
 	/**
 	 * Returns the last ViewZoomBehavior in the collection.
@@ -30961,7 +30961,7 @@ declare class SoundBehaviors {
 	 * Returns the SoundBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): SoundBehavior;
+	item(index: number | string): SoundBehavior;
 
 	/**
 	 * Returns the SoundBehavior with the specified ID.
@@ -30980,7 +30980,7 @@ declare class SoundBehaviors {
 	 * @param from The SoundBehavior, index, or name at the beginning of the range.
 	 * @param to The SoundBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: SoundBehavior | number | String, to: SoundBehavior | number | String): SoundBehavior[];
+	itemByRange(from: SoundBehavior | number | string, to: SoundBehavior | number | string): SoundBehavior[];
 
 	/**
 	 * Returns the last SoundBehavior in the collection.
@@ -31082,7 +31082,7 @@ declare class GotoAnchorBehaviors {
 	 * Returns the GotoAnchorBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoAnchorBehavior;
+	item(index: number | string): GotoAnchorBehavior;
 
 	/**
 	 * Returns the GotoAnchorBehavior with the specified ID.
@@ -31101,7 +31101,7 @@ declare class GotoAnchorBehaviors {
 	 * @param from The GotoAnchorBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoAnchorBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoAnchorBehavior | number | String, to: GotoAnchorBehavior | number | String): GotoAnchorBehavior[];
+	itemByRange(from: GotoAnchorBehavior | number | string, to: GotoAnchorBehavior | number | string): GotoAnchorBehavior[];
 
 	/**
 	 * Returns the last GotoAnchorBehavior in the collection.
@@ -31193,7 +31193,7 @@ declare class GotoPageBehaviors {
 	 * Returns the GotoPageBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GotoPageBehavior;
+	item(index: number | string): GotoPageBehavior;
 
 	/**
 	 * Returns the GotoPageBehavior with the specified ID.
@@ -31212,7 +31212,7 @@ declare class GotoPageBehaviors {
 	 * @param from The GotoPageBehavior, index, or name at the beginning of the range.
 	 * @param to The GotoPageBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: GotoPageBehavior | number | String, to: GotoPageBehavior | number | String): GotoPageBehavior[];
+	itemByRange(from: GotoPageBehavior | number | string, to: GotoPageBehavior | number | string): GotoPageBehavior[];
 
 	/**
 	 * Returns the last GotoPageBehavior in the collection.
@@ -31294,7 +31294,7 @@ declare class ClearFormBehaviors {
 	 * Returns the ClearFormBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ClearFormBehavior;
+	item(index: number | string): ClearFormBehavior;
 
 	/**
 	 * Returns the ClearFormBehavior with the specified ID.
@@ -31313,7 +31313,7 @@ declare class ClearFormBehaviors {
 	 * @param from The ClearFormBehavior, index, or name at the beginning of the range.
 	 * @param to The ClearFormBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: ClearFormBehavior | number | String, to: ClearFormBehavior | number | String): ClearFormBehavior[];
+	itemByRange(from: ClearFormBehavior | number | string, to: ClearFormBehavior | number | string): ClearFormBehavior[];
 
 	/**
 	 * Returns the last ClearFormBehavior in the collection.
@@ -31395,7 +31395,7 @@ declare class PrintFormBehaviors {
 	 * Returns the PrintFormBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PrintFormBehavior;
+	item(index: number | string): PrintFormBehavior;
 
 	/**
 	 * Returns the PrintFormBehavior with the specified ID.
@@ -31414,7 +31414,7 @@ declare class PrintFormBehaviors {
 	 * @param from The PrintFormBehavior, index, or name at the beginning of the range.
 	 * @param to The PrintFormBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: PrintFormBehavior | number | String, to: PrintFormBehavior | number | String): PrintFormBehavior[];
+	itemByRange(from: PrintFormBehavior | number | string, to: PrintFormBehavior | number | string): PrintFormBehavior[];
 
 	/**
 	 * Returns the last PrintFormBehavior in the collection.
@@ -31501,7 +31501,7 @@ declare class SubmitFormBehaviors {
 	 * Returns the SubmitFormBehavior with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): SubmitFormBehavior;
+	item(index: number | string): SubmitFormBehavior;
 
 	/**
 	 * Returns the SubmitFormBehavior with the specified ID.
@@ -31520,7 +31520,7 @@ declare class SubmitFormBehaviors {
 	 * @param from The SubmitFormBehavior, index, or name at the beginning of the range.
 	 * @param to The SubmitFormBehavior, index, or name at the end of the range.
 	 */
-	itemByRange(from: SubmitFormBehavior | number | String, to: SubmitFormBehavior | number | String): SubmitFormBehavior[];
+	itemByRange(from: SubmitFormBehavior | number | string, to: SubmitFormBehavior | number | string): SubmitFormBehavior[];
 
 	/**
 	 * Returns the last SubmitFormBehavior in the collection.
@@ -31695,14 +31695,14 @@ declare class TimingLists {
 	 * Returns the TimingList with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TimingList;
+	item(index: number | string): TimingList;
 
 	/**
 	 * Returns the TimingLists within the specified range.
 	 * @param from The TimingList, index, or name at the beginning of the range.
 	 * @param to The TimingList, index, or name at the end of the range.
 	 */
-	itemByRange(from: TimingList | number | String, to: TimingList | number | String): TimingList[];
+	itemByRange(from: TimingList | number | string, to: TimingList | number | string): TimingList[];
 
 	/**
 	 * Returns the last TimingList in the collection.
@@ -31884,14 +31884,14 @@ declare class TimingGroups {
 	 * Returns the TimingGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TimingGroup;
+	item(index: number | string): TimingGroup;
 
 	/**
 	 * Returns the TimingGroups within the specified range.
 	 * @param from The TimingGroup, index, or name at the beginning of the range.
 	 * @param to The TimingGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: TimingGroup | number | String, to: TimingGroup | number | String): TimingGroup[];
+	itemByRange(from: TimingGroup | number | string, to: TimingGroup | number | string): TimingGroup[];
 
 	/**
 	 * Returns the last TimingGroup in the collection.
@@ -32068,14 +32068,14 @@ declare class TimingTargets {
 	 * Returns the TimingTarget with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TimingTarget;
+	item(index: number | string): TimingTarget;
 
 	/**
 	 * Returns the TimingTargets within the specified range.
 	 * @param from The TimingTarget, index, or name at the beginning of the range.
 	 * @param to The TimingTarget, index, or name at the end of the range.
 	 */
-	itemByRange(from: TimingTarget | number | String, to: TimingTarget | number | String): TimingTarget[];
+	itemByRange(from: TimingTarget | number | string, to: TimingTarget | number | string): TimingTarget[];
 
 	/**
 	 * Returns the last TimingTarget in the collection.
@@ -32409,7 +32409,7 @@ declare class Layers {
 	 * Returns the Layer with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Layer;
+	item(index: number | string): Layer;
 
 	/**
 	 * Returns the Layer with the specified ID.
@@ -32428,7 +32428,7 @@ declare class Layers {
 	 * @param from The Layer, index, or name at the beginning of the range.
 	 * @param to The Layer, index, or name at the end of the range.
 	 */
-	itemByRange(from: Layer | number | String, to: Layer | number | String): Layer[];
+	itemByRange(from: Layer | number | string, to: Layer | number | string): Layer[];
 
 	/**
 	 * Returns the last Layer in the collection.
@@ -32885,7 +32885,7 @@ declare class Spreads {
 	 * Returns the Spread with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Spread;
+	item(index: number | string): Spread;
 
 	/**
 	 * Returns the Spread with the specified ID.
@@ -32904,7 +32904,7 @@ declare class Spreads {
 	 * @param from The Spread, index, or name at the beginning of the range.
 	 * @param to The Spread, index, or name at the end of the range.
 	 */
-	itemByRange(from: Spread | number | String, to: Spread | number | String): Spread[];
+	itemByRange(from: Spread | number | string, to: Spread | number | string): Spread[];
 
 	/**
 	 * Returns the last Spread in the collection.
@@ -32967,7 +32967,7 @@ declare class Page {
 	/**
 	 * The trap preset applied to the page.
 	 */
-	appliedTrapPreset: TrapPreset | String;
+	appliedTrapPreset: TrapPreset | string;
 
 	/**
 	 * The bounds of the Page, in the format [y1, x1, y2, x2].
@@ -33407,7 +33407,7 @@ declare class Pages {
 	 * Returns the Page with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Page;
+	item(index: number | string): Page;
 
 	/**
 	 * Returns the Page with the specified ID.
@@ -33426,7 +33426,7 @@ declare class Pages {
 	 * @param from The Page, index, or name at the beginning of the range.
 	 * @param to The Page, index, or name at the end of the range.
 	 */
-	itemByRange(from: Page | number | String, to: Page | number | String): Page[];
+	itemByRange(from: Page | number | string, to: Page | number | string): Page[];
 
 	/**
 	 * Returns the last Page in the collection.
@@ -33850,7 +33850,7 @@ declare class MasterSpreads {
 	 * Returns the MasterSpread with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MasterSpread;
+	item(index: number | string): MasterSpread;
 
 	/**
 	 * Returns the MasterSpread with the specified ID.
@@ -33869,7 +33869,7 @@ declare class MasterSpreads {
 	 * @param from The MasterSpread, index, or name at the beginning of the range.
 	 * @param to The MasterSpread, index, or name at the end of the range.
 	 */
-	itemByRange(from: MasterSpread | number | String, to: MasterSpread | number | String): MasterSpread[];
+	itemByRange(from: MasterSpread | number | string, to: MasterSpread | number | string): MasterSpread[];
 
 	/**
 	 * Returns the last MasterSpread in the collection.
@@ -34043,7 +34043,7 @@ declare class PageItem {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the PageItem. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The percent of tint to use in the PageItem's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -34243,7 +34243,7 @@ declare class PageItem {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the PageItem.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * The corner adjustment applied to the PageItem.
@@ -34268,7 +34268,7 @@ declare class PageItem {
 	/**
 	 * The name of the stroke style to apply.
 	 */
-	strokeType: StrokeStyle | String;
+	strokeType: StrokeStyle | string;
 
 	/**
 	 * The weight (in points) to apply to the PageItem's stroke.
@@ -34355,7 +34355,7 @@ declare class PageItem {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	asynchronousExportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
+	asynchronousExportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
 
 	/**
 	 * Tag the object or the parent story using default tags defined in XML preference.
@@ -34405,7 +34405,7 @@ declare class PageItem {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
-	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create Hyperlink QR Code on the page item or document
@@ -34413,7 +34413,7 @@ declare class PageItem {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
-	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create Plain Text QR Code on the page item
@@ -34421,7 +34421,7 @@ declare class PageItem {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
-	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create Text Msg QR Code on the page item or document
@@ -34430,7 +34430,7 @@ declare class PageItem {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
-	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create Business Card QR Code on the page item or load on document's placegun
@@ -34450,7 +34450,7 @@ declare class PageItem {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new PageItem. Above parameters can also be passed as properties 
 	 */
-	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Detaches an overridden master page item from the master page.
@@ -34473,7 +34473,7 @@ declare class PageItem {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	exportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
+	exportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
 
 	/**
 	 * Gets the label value associated with the specified key.
@@ -34695,7 +34695,7 @@ declare class PageItems {
 	 * Returns the PageItem with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PageItem;
+	item(index: number | string): PageItem;
 
 	/**
 	 * Returns the PageItem with the specified ID.
@@ -34714,7 +34714,7 @@ declare class PageItems {
 	 * @param from The PageItem, index, or name at the beginning of the range.
 	 * @param to The PageItem, index, or name at the end of the range.
 	 */
-	itemByRange(from: PageItem | number | String, to: PageItem | number | String): PageItem[];
+	itemByRange(from: PageItem | number | string, to: PageItem | number | string): PageItem[];
 
 	/**
 	 * Returns the last PageItem in the collection.
@@ -34819,7 +34819,7 @@ declare class Ovals {
 	 * Returns the Oval with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Oval;
+	item(index: number | string): Oval;
 
 	/**
 	 * Returns the Oval with the specified ID.
@@ -34838,7 +34838,7 @@ declare class Ovals {
 	 * @param from The Oval, index, or name at the beginning of the range.
 	 * @param to The Oval, index, or name at the end of the range.
 	 */
-	itemByRange(from: Oval | number | String, to: Oval | number | String): Oval[];
+	itemByRange(from: Oval | number | string, to: Oval | number | string): Oval[];
 
 	/**
 	 * Returns the last Oval in the collection.
@@ -34943,7 +34943,7 @@ declare class Rectangles {
 	 * Returns the Rectangle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Rectangle;
+	item(index: number | string): Rectangle;
 
 	/**
 	 * Returns the Rectangle with the specified ID.
@@ -34962,7 +34962,7 @@ declare class Rectangles {
 	 * @param from The Rectangle, index, or name at the beginning of the range.
 	 * @param to The Rectangle, index, or name at the end of the range.
 	 */
-	itemByRange(from: Rectangle | number | String, to: Rectangle | number | String): Rectangle[];
+	itemByRange(from: Rectangle | number | string, to: Rectangle | number | string): Rectangle[];
 
 	/**
 	 * Returns the last Rectangle in the collection.
@@ -35047,7 +35047,7 @@ declare class GraphicLines {
 	 * Returns the GraphicLine with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GraphicLine;
+	item(index: number | string): GraphicLine;
 
 	/**
 	 * Returns the GraphicLine with the specified ID.
@@ -35066,7 +35066,7 @@ declare class GraphicLines {
 	 * @param from The GraphicLine, index, or name at the beginning of the range.
 	 * @param to The GraphicLine, index, or name at the end of the range.
 	 */
-	itemByRange(from: GraphicLine | number | String, to: GraphicLine | number | String): GraphicLine[];
+	itemByRange(from: GraphicLine | number | string, to: GraphicLine | number | string): GraphicLine[];
 
 	/**
 	 * Returns the last GraphicLine in the collection.
@@ -35173,7 +35173,7 @@ declare class Polygons {
 	 * Returns the Polygon with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Polygon;
+	item(index: number | string): Polygon;
 
 	/**
 	 * Returns the Polygon with the specified ID.
@@ -35192,7 +35192,7 @@ declare class Polygons {
 	 * @param from The Polygon, index, or name at the beginning of the range.
 	 * @param to The Polygon, index, or name at the end of the range.
 	 */
-	itemByRange(from: Polygon | number | String, to: Polygon | number | String): Polygon[];
+	itemByRange(from: Polygon | number | string, to: Polygon | number | string): Polygon[];
 
 	/**
 	 * Returns the last Polygon in the collection.
@@ -35410,7 +35410,7 @@ declare class Groups {
 	 * Returns the Group with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Group;
+	item(index: number | string): Group;
 
 	/**
 	 * Returns the Group with the specified ID.
@@ -35429,7 +35429,7 @@ declare class Groups {
 	 * @param from The Group, index, or name at the beginning of the range.
 	 * @param to The Group, index, or name at the end of the range.
 	 */
-	itemByRange(from: Group | number | String, to: Group | number | String): Group[];
+	itemByRange(from: Group | number | string, to: Group | number | string): Group[];
 
 	/**
 	 * Returns the last Group in the collection.
@@ -35497,7 +35497,7 @@ declare class Image extends Graphic {
 	/**
 	 * The color profile.
 	 */
-	profile: Profile | String;
+	profile: Profile | string;
 
 	/**
 	 * A list of valid RGB profiles.
@@ -35550,7 +35550,7 @@ declare class Images {
 	 * Returns the Image with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Image;
+	item(index: number | string): Image;
 
 	/**
 	 * Returns the Image with the specified ID.
@@ -35569,7 +35569,7 @@ declare class Images {
 	 * @param from The Image, index, or name at the beginning of the range.
 	 * @param to The Image, index, or name at the end of the range.
 	 */
-	itemByRange(from: Image | number | String, to: Image | number | String): Image[];
+	itemByRange(from: Image | number | string, to: Image | number | string): Image[];
 
 	/**
 	 * Returns the last Image in the collection.
@@ -35680,7 +35680,7 @@ declare class EPSs {
 	 * Returns the EPS with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): EPS;
+	item(index: number | string): EPS;
 
 	/**
 	 * Returns the EPS with the specified ID.
@@ -35699,7 +35699,7 @@ declare class EPSs {
 	 * @param from The EPS, index, or name at the beginning of the range.
 	 * @param to The EPS, index, or name at the end of the range.
 	 */
-	itemByRange(from: EPS | number | String, to: EPS | number | String): EPS[];
+	itemByRange(from: EPS | number | string, to: EPS | number | string): EPS[];
 
 	/**
 	 * Returns the last EPS in the collection.
@@ -35805,7 +35805,7 @@ declare class PDFs {
 	 * Returns the PDF with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PDF;
+	item(index: number | string): PDF;
 
 	/**
 	 * Returns the PDF with the specified ID.
@@ -35824,7 +35824,7 @@ declare class PDFs {
 	 * @param from The PDF, index, or name at the beginning of the range.
 	 * @param to The PDF, index, or name at the end of the range.
 	 */
-	itemByRange(from: PDF | number | String, to: PDF | number | String): PDF[];
+	itemByRange(from: PDF | number | string, to: PDF | number | string): PDF[];
 
 	/**
 	 * Returns the last PDF in the collection.
@@ -35905,7 +35905,7 @@ declare class WMFs {
 	 * Returns the WMF with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): WMF;
+	item(index: number | string): WMF;
 
 	/**
 	 * Returns the WMF with the specified ID.
@@ -35924,7 +35924,7 @@ declare class WMFs {
 	 * @param from The WMF, index, or name at the beginning of the range.
 	 * @param to The WMF, index, or name at the end of the range.
 	 */
-	itemByRange(from: WMF | number | String, to: WMF | number | String): WMF[];
+	itemByRange(from: WMF | number | string, to: WMF | number | string): WMF[];
 
 	/**
 	 * Returns the last WMF in the collection.
@@ -36005,7 +36005,7 @@ declare class PICTs {
 	 * Returns the PICT with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PICT;
+	item(index: number | string): PICT;
 
 	/**
 	 * Returns the PICT with the specified ID.
@@ -36024,7 +36024,7 @@ declare class PICTs {
 	 * @param from The PICT, index, or name at the beginning of the range.
 	 * @param to The PICT, index, or name at the end of the range.
 	 */
-	itemByRange(from: PICT | number | String, to: PICT | number | String): PICT[];
+	itemByRange(from: PICT | number | string, to: PICT | number | string): PICT[];
 
 	/**
 	 * Returns the last PICT in the collection.
@@ -36116,7 +36116,7 @@ declare class Graphics {
 	 * Returns the Graphic with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Graphic;
+	item(index: number | string): Graphic;
 
 	/**
 	 * Returns the Graphic with the specified ID.
@@ -36135,7 +36135,7 @@ declare class Graphics {
 	 * @param from The Graphic, index, or name at the beginning of the range.
 	 * @param to The Graphic, index, or name at the end of the range.
 	 */
-	itemByRange(from: Graphic | number | String, to: Graphic | number | String): Graphic[];
+	itemByRange(from: Graphic | number | string, to: Graphic | number | string): Graphic[];
 
 	/**
 	 * Returns the last Graphic in the collection.
@@ -36377,7 +36377,7 @@ declare class TransformationMatrices {
 	 * Returns the TransformationMatrix with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TransformationMatrix;
+	item(index: number | string): TransformationMatrix;
 
 	/**
 	 * Returns the TransformationMatrix with the specified name.
@@ -36390,7 +36390,7 @@ declare class TransformationMatrices {
 	 * @param from The TransformationMatrix, index, or name at the beginning of the range.
 	 * @param to The TransformationMatrix, index, or name at the end of the range.
 	 */
-	itemByRange(from: TransformationMatrix | number | String, to: TransformationMatrix | number | String): TransformationMatrix[];
+	itemByRange(from: TransformationMatrix | number | string, to: TransformationMatrix | number | string): TransformationMatrix[];
 
 	/**
 	 * Returns the last TransformationMatrix in the collection.
@@ -36726,7 +36726,7 @@ declare class Guides {
 	 * Returns the Guide with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Guide;
+	item(index: number | string): Guide;
 
 	/**
 	 * Returns the Guide with the specified ID.
@@ -36745,7 +36745,7 @@ declare class Guides {
 	 * @param from The Guide, index, or name at the beginning of the range.
 	 * @param to The Guide, index, or name at the end of the range.
 	 */
-	itemByRange(from: Guide | number | String, to: Guide | number | String): Guide[];
+	itemByRange(from: Guide | number | string, to: Guide | number | string): Guide[];
 
 	/**
 	 * Returns the last Guide in the collection.
@@ -36935,7 +36935,7 @@ declare class Section {
 	/**
 	 * The page number style.
 	 */
-	pageNumberStyle: PageNumberStyle | String;
+	pageNumberStyle: PageNumberStyle | string;
 
 	/**
 	 * The start page for the section.
@@ -37054,7 +37054,7 @@ declare class Sections {
 	 * Returns the Section with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Section;
+	item(index: number | string): Section;
 
 	/**
 	 * Returns the Section with the specified ID.
@@ -37073,7 +37073,7 @@ declare class Sections {
 	 * @param from The Section, index, or name at the beginning of the range.
 	 * @param to The Section, index, or name at the end of the range.
 	 */
-	itemByRange(from: Section | number | String, to: Section | number | String): Section[];
+	itemByRange(from: Section | number | string, to: Section | number | string): Section[];
 
 	/**
 	 * Returns the last Section in the collection.
@@ -37241,14 +37241,14 @@ declare class Paths {
 	 * Returns the Path with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Path;
+	item(index: number | string): Path;
 
 	/**
 	 * Returns the Paths within the specified range.
 	 * @param from The Path, index, or name at the beginning of the range.
 	 * @param to The Path, index, or name at the end of the range.
 	 */
-	itemByRange(from: Path | number | String, to: Path | number | String): Path[];
+	itemByRange(from: Path | number | string, to: Path | number | string): Path[];
 
 	/**
 	 * Returns the last Path in the collection.
@@ -37423,14 +37423,14 @@ declare class PathPoints {
 	 * Returns the PathPoint with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PathPoint;
+	item(index: number | string): PathPoint;
 
 	/**
 	 * Returns the PathPoints within the specified range.
 	 * @param from The PathPoint, index, or name at the beginning of the range.
 	 * @param to The PathPoint, index, or name at the end of the range.
 	 */
-	itemByRange(from: PathPoint | number | String, to: PathPoint | number | String): PathPoint[];
+	itemByRange(from: PathPoint | number | string, to: PathPoint | number | string): PathPoint[];
 
 	/**
 	 * Returns the last PathPoint in the collection.
@@ -37761,7 +37761,7 @@ declare class SplineItems {
 	 * Returns the SplineItem with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): SplineItem;
+	item(index: number | string): SplineItem;
 
 	/**
 	 * Returns the SplineItem with the specified ID.
@@ -37780,7 +37780,7 @@ declare class SplineItems {
 	 * @param from The SplineItem, index, or name at the beginning of the range.
 	 * @param to The SplineItem, index, or name at the end of the range.
 	 */
-	itemByRange(from: SplineItem | number | String, to: SplineItem | number | String): SplineItem[];
+	itemByRange(from: SplineItem | number | string, to: SplineItem | number | string): SplineItem[];
 
 	/**
 	 * Returns the last SplineItem in the collection.
@@ -37888,7 +37888,7 @@ declare class EPSTexts {
 	 * Returns the EPSText with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): EPSText;
+	item(index: number | string): EPSText;
 
 	/**
 	 * Returns the EPSText with the specified ID.
@@ -37907,7 +37907,7 @@ declare class EPSTexts {
 	 * @param from The EPSText, index, or name at the beginning of the range.
 	 * @param to The EPSText, index, or name at the end of the range.
 	 */
-	itemByRange(from: EPSText | number | String, to: EPSText | number | String): EPSText[];
+	itemByRange(from: EPSText | number | string, to: EPSText | number | string): EPSText[];
 
 	/**
 	 * Returns the last EPSText in the collection.
@@ -38014,7 +38014,7 @@ declare class ImportedPages {
 	 * Returns the ImportedPage with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ImportedPage;
+	item(index: number | string): ImportedPage;
 
 	/**
 	 * Returns the ImportedPage with the specified ID.
@@ -38033,7 +38033,7 @@ declare class ImportedPages {
 	 * @param from The ImportedPage, index, or name at the beginning of the range.
 	 * @param to The ImportedPage, index, or name at the end of the range.
 	 */
-	itemByRange(from: ImportedPage | number | String, to: ImportedPage | number | String): ImportedPage[];
+	itemByRange(from: ImportedPage | number | string, to: ImportedPage | number | string): ImportedPage[];
 
 	/**
 	 * Returns the last ImportedPage in the collection.
@@ -38119,7 +38119,7 @@ declare class MediaItems {
 	 * Returns the MediaItem with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MediaItem;
+	item(index: number | string): MediaItem;
 
 	/**
 	 * Returns the MediaItem with the specified ID.
@@ -38138,7 +38138,7 @@ declare class MediaItems {
 	 * @param from The MediaItem, index, or name at the beginning of the range.
 	 * @param to The MediaItem, index, or name at the end of the range.
 	 */
-	itemByRange(from: MediaItem | number | String, to: MediaItem | number | String): MediaItem[];
+	itemByRange(from: MediaItem | number | string, to: MediaItem | number | string): MediaItem[];
 
 	/**
 	 * Returns the last MediaItem in the collection.
@@ -38433,7 +38433,7 @@ declare class Snippets {
 	 * Returns the Snippet with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Snippet;
+	item(index: number | string): Snippet;
 
 	/**
 	 * Returns the Snippet with the specified ID.
@@ -38452,7 +38452,7 @@ declare class Snippets {
 	 * @param from The Snippet, index, or name at the beginning of the range.
 	 * @param to The Snippet, index, or name at the end of the range.
 	 */
-	itemByRange(from: Snippet | number | String, to: Snippet | number | String): Snippet[];
+	itemByRange(from: Snippet | number | string, to: Snippet | number | string): Snippet[];
 
 	/**
 	 * Returns the last Snippet in the collection.
@@ -38645,7 +38645,7 @@ declare class MotionPresets {
 	 * Returns the MotionPreset with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MotionPreset;
+	item(index: number | string): MotionPreset;
 
 	/**
 	 * Returns the MotionPreset with the specified ID.
@@ -38664,7 +38664,7 @@ declare class MotionPresets {
 	 * @param from The MotionPreset, index, or name at the beginning of the range.
 	 * @param to The MotionPreset, index, or name at the end of the range.
 	 */
-	itemByRange(from: MotionPreset | number | String, to: MotionPreset | number | String): MotionPreset[];
+	itemByRange(from: MotionPreset | number | string, to: MotionPreset | number | string): MotionPreset[];
 
 	/**
 	 * Returns the last MotionPreset in the collection.
@@ -38866,7 +38866,7 @@ declare class Articles {
 	 * Returns the Article with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Article;
+	item(index: number | string): Article;
 
 	/**
 	 * Returns the Article with the specified ID.
@@ -38885,7 +38885,7 @@ declare class Articles {
 	 * @param from The Article, index, or name at the beginning of the range.
 	 * @param to The Article, index, or name at the end of the range.
 	 */
-	itemByRange(from: Article | number | String, to: Article | number | String): Article[];
+	itemByRange(from: Article | number | string, to: Article | number | string): Article[];
 
 	/**
 	 * Returns the last Article in the collection.
@@ -39053,7 +39053,7 @@ declare class ArticleMembers {
 	 * Returns the ArticleMember with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ArticleMember;
+	item(index: number | string): ArticleMember;
 
 	/**
 	 * Returns the ArticleMember with the specified ID.
@@ -39066,7 +39066,7 @@ declare class ArticleMembers {
 	 * @param from The ArticleMember, index, or name at the beginning of the range.
 	 * @param to The ArticleMember, index, or name at the end of the range.
 	 */
-	itemByRange(from: ArticleMember | number | String, to: ArticleMember | number | String): ArticleMember[];
+	itemByRange(from: ArticleMember | number | string, to: ArticleMember | number | string): ArticleMember[];
 
 	/**
 	 * Returns the last ArticleMember in the collection.
@@ -39220,7 +39220,7 @@ declare class ArticleChildren {
 	 * Returns the ArticleChild with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ArticleChild;
+	item(index: number | string): ArticleChild;
 
 	/**
 	 * Returns the ArticleChild with the specified ID.
@@ -39233,7 +39233,7 @@ declare class ArticleChildren {
 	 * @param from The ArticleChild, index, or name at the beginning of the range.
 	 * @param to The ArticleChild, index, or name at the end of the range.
 	 */
-	itemByRange(from: ArticleChild | number | String, to: ArticleChild | number | String): ArticleChild[];
+	itemByRange(from: ArticleChild | number | string, to: ArticleChild | number | string): ArticleChild[];
 
 	/**
 	 * Returns the last ArticleChild in the collection.
@@ -39328,7 +39328,7 @@ declare class HtmlItems {
 	 * Returns the HtmlItem with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HtmlItem;
+	item(index: number | string): HtmlItem;
 
 	/**
 	 * Returns the HtmlItem with the specified ID.
@@ -39347,7 +39347,7 @@ declare class HtmlItems {
 	 * @param from The HtmlItem, index, or name at the beginning of the range.
 	 * @param to The HtmlItem, index, or name at the end of the range.
 	 */
-	itemByRange(from: HtmlItem | number | String, to: HtmlItem | number | String): HtmlItem[];
+	itemByRange(from: HtmlItem | number | string, to: HtmlItem | number | string): HtmlItem[];
 
 	/**
 	 * Returns the last HtmlItem in the collection.
@@ -39528,7 +39528,7 @@ declare class Libraries {
 	 * Returns the Library with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Library;
+	item(index: number | string): Library;
 
 	/**
 	 * Returns the Library with the specified name.
@@ -39541,7 +39541,7 @@ declare class Libraries {
 	 * @param from The Library, index, or name at the beginning of the range.
 	 * @param to The Library, index, or name at the end of the range.
 	 */
-	itemByRange(from: Library | number | String, to: Library | number | String): Library[];
+	itemByRange(from: Library | number | string, to: Library | number | string): Library[];
 
 	/**
 	 * Returns the last Library in the collection.
@@ -39738,7 +39738,7 @@ declare class Assets {
 	 * Returns the Asset with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Asset;
+	item(index: number | string): Asset;
 
 	/**
 	 * Returns the Asset with the specified ID.
@@ -39757,7 +39757,7 @@ declare class Assets {
 	 * @param from The Asset, index, or name at the beginning of the range.
 	 * @param to The Asset, index, or name at the end of the range.
 	 */
-	itemByRange(from: Asset | number | String, to: Asset | number | String): Asset[];
+	itemByRange(from: Asset | number | string, to: Asset | number | string): Asset[];
 
 	/**
 	 * Returns the last Asset in the collection.
@@ -40022,7 +40022,7 @@ declare class Link {
 	 * Points the link to a new source file.
 	 * @param to The full path name of the new source file.
 	 */
-	relink(to: File | String): void;
+	relink(to: File | string): void;
 
 	/**
 	 * Removes the event listener.
@@ -40116,7 +40116,7 @@ declare class Links {
 	 * Returns the Link with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Link;
+	item(index: number | string): Link;
 
 	/**
 	 * Returns the Link with the specified ID.
@@ -40135,7 +40135,7 @@ declare class Links {
 	 * @param from The Link, index, or name at the beginning of the range.
 	 * @param to The Link, index, or name at the end of the range.
 	 */
-	itemByRange(from: Link | number | String, to: Link | number | String): Link[];
+	itemByRange(from: Link | number | string, to: Link | number | string): Link[];
 
 	/**
 	 * Returns the last Link in the collection.
@@ -40263,7 +40263,7 @@ declare class ObjectStyle {
 	/**
 	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle | String;
+	appliedParagraphStyle: ParagraphStyle | string;
 
 	/**
 	 * If true, applies paragraph styles using Next Paragraph Style settings, beginning with the Next Paragraph Style defined in the paragraph style associated with the object style (if any).
@@ -40273,7 +40273,7 @@ declare class ObjectStyle {
 	/**
 	 * The style that this style is based on.
 	 */
-	basedOn: ObjectStyle | String;
+	basedOn: ObjectStyle | string;
 
 	/**
 	 * Baseline frame grid option settings.
@@ -40413,7 +40413,7 @@ declare class ObjectStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ObjectStyle. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The fill effects enabling settings.
@@ -40558,7 +40558,7 @@ declare class ObjectStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ObjectStyle.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * The stroke effects enabling settings.
@@ -40578,7 +40578,7 @@ declare class ObjectStyle {
 	/**
 	 * The name of the stroke style to apply.
 	 */
-	strokeType: StrokeStyle | String;
+	strokeType: StrokeStyle | string;
 
 	/**
 	 * The weight (in points) to apply to the ObjectStyle's stroke.
@@ -40729,7 +40729,7 @@ declare class ObjectStyles {
 	 * Returns the ObjectStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ObjectStyle;
+	item(index: number | string): ObjectStyle;
 
 	/**
 	 * Returns the ObjectStyle with the specified ID.
@@ -40748,7 +40748,7 @@ declare class ObjectStyles {
 	 * @param from The ObjectStyle, index, or name at the beginning of the range.
 	 * @param to The ObjectStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: ObjectStyle | number | String, to: ObjectStyle | number | String): ObjectStyle[];
+	itemByRange(from: ObjectStyle | number | string, to: ObjectStyle | number | string): ObjectStyle[];
 
 	/**
 	 * Returns the last ObjectStyle in the collection.
@@ -40920,14 +40920,14 @@ declare class ObjectStyleExportTagMaps {
 	 * Returns the ObjectStyleExportTagMap with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ObjectStyleExportTagMap;
+	item(index: number | string): ObjectStyleExportTagMap;
 
 	/**
 	 * Returns the ObjectStyleExportTagMaps within the specified range.
 	 * @param from The ObjectStyleExportTagMap, index, or name at the beginning of the range.
 	 * @param to The ObjectStyleExportTagMap, index, or name at the end of the range.
 	 */
-	itemByRange(from: ObjectStyleExportTagMap | number | String, to: ObjectStyleExportTagMap | number | String): ObjectStyleExportTagMap[];
+	itemByRange(from: ObjectStyleExportTagMap | number | string, to: ObjectStyleExportTagMap | number | string): ObjectStyleExportTagMap[];
 
 	/**
 	 * Returns the last ObjectStyleExportTagMap in the collection.
@@ -41263,17 +41263,17 @@ declare class TextDefault extends Preference {
 	/**
 	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle | String;
+	appliedCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The font applied to the TextDefault, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
-	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
+	 * The language of the text.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: LanguageWithVendors | Language | string;
 
 	/**
 	 * The named grid in use.
@@ -41283,12 +41283,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String;
+	appliedNumberingList: NumberingList | string;
 
 	/**
 	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle | String;
+	appliedParagraphStyle: ParagraphStyle | string;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -41308,7 +41308,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle;
+	balanceRaggedLines: boolean | BalanceLinesStyle;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -41333,7 +41333,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String;
+	bulletsCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The text after string expression for bullets.
@@ -41413,7 +41413,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle | String;
+	dropCapStyle: CharacterStyle | string;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -41428,7 +41428,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the TextDefault. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the TextDefault. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -41623,12 +41623,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String;
+	kentenFillColor: Swatch | string;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String;
+	kentenFont: Font | string;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -41638,7 +41638,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -41668,7 +41668,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String;
+	kentenStrokeColor: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -41713,7 +41713,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String;
+	kinsokuSet: KinsokuTable | KinsokuSet | string;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -41788,7 +41788,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults;
 
 	/**
 	 * A collection of nested GREP styles.
@@ -41823,7 +41823,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String;
+	numberingCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * Continue the numbering at this level.
@@ -41838,7 +41838,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String;
+	numberingFormat: NumberingStyle | string;
 
 	/**
 	 * The level of the paragraph.
@@ -41998,7 +41998,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: Swatch | String;
+	paragraphShadingColor: Swatch | string;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -42113,12 +42113,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String;
+	rubyFill: Swatch | string;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String;
+	rubyFont: Font | string;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -42128,7 +42128,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -42173,7 +42173,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String;
+	rubyStroke: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -42223,12 +42223,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: Swatch | String;
+	ruleAboveColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: Swatch | String;
+	ruleAboveGapColor: Swatch | string;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -42273,7 +42273,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: StrokeStyle | String;
+	ruleAboveType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -42288,12 +42288,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: Swatch | String;
+	ruleBelowColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: Swatch | String;
+	ruleBelowGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -42338,7 +42338,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: StrokeStyle | String;
+	ruleBelowType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -42428,12 +42428,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String;
+	strikeThroughColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String;
+	strikeThroughGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -42463,7 +42463,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String;
+	strikeThroughType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -42483,7 +42483,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the TextDefault.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the TextDefault. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -42548,12 +42548,12 @@ declare class TextDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String;
+	underlineColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String;
+	underlineGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -42583,7 +42583,7 @@ declare class TextDefault extends Preference {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String;
+	underlineType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -43338,7 +43338,7 @@ declare class DocumentPresets {
 	 * Returns the DocumentPreset with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DocumentPreset;
+	item(index: number | string): DocumentPreset;
 
 	/**
 	 * Returns the DocumentPreset with the specified ID.
@@ -43357,7 +43357,7 @@ declare class DocumentPresets {
 	 * @param from The DocumentPreset, index, or name at the beginning of the range.
 	 * @param to The DocumentPreset, index, or name at the end of the range.
 	 */
-	itemByRange(from: DocumentPreset | number | String, to: DocumentPreset | number | String): DocumentPreset[];
+	itemByRange(from: DocumentPreset | number | string, to: DocumentPreset | number | string): DocumentPreset[];
 
 	/**
 	 * Returns the last DocumentPreset in the collection.
@@ -43485,7 +43485,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The color-rendering dictionary (CRD), specified as a CRD name or an enumeration value. Note: Valid only when use color management is true.
 	 */
-	crd: ColorRenderingDictionary | String;
+	crd: ColorRenderingDictionary | string;
 
 	/**
 	 * Prints crop marks that define where the page should be trimmed.
@@ -43565,7 +43565,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	markType: MarkTypes | String;
+	markType: MarkTypes | string;
 
 	/**
 	 * If true, prints the document as a negative.
@@ -43605,7 +43605,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: PageRange | String;
+	pageRange: PageRange | string;
 
 	/**
 	 * The space between document pages on the printing medium.
@@ -43625,7 +43625,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
 	 */
-	paperSize: PaperSizes | String;
+	paperSize: PaperSizes | string;
 
 	/**
 	 * A list of the available paper sizes.
@@ -43655,7 +43655,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The PPD, specified as a PPD name or an enumeration.
 	 */
-	ppd: PPDValues | String;
+	ppd: PPDValues | string;
 
 	/**
 	 * Available PPDs.
@@ -43730,7 +43730,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The current printer.
 	 */
-	printer: Printer | String;
+	printer: Printer | string;
 
 	/**
 	 * Available printers.
@@ -43740,7 +43740,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The color profile.
 	 */
-	profile: Profile | String;
+	profile: Profile | string;
 
 	/**
 	 * If true, prints small targets outside the page area for aligning color separations.
@@ -43775,7 +43775,7 @@ declare class PrintPreference extends Preference {
 	/**
 	 * The ink screening settings for composite gray output in PostScript or PDF format. .
 	 */
-	screening: Screeening | String;
+	screening: Screeening | string;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -43896,7 +43896,7 @@ declare class PrintBookletOption extends Preference {
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: PageRange | String;
+	pageRange: PageRange | string;
 
 	/**
 	 * If true, print blank spreads.
@@ -44022,7 +44022,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The color-rendering dictionary (CRD), specified as a CRD name or an enumeration value. Note: Valid only when use color management is true.
 	 */
-	crd: ColorRenderingDictionary | String;
+	crd: ColorRenderingDictionary | string;
 
 	/**
 	 * Prints crop marks that define where the page should be trimmed.
@@ -44097,7 +44097,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	markType: MarkTypes | String;
+	markType: MarkTypes | string;
 
 	/**
 	 * If true, prints the document as a negative.
@@ -44152,7 +44152,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
 	 */
-	paperSize: PaperSizes | String;
+	paperSize: PaperSizes | string;
 
 	/**
 	 * A list of the available paper sizes.
@@ -44182,7 +44182,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The PPD, specified as a PPD name or an enumeration.
 	 */
-	ppd: PPDValues | String;
+	ppd: PPDValues | string;
 
 	/**
 	 * Available PPDs.
@@ -44247,7 +44247,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The current printer.
 	 */
-	printer: Printer | String;
+	printer: Printer | string;
 
 	/**
 	 * Available printers.
@@ -44257,7 +44257,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The color profile.
 	 */
-	profile: Profile | String;
+	profile: Profile | string;
 
 	/**
 	 * If true, prints small targets outside the page area for aligning color separations.
@@ -44292,7 +44292,7 @@ declare class PrintBookletPrintPreference extends Preference {
 	/**
 	 * The ink screening settings for composite gray output in PostScript or PDF format. .
 	 */
-	screening: Screeening | String;
+	screening: Screeening | string;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -44423,7 +44423,7 @@ declare class EPSExportPreference extends Preference {
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: PageRange | String;
+	pageRange: PageRange | string;
 
 	/**
 	 * The PostScript level of the printer.
@@ -44778,7 +44778,7 @@ declare class GraphicLayers {
 	 * Returns the GraphicLayer with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): GraphicLayer;
+	item(index: number | string): GraphicLayer;
 
 	/**
 	 * Returns the GraphicLayer with the specified ID.
@@ -44797,7 +44797,7 @@ declare class GraphicLayers {
 	 * @param from The GraphicLayer, index, or name at the beginning of the range.
 	 * @param to The GraphicLayer, index, or name at the end of the range.
 	 */
-	itemByRange(from: GraphicLayer | number | String, to: GraphicLayer | number | String): GraphicLayer[];
+	itemByRange(from: GraphicLayer | number | string, to: GraphicLayer | number | string): GraphicLayer[];
 
 	/**
 	 * Returns the last GraphicLayer in the collection.
@@ -45001,12 +45001,12 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * Effective destination color profile.
 	 */
-	readonly effectivePDFDestinationProfile: PDFProfileSelector | String;
+	readonly effectivePDFDestinationProfile: PDFProfileSelector | string;
 
 	/**
 	 * Effective PDF X color profile.
 	 */
-	readonly effectivePDFXProfile: PDFProfileSelector | String;
+	readonly effectivePDFXProfile: PDFProfileSelector | string;
 
 	/**
 	 * If true, includes visible guides and baseline grids in the PDF document.
@@ -45081,7 +45081,7 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The ICC Profiles to include in the exported PDF document.
 	 */
-	includeICCProfiles: ICCProfiles | Boolean;
+	includeICCProfiles: ICCProfiles | boolean;
 
 	/**
 	 * If true, includes the document's slug area in the PDF document.
@@ -45171,7 +45171,7 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: PageRange | String;
+	pageRange: PageRange | string;
 
 	/**
 	 * The color space to use to represent color information in the exported PDF document.
@@ -45181,7 +45181,7 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The gamut of the final RGB or CMYK device.
 	 */
-	pdfDestinationProfile: PDFProfileSelector | String;
+	pdfDestinationProfile: PDFProfileSelector | string;
 
 	/**
 	 * The export PDF display title.
@@ -45196,7 +45196,7 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	pdfMarkType: MarkTypes | String;
+	pdfMarkType: MarkTypes | string;
 
 	/**
 	 * The export PDF page layout.
@@ -45206,7 +45206,7 @@ declare class PDFExportPreference extends Preference {
 	/**
 	 * The PDF X color profile to use for the PDF document. .
 	 */
-	pdfXProfile: PDFProfileSelector | String;
+	pdfXProfile: PDFProfileSelector | string;
 
 	/**
 	 * The stroke weight for printer's marks.
@@ -45372,12 +45372,12 @@ declare class PDFExportPreset {
 	/**
 	 * Effective destination color profile.
 	 */
-	readonly effectivePDFDestinationProfile: PDFProfileSelector | String;
+	readonly effectivePDFDestinationProfile: PDFProfileSelector | string;
 
 	/**
 	 * Effective PDF X color profile.
 	 */
-	readonly effectivePDFXProfile: PDFProfileSelector | String;
+	readonly effectivePDFXProfile: PDFProfileSelector | string;
 
 	/**
 	 * A collection of event listeners.
@@ -45467,7 +45467,7 @@ declare class PDFExportPreset {
 	/**
 	 * The ICC Profiles to include in the exported PDF document.
 	 */
-	includeICCProfiles: ICCProfiles | Boolean;
+	includeICCProfiles: ICCProfiles | boolean;
 
 	/**
 	 * If true, includes the document's slug area in the PDF document.
@@ -45577,7 +45577,7 @@ declare class PDFExportPreset {
 	/**
 	 * The gamut of the final RGB or CMYK device.
 	 */
-	pdfDestinationProfile: PDFProfileSelector | String;
+	pdfDestinationProfile: PDFProfileSelector | string;
 
 	/**
 	 * The export PDF display title.
@@ -45592,7 +45592,7 @@ declare class PDFExportPreset {
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	pdfMarkType: MarkTypes | String;
+	pdfMarkType: MarkTypes | string;
 
 	/**
 	 * The export PDF page layout.
@@ -45602,7 +45602,7 @@ declare class PDFExportPreset {
 	/**
 	 * The PDF X color profile to use for the PDF document. .
 	 */
-	pdfXProfile: PDFProfileSelector | String;
+	pdfXProfile: PDFProfileSelector | string;
 
 	/**
 	 * The stroke weight for printer's marks.
@@ -45742,7 +45742,7 @@ declare class PDFExportPresets {
 	 * Returns the PDFExportPreset with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PDFExportPreset;
+	item(index: number | string): PDFExportPreset;
 
 	/**
 	 * Returns the PDFExportPreset with the specified name.
@@ -45755,7 +45755,7 @@ declare class PDFExportPresets {
 	 * @param from The PDFExportPreset, index, or name at the beginning of the range.
 	 * @param to The PDFExportPreset, index, or name at the end of the range.
 	 */
-	itemByRange(from: PDFExportPreset | number | String, to: PDFExportPreset | number | String): PDFExportPreset[];
+	itemByRange(from: PDFExportPreset | number | string, to: PDFExportPreset | number | string): PDFExportPreset[];
 
 	/**
 	 * Returns the last PDFExportPreset in the collection.
@@ -45859,7 +45859,7 @@ declare class InteractivePDFExportPreference extends Preference {
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: PageRange | String;
+	pageRange: PageRange | string;
 
 	/**
 	 * The name of the page transition to use for all pages.
@@ -45926,17 +45926,17 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The default graphic object style applied to the PageItemDefault.
 	 */
-	appliedGraphicObjectStyle: ObjectStyle | String;
+	appliedGraphicObjectStyle: ObjectStyle | string;
 
 	/**
 	 * The default frame grid object style applied to the PageItemDefault.
 	 */
-	appliedGridObjectStyle: ObjectStyle | String;
+	appliedGridObjectStyle: ObjectStyle | string;
 
 	/**
 	 * The default text object style applied to the PageItemDefault.
 	 */
-	appliedTextObjectStyle: ObjectStyle | String;
+	appliedTextObjectStyle: ObjectStyle | string;
 
 	/**
 	 * The shape to apply to the bottom left corner of rectangular shapes.
@@ -45976,7 +45976,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the PageItemDefault. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The percent of tint to use in the PageItemDefault's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -46056,7 +46056,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the PageItemDefault.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * The percent of tint to use in object's stroke color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -46071,7 +46071,7 @@ declare class PageItemDefault extends Preference {
 	/**
 	 * The name of the stroke style to apply.
 	 */
-	strokeType: StrokeStyle | String;
+	strokeType: StrokeStyle | string;
 
 	/**
 	 * The weight (in points) to apply to the PageItemDefault's stroke.
@@ -46566,12 +46566,12 @@ declare class StrokeFillProxySetting extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the StrokeFillProxySetting. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the StrokeFillProxySetting.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * Which target is affected by changes to the stroke/fill proxy.
@@ -46717,14 +46717,14 @@ declare class Preferences {
 	 * Returns the Preference with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Preference;
+	item(index: number | string): Preference;
 
 	/**
 	 * Returns the Preferences within the specified range.
 	 * @param from The Preference, index, or name at the beginning of the range.
 	 * @param to The Preference, index, or name at the end of the range.
 	 */
-	itemByRange(from: Preference | number | String, to: Preference | number | String): Preference[];
+	itemByRange(from: Preference | number | string, to: Preference | number | string): Preference[];
 
 	/**
 	 * Returns the last Preference in the collection.
@@ -47144,37 +47144,37 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: Boolean | NothingEnum;
+	allowArbitraryHyphenation: boolean | NothingEnum;
 
 	/**
-	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
+	 * The character style to search for or change to.
 	 */
-	appliedCharacterStyle: any;
+	appliedCharacterStyle: string | NothingEnum | CharacterStyle;
 
 	/**
-	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]". Can return: Array of Strings or NothingEnum enumerator. Can also accept: Array of Conditions.
+	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: any;
+	appliedConditions: String[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the FindTextPreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
-	 * The language to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Language or LanguageWithVendors.
+	 * The language to search for or change to.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: string | NothingEnum | Language | LanguageWithVendors;
 
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String | NothingEnum;
+	appliedNumberingList: NumberingList | string | NothingEnum;
 
 	/**
-	 * The paragraph style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: ParagraphStyle.
+	 * The paragraph style to search for or change to.
 	 */
-	appliedParagraphStyle: any;
+	appliedParagraphStyle: string | NothingEnum | ParagraphStyle;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -47189,12 +47189,12 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: Boolean | NothingEnum;
+	autoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle | NothingEnum;
+	balanceRaggedLines: boolean | BalanceLinesStyle | NothingEnum;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -47214,17 +47214,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String | NothingEnum;
+	bulletsCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: String | NothingEnum;
+	bulletsTextAfter: string | NothingEnum;
 
 	/**
 	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: Boolean | NothingEnum;
+	bunriKinshi: boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme.
@@ -47249,12 +47249,12 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: Boolean | NothingEnum;
+	cjkGridTracking: boolean | NothingEnum;
 
 	/**
 	 * The text composer to use to compose the text.
 	 */
-	composer: String | NothingEnum;
+	composer: string | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters.
@@ -47287,9 +47287,9 @@ declare class FindTextPreference extends Preference {
 	endJoin: OutlineJoin | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to.
 	 */
-	fillColor: any;
+	fillColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the FindTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -47299,7 +47299,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The FindTextPreference to find.
 	 */
-	findWhat: String | NothingEnum;
+	findWhat: string | NothingEnum;
 
 	/**
 	 * The amount to indent the first line.
@@ -47309,7 +47309,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs.
@@ -47364,17 +47364,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: Boolean | NothingEnum;
+	hyphenateAcrossColumns: boolean | NothingEnum;
 
 	/**
 	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: Boolean | NothingEnum;
+	hyphenateLastWord: boolean | NothingEnum;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: Boolean | NothingEnum;
+	ignoreEdgeAlignment: boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. .
@@ -47394,7 +47394,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: Boolean | NothingEnum;
+	keepAllLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break.
@@ -47409,12 +47409,12 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: Boolean | NothingEnum;
+	keepLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: Boolean | NothingEnum;
+	keepRuleAboveInFrame: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph.
@@ -47424,7 +47424,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: Boolean | NothingEnum;
+	keepWithPrevious: boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. .
@@ -47439,17 +47439,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: String | NothingEnum;
+	kentenCustomCharacter: string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String | NothingEnum;
+	kentenFillColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String | NothingEnum;
+	kentenFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -47459,7 +47459,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -47489,7 +47489,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String | NothingEnum;
+	kentenStrokeColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
@@ -47519,7 +47519,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The type of pair kerning.
 	 */
-	kerningMethod: String | NothingEnum;
+	kerningMethod: string | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -47539,7 +47539,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String | NothingEnum;
+	kinsokuSet: KinsokuTable | KinsokuSet | string | NothingEnum;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -47574,7 +47574,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: Boolean | NothingEnum;
+	ligatures: boolean | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join.
@@ -47584,37 +47584,37 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults | NothingEnum;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults | NothingEnum;
 
 	/**
 	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: Boolean | NothingEnum;
+	noBreak: boolean | NothingEnum;
 
 	/**
 	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: Boolean | NothingEnum;
+	numberingApplyRestartPolicy: boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String | NothingEnum;
+	numberingCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * Continue the numbering at this level.
 	 */
-	numberingContinue: Boolean | NothingEnum;
+	numberingContinue: boolean | NothingEnum;
 
 	/**
 	 * The number string expression for numbering.
 	 */
-	numberingExpression: String | NothingEnum;
+	numberingExpression: string | NothingEnum;
 
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String | NothingEnum;
+	numberingFormat: NumberingStyle | string | NothingEnum;
 
 	/**
 	 * The level of the paragraph.
@@ -47634,12 +47634,12 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: Boolean | NothingEnum;
+	otfContextualAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: Boolean | NothingEnum;
+	otfDiscretionaryLigature: boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts.
@@ -47649,67 +47649,67 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: Boolean | NothingEnum;
+	otfFraction: boolean | NothingEnum;
 
 	/**
 	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: Boolean | NothingEnum;
+	otfHVKana: boolean | NothingEnum;
 
 	/**
 	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: Boolean | NothingEnum;
+	otfHistorical: boolean | NothingEnum;
 
 	/**
 	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: Boolean | NothingEnum;
+	otfJustificationAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: Boolean | NothingEnum;
+	otfLocale: boolean | NothingEnum;
 
 	/**
 	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: Boolean | NothingEnum;
+	otfMark: boolean | NothingEnum;
 
 	/**
 	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: Boolean | NothingEnum;
+	otfOrdinal: boolean | NothingEnum;
 
 	/**
 	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: Boolean | NothingEnum;
+	otfOverlapSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: Boolean | NothingEnum;
+	otfProportionalMetrics: boolean | NothingEnum;
 
 	/**
 	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: Boolean | NothingEnum;
+	otfRomanItalics: boolean | NothingEnum;
 
 	/**
 	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: Boolean | NothingEnum;
+	otfSlashedZero: boolean | NothingEnum;
 
 	/**
 	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: Boolean | NothingEnum;
+	otfStretchedAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: Boolean | NothingEnum;
+	otfStylisticAlternate: boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts.
@@ -47719,22 +47719,22 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: Boolean | NothingEnum;
+	otfSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: Boolean | NothingEnum;
+	otfTitling: boolean | NothingEnum;
 
 	/**
 	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction.
@@ -47744,7 +47744,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: Boolean | NothingEnum;
+	paragraphGyoudori: boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification.
@@ -47779,7 +47779,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: Boolean | NothingEnum;
+	rensuuji: boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -47789,7 +47789,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: Boolean | NothingEnum;
+	rotateSingleByteCharacters: boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment.
@@ -47799,17 +47799,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: Boolean | NothingEnum;
+	rubyAutoAlign: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: Boolean | NothingEnum;
+	rubyAutoScaling: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: Boolean | NothingEnum;
+	rubyAutoTcyAutoScale: boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby.
@@ -47819,17 +47819,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
+	rubyAutoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String | NothingEnum;
+	rubyFill: Swatch | string | NothingEnum;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String | NothingEnum;
+	rubyFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -47839,17 +47839,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: Boolean | NothingEnum;
+	rubyOpenTypePro: boolean | NothingEnum;
 
 	/**
 	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: Boolean | NothingEnum;
+	rubyOverhang: boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill.
@@ -47884,7 +47884,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String | NothingEnum;
+	rubyStroke: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -47929,17 +47929,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: Boolean | NothingEnum;
+	scaleAffectsLineHeight: boolean | NothingEnum;
 
 	/**
 	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: Boolean | NothingEnum;
+	shataiAdjustRotation: boolean | NothingEnum;
 
 	/**
 	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: Boolean | NothingEnum;
+	shataiAdjustTsume: boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -48009,17 +48009,17 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String | NothingEnum;
+	strikeThroughColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String | NothingEnum;
+	strikeThroughGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: Boolean | NothingEnum;
+	strikeThroughGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -48034,7 +48034,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: Boolean | NothingEnum;
+	strikeThroughOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -48044,7 +48044,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String | NothingEnum;
+	strikeThroughType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -48054,7 +48054,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: Boolean | NothingEnum;
+	strikeThru: boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text.
@@ -48062,9 +48062,9 @@ declare class FindTextPreference extends Preference {
 	strokeAlignment: TextStrokeAlign | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to.
 	 */
-	strokeColor: any;
+	strokeColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the FindTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -48079,7 +48079,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: Boolean | NothingEnum;
+	tatechuyoko: boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -48104,7 +48104,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
+	treatIdeographicSpaceAsSpace: boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -48114,22 +48114,22 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, underlines the text.
 	 */
-	underline: Boolean | NothingEnum;
+	underline: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String | NothingEnum;
+	underlineColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String | NothingEnum;
+	underlineGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: Boolean | NothingEnum;
+	underlineGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -48144,7 +48144,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: Boolean | NothingEnum;
+	underlineOverprint: boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -48154,7 +48154,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String | NothingEnum;
+	underlineType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -48169,7 +48169,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * If true, turns on warichu.
 	 */
-	warichu: Boolean | NothingEnum;
+	warichu: boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment.
@@ -48220,37 +48220,37 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: Boolean | NothingEnum;
+	allowArbitraryHyphenation: boolean | NothingEnum;
 
 	/**
-	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
+	 * The character style to search for or change to.
 	 */
-	appliedCharacterStyle: any;
+	appliedCharacterStyle: string | NothingEnum | CharacterStyle;
 
 	/**
-	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]". Can return: Array of Strings or NothingEnum enumerator. Can also accept: Array of Conditions.
+	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: any;
+	appliedConditions: String[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the FindGrepPreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
-	 * The language to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Language or LanguageWithVendors.
+	 * The language to search for or change to.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: string | NothingEnum | Language | LanguageWithVendors;
 
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String | NothingEnum;
+	appliedNumberingList: NumberingList | string | NothingEnum;
 
 	/**
-	 * The paragraph style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: ParagraphStyle.
+	 * The paragraph style to search for or change to.
 	 */
-	appliedParagraphStyle: any;
+	appliedParagraphStyle: string | NothingEnum | ParagraphStyle;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -48265,12 +48265,12 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: Boolean | NothingEnum;
+	autoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle | NothingEnum;
+	balanceRaggedLines: boolean | BalanceLinesStyle | NothingEnum;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -48290,17 +48290,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String | NothingEnum;
+	bulletsCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: String | NothingEnum;
+	bulletsTextAfter: string | NothingEnum;
 
 	/**
 	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: Boolean | NothingEnum;
+	bunriKinshi: boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme.
@@ -48325,12 +48325,12 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: Boolean | NothingEnum;
+	cjkGridTracking: boolean | NothingEnum;
 
 	/**
 	 * The text composer to use to compose the text.
 	 */
-	composer: String | NothingEnum;
+	composer: string | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters.
@@ -48363,9 +48363,9 @@ declare class FindGrepPreference extends Preference {
 	endJoin: OutlineJoin | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to.
 	 */
-	fillColor: any;
+	fillColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the FindGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -48375,7 +48375,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The FindGrepPreference to find.
 	 */
-	findWhat: String | NothingEnum;
+	findWhat: string | NothingEnum;
 
 	/**
 	 * The amount to indent the first line.
@@ -48385,7 +48385,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs.
@@ -48440,17 +48440,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: Boolean | NothingEnum;
+	hyphenateAcrossColumns: boolean | NothingEnum;
 
 	/**
 	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: Boolean | NothingEnum;
+	hyphenateLastWord: boolean | NothingEnum;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: Boolean | NothingEnum;
+	ignoreEdgeAlignment: boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. .
@@ -48470,7 +48470,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: Boolean | NothingEnum;
+	keepAllLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break.
@@ -48485,12 +48485,12 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: Boolean | NothingEnum;
+	keepLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: Boolean | NothingEnum;
+	keepRuleAboveInFrame: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph.
@@ -48500,7 +48500,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: Boolean | NothingEnum;
+	keepWithPrevious: boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. .
@@ -48515,17 +48515,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: String | NothingEnum;
+	kentenCustomCharacter: string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String | NothingEnum;
+	kentenFillColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String | NothingEnum;
+	kentenFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -48535,7 +48535,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -48565,7 +48565,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String | NothingEnum;
+	kentenStrokeColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
@@ -48595,7 +48595,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The type of pair kerning.
 	 */
-	kerningMethod: String | NothingEnum;
+	kerningMethod: string | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -48615,7 +48615,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String | NothingEnum;
+	kinsokuSet: KinsokuTable | KinsokuSet | string | NothingEnum;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -48650,7 +48650,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: Boolean | NothingEnum;
+	ligatures: boolean | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join.
@@ -48660,37 +48660,37 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults | NothingEnum;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults | NothingEnum;
 
 	/**
 	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: Boolean | NothingEnum;
+	noBreak: boolean | NothingEnum;
 
 	/**
 	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: Boolean | NothingEnum;
+	numberingApplyRestartPolicy: boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String | NothingEnum;
+	numberingCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * Continue the numbering at this level.
 	 */
-	numberingContinue: Boolean | NothingEnum;
+	numberingContinue: boolean | NothingEnum;
 
 	/**
 	 * The number string expression for numbering.
 	 */
-	numberingExpression: String | NothingEnum;
+	numberingExpression: string | NothingEnum;
 
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String | NothingEnum;
+	numberingFormat: NumberingStyle | string | NothingEnum;
 
 	/**
 	 * The level of the paragraph.
@@ -48710,12 +48710,12 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: Boolean | NothingEnum;
+	otfContextualAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: Boolean | NothingEnum;
+	otfDiscretionaryLigature: boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts.
@@ -48725,67 +48725,67 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: Boolean | NothingEnum;
+	otfFraction: boolean | NothingEnum;
 
 	/**
 	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: Boolean | NothingEnum;
+	otfHVKana: boolean | NothingEnum;
 
 	/**
 	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: Boolean | NothingEnum;
+	otfHistorical: boolean | NothingEnum;
 
 	/**
 	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: Boolean | NothingEnum;
+	otfJustificationAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: Boolean | NothingEnum;
+	otfLocale: boolean | NothingEnum;
 
 	/**
 	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: Boolean | NothingEnum;
+	otfMark: boolean | NothingEnum;
 
 	/**
 	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: Boolean | NothingEnum;
+	otfOrdinal: boolean | NothingEnum;
 
 	/**
 	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: Boolean | NothingEnum;
+	otfOverlapSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: Boolean | NothingEnum;
+	otfProportionalMetrics: boolean | NothingEnum;
 
 	/**
 	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: Boolean | NothingEnum;
+	otfRomanItalics: boolean | NothingEnum;
 
 	/**
 	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: Boolean | NothingEnum;
+	otfSlashedZero: boolean | NothingEnum;
 
 	/**
 	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: Boolean | NothingEnum;
+	otfStretchedAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: Boolean | NothingEnum;
+	otfStylisticAlternate: boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts.
@@ -48795,22 +48795,22 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: Boolean | NothingEnum;
+	otfSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: Boolean | NothingEnum;
+	otfTitling: boolean | NothingEnum;
 
 	/**
 	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction.
@@ -48820,7 +48820,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: Boolean | NothingEnum;
+	paragraphGyoudori: boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification.
@@ -48855,7 +48855,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: Boolean | NothingEnum;
+	rensuuji: boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -48865,7 +48865,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: Boolean | NothingEnum;
+	rotateSingleByteCharacters: boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment.
@@ -48875,17 +48875,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: Boolean | NothingEnum;
+	rubyAutoAlign: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: Boolean | NothingEnum;
+	rubyAutoScaling: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: Boolean | NothingEnum;
+	rubyAutoTcyAutoScale: boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby.
@@ -48895,17 +48895,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
+	rubyAutoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String | NothingEnum;
+	rubyFill: Swatch | string | NothingEnum;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String | NothingEnum;
+	rubyFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -48915,17 +48915,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: Boolean | NothingEnum;
+	rubyOpenTypePro: boolean | NothingEnum;
 
 	/**
 	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: Boolean | NothingEnum;
+	rubyOverhang: boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill.
@@ -48960,7 +48960,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String | NothingEnum;
+	rubyStroke: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -49005,17 +49005,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: Boolean | NothingEnum;
+	scaleAffectsLineHeight: boolean | NothingEnum;
 
 	/**
 	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: Boolean | NothingEnum;
+	shataiAdjustRotation: boolean | NothingEnum;
 
 	/**
 	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: Boolean | NothingEnum;
+	shataiAdjustTsume: boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -49085,17 +49085,17 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String | NothingEnum;
+	strikeThroughColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String | NothingEnum;
+	strikeThroughGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: Boolean | NothingEnum;
+	strikeThroughGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -49110,7 +49110,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: Boolean | NothingEnum;
+	strikeThroughOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -49120,7 +49120,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String | NothingEnum;
+	strikeThroughType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -49130,7 +49130,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: Boolean | NothingEnum;
+	strikeThru: boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text.
@@ -49138,9 +49138,9 @@ declare class FindGrepPreference extends Preference {
 	strokeAlignment: TextStrokeAlign | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to.
 	 */
-	strokeColor: any;
+	strokeColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the FindGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -49155,7 +49155,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: Boolean | NothingEnum;
+	tatechuyoko: boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -49180,7 +49180,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
+	treatIdeographicSpaceAsSpace: boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -49190,22 +49190,22 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, underlines the text.
 	 */
-	underline: Boolean | NothingEnum;
+	underline: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String | NothingEnum;
+	underlineColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String | NothingEnum;
+	underlineGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: Boolean | NothingEnum;
+	underlineGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -49220,7 +49220,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: Boolean | NothingEnum;
+	underlineOverprint: boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -49230,7 +49230,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String | NothingEnum;
+	underlineType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -49245,7 +49245,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * If true, turns on warichu.
 	 */
-	warichu: Boolean | NothingEnum;
+	warichu: boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment.
@@ -49296,12 +49296,12 @@ declare class FindGlyphPreference extends Preference {
 	/**
 	 * The font applied to the FindGlyphPreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The GID/CID of the glyph.
@@ -49365,9 +49365,9 @@ declare class FindObjectPreference extends Preference {
 	anchoredPosition: AnchorPosition | NothingEnum;
 
 	/**
-	 * The applied object style(s). Can return: String or NothingEnum enumerator. Can also accept: ObjectStyle.
+	 * The applied object style(s).
 	 */
-	appliedObjectStyles: any;
+	appliedObjectStyles: string | NothingEnum | ObjectStyle;
 
 	/**
 	 * The tag type of page item.
@@ -49377,7 +49377,7 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, text wraps on the master spread apply to that spread only, and not to any pages the master spread has been applied to.
 	 */
-	applyToMasterPageOnly: Boolean | NothingEnum;
+	applyToMasterPageOnly: boolean | NothingEnum;
 
 	/**
 	 * The reference point for auto sizing of text frame. Reference point is automatically adjusted to the suitable value depending on the auto-sizing type value. As an example, top left reference point becomes top center for height only dimension.
@@ -49442,12 +49442,12 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * The custom actual text entered by the user.
 	 */
-	customActualText: String | NothingEnum;
+	customActualText: string | NothingEnum;
 
 	/**
 	 * The custom alternate text entered by the user.
 	 */
-	customAltText: String | NothingEnum;
+	customAltText: string | NothingEnum;
 
 	/**
 	 * The end shape of an open path.
@@ -49460,9 +49460,9 @@ declare class FindObjectPreference extends Preference {
 	endJoin: EndJoin | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the FindObjectPreference. . Can return: Swatch or NothingEnum enumerator. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the FindObjectPreference. .
 	 */
-	fillColor: any;
+	fillColor: Swatch | NothingEnum | string;
 
 	/**
 	 * The percent of tint to use in the FindObjectPreference's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -49502,7 +49502,7 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG.
 	 */
-	gifOptionsInterlaced: Boolean | NothingEnum;
+	gifOptionsInterlaced: boolean | NothingEnum;
 
 	/**
 	 * The color palette for GIF conversion. Note: Not valid when image conversion is JPEG. .
@@ -49527,7 +49527,7 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, ignores text wrap settings for drawn or placed objects in the text frame. .
 	 */
-	ignoreWrap: Boolean | NothingEnum;
+	ignoreWrap: boolean | NothingEnum;
 
 	/**
 	 * Alignment applied to images.
@@ -49562,7 +49562,7 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, creates interior clipping paths within the surrounding clipping path. Note: Valid only when clipping type is alpha channel or detect edges. .
 	 */
-	includeInsideEdges: Boolean | NothingEnum;
+	includeInsideEdges: boolean | NothingEnum;
 
 	/**
 	 * The amount to offset text from the edges of the text frame, specified either as a single value applied uniformly to all sides of the text frame or as an array of 4 values in the format [top inset, left inset, bottom inset, right inset].
@@ -49572,7 +49572,7 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, inverts the text wrap.
 	 */
-	inverse: Boolean | NothingEnum;
+	inverse: boolean | NothingEnum;
 
 	/**
 	 * The formatting method for converted JPEG images. Note: Not validwhen image conversion is GIF.
@@ -49597,7 +49597,7 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, prevents manual positioning of the anchored object.
 	 */
-	lockPosition: Boolean | NothingEnum;
+	lockPosition: boolean | NothingEnum;
 
 	/**
 	 * The minimum distance between the baseline of the text and the top inset of the text frame or cell.
@@ -49622,12 +49622,12 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, the FindObjectPreference does not print.
 	 */
-	nonprinting: Boolean | NothingEnum;
+	nonprinting: boolean | NothingEnum;
 
 	/**
 	 * If true, adjust the position of characters at the edges of the frame to provide a better appearance.
 	 */
-	opticalMarginAlignment: Boolean | NothingEnum;
+	opticalMarginAlignment: boolean | NothingEnum;
 
 	/**
 	 * The point size used as the basis for calculating optical margin alignment. (Range: 0.1 to 1296).
@@ -49637,22 +49637,22 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, the FindObjectPreference's fill color overprints any underlying objects. If false, the fill color knocks out the underlying colors.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the gap color overprints any underlying colors. If false, the gap color knocks out the underlying colors.
 	 */
-	overprintGap: Boolean | NothingEnum;
+	overprintGap: boolean | NothingEnum;
 
 	/**
 	 * If true, the FindObjectPreference's stroke color overprints any underlying objects. If false, the stroke color knocks out theunderlying colors.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * If true, pins the position of the anchored object within the text frame top and bottom.
 	 */
-	pinPosition: Boolean | NothingEnum;
+	pinPosition: boolean | NothingEnum;
 
 	/**
 	 * The point in the referenced object relative to which to position the anchored object. Notes: Valid only when anchored position is custom.
@@ -49682,7 +49682,7 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, the position of the anchored object is relative to the binding spine of the page or spread.
 	 */
-	spineRelative: Boolean | NothingEnum;
+	spineRelative: boolean | NothingEnum;
 
 	/**
 	 * The amount to offset the baseline grid.
@@ -49700,9 +49700,9 @@ declare class FindObjectPreference extends Preference {
 	strokeAlignment: StrokeAlignment | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the FindObjectPreference. Can return: Swatch or NothingEnum enumerator. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the FindObjectPreference.
 	 */
-	strokeColor: any;
+	strokeColor: Swatch | NothingEnum | string;
 
 	/**
 	 * The corner adjustment applied to the FindObjectPreference.
@@ -49725,9 +49725,9 @@ declare class FindObjectPreference extends Preference {
 	readonly strokeTransparencySettings: FindChangeStrokeTransparencySetting | NothingEnum;
 
 	/**
-	 * The name of the stroke style to apply. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
+	 * The name of the stroke style to apply.
 	 */
-	strokeType: any;
+	strokeType: StrokeStyle | NothingEnum | string;
 
 	/**
 	 * The weight (in points) to apply to the FindObjectPreference's stroke.
@@ -49797,37 +49797,37 @@ declare class FindObjectPreference extends Preference {
 	/**
 	 * If true, uses a custom baseline frame grid.
 	 */
-	useCustomBaselineFrameGrid: Boolean | NothingEnum;
+	useCustomBaselineFrameGrid: boolean | NothingEnum;
 
 	/**
 	 * If true, maintains column width when the text frame is resized. If false, causes columns to resize when the text frame is resized. Note: When true, resizing the frame can change the number of columns in the frame.
 	 */
-	useFixedColumnWidth: Boolean | NothingEnum;
+	useFixedColumnWidth: boolean | NothingEnum;
 
 	/**
 	 * If true, image page break settings will be used in objects.
 	 */
-	useImagePageBreak: Boolean | NothingEnum;
+	useImagePageBreak: boolean | NothingEnum;
 
 	/**
 	 * If true, minimum height value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumHeightForAutoSizing: Boolean | NothingEnum;
+	useMinimumHeightForAutoSizing: boolean | NothingEnum;
 
 	/**
 	 * If true, minimum width value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumWidthForAutoSizing: Boolean | NothingEnum;
+	useMinimumWidthForAutoSizing: boolean | NothingEnum;
 
 	/**
 	 * If true, line-breaks are not introduced after auto sizing. .
 	 */
-	useNoLineBreaksForAutoSizing: Boolean | NothingEnum;
+	useNoLineBreaksForAutoSizing: boolean | NothingEnum;
 
 	/**
 	 * If true, the text wrap path has been explicitly modified by the user.
 	 */
-	readonly userModifiedWrap: Boolean | NothingEnum;
+	readonly userModifiedWrap: boolean | NothingEnum;
 
 	/**
 	 * The vertical alignment of the text content. .
@@ -49863,32 +49863,32 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: Boolean | NothingEnum;
+	allowArbitraryHyphenation: boolean | NothingEnum;
 
 	/**
-	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
+	 * The character style to search for or change to.
 	 */
-	appliedCharacterStyle: any;
+	appliedCharacterStyle: string | NothingEnum | CharacterStyle;
 
 	/**
 	 * The font applied to the FindTransliteratePreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
-	 * The language to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Language or LanguageWithVendors.
+	 * The language to search for or change to.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: string | NothingEnum | Language | LanguageWithVendors;
 
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String | NothingEnum;
+	appliedNumberingList: NumberingList | string | NothingEnum;
 
 	/**
-	 * The paragraph style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: ParagraphStyle.
+	 * The paragraph style to search for or change to.
 	 */
-	appliedParagraphStyle: any;
+	appliedParagraphStyle: string | NothingEnum | ParagraphStyle;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -49903,12 +49903,12 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: Boolean | NothingEnum;
+	autoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle | NothingEnum;
+	balanceRaggedLines: boolean | BalanceLinesStyle | NothingEnum;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -49933,17 +49933,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String | NothingEnum;
+	bulletsCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: String | NothingEnum;
+	bulletsTextAfter: string | NothingEnum;
 
 	/**
 	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: Boolean | NothingEnum;
+	bunriKinshi: boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme.
@@ -49963,12 +49963,12 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: Boolean | NothingEnum;
+	cjkGridTracking: boolean | NothingEnum;
 
 	/**
 	 * The text composer to use to compose the text.
 	 */
-	composer: String | NothingEnum;
+	composer: string | NothingEnum;
 
 	/**
 	 * The number of characters to drop cap.
@@ -49986,9 +49986,9 @@ declare class FindTransliteratePreference extends Preference {
 	dropcapDetail: number | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to.
 	 */
-	fillColor: any;
+	fillColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the FindTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -50008,7 +50008,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs.
@@ -50063,17 +50063,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: Boolean | NothingEnum;
+	hyphenateAcrossColumns: boolean | NothingEnum;
 
 	/**
 	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: Boolean | NothingEnum;
+	hyphenateLastWord: boolean | NothingEnum;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: Boolean | NothingEnum;
+	ignoreEdgeAlignment: boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. .
@@ -50088,7 +50088,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: Boolean | NothingEnum;
+	keepAllLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break.
@@ -50103,12 +50103,12 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: Boolean | NothingEnum;
+	keepLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: Boolean | NothingEnum;
+	keepRuleAboveInFrame: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph.
@@ -50128,17 +50128,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: String | NothingEnum;
+	kentenCustomCharacter: string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String | NothingEnum;
+	kentenFillColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String | NothingEnum;
+	kentenFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -50148,7 +50148,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -50178,7 +50178,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String | NothingEnum;
+	kentenStrokeColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
@@ -50208,7 +50208,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The type of pair kerning.
 	 */
-	kerningMethod: String | NothingEnum;
+	kerningMethod: string | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -50223,7 +50223,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String | NothingEnum;
+	kinsokuSet: KinsokuTable | KinsokuSet | string | NothingEnum;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -50258,17 +50258,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: Boolean | NothingEnum;
+	ligatures: boolean | NothingEnum;
 
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults | NothingEnum;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults | NothingEnum;
 
 	/**
 	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: Boolean | NothingEnum;
+	noBreak: boolean | NothingEnum;
 
 	/**
 	 * The alignment of the number.
@@ -50278,27 +50278,27 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: Boolean | NothingEnum;
+	numberingApplyRestartPolicy: boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String | NothingEnum;
+	numberingCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * Continue the numbering at this level.
 	 */
-	numberingContinue: Boolean | NothingEnum;
+	numberingContinue: boolean | NothingEnum;
 
 	/**
 	 * The number string expression for numbering.
 	 */
-	numberingExpression: String | NothingEnum;
+	numberingExpression: string | NothingEnum;
 
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String | NothingEnum;
+	numberingFormat: NumberingStyle | string | NothingEnum;
 
 	/**
 	 * The level of the paragraph.
@@ -50313,12 +50313,12 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: Boolean | NothingEnum;
+	otfContextualAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: Boolean | NothingEnum;
+	otfDiscretionaryLigature: boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts.
@@ -50328,47 +50328,47 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: Boolean | NothingEnum;
+	otfFraction: boolean | NothingEnum;
 
 	/**
 	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: Boolean | NothingEnum;
+	otfHVKana: boolean | NothingEnum;
 
 	/**
 	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: Boolean | NothingEnum;
+	otfHistorical: boolean | NothingEnum;
 
 	/**
 	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: Boolean | NothingEnum;
+	otfLocale: boolean | NothingEnum;
 
 	/**
 	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: Boolean | NothingEnum;
+	otfMark: boolean | NothingEnum;
 
 	/**
 	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: Boolean | NothingEnum;
+	otfOrdinal: boolean | NothingEnum;
 
 	/**
 	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: Boolean | NothingEnum;
+	otfProportionalMetrics: boolean | NothingEnum;
 
 	/**
 	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: Boolean | NothingEnum;
+	otfRomanItalics: boolean | NothingEnum;
 
 	/**
 	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: Boolean | NothingEnum;
+	otfSlashedZero: boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts.
@@ -50378,27 +50378,27 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: Boolean | NothingEnum;
+	otfSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: Boolean | NothingEnum;
+	otfTitling: boolean | NothingEnum;
 
 	/**
 	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: Boolean | NothingEnum;
+	paragraphGyoudori: boolean | NothingEnum;
 
 	/**
 	 * The text size.
@@ -50423,7 +50423,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: Boolean | NothingEnum;
+	rensuuji: boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -50433,7 +50433,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: Boolean | NothingEnum;
+	rotateSingleByteCharacters: boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment.
@@ -50443,17 +50443,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: Boolean | NothingEnum;
+	rubyAutoAlign: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: Boolean | NothingEnum;
+	rubyAutoScaling: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: Boolean | NothingEnum;
+	rubyAutoTcyAutoScale: boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby.
@@ -50463,17 +50463,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
+	rubyAutoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String | NothingEnum;
+	rubyFill: Swatch | string | NothingEnum;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String | NothingEnum;
+	rubyFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -50483,17 +50483,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: Boolean | NothingEnum;
+	rubyOpenTypePro: boolean | NothingEnum;
 
 	/**
 	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: Boolean | NothingEnum;
+	rubyOverhang: boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill.
@@ -50528,7 +50528,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String | NothingEnum;
+	rubyStroke: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -50573,17 +50573,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: Boolean | NothingEnum;
+	scaleAffectsLineHeight: boolean | NothingEnum;
 
 	/**
 	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: Boolean | NothingEnum;
+	shataiAdjustRotation: boolean | NothingEnum;
 
 	/**
 	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: Boolean | NothingEnum;
+	shataiAdjustTsume: boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -50623,17 +50623,17 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String | NothingEnum;
+	strikeThroughColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String | NothingEnum;
+	strikeThroughGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: Boolean | NothingEnum;
+	strikeThroughGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -50648,7 +50648,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: Boolean | NothingEnum;
+	strikeThroughOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -50658,7 +50658,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String | NothingEnum;
+	strikeThroughType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -50668,12 +50668,12 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: Boolean | NothingEnum;
+	strikeThru: boolean | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to.
 	 */
-	strokeColor: any;
+	strokeColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the FindTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -50688,7 +50688,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: Boolean | NothingEnum;
+	tatechuyoko: boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -50713,7 +50713,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
+	treatIdeographicSpaceAsSpace: boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -50723,22 +50723,22 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, underlines the text.
 	 */
-	underline: Boolean | NothingEnum;
+	underline: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String | NothingEnum;
+	underlineColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String | NothingEnum;
+	underlineGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: Boolean | NothingEnum;
+	underlineGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -50753,7 +50753,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: Boolean | NothingEnum;
+	underlineOverprint: boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -50763,7 +50763,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String | NothingEnum;
+	underlineType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -50778,7 +50778,7 @@ declare class FindTransliteratePreference extends Preference {
 	/**
 	 * If true, turns on warichu.
 	 */
-	warichu: Boolean | NothingEnum;
+	warichu: boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment.
@@ -50819,37 +50819,37 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: Boolean | NothingEnum;
+	allowArbitraryHyphenation: boolean | NothingEnum;
 
 	/**
-	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
+	 * The character style to search for or change to.
 	 */
-	appliedCharacterStyle: any;
+	appliedCharacterStyle: string | NothingEnum | CharacterStyle;
 
 	/**
-	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]". Can return: Array of Strings or NothingEnum enumerator. Can also accept: Array of Conditions.
+	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: any;
+	appliedConditions: String[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the ChangeTextPreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
-	 * The language to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Language or LanguageWithVendors.
+	 * The language to search for or change to.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: string | NothingEnum | Language | LanguageWithVendors;
 
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String | NothingEnum;
+	appliedNumberingList: NumberingList | string | NothingEnum;
 
 	/**
-	 * The paragraph style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: ParagraphStyle.
+	 * The paragraph style to search for or change to.
 	 */
-	appliedParagraphStyle: any;
+	appliedParagraphStyle: string | NothingEnum | ParagraphStyle;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -50864,12 +50864,12 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: Boolean | NothingEnum;
+	autoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle | NothingEnum;
+	balanceRaggedLines: boolean | BalanceLinesStyle | NothingEnum;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -50889,17 +50889,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String | NothingEnum;
+	bulletsCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: String | NothingEnum;
+	bulletsTextAfter: string | NothingEnum;
 
 	/**
 	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: Boolean | NothingEnum;
+	bunriKinshi: boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme.
@@ -50914,7 +50914,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The replacement ChangeTextPreference.
 	 */
-	changeTo: String | NothingEnum;
+	changeTo: string | NothingEnum;
 
 	/**
 	 * The alignment of small characters to the largest character in the line.
@@ -50934,12 +50934,12 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: Boolean | NothingEnum;
+	cjkGridTracking: boolean | NothingEnum;
 
 	/**
 	 * The text composer to use to compose the text.
 	 */
-	composer: String | NothingEnum;
+	composer: string | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters.
@@ -50972,9 +50972,9 @@ declare class ChangeTextPreference extends Preference {
 	endJoin: OutlineJoin | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to.
 	 */
-	fillColor: any;
+	fillColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -50989,7 +50989,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs.
@@ -51044,17 +51044,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: Boolean | NothingEnum;
+	hyphenateAcrossColumns: boolean | NothingEnum;
 
 	/**
 	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: Boolean | NothingEnum;
+	hyphenateLastWord: boolean | NothingEnum;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: Boolean | NothingEnum;
+	ignoreEdgeAlignment: boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. .
@@ -51074,7 +51074,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: Boolean | NothingEnum;
+	keepAllLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break.
@@ -51089,12 +51089,12 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: Boolean | NothingEnum;
+	keepLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: Boolean | NothingEnum;
+	keepRuleAboveInFrame: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph.
@@ -51104,7 +51104,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: Boolean | NothingEnum;
+	keepWithPrevious: boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. .
@@ -51119,17 +51119,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: String | NothingEnum;
+	kentenCustomCharacter: string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String | NothingEnum;
+	kentenFillColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String | NothingEnum;
+	kentenFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -51139,7 +51139,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -51169,7 +51169,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String | NothingEnum;
+	kentenStrokeColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
@@ -51199,7 +51199,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The type of pair kerning.
 	 */
-	kerningMethod: String | NothingEnum;
+	kerningMethod: string | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -51219,7 +51219,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String | NothingEnum;
+	kinsokuSet: KinsokuTable | KinsokuSet | string | NothingEnum;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -51254,12 +51254,12 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: Boolean | NothingEnum;
+	ligatures: boolean | NothingEnum;
 
 	/**
-	 * The XML tag applied to the element. Can return: String or NothingEnum enumerator. Can also accept: XMLTag.
+	 * The XML tag applied to the element.
 	 */
-	markupTag: any;
+	markupTag: string | NothingEnum | XMLTag;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join.
@@ -51269,37 +51269,37 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults | NothingEnum;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults | NothingEnum;
 
 	/**
 	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: Boolean | NothingEnum;
+	noBreak: boolean | NothingEnum;
 
 	/**
 	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: Boolean | NothingEnum;
+	numberingApplyRestartPolicy: boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String | NothingEnum;
+	numberingCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * Continue the numbering at this level.
 	 */
-	numberingContinue: Boolean | NothingEnum;
+	numberingContinue: boolean | NothingEnum;
 
 	/**
 	 * The number string expression for numbering.
 	 */
-	numberingExpression: String | NothingEnum;
+	numberingExpression: string | NothingEnum;
 
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String | NothingEnum;
+	numberingFormat: NumberingStyle | string | NothingEnum;
 
 	/**
 	 * The level of the paragraph.
@@ -51319,12 +51319,12 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: Boolean | NothingEnum;
+	otfContextualAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: Boolean | NothingEnum;
+	otfDiscretionaryLigature: boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts.
@@ -51334,67 +51334,67 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: Boolean | NothingEnum;
+	otfFraction: boolean | NothingEnum;
 
 	/**
 	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: Boolean | NothingEnum;
+	otfHVKana: boolean | NothingEnum;
 
 	/**
 	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: Boolean | NothingEnum;
+	otfHistorical: boolean | NothingEnum;
 
 	/**
 	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: Boolean | NothingEnum;
+	otfJustificationAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: Boolean | NothingEnum;
+	otfLocale: boolean | NothingEnum;
 
 	/**
 	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: Boolean | NothingEnum;
+	otfMark: boolean | NothingEnum;
 
 	/**
 	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: Boolean | NothingEnum;
+	otfOrdinal: boolean | NothingEnum;
 
 	/**
 	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: Boolean | NothingEnum;
+	otfOverlapSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: Boolean | NothingEnum;
+	otfProportionalMetrics: boolean | NothingEnum;
 
 	/**
 	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: Boolean | NothingEnum;
+	otfRomanItalics: boolean | NothingEnum;
 
 	/**
 	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: Boolean | NothingEnum;
+	otfSlashedZero: boolean | NothingEnum;
 
 	/**
 	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: Boolean | NothingEnum;
+	otfStretchedAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: Boolean | NothingEnum;
+	otfStylisticAlternate: boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts.
@@ -51404,22 +51404,22 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: Boolean | NothingEnum;
+	otfSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: Boolean | NothingEnum;
+	otfTitling: boolean | NothingEnum;
 
 	/**
 	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction.
@@ -51429,7 +51429,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: Boolean | NothingEnum;
+	paragraphGyoudori: boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification.
@@ -51464,7 +51464,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: Boolean | NothingEnum;
+	rensuuji: boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -51474,7 +51474,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: Boolean | NothingEnum;
+	rotateSingleByteCharacters: boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment.
@@ -51484,17 +51484,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: Boolean | NothingEnum;
+	rubyAutoAlign: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: Boolean | NothingEnum;
+	rubyAutoScaling: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: Boolean | NothingEnum;
+	rubyAutoTcyAutoScale: boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby.
@@ -51504,17 +51504,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
+	rubyAutoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String | NothingEnum;
+	rubyFill: Swatch | string | NothingEnum;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String | NothingEnum;
+	rubyFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -51524,17 +51524,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: Boolean | NothingEnum;
+	rubyOpenTypePro: boolean | NothingEnum;
 
 	/**
 	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: Boolean | NothingEnum;
+	rubyOverhang: boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill.
@@ -51569,7 +51569,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String | NothingEnum;
+	rubyStroke: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -51614,17 +51614,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: Boolean | NothingEnum;
+	scaleAffectsLineHeight: boolean | NothingEnum;
 
 	/**
 	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: Boolean | NothingEnum;
+	shataiAdjustRotation: boolean | NothingEnum;
 
 	/**
 	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: Boolean | NothingEnum;
+	shataiAdjustTsume: boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -51694,17 +51694,17 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String | NothingEnum;
+	strikeThroughColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String | NothingEnum;
+	strikeThroughGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: Boolean | NothingEnum;
+	strikeThroughGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -51719,7 +51719,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: Boolean | NothingEnum;
+	strikeThroughOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -51729,7 +51729,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String | NothingEnum;
+	strikeThroughType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -51739,7 +51739,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: Boolean | NothingEnum;
+	strikeThru: boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text.
@@ -51747,9 +51747,9 @@ declare class ChangeTextPreference extends Preference {
 	strokeAlignment: TextStrokeAlign | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to.
 	 */
-	strokeColor: any;
+	strokeColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -51764,7 +51764,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: Boolean | NothingEnum;
+	tatechuyoko: boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -51789,7 +51789,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
+	treatIdeographicSpaceAsSpace: boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -51799,22 +51799,22 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, underlines the text.
 	 */
-	underline: Boolean | NothingEnum;
+	underline: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String | NothingEnum;
+	underlineColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String | NothingEnum;
+	underlineGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: Boolean | NothingEnum;
+	underlineGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -51829,7 +51829,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: Boolean | NothingEnum;
+	underlineOverprint: boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -51839,7 +51839,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String | NothingEnum;
+	underlineType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -51854,7 +51854,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * If true, turns on warichu.
 	 */
-	warichu: Boolean | NothingEnum;
+	warichu: boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment.
@@ -51905,37 +51905,37 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: Boolean | NothingEnum;
+	allowArbitraryHyphenation: boolean | NothingEnum;
 
 	/**
-	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
+	 * The character style to search for or change to.
 	 */
-	appliedCharacterStyle: any;
+	appliedCharacterStyle: string | NothingEnum | CharacterStyle;
 
 	/**
-	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]". Can return: Array of Strings or NothingEnum enumerator. Can also accept: Array of Conditions.
+	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: any;
+	appliedConditions: String[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the ChangeGrepPreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
-	 * The language to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Language or LanguageWithVendors.
+	 * The language to search for or change to.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: string | NothingEnum | Language | LanguageWithVendors;
 
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String | NothingEnum;
+	appliedNumberingList: NumberingList | string | NothingEnum;
 
 	/**
-	 * The paragraph style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: ParagraphStyle.
+	 * The paragraph style to search for or change to.
 	 */
-	appliedParagraphStyle: any;
+	appliedParagraphStyle: string | NothingEnum | ParagraphStyle;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -51950,12 +51950,12 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: Boolean | NothingEnum;
+	autoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle | NothingEnum;
+	balanceRaggedLines: boolean | BalanceLinesStyle | NothingEnum;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -51975,17 +51975,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String | NothingEnum;
+	bulletsCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: String | NothingEnum;
+	bulletsTextAfter: string | NothingEnum;
 
 	/**
 	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: Boolean | NothingEnum;
+	bunriKinshi: boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme.
@@ -52000,7 +52000,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The replacement ChangeGrepPreference.
 	 */
-	changeTo: String | NothingEnum;
+	changeTo: string | NothingEnum;
 
 	/**
 	 * The alignment of small characters to the largest character in the line.
@@ -52020,12 +52020,12 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: Boolean | NothingEnum;
+	cjkGridTracking: boolean | NothingEnum;
 
 	/**
 	 * The text composer to use to compose the text.
 	 */
-	composer: String | NothingEnum;
+	composer: string | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters.
@@ -52058,9 +52058,9 @@ declare class ChangeGrepPreference extends Preference {
 	endJoin: OutlineJoin | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to.
 	 */
-	fillColor: any;
+	fillColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the ChangeGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -52075,7 +52075,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs.
@@ -52130,17 +52130,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: Boolean | NothingEnum;
+	hyphenateAcrossColumns: boolean | NothingEnum;
 
 	/**
 	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: Boolean | NothingEnum;
+	hyphenateLastWord: boolean | NothingEnum;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: Boolean | NothingEnum;
+	ignoreEdgeAlignment: boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. .
@@ -52160,7 +52160,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: Boolean | NothingEnum;
+	keepAllLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break.
@@ -52175,12 +52175,12 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: Boolean | NothingEnum;
+	keepLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: Boolean | NothingEnum;
+	keepRuleAboveInFrame: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph.
@@ -52190,7 +52190,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: Boolean | NothingEnum;
+	keepWithPrevious: boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. .
@@ -52205,17 +52205,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: String | NothingEnum;
+	kentenCustomCharacter: string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String | NothingEnum;
+	kentenFillColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String | NothingEnum;
+	kentenFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -52225,7 +52225,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -52255,7 +52255,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String | NothingEnum;
+	kentenStrokeColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
@@ -52285,7 +52285,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The type of pair kerning.
 	 */
-	kerningMethod: String | NothingEnum;
+	kerningMethod: string | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -52305,7 +52305,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String | NothingEnum;
+	kinsokuSet: KinsokuTable | KinsokuSet | string | NothingEnum;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -52340,12 +52340,12 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: Boolean | NothingEnum;
+	ligatures: boolean | NothingEnum;
 
 	/**
-	 * The XML tag applied to the element. Can return: String or NothingEnum enumerator. Can also accept: XMLTag.
+	 * The XML tag applied to the element.
 	 */
-	markupTag: any;
+	markupTag: string | NothingEnum | XMLTag;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join.
@@ -52355,37 +52355,37 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults | NothingEnum;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults | NothingEnum;
 
 	/**
 	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: Boolean | NothingEnum;
+	noBreak: boolean | NothingEnum;
 
 	/**
 	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: Boolean | NothingEnum;
+	numberingApplyRestartPolicy: boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String | NothingEnum;
+	numberingCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * Continue the numbering at this level.
 	 */
-	numberingContinue: Boolean | NothingEnum;
+	numberingContinue: boolean | NothingEnum;
 
 	/**
 	 * The number string expression for numbering.
 	 */
-	numberingExpression: String | NothingEnum;
+	numberingExpression: string | NothingEnum;
 
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String | NothingEnum;
+	numberingFormat: NumberingStyle | string | NothingEnum;
 
 	/**
 	 * The level of the paragraph.
@@ -52405,12 +52405,12 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: Boolean | NothingEnum;
+	otfContextualAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: Boolean | NothingEnum;
+	otfDiscretionaryLigature: boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts.
@@ -52420,67 +52420,67 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: Boolean | NothingEnum;
+	otfFraction: boolean | NothingEnum;
 
 	/**
 	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: Boolean | NothingEnum;
+	otfHVKana: boolean | NothingEnum;
 
 	/**
 	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: Boolean | NothingEnum;
+	otfHistorical: boolean | NothingEnum;
 
 	/**
 	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: Boolean | NothingEnum;
+	otfJustificationAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: Boolean | NothingEnum;
+	otfLocale: boolean | NothingEnum;
 
 	/**
 	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: Boolean | NothingEnum;
+	otfMark: boolean | NothingEnum;
 
 	/**
 	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: Boolean | NothingEnum;
+	otfOrdinal: boolean | NothingEnum;
 
 	/**
 	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: Boolean | NothingEnum;
+	otfOverlapSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: Boolean | NothingEnum;
+	otfProportionalMetrics: boolean | NothingEnum;
 
 	/**
 	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: Boolean | NothingEnum;
+	otfRomanItalics: boolean | NothingEnum;
 
 	/**
 	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: Boolean | NothingEnum;
+	otfSlashedZero: boolean | NothingEnum;
 
 	/**
 	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: Boolean | NothingEnum;
+	otfStretchedAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: Boolean | NothingEnum;
+	otfStylisticAlternate: boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts.
@@ -52490,22 +52490,22 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: Boolean | NothingEnum;
+	otfSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: Boolean | NothingEnum;
+	otfTitling: boolean | NothingEnum;
 
 	/**
 	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction.
@@ -52515,7 +52515,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: Boolean | NothingEnum;
+	paragraphGyoudori: boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification.
@@ -52550,7 +52550,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: Boolean | NothingEnum;
+	rensuuji: boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -52560,7 +52560,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: Boolean | NothingEnum;
+	rotateSingleByteCharacters: boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment.
@@ -52570,17 +52570,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: Boolean | NothingEnum;
+	rubyAutoAlign: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: Boolean | NothingEnum;
+	rubyAutoScaling: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: Boolean | NothingEnum;
+	rubyAutoTcyAutoScale: boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby.
@@ -52590,17 +52590,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
+	rubyAutoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String | NothingEnum;
+	rubyFill: Swatch | string | NothingEnum;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String | NothingEnum;
+	rubyFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -52610,17 +52610,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: Boolean | NothingEnum;
+	rubyOpenTypePro: boolean | NothingEnum;
 
 	/**
 	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: Boolean | NothingEnum;
+	rubyOverhang: boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill.
@@ -52655,7 +52655,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String | NothingEnum;
+	rubyStroke: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -52700,17 +52700,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: Boolean | NothingEnum;
+	scaleAffectsLineHeight: boolean | NothingEnum;
 
 	/**
 	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: Boolean | NothingEnum;
+	shataiAdjustRotation: boolean | NothingEnum;
 
 	/**
 	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: Boolean | NothingEnum;
+	shataiAdjustTsume: boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -52780,17 +52780,17 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String | NothingEnum;
+	strikeThroughColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String | NothingEnum;
+	strikeThroughGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: Boolean | NothingEnum;
+	strikeThroughGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -52805,7 +52805,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: Boolean | NothingEnum;
+	strikeThroughOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -52815,7 +52815,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String | NothingEnum;
+	strikeThroughType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -52825,7 +52825,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: Boolean | NothingEnum;
+	strikeThru: boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text.
@@ -52833,9 +52833,9 @@ declare class ChangeGrepPreference extends Preference {
 	strokeAlignment: TextStrokeAlign | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to.
 	 */
-	strokeColor: any;
+	strokeColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the ChangeGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -52850,7 +52850,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: Boolean | NothingEnum;
+	tatechuyoko: boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -52875,7 +52875,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
+	treatIdeographicSpaceAsSpace: boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -52885,22 +52885,22 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, underlines the text.
 	 */
-	underline: Boolean | NothingEnum;
+	underline: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String | NothingEnum;
+	underlineColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String | NothingEnum;
+	underlineGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: Boolean | NothingEnum;
+	underlineGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -52915,7 +52915,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: Boolean | NothingEnum;
+	underlineOverprint: boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -52925,7 +52925,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String | NothingEnum;
+	underlineType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -52940,7 +52940,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * If true, turns on warichu.
 	 */
-	warichu: Boolean | NothingEnum;
+	warichu: boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment.
@@ -52991,12 +52991,12 @@ declare class ChangeGlyphPreference extends Preference {
 	/**
 	 * The font applied to the ChangeGlyphPreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The GID/CID of the glyph.
@@ -53055,9 +53055,9 @@ declare class ChangeObjectPreference extends Preference {
 	anchoredPosition: AnchorPosition | NothingEnum;
 
 	/**
-	 * The applied object style(s). Can return: String or NothingEnum enumerator. Can also accept: ObjectStyle.
+	 * The applied object style(s).
 	 */
-	appliedObjectStyles: any;
+	appliedObjectStyles: string | NothingEnum | ObjectStyle;
 
 	/**
 	 * The tag type of page item.
@@ -53067,7 +53067,7 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, text wraps on the master spread apply to that spread only, and not to any pages the master spread has been applied to.
 	 */
-	applyToMasterPageOnly: Boolean | NothingEnum;
+	applyToMasterPageOnly: boolean | NothingEnum;
 
 	/**
 	 * The reference point for auto sizing of text frame. Reference point is automatically adjusted to the suitable value depending on the auto-sizing type value. As an example, top left reference point becomes top center for height only dimension.
@@ -53132,12 +53132,12 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * The custom actual text entered by the user.
 	 */
-	customActualText: String | NothingEnum;
+	customActualText: string | NothingEnum;
 
 	/**
 	 * The custom alternate text entered by the user.
 	 */
-	customAltText: String | NothingEnum;
+	customAltText: string | NothingEnum;
 
 	/**
 	 * The end shape of an open path.
@@ -53150,9 +53150,9 @@ declare class ChangeObjectPreference extends Preference {
 	endJoin: EndJoin | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ChangeObjectPreference. . Can return: Swatch or NothingEnum enumerator. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ChangeObjectPreference. .
 	 */
-	fillColor: any;
+	fillColor: Swatch | NothingEnum | string;
 
 	/**
 	 * The percent of tint to use in the ChangeObjectPreference's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -53192,7 +53192,7 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG.
 	 */
-	gifOptionsInterlaced: Boolean | NothingEnum;
+	gifOptionsInterlaced: boolean | NothingEnum;
 
 	/**
 	 * The color palette for GIF conversion. Note: Not valid when image conversion is JPEG. .
@@ -53217,7 +53217,7 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, ignores text wrap settings for drawn or placed objects in the text frame. .
 	 */
-	ignoreWrap: Boolean | NothingEnum;
+	ignoreWrap: boolean | NothingEnum;
 
 	/**
 	 * Alignment applied to images.
@@ -53252,7 +53252,7 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, creates interior clipping paths within the surrounding clipping path. Note: Valid only when clipping type is alpha channel or detect edges. .
 	 */
-	includeInsideEdges: Boolean | NothingEnum;
+	includeInsideEdges: boolean | NothingEnum;
 
 	/**
 	 * The amount to offset text from the edges of the text frame, specified either as a single value applied uniformly to all sides of the text frame or as an array of 4 values in the format [top inset, left inset, bottom inset, right inset].
@@ -53262,7 +53262,7 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, inverts the text wrap.
 	 */
-	inverse: Boolean | NothingEnum;
+	inverse: boolean | NothingEnum;
 
 	/**
 	 * The formatting method for converted JPEG images. Note: Not validwhen image conversion is GIF.
@@ -53287,7 +53287,7 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, prevents manual positioning of the anchored object.
 	 */
-	lockPosition: Boolean | NothingEnum;
+	lockPosition: boolean | NothingEnum;
 
 	/**
 	 * The minimum distance between the baseline of the text and the top inset of the text frame or cell.
@@ -53312,12 +53312,12 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, the ChangeObjectPreference does not print.
 	 */
-	nonprinting: Boolean | NothingEnum;
+	nonprinting: boolean | NothingEnum;
 
 	/**
 	 * If true, adjust the position of characters at the edges of the frame to provide a better appearance.
 	 */
-	opticalMarginAlignment: Boolean | NothingEnum;
+	opticalMarginAlignment: boolean | NothingEnum;
 
 	/**
 	 * The point size used as the basis for calculating optical margin alignment. (Range: 0.1 to 1296).
@@ -53327,22 +53327,22 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, the ChangeObjectPreference's fill color overprints any underlying objects. If false, the fill color knocks out the underlying colors.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the gap color overprints any underlying colors. If false, the gap color knocks out the underlying colors.
 	 */
-	overprintGap: Boolean | NothingEnum;
+	overprintGap: boolean | NothingEnum;
 
 	/**
 	 * If true, the ChangeObjectPreference's stroke color overprints any underlying objects. If false, the stroke color knocks out theunderlying colors.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * If true, pins the position of the anchored object within the text frame top and bottom.
 	 */
-	pinPosition: Boolean | NothingEnum;
+	pinPosition: boolean | NothingEnum;
 
 	/**
 	 * The point in the referenced object relative to which to position the anchored object. Notes: Valid only when anchored position is custom.
@@ -53372,7 +53372,7 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, the position of the anchored object is relative to the binding spine of the page or spread.
 	 */
-	spineRelative: Boolean | NothingEnum;
+	spineRelative: boolean | NothingEnum;
 
 	/**
 	 * The amount to offset the baseline grid.
@@ -53390,9 +53390,9 @@ declare class ChangeObjectPreference extends Preference {
 	strokeAlignment: StrokeAlignment | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ChangeObjectPreference. Can return: Swatch or NothingEnum enumerator. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ChangeObjectPreference.
 	 */
-	strokeColor: any;
+	strokeColor: Swatch | NothingEnum | string;
 
 	/**
 	 * The corner adjustment applied to the ChangeObjectPreference.
@@ -53415,9 +53415,9 @@ declare class ChangeObjectPreference extends Preference {
 	readonly strokeTransparencySettings: FindChangeStrokeTransparencySetting | NothingEnum;
 
 	/**
-	 * The name of the stroke style to apply. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
+	 * The name of the stroke style to apply.
 	 */
-	strokeType: any;
+	strokeType: StrokeStyle | NothingEnum | string;
 
 	/**
 	 * The weight (in points) to apply to the ChangeObjectPreference's stroke.
@@ -53487,37 +53487,37 @@ declare class ChangeObjectPreference extends Preference {
 	/**
 	 * If true, uses a custom baseline frame grid.
 	 */
-	useCustomBaselineFrameGrid: Boolean | NothingEnum;
+	useCustomBaselineFrameGrid: boolean | NothingEnum;
 
 	/**
 	 * If true, maintains column width when the text frame is resized. If false, causes columns to resize when the text frame is resized. Note: When true, resizing the frame can change the number of columns in the frame.
 	 */
-	useFixedColumnWidth: Boolean | NothingEnum;
+	useFixedColumnWidth: boolean | NothingEnum;
 
 	/**
 	 * If true, image page break settings will be used in objects.
 	 */
-	useImagePageBreak: Boolean | NothingEnum;
+	useImagePageBreak: boolean | NothingEnum;
 
 	/**
 	 * If true, minimum height value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumHeightForAutoSizing: Boolean | NothingEnum;
+	useMinimumHeightForAutoSizing: boolean | NothingEnum;
 
 	/**
 	 * If true, minimum width value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumWidthForAutoSizing: Boolean | NothingEnum;
+	useMinimumWidthForAutoSizing: boolean | NothingEnum;
 
 	/**
 	 * If true, line-breaks are not introduced after auto sizing. .
 	 */
-	useNoLineBreaksForAutoSizing: Boolean | NothingEnum;
+	useNoLineBreaksForAutoSizing: boolean | NothingEnum;
 
 	/**
 	 * If true, the text wrap path has been explicitly modified by the user.
 	 */
-	readonly userModifiedWrap: Boolean | NothingEnum;
+	readonly userModifiedWrap: boolean | NothingEnum;
 
 	/**
 	 * The vertical alignment of the text content. .
@@ -53553,32 +53553,32 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: Boolean | NothingEnum;
+	allowArbitraryHyphenation: boolean | NothingEnum;
 
 	/**
-	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
+	 * The character style to search for or change to.
 	 */
-	appliedCharacterStyle: any;
+	appliedCharacterStyle: string | NothingEnum | CharacterStyle;
 
 	/**
 	 * The font applied to the ChangeTransliteratePreference, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
-	 * The language to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Language or LanguageWithVendors.
+	 * The language to search for or change to.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: string | NothingEnum | Language | LanguageWithVendors;
 
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String | NothingEnum;
+	appliedNumberingList: NumberingList | string | NothingEnum;
 
 	/**
-	 * The paragraph style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: ParagraphStyle.
+	 * The paragraph style to search for or change to.
 	 */
-	appliedParagraphStyle: any;
+	appliedParagraphStyle: string | NothingEnum | ParagraphStyle;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -53593,12 +53593,12 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: Boolean | NothingEnum;
+	autoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle | NothingEnum;
+	balanceRaggedLines: boolean | BalanceLinesStyle | NothingEnum;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -53623,17 +53623,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String | NothingEnum;
+	bulletsCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: String | NothingEnum;
+	bulletsTextAfter: string | NothingEnum;
 
 	/**
 	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: Boolean | NothingEnum;
+	bunriKinshi: boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme.
@@ -53658,12 +53658,12 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: Boolean | NothingEnum;
+	cjkGridTracking: boolean | NothingEnum;
 
 	/**
 	 * The text composer to use to compose the text.
 	 */
-	composer: String | NothingEnum;
+	composer: string | NothingEnum;
 
 	/**
 	 * The number of characters to drop cap.
@@ -53681,9 +53681,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	dropcapDetail: number | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a fill color, to search for or change to.
 	 */
-	fillColor: any;
+	fillColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the ChangeTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -53698,7 +53698,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs.
@@ -53753,17 +53753,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: Boolean | NothingEnum;
+	hyphenateAcrossColumns: boolean | NothingEnum;
 
 	/**
 	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: Boolean | NothingEnum;
+	hyphenateLastWord: boolean | NothingEnum;
 
 	/**
 	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: Boolean | NothingEnum;
+	ignoreEdgeAlignment: boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. .
@@ -53778,7 +53778,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: Boolean | NothingEnum;
+	keepAllLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break.
@@ -53793,12 +53793,12 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: Boolean | NothingEnum;
+	keepLinesTogether: boolean | NothingEnum;
 
 	/**
 	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: Boolean | NothingEnum;
+	keepRuleAboveInFrame: boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph.
@@ -53818,17 +53818,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: String | NothingEnum;
+	kentenCustomCharacter: string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String | NothingEnum;
+	kentenFillColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String | NothingEnum;
+	kentenFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -53838,7 +53838,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -53868,7 +53868,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String | NothingEnum;
+	kentenStrokeColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
@@ -53898,7 +53898,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The type of pair kerning.
 	 */
-	kerningMethod: String | NothingEnum;
+	kerningMethod: string | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -53913,7 +53913,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String | NothingEnum;
+	kinsokuSet: KinsokuTable | KinsokuSet | string | NothingEnum;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -53948,22 +53948,22 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: Boolean | NothingEnum;
+	ligatures: boolean | NothingEnum;
 
 	/**
-	 * The XML tag applied to the element. Can return: String or NothingEnum enumerator. Can also accept: XMLTag.
+	 * The XML tag applied to the element.
 	 */
-	markupTag: any;
+	markupTag: string | NothingEnum | XMLTag;
 
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults | NothingEnum;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults | NothingEnum;
 
 	/**
 	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: Boolean | NothingEnum;
+	noBreak: boolean | NothingEnum;
 
 	/**
 	 * The alignment of the number.
@@ -53973,27 +53973,27 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: Boolean | NothingEnum;
+	numberingApplyRestartPolicy: boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String | NothingEnum;
+	numberingCharacterStyle: CharacterStyle | string | NothingEnum;
 
 	/**
 	 * Continue the numbering at this level.
 	 */
-	numberingContinue: Boolean | NothingEnum;
+	numberingContinue: boolean | NothingEnum;
 
 	/**
 	 * The number string expression for numbering.
 	 */
-	numberingExpression: String | NothingEnum;
+	numberingExpression: string | NothingEnum;
 
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String | NothingEnum;
+	numberingFormat: NumberingStyle | string | NothingEnum;
 
 	/**
 	 * The level of the paragraph.
@@ -54008,12 +54008,12 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: Boolean | NothingEnum;
+	otfContextualAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: Boolean | NothingEnum;
+	otfDiscretionaryLigature: boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts.
@@ -54023,47 +54023,47 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: Boolean | NothingEnum;
+	otfFraction: boolean | NothingEnum;
 
 	/**
 	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: Boolean | NothingEnum;
+	otfHVKana: boolean | NothingEnum;
 
 	/**
 	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: Boolean | NothingEnum;
+	otfHistorical: boolean | NothingEnum;
 
 	/**
 	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: Boolean | NothingEnum;
+	otfLocale: boolean | NothingEnum;
 
 	/**
 	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: Boolean | NothingEnum;
+	otfMark: boolean | NothingEnum;
 
 	/**
 	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: Boolean | NothingEnum;
+	otfOrdinal: boolean | NothingEnum;
 
 	/**
 	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: Boolean | NothingEnum;
+	otfProportionalMetrics: boolean | NothingEnum;
 
 	/**
 	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: Boolean | NothingEnum;
+	otfRomanItalics: boolean | NothingEnum;
 
 	/**
 	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: Boolean | NothingEnum;
+	otfSlashedZero: boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts.
@@ -54073,27 +54073,27 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: Boolean | NothingEnum;
+	otfSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: Boolean | NothingEnum;
+	otfTitling: boolean | NothingEnum;
 
 	/**
 	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: Boolean | NothingEnum;
+	paragraphGyoudori: boolean | NothingEnum;
 
 	/**
 	 * The text size.
@@ -54118,7 +54118,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: Boolean | NothingEnum;
+	rensuuji: boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -54128,7 +54128,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: Boolean | NothingEnum;
+	rotateSingleByteCharacters: boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment.
@@ -54138,17 +54138,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: Boolean | NothingEnum;
+	rubyAutoAlign: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: Boolean | NothingEnum;
+	rubyAutoScaling: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: Boolean | NothingEnum;
+	rubyAutoTcyAutoScale: boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby.
@@ -54158,17 +54158,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
+	rubyAutoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String | NothingEnum;
+	rubyFill: Swatch | string | NothingEnum;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String | NothingEnum;
+	rubyFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -54178,17 +54178,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: Boolean | NothingEnum;
+	rubyOpenTypePro: boolean | NothingEnum;
 
 	/**
 	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: Boolean | NothingEnum;
+	rubyOverhang: boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill.
@@ -54223,7 +54223,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String | NothingEnum;
+	rubyStroke: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -54268,17 +54268,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: Boolean | NothingEnum;
+	scaleAffectsLineHeight: boolean | NothingEnum;
 
 	/**
 	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: Boolean | NothingEnum;
+	shataiAdjustRotation: boolean | NothingEnum;
 
 	/**
 	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: Boolean | NothingEnum;
+	shataiAdjustTsume: boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -54318,17 +54318,17 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String | NothingEnum;
+	strikeThroughColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String | NothingEnum;
+	strikeThroughGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: Boolean | NothingEnum;
+	strikeThroughGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -54343,7 +54343,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: Boolean | NothingEnum;
+	strikeThroughOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -54353,7 +54353,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String | NothingEnum;
+	strikeThroughType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -54363,12 +54363,12 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: Boolean | NothingEnum;
+	strikeThru: boolean | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
+	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to.
 	 */
-	strokeColor: any;
+	strokeColor: string | NothingEnum | Swatch;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the ChangeTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -54383,7 +54383,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: Boolean | NothingEnum;
+	tatechuyoko: boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -54408,7 +54408,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
+	treatIdeographicSpaceAsSpace: boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -54418,22 +54418,22 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, underlines the text.
 	 */
-	underline: Boolean | NothingEnum;
+	underline: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String | NothingEnum;
+	underlineColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String | NothingEnum;
+	underlineGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: Boolean | NothingEnum;
+	underlineGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -54448,7 +54448,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: Boolean | NothingEnum;
+	underlineOverprint: boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -54458,7 +54458,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String | NothingEnum;
+	underlineType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -54473,7 +54473,7 @@ declare class ChangeTransliteratePreference extends Preference {
 	/**
 	 * If true, turns on warichu.
 	 */
-	warichu: Boolean | NothingEnum;
+	warichu: boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment.
@@ -54631,7 +54631,7 @@ declare class PrinterPreset {
 	/**
 	 * The color-rendering dictionary (CRD), specified as a CRD name or an enumeration value. Note: Valid only when use color management is true.
 	 */
-	crd: ColorRenderingDictionary | String;
+	crd: ColorRenderingDictionary | string;
 
 	/**
 	 * Prints crop marks that define where the page should be trimmed.
@@ -54731,7 +54731,7 @@ declare class PrinterPreset {
 	/**
 	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	markType: MarkTypes | String;
+	markType: MarkTypes | string;
 
 	/**
 	 * The name of the PrinterPreset.
@@ -54791,7 +54791,7 @@ declare class PrinterPreset {
 	/**
 	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
 	 */
-	paperSize: PaperSizes | String;
+	paperSize: PaperSizes | string;
 
 	/**
 	 * A list of the available paper sizes.
@@ -54821,7 +54821,7 @@ declare class PrinterPreset {
 	/**
 	 * The PPD, specified as a PPD name or an enumeration.
 	 */
-	ppd: PPDValues | String;
+	ppd: PPDValues | string;
 
 	/**
 	 * Available PPDs.
@@ -54891,7 +54891,7 @@ declare class PrinterPreset {
 	/**
 	 * The current printer.
 	 */
-	printer: Printer | String;
+	printer: Printer | string;
 
 	/**
 	 * Available printers.
@@ -54901,7 +54901,7 @@ declare class PrinterPreset {
 	/**
 	 * The color profile.
 	 */
-	profile: Profile | String;
+	profile: Profile | string;
 
 	/**
 	 * A property that allows setting of several properties at the same time.
@@ -54941,7 +54941,7 @@ declare class PrinterPreset {
 	/**
 	 * The ink screening settings for composite gray output in PostScript or PDF format. .
 	 */
-	screening: Screeening | String;
+	screening: Screeening | string;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -55106,7 +55106,7 @@ declare class PrinterPresets {
 	 * Returns the PrinterPreset with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PrinterPreset;
+	item(index: number | string): PrinterPreset;
 
 	/**
 	 * Returns the PrinterPreset with the specified name.
@@ -55119,7 +55119,7 @@ declare class PrinterPresets {
 	 * @param from The PrinterPreset, index, or name at the beginning of the range.
 	 * @param to The PrinterPreset, index, or name at the end of the range.
 	 */
-	itemByRange(from: PrinterPreset | number | String, to: PrinterPreset | number | String): PrinterPreset[];
+	itemByRange(from: PrinterPreset | number | string, to: PrinterPreset | number | string): PrinterPreset[];
 
 	/**
 	 * Returns the last PrinterPreset in the collection.
@@ -55551,12 +55551,12 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the rule above continued footnote text. Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleColor: Swatch | String;
+	continuingRuleColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above continued footnote text. Note: Valid when continuing rule type is not solid.
 	 */
-	continuingRuleGapColor: Swatch | String;
+	continuingRuleGapColor: Swatch | string;
 
 	/**
 	 * If true, overprints the gap color of the rule above continued footnote text. Note: Valid when continuing rule type is not solid.
@@ -55601,7 +55601,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The stroke type of the rule above continued footnote text. Note: Valid when continuing rule on is true.
 	 */
-	continuingRuleType: StrokeStyle | String;
+	continuingRuleType: StrokeStyle | string;
 
 	/**
 	 * The length of the rule above continued footnote text. Note: Valid when continuing rule on is true.
@@ -55631,7 +55631,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The footnote numbering style.
 	 */
-	footnoteNumberingStyle: FootnoteNumberingStyle | String;
+	footnoteNumberingStyle: FootnoteNumberingStyle | string;
 
 	/**
 	 * The paragraph style to apply to footnotes. Note: The space before and after the paragraph defined in the paragraph style is ignored for footnotes. To define space above and between footnotes, see spacer and space between.
@@ -55641,7 +55641,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The position of footnote reference numbers in the main text.
 	 */
-	markerPositioning: FootnoteMarkerPositioning | String;
+	markerPositioning: FootnoteMarkerPositioning | string;
 
 	/**
 	 * If true, footnotes cannot split across columns. If false, footnotes flow into succeeding columns when the footnote text causes the footnote area to expand upward to reach the footnote reference number in the main text.
@@ -55656,17 +55656,17 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The point at which to restart footnote numbering.
 	 */
-	restartNumbering: FootnoteRestarting | String;
+	restartNumbering: FootnoteRestarting | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the rule above the first footnote in the column. Note: Valid when rule on is true.
 	 */
-	ruleColor: Swatch | String;
+	ruleColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the rule above the first footnote in the column. Note: Valid when rule type is not solid.
 	 */
-	ruleGapColor: Swatch | String;
+	ruleGapColor: Swatch | string;
 
 	/**
 	 * If true, overprints the gap color of the rule above the first footnote in the column. Note: Valid when rule type is not solid.
@@ -55711,7 +55711,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The stroke type of the rule above the first footnote in a column. Note: Valid when rule on is true.
 	 */
-	ruleType: StrokeStyle | String;
+	ruleType: StrokeStyle | string;
 
 	/**
 	 * The length of the rule above the first footnote in the column. Note: Valid when rule on is true.
@@ -55726,7 +55726,7 @@ declare class FootnoteOption extends Preference {
 	/**
 	 * The position of the footnote prefix and/or suffix.
 	 */
-	showPrefixSuffix: FootnotePrefixSuffix | String;
+	showPrefixSuffix: FootnotePrefixSuffix | string;
 
 	/**
 	 * The amount of vertical space between footnotes. Note: The space before and space after defined for the paragraph style applied to the footnote is ignored.
@@ -55851,7 +55851,7 @@ declare class MatchCharacterStylePreference extends Preference {
 	/**
 	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle | String;
+	appliedCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The case of the matched text.
@@ -55887,7 +55887,7 @@ declare class MatchParagraphStylePreference extends Preference {
 	/**
 	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle | String;
+	appliedParagraphStyle: ParagraphStyle | string;
 
 	/**
 	 * The case of the matched text.
@@ -55923,7 +55923,7 @@ declare class CustomTextVariablePreference extends Preference {
 	/**
 	 * The contents of the text.
 	 */
-	contents: String | SpecialCharacters;
+	contents: string | SpecialCharacters;
 
 }
 
@@ -55955,7 +55955,7 @@ declare class GridDataInformation extends Preference {
 	/**
 	 * The font applied to the GridDataInformation, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
 	 * The amount of white space between characters.
@@ -56026,7 +56026,7 @@ declare class LayoutGridDataInformation extends Preference {
 	/**
 	 * The font applied to the LayoutGridDataInformation, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
 	 * The amount of white space between characters.
@@ -56067,7 +56067,7 @@ declare class StoryGridDataInformation extends Preference {
 	/**
 	 * The font applied to the StoryGridDataInformation, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
 	 * The amount of white space between characters.
@@ -56479,7 +56479,7 @@ declare class FlattenerPresets {
 	 * Returns the FlattenerPreset with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): FlattenerPreset;
+	item(index: number | string): FlattenerPreset;
 
 	/**
 	 * Returns the FlattenerPreset with the specified ID.
@@ -56498,7 +56498,7 @@ declare class FlattenerPresets {
 	 * @param from The FlattenerPreset, index, or name at the beginning of the range.
 	 * @param to The FlattenerPreset, index, or name at the end of the range.
 	 */
-	itemByRange(from: FlattenerPreset | number | String, to: FlattenerPreset | number | String): FlattenerPreset[];
+	itemByRange(from: FlattenerPreset | number | string, to: FlattenerPreset | number | string): FlattenerPreset[];
 
 	/**
 	 * Returns the last FlattenerPreset in the collection.
@@ -58174,14 +58174,14 @@ declare class DisplaySettings {
 	 * Returns the DisplaySetting with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DisplaySetting;
+	item(index: number | string): DisplaySetting;
 
 	/**
 	 * Returns the DisplaySettings within the specified range.
 	 * @param from The DisplaySetting, index, or name at the beginning of the range.
 	 * @param to The DisplaySetting, index, or name at the end of the range.
 	 */
-	itemByRange(from: DisplaySetting | number | String, to: DisplaySetting | number | String): DisplaySetting[];
+	itemByRange(from: DisplaySetting | number | string, to: DisplaySetting | number | string): DisplaySetting[];
 
 	/**
 	 * Returns the last DisplaySetting in the collection.
@@ -58280,7 +58280,7 @@ declare class PreflightOption extends Preference {
 	/**
 	 * The pages or documents to preflight, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	preflightScope: PreflightScopeOptions | String;
+	preflightScope: PreflightScopeOptions | string;
 
 	/**
 	 * Which layers to preflight.
@@ -58290,7 +58290,7 @@ declare class PreflightOption extends Preference {
 	/**
 	 * The working preflight profile.
 	 */
-	preflightWorkingProfile: PreflightProfile | String;
+	preflightWorkingProfile: PreflightProfile | string;
 
 }
 
@@ -58316,7 +58316,7 @@ declare class PreflightBookOption extends Preference {
 	/**
 	 * The pages or documents to preflight, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	preflightScope: PreflightScopeOptions | String;
+	preflightScope: PreflightScopeOptions | string;
 
 	/**
 	 * Which layers to preflight.
@@ -58326,7 +58326,7 @@ declare class PreflightBookOption extends Preference {
 	/**
 	 * The working preflight profile.
 	 */
-	preflightWorkingProfile: PreflightProfile | String;
+	preflightWorkingProfile: PreflightProfile | string;
 
 }
 
@@ -59145,7 +59145,7 @@ declare class ChapterNumberPreference extends Preference {
 	/**
 	 * Chapter number formatting options.
 	 */
-	chapterNumberFormat: NumberingStyle | String;
+	chapterNumberFormat: NumberingStyle | string;
 
 	/**
 	 * Source for generating the chapter number.
@@ -59503,7 +59503,7 @@ declare class SWFExportPreference extends Preference {
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: PageRange | String;
+	pageRange: PageRange | string;
 
 	/**
 	 * The name of the page transition to use for all pages.
@@ -59609,7 +59609,7 @@ declare class XFLExportPreference extends Preference {
 	/**
 	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: PageRange | String;
+	pageRange: PageRange | string;
 
 	/**
 	 * The raster format options.
@@ -59705,7 +59705,7 @@ declare class AnimationSetting extends Preference {
 	/**
 	 * The base animation preset applied.
 	 */
-	preset: MotionPreset | String | NothingEnum;
+	preset: MotionPreset | string | NothingEnum;
 
 	/**
 	 * The list of rotation key frames for this animation. Can return: Ordered array containing keyFrame:Long Integer, value:Real.
@@ -60527,14 +60527,14 @@ declare class ParaStyleMappings {
 	 * Returns the ParaStyleMapping with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ParaStyleMapping;
+	item(index: number | string): ParaStyleMapping;
 
 	/**
 	 * Returns the ParaStyleMappings within the specified range.
 	 * @param from The ParaStyleMapping, index, or name at the beginning of the range.
 	 * @param to The ParaStyleMapping, index, or name at the end of the range.
 	 */
-	itemByRange(from: ParaStyleMapping | number | String, to: ParaStyleMapping | number | String): ParaStyleMapping[];
+	itemByRange(from: ParaStyleMapping | number | string, to: ParaStyleMapping | number | string): ParaStyleMapping[];
 
 	/**
 	 * Returns the last ParaStyleMapping in the collection.
@@ -60700,14 +60700,14 @@ declare class CellStyleMappings {
 	 * Returns the CellStyleMapping with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CellStyleMapping;
+	item(index: number | string): CellStyleMapping;
 
 	/**
 	 * Returns the CellStyleMappings within the specified range.
 	 * @param from The CellStyleMapping, index, or name at the beginning of the range.
 	 * @param to The CellStyleMapping, index, or name at the end of the range.
 	 */
-	itemByRange(from: CellStyleMapping | number | String, to: CellStyleMapping | number | String): CellStyleMapping[];
+	itemByRange(from: CellStyleMapping | number | string, to: CellStyleMapping | number | string): CellStyleMapping[];
 
 	/**
 	 * Returns the last CellStyleMapping in the collection.
@@ -60873,14 +60873,14 @@ declare class CharStyleMappings {
 	 * Returns the CharStyleMapping with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CharStyleMapping;
+	item(index: number | string): CharStyleMapping;
 
 	/**
 	 * Returns the CharStyleMappings within the specified range.
 	 * @param from The CharStyleMapping, index, or name at the beginning of the range.
 	 * @param to The CharStyleMapping, index, or name at the end of the range.
 	 */
-	itemByRange(from: CharStyleMapping | number | String, to: CharStyleMapping | number | String): CharStyleMapping[];
+	itemByRange(from: CharStyleMapping | number | string, to: CharStyleMapping | number | string): CharStyleMapping[];
 
 	/**
 	 * Returns the last CharStyleMapping in the collection.
@@ -61046,14 +61046,14 @@ declare class TableStyleMappings {
 	 * Returns the TableStyleMapping with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TableStyleMapping;
+	item(index: number | string): TableStyleMapping;
 
 	/**
 	 * Returns the TableStyleMappings within the specified range.
 	 * @param from The TableStyleMapping, index, or name at the beginning of the range.
 	 * @param to The TableStyleMapping, index, or name at the end of the range.
 	 */
-	itemByRange(from: TableStyleMapping | number | String, to: TableStyleMapping | number | String): TableStyleMapping[];
+	itemByRange(from: TableStyleMapping | number | string, to: TableStyleMapping | number | string): TableStyleMapping[];
 
 	/**
 	 * Returns the last TableStyleMapping in the collection.
@@ -61251,7 +61251,7 @@ declare class PreflightRules {
 	 * Returns the PreflightRule with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PreflightRule;
+	item(index: number | string): PreflightRule;
 
 	/**
 	 * Returns the PreflightRule with the specified ID.
@@ -61270,7 +61270,7 @@ declare class PreflightRules {
 	 * @param from The PreflightRule, index, or name at the beginning of the range.
 	 * @param to The PreflightRule, index, or name at the end of the range.
 	 */
-	itemByRange(from: PreflightRule | number | String, to: PreflightRule | number | String): PreflightRule[];
+	itemByRange(from: PreflightRule | number | string, to: PreflightRule | number | string): PreflightRule[];
 
 	/**
 	 * Returns the last PreflightRule in the collection.
@@ -61441,7 +61441,7 @@ declare class RuleDataObjects {
 	 * Returns the RuleDataObject with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): RuleDataObject;
+	item(index: number | string): RuleDataObject;
 
 	/**
 	 * Returns the RuleDataObject with the specified ID.
@@ -61460,7 +61460,7 @@ declare class RuleDataObjects {
 	 * @param from The RuleDataObject, index, or name at the beginning of the range.
 	 * @param to The RuleDataObject, index, or name at the end of the range.
 	 */
-	itemByRange(from: RuleDataObject | number | String, to: RuleDataObject | number | String): RuleDataObject[];
+	itemByRange(from: RuleDataObject | number | string, to: RuleDataObject | number | string): RuleDataObject[];
 
 	/**
 	 * Returns the last RuleDataObject in the collection.
@@ -61543,7 +61543,7 @@ declare class PreflightRuleInstances {
 	 * Returns the PreflightRuleInstance with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PreflightRuleInstance;
+	item(index: number | string): PreflightRuleInstance;
 
 	/**
 	 * Returns the PreflightRuleInstance with the specified ID.
@@ -61562,7 +61562,7 @@ declare class PreflightRuleInstances {
 	 * @param from The PreflightRuleInstance, index, or name at the beginning of the range.
 	 * @param to The PreflightRuleInstance, index, or name at the end of the range.
 	 */
-	itemByRange(from: PreflightRuleInstance | number | String, to: PreflightRuleInstance | number | String): PreflightRuleInstance[];
+	itemByRange(from: PreflightRuleInstance | number | string, to: PreflightRuleInstance | number | string): PreflightRuleInstance[];
 
 	/**
 	 * Returns the last PreflightRuleInstance in the collection.
@@ -61726,7 +61726,7 @@ declare class PreflightProfile {
 	 * Update the preflight profile by copying from another profile.
 	 * @param using The preflight profile to copy.
 	 */
-	update(using: String | PreflightProfile): void;
+	update(using: string | PreflightProfile): void;
 
 }
 
@@ -61775,7 +61775,7 @@ declare class PreflightProfiles {
 	 * Returns the PreflightProfile with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PreflightProfile;
+	item(index: number | string): PreflightProfile;
 
 	/**
 	 * Returns the PreflightProfile with the specified ID.
@@ -61794,7 +61794,7 @@ declare class PreflightProfiles {
 	 * @param from The PreflightProfile, index, or name at the beginning of the range.
 	 * @param to The PreflightProfile, index, or name at the end of the range.
 	 */
-	itemByRange(from: PreflightProfile | number | String, to: PreflightProfile | number | String): PreflightProfile[];
+	itemByRange(from: PreflightProfile | number | string, to: PreflightProfile | number | string): PreflightProfile[];
 
 	/**
 	 * Returns the last PreflightProfile in the collection.
@@ -61988,14 +61988,14 @@ declare class PreflightProcesses {
 	 * Returns the PreflightProcess with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PreflightProcess;
+	item(index: number | string): PreflightProcess;
 
 	/**
 	 * Returns the PreflightProcesses within the specified range.
 	 * @param from The PreflightProcess, index, or name at the beginning of the range.
 	 * @param to The PreflightProcess, index, or name at the end of the range.
 	 */
-	itemByRange(from: PreflightProcess | number | String, to: PreflightProcess | number | String): PreflightProcess[];
+	itemByRange(from: PreflightProcess | number | string, to: PreflightProcess | number | string): PreflightProcess[];
 
 	/**
 	 * Returns the last PreflightProcess in the collection.
@@ -62187,7 +62187,7 @@ declare class PreflightProfileRules {
 	 * Returns the PreflightProfileRule with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PreflightProfileRule;
+	item(index: number | string): PreflightProfileRule;
 
 	/**
 	 * Returns the PreflightProfileRule with the specified ID.
@@ -62206,7 +62206,7 @@ declare class PreflightProfileRules {
 	 * @param from The PreflightProfileRule, index, or name at the beginning of the range.
 	 * @param to The PreflightProfileRule, index, or name at the end of the range.
 	 */
-	itemByRange(from: PreflightProfileRule | number | String, to: PreflightProfileRule | number | String): PreflightProfileRule[];
+	itemByRange(from: PreflightProfileRule | number | string, to: PreflightProfileRule | number | string): PreflightProfileRule[];
 
 	/**
 	 * Returns the last PreflightProfileRule in the collection.
@@ -62308,7 +62308,7 @@ declare class StrokeStyle {
 	 * Deletes the stroke style.
 	 * @param replacingWith The stroke style to apply in place of the deleted style. .
 	 */
-	remove(replacingWith: StrokeStyle | String): void;
+	remove(replacingWith: StrokeStyle | string): void;
 
 	/**
 	 * Removes the event listener.
@@ -62369,7 +62369,7 @@ declare class StrokeStyles {
 	 * Returns the StrokeStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): StrokeStyle;
+	item(index: number | string): StrokeStyle;
 
 	/**
 	 * Returns the StrokeStyle with the specified ID.
@@ -62388,7 +62388,7 @@ declare class StrokeStyles {
 	 * @param from The StrokeStyle, index, or name at the beginning of the range.
 	 * @param to The StrokeStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: StrokeStyle | number | String, to: StrokeStyle | number | String): StrokeStyle[];
+	itemByRange(from: StrokeStyle | number | string, to: StrokeStyle | number | string): StrokeStyle[];
 
 	/**
 	 * Returns the last StrokeStyle in the collection.
@@ -62485,7 +62485,7 @@ declare class DashedStrokeStyles {
 	 * Returns the DashedStrokeStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DashedStrokeStyle;
+	item(index: number | string): DashedStrokeStyle;
 
 	/**
 	 * Returns the DashedStrokeStyle with the specified ID.
@@ -62504,7 +62504,7 @@ declare class DashedStrokeStyles {
 	 * @param from The DashedStrokeStyle, index, or name at the beginning of the range.
 	 * @param to The DashedStrokeStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: DashedStrokeStyle | number | String, to: DashedStrokeStyle | number | String): DashedStrokeStyle[];
+	itemByRange(from: DashedStrokeStyle | number | string, to: DashedStrokeStyle | number | string): DashedStrokeStyle[];
 
 	/**
 	 * Returns the last DashedStrokeStyle in the collection.
@@ -62596,7 +62596,7 @@ declare class DottedStrokeStyles {
 	 * Returns the DottedStrokeStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DottedStrokeStyle;
+	item(index: number | string): DottedStrokeStyle;
 
 	/**
 	 * Returns the DottedStrokeStyle with the specified ID.
@@ -62615,7 +62615,7 @@ declare class DottedStrokeStyles {
 	 * @param from The DottedStrokeStyle, index, or name at the beginning of the range.
 	 * @param to The DottedStrokeStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: DottedStrokeStyle | number | String, to: DottedStrokeStyle | number | String): DottedStrokeStyle[];
+	itemByRange(from: DottedStrokeStyle | number | string, to: DottedStrokeStyle | number | string): DottedStrokeStyle[];
 
 	/**
 	 * Returns the last DottedStrokeStyle in the collection.
@@ -62702,7 +62702,7 @@ declare class StripedStrokeStyles {
 	 * Returns the StripedStrokeStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): StripedStrokeStyle;
+	item(index: number | string): StripedStrokeStyle;
 
 	/**
 	 * Returns the StripedStrokeStyle with the specified ID.
@@ -62721,7 +62721,7 @@ declare class StripedStrokeStyles {
 	 * @param from The StripedStrokeStyle, index, or name at the beginning of the range.
 	 * @param to The StripedStrokeStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: StripedStrokeStyle | number | String, to: StripedStrokeStyle | number | String): StripedStrokeStyle[];
+	itemByRange(from: StripedStrokeStyle | number | string, to: StripedStrokeStyle | number | string): StripedStrokeStyle[];
 
 	/**
 	 * Returns the last StripedStrokeStyle in the collection.
@@ -62952,7 +62952,7 @@ declare class TOCStyles {
 	 * Returns the TOCStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TOCStyle;
+	item(index: number | string): TOCStyle;
 
 	/**
 	 * Returns the TOCStyle with the specified ID.
@@ -62971,7 +62971,7 @@ declare class TOCStyles {
 	 * @param from The TOCStyle, index, or name at the beginning of the range.
 	 * @param to The TOCStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: TOCStyle | number | String, to: TOCStyle | number | String): TOCStyle[];
+	itemByRange(from: TOCStyle | number | string, to: TOCStyle | number | string): TOCStyle[];
 
 	/**
 	 * Returns the last TOCStyle in the collection.
@@ -63019,7 +63019,7 @@ declare class TOCStyleEntry {
 	/**
 	 * The paragraph style applied to the TOC entry.
 	 */
-	formatStyle: ParagraphStyle | String;
+	formatStyle: ParagraphStyle | string;
 
 	/**
 	 * The index of the TOCStyleEntry within its containing object.
@@ -63049,7 +63049,7 @@ declare class TOCStyleEntry {
 	/**
 	 * The character style applied to the page number of the entry.
 	 */
-	pageNumberStyle: CharacterStyle | String;
+	pageNumberStyle: CharacterStyle | string;
 
 	/**
 	 * The parent of the TOCStyleEntry (a TOCStyle).
@@ -63069,7 +63069,7 @@ declare class TOCStyleEntry {
 	/**
 	 * The character style applied to the string separating the TOC entry text and the page numbers.
 	 */
-	separatorStyle: CharacterStyle | String;
+	separatorStyle: CharacterStyle | string;
 
 	/**
 	 * If true, sorts the entries alphabetically.
@@ -63160,7 +63160,7 @@ declare class TOCStyleEntries {
 	 * Returns the TOCStyleEntry with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TOCStyleEntry;
+	item(index: number | string): TOCStyleEntry;
 
 	/**
 	 * Returns the TOCStyleEntry with the specified name.
@@ -63173,7 +63173,7 @@ declare class TOCStyleEntries {
 	 * @param from The TOCStyleEntry, index, or name at the beginning of the range.
 	 * @param to The TOCStyleEntry, index, or name at the end of the range.
 	 */
-	itemByRange(from: TOCStyleEntry | number | String, to: TOCStyleEntry | number | String): TOCStyleEntry[];
+	itemByRange(from: TOCStyleEntry | number | string, to: TOCStyleEntry | number | string): TOCStyleEntry[];
 
 	/**
 	 * Returns the last TOCStyleEntry in the collection.
@@ -63221,7 +63221,7 @@ declare class Cell {
 	/**
 	 * The cell style applied to the cell.
 	 */
-	appliedCellStyle: CellStyle | String;
+	appliedCellStyle: CellStyle | string;
 
 	/**
 	 * The XML element associated with the Cell.
@@ -63266,7 +63266,7 @@ declare class Cell {
 	/**
 	 * The stroke type of the bottom edge.
 	 */
-	bottomEdgeStrokeType: StrokeStyle | String;
+	bottomEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the bottom edge border stroke.
@@ -63339,9 +63339,9 @@ declare class Cell {
 	readonly comboBoxes: ComboBoxes;
 
 	/**
-	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on. Can return: PageItem, String, SpecialCharacters enumerator or Array of Strings, SpecialCharacters enumerators or PageItems. Can also accept: PageItem, NothingEnum enumerator or Array of Strings, SpecialCharacters enumerators, NothingEnum enumerators or PageItems.
+	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on.
 	 */
-	contents: any;
+	contents: PageItem | string | SpecialCharacters | String[] | SpecialCharacters | PageItems | PageItem | NothingEnum | String[] | SpecialCharacters | NothingEnum | PageItems;
 
 	/**
 	 * If true, draws the diagonal line in front of cell contents.
@@ -63381,7 +63381,7 @@ declare class Cell {
 	/**
 	 * The stroke type of the diagonal line(s).
 	 */
-	diagonalLineStrokeType: StrokeStyle | String;
+	diagonalLineStrokeType: StrokeStyle | string;
 
 	/**
 	 * The diagonal line stroke weight.
@@ -63406,7 +63406,7 @@ declare class Cell {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object.
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the fill of the object.
@@ -63521,7 +63521,7 @@ declare class Cell {
 	/**
 	 * The stroke type of the inner column.
 	 */
-	innerColumnStrokeType: StrokeStyle | String;
+	innerColumnStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the inner column border stroke.
@@ -63561,7 +63561,7 @@ declare class Cell {
 	/**
 	 * The stroke type of the inner row.
 	 */
-	innerRowStrokeType: StrokeStyle | String;
+	innerRowStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the inner row border strokes.
@@ -63621,7 +63621,7 @@ declare class Cell {
 	/**
 	 * The stroke type of the left edge.
 	 */
-	leftEdgeStrokeType: StrokeStyle | String;
+	leftEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the left edge border stroke.
@@ -63771,7 +63771,7 @@ declare class Cell {
 	/**
 	 * The stroke type of the right edge.
 	 */
-	rightEdgeStrokeType: StrokeStyle | String;
+	rightEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the right edge border stroke.
@@ -63906,7 +63906,7 @@ declare class Cell {
 	/**
 	 * The stroke type of the top edge.
 	 */
-	topEdgeStrokeType: StrokeStyle | String;
+	topEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the top edge border stroke.
@@ -64143,7 +64143,7 @@ declare class Cells {
 	 * Returns the Cell with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Cell;
+	item(index: number | string): Cell;
 
 	/**
 	 * Returns the Cell with the specified ID.
@@ -64162,7 +64162,7 @@ declare class Cells {
 	 * @param from The Cell, index, or name at the beginning of the range.
 	 * @param to The Cell, index, or name at the end of the range.
 	 */
-	itemByRange(from: Cell | number | String, to: Cell | number | String): Cell[];
+	itemByRange(from: Cell | number | string, to: Cell | number | string): Cell[];
 
 	/**
 	 * Returns the last Cell in the collection.
@@ -64215,7 +64215,7 @@ declare class Table {
 	/**
 	 * The table style applied to the table.
 	 */
-	appliedTableStyle: TableStyle | String;
+	appliedTableStyle: TableStyle | string;
 
 	/**
 	 * The XML element associated with the Table.
@@ -64260,7 +64260,7 @@ declare class Table {
 	/**
 	 * The stroke type of the bottom border.
 	 */
-	bottomBorderStrokeType: StrokeStyle | String;
+	bottomBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the bottom border stroke.
@@ -64328,9 +64328,9 @@ declare class Table {
 	readonly comboBoxes: ComboBoxes;
 
 	/**
-	 * The contents to place in cells, specified as an array whose first item populates the top left cell and whose second item populates the next cell to the right, and so on until each cell in the top row is populated, at which point the next item populates the left-most cell in the second row, and so on. Note: If the array contains fewer strings than the table contains cells, the remaining cells are left blank. Can return: Array of Strings or SpecialCharacters enumerators. Can also accept: Array of Strings, SpecialCharacters enumerators or NothingEnum enumerators.
+	 * The contents to place in cells, specified as an array whose first item populates the top left cell and whose second item populates the next cell to the right, and so on until each cell in the top row is populated, at which point the next item populates the left-most cell in the second row, and so on. Note: If the array contains fewer strings than the table contains cells, the remaining cells are left blank.
 	 */
-	contents: any[];
+	contents: String[] | SpecialCharacters | String[] | SpecialCharacters | NothingEnum;
 
 	/**
 	 * If true, then the table will show collapsed in story and galley views.
@@ -64365,7 +64365,7 @@ declare class Table {
 	/**
 	 * The stroke type of columns in the second alternating strokes group.
 	 */
-	endColumnLineStyle: StrokeStyle | String;
+	endColumnLineStyle: StrokeStyle | string;
 
 	/**
 	 * The stroke color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.
@@ -64465,7 +64465,7 @@ declare class Table {
 	/**
 	 * The stroke type of rows in the second alternating strokes group.
 	 */
-	endRowStrokeType: StrokeStyle | String;
+	endRowStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.
@@ -64595,7 +64595,7 @@ declare class Table {
 	/**
 	 * The stroke type of the left border.
 	 */
-	leftBorderStrokeType: StrokeStyle | String;
+	leftBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the left border stroke.
@@ -64690,7 +64690,7 @@ declare class Table {
 	/**
 	 * The stroke type of the right border.
 	 */
-	rightBorderStrokeType: StrokeStyle | String;
+	rightBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the right border stroke.
@@ -64830,7 +64830,7 @@ declare class Table {
 	/**
 	 * The stroke type of columns in the first alternating strokes group.
 	 */
-	startColumnStrokeType: StrokeStyle | String;
+	startColumnStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.
@@ -64895,7 +64895,7 @@ declare class Table {
 	/**
 	 * The stroke type of rows in the first alternating strokes group.
 	 */
-	startRowStrokeType: StrokeStyle | String;
+	startRowStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.
@@ -64985,7 +64985,7 @@ declare class Table {
 	/**
 	 * The stroke type of the top border.
 	 */
-	topBorderStrokeType: StrokeStyle | String;
+	topBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the table's top border stroke.
@@ -65193,7 +65193,7 @@ declare class Tables {
 	 * Returns the Table with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Table;
+	item(index: number | string): Table;
 
 	/**
 	 * Returns the Table with the specified ID.
@@ -65212,7 +65212,7 @@ declare class Tables {
 	 * @param from The Table, index, or name at the beginning of the range.
 	 * @param to The Table, index, or name at the end of the range.
 	 */
-	itemByRange(from: Table | number | String, to: Table | number | String): Table[];
+	itemByRange(from: Table | number | string, to: Table | number | string): Table[];
 
 	/**
 	 * Returns the last Table in the collection.
@@ -65285,7 +65285,7 @@ declare class Column {
 	/**
 	 * The stroke type of the bottom edge.
 	 */
-	bottomEdgeStrokeType: StrokeStyle | String;
+	bottomEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the bottom edge border stroke.
@@ -65328,9 +65328,9 @@ declare class Column {
 	readonly columns: Columns;
 
 	/**
-	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on. Can return: PageItem, String, SpecialCharacters enumerator or Array of Strings, SpecialCharacters enumerators or PageItems. Can also accept: PageItem, NothingEnum enumerator or Array of Strings, SpecialCharacters enumerators, NothingEnum enumerators or PageItems.
+	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on.
 	 */
-	contents: any;
+	contents: PageItem | string | SpecialCharacters | String[] | SpecialCharacters | PageItems | PageItem | NothingEnum | String[] | SpecialCharacters | NothingEnum | PageItems;
 
 	/**
 	 * If true, draws the diagonal line in front of cell contents.
@@ -65370,7 +65370,7 @@ declare class Column {
 	/**
 	 * The stroke type of the diagonal line(s).
 	 */
-	diagonalLineStrokeType: StrokeStyle | String;
+	diagonalLineStrokeType: StrokeStyle | string;
 
 	/**
 	 * The diagonal line stroke weight.
@@ -65390,7 +65390,7 @@ declare class Column {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object.
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the fill of the object.
@@ -65480,7 +65480,7 @@ declare class Column {
 	/**
 	 * The stroke type of the inner column.
 	 */
-	innerColumnStrokeType: StrokeStyle | String;
+	innerColumnStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the inner column border stroke.
@@ -65520,7 +65520,7 @@ declare class Column {
 	/**
 	 * The stroke type of the inner row.
 	 */
-	innerRowStrokeType: StrokeStyle | String;
+	innerRowStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the inner row border strokes.
@@ -65570,7 +65570,7 @@ declare class Column {
 	/**
 	 * The stroke type of the left edge.
 	 */
-	leftEdgeStrokeType: StrokeStyle | String;
+	leftEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the left edge border stroke.
@@ -65670,7 +65670,7 @@ declare class Column {
 	/**
 	 * The stroke type of the right edge.
 	 */
-	rightEdgeStrokeType: StrokeStyle | String;
+	rightEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the right edge border stroke.
@@ -65760,7 +65760,7 @@ declare class Column {
 	/**
 	 * The stroke type of the top edge.
 	 */
-	topEdgeStrokeType: StrokeStyle | String;
+	topEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the top edge border stroke.
@@ -65971,7 +65971,7 @@ declare class Columns {
 	 * Returns the Column with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Column;
+	item(index: number | string): Column;
 
 	/**
 	 * Returns the Column with the specified name.
@@ -65984,7 +65984,7 @@ declare class Columns {
 	 * @param from The Column, index, or name at the beginning of the range.
 	 * @param to The Column, index, or name at the end of the range.
 	 */
-	itemByRange(from: Column | number | String, to: Column | number | String): Column[];
+	itemByRange(from: Column | number | string, to: Column | number | string): Column[];
 
 	/**
 	 * Returns the last Column in the collection.
@@ -66057,7 +66057,7 @@ declare class Row {
 	/**
 	 * The stroke type of the bottom edge.
 	 */
-	bottomEdgeStrokeType: StrokeStyle | String;
+	bottomEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the bottom edge border stroke.
@@ -66100,9 +66100,9 @@ declare class Row {
 	readonly columns: Columns;
 
 	/**
-	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on. Can return: PageItem, String, SpecialCharacters enumerator or Array of Strings, SpecialCharacters enumerators or PageItems. Can also accept: PageItem, NothingEnum enumerator or Array of Strings, SpecialCharacters enumerators, NothingEnum enumerators or PageItems.
+	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on.
 	 */
-	contents: any;
+	contents: PageItem | string | SpecialCharacters | String[] | SpecialCharacters | PageItems | PageItem | NothingEnum | String[] | SpecialCharacters | NothingEnum | PageItems;
 
 	/**
 	 * If true, draws the diagonal line in front of cell contents.
@@ -66142,7 +66142,7 @@ declare class Row {
 	/**
 	 * The stroke type of the diagonal line(s).
 	 */
-	diagonalLineStrokeType: StrokeStyle | String;
+	diagonalLineStrokeType: StrokeStyle | string;
 
 	/**
 	 * The diagonal line stroke weight.
@@ -66162,7 +66162,7 @@ declare class Row {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object.
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the fill of the object.
@@ -66252,7 +66252,7 @@ declare class Row {
 	/**
 	 * The stroke type of the inner column.
 	 */
-	innerColumnStrokeType: StrokeStyle | String;
+	innerColumnStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the inner column border stroke.
@@ -66292,7 +66292,7 @@ declare class Row {
 	/**
 	 * The stroke type of the inner row.
 	 */
-	innerRowStrokeType: StrokeStyle | String;
+	innerRowStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the inner row border strokes.
@@ -66342,7 +66342,7 @@ declare class Row {
 	/**
 	 * The stroke type of the left edge.
 	 */
-	leftEdgeStrokeType: StrokeStyle | String;
+	leftEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the left edge border stroke.
@@ -66442,7 +66442,7 @@ declare class Row {
 	/**
 	 * The stroke type of the right edge.
 	 */
-	rightEdgeStrokeType: StrokeStyle | String;
+	rightEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the right edge border stroke.
@@ -66532,7 +66532,7 @@ declare class Row {
 	/**
 	 * The stroke type of the top edge.
 	 */
-	topEdgeStrokeType: StrokeStyle | String;
+	topEdgeStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the top edge border stroke.
@@ -66743,7 +66743,7 @@ declare class Rows {
 	 * Returns the Row with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Row;
+	item(index: number | string): Row;
 
 	/**
 	 * Returns the Row with the specified name.
@@ -66756,7 +66756,7 @@ declare class Rows {
 	 * @param from The Row, index, or name at the beginning of the range.
 	 * @param to The Row, index, or name at the end of the range.
 	 */
-	itemByRange(from: Row | number | String, to: Row | number | String): Row[];
+	itemByRange(from: Row | number | string, to: Row | number | string): Row[];
 
 	/**
 	 * Returns the last Row in the collection.
@@ -66794,12 +66794,12 @@ declare class TableStyle {
 	/**
 	 * The style that this style is based on.
 	 */
-	basedOn: TableStyle | String;
+	basedOn: TableStyle | string;
 
 	/**
 	 * The cell style of the body region.
 	 */
-	bodyRegionCellStyle: CellStyle | String;
+	bodyRegionCellStyle: CellStyle | string;
 
 	/**
 	 * The color, specified as a swatch (color, gradient, tint, or mixed ink), of the bottom border stroke.
@@ -66834,7 +66834,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of the bottom border.
 	 */
-	bottomBorderStrokeType: StrokeStyle | String;
+	bottomBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the bottom border stroke.
@@ -66879,7 +66879,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of columns in the second alternating strokes group.
 	 */
-	endColumnLineStyle: StrokeStyle | String;
+	endColumnLineStyle: StrokeStyle | string;
 
 	/**
 	 * The stroke color, specified as a swatch (color, gradient, tint, or mixed ink), of column borders in the second alternating column strokes group. Note: Valid when end column stroke count is 1 or greater.
@@ -66979,7 +66979,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of rows in the second alternating strokes group.
 	 */
-	endRowStrokeType: StrokeStyle | String;
+	endRowStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of row borders in the second alternating row strokes group. Note: Valid when end row stroke count is 1 or greater.
@@ -66999,7 +66999,7 @@ declare class TableStyle {
 	/**
 	 * The cell style of the footer region.
 	 */
-	footerRegionCellStyle: CellStyle | String;
+	footerRegionCellStyle: CellStyle | string;
 
 	/**
 	 * If true, uses the cell style of the body region for the footer region.
@@ -67029,7 +67029,7 @@ declare class TableStyle {
 	/**
 	 * The cell style of the header region.
 	 */
-	headerRegionCellStyle: CellStyle | String;
+	headerRegionCellStyle: CellStyle | string;
 
 	/**
 	 * If true, use the cell style of the body region for the header region.
@@ -67089,7 +67089,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of the left border.
 	 */
-	leftBorderStrokeType: StrokeStyle | String;
+	leftBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the left border stroke.
@@ -67099,7 +67099,7 @@ declare class TableStyle {
 	/**
 	 * The cell style of the left column region.
 	 */
-	leftColumnRegionCellStyle: CellStyle | String;
+	leftColumnRegionCellStyle: CellStyle | string;
 
 	/**
 	 * If true, uses the cell style of the body region for the left column region.
@@ -67154,7 +67154,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of the right border.
 	 */
-	rightBorderStrokeType: StrokeStyle | String;
+	rightBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the right border stroke.
@@ -67164,7 +67164,7 @@ declare class TableStyle {
 	/**
 	 * The cell style of the right column region.
 	 */
-	rightColumnRegionCellStyle: CellStyle | String;
+	rightColumnRegionCellStyle: CellStyle | string;
 
 	/**
 	 * If true, uses the cell style of the body region for the right column region.
@@ -67279,7 +67279,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of columns in the first alternating strokes group.
 	 */
-	startColumnStrokeType: StrokeStyle | String;
+	startColumnStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of column borders in the first alternating column strokes group. Note: Valid when start column stroke count is 1 or greater.
@@ -67344,7 +67344,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of rows in the first alternating strokes group.
 	 */
-	startRowStrokeType: StrokeStyle | String;
+	startRowStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of row borders in the first alternating row strokes group. Note: Valid when start row stroke count is 1 or greater.
@@ -67409,7 +67409,7 @@ declare class TableStyle {
 	/**
 	 * The stroke type of the top border.
 	 */
-	topBorderStrokeType: StrokeStyle | String;
+	topBorderStrokeType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the table's top border stroke.
@@ -67525,7 +67525,7 @@ declare class TableStyles {
 	 * Returns the TableStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TableStyle;
+	item(index: number | string): TableStyle;
 
 	/**
 	 * Returns the TableStyle with the specified ID.
@@ -67544,7 +67544,7 @@ declare class TableStyles {
 	 * @param from The TableStyle, index, or name at the beginning of the range.
 	 * @param to The TableStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: TableStyle | number | String, to: TableStyle | number | String): TableStyle[];
+	itemByRange(from: TableStyle | number | string, to: TableStyle | number | string): TableStyle[];
 
 	/**
 	 * Returns the last TableStyle in the collection.
@@ -67748,7 +67748,7 @@ declare class TableStyleGroups {
 	 * Returns the TableStyleGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TableStyleGroup;
+	item(index: number | string): TableStyleGroup;
 
 	/**
 	 * Returns the TableStyleGroup with the specified ID.
@@ -67767,7 +67767,7 @@ declare class TableStyleGroups {
 	 * @param from The TableStyleGroup, index, or name at the beginning of the range.
 	 * @param to The TableStyleGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: TableStyleGroup | number | String, to: TableStyleGroup | number | String): TableStyleGroup[];
+	itemByRange(from: TableStyleGroup | number | string, to: TableStyleGroup | number | string): TableStyleGroup[];
 
 	/**
 	 * Returns the last TableStyleGroup in the collection.
@@ -67803,14 +67803,14 @@ declare class TableStyleGroups {
  */
 declare class CellStyle {
 	/**
-	 * The paragraph style applied to the text. Can return: ParagraphStyle or NothingEnum enumerator. Can also accept: String.
+	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: any;
+	appliedParagraphStyle: ParagraphStyle | NothingEnum | string;
 
 	/**
 	 * The style that this style is based on.
 	 */
-	basedOn: CellStyle | String;
+	basedOn: CellStyle | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the bottom edge border stroke.
@@ -67825,7 +67825,7 @@ declare class CellStyle {
 	/**
 	 * If true, the gap color of the bottom edge border stroke will overprint. Note: Not valid when bottom edge stroke type is solid.
 	 */
-	bottomEdgeStrokeGapOverprint: Boolean | NothingEnum;
+	bottomEdgeStrokeGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the bottom edge border stroke gap color. (Range: 0 to 100) Note: Not valid when bottom edge stroke type is solid.
@@ -67835,7 +67835,7 @@ declare class CellStyle {
 	/**
 	 * If true, the bottom edge border stroke will overprint.
 	 */
-	bottomEdgeStrokeOverprint: Boolean | NothingEnum;
+	bottomEdgeStrokeOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the bottom edge border stroke.
@@ -67843,9 +67843,9 @@ declare class CellStyle {
 	bottomEdgeStrokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke type of the bottom edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
+	 * The stroke type of the bottom edge.
 	 */
-	bottomEdgeStrokeType: any;
+	bottomEdgeStrokeType: StrokeStyle | NothingEnum | string;
 
 	/**
 	 * The stroke weight of the bottom edge border stroke.
@@ -67860,22 +67860,22 @@ declare class CellStyle {
 	/**
 	 * If true, clips the cell's content to width and height of the cell. The API has been deprecated. Use ClipContentsToTextCell or ClipContentsToPageItemCell.
 	 */
-	clipContentToCell: Boolean | NothingEnum;
+	clipContentToCell: boolean | NothingEnum;
 
 	/**
 	 * If true, clips the graphic cell's content to width and height of the cell.
 	 */
-	clipContentToGraphicCell: Boolean | NothingEnum;
+	clipContentToGraphicCell: boolean | NothingEnum;
 
 	/**
 	 * If true, clips the text cell's content to width and height of the cell.
 	 */
-	clipContentToTextCell: Boolean | NothingEnum;
+	clipContentToTextCell: boolean | NothingEnum;
 
 	/**
 	 * If true, draws the diagonal line in front of cell contents.
 	 */
-	diagonalLineInFront: Boolean | NothingEnum;
+	diagonalLineInFront: boolean | NothingEnum;
 
 	/**
 	 * The diagonal line color, specified as a swatch.
@@ -67890,7 +67890,7 @@ declare class CellStyle {
 	/**
 	 * If true, the stroke gap of the diagonal line will overprint. Note: Not valid when diagonal line stroke type is solid.
 	 */
-	diagonalLineStrokeGapOverprint: Boolean | NothingEnum;
+	diagonalLineStrokeGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the diagonal line stroke gap color. Note: Not valid when diagonal line stroke type is solid.
@@ -67900,7 +67900,7 @@ declare class CellStyle {
 	/**
 	 * If true, the diagonal line stroke will overprint.
 	 */
-	diagonalLineStrokeOverprint: Boolean | NothingEnum;
+	diagonalLineStrokeOverprint: boolean | NothingEnum;
 
 	/**
 	 * The diagonal line tint (as a percentage). (Range: 0 to 100).
@@ -67908,9 +67908,9 @@ declare class CellStyle {
 	diagonalLineStrokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke type of the diagonal line(s). Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
+	 * The stroke type of the diagonal line(s).
 	 */
-	diagonalLineStrokeType: any;
+	diagonalLineStrokeType: StrokeStyle | NothingEnum | string;
 
 	/**
 	 * The diagonal line stroke weight.
@@ -67928,9 +67928,9 @@ declare class CellStyle {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object. Can return: Swatch or NothingEnum enumerator. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the object.
 	 */
-	fillColor: any;
+	fillColor: Swatch | NothingEnum | string;
 
 	/**
 	 * The tint (as a percentage) of the fill of the object.
@@ -68010,7 +68010,7 @@ declare class CellStyle {
 	/**
 	 * If true, the gap color of the left edge border stroke will overprint. Note: Not valid when left edge stroke type is solid.
 	 */
-	leftEdgeStrokeGapOverprint: Boolean | NothingEnum;
+	leftEdgeStrokeGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the left edge border stroke gap color. (Range: 0 to 100) Note: Not valid when left edge stroke type is solid.
@@ -68020,7 +68020,7 @@ declare class CellStyle {
 	/**
 	 * If true, the left edge border stroke will overprint.
 	 */
-	leftEdgeStrokeOverprint: Boolean | NothingEnum;
+	leftEdgeStrokeOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the left edge border stroke. (Range: 0 to 100).
@@ -68028,9 +68028,9 @@ declare class CellStyle {
 	leftEdgeStrokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke type of the left edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
+	 * The stroke type of the left edge.
 	 */
-	leftEdgeStrokeType: any;
+	leftEdgeStrokeType: StrokeStyle | NothingEnum | string;
 
 	/**
 	 * The stroke weight of the left edge border stroke.
@@ -68055,7 +68055,7 @@ declare class CellStyle {
 	/**
 	 * If true, the fill of the object will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified.
@@ -68085,7 +68085,7 @@ declare class CellStyle {
 	/**
 	 * If true, the gap color of the right edge border stroke will overprint. Note: Not valid when right edge stroke type is solid.
 	 */
-	rightEdgeStrokeGapOverprint: Boolean | NothingEnum;
+	rightEdgeStrokeGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the right edge border stroke gap color. (Range: 0 to 100) Note: Not valid when right edge stroke type is solid.
@@ -68095,7 +68095,7 @@ declare class CellStyle {
 	/**
 	 * If true, the right edge border stroke will overprint.
 	 */
-	rightEdgeStrokeOverprint: Boolean | NothingEnum;
+	rightEdgeStrokeOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the right edge border stroke. (Range: 0 to 100).
@@ -68103,9 +68103,9 @@ declare class CellStyle {
 	rightEdgeStrokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke type of the right edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
+	 * The stroke type of the right edge.
 	 */
-	rightEdgeStrokeType: any;
+	rightEdgeStrokeType: StrokeStyle | NothingEnum | string;
 
 	/**
 	 * The stroke weight of the right edge border stroke.
@@ -68155,7 +68155,7 @@ declare class CellStyle {
 	/**
 	 * If true, the gap color of the top edge border stroke will overprint. Note: Not valid when top edge stroke type is solid. .
 	 */
-	topEdgeStrokeGapOverprint: Boolean | NothingEnum;
+	topEdgeStrokeGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the top edge border stroke gap color. (Range: 0 to 100) Note: Not valid when top edge stroke type is solid.
@@ -68165,7 +68165,7 @@ declare class CellStyle {
 	/**
 	 * If true, the top edge border stroke will overprint.
 	 */
-	topEdgeStrokeOverprint: Boolean | NothingEnum;
+	topEdgeStrokeOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the top edge border stroke. (Range: 0 to 100).
@@ -68173,9 +68173,9 @@ declare class CellStyle {
 	topEdgeStrokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke type of the top edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
+	 * The stroke type of the top edge.
 	 */
-	topEdgeStrokeType: any;
+	topEdgeStrokeType: StrokeStyle | NothingEnum | string;
 
 	/**
 	 * The stroke weight of the top edge border stroke.
@@ -68190,12 +68190,12 @@ declare class CellStyle {
 	/**
 	 * If true, draws a diagonal line starting from the top left.
 	 */
-	topLeftDiagonalLine: Boolean | NothingEnum;
+	topLeftDiagonalLine: boolean | NothingEnum;
 
 	/**
 	 * If true, draws a diagonal line starting from the top right.
 	 */
-	topRightDiagonalLine: Boolean | NothingEnum;
+	topRightDiagonalLine: boolean | NothingEnum;
 
 	/**
 	 * The vertical alignment of cell.
@@ -68311,7 +68311,7 @@ declare class CellStyles {
 	 * Returns the CellStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CellStyle;
+	item(index: number | string): CellStyle;
 
 	/**
 	 * Returns the CellStyle with the specified ID.
@@ -68330,7 +68330,7 @@ declare class CellStyles {
 	 * @param from The CellStyle, index, or name at the beginning of the range.
 	 * @param to The CellStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: CellStyle | number | String, to: CellStyle | number | String): CellStyle[];
+	itemByRange(from: CellStyle | number | string, to: CellStyle | number | string): CellStyle[];
 
 	/**
 	 * Returns the last CellStyle in the collection.
@@ -68534,7 +68534,7 @@ declare class CellStyleGroups {
 	 * Returns the CellStyleGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CellStyleGroup;
+	item(index: number | string): CellStyleGroup;
 
 	/**
 	 * Returns the CellStyleGroup with the specified ID.
@@ -68553,7 +68553,7 @@ declare class CellStyleGroups {
 	 * @param from The CellStyleGroup, index, or name at the beginning of the range.
 	 * @param to The CellStyleGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: CellStyleGroup | number | String, to: CellStyleGroup | number | String): CellStyleGroup[];
+	itemByRange(from: CellStyleGroup | number | string, to: CellStyleGroup | number | string): CellStyleGroup[];
 
 	/**
 	 * Returns the last CellStyleGroup in the collection.
@@ -68591,7 +68591,7 @@ declare class NestedLineStyle {
 	/**
 	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle | String;
+	appliedCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * A collection of event listeners.
@@ -68716,14 +68716,14 @@ declare class NestedLineStyles {
 	 * Returns the NestedLineStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): NestedLineStyle;
+	item(index: number | string): NestedLineStyle;
 
 	/**
 	 * Returns the NestedLineStyles within the specified range.
 	 * @param from The NestedLineStyle, index, or name at the beginning of the range.
 	 * @param to The NestedLineStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: NestedLineStyle | number | String, to: NestedLineStyle | number | String): NestedLineStyle[];
+	itemByRange(from: NestedLineStyle | number | string, to: NestedLineStyle | number | string): NestedLineStyle[];
 
 	/**
 	 * Returns the last NestedLineStyle in the collection.
@@ -68761,7 +68761,7 @@ declare class NestedGrepStyle {
 	/**
 	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle | String;
+	appliedCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * A collection of event listeners.
@@ -68881,14 +68881,14 @@ declare class NestedGrepStyles {
 	 * Returns the NestedGrepStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): NestedGrepStyle;
+	item(index: number | string): NestedGrepStyle;
 
 	/**
 	 * Returns the NestedGrepStyles within the specified range.
 	 * @param from The NestedGrepStyle, index, or name at the beginning of the range.
 	 * @param to The NestedGrepStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: NestedGrepStyle | number | String, to: NestedGrepStyle | number | String): NestedGrepStyle[];
+	itemByRange(from: NestedGrepStyle | number | string, to: NestedGrepStyle | number | string): NestedGrepStyle[];
 
 	/**
 	 * Returns the last NestedGrepStyle in the collection.
@@ -68946,7 +68946,7 @@ declare class Text {
 	/**
 	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle | String;
+	appliedCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The applied conditions.
@@ -68956,12 +68956,12 @@ declare class Text {
 	/**
 	 * The font applied to the Text, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
-	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
+	 * The language of the text.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: LanguageWithVendors | Language | string;
 
 	/**
 	 * The applied character styles dictated by nested styles.
@@ -68971,12 +68971,12 @@ declare class Text {
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String;
+	appliedNumberingList: NumberingList | string;
 
 	/**
 	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle | String;
+	appliedParagraphStyle: ParagraphStyle | string;
 
 	/**
 	 * The maximum ascent of any character in the text.
@@ -69006,7 +69006,7 @@ declare class Text {
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle;
+	balanceRaggedLines: boolean | BalanceLinesStyle;
 
 	/**
 	 * The vertical offset of the text.
@@ -69036,7 +69036,7 @@ declare class Text {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String;
+	bulletsCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The text after string expression for bullets.
@@ -69101,7 +69101,7 @@ declare class Text {
 	/**
 	 * The contents of the text.
 	 */
-	contents: String | SpecialCharacters;
+	contents: string | SpecialCharacters;
 
 	/**
 	 * The maximum descent of any character in the text.
@@ -69146,7 +69146,7 @@ declare class Text {
 	/**
 	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle | String;
+	dropCapStyle: CharacterStyle | string;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -69186,7 +69186,7 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the Text. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the Text. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -69426,12 +69426,12 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String;
+	kentenFillColor: Swatch | string;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String;
+	kentenFont: Font | string;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -69441,7 +69441,7 @@ declare class Text {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -69471,7 +69471,7 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String;
+	kentenStrokeColor: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -69521,7 +69521,7 @@ declare class Text {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String;
+	kinsokuSet: KinsokuTable | KinsokuSet | string;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -69611,7 +69611,7 @@ declare class Text {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults;
 
 	/**
 	 * A collection of multi-state objects.
@@ -69656,7 +69656,7 @@ declare class Text {
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String;
+	numberingCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * Continue the numbering at this level.
@@ -69671,7 +69671,7 @@ declare class Text {
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String;
+	numberingFormat: NumberingStyle | string;
 
 	/**
 	 * The level of the paragraph.
@@ -69846,7 +69846,7 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: Swatch | String;
+	paragraphShadingColor: Swatch | string;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -70001,7 +70001,7 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String;
+	rubyFill: Swatch | string;
 
 	/**
 	 * If true, ruby is on.
@@ -70011,7 +70011,7 @@ declare class Text {
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String;
+	rubyFont: Font | string;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -70021,7 +70021,7 @@ declare class Text {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -70071,7 +70071,7 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String;
+	rubyStroke: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -70121,12 +70121,12 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: Swatch | String;
+	ruleAboveColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: Swatch | String;
+	ruleAboveGapColor: Swatch | string;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -70171,7 +70171,7 @@ declare class Text {
 	/**
 	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: StrokeStyle | String;
+	ruleAboveType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -70186,12 +70186,12 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: Swatch | String;
+	ruleBelowColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: Swatch | String;
+	ruleBelowGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -70236,7 +70236,7 @@ declare class Text {
 	/**
 	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: StrokeStyle | String;
+	ruleBelowType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -70336,12 +70336,12 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String;
+	strikeThroughColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String;
+	strikeThroughGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -70371,7 +70371,7 @@ declare class Text {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String;
+	strikeThroughType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -70391,7 +70391,7 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the Text.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the Text. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -70496,12 +70496,12 @@ declare class Text {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String;
+	underlineColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String;
+	underlineGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -70531,7 +70531,7 @@ declare class Text {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String;
+	underlineType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -70630,7 +70630,7 @@ declare class Text {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	asynchronousExportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
+	asynchronousExportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
 
 	/**
 	 * Tag the object or the parent story using default tags defined in XML preference.
@@ -70699,7 +70699,7 @@ declare class Text {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
-	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createEmailQRCode(emailAddress: string, subject: string, body: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create Hyperlink QR Code on the page item or document
@@ -70707,7 +70707,7 @@ declare class Text {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
-	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createHyperlinkQRCode(urlLink: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Converts text to outlines. Each line of text becomes a polygon object. When the converted text is a single letter that has no internal spaces or detached parts, the polygon contains only a single path. Note: To determine whether a font allows the creation of outlines, see allow outlines.
@@ -70721,7 +70721,7 @@ declare class Text {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
-	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createPlainTextQRCode(plainText: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create thumbnail for selected text using the applied style and overrides with the given properties.
@@ -70741,7 +70741,7 @@ declare class Text {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
-	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createTextMsgQRCode(cellNumber: string, textMessage: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Create thumbnail for selected text with the given properties.
@@ -70771,7 +70771,7 @@ declare class Text {
 	 * @param qrCodeSwatch Swatch to be applied on generated QR Code Graphic .
 	 * @param withProperties Initial values for properties of the new Text. Above parameters can also be passed as properties 
 	 */
-	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | String, withProperties: string[]): void;
+	createVCardQRCode(firstName: string, lastName: string, jobTitle: string, cellPhone: string, phone: string, email: string, organisation: string, streetAddress: string, city: string, adrState: string, country: string, postalCode: string, website: string, qrCodeSwatch: Swatch | string, withProperties: string[]): void;
 
 	/**
 	 * Duplicates the text in the specified location.
@@ -70789,7 +70789,7 @@ declare class Text {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	exportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
+	exportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
 
 	/**
 	 * Finds glyphs that match the find what value.
@@ -70933,14 +70933,14 @@ declare class Texts {
 	 * Returns the Text with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Text;
+	item(index: number | string): Text;
 
 	/**
 	 * Returns the Texts within the specified range.
 	 * @param from The Text, index, or name at the beginning of the range.
 	 * @param to The Text, index, or name at the end of the range.
 	 */
-	itemByRange(from: Text | number | String, to: Text | number | String): Text[];
+	itemByRange(from: Text | number | string, to: Text | number | string): Text[];
 
 	/**
 	 * Returns the last Text in the collection.
@@ -71016,14 +71016,14 @@ declare class Characters {
 	 * Returns the Character with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Character;
+	item(index: number | string): Character;
 
 	/**
 	 * Returns the Characters within the specified range.
 	 * @param from The Character, index, or name at the beginning of the range.
 	 * @param to The Character, index, or name at the end of the range.
 	 */
-	itemByRange(from: Character | number | String, to: Character | number | String): Character[];
+	itemByRange(from: Character | number | string, to: Character | number | string): Character[];
 
 	/**
 	 * Returns the last Character in the collection.
@@ -71099,14 +71099,14 @@ declare class Words {
 	 * Returns the Word with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Word;
+	item(index: number | string): Word;
 
 	/**
 	 * Returns the Words within the specified range.
 	 * @param from The Word, index, or name at the beginning of the range.
 	 * @param to The Word, index, or name at the end of the range.
 	 */
-	itemByRange(from: Word | number | String, to: Word | number | String): Word[];
+	itemByRange(from: Word | number | string, to: Word | number | string): Word[];
 
 	/**
 	 * Returns the last Word in the collection.
@@ -71182,14 +71182,14 @@ declare class Lines {
 	 * Returns the Line with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Line;
+	item(index: number | string): Line;
 
 	/**
 	 * Returns the Lines within the specified range.
 	 * @param from The Line, index, or name at the beginning of the range.
 	 * @param to The Line, index, or name at the end of the range.
 	 */
-	itemByRange(from: Line | number | String, to: Line | number | String): Line[];
+	itemByRange(from: Line | number | string, to: Line | number | string): Line[];
 
 	/**
 	 * Returns the last Line in the collection.
@@ -71265,14 +71265,14 @@ declare class TextColumns {
 	 * Returns the TextColumn with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextColumn;
+	item(index: number | string): TextColumn;
 
 	/**
 	 * Returns the TextColumns within the specified range.
 	 * @param from The TextColumn, index, or name at the beginning of the range.
 	 * @param to The TextColumn, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextColumn | number | String, to: TextColumn | number | String): TextColumn[];
+	itemByRange(from: TextColumn | number | string, to: TextColumn | number | string): TextColumn[];
 
 	/**
 	 * Returns the last TextColumn in the collection.
@@ -71358,14 +71358,14 @@ declare class Paragraphs {
 	 * Returns the Paragraph with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Paragraph;
+	item(index: number | string): Paragraph;
 
 	/**
 	 * Returns the Paragraphs within the specified range.
 	 * @param from The Paragraph, index, or name at the beginning of the range.
 	 * @param to The Paragraph, index, or name at the end of the range.
 	 */
-	itemByRange(from: Paragraph | number | String, to: Paragraph | number | String): Paragraph[];
+	itemByRange(from: Paragraph | number | string, to: Paragraph | number | string): Paragraph[];
 
 	/**
 	 * Returns the last Paragraph in the collection.
@@ -71441,14 +71441,14 @@ declare class TextStyleRanges {
 	 * Returns the TextStyleRange with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextStyleRange;
+	item(index: number | string): TextStyleRange;
 
 	/**
 	 * Returns the TextStyleRanges within the specified range.
 	 * @param from The TextStyleRange, index, or name at the beginning of the range.
 	 * @param to The TextStyleRange, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextStyleRange | number | String, to: TextStyleRange | number | String): TextStyleRange[];
+	itemByRange(from: TextStyleRange | number | string, to: TextStyleRange | number | string): TextStyleRange[];
 
 	/**
 	 * Returns the last TextStyleRange in the collection.
@@ -71524,14 +71524,14 @@ declare class InsertionPoints {
 	 * Returns the InsertionPoint with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): InsertionPoint;
+	item(index: number | string): InsertionPoint;
 
 	/**
 	 * Returns the InsertionPoints within the specified range.
 	 * @param from The InsertionPoint, index, or name at the beginning of the range.
 	 * @param to The InsertionPoint, index, or name at the end of the range.
 	 */
-	itemByRange(from: InsertionPoint | number | String, to: InsertionPoint | number | String): InsertionPoint[];
+	itemByRange(from: InsertionPoint | number | string, to: InsertionPoint | number | string): InsertionPoint[];
 
 	/**
 	 * Returns the last InsertionPoint in the collection.
@@ -71604,7 +71604,7 @@ declare class TextFrame extends PageItem {
 	/**
 	 * The contents of the text frame.
 	 */
-	contents: String | TextFrameContents | SpecialCharacters;
+	contents: string | TextFrameContents | SpecialCharacters;
 
 	/**
 	 * The last text frame in the thread.
@@ -71667,9 +71667,9 @@ declare class TextFrame extends PageItem {
 	readonly multiStateObjects: MultiStateObjects;
 
 	/**
-	 * The next text frame in the thread. Can return: TextFrame or TextPath. Can also accept: NothingEnum enumerator.
+	 * The next text frame in the thread.
 	 */
-	nextTextFrame: any;
+	nextTextFrame: TextFrame | TextPath | NothingEnum;
 
 	/**
 	 * A collection of notes.
@@ -71717,9 +71717,9 @@ declare class TextFrame extends PageItem {
 	readonly polygons: Polygons;
 
 	/**
-	 * The previous text frame in the thread. Can return: TextFrame or TextPath. Can also accept: NothingEnum enumerator.
+	 * The previous text frame in the thread.
 	 */
-	previousTextFrame: any;
+	previousTextFrame: TextFrame | TextPath | NothingEnum;
 
 	/**
 	 * A collection of radio buttons.
@@ -71980,7 +71980,7 @@ declare class TextFrames {
 	 * Returns the TextFrame with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextFrame;
+	item(index: number | string): TextFrame;
 
 	/**
 	 * Returns the TextFrame with the specified ID.
@@ -71999,7 +71999,7 @@ declare class TextFrames {
 	 * @param from The TextFrame, index, or name at the beginning of the range.
 	 * @param to The TextFrame, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextFrame | number | String, to: TextFrame | number | String): TextFrame[];
+	itemByRange(from: TextFrame | number | string, to: TextFrame | number | string): TextFrame[];
 
 	/**
 	 * Returns the last TextFrame in the collection.
@@ -72067,17 +72067,17 @@ declare class Story {
 	/**
 	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle | String;
+	appliedCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The font applied to the Story, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
-	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
+	 * The language of the text.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: LanguageWithVendors | Language | string;
 
 	/**
 	 * The named grid in use.
@@ -72092,12 +72092,12 @@ declare class Story {
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String;
+	appliedNumberingList: NumberingList | string;
 
 	/**
 	 * The paragraph style applied to the text.
 	 */
-	appliedParagraphStyle: ParagraphStyle | String;
+	appliedParagraphStyle: ParagraphStyle | string;
 
 	/**
 	 * The XML element associated with the Story.
@@ -72122,7 +72122,7 @@ declare class Story {
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle;
+	balanceRaggedLines: boolean | BalanceLinesStyle;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -72147,7 +72147,7 @@ declare class Story {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String;
+	bulletsCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The text after string expression for bullets.
@@ -72227,7 +72227,7 @@ declare class Story {
 	/**
 	 * The contents of the text.
 	 */
-	contents: String | SpecialCharacters;
+	contents: string | SpecialCharacters;
 
 	/**
 	 * The desired width (as a percentage) of individual characters. (Range: 50 to 200)
@@ -72267,7 +72267,7 @@ declare class Story {
 	/**
 	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle | String;
+	dropCapStyle: CharacterStyle | string;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -72297,7 +72297,7 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the Story. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the Story. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -72557,12 +72557,12 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String;
+	kentenFillColor: Swatch | string;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String;
+	kentenFont: Font | string;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -72572,7 +72572,7 @@ declare class Story {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -72602,7 +72602,7 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String;
+	kentenStrokeColor: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -72647,7 +72647,7 @@ declare class Story {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String;
+	kinsokuSet: KinsokuTable | KinsokuSet | string;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -72752,7 +72752,7 @@ declare class Story {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults;
 
 	/**
 	 * A collection of multi-state objects.
@@ -72802,7 +72802,7 @@ declare class Story {
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String;
+	numberingCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * Continue the numbering at this level.
@@ -72817,7 +72817,7 @@ declare class Story {
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String;
+	numberingFormat: NumberingStyle | string;
 
 	/**
 	 * The level of the paragraph.
@@ -73002,7 +73002,7 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: Swatch | String;
+	paragraphShadingColor: Swatch | string;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -73147,7 +73147,7 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String;
+	rubyFill: Swatch | string;
 
 	/**
 	 * If true, ruby is on.
@@ -73157,7 +73157,7 @@ declare class Story {
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String;
+	rubyFont: Font | string;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -73167,7 +73167,7 @@ declare class Story {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -73217,7 +73217,7 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String;
+	rubyStroke: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -73267,12 +73267,12 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: Swatch | String;
+	ruleAboveColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: Swatch | String;
+	ruleAboveGapColor: Swatch | string;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -73317,7 +73317,7 @@ declare class Story {
 	/**
 	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: StrokeStyle | String;
+	ruleAboveType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -73332,12 +73332,12 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: Swatch | String;
+	ruleBelowColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: Swatch | String;
+	ruleBelowGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -73382,7 +73382,7 @@ declare class Story {
 	/**
 	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: StrokeStyle | String;
+	ruleBelowType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -73497,12 +73497,12 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String;
+	strikeThroughColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String;
+	strikeThroughGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -73532,7 +73532,7 @@ declare class Story {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String;
+	strikeThroughType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -73552,7 +73552,7 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the Story.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the Story. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -73672,12 +73672,12 @@ declare class Story {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String;
+	underlineColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String;
+	underlineGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -73707,7 +73707,7 @@ declare class Story {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String;
+	underlineType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -73791,7 +73791,7 @@ declare class Story {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	asynchronousExportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
+	asynchronousExportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
 
 	/**
 	 * Tag the object or the parent story using default tags defined in XML preference.
@@ -73873,7 +73873,7 @@ declare class Story {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	exportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
+	exportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
 
 	/**
 	 * Gets the label value associated with the specified key.
@@ -74015,7 +74015,7 @@ declare class Stories {
 	 * Returns the Story with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Story;
+	item(index: number | string): Story;
 
 	/**
 	 * Returns the Story with the specified ID.
@@ -74034,7 +74034,7 @@ declare class Stories {
 	 * @param from The Story, index, or name at the beginning of the range.
 	 * @param to The Story, index, or name at the end of the range.
 	 */
-	itemByRange(from: Story | number | String, to: Story | number | String): Story[];
+	itemByRange(from: Story | number | string, to: Story | number | string): Story[];
 
 	/**
 	 * Returns the last Story in the collection.
@@ -74082,17 +74082,17 @@ declare class ParagraphStyle {
 	/**
 	 * The font applied to the ParagraphStyle, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
-	 * The language of the text. Can return: LanguageWithVendors or Language. Can also accept: String.
+	 * The language of the text.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: LanguageWithVendors | Language | string;
 
 	/**
 	 * The list to be part of.
 	 */
-	appliedNumberingList: NumberingList | String;
+	appliedNumberingList: NumberingList | string;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
@@ -74112,12 +74112,12 @@ declare class ParagraphStyle {
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer.
 	 */
-	balanceRaggedLines: Boolean | BalanceLinesStyle;
+	balanceRaggedLines: boolean | BalanceLinesStyle;
 
 	/**
 	 * The style that this style is based on.
 	 */
-	basedOn: ParagraphStyle | String;
+	basedOn: ParagraphStyle | string;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -74142,7 +74142,7 @@ declare class ParagraphStyle {
 	/**
 	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: CharacterStyle | String;
+	bulletsCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The text after string expression for bullets.
@@ -74222,7 +74222,7 @@ declare class ParagraphStyle {
 	/**
 	 * The character style to apply to the drop cap.
 	 */
-	dropCapStyle: CharacterStyle | String;
+	dropCapStyle: CharacterStyle | string;
 
 	/**
 	 * Details about the drop cap based on the glyph outlines. 1 = left side bearing. 2 = descenders. 0x100,0x200,0x400 are used for Japanese frame grid.
@@ -74252,7 +74252,7 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the ParagraphStyle. .
 	 */
-	fillColor: Swatch | String;
+	fillColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the ParagraphStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -74467,12 +74467,12 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String;
+	kentenFillColor: Swatch | string;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String;
+	kentenFont: Font | string;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -74482,7 +74482,7 @@ declare class ParagraphStyle {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -74512,7 +74512,7 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String;
+	kentenStrokeColor: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100)
@@ -74557,7 +74557,7 @@ declare class ParagraphStyle {
 	/**
 	 * The kinsoku set that determines legitimate line breaks.
 	 */
-	kinsokuSet: KinsokuTable | KinsokuSet | String;
+	kinsokuSet: KinsokuTable | KinsokuSet | string;
 
 	/**
 	 * The type of kinsoku processing for preventing kinsoku characters from beginning or ending a line. Note: Valid only when a kinsoku set is defined.
@@ -74637,7 +74637,7 @@ declare class ParagraphStyle {
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults.
 	 */
-	mojikumi: MojikumiTable | String | MojikumiTableDefaults;
+	mojikumi: MojikumiTable | string | MojikumiTableDefaults;
 
 	/**
 	 * The name of the ParagraphStyle.
@@ -74682,7 +74682,7 @@ declare class ParagraphStyle {
 	/**
 	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: CharacterStyle | String;
+	numberingCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * Continue the numbering at this level.
@@ -74697,7 +74697,7 @@ declare class ParagraphStyle {
 	/**
 	 * Numbering format options.
 	 */
-	numberingFormat: NumberingStyle | String;
+	numberingFormat: NumberingStyle | string;
 
 	/**
 	 * The level of the paragraph.
@@ -74857,7 +74857,7 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph shading.
 	 */
-	paragraphShadingColor: Swatch | String;
+	paragraphShadingColor: Swatch | string;
 
 	/**
 	 * The distance to offset the left edge of the paragraph.
@@ -74987,12 +74987,12 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String;
+	rubyFill: Swatch | string;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String;
+	rubyFont: Font | string;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -75002,7 +75002,7 @@ declare class ParagraphStyle {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -75047,7 +75047,7 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String;
+	rubyStroke: Swatch | string;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -75097,12 +75097,12 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule above.
 	 */
-	ruleAboveColor: Swatch | String;
+	ruleAboveColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule above. Note: Valid only when the paragraph rule above type is not solid.
 	 */
-	ruleAboveGapColor: Swatch | String;
+	ruleAboveGapColor: Swatch | string;
 
 	/**
 	 * If true, the stroke gap of the paragraph rule above will overprint. Note: Valid only the rule above type is not solid.
@@ -75147,7 +75147,7 @@ declare class ParagraphStyle {
 	/**
 	 * The stroke type of the rule above the paragraph.
 	 */
-	ruleAboveType: StrokeStyle | String;
+	ruleAboveType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule above.
@@ -75162,12 +75162,12 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the paragraph rule below.
 	 */
-	ruleBelowColor: Swatch | String;
+	ruleBelowColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke gap of the paragraph rule below. Note: Valid only when the paragraph rule below type is not solid.
 	 */
-	ruleBelowGapColor: Swatch | String;
+	ruleBelowGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the rule below will overprint.
@@ -75212,7 +75212,7 @@ declare class ParagraphStyle {
 	/**
 	 * The stroke type of the rule below the paragraph.
 	 */
-	ruleBelowType: StrokeStyle | String;
+	ruleBelowType: StrokeStyle | string;
 
 	/**
 	 * The basis (text width or column width) used to calculate the width of the paragraph rule below.
@@ -75307,12 +75307,12 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String;
+	strikeThroughColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String;
+	strikeThroughGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
@@ -75342,7 +75342,7 @@ declare class ParagraphStyle {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String;
+	strikeThroughType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -75362,7 +75362,7 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the ParagraphStyle.
 	 */
-	strokeColor: Swatch | String;
+	strokeColor: Swatch | string;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the ParagraphStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.)
@@ -75437,12 +75437,12 @@ declare class ParagraphStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String;
+	underlineColor: Swatch | string;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String;
+	underlineGapColor: Swatch | string;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
@@ -75472,7 +75472,7 @@ declare class ParagraphStyle {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String;
+	underlineType: StrokeStyle | string;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -75659,7 +75659,7 @@ declare class ParagraphStyles {
 	 * Returns the ParagraphStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ParagraphStyle;
+	item(index: number | string): ParagraphStyle;
 
 	/**
 	 * Returns the ParagraphStyle with the specified ID.
@@ -75678,7 +75678,7 @@ declare class ParagraphStyles {
 	 * @param from The ParagraphStyle, index, or name at the beginning of the range.
 	 * @param to The ParagraphStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: ParagraphStyle | number | String, to: ParagraphStyle | number | String): ParagraphStyle[];
+	itemByRange(from: ParagraphStyle | number | string, to: ParagraphStyle | number | string): ParagraphStyle[];
 
 	/**
 	 * Returns the last ParagraphStyle in the collection.
@@ -75716,17 +75716,17 @@ declare class CharacterStyle {
 	/**
 	 * The font applied to the CharacterStyle, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String | NothingEnum;
+	appliedFont: Font | string | NothingEnum;
 
 	/**
-	 * The language of the text. Can return: LanguageWithVendors, Language or NothingEnum enumerator. Can also accept: String.
+	 * The language of the text.
 	 */
-	appliedLanguage: any;
+	appliedLanguage: LanguageWithVendors | Language | NothingEnum | string;
 
 	/**
 	 * The style that this style is based on.
 	 */
-	basedOn: CharacterStyle | String;
+	basedOn: CharacterStyle | string;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -75756,7 +75756,7 @@ declare class CharacterStyle {
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: Boolean | NothingEnum;
+	cjkGridTracking: boolean | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters.
@@ -75771,7 +75771,7 @@ declare class CharacterStyle {
 	/**
 	 * Emit CSS.
 	 */
-	emitCss: Boolean | NothingEnum;
+	emitCss: boolean | NothingEnum;
 
 	/**
 	 * The stroke join type applied to the characters of the text.
@@ -75789,9 +75789,9 @@ declare class CharacterStyle {
 	readonly events: Events;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the CharacterStyle. . Can return: Swatch or NothingEnum enumerator. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of the CharacterStyle. .
 	 */
-	fillColor: any;
+	fillColor: Swatch | NothingEnum | string;
 
 	/**
 	 * The tint (as a percentage) of the fill color of the CharacterStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -75801,7 +75801,7 @@ declare class CharacterStyle {
 	/**
 	 * The name of the font style.
 	 */
-	fontStyle: String | NothingEnum;
+	fontStyle: string | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs.
@@ -75851,7 +75851,7 @@ declare class CharacterStyle {
 	/**
 	 * If true, the style was imported from another document.
 	 */
-	readonly imported: Boolean | NothingEnum;
+	readonly imported: boolean | NothingEnum;
 
 	/**
 	 * The index of the CharacterStyle within its containing object.
@@ -75886,17 +75886,17 @@ declare class CharacterStyle {
 	/**
 	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: String | NothingEnum;
+	kentenCustomCharacter: string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters.
 	 */
-	kentenFillColor: Swatch | String | NothingEnum;
+	kentenFillColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The font to use for kenten characters.
 	 */
-	kentenFont: Font | String | NothingEnum;
+	kentenFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of kenten characters.
@@ -75906,7 +75906,7 @@ declare class CharacterStyle {
 	/**
 	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: String | NothingEnum;
+	kentenFontStyle: string | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -75936,7 +75936,7 @@ declare class CharacterStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of kenten characters.
 	 */
-	kentenStrokeColor: Swatch | String | NothingEnum;
+	kentenStrokeColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
@@ -75966,7 +75966,7 @@ declare class CharacterStyle {
 	/**
 	 * The type of pair kerning.
 	 */
-	kerningMethod: String | NothingEnum;
+	kerningMethod: string | NothingEnum;
 
 	/**
 	 * The keyboard direction of the character.
@@ -75991,7 +75991,7 @@ declare class CharacterStyle {
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: Boolean | NothingEnum;
+	ligatures: boolean | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join.
@@ -76006,17 +76006,17 @@ declare class CharacterStyle {
 	/**
 	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: Boolean | NothingEnum;
+	noBreak: boolean | NothingEnum;
 
 	/**
 	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: Boolean | NothingEnum;
+	otfContextualAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: Boolean | NothingEnum;
+	otfDiscretionaryLigature: boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts.
@@ -76026,67 +76026,67 @@ declare class CharacterStyle {
 	/**
 	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: Boolean | NothingEnum;
+	otfFraction: boolean | NothingEnum;
 
 	/**
 	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: Boolean | NothingEnum;
+	otfHVKana: boolean | NothingEnum;
 
 	/**
 	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: Boolean | NothingEnum;
+	otfHistorical: boolean | NothingEnum;
 
 	/**
 	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: Boolean | NothingEnum;
+	otfJustificationAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: Boolean | NothingEnum;
+	otfLocale: boolean | NothingEnum;
 
 	/**
 	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: Boolean | NothingEnum;
+	otfMark: boolean | NothingEnum;
 
 	/**
 	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: Boolean | NothingEnum;
+	otfOrdinal: boolean | NothingEnum;
 
 	/**
 	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: Boolean | NothingEnum;
+	otfOverlapSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: Boolean | NothingEnum;
+	otfProportionalMetrics: boolean | NothingEnum;
 
 	/**
 	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: Boolean | NothingEnum;
+	otfRomanItalics: boolean | NothingEnum;
 
 	/**
 	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: Boolean | NothingEnum;
+	otfSlashedZero: boolean | NothingEnum;
 
 	/**
 	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: Boolean | NothingEnum;
+	otfStretchedAlternate: boolean | NothingEnum;
 
 	/**
 	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: Boolean | NothingEnum;
+	otfStylisticAlternate: boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts.
@@ -76096,22 +76096,22 @@ declare class CharacterStyle {
 	/**
 	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: Boolean | NothingEnum;
+	otfSwash: boolean | NothingEnum;
 
 	/**
 	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: Boolean | NothingEnum;
+	otfTitling: boolean | NothingEnum;
 
 	/**
 	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: Boolean | NothingEnum;
+	overprintFill: boolean | NothingEnum;
 
 	/**
 	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: Boolean | NothingEnum;
+	overprintStroke: boolean | NothingEnum;
 
 	/**
 	 * The parent of the CharacterStyle (a Document, Application or CharacterStyleGroup).
@@ -76151,17 +76151,17 @@ declare class CharacterStyle {
 	/**
 	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: Boolean | NothingEnum;
+	rubyAutoAlign: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: Boolean | NothingEnum;
+	rubyAutoScaling: boolean | NothingEnum;
 
 	/**
 	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: Boolean | NothingEnum;
+	rubyAutoTcyAutoScale: boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby.
@@ -76171,17 +76171,17 @@ declare class CharacterStyle {
 	/**
 	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
+	rubyAutoTcyIncludeRoman: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters.
 	 */
-	rubyFill: Swatch | String | NothingEnum;
+	rubyFill: Swatch | string | NothingEnum;
 
 	/**
 	 * The font applied to ruby characters.
 	 */
-	rubyFont: Font | String | NothingEnum;
+	rubyFont: Font | string | NothingEnum;
 
 	/**
 	 * The size (in points) of ruby characters.
@@ -76191,17 +76191,17 @@ declare class CharacterStyle {
 	/**
 	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: String | NothingEnum;
+	rubyFontStyle: string | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: Boolean | NothingEnum;
+	rubyOpenTypePro: boolean | NothingEnum;
 
 	/**
 	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: Boolean | NothingEnum;
+	rubyOverhang: boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill.
@@ -76236,7 +76236,7 @@ declare class CharacterStyle {
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of ruby characters.
 	 */
-	rubyStroke: Swatch | String | NothingEnum;
+	rubyStroke: Swatch | string | NothingEnum;
 
 	/**
 	 * The stroke tint (as a percentage) of ruby characters.
@@ -76281,17 +76281,17 @@ declare class CharacterStyle {
 	/**
 	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: Boolean | NothingEnum;
+	scaleAffectsLineHeight: boolean | NothingEnum;
 
 	/**
 	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: Boolean | NothingEnum;
+	shataiAdjustRotation: boolean | NothingEnum;
 
 	/**
 	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: Boolean | NothingEnum;
+	shataiAdjustTsume: boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -76311,22 +76311,22 @@ declare class CharacterStyle {
 	/**
 	 * Split Document (EPUB only).
 	 */
-	splitDocument: Boolean | NothingEnum;
+	splitDocument: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke.
 	 */
-	strikeThroughColor: Swatch | String | NothingEnum;
+	strikeThroughColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the strikethrough stroke.
 	 */
-	strikeThroughGapColor: Swatch | String | NothingEnum;
+	strikeThroughGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: Boolean | NothingEnum;
+	strikeThroughGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -76341,7 +76341,7 @@ declare class CharacterStyle {
 	/**
 	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: Boolean | NothingEnum;
+	strikeThroughOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -76351,7 +76351,7 @@ declare class CharacterStyle {
 	/**
 	 * The stroke type of the strikethrough stroke.
 	 */
-	strikeThroughType: StrokeStyle | String | NothingEnum;
+	strikeThroughType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the strikethrough stroke.
@@ -76361,7 +76361,7 @@ declare class CharacterStyle {
 	/**
 	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: Boolean | NothingEnum;
+	strikeThru: boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text.
@@ -76369,9 +76369,9 @@ declare class CharacterStyle {
 	strokeAlignment: TextStrokeAlign | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the CharacterStyle. Can return: Swatch or NothingEnum enumerator. Can also accept: String.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the stroke of the CharacterStyle.
 	 */
-	strokeColor: any;
+	strokeColor: Swatch | NothingEnum | string;
 
 	/**
 	 * The tint (as a percentage) of the stroke color of the CharacterStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -76391,12 +76391,12 @@ declare class CharacterStyle {
 	/**
 	 * A unique id that can be assigned to a style. This can be used to differentiate between the styles. Internal use only.
 	 */
-	styleUniqueId: String | NothingEnum;
+	styleUniqueId: string | NothingEnum;
 
 	/**
 	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: Boolean | NothingEnum;
+	tatechuyoko: boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -76426,22 +76426,22 @@ declare class CharacterStyle {
 	/**
 	 * If true, underlines the text.
 	 */
-	underline: Boolean | NothingEnum;
+	underline: boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. .
 	 */
-	underlineColor: Swatch | String | NothingEnum;
+	underlineColor: Swatch | string | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the underline stroke. Note: Valid when underline type is not solid.
 	 */
-	underlineGapColor: Swatch | String | NothingEnum;
+	underlineGapColor: Swatch | string | NothingEnum;
 
 	/**
 	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: Boolean | NothingEnum;
+	underlineGapOverprint: boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -76456,7 +76456,7 @@ declare class CharacterStyle {
 	/**
 	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: Boolean | NothingEnum;
+	underlineOverprint: boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -76466,7 +76466,7 @@ declare class CharacterStyle {
 	/**
 	 * The stroke type of the underline stroke.
 	 */
-	underlineType: StrokeStyle | String | NothingEnum;
+	underlineType: StrokeStyle | string | NothingEnum;
 
 	/**
 	 * The stroke weight of the underline stroke.
@@ -76481,7 +76481,7 @@ declare class CharacterStyle {
 	/**
 	 * If true, turns on warichu.
 	 */
-	warichu: Boolean | NothingEnum;
+	warichu: boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment.
@@ -76642,7 +76642,7 @@ declare class CharacterStyles {
 	 * Returns the CharacterStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CharacterStyle;
+	item(index: number | string): CharacterStyle;
 
 	/**
 	 * Returns the CharacterStyle with the specified ID.
@@ -76661,7 +76661,7 @@ declare class CharacterStyles {
 	 * @param from The CharacterStyle, index, or name at the beginning of the range.
 	 * @param to The CharacterStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: CharacterStyle | number | String, to: CharacterStyle | number | String): CharacterStyle[];
+	itemByRange(from: CharacterStyle | number | string, to: CharacterStyle | number | string): CharacterStyle[];
 
 	/**
 	 * Returns the last CharacterStyle in the collection.
@@ -76829,14 +76829,14 @@ declare class TabStops {
 	 * Returns the TabStop with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TabStop;
+	item(index: number | string): TabStop;
 
 	/**
 	 * Returns the TabStops within the specified range.
 	 * @param from The TabStop, index, or name at the beginning of the range.
 	 * @param to The TabStop, index, or name at the end of the range.
 	 */
-	itemByRange(from: TabStop | number | String, to: TabStop | number | String): TabStop[];
+	itemByRange(from: TabStop | number | string, to: TabStop | number | string): TabStop[];
 
 	/**
 	 * Returns the last TabStop in the collection.
@@ -76874,12 +76874,12 @@ declare class NestedStyle {
 	/**
 	 * The character style applied to the text.
 	 */
-	appliedCharacterStyle: CharacterStyle | String;
+	appliedCharacterStyle: CharacterStyle | string;
 
 	/**
 	 * The delimiting expression that indicates how deeply into the paragraph the nested style is applied.
 	 */
-	delimiter: String | NestedStyleDelimiters;
+	delimiter: string | NestedStyleDelimiters;
 
 	/**
 	 * A collection of event listeners.
@@ -77004,14 +77004,14 @@ declare class NestedStyles {
 	 * Returns the NestedStyle with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): NestedStyle;
+	item(index: number | string): NestedStyle;
 
 	/**
 	 * Returns the NestedStyles within the specified range.
 	 * @param from The NestedStyle, index, or name at the beginning of the range.
 	 * @param to The NestedStyle, index, or name at the end of the range.
 	 */
-	itemByRange(from: NestedStyle | number | String, to: NestedStyle | number | String): NestedStyle[];
+	itemByRange(from: NestedStyle | number | string, to: NestedStyle | number | string): NestedStyle[];
 
 	/**
 	 * Returns the last NestedStyle in the collection.
@@ -77206,7 +77206,7 @@ declare class Languages {
 	 * Returns the Language with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Language;
+	item(index: number | string): Language;
 
 	/**
 	 * Returns the Language with the specified ID.
@@ -77225,7 +77225,7 @@ declare class Languages {
 	 * @param from The Language, index, or name at the beginning of the range.
 	 * @param to The Language, index, or name at the end of the range.
 	 */
-	itemByRange(from: Language | number | String, to: Language | number | String): Language[];
+	itemByRange(from: Language | number | string, to: Language | number | string): Language[];
 
 	/**
 	 * Returns the last Language in the collection.
@@ -77452,7 +77452,7 @@ declare class LanguagesWithVendors {
 	 * Returns the LanguageWithVendors with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): LanguageWithVendors;
+	item(index: number | string): LanguageWithVendors;
 
 	/**
 	 * Returns the LanguageWithVendors with the specified ID.
@@ -77471,7 +77471,7 @@ declare class LanguagesWithVendors {
 	 * @param from The LanguageWithVendors, index, or name at the beginning of the range.
 	 * @param to The LanguageWithVendors, index, or name at the end of the range.
 	 */
-	itemByRange(from: LanguageWithVendors | number | String, to: LanguageWithVendors | number | String): LanguageWithVendors[];
+	itemByRange(from: LanguageWithVendors | number | string, to: LanguageWithVendors | number | string): LanguageWithVendors[];
 
 	/**
 	 * Returns the last LanguageWithVendors in the collection.
@@ -77648,7 +77648,7 @@ declare class Font {
 	 * Checks whether the font supports the specified OpenType feature.
 	 * @param using The OpenType feature to check for, specified either as an OpenType feature or a string.
 	 */
-	checkOpenTypeFeature(using: OpenTypeFeature | String): boolean;
+	checkOpenTypeFeature(using: OpenTypeFeature | string): boolean;
 
 	/**
 	 * Create a copy of the font with just enough information to render the list of characters given.
@@ -77721,7 +77721,7 @@ declare class Fonts {
 	 * Returns the Font with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Font;
+	item(index: number | string): Font;
 
 	/**
 	 * Returns the Font with the specified name.
@@ -77734,7 +77734,7 @@ declare class Fonts {
 	 * @param from The Font, index, or name at the beginning of the range.
 	 * @param to The Font, index, or name at the end of the range.
 	 */
-	itemByRange(from: Font | number | String, to: Font | number | String): Font[];
+	itemByRange(from: Font | number | string, to: Font | number | string): Font[];
 
 	/**
 	 * Returns the last Font in the collection.
@@ -77931,7 +77931,7 @@ declare class KinsokuTables {
 	 * Returns the KinsokuTable with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): KinsokuTable;
+	item(index: number | string): KinsokuTable;
 
 	/**
 	 * Returns the KinsokuTable with the specified ID.
@@ -77950,7 +77950,7 @@ declare class KinsokuTables {
 	 * @param from The KinsokuTable, index, or name at the beginning of the range.
 	 * @param to The KinsokuTable, index, or name at the end of the range.
 	 */
-	itemByRange(from: KinsokuTable | number | String, to: KinsokuTable | number | String): KinsokuTable[];
+	itemByRange(from: KinsokuTable | number | string, to: KinsokuTable | number | string): KinsokuTable[];
 
 	/**
 	 * Returns the last KinsokuTable in the collection.
@@ -78137,7 +78137,7 @@ declare class MojikumiTables {
 	 * Returns the MojikumiTable with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MojikumiTable;
+	item(index: number | string): MojikumiTable;
 
 	/**
 	 * Returns the MojikumiTable with the specified ID.
@@ -78156,7 +78156,7 @@ declare class MojikumiTables {
 	 * @param from The MojikumiTable, index, or name at the beginning of the range.
 	 * @param to The MojikumiTable, index, or name at the end of the range.
 	 */
-	itemByRange(from: MojikumiTable | number | String, to: MojikumiTable | number | String): MojikumiTable[];
+	itemByRange(from: MojikumiTable | number | string, to: MojikumiTable | number | string): MojikumiTable[];
 
 	/**
 	 * Returns the last MojikumiTable in the collection.
@@ -78322,7 +78322,7 @@ declare class HyphenationExceptions {
 	 * Returns the HyphenationException with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HyphenationException;
+	item(index: number | string): HyphenationException;
 
 	/**
 	 * Returns the HyphenationException with the specified name.
@@ -78335,7 +78335,7 @@ declare class HyphenationExceptions {
 	 * @param from The HyphenationException, index, or name at the beginning of the range.
 	 * @param to The HyphenationException, index, or name at the end of the range.
 	 */
-	itemByRange(from: HyphenationException | number | String, to: HyphenationException | number | String): HyphenationException[];
+	itemByRange(from: HyphenationException | number | string, to: HyphenationException | number | string): HyphenationException[];
 
 	/**
 	 * Returns the last HyphenationException in the collection.
@@ -78501,7 +78501,7 @@ declare class UserDictionaries {
 	 * Returns the UserDictionary with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): UserDictionary;
+	item(index: number | string): UserDictionary;
 
 	/**
 	 * Returns the UserDictionary with the specified name.
@@ -78514,7 +78514,7 @@ declare class UserDictionaries {
 	 * @param from The UserDictionary, index, or name at the beginning of the range.
 	 * @param to The UserDictionary, index, or name at the end of the range.
 	 */
-	itemByRange(from: UserDictionary | number | String, to: UserDictionary | number | String): UserDictionary[];
+	itemByRange(from: UserDictionary | number | string, to: UserDictionary | number | string): UserDictionary[];
 
 	/**
 	 * Returns the last UserDictionary in the collection.
@@ -78661,7 +78661,7 @@ declare class AutoCorrectTables {
 	 * Returns the AutoCorrectTable with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): AutoCorrectTable;
+	item(index: number | string): AutoCorrectTable;
 
 	/**
 	 * Returns the AutoCorrectTable with the specified name.
@@ -78674,7 +78674,7 @@ declare class AutoCorrectTables {
 	 * @param from The AutoCorrectTable, index, or name at the beginning of the range.
 	 * @param to The AutoCorrectTable, index, or name at the end of the range.
 	 */
-	itemByRange(from: AutoCorrectTable | number | String, to: AutoCorrectTable | number | String): AutoCorrectTable[];
+	itemByRange(from: AutoCorrectTable | number | string, to: AutoCorrectTable | number | string): AutoCorrectTable[];
 
 	/**
 	 * Returns the last AutoCorrectTable in the collection.
@@ -78886,14 +78886,14 @@ declare class Changes {
 	 * Returns the Change with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Change;
+	item(index: number | string): Change;
 
 	/**
 	 * Returns the Changes within the specified range.
 	 * @param from The Change, index, or name at the beginning of the range.
 	 * @param to The Change, index, or name at the end of the range.
 	 */
-	itemByRange(from: Change | number | String, to: Change | number | String): Change[];
+	itemByRange(from: Change | number | string, to: Change | number | string): Change[];
 
 	/**
 	 * Returns the last Change in the collection.
@@ -78951,7 +78951,7 @@ declare class TextPath {
 	/**
 	 * The contents of the text frame.
 	 */
-	contents: String | TextFrameContents | SpecialCharacters;
+	contents: string | TextFrameContents | SpecialCharacters;
 
 	/**
 	 * The end of the type on a path. Note: Additional text becomes overset text unless the text is linked to another path or text frame.
@@ -79014,9 +79014,9 @@ declare class TextPath {
 	name: string;
 
 	/**
-	 * The next text frame in the thread. Can return: TextFrame or TextPath. Can also accept: NothingEnum enumerator.
+	 * The next text frame in the thread.
 	 */
-	nextTextFrame: any;
+	nextTextFrame: TextFrame | TextPath | NothingEnum;
 
 	/**
 	 * If true, the story has overset text.
@@ -79054,9 +79054,9 @@ declare class TextPath {
 	pathSpacing: number;
 
 	/**
-	 * The previous text frame in the thread. Can return: TextFrame or TextPath. Can also accept: NothingEnum enumerator.
+	 * The previous text frame in the thread.
 	 */
-	previousTextFrame: any;
+	previousTextFrame: TextFrame | TextPath | NothingEnum;
 
 	/**
 	 * A property that allows setting of several properties at the same time.
@@ -79247,7 +79247,7 @@ declare class TextPaths {
 	 * Returns the TextPath with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextPath;
+	item(index: number | string): TextPath;
 
 	/**
 	 * Returns the TextPath with the specified ID.
@@ -79266,7 +79266,7 @@ declare class TextPaths {
 	 * @param from The TextPath, index, or name at the beginning of the range.
 	 * @param to The TextPath, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextPath | number | String, to: TextPath | number | String): TextPath[];
+	itemByRange(from: TextPath | number | string, to: TextPath | number | string): TextPath[];
 
 	/**
 	 * Returns the last TextPath in the collection.
@@ -79531,7 +79531,7 @@ declare class Notes {
 	 * Returns the Note with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Note;
+	item(index: number | string): Note;
 
 	/**
 	 * Returns the Note with the specified ID.
@@ -79550,7 +79550,7 @@ declare class Notes {
 	 * @param from The Note, index, or name at the beginning of the range.
 	 * @param to The Note, index, or name at the end of the range.
 	 */
-	itemByRange(from: Note | number | String, to: Note | number | String): Note[];
+	itemByRange(from: Note | number | string, to: Note | number | string): Note[];
 
 	/**
 	 * Returns the last Note in the collection.
@@ -79601,9 +79601,9 @@ declare class Footnote {
 	readonly characters: Characters;
 
 	/**
-	 * The text contents of the footnote. Can return: String, SpecialCharacters enumerator or Array of Strings or SpecialCharacters enumerators. Can also accept: NothingEnum enumerator or Array of Strings, SpecialCharacters enumerators or NothingEnum enumerators.
+	 * The text contents of the footnote.
 	 */
-	contents: any;
+	contents: string | SpecialCharacters | String[] | SpecialCharacters | NothingEnum | String[] | SpecialCharacters | NothingEnum;
 
 	/**
 	 * EPSTexts
@@ -79848,7 +79848,7 @@ declare class Footnotes {
 	 * Returns the Footnote with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Footnote;
+	item(index: number | string): Footnote;
 
 	/**
 	 * Returns the Footnote with the specified ID.
@@ -79867,7 +79867,7 @@ declare class Footnotes {
 	 * @param from The Footnote, index, or name at the beginning of the range.
 	 * @param to The Footnote, index, or name at the end of the range.
 	 */
-	itemByRange(from: Footnote | number | String, to: Footnote | number | String): Footnote[];
+	itemByRange(from: Footnote | number | string, to: Footnote | number | string): Footnote[];
 
 	/**
 	 * Returns the last Footnote in the collection.
@@ -80045,7 +80045,7 @@ declare class TextVariables {
 	 * Returns the TextVariable with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextVariable;
+	item(index: number | string): TextVariable;
 
 	/**
 	 * Returns the TextVariable with the specified name.
@@ -80058,7 +80058,7 @@ declare class TextVariables {
 	 * @param from The TextVariable, index, or name at the beginning of the range.
 	 * @param to The TextVariable, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextVariable | number | String, to: TextVariable | number | String): TextVariable[];
+	itemByRange(from: TextVariable | number | string, to: TextVariable | number | string): TextVariable[];
 
 	/**
 	 * Returns the last TextVariable in the collection.
@@ -80256,7 +80256,7 @@ declare class TextVariableInstances {
 	 * Returns the TextVariableInstance with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextVariableInstance;
+	item(index: number | string): TextVariableInstance;
 
 	/**
 	 * Returns the TextVariableInstance with the specified ID.
@@ -80275,7 +80275,7 @@ declare class TextVariableInstances {
 	 * @param from The TextVariableInstance, index, or name at the beginning of the range.
 	 * @param to The TextVariableInstance, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextVariableInstance | number | String, to: TextVariableInstance | number | String): TextVariableInstance[];
+	itemByRange(from: TextVariableInstance | number | string, to: TextVariableInstance | number | string): TextVariableInstance[];
 
 	/**
 	 * Returns the last TextVariableInstance in the collection.
@@ -80447,14 +80447,14 @@ declare class StyleExportTagMaps {
 	 * Returns the StyleExportTagMap with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): StyleExportTagMap;
+	item(index: number | string): StyleExportTagMap;
 
 	/**
 	 * Returns the StyleExportTagMaps within the specified range.
 	 * @param from The StyleExportTagMap, index, or name at the beginning of the range.
 	 * @param to The StyleExportTagMap, index, or name at the end of the range.
 	 */
-	itemByRange(from: StyleExportTagMap | number | String, to: StyleExportTagMap | number | String): StyleExportTagMap[];
+	itemByRange(from: StyleExportTagMap | number | string, to: StyleExportTagMap | number | string): StyleExportTagMap[];
 
 	/**
 	 * Returns the last StyleExportTagMap in the collection.
@@ -80658,7 +80658,7 @@ declare class ParagraphStyleGroups {
 	 * Returns the ParagraphStyleGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ParagraphStyleGroup;
+	item(index: number | string): ParagraphStyleGroup;
 
 	/**
 	 * Returns the ParagraphStyleGroup with the specified ID.
@@ -80677,7 +80677,7 @@ declare class ParagraphStyleGroups {
 	 * @param from The ParagraphStyleGroup, index, or name at the beginning of the range.
 	 * @param to The ParagraphStyleGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: ParagraphStyleGroup | number | String, to: ParagraphStyleGroup | number | String): ParagraphStyleGroup[];
+	itemByRange(from: ParagraphStyleGroup | number | string, to: ParagraphStyleGroup | number | string): ParagraphStyleGroup[];
 
 	/**
 	 * Returns the last ParagraphStyleGroup in the collection.
@@ -80881,7 +80881,7 @@ declare class CharacterStyleGroups {
 	 * Returns the CharacterStyleGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CharacterStyleGroup;
+	item(index: number | string): CharacterStyleGroup;
 
 	/**
 	 * Returns the CharacterStyleGroup with the specified ID.
@@ -80900,7 +80900,7 @@ declare class CharacterStyleGroups {
 	 * @param from The CharacterStyleGroup, index, or name at the beginning of the range.
 	 * @param to The CharacterStyleGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: CharacterStyleGroup | number | String, to: CharacterStyleGroup | number | String): CharacterStyleGroup[];
+	itemByRange(from: CharacterStyleGroup | number | string, to: CharacterStyleGroup | number | string): CharacterStyleGroup[];
 
 	/**
 	 * Returns the last CharacterStyleGroup in the collection.
@@ -81081,7 +81081,7 @@ declare class CompositeFonts {
 	 * Returns the CompositeFont with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CompositeFont;
+	item(index: number | string): CompositeFont;
 
 	/**
 	 * Returns the CompositeFont with the specified ID.
@@ -81100,7 +81100,7 @@ declare class CompositeFonts {
 	 * @param from The CompositeFont, index, or name at the beginning of the range.
 	 * @param to The CompositeFont, index, or name at the end of the range.
 	 */
-	itemByRange(from: CompositeFont | number | String, to: CompositeFont | number | String): CompositeFont[];
+	itemByRange(from: CompositeFont | number | string, to: CompositeFont | number | string): CompositeFont[];
 
 	/**
 	 * Returns the last CompositeFont in the collection.
@@ -81138,7 +81138,7 @@ declare class CompositeFontEntry {
 	/**
 	 * The font applied to the CompositeFontEntry, specified as either a font object or the name of font family.
 	 */
-	appliedFont: Font | String;
+	appliedFont: Font | string;
 
 	/**
 	 * The amount of baseline shift.
@@ -81321,7 +81321,7 @@ declare class CompositeFontEntries {
 	 * Returns the CompositeFontEntry with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CompositeFontEntry;
+	item(index: number | string): CompositeFontEntry;
 
 	/**
 	 * Returns the CompositeFontEntry with the specified ID.
@@ -81340,7 +81340,7 @@ declare class CompositeFontEntries {
 	 * @param from The CompositeFontEntry, index, or name at the beginning of the range.
 	 * @param to The CompositeFontEntry, index, or name at the end of the range.
 	 */
-	itemByRange(from: CompositeFontEntry | number | String, to: CompositeFontEntry | number | String): CompositeFontEntry[];
+	itemByRange(from: CompositeFontEntry | number | string, to: CompositeFontEntry | number | string): CompositeFontEntry[];
 
 	/**
 	 * Returns the last CompositeFontEntry in the collection.
@@ -81526,7 +81526,7 @@ declare class NamedGrids {
 	 * Returns the NamedGrid with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): NamedGrid;
+	item(index: number | string): NamedGrid;
 
 	/**
 	 * Returns the NamedGrid with the specified ID.
@@ -81545,7 +81545,7 @@ declare class NamedGrids {
 	 * @param from The NamedGrid, index, or name at the beginning of the range.
 	 * @param to The NamedGrid, index, or name at the end of the range.
 	 */
-	itemByRange(from: NamedGrid | number | String, to: NamedGrid | number | String): NamedGrid[];
+	itemByRange(from: NamedGrid | number | string, to: NamedGrid | number | string): NamedGrid[];
 
 	/**
 	 * Returns the last NamedGrid in the collection.
@@ -81702,7 +81702,7 @@ declare class IndexingSortOptions {
 	 * Returns the IndexingSortOption with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): IndexingSortOption;
+	item(index: number | string): IndexingSortOption;
 
 	/**
 	 * Returns the IndexingSortOption with the specified name.
@@ -81715,7 +81715,7 @@ declare class IndexingSortOptions {
 	 * @param from The IndexingSortOption, index, or name at the beginning of the range.
 	 * @param to The IndexingSortOption, index, or name at the end of the range.
 	 */
-	itemByRange(from: IndexingSortOption | number | String, to: IndexingSortOption | number | String): IndexingSortOption[];
+	itemByRange(from: IndexingSortOption | number | string, to: IndexingSortOption | number | string): IndexingSortOption[];
 
 	/**
 	 * Returns the last IndexingSortOption in the collection.
@@ -81753,12 +81753,12 @@ declare class Bullet extends Preference {
 	/**
 	 * Font of the bullet character.
 	 */
-	bulletsFont: Font | String | AutoEnum;
+	bulletsFont: Font | string | AutoEnum;
 
 	/**
 	 * Font style of the bullet character.
 	 */
-	bulletsFontStyle: String | NothingEnum | AutoEnum;
+	bulletsFontStyle: string | NothingEnum | AutoEnum;
 
 	/**
 	 * The type of bullet character.
@@ -81952,7 +81952,7 @@ declare class NumberingLists {
 	 * Returns the NumberingList with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): NumberingList;
+	item(index: number | string): NumberingList;
 
 	/**
 	 * Returns the NumberingList with the specified ID.
@@ -81971,7 +81971,7 @@ declare class NumberingLists {
 	 * @param from The NumberingList, index, or name at the beginning of the range.
 	 * @param to The NumberingList, index, or name at the end of the range.
 	 */
-	itemByRange(from: NumberingList | number | String, to: NumberingList | number | String): NumberingList[];
+	itemByRange(from: NumberingList | number | string, to: NumberingList | number | string): NumberingList[];
 
 	/**
 	 * Returns the last NumberingList in the collection.
@@ -82175,7 +82175,7 @@ declare class ObjectStyleGroups {
 	 * Returns the ObjectStyleGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ObjectStyleGroup;
+	item(index: number | string): ObjectStyleGroup;
 
 	/**
 	 * Returns the ObjectStyleGroup with the specified ID.
@@ -82194,7 +82194,7 @@ declare class ObjectStyleGroups {
 	 * @param from The ObjectStyleGroup, index, or name at the beginning of the range.
 	 * @param to The ObjectStyleGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: ObjectStyleGroup | number | String, to: ObjectStyleGroup | number | String): ObjectStyleGroup[];
+	itemByRange(from: ObjectStyleGroup | number | string, to: ObjectStyleGroup | number | string): ObjectStyleGroup[];
 
 	/**
 	 * Returns the last ObjectStyleGroup in the collection.
@@ -82324,7 +82324,7 @@ declare class Condition {
 	 * Delete the condition.
 	 * @param replacingWith The condition to apply to text in place of the deleted condition. By default, no condition is applied in place of the deleted condition.
 	 */
-	remove(replacingWith: Condition | String): void;
+	remove(replacingWith: Condition | string): void;
 
 	/**
 	 * Removes the event listener.
@@ -82391,7 +82391,7 @@ declare class Conditions {
 	 * Returns the Condition with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Condition;
+	item(index: number | string): Condition;
 
 	/**
 	 * Returns the Condition with the specified ID.
@@ -82410,7 +82410,7 @@ declare class Conditions {
 	 * @param from The Condition, index, or name at the beginning of the range.
 	 * @param to The Condition, index, or name at the end of the range.
 	 */
-	itemByRange(from: Condition | number | String, to: Condition | number | String): Condition[];
+	itemByRange(from: Condition | number | string, to: Condition | number | string): Condition[];
 
 	/**
 	 * Returns the last Condition in the collection.
@@ -82620,7 +82620,7 @@ declare class HiddenTexts {
 	 * Returns the HiddenText with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): HiddenText;
+	item(index: number | string): HiddenText;
 
 	/**
 	 * Returns the HiddenText with the specified ID.
@@ -82639,7 +82639,7 @@ declare class HiddenTexts {
 	 * @param from The HiddenText, index, or name at the beginning of the range.
 	 * @param to The HiddenText, index, or name at the end of the range.
 	 */
-	itemByRange(from: HiddenText | number | String, to: HiddenText | number | String): HiddenText[];
+	itemByRange(from: HiddenText | number | string, to: HiddenText | number | string): HiddenText[];
 
 	/**
 	 * Returns the last HiddenText in the collection.
@@ -82759,7 +82759,7 @@ declare class ConditionSet {
 	 * Delete a condition set for conditional text.
 	 * @param replacingWith The condition set to apply to the text in place of the deleted condition set. By default, no condition set is applied in place of the deleted condition set.
 	 */
-	remove(replacingWith: ConditionSet | String): void;
+	remove(replacingWith: ConditionSet | string): void;
 
 	/**
 	 * Removes the event listener.
@@ -82826,7 +82826,7 @@ declare class ConditionSets {
 	 * Returns the ConditionSet with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ConditionSet;
+	item(index: number | string): ConditionSet;
 
 	/**
 	 * Returns the ConditionSet with the specified ID.
@@ -82845,7 +82845,7 @@ declare class ConditionSets {
 	 * @param from The ConditionSet, index, or name at the beginning of the range.
 	 * @param to The ConditionSet, index, or name at the end of the range.
 	 */
-	itemByRange(from: ConditionSet | number | String, to: ConditionSet | number | String): ConditionSet[];
+	itemByRange(from: ConditionSet | number | string, to: ConditionSet | number | string): ConditionSet[];
 
 	/**
 	 * Returns the last ConditionSet in the collection.
@@ -83144,7 +83144,7 @@ declare class MenuActions {
 	 * Returns the MenuAction with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MenuAction;
+	item(index: number | string): MenuAction;
 
 	/**
 	 * Returns the MenuAction with the specified ID.
@@ -83163,7 +83163,7 @@ declare class MenuActions {
 	 * @param from The MenuAction, index, or name at the beginning of the range.
 	 * @param to The MenuAction, index, or name at the end of the range.
 	 */
-	itemByRange(from: MenuAction | number | String, to: MenuAction | number | String): MenuAction[];
+	itemByRange(from: MenuAction | number | string, to: MenuAction | number | string): MenuAction[];
 
 	/**
 	 * Returns the last MenuAction in the collection.
@@ -83261,7 +83261,7 @@ declare class ScriptMenuActions {
 	 * Returns the ScriptMenuAction with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ScriptMenuAction;
+	item(index: number | string): ScriptMenuAction;
 
 	/**
 	 * Returns the ScriptMenuAction with the specified ID.
@@ -83280,7 +83280,7 @@ declare class ScriptMenuActions {
 	 * @param from The ScriptMenuAction, index, or name at the beginning of the range.
 	 * @param to The ScriptMenuAction, index, or name at the end of the range.
 	 */
-	itemByRange(from: ScriptMenuAction | number | String, to: ScriptMenuAction | number | String): ScriptMenuAction[];
+	itemByRange(from: ScriptMenuAction | number | string, to: ScriptMenuAction | number | string): ScriptMenuAction[];
 
 	/**
 	 * Returns the last ScriptMenuAction in the collection.
@@ -83452,7 +83452,7 @@ declare class Menus {
 	 * Returns the Menu with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Menu;
+	item(index: number | string): Menu;
 
 	/**
 	 * Returns the Menu with the specified name.
@@ -83465,7 +83465,7 @@ declare class Menus {
 	 * @param from The Menu, index, or name at the beginning of the range.
 	 * @param to The Menu, index, or name at the end of the range.
 	 */
-	itemByRange(from: Menu | number | String, to: Menu | number | String): Menu[];
+	itemByRange(from: Menu | number | string, to: Menu | number | string): Menu[];
 
 	/**
 	 * Returns the last Menu in the collection.
@@ -83607,14 +83607,14 @@ declare class MenuElements {
 	 * Returns the MenuElement with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MenuElement;
+	item(index: number | string): MenuElement;
 
 	/**
 	 * Returns the MenuElements within the specified range.
 	 * @param from The MenuElement, index, or name at the beginning of the range.
 	 * @param to The MenuElement, index, or name at the end of the range.
 	 */
-	itemByRange(from: MenuElement | number | String, to: MenuElement | number | String): MenuElement[];
+	itemByRange(from: MenuElement | number | string, to: MenuElement | number | string): MenuElement[];
 
 	/**
 	 * Returns the last MenuElement in the collection.
@@ -83734,7 +83734,7 @@ declare class Submenus {
 	 * Returns the Submenu with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Submenu;
+	item(index: number | string): Submenu;
 
 	/**
 	 * Returns the Submenu with the specified name.
@@ -83747,7 +83747,7 @@ declare class Submenus {
 	 * @param from The Submenu, index, or name at the beginning of the range.
 	 * @param to The Submenu, index, or name at the end of the range.
 	 */
-	itemByRange(from: Submenu | number | String, to: Submenu | number | String): Submenu[];
+	itemByRange(from: Submenu | number | string, to: Submenu | number | string): Submenu[];
 
 	/**
 	 * Returns the last Submenu in the collection.
@@ -83867,7 +83867,7 @@ declare class MenuItems {
 	 * Returns the MenuItem with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MenuItem;
+	item(index: number | string): MenuItem;
 
 	/**
 	 * Returns the MenuItem with the specified ID.
@@ -83886,7 +83886,7 @@ declare class MenuItems {
 	 * @param from The MenuItem, index, or name at the beginning of the range.
 	 * @param to The MenuItem, index, or name at the end of the range.
 	 */
-	itemByRange(from: MenuItem | number | String, to: MenuItem | number | String): MenuItem[];
+	itemByRange(from: MenuItem | number | string, to: MenuItem | number | string): MenuItem[];
 
 	/**
 	 * Returns the last MenuItem in the collection.
@@ -83975,7 +83975,7 @@ declare class MenuSeparators {
 	 * Returns the MenuSeparator with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MenuSeparator;
+	item(index: number | string): MenuSeparator;
 
 	/**
 	 * Returns the MenuSeparator with the specified ID.
@@ -83988,7 +83988,7 @@ declare class MenuSeparators {
 	 * @param from The MenuSeparator, index, or name at the beginning of the range.
 	 * @param to The MenuSeparator, index, or name at the end of the range.
 	 */
-	itemByRange(from: MenuSeparator | number | String, to: MenuSeparator | number | String): MenuSeparator[];
+	itemByRange(from: MenuSeparator | number | string, to: MenuSeparator | number | string): MenuSeparator[];
 
 	/**
 	 * Returns the last MenuSeparator in the collection.
@@ -84135,7 +84135,7 @@ declare class Panels {
 	 * Returns the Panel with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Panel;
+	item(index: number | string): Panel;
 
 	/**
 	 * Returns the Panel with the specified name.
@@ -84148,7 +84148,7 @@ declare class Panels {
 	 * @param from The Panel, index, or name at the beginning of the range.
 	 * @param to The Panel, index, or name at the end of the range.
 	 */
-	itemByRange(from: Panel | number | String, to: Panel | number | String): Panel[];
+	itemByRange(from: Panel | number | string, to: Panel | number | string): Panel[];
 
 	/**
 	 * Returns the last Panel in the collection.
@@ -84339,7 +84339,7 @@ declare class Dialogs {
 	 * Returns the Dialog with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Dialog;
+	item(index: number | string): Dialog;
 
 	/**
 	 * Returns the Dialog with the specified ID.
@@ -84358,7 +84358,7 @@ declare class Dialogs {
 	 * @param from The Dialog, index, or name at the beginning of the range.
 	 * @param to The Dialog, index, or name at the end of the range.
 	 */
-	itemByRange(from: Dialog | number | String, to: Dialog | number | String): Dialog[];
+	itemByRange(from: Dialog | number | string, to: Dialog | number | string): Dialog[];
 
 	/**
 	 * Returns the last Dialog in the collection.
@@ -84505,7 +84505,7 @@ declare class Widgets {
 	 * Returns the Widget with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Widget;
+	item(index: number | string): Widget;
 
 	/**
 	 * Returns the Widget with the specified ID.
@@ -84518,7 +84518,7 @@ declare class Widgets {
 	 * @param from The Widget, index, or name at the beginning of the range.
 	 * @param to The Widget, index, or name at the end of the range.
 	 */
-	itemByRange(from: Widget | number | String, to: Widget | number | String): Widget[];
+	itemByRange(from: Widget | number | string, to: Widget | number | string): Widget[];
 
 	/**
 	 * Returns the last Widget in the collection.
@@ -84605,7 +84605,7 @@ declare class TextEditboxes {
 	 * Returns the TextEditbox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): TextEditbox;
+	item(index: number | string): TextEditbox;
 
 	/**
 	 * Returns the TextEditbox with the specified ID.
@@ -84618,7 +84618,7 @@ declare class TextEditboxes {
 	 * @param from The TextEditbox, index, or name at the beginning of the range.
 	 * @param to The TextEditbox, index, or name at the end of the range.
 	 */
-	itemByRange(from: TextEditbox | number | String, to: TextEditbox | number | String): TextEditbox[];
+	itemByRange(from: TextEditbox | number | string, to: TextEditbox | number | string): TextEditbox[];
 
 	/**
 	 * Returns the last TextEditbox in the collection.
@@ -84710,7 +84710,7 @@ declare class StaticTexts {
 	 * Returns the StaticText with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): StaticText;
+	item(index: number | string): StaticText;
 
 	/**
 	 * Returns the StaticText with the specified ID.
@@ -84723,7 +84723,7 @@ declare class StaticTexts {
 	 * @param from The StaticText, index, or name at the beginning of the range.
 	 * @param to The StaticText, index, or name at the end of the range.
 	 */
-	itemByRange(from: StaticText | number | String, to: StaticText | number | String): StaticText[];
+	itemByRange(from: StaticText | number | string, to: StaticText | number | string): StaticText[];
 
 	/**
 	 * Returns the last StaticText in the collection.
@@ -84815,7 +84815,7 @@ declare class Dropdowns {
 	 * Returns the Dropdown with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): Dropdown;
+	item(index: number | string): Dropdown;
 
 	/**
 	 * Returns the Dropdown with the specified ID.
@@ -84828,7 +84828,7 @@ declare class Dropdowns {
 	 * @param from The Dropdown, index, or name at the beginning of the range.
 	 * @param to The Dropdown, index, or name at the end of the range.
 	 */
-	itemByRange(from: Dropdown | number | String, to: Dropdown | number | String): Dropdown[];
+	itemByRange(from: Dropdown | number | string, to: Dropdown | number | string): Dropdown[];
 
 	/**
 	 * Returns the last Dropdown in the collection.
@@ -84920,7 +84920,7 @@ declare class CheckboxControls {
 	 * Returns the CheckboxControl with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): CheckboxControl;
+	item(index: number | string): CheckboxControl;
 
 	/**
 	 * Returns the CheckboxControl with the specified ID.
@@ -84933,7 +84933,7 @@ declare class CheckboxControls {
 	 * @param from The CheckboxControl, index, or name at the beginning of the range.
 	 * @param to The CheckboxControl, index, or name at the end of the range.
 	 */
-	itemByRange(from: CheckboxControl | number | String, to: CheckboxControl | number | String): CheckboxControl[];
+	itemByRange(from: CheckboxControl | number | string, to: CheckboxControl | number | string): CheckboxControl[];
 
 	/**
 	 * Returns the last CheckboxControl in the collection.
@@ -85176,7 +85176,7 @@ declare class DialogColumns {
 	 * Returns the DialogColumn with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DialogColumn;
+	item(index: number | string): DialogColumn;
 
 	/**
 	 * Returns the DialogColumn with the specified ID.
@@ -85189,7 +85189,7 @@ declare class DialogColumns {
 	 * @param from The DialogColumn, index, or name at the beginning of the range.
 	 * @param to The DialogColumn, index, or name at the end of the range.
 	 */
-	itemByRange(from: DialogColumn | number | String, to: DialogColumn | number | String): DialogColumn[];
+	itemByRange(from: DialogColumn | number | string, to: DialogColumn | number | string): DialogColumn[];
 
 	/**
 	 * Returns the last DialogColumn in the collection.
@@ -85286,7 +85286,7 @@ declare class RadiobuttonGroups {
 	 * Returns the RadiobuttonGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): RadiobuttonGroup;
+	item(index: number | string): RadiobuttonGroup;
 
 	/**
 	 * Returns the RadiobuttonGroup with the specified ID.
@@ -85299,7 +85299,7 @@ declare class RadiobuttonGroups {
 	 * @param from The RadiobuttonGroup, index, or name at the beginning of the range.
 	 * @param to The RadiobuttonGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: RadiobuttonGroup | number | String, to: RadiobuttonGroup | number | String): RadiobuttonGroup[];
+	itemByRange(from: RadiobuttonGroup | number | string, to: RadiobuttonGroup | number | string): RadiobuttonGroup[];
 
 	/**
 	 * Returns the last RadiobuttonGroup in the collection.
@@ -85391,7 +85391,7 @@ declare class RadiobuttonControls {
 	 * Returns the RadiobuttonControl with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): RadiobuttonControl;
+	item(index: number | string): RadiobuttonControl;
 
 	/**
 	 * Returns the RadiobuttonControl with the specified ID.
@@ -85404,7 +85404,7 @@ declare class RadiobuttonControls {
 	 * @param from The RadiobuttonControl, index, or name at the beginning of the range.
 	 * @param to The RadiobuttonControl, index, or name at the end of the range.
 	 */
-	itemByRange(from: RadiobuttonControl | number | String, to: RadiobuttonControl | number | String): RadiobuttonControl[];
+	itemByRange(from: RadiobuttonControl | number | string, to: RadiobuttonControl | number | string): RadiobuttonControl[];
 
 	/**
 	 * Returns the last RadiobuttonControl in the collection.
@@ -85516,7 +85516,7 @@ declare class IntegerEditboxes {
 	 * Returns the IntegerEditbox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): IntegerEditbox;
+	item(index: number | string): IntegerEditbox;
 
 	/**
 	 * Returns the IntegerEditbox with the specified ID.
@@ -85529,7 +85529,7 @@ declare class IntegerEditboxes {
 	 * @param from The IntegerEditbox, index, or name at the beginning of the range.
 	 * @param to The IntegerEditbox, index, or name at the end of the range.
 	 */
-	itemByRange(from: IntegerEditbox | number | String, to: IntegerEditbox | number | String): IntegerEditbox[];
+	itemByRange(from: IntegerEditbox | number | string, to: IntegerEditbox | number | string): IntegerEditbox[];
 
 	/**
 	 * Returns the last IntegerEditbox in the collection.
@@ -85646,7 +85646,7 @@ declare class IntegerComboboxes {
 	 * Returns the IntegerCombobox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): IntegerCombobox;
+	item(index: number | string): IntegerCombobox;
 
 	/**
 	 * Returns the IntegerCombobox with the specified ID.
@@ -85659,7 +85659,7 @@ declare class IntegerComboboxes {
 	 * @param from The IntegerCombobox, index, or name at the beginning of the range.
 	 * @param to The IntegerCombobox, index, or name at the end of the range.
 	 */
-	itemByRange(from: IntegerCombobox | number | String, to: IntegerCombobox | number | String): IntegerCombobox[];
+	itemByRange(from: IntegerCombobox | number | string, to: IntegerCombobox | number | string): IntegerCombobox[];
 
 	/**
 	 * Returns the last IntegerCombobox in the collection.
@@ -85846,7 +85846,7 @@ declare class EnablingGroups {
 	 * Returns the EnablingGroup with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): EnablingGroup;
+	item(index: number | string): EnablingGroup;
 
 	/**
 	 * Returns the EnablingGroup with the specified ID.
@@ -85859,7 +85859,7 @@ declare class EnablingGroups {
 	 * @param from The EnablingGroup, index, or name at the beginning of the range.
 	 * @param to The EnablingGroup, index, or name at the end of the range.
 	 */
-	itemByRange(from: EnablingGroup | number | String, to: EnablingGroup | number | String): EnablingGroup[];
+	itemByRange(from: EnablingGroup | number | string, to: EnablingGroup | number | string): EnablingGroup[];
 
 	/**
 	 * Returns the last EnablingGroup in the collection.
@@ -85976,7 +85976,7 @@ declare class AngleComboboxes {
 	 * Returns the AngleCombobox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): AngleCombobox;
+	item(index: number | string): AngleCombobox;
 
 	/**
 	 * Returns the AngleCombobox with the specified ID.
@@ -85989,7 +85989,7 @@ declare class AngleComboboxes {
 	 * @param from The AngleCombobox, index, or name at the beginning of the range.
 	 * @param to The AngleCombobox, index, or name at the end of the range.
 	 */
-	itemByRange(from: AngleCombobox | number | String, to: AngleCombobox | number | String): AngleCombobox[];
+	itemByRange(from: AngleCombobox | number | string, to: AngleCombobox | number | string): AngleCombobox[];
 
 	/**
 	 * Returns the last AngleCombobox in the collection.
@@ -86106,7 +86106,7 @@ declare class PercentComboboxes {
 	 * Returns the PercentCombobox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PercentCombobox;
+	item(index: number | string): PercentCombobox;
 
 	/**
 	 * Returns the PercentCombobox with the specified ID.
@@ -86119,7 +86119,7 @@ declare class PercentComboboxes {
 	 * @param from The PercentCombobox, index, or name at the beginning of the range.
 	 * @param to The PercentCombobox, index, or name at the end of the range.
 	 */
-	itemByRange(from: PercentCombobox | number | String, to: PercentCombobox | number | String): PercentCombobox[];
+	itemByRange(from: PercentCombobox | number | string, to: PercentCombobox | number | string): PercentCombobox[];
 
 	/**
 	 * Returns the last PercentCombobox in the collection.
@@ -86231,7 +86231,7 @@ declare class RealEditboxes {
 	 * Returns the RealEditbox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): RealEditbox;
+	item(index: number | string): RealEditbox;
 
 	/**
 	 * Returns the RealEditbox with the specified ID.
@@ -86244,7 +86244,7 @@ declare class RealEditboxes {
 	 * @param from The RealEditbox, index, or name at the beginning of the range.
 	 * @param to The RealEditbox, index, or name at the end of the range.
 	 */
-	itemByRange(from: RealEditbox | number | String, to: RealEditbox | number | String): RealEditbox[];
+	itemByRange(from: RealEditbox | number | string, to: RealEditbox | number | string): RealEditbox[];
 
 	/**
 	 * Returns the last RealEditbox in the collection.
@@ -86356,7 +86356,7 @@ declare class PercentEditboxes {
 	 * Returns the PercentEditbox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): PercentEditbox;
+	item(index: number | string): PercentEditbox;
 
 	/**
 	 * Returns the PercentEditbox with the specified ID.
@@ -86369,7 +86369,7 @@ declare class PercentEditboxes {
 	 * @param from The PercentEditbox, index, or name at the beginning of the range.
 	 * @param to The PercentEditbox, index, or name at the end of the range.
 	 */
-	itemByRange(from: PercentEditbox | number | String, to: PercentEditbox | number | String): PercentEditbox[];
+	itemByRange(from: PercentEditbox | number | string, to: PercentEditbox | number | string): PercentEditbox[];
 
 	/**
 	 * Returns the last PercentEditbox in the collection.
@@ -86481,7 +86481,7 @@ declare class AngleEditboxes {
 	 * Returns the AngleEditbox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): AngleEditbox;
+	item(index: number | string): AngleEditbox;
 
 	/**
 	 * Returns the AngleEditbox with the specified ID.
@@ -86494,7 +86494,7 @@ declare class AngleEditboxes {
 	 * @param from The AngleEditbox, index, or name at the beginning of the range.
 	 * @param to The AngleEditbox, index, or name at the end of the range.
 	 */
-	itemByRange(from: AngleEditbox | number | String, to: AngleEditbox | number | String): AngleEditbox[];
+	itemByRange(from: AngleEditbox | number | string, to: AngleEditbox | number | string): AngleEditbox[];
 
 	/**
 	 * Returns the last AngleEditbox in the collection.
@@ -86611,7 +86611,7 @@ declare class RealComboboxes {
 	 * Returns the RealCombobox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): RealCombobox;
+	item(index: number | string): RealCombobox;
 
 	/**
 	 * Returns the RealCombobox with the specified ID.
@@ -86624,7 +86624,7 @@ declare class RealComboboxes {
 	 * @param from The RealCombobox, index, or name at the beginning of the range.
 	 * @param to The RealCombobox, index, or name at the end of the range.
 	 */
-	itemByRange(from: RealCombobox | number | String, to: RealCombobox | number | String): RealCombobox[];
+	itemByRange(from: RealCombobox | number | string, to: RealCombobox | number | string): RealCombobox[];
 
 	/**
 	 * Returns the last RealCombobox in the collection.
@@ -86746,7 +86746,7 @@ declare class MeasurementComboboxes {
 	 * Returns the MeasurementCombobox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MeasurementCombobox;
+	item(index: number | string): MeasurementCombobox;
 
 	/**
 	 * Returns the MeasurementCombobox with the specified ID.
@@ -86759,7 +86759,7 @@ declare class MeasurementComboboxes {
 	 * @param from The MeasurementCombobox, index, or name at the beginning of the range.
 	 * @param to The MeasurementCombobox, index, or name at the end of the range.
 	 */
-	itemByRange(from: MeasurementCombobox | number | String, to: MeasurementCombobox | number | String): MeasurementCombobox[];
+	itemByRange(from: MeasurementCombobox | number | string, to: MeasurementCombobox | number | string): MeasurementCombobox[];
 
 	/**
 	 * Returns the last MeasurementCombobox in the collection.
@@ -86876,7 +86876,7 @@ declare class MeasurementEditboxes {
 	 * Returns the MeasurementEditbox with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): MeasurementEditbox;
+	item(index: number | string): MeasurementEditbox;
 
 	/**
 	 * Returns the MeasurementEditbox with the specified ID.
@@ -86889,7 +86889,7 @@ declare class MeasurementEditboxes {
 	 * @param from The MeasurementEditbox, index, or name at the beginning of the range.
 	 * @param to The MeasurementEditbox, index, or name at the end of the range.
 	 */
-	itemByRange(from: MeasurementEditbox | number | String, to: MeasurementEditbox | number | String): MeasurementEditbox[];
+	itemByRange(from: MeasurementEditbox | number | string, to: MeasurementEditbox | number | string): MeasurementEditbox[];
 
 	/**
 	 * Returns the last MeasurementEditbox in the collection.
@@ -87066,7 +87066,7 @@ declare class BorderPanels {
 	 * Returns the BorderPanel with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): BorderPanel;
+	item(index: number | string): BorderPanel;
 
 	/**
 	 * Returns the BorderPanel with the specified ID.
@@ -87079,7 +87079,7 @@ declare class BorderPanels {
 	 * @param from The BorderPanel, index, or name at the beginning of the range.
 	 * @param to The BorderPanel, index, or name at the end of the range.
 	 */
-	itemByRange(from: BorderPanel | number | String, to: BorderPanel | number | String): BorderPanel[];
+	itemByRange(from: BorderPanel | number | string, to: BorderPanel | number | string): BorderPanel[];
 
 	/**
 	 * Returns the last BorderPanel in the collection.
@@ -87322,7 +87322,7 @@ declare class DialogRows {
 	 * Returns the DialogRow with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DialogRow;
+	item(index: number | string): DialogRow;
 
 	/**
 	 * Returns the DialogRow with the specified ID.
@@ -87335,7 +87335,7 @@ declare class DialogRows {
 	 * @param from The DialogRow, index, or name at the beginning of the range.
 	 * @param to The DialogRow, index, or name at the end of the range.
 	 */
-	itemByRange(from: DialogRow | number | String, to: DialogRow | number | String): DialogRow[];
+	itemByRange(from: DialogRow | number | string, to: DialogRow | number | string): DialogRow[];
 
 	/**
 	 * Returns the last DialogRow in the collection.
@@ -87383,7 +87383,7 @@ declare class XMLElement extends XMLItem {
 	/**
 	 * The contents of the text.
 	 */
-	contents: String | SpecialCharacters;
+	contents: string | SpecialCharacters;
 
 	/**
 	 * A collection of EPS files.
@@ -87413,7 +87413,7 @@ declare class XMLElement extends XMLItem {
 	/**
 	 * The XML tag applied to the element.
 	 */
-	markupTag: XMLTag | String;
+	markupTag: XMLTag | string;
 
 	/**
 	 * The page items collection, which can be used to process all page items in a container (such as a document, page, or group), regardless of type.
@@ -87515,13 +87515,13 @@ declare class XMLElement extends XMLItem {
 	 * @param using The cell style to apply.
 	 * @param clearingOverrides If true, removes local formatting before applying the cell style. 
 	 */
-	applyCellStyle(using: String | CellStyle, clearingOverrides?: boolean): void;
+	applyCellStyle(using: string | CellStyle, clearingOverrides?: boolean): void;
 
 	/**
 	 * Applies the specified character style to the text content of the XMLElement.
 	 * @param using The character style to apply.
 	 */
-	applyCharacterStyle(using: String | CharacterStyle): void;
+	applyCharacterStyle(using: string | CharacterStyle): void;
 
 	/**
 	 * Applies an object style to the frame associated with the XMLElement.
@@ -87529,21 +87529,21 @@ declare class XMLElement extends XMLItem {
 	 * @param clearingOverrides If true, removes local formatting before applying the object style. 
 	 * @param clearingOverridesThroughRootObjectStyle If true, clears unchecked category attributes through the root style. 
 	 */
-	applyObjectStyle(using: String | ObjectStyle, clearingOverrides?: boolean, clearingOverridesThroughRootObjectStyle?: boolean): void;
+	applyObjectStyle(using: string | ObjectStyle, clearingOverrides?: boolean, clearingOverridesThroughRootObjectStyle?: boolean): void;
 
 	/**
 	 * Applies the specified paragraph style to the text content of the XMLElement.
 	 * @param using The paragraph style to apply.
 	 * @param clearingOverrides If true, clears any attributes before applying the style. 
 	 */
-	applyParagraphStyle(using: String | ParagraphStyle, clearingOverrides?: boolean): void;
+	applyParagraphStyle(using: string | ParagraphStyle, clearingOverrides?: boolean): void;
 
 	/**
 	 * Applies a table style to the table associated with the XMLElement.
 	 * @param using The table style to apply.
 	 * @param clearingOverrides If true, removes local formatting before applying the table style. 
 	 */
-	applyTableStyle(using: String | TableStyle, clearingOverrides?: boolean): void;
+	applyTableStyle(using: string | TableStyle, clearingOverrides?: boolean): void;
 
 	/**
 	 * asynchronously exports the object(s) to a file.
@@ -87554,7 +87554,7 @@ declare class XMLElement extends XMLItem {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	asynchronousExportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
+	asynchronousExportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): BackgroundTask;
 
 	/**
 	 * Finds text that matches the find what value and replaces the text with the change to value.
@@ -87603,7 +87603,7 @@ declare class XMLElement extends XMLItem {
 	 * @param versionComments The comment for this version. 
 	 * @param forceSave If true, forcibly saves a version. 
 	 */
-	exportFile(format: ExportFormat | String, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
+	exportFile(format: ExportFormat | string, to: File, showingOptions?: boolean, using?: PDFExportPreset, versionComments?: string, forceSave?: boolean): void;
 
 	/**
 	 * Finds text that matches the find what value.
@@ -87634,7 +87634,7 @@ declare class XMLElement extends XMLItem {
 	 * @param using The text to be inserted.
 	 * @param position The position at which to insert the text. Note that text inserted before or after the element does not become part of the content of the element. Instead, it becomes content of the parent of the element.
 	 */
-	insertTextAsContent(using: String | SpecialCharacters, position: XMLElementPosition): Text;
+	insertTextAsContent(using: string | SpecialCharacters, position: XMLElementPosition): Text;
 
 	/**
 	 * Associates the object with the specified XML element while preserving existing content.
@@ -87732,7 +87732,7 @@ declare class XMLElements {
 	 * @param xmlContent The content to be marked up.
 	 * @param withProperties Initial values for properties of the new XMLElement 
 	 */
-	add(markupTag: String | XMLTag, xmlContent: Text | Story | PageItem | Movie | Sound | Graphic | Table | Cell, withProperties: Object): XMLElement;
+	add(markupTag: string | XMLTag, xmlContent: Text | Story | PageItem | Movie | Sound | Graphic | Table | Cell, withProperties: Object): XMLElement;
 
 	/**
 	 * Returns any XMLElement in the collection.
@@ -87758,7 +87758,7 @@ declare class XMLElements {
 	 * Returns the XMLElement with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLElement;
+	item(index: number | string): XMLElement;
 
 	/**
 	 * Returns the XMLElement with the specified ID.
@@ -87771,7 +87771,7 @@ declare class XMLElements {
 	 * @param from The XMLElement, index, or name at the beginning of the range.
 	 * @param to The XMLElement, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLElement | number | String, to: XMLElement | number | String): XMLElement[];
+	itemByRange(from: XMLElement | number | string, to: XMLElement | number | string): XMLElement[];
 
 	/**
 	 * Returns the last XMLElement in the collection.
@@ -87944,7 +87944,7 @@ declare class XMLAttributes {
 	 * Returns the XMLAttribute with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLAttribute;
+	item(index: number | string): XMLAttribute;
 
 	/**
 	 * Returns the XMLAttribute with the specified name.
@@ -87957,7 +87957,7 @@ declare class XMLAttributes {
 	 * @param from The XMLAttribute, index, or name at the beginning of the range.
 	 * @param to The XMLAttribute, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLAttribute | number | String, to: XMLAttribute | number | String): XMLAttribute[];
+	itemByRange(from: XMLAttribute | number | string, to: XMLAttribute | number | string): XMLAttribute[];
 
 	/**
 	 * Returns the last XMLAttribute in the collection.
@@ -88072,7 +88072,7 @@ declare class XMLTag {
 	 * Deletes the tag.
 	 * @param replacingWith The tag to substitute.
 	 */
-	remove(replacingWith: XMLTag | String): void;
+	remove(replacingWith: XMLTag | string): void;
 
 	/**
 	 * Removes the event listener.
@@ -88141,7 +88141,7 @@ declare class XMLTags {
 	 * Returns the XMLTag with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLTag;
+	item(index: number | string): XMLTag;
 
 	/**
 	 * Returns the XMLTag with the specified ID.
@@ -88160,7 +88160,7 @@ declare class XMLTags {
 	 * @param from The XMLTag, index, or name at the beginning of the range.
 	 * @param to The XMLTag, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLTag | number | String, to: XMLTag | number | String): XMLTag[];
+	itemByRange(from: XMLTag | number | string, to: XMLTag | number | string): XMLTag[];
 
 	/**
 	 * Returns the last XMLTag in the collection.
@@ -88216,14 +88216,14 @@ declare class XMLImportMap {
 	readonly isValid: boolean;
 
 	/**
-	 * The style mapped to the XML tag. Can return: ParagraphStyle, CharacterStyle, TableStyle or CellStyle. Can also accept: String.
+	 * The style mapped to the XML tag.
 	 */
-	mappedStyle: any;
+	mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string;
 
 	/**
 	 * The XML tag applied to the element.
 	 */
-	readonly markupTag: XMLTag | String;
+	readonly markupTag: XMLTag | string;
 
 	/**
 	 * The parent of the XMLImportMap (a Application or Document).
@@ -88294,7 +88294,7 @@ declare class XMLImportMaps {
 	 * @param mappedStyle the mapped style.
 	 * @param withProperties Initial values for properties of the new XMLImportMap 
 	 */
-	add(markupTag: XMLTag | String, mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | String, withProperties: Object): XMLImportMap;
+	add(markupTag: XMLTag | string, mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string, withProperties: Object): XMLImportMap;
 
 	/**
 	 * Returns any XMLImportMap in the collection.
@@ -88320,14 +88320,14 @@ declare class XMLImportMaps {
 	 * Returns the XMLImportMap with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLImportMap;
+	item(index: number | string): XMLImportMap;
 
 	/**
 	 * Returns the XMLImportMaps within the specified range.
 	 * @param from The XMLImportMap, index, or name at the beginning of the range.
 	 * @param to The XMLImportMap, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLImportMap | number | String, to: XMLImportMap | number | String): XMLImportMap[];
+	itemByRange(from: XMLImportMap | number | string, to: XMLImportMap | number | string): XMLImportMap[];
 
 	/**
 	 * Returns the last XMLImportMap in the collection.
@@ -88398,14 +88398,14 @@ declare class XMLExportMap {
 	readonly isValid: boolean;
 
 	/**
-	 * The style mapped to the XML tag. Can return: ParagraphStyle, CharacterStyle, TableStyle or CellStyle. Can also accept: String.
+	 * The style mapped to the XML tag.
 	 */
-	readonly mappedStyle: any;
+	readonly mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string;
 
 	/**
 	 * The XML tag applied to the element.
 	 */
-	markupTag: XMLTag | String;
+	markupTag: XMLTag | string;
 
 	/**
 	 * The parent of the XMLExportMap (a Application or Document).
@@ -88476,7 +88476,7 @@ declare class XMLExportMaps {
 	 * @param markupTag The tag to map.
 	 * @param withProperties Initial values for properties of the new XMLExportMap 
 	 */
-	add(mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | String, markupTag: XMLTag | String, withProperties: Object): XMLExportMap;
+	add(mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string, markupTag: XMLTag | string, withProperties: Object): XMLExportMap;
 
 	/**
 	 * Returns any XMLExportMap in the collection.
@@ -88502,14 +88502,14 @@ declare class XMLExportMaps {
 	 * Returns the XMLExportMap with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLExportMap;
+	item(index: number | string): XMLExportMap;
 
 	/**
 	 * Returns the XMLExportMaps within the specified range.
 	 * @param from The XMLExportMap, index, or name at the beginning of the range.
 	 * @param to The XMLExportMap, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLExportMap | number | String, to: XMLExportMap | number | String): XMLExportMap[];
+	itemByRange(from: XMLExportMap | number | string, to: XMLExportMap | number | string): XMLExportMap[];
 
 	/**
 	 * Returns the last XMLExportMap in the collection.
@@ -88661,14 +88661,14 @@ declare class ValidationErrors {
 	 * Returns the ValidationError with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): ValidationError;
+	item(index: number | string): ValidationError;
 
 	/**
 	 * Returns the ValidationErrors within the specified range.
 	 * @param from The ValidationError, index, or name at the beginning of the range.
 	 * @param to The ValidationError, index, or name at the end of the range.
 	 */
-	itemByRange(from: ValidationError | number | String, to: ValidationError | number | String): ValidationError[];
+	itemByRange(from: ValidationError | number | string, to: ValidationError | number | string): ValidationError[];
 
 	/**
 	 * Returns the last ValidationError in the collection.
@@ -88769,7 +88769,7 @@ declare class XMLComments {
 	 * Returns the XMLComment with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLComment;
+	item(index: number | string): XMLComment;
 
 	/**
 	 * Returns the XMLComment with the specified ID.
@@ -88782,7 +88782,7 @@ declare class XMLComments {
 	 * @param from The XMLComment, index, or name at the beginning of the range.
 	 * @param to The XMLComment, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLComment | number | String, to: XMLComment | number | String): XMLComment[];
+	itemByRange(from: XMLComment | number | string, to: XMLComment | number | string): XMLComment[];
 
 	/**
 	 * Returns the last XMLComment in the collection.
@@ -88889,7 +88889,7 @@ declare class XMLInstructions {
 	 * Returns the XMLInstruction with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLInstruction;
+	item(index: number | string): XMLInstruction;
 
 	/**
 	 * Returns the XMLInstruction with the specified ID.
@@ -88902,7 +88902,7 @@ declare class XMLInstructions {
 	 * @param from The XMLInstruction, index, or name at the beginning of the range.
 	 * @param to The XMLInstruction, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLInstruction | number | String, to: XMLInstruction | number | String): XMLInstruction[];
+	itemByRange(from: XMLInstruction | number | string, to: XMLInstruction | number | string): XMLInstruction[];
 
 	/**
 	 * Returns the last XMLInstruction in the collection.
@@ -89060,7 +89060,7 @@ declare class XMLItems {
 	 * Returns the XMLItem with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLItem;
+	item(index: number | string): XMLItem;
 
 	/**
 	 * Returns the XMLItem with the specified ID.
@@ -89073,7 +89073,7 @@ declare class XMLItems {
 	 * @param from The XMLItem, index, or name at the beginning of the range.
 	 * @param to The XMLItem, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLItem | number | String, to: XMLItem | number | String): XMLItem[];
+	itemByRange(from: XMLItem | number | string, to: XMLItem | number | string): XMLItem[];
 
 	/**
 	 * Returns the last XMLItem in the collection.
@@ -89111,7 +89111,7 @@ declare class DTD extends XMLItem {
 	/**
 	 * The contents of the text.
 	 */
-	readonly contents: String | SpecialCharacters;
+	readonly contents: string | SpecialCharacters;
 
 	/**
 	 * The public ID of the DOCTYPE declaration. Note: Valid only when the DTD is an external subset.
@@ -89169,7 +89169,7 @@ declare class DTDs {
 	 * Returns the DTD with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): DTD;
+	item(index: number | string): DTD;
 
 	/**
 	 * Returns the DTD with the specified ID.
@@ -89182,7 +89182,7 @@ declare class DTDs {
 	 * @param from The DTD, index, or name at the beginning of the range.
 	 * @param to The DTD, index, or name at the end of the range.
 	 */
-	itemByRange(from: DTD | number | String, to: DTD | number | String): DTD[];
+	itemByRange(from: DTD | number | string, to: DTD | number | string): DTD[];
 
 	/**
 	 * Returns the last DTD in the collection.
@@ -89258,7 +89258,7 @@ declare class XmlStories {
 	 * Returns the XmlStory with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XmlStory;
+	item(index: number | string): XmlStory;
 
 	/**
 	 * Returns the XmlStory with the specified ID.
@@ -89277,7 +89277,7 @@ declare class XmlStories {
 	 * @param from The XmlStory, index, or name at the beginning of the range.
 	 * @param to The XmlStory, index, or name at the end of the range.
 	 */
-	itemByRange(from: XmlStory | number | String, to: XmlStory | number | String): XmlStory[];
+	itemByRange(from: XmlStory | number | string, to: XmlStory | number | string): XmlStory[];
 
 	/**
 	 * Returns the last XmlStory in the collection.
@@ -89496,7 +89496,7 @@ declare class XMLRuleProcessors {
 	 * Returns the XMLRuleProcessor with the specified index or name.
 	 * @param index The index or name.
 	 */
-	item(index: number | String): XMLRuleProcessor;
+	item(index: number | string): XMLRuleProcessor;
 
 	/**
 	 * Returns the XMLRuleProcessor with the specified ID.
@@ -89515,7 +89515,7 @@ declare class XMLRuleProcessors {
 	 * @param from The XMLRuleProcessor, index, or name at the beginning of the range.
 	 * @param to The XMLRuleProcessor, index, or name at the end of the range.
 	 */
-	itemByRange(from: XMLRuleProcessor | number | String, to: XMLRuleProcessor | number | String): XMLRuleProcessor[];
+	itemByRange(from: XMLRuleProcessor | number | string, to: XMLRuleProcessor | number | string): XMLRuleProcessor[];
 
 	/**
 	 * Returns the last XMLRuleProcessor in the collection.
