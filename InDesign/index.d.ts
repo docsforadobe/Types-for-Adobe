@@ -661,9 +661,9 @@ declare class EventListener {
 	readonly eventType: string;
 
 	/**
-	 * The handler to invoke when the event occurs. Can return: File or JavaScript Function.
+	 * The handler to invoke when the event occurs.
 	 */
-	readonly handler: any;
+	readonly handler: File | Function;
 
 	/**
 	 * The unique ID of the EventListener.
@@ -25167,9 +25167,9 @@ declare class PageReference {
 	pageNumberStyleOverride: CharacterStyle;
 
 	/**
-	 * The paragraph style or number of paragraphs or pages that defines the last page in a page range. Note: Valid only when page reference type specifies the next use of a paragraph style or a number of paragraphs or pages. . Can return: ParagraphStyle or Long Integer.
+	 * The paragraph style or number of paragraphs or pages that defines the last page in a page range. Note: Valid only when page reference type specifies the next use of a paragraph style or a number of paragraphs or pages. .
 	 */
-	pageReferenceLimit: any;
+	pageReferenceLimit: ParagraphStyle | number;
 
 	/**
 	 * Options for index page references.
@@ -35495,9 +35495,9 @@ declare class Image extends Graphic {
 	imageRenderingIntent: RenderingIntent;
 
 	/**
-	 * The color profile. Can return: Profile enumerator or String.
+	 * The color profile.
 	 */
-	profile: any;
+	profile: Profile | String;
 
 	/**
 	 * A list of valid RGB profiles.
@@ -39938,9 +39938,9 @@ declare class Link {
 	readonly needed: boolean;
 
 	/**
-	 * The linked object. Can return: Story, Graphic, Movie or Sound.
+	 * The linked object.
 	 */
-	readonly parent: any;
+	readonly parent: Story | Graphic | Movie | Sound;
 
 	/**
 	 * A collection of preferences objects.
@@ -41331,9 +41331,9 @@ declare class TextDefault extends Preference {
 	bulletsAndNumberingListType: ListType;
 
 	/**
-	 * The character style to be used for the text after string. Can return: CharacterStyle or String.
+	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: any;
+	bulletsCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The text after string expression for bullets.
@@ -41726,9 +41726,9 @@ declare class TextDefault extends Preference {
 	lastLineIndent: string | number;
 
 	/**
-	 * The leading applied to the text. Can return: Unit or Leading enumerator.
+	 * The leading applied to the text.
 	 */
-	leading: any;
+	leading: number | Leading;
 
 	/**
 	 * The amount of space before each character.
@@ -41821,9 +41821,9 @@ declare class TextDefault extends Preference {
 	numberingApplyRestartPolicy: boolean;
 
 	/**
-	 * The character style to be used for the number string. Can return: CharacterStyle or String.
+	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: any;
+	numberingCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * Continue the numbering at this level.
@@ -43563,9 +43563,9 @@ declare class PrintPreference extends Preference {
 	markOffset: string | number;
 
 	/**
-	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
+	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	markType: any;
+	markType: MarkTypes | String;
 
 	/**
 	 * If true, prints the document as a negative.
@@ -43603,9 +43603,9 @@ declare class PrintPreference extends Preference {
 	pagePosition: PagePositions;
 
 	/**
-	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
+	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: any;
+	pageRange: PageRange | String;
 
 	/**
 	 * The space between document pages on the printing medium.
@@ -43613,9 +43613,9 @@ declare class PrintPreference extends Preference {
 	paperGap: string | number;
 
 	/**
-	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
+	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height.
 	 */
-	paperHeight: any;
+	paperHeight: PaperSize | number;
 
 	/**
 	 * The amount of space to offset the page from the left edge of the imageable area.
@@ -43623,9 +43623,9 @@ declare class PrintPreference extends Preference {
 	paperOffset: string | number;
 
 	/**
-	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
+	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
 	 */
-	paperSize: any;
+	paperSize: PaperSizes | String;
 
 	/**
 	 * A list of the available paper sizes.
@@ -43638,9 +43638,9 @@ declare class PrintPreference extends Preference {
 	paperTransverse: boolean;
 
 	/**
-	 * The paper width. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
+	 * The paper width. Note: Valid only when paper size is custom or scale mode is scale width height.
 	 */
-	paperWidth: any;
+	paperWidth: PaperSize | number;
 
 	/**
 	 * If true, doing pdf passthrough.
@@ -43653,9 +43653,9 @@ declare class PrintPreference extends Preference {
 	postscriptLevel: PostScriptLevels;
 
 	/**
-	 * The PPD, specified as a PPD name or an enumeration. Can return: PPDValues enumerator or String.
+	 * The PPD, specified as a PPD name or an enumeration.
 	 */
-	ppd: any;
+	ppd: PPDValues | String;
 
 	/**
 	 * Available PPDs.
@@ -43728,9 +43728,9 @@ declare class PrintPreference extends Preference {
 	printYellow: boolean;
 
 	/**
-	 * The current printer. Can return: Printer enumerator or String.
+	 * The current printer.
 	 */
-	printer: any;
+	printer: Printer | String;
 
 	/**
 	 * Available printers.
@@ -43738,9 +43738,9 @@ declare class PrintPreference extends Preference {
 	readonly printerList: string[];
 
 	/**
-	 * The color profile. Can return: Profile enumerator or String.
+	 * The color profile.
 	 */
-	profile: any;
+	profile: Profile | String;
 
 	/**
 	 * If true, prints small targets outside the page area for aligning color separations.
@@ -43773,9 +43773,9 @@ declare class PrintPreference extends Preference {
 	scaleWidth: number;
 
 	/**
-	 * The ink screening settings for composite gray output in PostScript or PDF format. . Can return: Screeening enumerator or String.
+	 * The ink screening settings for composite gray output in PostScript or PDF format. .
 	 */
-	screening: any;
+	screening: Screeening | String;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -43894,9 +43894,9 @@ declare class PrintBookletOption extends Preference {
 	marginsUniformSize: boolean;
 
 	/**
-	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
+	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: any;
+	pageRange: PageRange | String;
 
 	/**
 	 * If true, print blank spreads.
@@ -44095,9 +44095,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	markOffset: string | number;
 
 	/**
-	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
+	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	markType: any;
+	markType: MarkTypes | String;
 
 	/**
 	 * If true, prints the document as a negative.
@@ -44140,9 +44140,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	paperGap: string | number;
 
 	/**
-	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
+	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height.
 	 */
-	paperHeight: any;
+	paperHeight: PaperSize | number;
 
 	/**
 	 * The amount of space to offset the page from the left edge of the imageable area.
@@ -44150,9 +44150,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	paperOffset: string | number;
 
 	/**
-	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
+	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
 	 */
-	paperSize: any;
+	paperSize: PaperSizes | String;
 
 	/**
 	 * A list of the available paper sizes.
@@ -44165,9 +44165,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	paperTransverse: boolean;
 
 	/**
-	 * The paper width. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
+	 * The paper width. Note: Valid only when paper size is custom or scale mode is scale width height.
 	 */
-	paperWidth: any;
+	paperWidth: PaperSize | number;
 
 	/**
 	 * If true, doing pdf passthrough.
@@ -44180,9 +44180,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	postscriptLevel: PostScriptLevels;
 
 	/**
-	 * The PPD, specified as a PPD name or an enumeration. Can return: PPDValues enumerator or String.
+	 * The PPD, specified as a PPD name or an enumeration.
 	 */
-	ppd: any;
+	ppd: PPDValues | String;
 
 	/**
 	 * Available PPDs.
@@ -44245,9 +44245,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	printYellow: boolean;
 
 	/**
-	 * The current printer. Can return: Printer enumerator or String.
+	 * The current printer.
 	 */
-	printer: any;
+	printer: Printer | String;
 
 	/**
 	 * Available printers.
@@ -44255,9 +44255,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	readonly printerList: string[];
 
 	/**
-	 * The color profile. Can return: Profile enumerator or String.
+	 * The color profile.
 	 */
-	profile: any;
+	profile: Profile | String;
 
 	/**
 	 * If true, prints small targets outside the page area for aligning color separations.
@@ -44290,9 +44290,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	scaleWidth: number;
 
 	/**
-	 * The ink screening settings for composite gray output in PostScript or PDF format. . Can return: Screeening enumerator or String.
+	 * The ink screening settings for composite gray output in PostScript or PDF format. .
 	 */
-	screening: any;
+	screening: Screeening | String;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -44421,9 +44421,9 @@ declare class EPSExportPreference extends Preference {
 	opiImageReplacement: boolean;
 
 	/**
-	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
+	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: any;
+	pageRange: PageRange | String;
 
 	/**
 	 * The PostScript level of the printer.
@@ -45169,9 +45169,9 @@ declare class PDFExportPreference extends Preference {
 	pageMarksOffset: string | number;
 
 	/**
-	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
+	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: any;
+	pageRange: PageRange | String;
 
 	/**
 	 * The color space to use to represent color information in the exported PDF document.
@@ -45194,9 +45194,9 @@ declare class PDFExportPreference extends Preference {
 	pdfMagnification: PdfMagnificationOptions;
 
 	/**
-	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
+	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	pdfMarkType: any;
+	pdfMarkType: MarkTypes | String;
 
 	/**
 	 * The export PDF page layout.
@@ -45590,9 +45590,9 @@ declare class PDFExportPreset {
 	pdfMagnification: PdfMagnificationOptions;
 
 	/**
-	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
+	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	pdfMarkType: any;
+	pdfMarkType: MarkTypes | String;
 
 	/**
 	 * The export PDF page layout.
@@ -45857,9 +45857,9 @@ declare class InteractivePDFExportPreference extends Preference {
 	openInFullScreen: boolean;
 
 	/**
-	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
+	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: any;
+	pageRange: PageRange | String;
 
 	/**
 	 * The name of the page transition to use for all pages.
@@ -47177,9 +47177,9 @@ declare class FindTextPreference extends Preference {
 	appliedParagraphStyle: any;
 
 	/**
-	 * The percent of the type size to use for auto leading. (Range: 0 to 500). Can return: Real or NothingEnum enumerator.
+	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
 	 */
-	autoLeading: any;
+	autoLeading: number | NothingEnum;
 
 	/**
 	 * The number of half-width characters at or below which the characters automatically run horizontally in vertical text. Can return: Short Integer or NothingEnum enumerator.
@@ -47197,9 +47197,9 @@ declare class FindTextPreference extends Preference {
 	balanceRaggedLines: any;
 
 	/**
-	 * The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.
+	 * The baseline shift applied to the text.
 	 */
-	baselineShift: any;
+	baselineShift: number | NothingEnum;
 
 	/**
 	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
@@ -47242,9 +47242,9 @@ declare class FindTextPreference extends Preference {
 	characterDirection: any;
 
 	/**
-	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.
 	 */
-	characterRotation: any;
+	characterRotation: number | NothingEnum;
 
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
@@ -47292,9 +47292,9 @@ declare class FindTextPreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill color of the FindTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill color of the FindTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
 	 * The FindTextPreference to find. Can return: String or NothingEnum enumerator.
@@ -47302,9 +47302,9 @@ declare class FindTextPreference extends Preference {
 	findWhat: any;
 
 	/**
-	 * The amount to indent the first line. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the first line.
 	 */
-	firstLineIndent: any;
+	firstLineIndent: number | NothingEnum;
 
 	/**
 	 * The name of the font style. Can return: String or NothingEnum enumerator.
@@ -47317,14 +47317,14 @@ declare class FindTextPreference extends Preference {
 	glyphForm: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -47332,14 +47332,14 @@ declare class FindTextPreference extends Preference {
 	gradientFillStart: any;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.
 	 */
-	gradientStrokeLength: any;
+	gradientStrokeLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -47357,9 +47357,9 @@ declare class FindTextPreference extends Preference {
 	gridGyoudori: any;
 
 	/**
-	 * The horizontal scaling applied to the FindTextPreference. Can return: Real or NothingEnum enumerator.
+	 * The horizontal scaling applied to the FindTextPreference.
 	 */
-	horizontalScale: any;
+	horizontalScale: number | NothingEnum;
 
 	/**
 	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
@@ -47452,9 +47452,9 @@ declare class FindTextPreference extends Preference {
 	kentenFont: any;
 
 	/**
-	 * The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of kenten characters.
 	 */
-	kentenFontSize: any;
+	kentenFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
@@ -47477,9 +47477,9 @@ declare class FindTextPreference extends Preference {
 	kentenOverprintStroke: any;
 
 	/**
-	 * The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.
+	 * The distance between kenten characters and their parent characters.
 	 */
-	kentenPlacement: any;
+	kentenPlacement: number | NothingEnum;
 
 	/**
 	 * The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.
@@ -47492,29 +47492,29 @@ declare class FindTextPreference extends Preference {
 	kentenStrokeColor: any;
 
 	/**
-	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenStrokeTint: any;
+	kentenStrokeTint: number | NothingEnum;
 
 	/**
-	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenTint: any;
+	kentenTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of kenten characters.
 	 */
-	kentenWeight: any;
+	kentenWeight: number | NothingEnum;
 
 	/**
-	 * The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of kenten characters as a percent of the original size.
 	 */
-	kentenXScale: any;
+	kentenXScale: number | NothingEnum;
 
 	/**
-	 * The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.
+	 * The vertical size of kenten charachers as a percent of the original size. .
 	 */
-	kentenYScale: any;
+	kentenYScale: number | NothingEnum;
 
 	/**
 	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
@@ -47522,9 +47522,9 @@ declare class FindTextPreference extends Preference {
 	kerningMethod: any;
 
 	/**
-	 * The amount of space to add or remove between characters, specified in thousands of an em. . Can return: Real or NothingEnum enumerator.
+	 * The amount of space to add or remove between characters, specified in thousands of an em. .
 	 */
-	kerningValue: any;
+	kerningValue: number | NothingEnum;
 
 	/**
 	 * The keyboard direction of the character. Can return: CharacterDirectionOptions enumerator or NothingEnum enumerator.
@@ -47547,9 +47547,9 @@ declare class FindTextPreference extends Preference {
 	kinsokuType: any;
 
 	/**
-	 * The amount to indent the last line in the paragraph. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: any;
+	lastLineIndent: number | NothingEnum;
 
 	/**
 	 * The leading applied to the text. Can return: Unit, Leading enumerator or NothingEnum enumerator.
@@ -47557,9 +47557,9 @@ declare class FindTextPreference extends Preference {
 	leading: any;
 
 	/**
-	 * The amount of space before each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space before each character.
 	 */
-	leadingAki: any;
+	leadingAki: number | NothingEnum;
 
 	/**
 	 * The point from which leading is measured from line to line. Can return: LeadingModel enumerator or NothingEnum enumerator.
@@ -47567,9 +47567,9 @@ declare class FindTextPreference extends Preference {
 	leadingModel: any;
 
 	/**
-	 * The width of the left indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the left indent.
 	 */
-	leftIndent: any;
+	leftIndent: number | NothingEnum;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
@@ -47752,14 +47752,14 @@ declare class FindTextPreference extends Preference {
 	paragraphJustification: any;
 
 	/**
-	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long. Can return: Real or NothingEnum enumerator.
+	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long.
 	 */
-	paragraphKashidaWidth: any;
+	paragraphKashidaWidth: number | NothingEnum;
 
 	/**
-	 * The text size. Can return: Unit or NothingEnum enumerator.
+	 * The text size.
 	 */
-	pointSize: any;
+	pointSize: number | NothingEnum;
 
 	/**
 	 * The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.
@@ -47782,9 +47782,9 @@ declare class FindTextPreference extends Preference {
 	rensuuji: any;
 
 	/**
-	 * The width of the right indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the right indent.
 	 */
-	rightIndent: any;
+	rightIndent: number | NothingEnum;
 
 	/**
 	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -47832,9 +47832,9 @@ declare class FindTextPreference extends Preference {
 	rubyFont: any;
 
 	/**
-	 * The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of ruby characters.
 	 */
-	rubyFontSize: any;
+	rubyFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
@@ -47867,9 +47867,9 @@ declare class FindTextPreference extends Preference {
 	rubyParentOverhangAmount: any;
 
 	/**
-	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size.
 	 */
-	rubyParentScalingPercent: any;
+	rubyParentScalingPercent: number | NothingEnum;
 
 	/**
 	 * The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.
@@ -47887,14 +47887,14 @@ declare class FindTextPreference extends Preference {
 	rubyStroke: any;
 
 	/**
-	 * The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of ruby characters.
 	 */
-	rubyStrokeTint: any;
+	rubyStrokeTint: number | NothingEnum;
 
 	/**
-	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100).
 	 */
-	rubyTint: any;
+	rubyTint: number | NothingEnum;
 
 	/**
 	 * The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.
@@ -47902,29 +47902,29 @@ declare class FindTextPreference extends Preference {
 	rubyType: any;
 
 	/**
-	 * The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of ruby characters.
 	 */
-	rubyWeight: any;
+	rubyWeight: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal space between ruby and parent characters.
 	 */
-	rubyXOffset: any;
+	rubyXOffset: number | NothingEnum;
 
 	/**
-	 * The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyXScale: any;
+	rubyXScale: number | NothingEnum;
 
 	/**
-	 * The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of vertical space between ruby and parent characters.
 	 */
-	rubyYOffset: any;
+	rubyYOffset: number | NothingEnum;
 
 	/**
-	 * The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The vertical size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyYScale: any;
+	rubyYScale: number | NothingEnum;
 
 	/**
 	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
@@ -47942,14 +47942,14 @@ declare class FindTextPreference extends Preference {
 	shataiAdjustTsume: any;
 
 	/**
-	 * The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.
+	 * The shatai lens angle (in degrees).
 	 */
-	shataiDegreeAngle: any;
+	shataiDegreeAngle: number | NothingEnum;
 
 	/**
-	 * The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) of shatai obliquing to apply.
 	 */
-	shataiMagnification: any;
+	shataiMagnification: number | NothingEnum;
 
 	/**
 	 * The alignment to use for lines that contain a single word. Can return: SingleWordJustification enumerator or NothingEnum enumerator.
@@ -47957,29 +47957,29 @@ declare class FindTextPreference extends Preference {
 	singleWordJustification: any;
 
 	/**
-	 * The skew angle of the FindTextPreference. Can return: Real or NothingEnum enumerator.
+	 * The skew angle of the FindTextPreference.
 	 */
-	skew: any;
+	skew: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space below. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space below.
 	 */
-	spaceAfter: any;
+	spaceAfter: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space above. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space above.
 	 */
-	spaceBefore: any;
+	spaceBefore: number | NothingEnum;
 
 	/**
-	 * The minimum space after a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space after a span or a split column.
 	 */
-	spanColumnMinSpaceAfter: any;
+	spanColumnMinSpaceAfter: number | NothingEnum;
 
 	/**
-	 * The minimum space before a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space before a span or a split column.
 	 */
-	spanColumnMinSpaceBefore: any;
+	spanColumnMinSpaceBefore: number | NothingEnum;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns. Can return: SpanColumnTypeOptions enumerator or NothingEnum enumerator.
@@ -47992,14 +47992,14 @@ declare class FindTextPreference extends Preference {
 	spanSplitColumnCount: any;
 
 	/**
-	 * The inside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The inside gutter if the paragraph splits columns.
 	 */
-	splitColumnInsideGutter: any;
+	splitColumnInsideGutter: number | NothingEnum;
 
 	/**
-	 * The outside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The outside gutter if the paragraph splits columns.
 	 */
-	splitColumnOutsideGutter: any;
+	splitColumnOutsideGutter: number | NothingEnum;
 
 	/**
 	 * The location at which to start the paragraph. Can return: StartParagraph enumerator or NothingEnum enumerator.
@@ -48022,14 +48022,14 @@ declare class FindTextPreference extends Preference {
 	strikeThroughGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapTint: any;
+	strikeThroughGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: any;
+	strikeThroughOffset: number | NothingEnum;
 
 	/**
 	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -48037,9 +48037,9 @@ declare class FindTextPreference extends Preference {
 	strikeThroughOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
 	 */
-	strikeThroughTint: any;
+	strikeThroughTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -48047,9 +48047,9 @@ declare class FindTextPreference extends Preference {
 	strikeThroughType: any;
 
 	/**
-	 * The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: any;
+	strikeThroughWeight: number | NothingEnum;
 
 	/**
 	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
@@ -48067,14 +48067,14 @@ declare class FindTextPreference extends Preference {
 	strokeColor: any;
 
 	/**
-	 * The tint (as a percentage) of the stroke color of the FindTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the stroke color of the FindTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -48082,24 +48082,24 @@ declare class FindTextPreference extends Preference {
 	tatechuyoko: any;
 
 	/**
-	 * The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The horizontal offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoXOffset: any;
+	tatechuyokoXOffset: number | NothingEnum;
 
 	/**
-	 * The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The vertical offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoYOffset: any;
+	tatechuyokoYOffset: number | NothingEnum;
 
 	/**
-	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.
+	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em.
 	 */
-	tracking: any;
+	tracking: number | NothingEnum;
 
 	/**
-	 * The amount of space after each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space after each character.
 	 */
-	trailingAki: any;
+	trailingAki: number | NothingEnum;
 
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
@@ -48107,9 +48107,9 @@ declare class FindTextPreference extends Preference {
 	treatIdeographicSpaceAsSpace: any;
 
 	/**
-	 * The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal character compression.
 	 */
-	tsume: any;
+	tsume: number | NothingEnum;
 
 	/**
 	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
@@ -48132,14 +48132,14 @@ declare class FindTextPreference extends Preference {
 	underlineGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
 	 */
-	underlineGapTint: any;
+	underlineGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: any;
+	underlineOffset: number | NothingEnum;
 
 	/**
 	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -48147,9 +48147,9 @@ declare class FindTextPreference extends Preference {
 	underlineOverprint: any;
 
 	/**
-	 * The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
 	 */
-	underlineTint: any;
+	underlineTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -48157,14 +48157,14 @@ declare class FindTextPreference extends Preference {
 	underlineType: any;
 
 	/**
-	 * The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: any;
+	underlineWeight: number | NothingEnum;
 
 	/**
-	 * The vertical scaling applied to the FindTextPreference. Can return: Real or NothingEnum enumerator.
+	 * The vertical scaling applied to the FindTextPreference.
 	 */
-	verticalScale: any;
+	verticalScale: number | NothingEnum;
 
 	/**
 	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
@@ -48187,9 +48187,9 @@ declare class FindTextPreference extends Preference {
 	warichuCharsBeforeBreak: any;
 
 	/**
-	 * The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.
+	 * The gap between lines of warichu characters.
 	 */
-	warichuLineSpacing: any;
+	warichuLineSpacing: number | NothingEnum;
 
 	/**
 	 * The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.
@@ -48197,19 +48197,19 @@ declare class FindTextPreference extends Preference {
 	warichuLines: any;
 
 	/**
-	 * The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale parent text size to determine warichu size.
 	 */
-	warichuSize: any;
+	warichuSize: number | NothingEnum;
 
 	/**
-	 * The x (horizontal) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The x (horizontal) offset for diacritic adjustment.
 	 */
-	xOffsetDiacritic: any;
+	xOffsetDiacritic: number | NothingEnum;
 
 	/**
-	 * The y (vertical) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The y (vertical) offset for diacritic adjustment.
 	 */
-	yOffsetDiacritic: any;
+	yOffsetDiacritic: number | NothingEnum;
 
 }
 
@@ -48253,9 +48253,9 @@ declare class FindGrepPreference extends Preference {
 	appliedParagraphStyle: any;
 
 	/**
-	 * The percent of the type size to use for auto leading. (Range: 0 to 500). Can return: Real or NothingEnum enumerator.
+	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
 	 */
-	autoLeading: any;
+	autoLeading: number | NothingEnum;
 
 	/**
 	 * The number of half-width characters at or below which the characters automatically run horizontally in vertical text. Can return: Short Integer or NothingEnum enumerator.
@@ -48273,9 +48273,9 @@ declare class FindGrepPreference extends Preference {
 	balanceRaggedLines: any;
 
 	/**
-	 * The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.
+	 * The baseline shift applied to the text.
 	 */
-	baselineShift: any;
+	baselineShift: number | NothingEnum;
 
 	/**
 	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
@@ -48318,9 +48318,9 @@ declare class FindGrepPreference extends Preference {
 	characterDirection: any;
 
 	/**
-	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.
 	 */
-	characterRotation: any;
+	characterRotation: number | NothingEnum;
 
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
@@ -48368,9 +48368,9 @@ declare class FindGrepPreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill color of the FindGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill color of the FindGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
 	 * The FindGrepPreference to find. Can return: String or NothingEnum enumerator.
@@ -48378,9 +48378,9 @@ declare class FindGrepPreference extends Preference {
 	findWhat: any;
 
 	/**
-	 * The amount to indent the first line. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the first line.
 	 */
-	firstLineIndent: any;
+	firstLineIndent: number | NothingEnum;
 
 	/**
 	 * The name of the font style. Can return: String or NothingEnum enumerator.
@@ -48393,14 +48393,14 @@ declare class FindGrepPreference extends Preference {
 	glyphForm: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -48408,14 +48408,14 @@ declare class FindGrepPreference extends Preference {
 	gradientFillStart: any;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.
 	 */
-	gradientStrokeLength: any;
+	gradientStrokeLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -48433,9 +48433,9 @@ declare class FindGrepPreference extends Preference {
 	gridGyoudori: any;
 
 	/**
-	 * The horizontal scaling applied to the FindGrepPreference. Can return: Real or NothingEnum enumerator.
+	 * The horizontal scaling applied to the FindGrepPreference.
 	 */
-	horizontalScale: any;
+	horizontalScale: number | NothingEnum;
 
 	/**
 	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
@@ -48528,9 +48528,9 @@ declare class FindGrepPreference extends Preference {
 	kentenFont: any;
 
 	/**
-	 * The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of kenten characters.
 	 */
-	kentenFontSize: any;
+	kentenFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
@@ -48553,9 +48553,9 @@ declare class FindGrepPreference extends Preference {
 	kentenOverprintStroke: any;
 
 	/**
-	 * The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.
+	 * The distance between kenten characters and their parent characters.
 	 */
-	kentenPlacement: any;
+	kentenPlacement: number | NothingEnum;
 
 	/**
 	 * The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.
@@ -48568,29 +48568,29 @@ declare class FindGrepPreference extends Preference {
 	kentenStrokeColor: any;
 
 	/**
-	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenStrokeTint: any;
+	kentenStrokeTint: number | NothingEnum;
 
 	/**
-	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenTint: any;
+	kentenTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of kenten characters.
 	 */
-	kentenWeight: any;
+	kentenWeight: number | NothingEnum;
 
 	/**
-	 * The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of kenten characters as a percent of the original size.
 	 */
-	kentenXScale: any;
+	kentenXScale: number | NothingEnum;
 
 	/**
-	 * The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.
+	 * The vertical size of kenten charachers as a percent of the original size. .
 	 */
-	kentenYScale: any;
+	kentenYScale: number | NothingEnum;
 
 	/**
 	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
@@ -48598,9 +48598,9 @@ declare class FindGrepPreference extends Preference {
 	kerningMethod: any;
 
 	/**
-	 * The amount of space to add or remove between characters, specified in thousands of an em. . Can return: Real or NothingEnum enumerator.
+	 * The amount of space to add or remove between characters, specified in thousands of an em. .
 	 */
-	kerningValue: any;
+	kerningValue: number | NothingEnum;
 
 	/**
 	 * The keyboard direction of the character. Can return: CharacterDirectionOptions enumerator or NothingEnum enumerator.
@@ -48623,9 +48623,9 @@ declare class FindGrepPreference extends Preference {
 	kinsokuType: any;
 
 	/**
-	 * The amount to indent the last line in the paragraph. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: any;
+	lastLineIndent: number | NothingEnum;
 
 	/**
 	 * The leading applied to the text. Can return: Unit, Leading enumerator or NothingEnum enumerator.
@@ -48633,9 +48633,9 @@ declare class FindGrepPreference extends Preference {
 	leading: any;
 
 	/**
-	 * The amount of space before each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space before each character.
 	 */
-	leadingAki: any;
+	leadingAki: number | NothingEnum;
 
 	/**
 	 * The point from which leading is measured from line to line. Can return: LeadingModel enumerator or NothingEnum enumerator.
@@ -48643,9 +48643,9 @@ declare class FindGrepPreference extends Preference {
 	leadingModel: any;
 
 	/**
-	 * The width of the left indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the left indent.
 	 */
-	leftIndent: any;
+	leftIndent: number | NothingEnum;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
@@ -48828,14 +48828,14 @@ declare class FindGrepPreference extends Preference {
 	paragraphJustification: any;
 
 	/**
-	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long. Can return: Real or NothingEnum enumerator.
+	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long.
 	 */
-	paragraphKashidaWidth: any;
+	paragraphKashidaWidth: number | NothingEnum;
 
 	/**
-	 * The text size. Can return: Unit or NothingEnum enumerator.
+	 * The text size.
 	 */
-	pointSize: any;
+	pointSize: number | NothingEnum;
 
 	/**
 	 * The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.
@@ -48858,9 +48858,9 @@ declare class FindGrepPreference extends Preference {
 	rensuuji: any;
 
 	/**
-	 * The width of the right indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the right indent.
 	 */
-	rightIndent: any;
+	rightIndent: number | NothingEnum;
 
 	/**
 	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -48908,9 +48908,9 @@ declare class FindGrepPreference extends Preference {
 	rubyFont: any;
 
 	/**
-	 * The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of ruby characters.
 	 */
-	rubyFontSize: any;
+	rubyFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
@@ -48943,9 +48943,9 @@ declare class FindGrepPreference extends Preference {
 	rubyParentOverhangAmount: any;
 
 	/**
-	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size.
 	 */
-	rubyParentScalingPercent: any;
+	rubyParentScalingPercent: number | NothingEnum;
 
 	/**
 	 * The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.
@@ -48963,14 +48963,14 @@ declare class FindGrepPreference extends Preference {
 	rubyStroke: any;
 
 	/**
-	 * The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of ruby characters.
 	 */
-	rubyStrokeTint: any;
+	rubyStrokeTint: number | NothingEnum;
 
 	/**
-	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100).
 	 */
-	rubyTint: any;
+	rubyTint: number | NothingEnum;
 
 	/**
 	 * The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.
@@ -48978,29 +48978,29 @@ declare class FindGrepPreference extends Preference {
 	rubyType: any;
 
 	/**
-	 * The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of ruby characters.
 	 */
-	rubyWeight: any;
+	rubyWeight: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal space between ruby and parent characters.
 	 */
-	rubyXOffset: any;
+	rubyXOffset: number | NothingEnum;
 
 	/**
-	 * The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyXScale: any;
+	rubyXScale: number | NothingEnum;
 
 	/**
-	 * The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of vertical space between ruby and parent characters.
 	 */
-	rubyYOffset: any;
+	rubyYOffset: number | NothingEnum;
 
 	/**
-	 * The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The vertical size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyYScale: any;
+	rubyYScale: number | NothingEnum;
 
 	/**
 	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
@@ -49018,14 +49018,14 @@ declare class FindGrepPreference extends Preference {
 	shataiAdjustTsume: any;
 
 	/**
-	 * The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.
+	 * The shatai lens angle (in degrees).
 	 */
-	shataiDegreeAngle: any;
+	shataiDegreeAngle: number | NothingEnum;
 
 	/**
-	 * The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) of shatai obliquing to apply.
 	 */
-	shataiMagnification: any;
+	shataiMagnification: number | NothingEnum;
 
 	/**
 	 * The alignment to use for lines that contain a single word. Can return: SingleWordJustification enumerator or NothingEnum enumerator.
@@ -49033,29 +49033,29 @@ declare class FindGrepPreference extends Preference {
 	singleWordJustification: any;
 
 	/**
-	 * The skew angle of the FindGrepPreference. Can return: Real or NothingEnum enumerator.
+	 * The skew angle of the FindGrepPreference.
 	 */
-	skew: any;
+	skew: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space below. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space below.
 	 */
-	spaceAfter: any;
+	spaceAfter: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space above. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space above.
 	 */
-	spaceBefore: any;
+	spaceBefore: number | NothingEnum;
 
 	/**
-	 * The minimum space after a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space after a span or a split column.
 	 */
-	spanColumnMinSpaceAfter: any;
+	spanColumnMinSpaceAfter: number | NothingEnum;
 
 	/**
-	 * The minimum space before a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space before a span or a split column.
 	 */
-	spanColumnMinSpaceBefore: any;
+	spanColumnMinSpaceBefore: number | NothingEnum;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns. Can return: SpanColumnTypeOptions enumerator or NothingEnum enumerator.
@@ -49068,14 +49068,14 @@ declare class FindGrepPreference extends Preference {
 	spanSplitColumnCount: any;
 
 	/**
-	 * The inside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The inside gutter if the paragraph splits columns.
 	 */
-	splitColumnInsideGutter: any;
+	splitColumnInsideGutter: number | NothingEnum;
 
 	/**
-	 * The outside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The outside gutter if the paragraph splits columns.
 	 */
-	splitColumnOutsideGutter: any;
+	splitColumnOutsideGutter: number | NothingEnum;
 
 	/**
 	 * The location at which to start the paragraph. Can return: StartParagraph enumerator or NothingEnum enumerator.
@@ -49098,14 +49098,14 @@ declare class FindGrepPreference extends Preference {
 	strikeThroughGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapTint: any;
+	strikeThroughGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: any;
+	strikeThroughOffset: number | NothingEnum;
 
 	/**
 	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -49113,9 +49113,9 @@ declare class FindGrepPreference extends Preference {
 	strikeThroughOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
 	 */
-	strikeThroughTint: any;
+	strikeThroughTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -49123,9 +49123,9 @@ declare class FindGrepPreference extends Preference {
 	strikeThroughType: any;
 
 	/**
-	 * The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: any;
+	strikeThroughWeight: number | NothingEnum;
 
 	/**
 	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
@@ -49143,14 +49143,14 @@ declare class FindGrepPreference extends Preference {
 	strokeColor: any;
 
 	/**
-	 * The tint (as a percentage) of the stroke color of the FindGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the stroke color of the FindGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -49158,24 +49158,24 @@ declare class FindGrepPreference extends Preference {
 	tatechuyoko: any;
 
 	/**
-	 * The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The horizontal offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoXOffset: any;
+	tatechuyokoXOffset: number | NothingEnum;
 
 	/**
-	 * The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The vertical offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoYOffset: any;
+	tatechuyokoYOffset: number | NothingEnum;
 
 	/**
-	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.
+	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em.
 	 */
-	tracking: any;
+	tracking: number | NothingEnum;
 
 	/**
-	 * The amount of space after each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space after each character.
 	 */
-	trailingAki: any;
+	trailingAki: number | NothingEnum;
 
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
@@ -49183,9 +49183,9 @@ declare class FindGrepPreference extends Preference {
 	treatIdeographicSpaceAsSpace: any;
 
 	/**
-	 * The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal character compression.
 	 */
-	tsume: any;
+	tsume: number | NothingEnum;
 
 	/**
 	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
@@ -49208,14 +49208,14 @@ declare class FindGrepPreference extends Preference {
 	underlineGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
 	 */
-	underlineGapTint: any;
+	underlineGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: any;
+	underlineOffset: number | NothingEnum;
 
 	/**
 	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -49223,9 +49223,9 @@ declare class FindGrepPreference extends Preference {
 	underlineOverprint: any;
 
 	/**
-	 * The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
 	 */
-	underlineTint: any;
+	underlineTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -49233,14 +49233,14 @@ declare class FindGrepPreference extends Preference {
 	underlineType: any;
 
 	/**
-	 * The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: any;
+	underlineWeight: number | NothingEnum;
 
 	/**
-	 * The vertical scaling applied to the FindGrepPreference. Can return: Real or NothingEnum enumerator.
+	 * The vertical scaling applied to the FindGrepPreference.
 	 */
-	verticalScale: any;
+	verticalScale: number | NothingEnum;
 
 	/**
 	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
@@ -49263,9 +49263,9 @@ declare class FindGrepPreference extends Preference {
 	warichuCharsBeforeBreak: any;
 
 	/**
-	 * The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.
+	 * The gap between lines of warichu characters.
 	 */
-	warichuLineSpacing: any;
+	warichuLineSpacing: number | NothingEnum;
 
 	/**
 	 * The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.
@@ -49273,19 +49273,19 @@ declare class FindGrepPreference extends Preference {
 	warichuLines: any;
 
 	/**
-	 * The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale parent text size to determine warichu size.
 	 */
-	warichuSize: any;
+	warichuSize: number | NothingEnum;
 
 	/**
-	 * The x (horizontal) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The x (horizontal) offset for diacritic adjustment.
 	 */
-	xOffsetDiacritic: any;
+	xOffsetDiacritic: number | NothingEnum;
 
 	/**
-	 * The y (vertical) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The y (vertical) offset for diacritic adjustment.
 	 */
-	yOffsetDiacritic: any;
+	yOffsetDiacritic: number | NothingEnum;
 
 }
 
@@ -49345,19 +49345,19 @@ declare class FindObjectPreference extends Preference {
 	anchorPoint: any;
 
 	/**
-	 * The space above an above-line anchored object. Can return: Unit or NothingEnum enumerator.
+	 * The space above an above-line anchored object.
 	 */
-	anchorSpaceAbove: any;
+	anchorSpaceAbove: number | NothingEnum;
 
 	/**
-	 * The horizontal (x) offset of the anchored object. Can return: Unit or NothingEnum enumerator.
+	 * The horizontal (x) offset of the anchored object.
 	 */
-	anchorXoffset: any;
+	anchorXoffset: number | NothingEnum;
 
 	/**
-	 * The vertical (y) offset of the anchored object. Corresponds to the space after property for above line positioning. Can return: Unit or NothingEnum enumerator.
+	 * The vertical (y) offset of the anchored object. Corresponds to the space after property for above line positioning.
 	 */
-	anchorYoffset: any;
+	anchorYoffset: number | NothingEnum;
 
 	/**
 	 * The position of the anchored object relative to the anchor. Can return: AnchorPosition enumerator or NothingEnum enumerator.
@@ -49405,9 +49405,9 @@ declare class FindObjectPreference extends Preference {
 	baselineFrameGridRelativeOption: any;
 
 	/**
-	 * The amount in measurement units to crop the bottom edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the bottom edge of a graphic.
 	 */
-	bottomCrop: any;
+	bottomCrop: number | NothingEnum;
 
 	/**
 	 * The shape to apply to the bottom left corner of rectangular shapes. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -49415,9 +49415,9 @@ declare class FindObjectPreference extends Preference {
 	bottomLeftCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes.
 	 */
-	bottomLeftCornerRadius: any;
+	bottomLeftCornerRadius: number | NothingEnum;
 
 	/**
 	 * The shape to apply to the bottom right corner of rectangular shapes. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -49425,9 +49425,9 @@ declare class FindObjectPreference extends Preference {
 	bottomRightCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes.
 	 */
-	bottomRightCornerRadius: any;
+	bottomRightCornerRadius: number | NothingEnum;
 
 	/**
 	 * Transparency settings for the content of the FindObjectPreference. Can return: FindChangeContentTransparencySetting or NothingEnum enumerator.
@@ -49465,9 +49465,9 @@ declare class FindObjectPreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The percent of tint to use in the FindObjectPreference's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The percent of tint to use in the FindObjectPreference's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
 	 * Transparency settings for the fill applied to the FindObjectPreference. Can return: FindChangeFillTransparencySetting or NothingEnum enumerator.
@@ -49495,9 +49495,9 @@ declare class FindObjectPreference extends Preference {
 	gapColor: any;
 
 	/**
-	 * The tint as a percentage of the gap color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint as a percentage of the gap color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	gapTint: any;
+	gapTint: number | NothingEnum;
 
 	/**
 	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG. Can return: Boolean or NothingEnum enumerator.
@@ -49510,14 +49510,14 @@ declare class FindObjectPreference extends Preference {
 	gifOptionsPalette: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the FindObjectPreference. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the FindObjectPreference. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the FindObjectPreference. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the FindObjectPreference. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
 	 * The horizontal reference point on the page. Valid only when anchored position is custom. Can return: AnchoredRelativeTo enumerator or NothingEnum enumerator.
@@ -49585,9 +49585,9 @@ declare class FindObjectPreference extends Preference {
 	jpegOptionsQuality: any;
 
 	/**
-	 * The amount in measurement units to crop the left edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the left edge of a graphic.
 	 */
-	leftCrop: any;
+	leftCrop: number | NothingEnum;
 
 	/**
 	 * The arrowhead applied to the start of the path. . Can return: ArrowHead enumerator or NothingEnum enumerator.
@@ -49605,14 +49605,14 @@ declare class FindObjectPreference extends Preference {
 	minimumFirstBaselineOffset: any;
 
 	/**
-	 * The minimum height for auto-sizing of the text frame. Can return: Unit or NothingEnum enumerator.
+	 * The minimum height for auto-sizing of the text frame.
 	 */
-	minimumHeightForAutoSizing: any;
+	minimumHeightForAutoSizing: number | NothingEnum;
 
 	/**
-	 * The minimum width for auto-sizing of the text frame. Can return: Unit or NothingEnum enumerator.
+	 * The minimum width for auto-sizing of the text frame.
 	 */
-	minimumWidthForAutoSizing: any;
+	minimumWidthForAutoSizing: number | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. Can return: Real (1 - 500) or NothingEnum enumerator.
@@ -49670,9 +49670,9 @@ declare class FindObjectPreference extends Preference {
 	preserveAppearanceFromLayout: any;
 
 	/**
-	 * The amount in measurement units to crop the right edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the right edge of a graphic.
 	 */
-	rightCrop: any;
+	rightCrop: number | NothingEnum;
 
 	/**
 	 * The arrowhead applied to the end of the path. Can return: ArrowHead enumerator or NothingEnum enumerator.
@@ -49715,9 +49715,9 @@ declare class FindObjectPreference extends Preference {
 	strokeDashAndGap: any;
 
 	/**
-	 * The percent of tint to use in object's stroke color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The percent of tint to use in object's stroke color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
 	 * Transparency settings for the stroke. Can return: FindChangeStrokeTransparencySetting or NothingEnum enumerator.
@@ -49730,9 +49730,9 @@ declare class FindObjectPreference extends Preference {
 	strokeType: any;
 
 	/**
-	 * The weight (in points) to apply to the FindObjectPreference's stroke. Can return: Unit or NothingEnum enumerator.
+	 * The weight (in points) to apply to the FindObjectPreference's stroke.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * The number of columns in the text frame. Note: Depending on the value of use fixed column width, the number of columns can change automatically when the text frame size changes. Can return: Long Integer (1 - 40) or NothingEnum enumerator.
@@ -49765,9 +49765,9 @@ declare class FindObjectPreference extends Preference {
 	textWrapSide: any;
 
 	/**
-	 * The amount in measurement units to crop the top edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the top edge of a graphic.
 	 */
-	topCrop: any;
+	topCrop: number | NothingEnum;
 
 	/**
 	 * The shape to be applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes.Note: corner option differs from end join in which you can set a radius for a corner option, whereas the rounded or beveled effect of an end join depends on the stroke weight. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -49775,9 +49775,9 @@ declare class FindObjectPreference extends Preference {
 	topLeftCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes.
 	 */
-	topLeftCornerRadius: any;
+	topLeftCornerRadius: number | NothingEnum;
 
 	/**
 	 * The shape to apply to the top right corner of rectangular shapes. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -49785,9 +49785,9 @@ declare class FindObjectPreference extends Preference {
 	topRightCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes.
 	 */
-	topRightCornerRadius: any;
+	topRightCornerRadius: number | NothingEnum;
 
 	/**
 	 * Transparency settings. Can return: FindChangeTransparencySetting or NothingEnum enumerator.
@@ -49891,9 +49891,9 @@ declare class FindTransliteratePreference extends Preference {
 	appliedParagraphStyle: any;
 
 	/**
-	 * The percent of the type size to use for auto leading. (Range: 0 to 500). Can return: Real or NothingEnum enumerator.
+	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
 	 */
-	autoLeading: any;
+	autoLeading: number | NothingEnum;
 
 	/**
 	 * The number of half-width characters at or below which the characters automatically run horizontally in vertical text. Can return: Short Integer or NothingEnum enumerator.
@@ -49911,9 +49911,9 @@ declare class FindTransliteratePreference extends Preference {
 	balanceRaggedLines: any;
 
 	/**
-	 * The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.
+	 * The baseline shift applied to the text.
 	 */
-	baselineShift: any;
+	baselineShift: number | NothingEnum;
 
 	/**
 	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
@@ -49956,9 +49956,9 @@ declare class FindTransliteratePreference extends Preference {
 	characterAlignment: any;
 
 	/**
-	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.
 	 */
-	characterRotation: any;
+	characterRotation: number | NothingEnum;
 
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
@@ -49991,9 +49991,9 @@ declare class FindTransliteratePreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill color of the FindTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill color of the FindTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
 	 * The character type to find. Can return: FindChangeTransliterateCharacterTypes enumerator or NothingEnum enumerator.
@@ -50001,9 +50001,9 @@ declare class FindTransliteratePreference extends Preference {
 	findCharacterType: any;
 
 	/**
-	 * The amount to indent the first line. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the first line.
 	 */
-	firstLineIndent: any;
+	firstLineIndent: number | NothingEnum;
 
 	/**
 	 * The name of the font style. Can return: String or NothingEnum enumerator.
@@ -50016,14 +50016,14 @@ declare class FindTransliteratePreference extends Preference {
 	glyphForm: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -50031,14 +50031,14 @@ declare class FindTransliteratePreference extends Preference {
 	gradientFillStart: any;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.
 	 */
-	gradientStrokeLength: any;
+	gradientStrokeLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -50056,9 +50056,9 @@ declare class FindTransliteratePreference extends Preference {
 	gridGyoudori: any;
 
 	/**
-	 * The horizontal scaling applied to the FindTransliteratePreference. Can return: Real or NothingEnum enumerator.
+	 * The horizontal scaling applied to the FindTransliteratePreference.
 	 */
-	horizontalScale: any;
+	horizontalScale: number | NothingEnum;
 
 	/**
 	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
@@ -50141,9 +50141,9 @@ declare class FindTransliteratePreference extends Preference {
 	kentenFont: any;
 
 	/**
-	 * The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of kenten characters.
 	 */
-	kentenFontSize: any;
+	kentenFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
@@ -50166,9 +50166,9 @@ declare class FindTransliteratePreference extends Preference {
 	kentenOverprintStroke: any;
 
 	/**
-	 * The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.
+	 * The distance between kenten characters and their parent characters.
 	 */
-	kentenPlacement: any;
+	kentenPlacement: number | NothingEnum;
 
 	/**
 	 * The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.
@@ -50181,29 +50181,29 @@ declare class FindTransliteratePreference extends Preference {
 	kentenStrokeColor: any;
 
 	/**
-	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenStrokeTint: any;
+	kentenStrokeTint: number | NothingEnum;
 
 	/**
-	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenTint: any;
+	kentenTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of kenten characters.
 	 */
-	kentenWeight: any;
+	kentenWeight: number | NothingEnum;
 
 	/**
-	 * The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of kenten characters as a percent of the original size.
 	 */
-	kentenXScale: any;
+	kentenXScale: number | NothingEnum;
 
 	/**
-	 * The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.
+	 * The vertical size of kenten charachers as a percent of the original size. .
 	 */
-	kentenYScale: any;
+	kentenYScale: number | NothingEnum;
 
 	/**
 	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
@@ -50211,9 +50211,9 @@ declare class FindTransliteratePreference extends Preference {
 	kerningMethod: any;
 
 	/**
-	 * The amount of space to add or remove between characters, specified in thousands of an em. . Can return: Real or NothingEnum enumerator.
+	 * The amount of space to add or remove between characters, specified in thousands of an em. .
 	 */
-	kerningValue: any;
+	kerningValue: number | NothingEnum;
 
 	/**
 	 * The type of hanging punctuation to allow. Note: Valid only when a kinsoku set is in effect. Can return: KinsokuHangTypes enumerator or NothingEnum enumerator.
@@ -50231,9 +50231,9 @@ declare class FindTransliteratePreference extends Preference {
 	kinsokuType: any;
 
 	/**
-	 * The amount to indent the last line in the paragraph. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: any;
+	lastLineIndent: number | NothingEnum;
 
 	/**
 	 * The leading applied to the text. Can return: Unit, Leading enumerator or NothingEnum enumerator.
@@ -50241,9 +50241,9 @@ declare class FindTransliteratePreference extends Preference {
 	leading: any;
 
 	/**
-	 * The amount of space before each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space before each character.
 	 */
-	leadingAki: any;
+	leadingAki: number | NothingEnum;
 
 	/**
 	 * The point from which leading is measured from line to line. Can return: LeadingModel enumerator or NothingEnum enumerator.
@@ -50251,9 +50251,9 @@ declare class FindTransliteratePreference extends Preference {
 	leadingModel: any;
 
 	/**
-	 * The width of the left indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the left indent.
 	 */
-	leftIndent: any;
+	leftIndent: number | NothingEnum;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
@@ -50401,9 +50401,9 @@ declare class FindTransliteratePreference extends Preference {
 	paragraphGyoudori: any;
 
 	/**
-	 * The text size. Can return: Unit or NothingEnum enumerator.
+	 * The text size.
 	 */
-	pointSize: any;
+	pointSize: number | NothingEnum;
 
 	/**
 	 * The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.
@@ -50426,9 +50426,9 @@ declare class FindTransliteratePreference extends Preference {
 	rensuuji: any;
 
 	/**
-	 * The width of the right indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the right indent.
 	 */
-	rightIndent: any;
+	rightIndent: number | NothingEnum;
 
 	/**
 	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -50476,9 +50476,9 @@ declare class FindTransliteratePreference extends Preference {
 	rubyFont: any;
 
 	/**
-	 * The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of ruby characters.
 	 */
-	rubyFontSize: any;
+	rubyFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
@@ -50511,9 +50511,9 @@ declare class FindTransliteratePreference extends Preference {
 	rubyParentOverhangAmount: any;
 
 	/**
-	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size.
 	 */
-	rubyParentScalingPercent: any;
+	rubyParentScalingPercent: number | NothingEnum;
 
 	/**
 	 * The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.
@@ -50531,14 +50531,14 @@ declare class FindTransliteratePreference extends Preference {
 	rubyStroke: any;
 
 	/**
-	 * The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of ruby characters.
 	 */
-	rubyStrokeTint: any;
+	rubyStrokeTint: number | NothingEnum;
 
 	/**
-	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100).
 	 */
-	rubyTint: any;
+	rubyTint: number | NothingEnum;
 
 	/**
 	 * The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.
@@ -50546,29 +50546,29 @@ declare class FindTransliteratePreference extends Preference {
 	rubyType: any;
 
 	/**
-	 * The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of ruby characters.
 	 */
-	rubyWeight: any;
+	rubyWeight: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal space between ruby and parent characters.
 	 */
-	rubyXOffset: any;
+	rubyXOffset: number | NothingEnum;
 
 	/**
-	 * The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyXScale: any;
+	rubyXScale: number | NothingEnum;
 
 	/**
-	 * The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of vertical space between ruby and parent characters.
 	 */
-	rubyYOffset: any;
+	rubyYOffset: number | NothingEnum;
 
 	/**
-	 * The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The vertical size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyYScale: any;
+	rubyYScale: number | NothingEnum;
 
 	/**
 	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
@@ -50586,14 +50586,14 @@ declare class FindTransliteratePreference extends Preference {
 	shataiAdjustTsume: any;
 
 	/**
-	 * The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.
+	 * The shatai lens angle (in degrees).
 	 */
-	shataiDegreeAngle: any;
+	shataiDegreeAngle: number | NothingEnum;
 
 	/**
-	 * The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) of shatai obliquing to apply.
 	 */
-	shataiMagnification: any;
+	shataiMagnification: number | NothingEnum;
 
 	/**
 	 * The alignment to use for lines that contain a single word. Can return: SingleWordJustification enumerator or NothingEnum enumerator.
@@ -50601,19 +50601,19 @@ declare class FindTransliteratePreference extends Preference {
 	singleWordJustification: any;
 
 	/**
-	 * The skew angle of the FindTransliteratePreference. Can return: Real or NothingEnum enumerator.
+	 * The skew angle of the FindTransliteratePreference.
 	 */
-	skew: any;
+	skew: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space below. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space below.
 	 */
-	spaceAfter: any;
+	spaceAfter: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space above. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space above.
 	 */
-	spaceBefore: any;
+	spaceBefore: number | NothingEnum;
 
 	/**
 	 * The location at which to start the paragraph. Can return: StartParagraph enumerator or NothingEnum enumerator.
@@ -50636,14 +50636,14 @@ declare class FindTransliteratePreference extends Preference {
 	strikeThroughGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapTint: any;
+	strikeThroughGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: any;
+	strikeThroughOffset: number | NothingEnum;
 
 	/**
 	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -50651,9 +50651,9 @@ declare class FindTransliteratePreference extends Preference {
 	strikeThroughOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
 	 */
-	strikeThroughTint: any;
+	strikeThroughTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -50661,9 +50661,9 @@ declare class FindTransliteratePreference extends Preference {
 	strikeThroughType: any;
 
 	/**
-	 * The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: any;
+	strikeThroughWeight: number | NothingEnum;
 
 	/**
 	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
@@ -50676,14 +50676,14 @@ declare class FindTransliteratePreference extends Preference {
 	strokeColor: any;
 
 	/**
-	 * The tint (as a percentage) of the stroke color of the FindTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the stroke color of the FindTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -50691,24 +50691,24 @@ declare class FindTransliteratePreference extends Preference {
 	tatechuyoko: any;
 
 	/**
-	 * The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The horizontal offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoXOffset: any;
+	tatechuyokoXOffset: number | NothingEnum;
 
 	/**
-	 * The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The vertical offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoYOffset: any;
+	tatechuyokoYOffset: number | NothingEnum;
 
 	/**
-	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.
+	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em.
 	 */
-	tracking: any;
+	tracking: number | NothingEnum;
 
 	/**
-	 * The amount of space after each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space after each character.
 	 */
-	trailingAki: any;
+	trailingAki: number | NothingEnum;
 
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
@@ -50716,9 +50716,9 @@ declare class FindTransliteratePreference extends Preference {
 	treatIdeographicSpaceAsSpace: any;
 
 	/**
-	 * The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal character compression.
 	 */
-	tsume: any;
+	tsume: number | NothingEnum;
 
 	/**
 	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
@@ -50741,14 +50741,14 @@ declare class FindTransliteratePreference extends Preference {
 	underlineGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
 	 */
-	underlineGapTint: any;
+	underlineGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: any;
+	underlineOffset: number | NothingEnum;
 
 	/**
 	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -50756,9 +50756,9 @@ declare class FindTransliteratePreference extends Preference {
 	underlineOverprint: any;
 
 	/**
-	 * The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
 	 */
-	underlineTint: any;
+	underlineTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -50766,14 +50766,14 @@ declare class FindTransliteratePreference extends Preference {
 	underlineType: any;
 
 	/**
-	 * The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: any;
+	underlineWeight: number | NothingEnum;
 
 	/**
-	 * The vertical scaling applied to the FindTransliteratePreference. Can return: Real or NothingEnum enumerator.
+	 * The vertical scaling applied to the FindTransliteratePreference.
 	 */
-	verticalScale: any;
+	verticalScale: number | NothingEnum;
 
 	/**
 	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
@@ -50796,9 +50796,9 @@ declare class FindTransliteratePreference extends Preference {
 	warichuCharsBeforeBreak: any;
 
 	/**
-	 * The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.
+	 * The gap between lines of warichu characters.
 	 */
-	warichuLineSpacing: any;
+	warichuLineSpacing: number | NothingEnum;
 
 	/**
 	 * The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.
@@ -50806,9 +50806,9 @@ declare class FindTransliteratePreference extends Preference {
 	warichuLines: any;
 
 	/**
-	 * The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale parent text size to determine warichu size.
 	 */
-	warichuSize: any;
+	warichuSize: number | NothingEnum;
 
 }
 
@@ -50852,9 +50852,9 @@ declare class ChangeTextPreference extends Preference {
 	appliedParagraphStyle: any;
 
 	/**
-	 * The percent of the type size to use for auto leading. (Range: 0 to 500). Can return: Real or NothingEnum enumerator.
+	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
 	 */
-	autoLeading: any;
+	autoLeading: number | NothingEnum;
 
 	/**
 	 * The number of half-width characters at or below which the characters automatically run horizontally in vertical text. Can return: Short Integer or NothingEnum enumerator.
@@ -50872,9 +50872,9 @@ declare class ChangeTextPreference extends Preference {
 	balanceRaggedLines: any;
 
 	/**
-	 * The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.
+	 * The baseline shift applied to the text.
 	 */
-	baselineShift: any;
+	baselineShift: number | NothingEnum;
 
 	/**
 	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
@@ -50927,9 +50927,9 @@ declare class ChangeTextPreference extends Preference {
 	characterDirection: any;
 
 	/**
-	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.
 	 */
-	characterRotation: any;
+	characterRotation: number | NothingEnum;
 
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
@@ -50977,14 +50977,14 @@ declare class ChangeTextPreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
-	 * The amount to indent the first line. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the first line.
 	 */
-	firstLineIndent: any;
+	firstLineIndent: number | NothingEnum;
 
 	/**
 	 * The name of the font style. Can return: String or NothingEnum enumerator.
@@ -50997,14 +50997,14 @@ declare class ChangeTextPreference extends Preference {
 	glyphForm: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -51012,14 +51012,14 @@ declare class ChangeTextPreference extends Preference {
 	gradientFillStart: any;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.
 	 */
-	gradientStrokeLength: any;
+	gradientStrokeLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -51037,9 +51037,9 @@ declare class ChangeTextPreference extends Preference {
 	gridGyoudori: any;
 
 	/**
-	 * The horizontal scaling applied to the ChangeTextPreference. Can return: Real or NothingEnum enumerator.
+	 * The horizontal scaling applied to the ChangeTextPreference.
 	 */
-	horizontalScale: any;
+	horizontalScale: number | NothingEnum;
 
 	/**
 	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
@@ -51132,9 +51132,9 @@ declare class ChangeTextPreference extends Preference {
 	kentenFont: any;
 
 	/**
-	 * The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of kenten characters.
 	 */
-	kentenFontSize: any;
+	kentenFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
@@ -51157,9 +51157,9 @@ declare class ChangeTextPreference extends Preference {
 	kentenOverprintStroke: any;
 
 	/**
-	 * The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.
+	 * The distance between kenten characters and their parent characters.
 	 */
-	kentenPlacement: any;
+	kentenPlacement: number | NothingEnum;
 
 	/**
 	 * The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.
@@ -51172,29 +51172,29 @@ declare class ChangeTextPreference extends Preference {
 	kentenStrokeColor: any;
 
 	/**
-	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenStrokeTint: any;
+	kentenStrokeTint: number | NothingEnum;
 
 	/**
-	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenTint: any;
+	kentenTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of kenten characters.
 	 */
-	kentenWeight: any;
+	kentenWeight: number | NothingEnum;
 
 	/**
-	 * The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of kenten characters as a percent of the original size.
 	 */
-	kentenXScale: any;
+	kentenXScale: number | NothingEnum;
 
 	/**
-	 * The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.
+	 * The vertical size of kenten charachers as a percent of the original size. .
 	 */
-	kentenYScale: any;
+	kentenYScale: number | NothingEnum;
 
 	/**
 	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
@@ -51202,9 +51202,9 @@ declare class ChangeTextPreference extends Preference {
 	kerningMethod: any;
 
 	/**
-	 * The amount of space to add or remove between characters, specified in thousands of an em. . Can return: Real or NothingEnum enumerator.
+	 * The amount of space to add or remove between characters, specified in thousands of an em. .
 	 */
-	kerningValue: any;
+	kerningValue: number | NothingEnum;
 
 	/**
 	 * The keyboard direction of the character. Can return: CharacterDirectionOptions enumerator or NothingEnum enumerator.
@@ -51227,9 +51227,9 @@ declare class ChangeTextPreference extends Preference {
 	kinsokuType: any;
 
 	/**
-	 * The amount to indent the last line in the paragraph. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: any;
+	lastLineIndent: number | NothingEnum;
 
 	/**
 	 * The leading applied to the text. Can return: Unit, Leading enumerator or NothingEnum enumerator.
@@ -51237,9 +51237,9 @@ declare class ChangeTextPreference extends Preference {
 	leading: any;
 
 	/**
-	 * The amount of space before each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space before each character.
 	 */
-	leadingAki: any;
+	leadingAki: number | NothingEnum;
 
 	/**
 	 * The point from which leading is measured from line to line. Can return: LeadingModel enumerator or NothingEnum enumerator.
@@ -51247,9 +51247,9 @@ declare class ChangeTextPreference extends Preference {
 	leadingModel: any;
 
 	/**
-	 * The width of the left indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the left indent.
 	 */
-	leftIndent: any;
+	leftIndent: number | NothingEnum;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
@@ -51437,14 +51437,14 @@ declare class ChangeTextPreference extends Preference {
 	paragraphJustification: any;
 
 	/**
-	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long. Can return: Real or NothingEnum enumerator.
+	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long.
 	 */
-	paragraphKashidaWidth: any;
+	paragraphKashidaWidth: number | NothingEnum;
 
 	/**
-	 * The text size. Can return: Unit or NothingEnum enumerator.
+	 * The text size.
 	 */
-	pointSize: any;
+	pointSize: number | NothingEnum;
 
 	/**
 	 * The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.
@@ -51467,9 +51467,9 @@ declare class ChangeTextPreference extends Preference {
 	rensuuji: any;
 
 	/**
-	 * The width of the right indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the right indent.
 	 */
-	rightIndent: any;
+	rightIndent: number | NothingEnum;
 
 	/**
 	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -51517,9 +51517,9 @@ declare class ChangeTextPreference extends Preference {
 	rubyFont: any;
 
 	/**
-	 * The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of ruby characters.
 	 */
-	rubyFontSize: any;
+	rubyFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
@@ -51552,9 +51552,9 @@ declare class ChangeTextPreference extends Preference {
 	rubyParentOverhangAmount: any;
 
 	/**
-	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size.
 	 */
-	rubyParentScalingPercent: any;
+	rubyParentScalingPercent: number | NothingEnum;
 
 	/**
 	 * The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.
@@ -51572,14 +51572,14 @@ declare class ChangeTextPreference extends Preference {
 	rubyStroke: any;
 
 	/**
-	 * The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of ruby characters.
 	 */
-	rubyStrokeTint: any;
+	rubyStrokeTint: number | NothingEnum;
 
 	/**
-	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100).
 	 */
-	rubyTint: any;
+	rubyTint: number | NothingEnum;
 
 	/**
 	 * The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.
@@ -51587,29 +51587,29 @@ declare class ChangeTextPreference extends Preference {
 	rubyType: any;
 
 	/**
-	 * The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of ruby characters.
 	 */
-	rubyWeight: any;
+	rubyWeight: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal space between ruby and parent characters.
 	 */
-	rubyXOffset: any;
+	rubyXOffset: number | NothingEnum;
 
 	/**
-	 * The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyXScale: any;
+	rubyXScale: number | NothingEnum;
 
 	/**
-	 * The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of vertical space between ruby and parent characters.
 	 */
-	rubyYOffset: any;
+	rubyYOffset: number | NothingEnum;
 
 	/**
-	 * The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The vertical size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyYScale: any;
+	rubyYScale: number | NothingEnum;
 
 	/**
 	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
@@ -51627,14 +51627,14 @@ declare class ChangeTextPreference extends Preference {
 	shataiAdjustTsume: any;
 
 	/**
-	 * The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.
+	 * The shatai lens angle (in degrees).
 	 */
-	shataiDegreeAngle: any;
+	shataiDegreeAngle: number | NothingEnum;
 
 	/**
-	 * The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) of shatai obliquing to apply.
 	 */
-	shataiMagnification: any;
+	shataiMagnification: number | NothingEnum;
 
 	/**
 	 * The alignment to use for lines that contain a single word. Can return: SingleWordJustification enumerator or NothingEnum enumerator.
@@ -51642,29 +51642,29 @@ declare class ChangeTextPreference extends Preference {
 	singleWordJustification: any;
 
 	/**
-	 * The skew angle of the ChangeTextPreference. Can return: Real or NothingEnum enumerator.
+	 * The skew angle of the ChangeTextPreference.
 	 */
-	skew: any;
+	skew: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space below. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space below.
 	 */
-	spaceAfter: any;
+	spaceAfter: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space above. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space above.
 	 */
-	spaceBefore: any;
+	spaceBefore: number | NothingEnum;
 
 	/**
-	 * The minimum space after a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space after a span or a split column.
 	 */
-	spanColumnMinSpaceAfter: any;
+	spanColumnMinSpaceAfter: number | NothingEnum;
 
 	/**
-	 * The minimum space before a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space before a span or a split column.
 	 */
-	spanColumnMinSpaceBefore: any;
+	spanColumnMinSpaceBefore: number | NothingEnum;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns. Can return: SpanColumnTypeOptions enumerator or NothingEnum enumerator.
@@ -51677,14 +51677,14 @@ declare class ChangeTextPreference extends Preference {
 	spanSplitColumnCount: any;
 
 	/**
-	 * The inside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The inside gutter if the paragraph splits columns.
 	 */
-	splitColumnInsideGutter: any;
+	splitColumnInsideGutter: number | NothingEnum;
 
 	/**
-	 * The outside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The outside gutter if the paragraph splits columns.
 	 */
-	splitColumnOutsideGutter: any;
+	splitColumnOutsideGutter: number | NothingEnum;
 
 	/**
 	 * The location at which to start the paragraph. Can return: StartParagraph enumerator or NothingEnum enumerator.
@@ -51707,14 +51707,14 @@ declare class ChangeTextPreference extends Preference {
 	strikeThroughGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapTint: any;
+	strikeThroughGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: any;
+	strikeThroughOffset: number | NothingEnum;
 
 	/**
 	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -51722,9 +51722,9 @@ declare class ChangeTextPreference extends Preference {
 	strikeThroughOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
 	 */
-	strikeThroughTint: any;
+	strikeThroughTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -51732,9 +51732,9 @@ declare class ChangeTextPreference extends Preference {
 	strikeThroughType: any;
 
 	/**
-	 * The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: any;
+	strikeThroughWeight: number | NothingEnum;
 
 	/**
 	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
@@ -51752,14 +51752,14 @@ declare class ChangeTextPreference extends Preference {
 	strokeColor: any;
 
 	/**
-	 * The tint (as a percentage) of the stroke color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the stroke color of the ChangeTextPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -51767,24 +51767,24 @@ declare class ChangeTextPreference extends Preference {
 	tatechuyoko: any;
 
 	/**
-	 * The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The horizontal offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoXOffset: any;
+	tatechuyokoXOffset: number | NothingEnum;
 
 	/**
-	 * The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The vertical offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoYOffset: any;
+	tatechuyokoYOffset: number | NothingEnum;
 
 	/**
-	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.
+	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em.
 	 */
-	tracking: any;
+	tracking: number | NothingEnum;
 
 	/**
-	 * The amount of space after each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space after each character.
 	 */
-	trailingAki: any;
+	trailingAki: number | NothingEnum;
 
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
@@ -51792,9 +51792,9 @@ declare class ChangeTextPreference extends Preference {
 	treatIdeographicSpaceAsSpace: any;
 
 	/**
-	 * The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal character compression.
 	 */
-	tsume: any;
+	tsume: number | NothingEnum;
 
 	/**
 	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
@@ -51817,14 +51817,14 @@ declare class ChangeTextPreference extends Preference {
 	underlineGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
 	 */
-	underlineGapTint: any;
+	underlineGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: any;
+	underlineOffset: number | NothingEnum;
 
 	/**
 	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -51832,9 +51832,9 @@ declare class ChangeTextPreference extends Preference {
 	underlineOverprint: any;
 
 	/**
-	 * The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
 	 */
-	underlineTint: any;
+	underlineTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -51842,14 +51842,14 @@ declare class ChangeTextPreference extends Preference {
 	underlineType: any;
 
 	/**
-	 * The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: any;
+	underlineWeight: number | NothingEnum;
 
 	/**
-	 * The vertical scaling applied to the ChangeTextPreference. Can return: Real or NothingEnum enumerator.
+	 * The vertical scaling applied to the ChangeTextPreference.
 	 */
-	verticalScale: any;
+	verticalScale: number | NothingEnum;
 
 	/**
 	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
@@ -51872,9 +51872,9 @@ declare class ChangeTextPreference extends Preference {
 	warichuCharsBeforeBreak: any;
 
 	/**
-	 * The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.
+	 * The gap between lines of warichu characters.
 	 */
-	warichuLineSpacing: any;
+	warichuLineSpacing: number | NothingEnum;
 
 	/**
 	 * The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.
@@ -51882,19 +51882,19 @@ declare class ChangeTextPreference extends Preference {
 	warichuLines: any;
 
 	/**
-	 * The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale parent text size to determine warichu size.
 	 */
-	warichuSize: any;
+	warichuSize: number | NothingEnum;
 
 	/**
-	 * The x (horizontal) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The x (horizontal) offset for diacritic adjustment.
 	 */
-	xOffsetDiacritic: any;
+	xOffsetDiacritic: number | NothingEnum;
 
 	/**
-	 * The y (vertical) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The y (vertical) offset for diacritic adjustment.
 	 */
-	yOffsetDiacritic: any;
+	yOffsetDiacritic: number | NothingEnum;
 
 }
 
@@ -51938,9 +51938,9 @@ declare class ChangeGrepPreference extends Preference {
 	appliedParagraphStyle: any;
 
 	/**
-	 * The percent of the type size to use for auto leading. (Range: 0 to 500). Can return: Real or NothingEnum enumerator.
+	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
 	 */
-	autoLeading: any;
+	autoLeading: number | NothingEnum;
 
 	/**
 	 * The number of half-width characters at or below which the characters automatically run horizontally in vertical text. Can return: Short Integer or NothingEnum enumerator.
@@ -51958,9 +51958,9 @@ declare class ChangeGrepPreference extends Preference {
 	balanceRaggedLines: any;
 
 	/**
-	 * The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.
+	 * The baseline shift applied to the text.
 	 */
-	baselineShift: any;
+	baselineShift: number | NothingEnum;
 
 	/**
 	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
@@ -52013,9 +52013,9 @@ declare class ChangeGrepPreference extends Preference {
 	characterDirection: any;
 
 	/**
-	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.
 	 */
-	characterRotation: any;
+	characterRotation: number | NothingEnum;
 
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
@@ -52063,14 +52063,14 @@ declare class ChangeGrepPreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill color of the ChangeGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill color of the ChangeGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
-	 * The amount to indent the first line. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the first line.
 	 */
-	firstLineIndent: any;
+	firstLineIndent: number | NothingEnum;
 
 	/**
 	 * The name of the font style. Can return: String or NothingEnum enumerator.
@@ -52083,14 +52083,14 @@ declare class ChangeGrepPreference extends Preference {
 	glyphForm: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -52098,14 +52098,14 @@ declare class ChangeGrepPreference extends Preference {
 	gradientFillStart: any;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.
 	 */
-	gradientStrokeLength: any;
+	gradientStrokeLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -52123,9 +52123,9 @@ declare class ChangeGrepPreference extends Preference {
 	gridGyoudori: any;
 
 	/**
-	 * The horizontal scaling applied to the ChangeGrepPreference. Can return: Real or NothingEnum enumerator.
+	 * The horizontal scaling applied to the ChangeGrepPreference.
 	 */
-	horizontalScale: any;
+	horizontalScale: number | NothingEnum;
 
 	/**
 	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
@@ -52218,9 +52218,9 @@ declare class ChangeGrepPreference extends Preference {
 	kentenFont: any;
 
 	/**
-	 * The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of kenten characters.
 	 */
-	kentenFontSize: any;
+	kentenFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
@@ -52243,9 +52243,9 @@ declare class ChangeGrepPreference extends Preference {
 	kentenOverprintStroke: any;
 
 	/**
-	 * The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.
+	 * The distance between kenten characters and their parent characters.
 	 */
-	kentenPlacement: any;
+	kentenPlacement: number | NothingEnum;
 
 	/**
 	 * The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.
@@ -52258,29 +52258,29 @@ declare class ChangeGrepPreference extends Preference {
 	kentenStrokeColor: any;
 
 	/**
-	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenStrokeTint: any;
+	kentenStrokeTint: number | NothingEnum;
 
 	/**
-	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenTint: any;
+	kentenTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of kenten characters.
 	 */
-	kentenWeight: any;
+	kentenWeight: number | NothingEnum;
 
 	/**
-	 * The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of kenten characters as a percent of the original size.
 	 */
-	kentenXScale: any;
+	kentenXScale: number | NothingEnum;
 
 	/**
-	 * The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.
+	 * The vertical size of kenten charachers as a percent of the original size. .
 	 */
-	kentenYScale: any;
+	kentenYScale: number | NothingEnum;
 
 	/**
 	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
@@ -52288,9 +52288,9 @@ declare class ChangeGrepPreference extends Preference {
 	kerningMethod: any;
 
 	/**
-	 * The amount of space to add or remove between characters, specified in thousands of an em. . Can return: Real or NothingEnum enumerator.
+	 * The amount of space to add or remove between characters, specified in thousands of an em. .
 	 */
-	kerningValue: any;
+	kerningValue: number | NothingEnum;
 
 	/**
 	 * The keyboard direction of the character. Can return: CharacterDirectionOptions enumerator or NothingEnum enumerator.
@@ -52313,9 +52313,9 @@ declare class ChangeGrepPreference extends Preference {
 	kinsokuType: any;
 
 	/**
-	 * The amount to indent the last line in the paragraph. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: any;
+	lastLineIndent: number | NothingEnum;
 
 	/**
 	 * The leading applied to the text. Can return: Unit, Leading enumerator or NothingEnum enumerator.
@@ -52323,9 +52323,9 @@ declare class ChangeGrepPreference extends Preference {
 	leading: any;
 
 	/**
-	 * The amount of space before each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space before each character.
 	 */
-	leadingAki: any;
+	leadingAki: number | NothingEnum;
 
 	/**
 	 * The point from which leading is measured from line to line. Can return: LeadingModel enumerator or NothingEnum enumerator.
@@ -52333,9 +52333,9 @@ declare class ChangeGrepPreference extends Preference {
 	leadingModel: any;
 
 	/**
-	 * The width of the left indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the left indent.
 	 */
-	leftIndent: any;
+	leftIndent: number | NothingEnum;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
@@ -52523,14 +52523,14 @@ declare class ChangeGrepPreference extends Preference {
 	paragraphJustification: any;
 
 	/**
-	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long. Can return: Real or NothingEnum enumerator.
+	 * Paragraph kashida width. 0 is none, 1 is short, 2 is medium, 3 is long.
 	 */
-	paragraphKashidaWidth: any;
+	paragraphKashidaWidth: number | NothingEnum;
 
 	/**
-	 * The text size. Can return: Unit or NothingEnum enumerator.
+	 * The text size.
 	 */
-	pointSize: any;
+	pointSize: number | NothingEnum;
 
 	/**
 	 * The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.
@@ -52553,9 +52553,9 @@ declare class ChangeGrepPreference extends Preference {
 	rensuuji: any;
 
 	/**
-	 * The width of the right indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the right indent.
 	 */
-	rightIndent: any;
+	rightIndent: number | NothingEnum;
 
 	/**
 	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -52603,9 +52603,9 @@ declare class ChangeGrepPreference extends Preference {
 	rubyFont: any;
 
 	/**
-	 * The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of ruby characters.
 	 */
-	rubyFontSize: any;
+	rubyFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
@@ -52638,9 +52638,9 @@ declare class ChangeGrepPreference extends Preference {
 	rubyParentOverhangAmount: any;
 
 	/**
-	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size.
 	 */
-	rubyParentScalingPercent: any;
+	rubyParentScalingPercent: number | NothingEnum;
 
 	/**
 	 * The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.
@@ -52658,14 +52658,14 @@ declare class ChangeGrepPreference extends Preference {
 	rubyStroke: any;
 
 	/**
-	 * The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of ruby characters.
 	 */
-	rubyStrokeTint: any;
+	rubyStrokeTint: number | NothingEnum;
 
 	/**
-	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100).
 	 */
-	rubyTint: any;
+	rubyTint: number | NothingEnum;
 
 	/**
 	 * The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.
@@ -52673,29 +52673,29 @@ declare class ChangeGrepPreference extends Preference {
 	rubyType: any;
 
 	/**
-	 * The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of ruby characters.
 	 */
-	rubyWeight: any;
+	rubyWeight: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal space between ruby and parent characters.
 	 */
-	rubyXOffset: any;
+	rubyXOffset: number | NothingEnum;
 
 	/**
-	 * The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyXScale: any;
+	rubyXScale: number | NothingEnum;
 
 	/**
-	 * The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of vertical space between ruby and parent characters.
 	 */
-	rubyYOffset: any;
+	rubyYOffset: number | NothingEnum;
 
 	/**
-	 * The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The vertical size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyYScale: any;
+	rubyYScale: number | NothingEnum;
 
 	/**
 	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
@@ -52713,14 +52713,14 @@ declare class ChangeGrepPreference extends Preference {
 	shataiAdjustTsume: any;
 
 	/**
-	 * The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.
+	 * The shatai lens angle (in degrees).
 	 */
-	shataiDegreeAngle: any;
+	shataiDegreeAngle: number | NothingEnum;
 
 	/**
-	 * The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) of shatai obliquing to apply.
 	 */
-	shataiMagnification: any;
+	shataiMagnification: number | NothingEnum;
 
 	/**
 	 * The alignment to use for lines that contain a single word. Can return: SingleWordJustification enumerator or NothingEnum enumerator.
@@ -52728,29 +52728,29 @@ declare class ChangeGrepPreference extends Preference {
 	singleWordJustification: any;
 
 	/**
-	 * The skew angle of the ChangeGrepPreference. Can return: Real or NothingEnum enumerator.
+	 * The skew angle of the ChangeGrepPreference.
 	 */
-	skew: any;
+	skew: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space below. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space below.
 	 */
-	spaceAfter: any;
+	spaceAfter: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space above. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space above.
 	 */
-	spaceBefore: any;
+	spaceBefore: number | NothingEnum;
 
 	/**
-	 * The minimum space after a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space after a span or a split column.
 	 */
-	spanColumnMinSpaceAfter: any;
+	spanColumnMinSpaceAfter: number | NothingEnum;
 
 	/**
-	 * The minimum space before a span or a split column. Can return: Unit or NothingEnum enumerator.
+	 * The minimum space before a span or a split column.
 	 */
-	spanColumnMinSpaceBefore: any;
+	spanColumnMinSpaceBefore: number | NothingEnum;
 
 	/**
 	 * Whether a paragraph should be a single column, span columns or split columns. Can return: SpanColumnTypeOptions enumerator or NothingEnum enumerator.
@@ -52763,14 +52763,14 @@ declare class ChangeGrepPreference extends Preference {
 	spanSplitColumnCount: any;
 
 	/**
-	 * The inside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The inside gutter if the paragraph splits columns.
 	 */
-	splitColumnInsideGutter: any;
+	splitColumnInsideGutter: number | NothingEnum;
 
 	/**
-	 * The outside gutter if the paragraph splits columns. Can return: Unit or NothingEnum enumerator.
+	 * The outside gutter if the paragraph splits columns.
 	 */
-	splitColumnOutsideGutter: any;
+	splitColumnOutsideGutter: number | NothingEnum;
 
 	/**
 	 * The location at which to start the paragraph. Can return: StartParagraph enumerator or NothingEnum enumerator.
@@ -52793,14 +52793,14 @@ declare class ChangeGrepPreference extends Preference {
 	strikeThroughGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapTint: any;
+	strikeThroughGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: any;
+	strikeThroughOffset: number | NothingEnum;
 
 	/**
 	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -52808,9 +52808,9 @@ declare class ChangeGrepPreference extends Preference {
 	strikeThroughOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
 	 */
-	strikeThroughTint: any;
+	strikeThroughTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -52818,9 +52818,9 @@ declare class ChangeGrepPreference extends Preference {
 	strikeThroughType: any;
 
 	/**
-	 * The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: any;
+	strikeThroughWeight: number | NothingEnum;
 
 	/**
 	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
@@ -52838,14 +52838,14 @@ declare class ChangeGrepPreference extends Preference {
 	strokeColor: any;
 
 	/**
-	 * The tint (as a percentage) of the stroke color of the ChangeGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the stroke color of the ChangeGrepPreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -52853,24 +52853,24 @@ declare class ChangeGrepPreference extends Preference {
 	tatechuyoko: any;
 
 	/**
-	 * The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The horizontal offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoXOffset: any;
+	tatechuyokoXOffset: number | NothingEnum;
 
 	/**
-	 * The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The vertical offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoYOffset: any;
+	tatechuyokoYOffset: number | NothingEnum;
 
 	/**
-	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.
+	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em.
 	 */
-	tracking: any;
+	tracking: number | NothingEnum;
 
 	/**
-	 * The amount of space after each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space after each character.
 	 */
-	trailingAki: any;
+	trailingAki: number | NothingEnum;
 
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
@@ -52878,9 +52878,9 @@ declare class ChangeGrepPreference extends Preference {
 	treatIdeographicSpaceAsSpace: any;
 
 	/**
-	 * The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal character compression.
 	 */
-	tsume: any;
+	tsume: number | NothingEnum;
 
 	/**
 	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
@@ -52903,14 +52903,14 @@ declare class ChangeGrepPreference extends Preference {
 	underlineGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
 	 */
-	underlineGapTint: any;
+	underlineGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: any;
+	underlineOffset: number | NothingEnum;
 
 	/**
 	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -52918,9 +52918,9 @@ declare class ChangeGrepPreference extends Preference {
 	underlineOverprint: any;
 
 	/**
-	 * The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
 	 */
-	underlineTint: any;
+	underlineTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -52928,14 +52928,14 @@ declare class ChangeGrepPreference extends Preference {
 	underlineType: any;
 
 	/**
-	 * The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: any;
+	underlineWeight: number | NothingEnum;
 
 	/**
-	 * The vertical scaling applied to the ChangeGrepPreference. Can return: Real or NothingEnum enumerator.
+	 * The vertical scaling applied to the ChangeGrepPreference.
 	 */
-	verticalScale: any;
+	verticalScale: number | NothingEnum;
 
 	/**
 	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
@@ -52958,9 +52958,9 @@ declare class ChangeGrepPreference extends Preference {
 	warichuCharsBeforeBreak: any;
 
 	/**
-	 * The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.
+	 * The gap between lines of warichu characters.
 	 */
-	warichuLineSpacing: any;
+	warichuLineSpacing: number | NothingEnum;
 
 	/**
 	 * The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.
@@ -52968,19 +52968,19 @@ declare class ChangeGrepPreference extends Preference {
 	warichuLines: any;
 
 	/**
-	 * The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale parent text size to determine warichu size.
 	 */
-	warichuSize: any;
+	warichuSize: number | NothingEnum;
 
 	/**
-	 * The x (horizontal) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The x (horizontal) offset for diacritic adjustment.
 	 */
-	xOffsetDiacritic: any;
+	xOffsetDiacritic: number | NothingEnum;
 
 	/**
-	 * The y (vertical) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The y (vertical) offset for diacritic adjustment.
 	 */
-	yOffsetDiacritic: any;
+	yOffsetDiacritic: number | NothingEnum;
 
 }
 
@@ -53035,19 +53035,19 @@ declare class ChangeObjectPreference extends Preference {
 	anchorPoint: any;
 
 	/**
-	 * The space above an above-line anchored object. Can return: Unit or NothingEnum enumerator.
+	 * The space above an above-line anchored object.
 	 */
-	anchorSpaceAbove: any;
+	anchorSpaceAbove: number | NothingEnum;
 
 	/**
-	 * The horizontal (x) offset of the anchored object. Can return: Unit or NothingEnum enumerator.
+	 * The horizontal (x) offset of the anchored object.
 	 */
-	anchorXoffset: any;
+	anchorXoffset: number | NothingEnum;
 
 	/**
-	 * The vertical (y) offset of the anchored object. Corresponds to the space after property for above line positioning. Can return: Unit or NothingEnum enumerator.
+	 * The vertical (y) offset of the anchored object. Corresponds to the space after property for above line positioning.
 	 */
-	anchorYoffset: any;
+	anchorYoffset: number | NothingEnum;
 
 	/**
 	 * The position of the anchored object relative to the anchor. Can return: AnchorPosition enumerator or NothingEnum enumerator.
@@ -53095,9 +53095,9 @@ declare class ChangeObjectPreference extends Preference {
 	baselineFrameGridRelativeOption: any;
 
 	/**
-	 * The amount in measurement units to crop the bottom edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the bottom edge of a graphic.
 	 */
-	bottomCrop: any;
+	bottomCrop: number | NothingEnum;
 
 	/**
 	 * The shape to apply to the bottom left corner of rectangular shapes. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -53105,9 +53105,9 @@ declare class ChangeObjectPreference extends Preference {
 	bottomLeftCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the bottom left corner of rectangular shapes.
 	 */
-	bottomLeftCornerRadius: any;
+	bottomLeftCornerRadius: number | NothingEnum;
 
 	/**
 	 * The shape to apply to the bottom right corner of rectangular shapes. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -53115,9 +53115,9 @@ declare class ChangeObjectPreference extends Preference {
 	bottomRightCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the bottom right corner of rectangular shapes.
 	 */
-	bottomRightCornerRadius: any;
+	bottomRightCornerRadius: number | NothingEnum;
 
 	/**
 	 * Transparency settings for the content of the ChangeObjectPreference. Can return: FindChangeContentTransparencySetting or NothingEnum enumerator.
@@ -53155,9 +53155,9 @@ declare class ChangeObjectPreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The percent of tint to use in the ChangeObjectPreference's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The percent of tint to use in the ChangeObjectPreference's fill color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
 	 * Transparency settings for the fill applied to the ChangeObjectPreference. Can return: FindChangeFillTransparencySetting or NothingEnum enumerator.
@@ -53185,9 +53185,9 @@ declare class ChangeObjectPreference extends Preference {
 	gapColor: any;
 
 	/**
-	 * The tint as a percentage of the gap color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint as a percentage of the gap color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	gapTint: any;
+	gapTint: number | NothingEnum;
 
 	/**
 	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG. Can return: Boolean or NothingEnum enumerator.
@@ -53200,14 +53200,14 @@ declare class ChangeObjectPreference extends Preference {
 	gifOptionsPalette: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the ChangeObjectPreference. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the ChangeObjectPreference. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the ChangeObjectPreference. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the ChangeObjectPreference. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
 	 * The horizontal reference point on the page. Valid only when anchored position is custom. Can return: AnchoredRelativeTo enumerator or NothingEnum enumerator.
@@ -53275,9 +53275,9 @@ declare class ChangeObjectPreference extends Preference {
 	jpegOptionsQuality: any;
 
 	/**
-	 * The amount in measurement units to crop the left edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the left edge of a graphic.
 	 */
-	leftCrop: any;
+	leftCrop: number | NothingEnum;
 
 	/**
 	 * The arrowhead applied to the start of the path. . Can return: ArrowHead enumerator or NothingEnum enumerator.
@@ -53295,14 +53295,14 @@ declare class ChangeObjectPreference extends Preference {
 	minimumFirstBaselineOffset: any;
 
 	/**
-	 * The minimum height for auto-sizing of the text frame. Can return: Unit or NothingEnum enumerator.
+	 * The minimum height for auto-sizing of the text frame.
 	 */
-	minimumHeightForAutoSizing: any;
+	minimumHeightForAutoSizing: number | NothingEnum;
 
 	/**
-	 * The minimum width for auto-sizing of the text frame. Can return: Unit or NothingEnum enumerator.
+	 * The minimum width for auto-sizing of the text frame.
 	 */
-	minimumWidthForAutoSizing: any;
+	minimumWidthForAutoSizing: number | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. Can return: Real (1 - 500) or NothingEnum enumerator.
@@ -53360,9 +53360,9 @@ declare class ChangeObjectPreference extends Preference {
 	preserveAppearanceFromLayout: any;
 
 	/**
-	 * The amount in measurement units to crop the right edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the right edge of a graphic.
 	 */
-	rightCrop: any;
+	rightCrop: number | NothingEnum;
 
 	/**
 	 * The arrowhead applied to the end of the path. Can return: ArrowHead enumerator or NothingEnum enumerator.
@@ -53405,9 +53405,9 @@ declare class ChangeObjectPreference extends Preference {
 	strokeDashAndGap: any;
 
 	/**
-	 * The percent of tint to use in object's stroke color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The percent of tint to use in object's stroke color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
 	 * Transparency settings for the stroke. Can return: FindChangeStrokeTransparencySetting or NothingEnum enumerator.
@@ -53420,9 +53420,9 @@ declare class ChangeObjectPreference extends Preference {
 	strokeType: any;
 
 	/**
-	 * The weight (in points) to apply to the ChangeObjectPreference's stroke. Can return: Unit or NothingEnum enumerator.
+	 * The weight (in points) to apply to the ChangeObjectPreference's stroke.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * The number of columns in the text frame. Note: Depending on the value of use fixed column width, the number of columns can change automatically when the text frame size changes. Can return: Long Integer (1 - 40) or NothingEnum enumerator.
@@ -53455,9 +53455,9 @@ declare class ChangeObjectPreference extends Preference {
 	textWrapSide: any;
 
 	/**
-	 * The amount in measurement units to crop the top edge of a graphic. Can return: Unit or NothingEnum enumerator.
+	 * The amount in measurement units to crop the top edge of a graphic.
 	 */
-	topCrop: any;
+	topCrop: number | NothingEnum;
 
 	/**
 	 * The shape to be applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes.Note: corner option differs from end join in which you can set a radius for a corner option, whereas the rounded or beveled effect of an end join depends on the stroke weight. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -53465,9 +53465,9 @@ declare class ChangeObjectPreference extends Preference {
 	topLeftCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the top left corner of rectangular shapes and all corners of non-rectangular shapes.
 	 */
-	topLeftCornerRadius: any;
+	topLeftCornerRadius: number | NothingEnum;
 
 	/**
 	 * The shape to apply to the top right corner of rectangular shapes. Can return: CornerOptions enumerator or NothingEnum enumerator.
@@ -53475,9 +53475,9 @@ declare class ChangeObjectPreference extends Preference {
 	topRightCornerOption: any;
 
 	/**
-	 * The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes. Can return: Unit or NothingEnum enumerator.
+	 * The radius in measurement units of the corner effect applied to the top right corner of rectangular shapes.
 	 */
-	topRightCornerRadius: any;
+	topRightCornerRadius: number | NothingEnum;
 
 	/**
 	 * Transparency settings. Can return: FindChangeTransparencySetting or NothingEnum enumerator.
@@ -53581,9 +53581,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	appliedParagraphStyle: any;
 
 	/**
-	 * The percent of the type size to use for auto leading. (Range: 0 to 500). Can return: Real or NothingEnum enumerator.
+	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
 	 */
-	autoLeading: any;
+	autoLeading: number | NothingEnum;
 
 	/**
 	 * The number of half-width characters at or below which the characters automatically run horizontally in vertical text. Can return: Short Integer or NothingEnum enumerator.
@@ -53601,9 +53601,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	balanceRaggedLines: any;
 
 	/**
-	 * The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.
+	 * The baseline shift applied to the text.
 	 */
-	baselineShift: any;
+	baselineShift: number | NothingEnum;
 
 	/**
 	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
@@ -53651,9 +53651,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	characterAlignment: any;
 
 	/**
-	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.
 	 */
-	characterRotation: any;
+	characterRotation: number | NothingEnum;
 
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
@@ -53686,14 +53686,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill color of the ChangeTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill color of the ChangeTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
-	 * The amount to indent the first line. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the first line.
 	 */
-	firstLineIndent: any;
+	firstLineIndent: number | NothingEnum;
 
 	/**
 	 * The name of the font style. Can return: String or NothingEnum enumerator.
@@ -53706,14 +53706,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	glyphForm: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -53721,14 +53721,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	gradientFillStart: any;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.
 	 */
-	gradientStrokeLength: any;
+	gradientStrokeLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -53746,9 +53746,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	gridGyoudori: any;
 
 	/**
-	 * The horizontal scaling applied to the ChangeTransliteratePreference. Can return: Real or NothingEnum enumerator.
+	 * The horizontal scaling applied to the ChangeTransliteratePreference.
 	 */
-	horizontalScale: any;
+	horizontalScale: number | NothingEnum;
 
 	/**
 	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
@@ -53831,9 +53831,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	kentenFont: any;
 
 	/**
-	 * The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of kenten characters.
 	 */
-	kentenFontSize: any;
+	kentenFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
@@ -53856,9 +53856,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	kentenOverprintStroke: any;
 
 	/**
-	 * The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.
+	 * The distance between kenten characters and their parent characters.
 	 */
-	kentenPlacement: any;
+	kentenPlacement: number | NothingEnum;
 
 	/**
 	 * The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.
@@ -53871,29 +53871,29 @@ declare class ChangeTransliteratePreference extends Preference {
 	kentenStrokeColor: any;
 
 	/**
-	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenStrokeTint: any;
+	kentenStrokeTint: number | NothingEnum;
 
 	/**
-	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenTint: any;
+	kentenTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of kenten characters.
 	 */
-	kentenWeight: any;
+	kentenWeight: number | NothingEnum;
 
 	/**
-	 * The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of kenten characters as a percent of the original size.
 	 */
-	kentenXScale: any;
+	kentenXScale: number | NothingEnum;
 
 	/**
-	 * The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.
+	 * The vertical size of kenten charachers as a percent of the original size. .
 	 */
-	kentenYScale: any;
+	kentenYScale: number | NothingEnum;
 
 	/**
 	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
@@ -53901,9 +53901,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	kerningMethod: any;
 
 	/**
-	 * The amount of space to add or remove between characters, specified in thousands of an em. . Can return: Real or NothingEnum enumerator.
+	 * The amount of space to add or remove between characters, specified in thousands of an em. .
 	 */
-	kerningValue: any;
+	kerningValue: number | NothingEnum;
 
 	/**
 	 * The type of hanging punctuation to allow. Note: Valid only when a kinsoku set is in effect. Can return: KinsokuHangTypes enumerator or NothingEnum enumerator.
@@ -53921,9 +53921,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	kinsokuType: any;
 
 	/**
-	 * The amount to indent the last line in the paragraph. Can return: Unit or NothingEnum enumerator.
+	 * The amount to indent the last line in the paragraph.
 	 */
-	lastLineIndent: any;
+	lastLineIndent: number | NothingEnum;
 
 	/**
 	 * The leading applied to the text. Can return: Unit, Leading enumerator or NothingEnum enumerator.
@@ -53931,9 +53931,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	leading: any;
 
 	/**
-	 * The amount of space before each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space before each character.
 	 */
-	leadingAki: any;
+	leadingAki: number | NothingEnum;
 
 	/**
 	 * The point from which leading is measured from line to line. Can return: LeadingModel enumerator or NothingEnum enumerator.
@@ -53941,9 +53941,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	leadingModel: any;
 
 	/**
-	 * The width of the left indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the left indent.
 	 */
-	leftIndent: any;
+	leftIndent: number | NothingEnum;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
@@ -54096,9 +54096,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	paragraphGyoudori: any;
 
 	/**
-	 * The text size. Can return: Unit or NothingEnum enumerator.
+	 * The text size.
 	 */
-	pointSize: any;
+	pointSize: number | NothingEnum;
 
 	/**
 	 * The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.
@@ -54121,9 +54121,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	rensuuji: any;
 
 	/**
-	 * The width of the right indent. Can return: Unit or NothingEnum enumerator.
+	 * The width of the right indent.
 	 */
-	rightIndent: any;
+	rightIndent: number | NothingEnum;
 
 	/**
 	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -54171,9 +54171,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyFont: any;
 
 	/**
-	 * The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of ruby characters.
 	 */
-	rubyFontSize: any;
+	rubyFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
@@ -54206,9 +54206,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyParentOverhangAmount: any;
 
 	/**
-	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size.
 	 */
-	rubyParentScalingPercent: any;
+	rubyParentScalingPercent: number | NothingEnum;
 
 	/**
 	 * The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.
@@ -54226,14 +54226,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyStroke: any;
 
 	/**
-	 * The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of ruby characters.
 	 */
-	rubyStrokeTint: any;
+	rubyStrokeTint: number | NothingEnum;
 
 	/**
-	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100).
 	 */
-	rubyTint: any;
+	rubyTint: number | NothingEnum;
 
 	/**
 	 * The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.
@@ -54241,29 +54241,29 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyType: any;
 
 	/**
-	 * The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of ruby characters.
 	 */
-	rubyWeight: any;
+	rubyWeight: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal space between ruby and parent characters.
 	 */
-	rubyXOffset: any;
+	rubyXOffset: number | NothingEnum;
 
 	/**
-	 * The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyXScale: any;
+	rubyXScale: number | NothingEnum;
 
 	/**
-	 * The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of vertical space between ruby and parent characters.
 	 */
-	rubyYOffset: any;
+	rubyYOffset: number | NothingEnum;
 
 	/**
-	 * The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The vertical size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyYScale: any;
+	rubyYScale: number | NothingEnum;
 
 	/**
 	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
@@ -54281,14 +54281,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	shataiAdjustTsume: any;
 
 	/**
-	 * The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.
+	 * The shatai lens angle (in degrees).
 	 */
-	shataiDegreeAngle: any;
+	shataiDegreeAngle: number | NothingEnum;
 
 	/**
-	 * The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) of shatai obliquing to apply.
 	 */
-	shataiMagnification: any;
+	shataiMagnification: number | NothingEnum;
 
 	/**
 	 * The alignment to use for lines that contain a single word. Can return: SingleWordJustification enumerator or NothingEnum enumerator.
@@ -54296,19 +54296,19 @@ declare class ChangeTransliteratePreference extends Preference {
 	singleWordJustification: any;
 
 	/**
-	 * The skew angle of the ChangeTransliteratePreference. Can return: Real or NothingEnum enumerator.
+	 * The skew angle of the ChangeTransliteratePreference.
 	 */
-	skew: any;
+	skew: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space below. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space below.
 	 */
-	spaceAfter: any;
+	spaceAfter: number | NothingEnum;
 
 	/**
-	 * The height of the paragraph space above. Can return: Unit or NothingEnum enumerator.
+	 * The height of the paragraph space above.
 	 */
-	spaceBefore: any;
+	spaceBefore: number | NothingEnum;
 
 	/**
 	 * The location at which to start the paragraph. Can return: StartParagraph enumerator or NothingEnum enumerator.
@@ -54331,14 +54331,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	strikeThroughGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapTint: any;
+	strikeThroughGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: any;
+	strikeThroughOffset: number | NothingEnum;
 
 	/**
 	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -54346,9 +54346,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	strikeThroughOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
 	 */
-	strikeThroughTint: any;
+	strikeThroughTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -54356,9 +54356,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	strikeThroughType: any;
 
 	/**
-	 * The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: any;
+	strikeThroughWeight: number | NothingEnum;
 
 	/**
 	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
@@ -54371,14 +54371,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	strokeColor: any;
 
 	/**
-	 * The tint (as a percentage) of the stroke color of the ChangeTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the stroke color of the ChangeTransliteratePreference. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
@@ -54386,24 +54386,24 @@ declare class ChangeTransliteratePreference extends Preference {
 	tatechuyoko: any;
 
 	/**
-	 * The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The horizontal offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoXOffset: any;
+	tatechuyokoXOffset: number | NothingEnum;
 
 	/**
-	 * The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The vertical offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoYOffset: any;
+	tatechuyokoYOffset: number | NothingEnum;
 
 	/**
-	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.
+	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em.
 	 */
-	tracking: any;
+	tracking: number | NothingEnum;
 
 	/**
-	 * The amount of space after each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space after each character.
 	 */
-	trailingAki: any;
+	trailingAki: number | NothingEnum;
 
 	/**
 	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
@@ -54411,9 +54411,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	treatIdeographicSpaceAsSpace: any;
 
 	/**
-	 * The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal character compression.
 	 */
-	tsume: any;
+	tsume: number | NothingEnum;
 
 	/**
 	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
@@ -54436,14 +54436,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	underlineGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
 	 */
-	underlineGapTint: any;
+	underlineGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: any;
+	underlineOffset: number | NothingEnum;
 
 	/**
 	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -54451,9 +54451,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	underlineOverprint: any;
 
 	/**
-	 * The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
 	 */
-	underlineTint: any;
+	underlineTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -54461,14 +54461,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	underlineType: any;
 
 	/**
-	 * The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: any;
+	underlineWeight: number | NothingEnum;
 
 	/**
-	 * The vertical scaling applied to the ChangeTransliteratePreference. Can return: Real or NothingEnum enumerator.
+	 * The vertical scaling applied to the ChangeTransliteratePreference.
 	 */
-	verticalScale: any;
+	verticalScale: number | NothingEnum;
 
 	/**
 	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
@@ -54491,9 +54491,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	warichuCharsBeforeBreak: any;
 
 	/**
-	 * The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.
+	 * The gap between lines of warichu characters.
 	 */
-	warichuLineSpacing: any;
+	warichuLineSpacing: number | NothingEnum;
 
 	/**
 	 * The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.
@@ -54501,9 +54501,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	warichuLines: any;
 
 	/**
-	 * The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale parent text size to determine warichu size.
 	 */
-	warichuSize: any;
+	warichuSize: number | NothingEnum;
 
 }
 
@@ -54729,9 +54729,9 @@ declare class PrinterPreset {
 	markOffset: string | number;
 
 	/**
-	 * The type of printer marks, either an enum value or the name of a custom marks file. Can return: MarkTypes enumerator or String.
+	 * The type of printer marks, either an enum value or the name of a custom marks file.
 	 */
-	markType: any;
+	markType: MarkTypes | String;
 
 	/**
 	 * The name of the PrinterPreset.
@@ -54779,9 +54779,9 @@ declare class PrinterPreset {
 	paperGap: string | number;
 
 	/**
-	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
+	 * The paper height. Note: Valid only when paper size is custom or scale mode is scale width height.
 	 */
-	paperHeight: any;
+	paperHeight: PaperSize | number;
 
 	/**
 	 * The amount of space to offset the page from the left edge of the imageable area.
@@ -54789,9 +54789,9 @@ declare class PrinterPreset {
 	paperOffset: string | number;
 
 	/**
-	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
+	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
 	 */
-	paperSize: any;
+	paperSize: PaperSizes | String;
 
 	/**
 	 * A list of the available paper sizes.
@@ -54804,9 +54804,9 @@ declare class PrinterPreset {
 	paperTransverse: boolean;
 
 	/**
-	 * The paper width. Note: Valid only when paper size is custom or scale mode is scale width height. Can return: PaperSize enumerator or Unit.
+	 * The paper width. Note: Valid only when paper size is custom or scale mode is scale width height.
 	 */
-	paperWidth: any;
+	paperWidth: PaperSize | number;
 
 	/**
 	 * The parent of the PrinterPreset (a Application).
@@ -54819,9 +54819,9 @@ declare class PrinterPreset {
 	postscriptLevel: PostScriptLevels;
 
 	/**
-	 * The PPD, specified as a PPD name or an enumeration. Can return: PPDValues enumerator or String.
+	 * The PPD, specified as a PPD name or an enumeration.
 	 */
-	ppd: any;
+	ppd: PPDValues | String;
 
 	/**
 	 * Available PPDs.
@@ -54889,9 +54889,9 @@ declare class PrinterPreset {
 	printYellow: boolean;
 
 	/**
-	 * The current printer. Can return: Printer enumerator or String.
+	 * The current printer.
 	 */
-	printer: any;
+	printer: Printer | String;
 
 	/**
 	 * Available printers.
@@ -54899,9 +54899,9 @@ declare class PrinterPreset {
 	readonly printerList: string[];
 
 	/**
-	 * The color profile. Can return: Profile enumerator or String.
+	 * The color profile.
 	 */
-	profile: any;
+	profile: Profile | String;
 
 	/**
 	 * A property that allows setting of several properties at the same time.
@@ -54939,9 +54939,9 @@ declare class PrinterPreset {
 	scaleWidth: number;
 
 	/**
-	 * The ink screening settings for composite gray output in PostScript or PDF format. . Can return: Screeening enumerator or String.
+	 * The ink screening settings for composite gray output in PostScript or PDF format. .
 	 */
-	screening: any;
+	screening: Screeening | String;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -55291,9 +55291,9 @@ declare class XMLExportPreference extends Preference {
 	jpegOptionsQuality: JPEGOptionsQuality;
 
 	/**
-	 * The preferred browser for viewing XML. Can return: File or NothingEnum enumerator.
+	 * The preferred browser for viewing XML.
 	 */
-	preferredBrowser: any;
+	preferredBrowser: File | NothingEnum;
 
 	/**
 	 * If true, includes Ruby text in the exported XML content.
@@ -58288,9 +58288,9 @@ declare class PreflightOption extends Preference {
 	preflightWhichLayers: PreflightLayerOptions;
 
 	/**
-	 * The working preflight profile. Can return: PreflightProfile or String.
+	 * The working preflight profile.
 	 */
-	preflightWorkingProfile: any;
+	preflightWorkingProfile: PreflightProfile | String;
 
 }
 
@@ -58324,9 +58324,9 @@ declare class PreflightBookOption extends Preference {
 	preflightWhichLayers: PreflightLayerOptions;
 
 	/**
-	 * The working preflight profile. Can return: PreflightProfile or String.
+	 * The working preflight profile.
 	 */
-	preflightWorkingProfile: any;
+	preflightWorkingProfile: PreflightProfile | String;
 
 }
 
@@ -59501,9 +59501,9 @@ declare class SWFExportPreference extends Preference {
 	jpegQualityOptions: DynamicDocumentsJPEGQualityOptions;
 
 	/**
-	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
+	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: any;
+	pageRange: PageRange | String;
 
 	/**
 	 * The name of the page transition to use for all pages.
@@ -59607,9 +59607,9 @@ declare class XFLExportPreference extends Preference {
 	jpegQualityOptions: DynamicDocumentsJPEGQualityOptions;
 
 	/**
-	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,). Can return: PageRange enumerator or String.
+	 * The pages to print, specified either as an enumeration or a string. To specify a range, separate page numbers in the string with a hyphen (-). To specify separate pages, separate page numbers in the string with a comma (,).
 	 */
-	pageRange: any;
+	pageRange: PageRange | String;
 
 	/**
 	 * The raster format options.
@@ -63017,9 +63017,9 @@ declare class TOCStyleEntry {
 	readonly events: Events;
 
 	/**
-	 * The paragraph style applied to the TOC entry. Can return: ParagraphStyle or String.
+	 * The paragraph style applied to the TOC entry.
 	 */
-	formatStyle: any;
+	formatStyle: ParagraphStyle | String;
 
 	/**
 	 * The index of the TOCStyleEntry within its containing object.
@@ -63047,9 +63047,9 @@ declare class TOCStyleEntry {
 	pageNumberPosition: PageNumberPosition;
 
 	/**
-	 * The character style applied to the page number of the entry. Can return: CharacterStyle or String.
+	 * The character style applied to the page number of the entry.
 	 */
-	pageNumberStyle: any;
+	pageNumberStyle: CharacterStyle | String;
 
 	/**
 	 * The parent of the TOCStyleEntry (a TOCStyle).
@@ -63067,9 +63067,9 @@ declare class TOCStyleEntry {
 	separator: string;
 
 	/**
-	 * The character style applied to the string separating the TOC entry text and the page numbers. Can return: CharacterStyle or String.
+	 * The character style applied to the string separating the TOC entry text and the page numbers.
 	 */
-	separatorStyle: any;
+	separatorStyle: CharacterStyle | String;
 
 	/**
 	 * If true, sorts the entries alphabetically.
@@ -67828,9 +67828,9 @@ declare class CellStyle {
 	bottomEdgeStrokeGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the bottom edge border stroke gap color. (Range: 0 to 100) Note: Not valid when bottom edge stroke type is solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the bottom edge border stroke gap color. (Range: 0 to 100) Note: Not valid when bottom edge stroke type is solid.
 	 */
-	bottomEdgeStrokeGapTint: any;
+	bottomEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
 	 * If true, the bottom edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -67838,9 +67838,9 @@ declare class CellStyle {
 	bottomEdgeStrokeOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the bottom edge border stroke. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the bottom edge border stroke.
 	 */
-	bottomEdgeStrokeTint: any;
+	bottomEdgeStrokeTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the bottom edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
@@ -67848,14 +67848,14 @@ declare class CellStyle {
 	bottomEdgeStrokeType: any;
 
 	/**
-	 * The stroke weight of the bottom edge border stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the bottom edge border stroke.
 	 */
-	bottomEdgeStrokeWeight: any;
+	bottomEdgeStrokeWeight: number | NothingEnum;
 
 	/**
-	 * The bottom inset of the cell.The API has been deprecated. Use TextBottomInset or GraphicBottomInset. Can return: Unit or NothingEnum enumerator.
+	 * The bottom inset of the cell.The API has been deprecated. Use TextBottomInset or GraphicBottomInset.
 	 */
-	bottomInset: any;
+	bottomInset: number | NothingEnum;
 
 	/**
 	 * If true, clips the cell's content to width and height of the cell. The API has been deprecated. Use ClipContentsToTextCell or ClipContentsToPageItemCell. Can return: Boolean or NothingEnum enumerator.
@@ -67893,9 +67893,9 @@ declare class CellStyle {
 	diagonalLineStrokeGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the diagonal line stroke gap color. Note: Not valid when diagonal line stroke type is solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the diagonal line stroke gap color. Note: Not valid when diagonal line stroke type is solid.
 	 */
-	diagonalLineStrokeGapTint: any;
+	diagonalLineStrokeGapTint: number | NothingEnum;
 
 	/**
 	 * If true, the diagonal line stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -67903,9 +67903,9 @@ declare class CellStyle {
 	diagonalLineStrokeOverprint: any;
 
 	/**
-	 * The diagonal line tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The diagonal line tint (as a percentage). (Range: 0 to 100).
 	 */
-	diagonalLineStrokeTint: any;
+	diagonalLineStrokeTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the diagonal line(s). Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
@@ -67913,9 +67913,9 @@ declare class CellStyle {
 	diagonalLineStrokeType: any;
 
 	/**
-	 * The diagonal line stroke weight. Can return: Unit or NothingEnum enumerator.
+	 * The diagonal line stroke weight.
 	 */
-	diagonalLineStrokeWeight: any;
+	diagonalLineStrokeWeight: number | NothingEnum;
 
 	/**
 	 * A collection of event listeners.
@@ -67933,9 +67933,9 @@ declare class CellStyle {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill of the object. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill of the object.
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
 	 * The distance between the baseline of the text and the top inset of the cell. Can return: FirstBaseline enumerator or NothingEnum enumerator.
@@ -67943,14 +67943,14 @@ declare class CellStyle {
 	firstBaselineOffset: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the object. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the object. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (of a linear gradient) or radius (of a radial gradient) applied to the fill of the object. Can return: Real or NothingEnum enumerator.
+	 * The length (of a linear gradient) or radius (of a radial gradient) applied to the fill of the object.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the CellStyle, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -67958,24 +67958,24 @@ declare class CellStyle {
 	gradientFillStart: any;
 
 	/**
-	 * The bottom inset of the graphic cell. Can return: Unit or NothingEnum enumerator.
+	 * The bottom inset of the graphic cell.
 	 */
-	graphicBottomInset: any;
+	graphicBottomInset: number | NothingEnum;
 
 	/**
-	 * The left inset of the graphic cell. Can return: Unit or NothingEnum enumerator.
+	 * The left inset of the graphic cell.
 	 */
-	graphicLeftInset: any;
+	graphicLeftInset: number | NothingEnum;
 
 	/**
-	 * The right inset of the graphic cell. Can return: Unit or NothingEnum enumerator.
+	 * The right inset of the graphic cell.
 	 */
-	graphicRightInset: any;
+	graphicRightInset: number | NothingEnum;
 
 	/**
-	 * The top inset of the graphic cell. Can return: Unit or NothingEnum enumerator.
+	 * The top inset of the graphic cell.
 	 */
-	graphicTopInset: any;
+	graphicTopInset: number | NothingEnum;
 
 	/**
 	 * The unique ID of the CellStyle.
@@ -68013,9 +68013,9 @@ declare class CellStyle {
 	leftEdgeStrokeGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the left edge border stroke gap color. (Range: 0 to 100) Note: Not valid when left edge stroke type is solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the left edge border stroke gap color. (Range: 0 to 100) Note: Not valid when left edge stroke type is solid.
 	 */
-	leftEdgeStrokeGapTint: any;
+	leftEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
 	 * If true, the left edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -68023,9 +68023,9 @@ declare class CellStyle {
 	leftEdgeStrokeOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the left edge border stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the left edge border stroke. (Range: 0 to 100).
 	 */
-	leftEdgeStrokeTint: any;
+	leftEdgeStrokeTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the left edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
@@ -68033,14 +68033,14 @@ declare class CellStyle {
 	leftEdgeStrokeType: any;
 
 	/**
-	 * The stroke weight of the left edge border stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the left edge border stroke.
 	 */
-	leftEdgeStrokeWeight: any;
+	leftEdgeStrokeWeight: number | NothingEnum;
 
 	/**
-	 * The left inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicLeftInset. Can return: Unit or NothingEnum enumerator.
+	 * The left inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicLeftInset.
 	 */
-	leftInset: any;
+	leftInset: number | NothingEnum;
 
 	/**
 	 * The space between the baseline of the text and the top inset of the frame or cell. Can return: Unit (0 - 8640 points) or NothingEnum enumerator.
@@ -68058,9 +68058,9 @@ declare class CellStyle {
 	overprintFill: any;
 
 	/**
-	 * The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified. Can return: Unit or NothingEnum enumerator.
+	 * The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified.
 	 */
-	paragraphSpacingLimit: any;
+	paragraphSpacingLimit: number | NothingEnum;
 
 	/**
 	 * The parent of the CellStyle (a Document, Application or CellStyleGroup).
@@ -68088,9 +68088,9 @@ declare class CellStyle {
 	rightEdgeStrokeGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the right edge border stroke gap color. (Range: 0 to 100) Note: Not valid when right edge stroke type is solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the right edge border stroke gap color. (Range: 0 to 100) Note: Not valid when right edge stroke type is solid.
 	 */
-	rightEdgeStrokeGapTint: any;
+	rightEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
 	 * If true, the right edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -68098,9 +68098,9 @@ declare class CellStyle {
 	rightEdgeStrokeOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the right edge border stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the right edge border stroke. (Range: 0 to 100).
 	 */
-	rightEdgeStrokeTint: any;
+	rightEdgeStrokeTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the right edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
@@ -68108,39 +68108,39 @@ declare class CellStyle {
 	rightEdgeStrokeType: any;
 
 	/**
-	 * The stroke weight of the right edge border stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the right edge border stroke.
 	 */
-	rightEdgeStrokeWeight: any;
+	rightEdgeStrokeWeight: number | NothingEnum;
 
 	/**
-	 * The right inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicRightInset. Can return: Unit or NothingEnum enumerator.
+	 * The right inset of the cell.The API has been deprecated. Use TextLeftInset or GraphicRightInset.
 	 */
-	rightInset: any;
+	rightInset: number | NothingEnum;
 
 	/**
-	 * The rotation angle (in degrees) of the cell, specified as one of the following values: 0, 90, 180, or 270. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of the cell, specified as one of the following values: 0, 90, 180, or 270.
 	 */
-	rotationAngle: any;
+	rotationAngle: number | NothingEnum;
 
 	/**
-	 * The bottom inset of the text cell. Can return: Unit or NothingEnum enumerator.
+	 * The bottom inset of the text cell.
 	 */
-	textBottomInset: any;
+	textBottomInset: number | NothingEnum;
 
 	/**
-	 * The left inset of the text cell. Can return: Unit or NothingEnum enumerator.
+	 * The left inset of the text cell.
 	 */
-	textLeftInset: any;
+	textLeftInset: number | NothingEnum;
 
 	/**
-	 * The right inset of the text cell. Can return: Unit or NothingEnum enumerator.
+	 * The right inset of the text cell.
 	 */
-	textRightInset: any;
+	textRightInset: number | NothingEnum;
 
 	/**
-	 * The top inset of the text cell. Can return: Unit or NothingEnum enumerator.
+	 * The top inset of the text cell.
 	 */
-	textTopInset: any;
+	textTopInset: number | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the top edge border stroke. Can return: Swatch or NothingEnum enumerator.
@@ -68158,9 +68158,9 @@ declare class CellStyle {
 	topEdgeStrokeGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the top edge border stroke gap color. (Range: 0 to 100) Note: Not valid when top edge stroke type is solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the top edge border stroke gap color. (Range: 0 to 100) Note: Not valid when top edge stroke type is solid.
 	 */
-	topEdgeStrokeGapTint: any;
+	topEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
 	 * If true, the top edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -68168,9 +68168,9 @@ declare class CellStyle {
 	topEdgeStrokeOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the top edge border stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the top edge border stroke. (Range: 0 to 100).
 	 */
-	topEdgeStrokeTint: any;
+	topEdgeStrokeTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the top edge. Can return: StrokeStyle or NothingEnum enumerator. Can also accept: String.
@@ -68178,14 +68178,14 @@ declare class CellStyle {
 	topEdgeStrokeType: any;
 
 	/**
-	 * The stroke weight of the top edge border stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the top edge border stroke.
 	 */
-	topEdgeStrokeWeight: any;
+	topEdgeStrokeWeight: number | NothingEnum;
 
 	/**
-	 * The top inset of the cell. The API has been deprecated. Use TextTopInset or GraphicTopInset. Can return: Unit or NothingEnum enumerator.
+	 * The top inset of the cell. The API has been deprecated. Use TextTopInset or GraphicTopInset.
 	 */
-	topInset: any;
+	topInset: number | NothingEnum;
 
 	/**
 	 * If true, draws a diagonal line starting from the top left. Can return: Boolean or NothingEnum enumerator.
@@ -69034,9 +69034,9 @@ declare class Text {
 	bulletsAndNumberingListType: ListType;
 
 	/**
-	 * The character style to be used for the text after string. Can return: CharacterStyle or String.
+	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: any;
+	bulletsCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The text after string expression for bullets.
@@ -69534,9 +69534,9 @@ declare class Text {
 	lastLineIndent: string | number;
 
 	/**
-	 * The leading applied to the text. Can return: Unit or Leading enumerator.
+	 * The leading applied to the text.
 	 */
-	leading: any;
+	leading: number | Leading;
 
 	/**
 	 * The amount of space before each character.
@@ -69654,9 +69654,9 @@ declare class Text {
 	numberingApplyRestartPolicy: boolean;
 
 	/**
-	 * The character style to be used for the number string. Can return: CharacterStyle or String.
+	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: any;
+	numberingCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * Continue the numbering at this level.
@@ -72145,9 +72145,9 @@ declare class Story {
 	bulletsAndNumberingListType: ListType;
 
 	/**
-	 * The character style to be used for the text after string. Can return: CharacterStyle or String.
+	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: any;
+	bulletsCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The text after string expression for bullets.
@@ -72665,9 +72665,9 @@ declare class Story {
 	lastLineIndent: string | number;
 
 	/**
-	 * The leading applied to the text. Can return: Unit or Leading enumerator.
+	 * The leading applied to the text.
 	 */
-	leading: any;
+	leading: number | Leading;
 
 	/**
 	 * The amount of space before each character.
@@ -72800,9 +72800,9 @@ declare class Story {
 	numberingApplyRestartPolicy: boolean;
 
 	/**
-	 * The character style to be used for the number string. Can return: CharacterStyle or String.
+	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: any;
+	numberingCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * Continue the numbering at this level.
@@ -74115,9 +74115,9 @@ declare class ParagraphStyle {
 	balanceRaggedLines: any;
 
 	/**
-	 * The style that this style is based on. Can return: ParagraphStyle or String.
+	 * The style that this style is based on.
 	 */
-	basedOn: any;
+	basedOn: ParagraphStyle | String;
 
 	/**
 	 * The baseline shift applied to the text.
@@ -74140,9 +74140,9 @@ declare class ParagraphStyle {
 	bulletsAndNumberingListType: ListType;
 
 	/**
-	 * The character style to be used for the text after string. Can return: CharacterStyle or String.
+	 * The character style to be used for the text after string.
 	 */
-	bulletsCharacterStyle: any;
+	bulletsCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * The text after string expression for bullets.
@@ -74575,9 +74575,9 @@ declare class ParagraphStyle {
 	lastLineIndent: string | number;
 
 	/**
-	 * The leading applied to the text. Can return: Unit or Leading enumerator.
+	 * The leading applied to the text.
 	 */
-	leading: any;
+	leading: number | Leading;
 
 	/**
 	 * The amount of space before each character.
@@ -74680,9 +74680,9 @@ declare class ParagraphStyle {
 	numberingApplyRestartPolicy: boolean;
 
 	/**
-	 * The character style to be used for the number string. Can return: CharacterStyle or String.
+	 * The character style to be used for the number string.
 	 */
-	numberingCharacterStyle: any;
+	numberingCharacterStyle: CharacterStyle | String;
 
 	/**
 	 * Continue the numbering at this level.
@@ -75724,14 +75724,14 @@ declare class CharacterStyle {
 	appliedLanguage: any;
 
 	/**
-	 * The style that this style is based on. Can return: CharacterStyle or String.
+	 * The style that this style is based on.
 	 */
-	basedOn: any;
+	basedOn: CharacterStyle | String;
 
 	/**
-	 * The baseline shift applied to the text. Can return: Unit or NothingEnum enumerator.
+	 * The baseline shift applied to the text.
 	 */
-	baselineShift: any;
+	baselineShift: number | NothingEnum;
 
 	/**
 	 * The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.
@@ -75749,9 +75749,9 @@ declare class CharacterStyle {
 	characterDirection: any;
 
 	/**
-	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise. Can return: Real or NothingEnum enumerator.
+	 * The rotation angle (in degrees) of individual characters. Note: The rotation is counterclockwise.
 	 */
-	characterRotation: any;
+	characterRotation: number | NothingEnum;
 
 	/**
 	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
@@ -75794,9 +75794,9 @@ declare class CharacterStyle {
 	fillColor: any;
 
 	/**
-	 * The tint (as a percentage) of the fill color of the CharacterStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the fill color of the CharacterStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	fillTint: any;
+	fillTint: number | NothingEnum;
 
 	/**
 	 * The name of the font style. Can return: String or NothingEnum enumerator.
@@ -75809,14 +75809,14 @@ declare class CharacterStyle {
 	glyphForm: any;
 
 	/**
-	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the fill of the text. (Range: -180 to 180).
 	 */
-	gradientFillAngle: any;
+	gradientFillAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the fill of the text.
 	 */
-	gradientFillLength: any;
+	gradientFillLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the fill of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -75824,14 +75824,14 @@ declare class CharacterStyle {
 	gradientFillStart: any;
 
 	/**
-	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180). Can return: Real or NothingEnum enumerator.
+	 * The angle of a linear gradient applied to the stroke of the text. (Range: -180 to 180).
 	 */
-	gradientStrokeAngle: any;
+	gradientStrokeAngle: number | NothingEnum;
 
 	/**
-	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text. Can return: Real or NothingEnum enumerator.
+	 * The length (for a linear gradient) or radius (for a radial gradient) applied to the stroke of the text.
 	 */
-	gradientStrokeLength: any;
+	gradientStrokeLength: number | NothingEnum;
 
 	/**
 	 * The starting point (in page coordinates) of a gradient applied to the stroke of the text, in the format [x, y]. Can return: Array of 2 Units or NothingEnum enumerator.
@@ -75839,9 +75839,9 @@ declare class CharacterStyle {
 	gradientStrokeStart: any;
 
 	/**
-	 * The horizontal scaling applied to the CharacterStyle. Can return: Real or NothingEnum enumerator.
+	 * The horizontal scaling applied to the CharacterStyle.
 	 */
-	horizontalScale: any;
+	horizontalScale: number | NothingEnum;
 
 	/**
 	 * The unique ID of the CharacterStyle.
@@ -75899,9 +75899,9 @@ declare class CharacterStyle {
 	kentenFont: any;
 
 	/**
-	 * The size (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of kenten characters.
 	 */
-	kentenFontSize: any;
+	kentenFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
@@ -75924,9 +75924,9 @@ declare class CharacterStyle {
 	kentenOverprintStroke: any;
 
 	/**
-	 * The distance between kenten characters and their parent characters. Can return: Real or NothingEnum enumerator.
+	 * The distance between kenten characters and their parent characters.
 	 */
-	kentenPlacement: any;
+	kentenPlacement: number | NothingEnum;
 
 	/**
 	 * The kenten position relative to the parent character. Can return: RubyKentenPosition enumerator or NothingEnum enumerator.
@@ -75939,29 +75939,29 @@ declare class CharacterStyle {
 	kentenStrokeColor: any;
 
 	/**
-	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenStrokeTint: any;
+	kentenStrokeTint: number | NothingEnum;
 
 	/**
-	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The fill tint (as a percentage) of kenten characters. (Range: 0 to 100).
 	 */
-	kentenTint: any;
+	kentenTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight (in points) of kenten characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of kenten characters.
 	 */
-	kentenWeight: any;
+	kentenWeight: number | NothingEnum;
 
 	/**
-	 * The horizontal size of kenten characters as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of kenten characters as a percent of the original size.
 	 */
-	kentenXScale: any;
+	kentenXScale: number | NothingEnum;
 
 	/**
-	 * The vertical size of kenten charachers as a percent of the original size. . Can return: Real or NothingEnum enumerator.
+	 * The vertical size of kenten charachers as a percent of the original size. .
 	 */
-	kentenYScale: any;
+	kentenYScale: number | NothingEnum;
 
 	/**
 	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
@@ -75984,9 +75984,9 @@ declare class CharacterStyle {
 	leading: any;
 
 	/**
-	 * The amount of space before each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space before each character.
 	 */
-	leadingAki: any;
+	leadingAki: number | NothingEnum;
 
 	/**
 	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
@@ -76119,9 +76119,9 @@ declare class CharacterStyle {
 	readonly parent: any;
 
 	/**
-	 * The text size. Can return: Unit or NothingEnum enumerator.
+	 * The text size.
 	 */
-	pointSize: any;
+	pointSize: number | NothingEnum;
 
 	/**
 	 * The text position relative to the baseline. Can return: Position enumerator or NothingEnum enumerator.
@@ -76184,9 +76184,9 @@ declare class CharacterStyle {
 	rubyFont: any;
 
 	/**
-	 * The size (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The size (in points) of ruby characters.
 	 */
-	rubyFontSize: any;
+	rubyFontSize: number | NothingEnum;
 
 	/**
 	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
@@ -76219,9 +76219,9 @@ declare class CharacterStyle {
 	rubyParentOverhangAmount: any;
 
 	/**
-	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale the parent text size to determine the ruby text size.
 	 */
-	rubyParentScalingPercent: any;
+	rubyParentScalingPercent: number | NothingEnum;
 
 	/**
 	 * The ruby spacing relative to the parent text. . Can return: RubyParentSpacing enumerator or NothingEnum enumerator.
@@ -76239,14 +76239,14 @@ declare class CharacterStyle {
 	rubyStroke: any;
 
 	/**
-	 * The stroke tint (as a percentage) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke tint (as a percentage) of ruby characters.
 	 */
-	rubyStrokeTint: any;
+	rubyStrokeTint: number | NothingEnum;
 
 	/**
-	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the ruby fill color. (Range: 0 to 100).
 	 */
-	rubyTint: any;
+	rubyTint: number | NothingEnum;
 
 	/**
 	 * The ruby type. Can return: RubyTypes enumerator or NothingEnum enumerator.
@@ -76254,29 +76254,29 @@ declare class CharacterStyle {
 	rubyType: any;
 
 	/**
-	 * The stroke weight (in points) of ruby characters. Can return: Real or NothingEnum enumerator.
+	 * The stroke weight (in points) of ruby characters.
 	 */
-	rubyWeight: any;
+	rubyWeight: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal space between ruby and parent characters.
 	 */
-	rubyXOffset: any;
+	rubyXOffset: number | NothingEnum;
 
 	/**
-	 * The horizontal size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The horizontal size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyXScale: any;
+	rubyXScale: number | NothingEnum;
 
 	/**
-	 * The amount of vertical space between ruby and parent characters. Can return: Real or NothingEnum enumerator.
+	 * The amount of vertical space between ruby and parent characters.
 	 */
-	rubyYOffset: any;
+	rubyYOffset: number | NothingEnum;
 
 	/**
-	 * The vertical size of ruby characters, specified as a percent of the original size. Can return: Real or NothingEnum enumerator.
+	 * The vertical size of ruby characters, specified as a percent of the original size.
 	 */
-	rubyYScale: any;
+	rubyYScale: number | NothingEnum;
 
 	/**
 	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
@@ -76294,19 +76294,19 @@ declare class CharacterStyle {
 	shataiAdjustTsume: any;
 
 	/**
-	 * The shatai lens angle (in degrees). Can return: Real or NothingEnum enumerator.
+	 * The shatai lens angle (in degrees).
 	 */
-	shataiDegreeAngle: any;
+	shataiDegreeAngle: number | NothingEnum;
 
 	/**
-	 * The amount (as a percentage) of shatai obliquing to apply. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) of shatai obliquing to apply.
 	 */
-	shataiMagnification: any;
+	shataiMagnification: number | NothingEnum;
 
 	/**
-	 * The skew angle of the CharacterStyle. Can return: Real or NothingEnum enumerator.
+	 * The skew angle of the CharacterStyle.
 	 */
-	skew: any;
+	skew: number | NothingEnum;
 
 	/**
 	 * Split Document (EPUB only). Can return: Boolean or NothingEnum enumerator.
@@ -76329,14 +76329,14 @@ declare class CharacterStyle {
 	strikeThroughGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapTint: any;
+	strikeThroughGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the strikethrough stroke from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the strikethrough stroke from the text baseline.
 	 */
-	strikeThroughOffset: any;
+	strikeThroughOffset: number | NothingEnum;
 
 	/**
 	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -76344,9 +76344,9 @@ declare class CharacterStyle {
 	strikeThroughOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
 	 */
-	strikeThroughTint: any;
+	strikeThroughTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the strikethrough stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -76354,9 +76354,9 @@ declare class CharacterStyle {
 	strikeThroughType: any;
 
 	/**
-	 * The stroke weight of the strikethrough stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the strikethrough stroke.
 	 */
-	strikeThroughWeight: any;
+	strikeThroughWeight: number | NothingEnum;
 
 	/**
 	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
@@ -76374,14 +76374,14 @@ declare class CharacterStyle {
 	strokeColor: any;
 
 	/**
-	 * The tint (as a percentage) of the stroke color of the CharacterStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.). Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the stroke color of the CharacterStyle. (To specify a tint percentage, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
 	 */
-	strokeTint: any;
+	strokeTint: number | NothingEnum;
 
 	/**
-	 * The stroke weight applied to the characters of the text. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight applied to the characters of the text.
 	 */
-	strokeWeight: any;
+	strokeWeight: number | NothingEnum;
 
 	/**
 	 * A collection of style export tag maps.
@@ -76399,29 +76399,29 @@ declare class CharacterStyle {
 	tatechuyoko: any;
 
 	/**
-	 * The horizontal offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The horizontal offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoXOffset: any;
+	tatechuyokoXOffset: number | NothingEnum;
 
 	/**
-	 * The vertical offset for horizontal characters in vertical text. Can return: Real or NothingEnum enumerator.
+	 * The vertical offset for horizontal characters in vertical text.
 	 */
-	tatechuyokoYOffset: any;
+	tatechuyokoYOffset: number | NothingEnum;
 
 	/**
-	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em. Can return: Real or NothingEnum enumerator.
+	 * The amount by which to loosen or tighten a block of text, specified in thousands of an em.
 	 */
-	tracking: any;
+	tracking: number | NothingEnum;
 
 	/**
-	 * The amount of space after each character. Can return: Real or NothingEnum enumerator.
+	 * The amount of space after each character.
 	 */
-	trailingAki: any;
+	trailingAki: number | NothingEnum;
 
 	/**
-	 * The amount of horizontal character compression. Can return: Real or NothingEnum enumerator.
+	 * The amount of horizontal character compression.
 	 */
-	tsume: any;
+	tsume: number | NothingEnum;
 
 	/**
 	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
@@ -76444,14 +76444,14 @@ declare class CharacterStyle {
 	underlineGapOverprint: any;
 
 	/**
-	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid. Can return: Real or NothingEnum enumerator.
+	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
 	 */
-	underlineGapTint: any;
+	underlineGapTint: number | NothingEnum;
 
 	/**
-	 * The amount by which to offset the underline from the text baseline. Can return: Unit or NothingEnum enumerator.
+	 * The amount by which to offset the underline from the text baseline.
 	 */
-	underlineOffset: any;
+	underlineOffset: number | NothingEnum;
 
 	/**
 	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
@@ -76459,9 +76459,9 @@ declare class CharacterStyle {
 	underlineOverprint: any;
 
 	/**
-	 * The underline stroke tint (as a percentage). (Range: 0 to 100). Can return: Real or NothingEnum enumerator.
+	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
 	 */
-	underlineTint: any;
+	underlineTint: number | NothingEnum;
 
 	/**
 	 * The stroke type of the underline stroke. Can return: StrokeStyle, String or NothingEnum enumerator.
@@ -76469,14 +76469,14 @@ declare class CharacterStyle {
 	underlineType: any;
 
 	/**
-	 * The stroke weight of the underline stroke. Can return: Unit or NothingEnum enumerator.
+	 * The stroke weight of the underline stroke.
 	 */
-	underlineWeight: any;
+	underlineWeight: number | NothingEnum;
 
 	/**
-	 * The vertical scaling applied to the CharacterStyle. Can return: Real or NothingEnum enumerator.
+	 * The vertical scaling applied to the CharacterStyle.
 	 */
-	verticalScale: any;
+	verticalScale: number | NothingEnum;
 
 	/**
 	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
@@ -76499,9 +76499,9 @@ declare class CharacterStyle {
 	warichuCharsBeforeBreak: any;
 
 	/**
-	 * The gap between lines of warichu characters. Can return: Real or NothingEnum enumerator.
+	 * The gap between lines of warichu characters.
 	 */
-	warichuLineSpacing: any;
+	warichuLineSpacing: number | NothingEnum;
 
 	/**
 	 * The number of lines of warichu within a single normal line. Can return: Short Integer or NothingEnum enumerator.
@@ -76509,19 +76509,19 @@ declare class CharacterStyle {
 	warichuLines: any;
 
 	/**
-	 * The amount (as a percentage) to scale parent text size to determine warichu size. Can return: Real or NothingEnum enumerator.
+	 * The amount (as a percentage) to scale parent text size to determine warichu size.
 	 */
-	warichuSize: any;
+	warichuSize: number | NothingEnum;
 
 	/**
-	 * The x (horizontal) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The x (horizontal) offset for diacritic adjustment.
 	 */
-	xOffsetDiacritic: any;
+	xOffsetDiacritic: number | NothingEnum;
 
 	/**
-	 * The y (vertical) offset for diacritic adjustment. Can return: Real or NothingEnum enumerator.
+	 * The y (vertical) offset for diacritic adjustment.
 	 */
-	yOffsetDiacritic: any;
+	yOffsetDiacritic: number | NothingEnum;
 
 	/**
 	 * Adds an event listener.
