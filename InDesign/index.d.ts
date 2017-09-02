@@ -43623,9 +43623,9 @@ declare class PrintPreference extends Preference {
 	paperOffset: string | number;
 
 	/**
-	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
+	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
 	 */
-	paperSize: PaperSizes | String;
+	paperSize: any;
 
 	/**
 	 * A list of the available paper sizes.
@@ -43773,9 +43773,9 @@ declare class PrintPreference extends Preference {
 	scaleWidth: number;
 
 	/**
-	 * The ink screening settings for composite gray output in PostScript or PDF format. .
+	 * The ink screening settings for composite gray output in PostScript or PDF format. . Can return: Screeening enumerator or String.
 	 */
-	screening: Screeening | String;
+	screening: any;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -44150,9 +44150,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	paperOffset: string | number;
 
 	/**
-	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
+	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
 	 */
-	paperSize: PaperSizes | String;
+	paperSize: any;
 
 	/**
 	 * A list of the available paper sizes.
@@ -44290,9 +44290,9 @@ declare class PrintBookletPrintPreference extends Preference {
 	scaleWidth: number;
 
 	/**
-	 * The ink screening settings for composite gray output in PostScript or PDF format. .
+	 * The ink screening settings for composite gray output in PostScript or PDF format. . Can return: Screeening enumerator or String.
 	 */
-	screening: Screeening | String;
+	screening: any;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
@@ -54789,9 +54789,9 @@ declare class PrinterPreset {
 	paperOffset: string | number;
 
 	/**
-	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list.
+	 * The paper size, specified as either a string or an enumeration. For information on paper size names, see paper size list. Can return: PaperSizes enumerator or String.
 	 */
-	paperSize: PaperSizes | String;
+	paperSize: any;
 
 	/**
 	 * A list of the available paper sizes.
@@ -54939,9 +54939,9 @@ declare class PrinterPreset {
 	scaleWidth: number;
 
 	/**
-	 * The ink screening settings for composite gray output in PostScript or PDF format. .
+	 * The ink screening settings for composite gray output in PostScript or PDF format. . Can return: Screeening enumerator or String.
 	 */
-	screening: Screeening | String;
+	screening: any;
 
 	/**
 	 * Lists the ink screenings available in the PPD. Note: Valid only when color output is separations or in rip separations.
