@@ -940,7 +940,7 @@ interface StringConstructor {
 	 * Returns a string created by concatenation one or more characters specified as ASCII values.
 	 * @param value1 One or more ASCII values.
 	 */
-	fromCharCode(value1: number): String;
+	fromCharCode(value1: number): string;
 	
 }
 declare const String: StringConstructor;
