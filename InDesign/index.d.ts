@@ -5048,7 +5048,7 @@ declare class Window {
 	/**
 	 * The bounds of the window (specified in pixels) in the form [top, left, bottom, right].
 	 */
-	bounds: [number, number, number, number];
+	bounds: number[];
 
 	/**
 	 * A collection of event listeners.
@@ -39468,7 +39468,7 @@ declare class Library {
 	 * @param using The page item(s) to store.
 	 * @param withProperties Initial values for properties of the new Library 
 	 */
-	store(using: PageItem[] | Movies[] | Sounds[] | Graphics[] | XMLElements[], withProperties: Object): Asset;
+	store(using: PageItem[] | Movies | Sounds | Graphics | XMLElements, withProperties: Object): Asset;
 
 	/**
 	 * Generates a string which, if executed, will return the Library.
