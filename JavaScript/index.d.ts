@@ -305,6 +305,8 @@ declare const Array: ArrayConstructor;
  * An array with integer indexing and a length property.
  */
 interface Array<T> {
+	[n: number]: T;
+	
 	/**
 	 * The length of the array
 	 */
