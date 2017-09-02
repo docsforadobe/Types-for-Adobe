@@ -5264,9 +5264,9 @@ declare class LayoutWindow extends Window {
 	activePage: Page;
 
 	/**
-	 * The front-most spread. Can return: Spread or MasterSpread.
+	 * The front-most spread.
 	 */
-	activeSpread: any;
+	activeSpread: Spread | MasterSpread;
 
 	/**
 	 * If true, display a simulation of overprinting.
@@ -5756,9 +5756,9 @@ declare class Book {
 	smartMatchStyleGroups: SmartMatchOptions;
 
 	/**
-	 * Current style source document. Can return: Document or BookContent.
+	 * Current style source document.
 	 */
-	styleSourceDocument: any;
+	styleSourceDocument: Document | BookContent;
 
 	/**
 	 * If true, synchronize bullets and numbering.
@@ -41281,9 +41281,9 @@ declare class TextDefault extends Preference {
 	appliedNamedGrid: NamedGrid;
 
 	/**
-	 * The list to be part of. Can return: NumberingList or String.
+	 * The list to be part of.
 	 */
-	appliedNumberingList: any;
+	appliedNumberingList: NumberingList | String;
 
 	/**
 	 * The paragraph style applied to the text.
@@ -68969,9 +68969,9 @@ declare class Text {
 	readonly appliedNestedStyles: CharacterStyle[];
 
 	/**
-	 * The list to be part of. Can return: NumberingList or String.
+	 * The list to be part of.
 	 */
-	appliedNumberingList: any;
+	appliedNumberingList: NumberingList | String;
 
 	/**
 	 * The paragraph style applied to the text.
@@ -72090,9 +72090,9 @@ declare class Story {
 	readonly appliedNestedStyles: CharacterStyle[];
 
 	/**
-	 * The list to be part of. Can return: NumberingList or String.
+	 * The list to be part of.
 	 */
-	appliedNumberingList: any;
+	appliedNumberingList: NumberingList | String;
 
 	/**
 	 * The paragraph style applied to the text.
@@ -74090,9 +74090,9 @@ declare class ParagraphStyle {
 	appliedLanguage: any;
 
 	/**
-	 * The list to be part of. Can return: NumberingList or String.
+	 * The list to be part of.
 	 */
-	appliedNumberingList: any;
+	appliedNumberingList: NumberingList | String;
 
 	/**
 	 * The percent of the type size to use for auto leading. (Range: 0 to 500).
