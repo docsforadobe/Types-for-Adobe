@@ -1527,9 +1527,9 @@ declare class Application {
 	readonly activeScriptUndoMode: UndoModes;
 
 	/**
-	 * The front-most window. Can return: Window, LayoutWindow or StoryWindow.
+	 * The front-most window.
 	 */
-	activeWindow: any;
+	activeWindow: Window | LayoutWindow | StoryWindow;
 
 	/**
 	 * Preferences for alignment and distribution.
@@ -36933,9 +36933,9 @@ declare class Section {
 	pageNumberStart: number;
 
 	/**
-	 * The page number style. Can return: PageNumberStyle enumerator or String.
+	 * The page number style.
 	 */
-	pageNumberStyle: any;
+	pageNumberStyle: PageNumberStyle | String;
 
 	/**
 	 * The start page for the section.
@@ -41836,9 +41836,9 @@ declare class TextDefault extends Preference {
 	numberingExpression: string;
 
 	/**
-	 * Numbering format options. Can return: NumberingStyle enumerator or String.
+	 * Numbering format options.
 	 */
-	numberingFormat: any;
+	numberingFormat: NumberingStyle | String;
 
 	/**
 	 * The level of the paragraph.
@@ -55205,9 +55205,9 @@ declare class XMLImportPreference extends Preference {
 	repeatTextElements: boolean;
 
 	/**
-	 * The name of the XSLT file. Note: Valid when allow transform is true. Can return: File or XMLTransformFile enumerator.
+	 * The name of the XSLT file. Note: Valid when allow transform is true.
 	 */
-	transformFilename: any;
+	transformFilename: File | XMLTransformFile;
 
 	/**
 	 * Stylesheet parameters as a list of name/value pairs in the format [[name, value], [name, value], ...]. Can return: Ordered array containing name:String, value:String.
@@ -55301,9 +55301,9 @@ declare class XMLExportPreference extends Preference {
 	ruby: boolean;
 
 	/**
-	 * The name of the XSLT file. Note: Valid when allow transform is true. Can return: File or XMLTransformFile enumerator.
+	 * The name of the XSLT file. Note: Valid when allow transform is true.
 	 */
-	transformFilename: any;
+	transformFilename: File | XMLTransformFile;
 
 	/**
 	 * If true, displays exported XML content in a specified viewer.
@@ -59143,9 +59143,9 @@ declare class ChapterNumberPreference extends Preference {
 	chapterNumber: number;
 
 	/**
-	 * Chapter number formatting options. Can return: NumberingStyle enumerator or String.
+	 * Chapter number formatting options.
 	 */
-	chapterNumberFormat: any;
+	chapterNumberFormat: NumberingStyle | String;
 
 	/**
 	 * Source for generating the chapter number.
@@ -69669,9 +69669,9 @@ declare class Text {
 	numberingExpression: string;
 
 	/**
-	 * Numbering format options. Can return: NumberingStyle enumerator or String.
+	 * Numbering format options.
 	 */
-	numberingFormat: any;
+	numberingFormat: NumberingStyle | String;
 
 	/**
 	 * The level of the paragraph.
@@ -72815,9 +72815,9 @@ declare class Story {
 	numberingExpression: string;
 
 	/**
-	 * Numbering format options. Can return: NumberingStyle enumerator or String.
+	 * Numbering format options.
 	 */
-	numberingFormat: any;
+	numberingFormat: NumberingStyle | String;
 
 	/**
 	 * The level of the paragraph.
@@ -74695,9 +74695,9 @@ declare class ParagraphStyle {
 	numberingExpression: string;
 
 	/**
-	 * Numbering format options. Can return: NumberingStyle enumerator or String.
+	 * Numbering format options.
 	 */
-	numberingFormat: any;
+	numberingFormat: NumberingStyle | String;
 
 	/**
 	 * The level of the paragraph.
@@ -81751,9 +81751,9 @@ declare class IndexingSortOptions {
  */
 declare class Bullet extends Preference {
 	/**
-	 * Font of the bullet character. Can return: Font, String or AutoEnum enumerator.
+	 * Font of the bullet character.
 	 */
-	bulletsFont: any;
+	bulletsFont: Font | String | AutoEnum;
 
 	/**
 	 * Font style of the bullet character. Can return: String, NothingEnum enumerator or AutoEnum enumerator.
