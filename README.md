@@ -8,7 +8,7 @@ mkdir test
 cd test
 npm init -y
 npm i pravdomil/types-for-adobe
-printf '{"compilerOptions":{"module":"none","noLib":true,"types":["types-for-adobe/illustrator"]},"exclude":["node_modules"]}' > tsconfig.json
+printf '{"compilerOptions":{"module":"none","noLib":true,"types":["types-for-adobe/illustrator/2015.3"]},"exclude":["node_modules"]}' > tsconfig.json
 printf 'alert(app)' > index.ts
 tsc -p .
 # open index.ts your favourite TypeScript editor and start scripting
