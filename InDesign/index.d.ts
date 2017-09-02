@@ -41636,9 +41636,9 @@ declare class TextDefault extends Preference {
 	kentenFontSize: number;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -42126,9 +42126,9 @@ declare class TextDefault extends Preference {
 	rubyFontSize: number;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -47142,9 +47142,9 @@ declare class FindChangeTransliterateOption extends Preference {
  */
 declare class FindTextPreference extends Preference {
 	/**
-	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character. Can return: Boolean or NothingEnum enumerator.
+	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: any;
+	allowArbitraryHyphenation: Boolean | NothingEnum;
 
 	/**
 	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
@@ -47187,9 +47187,9 @@ declare class FindTextPreference extends Preference {
 	autoTcy: any;
 
 	/**
-	 * If true, auto tcy includes Roman characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: any;
+	autoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean, BalanceLinesStyle enumerator or NothingEnum enumerator.
@@ -47202,9 +47202,9 @@ declare class FindTextPreference extends Preference {
 	baselineShift: number | NothingEnum;
 
 	/**
-	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
+	 * Bullet character.
 	 */
-	readonly bulletChar: any;
+	readonly bulletChar: Bullet | NothingEnum;
 
 	/**
 	 * List type for bullets and numbering. Can return: ListType enumerator or NothingEnum enumerator.
@@ -47217,14 +47217,14 @@ declare class FindTextPreference extends Preference {
 	bulletsCharacterStyle: any;
 
 	/**
-	 * The text after string expression for bullets. Can return: String or NothingEnum enumerator.
+	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: any;
+	bulletsTextAfter: String | NothingEnum;
 
 	/**
-	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: any;
+	bunriKinshi: Boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.
@@ -47247,14 +47247,14 @@ declare class FindTextPreference extends Preference {
 	characterRotation: number | NothingEnum;
 
 	/**
-	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: any;
+	cjkGridTracking: Boolean | NothingEnum;
 
 	/**
-	 * The text composer to use to compose the text. Can return: String or NothingEnum enumerator.
+	 * The text composer to use to compose the text.
 	 */
-	composer: any;
+	composer: String | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters. Can return: DiacriticPositionOptions enumerator or NothingEnum enumerator.
@@ -47297,9 +47297,9 @@ declare class FindTextPreference extends Preference {
 	fillTint: number | NothingEnum;
 
 	/**
-	 * The FindTextPreference to find. Can return: String or NothingEnum enumerator.
+	 * The FindTextPreference to find.
 	 */
-	findWhat: any;
+	findWhat: String | NothingEnum;
 
 	/**
 	 * The amount to indent the first line.
@@ -47307,9 +47307,9 @@ declare class FindTextPreference extends Preference {
 	firstLineIndent: number | NothingEnum;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.
@@ -47362,19 +47362,19 @@ declare class FindTextPreference extends Preference {
 	horizontalScale: number | NothingEnum;
 
 	/**
-	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: any;
+	hyphenateAcrossColumns: Boolean | NothingEnum;
 
 	/**
-	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: any;
+	hyphenateLastWord: Boolean | NothingEnum;
 
 	/**
-	 * If true, ignores optical edge alignment for the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: any;
+	ignoreEdgeAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. . Can return: Short Integer or NothingEnum enumerator.
@@ -47392,9 +47392,9 @@ declare class FindTextPreference extends Preference {
 	kashidas: any;
 
 	/**
-	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: any;
+	keepAllLinesTogether: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.
@@ -47407,14 +47407,14 @@ declare class FindTextPreference extends Preference {
 	keepLastLines: any;
 
 	/**
-	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: any;
+	keepLinesTogether: Boolean | NothingEnum;
 
 	/**
-	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: any;
+	keepRuleAboveInFrame: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph. Can return: Short Integer (0 - 5) or NothingEnum enumerator.
@@ -47422,9 +47422,9 @@ declare class FindTextPreference extends Preference {
 	keepWithNext: any;
 
 	/**
-	 * If the first line in the paragraph should be kept with the last line of previous paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: any;
+	keepWithPrevious: Boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. . Can return: KentenAlignment enumerator or NothingEnum enumerator.
@@ -47437,9 +47437,9 @@ declare class FindTextPreference extends Preference {
 	kentenCharacterSet: any;
 
 	/**
-	 * The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.
+	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: any;
+	kentenCustomCharacter: String | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -47457,9 +47457,9 @@ declare class FindTextPreference extends Preference {
 	kentenFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.
@@ -47517,9 +47517,9 @@ declare class FindTextPreference extends Preference {
 	kentenYScale: number | NothingEnum;
 
 	/**
-	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
+	 * The type of pair kerning.
 	 */
-	kerningMethod: any;
+	kerningMethod: String | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -47572,9 +47572,9 @@ declare class FindTextPreference extends Preference {
 	leftIndent: number | NothingEnum;
 
 	/**
-	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: any;
+	ligatures: Boolean | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. Can return: Real (0 - 1000) or NothingEnum enumerator.
@@ -47587,14 +47587,14 @@ declare class FindTextPreference extends Preference {
 	mojikumi: any;
 
 	/**
-	 * If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: any;
+	noBreak: Boolean | NothingEnum;
 
 	/**
-	 * If true, apply the numbering restart policy. Can return: Boolean or NothingEnum enumerator.
+	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: any;
+	numberingApplyRestartPolicy: Boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string. Can return: CharacterStyle, String or NothingEnum enumerator.
@@ -47602,14 +47602,14 @@ declare class FindTextPreference extends Preference {
 	numberingCharacterStyle: any;
 
 	/**
-	 * Continue the numbering at this level. Can return: Boolean or NothingEnum enumerator.
+	 * Continue the numbering at this level.
 	 */
-	numberingContinue: any;
+	numberingContinue: Boolean | NothingEnum;
 
 	/**
-	 * The number string expression for numbering. Can return: String or NothingEnum enumerator.
+	 * The number string expression for numbering.
 	 */
-	numberingExpression: any;
+	numberingExpression: String | NothingEnum;
 
 	/**
 	 * Numbering format options. Can return: NumberingStyle enumerator, String or NothingEnum enumerator.
@@ -47632,14 +47632,14 @@ declare class FindTextPreference extends Preference {
 	numberingStartAt: any;
 
 	/**
-	 * If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: any;
+	otfContextualAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: any;
+	otfDiscretionaryLigature: Boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.
@@ -47647,69 +47647,69 @@ declare class FindTextPreference extends Preference {
 	otfFigureStyle: any;
 
 	/**
-	 * If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: any;
+	otfFraction: Boolean | NothingEnum;
 
 	/**
-	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: any;
+	otfHVKana: Boolean | NothingEnum;
 
 	/**
-	 * If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: any;
+	otfHistorical: Boolean | NothingEnum;
 
 	/**
-	 * If true, use alternate justification forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: any;
+	otfJustificationAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: any;
+	otfLocale: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: any;
+	otfMark: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: any;
+	otfOrdinal: Boolean | NothingEnum;
 
 	/**
-	 * If true, use overlapping swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: any;
+	otfOverlapSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: any;
+	otfProportionalMetrics: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: any;
+	otfRomanItalics: Boolean | NothingEnum;
 
 	/**
-	 * If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: any;
+	otfSlashedZero: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stretched alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: any;
+	otfStretchedAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stylistic alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: any;
+	otfStylisticAlternate: Boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.
@@ -47717,24 +47717,24 @@ declare class FindTextPreference extends Preference {
 	otfStylisticSets: any;
 
 	/**
-	 * If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: any;
+	otfSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: any;
+	otfTitling: Boolean | NothingEnum;
 
 	/**
-	 * If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction. Can return: ParagraphDirectionOptions enumerator or NothingEnum enumerator.
@@ -47742,9 +47742,9 @@ declare class FindTextPreference extends Preference {
 	paragraphDirection: any;
 
 	/**
-	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: any;
+	paragraphGyoudori: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification. Can return: ParagraphJustificationOptions enumerator or NothingEnum enumerator.
@@ -47777,9 +47777,9 @@ declare class FindTextPreference extends Preference {
 	readonly preferences: Preferences;
 
 	/**
-	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers. Can return: Boolean or NothingEnum enumerator.
+	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: any;
+	rensuuji: Boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -47787,9 +47787,9 @@ declare class FindTextPreference extends Preference {
 	rightIndent: number | NothingEnum;
 
 	/**
-	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: any;
+	rotateSingleByteCharacters: Boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment. Can return: RubyAlignments enumerator or NothingEnum enumerator.
@@ -47797,19 +47797,19 @@ declare class FindTextPreference extends Preference {
 	rubyAlignment: any;
 
 	/**
-	 * If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: any;
+	rubyAutoAlign: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: any;
+	rubyAutoScaling: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: any;
+	rubyAutoTcyAutoScale: Boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.
@@ -47817,9 +47817,9 @@ declare class FindTextPreference extends Preference {
 	rubyAutoTcyDigits: any;
 
 	/**
-	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: any;
+	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -47837,19 +47837,19 @@ declare class FindTextPreference extends Preference {
 	rubyFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
-	 * If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: any;
+	rubyOpenTypePro: Boolean | NothingEnum;
 
 	/**
-	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: any;
+	rubyOverhang: Boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.
@@ -47927,19 +47927,19 @@ declare class FindTextPreference extends Preference {
 	rubyYScale: number | NothingEnum;
 
 	/**
-	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: any;
+	scaleAffectsLineHeight: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: any;
+	shataiAdjustRotation: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: any;
+	shataiAdjustTsume: Boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -48017,9 +48017,9 @@ declare class FindTextPreference extends Preference {
 	strikeThroughGapColor: any;
 
 	/**
-	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: any;
+	strikeThroughGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -48032,9 +48032,9 @@ declare class FindTextPreference extends Preference {
 	strikeThroughOffset: number | NothingEnum;
 
 	/**
-	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: any;
+	strikeThroughOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -48052,9 +48052,9 @@ declare class FindTextPreference extends Preference {
 	strikeThroughWeight: number | NothingEnum;
 
 	/**
-	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: any;
+	strikeThru: Boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text. Can return: TextStrokeAlign enumerator or NothingEnum enumerator.
@@ -48077,9 +48077,9 @@ declare class FindTextPreference extends Preference {
 	strokeWeight: number | NothingEnum;
 
 	/**
-	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: any;
+	tatechuyoko: Boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -48102,9 +48102,9 @@ declare class FindTextPreference extends Preference {
 	trailingAki: number | NothingEnum;
 
 	/**
-	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: any;
+	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -48112,9 +48112,9 @@ declare class FindTextPreference extends Preference {
 	tsume: number | NothingEnum;
 
 	/**
-	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, underlines the text.
 	 */
-	underline: any;
+	underline: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.
@@ -48127,9 +48127,9 @@ declare class FindTextPreference extends Preference {
 	underlineGapColor: any;
 
 	/**
-	 * If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: any;
+	underlineGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -48142,9 +48142,9 @@ declare class FindTextPreference extends Preference {
 	underlineOffset: number | NothingEnum;
 
 	/**
-	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: any;
+	underlineOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -48167,9 +48167,9 @@ declare class FindTextPreference extends Preference {
 	verticalScale: number | NothingEnum;
 
 	/**
-	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
+	 * If true, turns on warichu.
 	 */
-	warichu: any;
+	warichu: Boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.
@@ -48218,9 +48218,9 @@ declare class FindTextPreference extends Preference {
  */
 declare class FindGrepPreference extends Preference {
 	/**
-	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character. Can return: Boolean or NothingEnum enumerator.
+	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: any;
+	allowArbitraryHyphenation: Boolean | NothingEnum;
 
 	/**
 	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
@@ -48263,9 +48263,9 @@ declare class FindGrepPreference extends Preference {
 	autoTcy: any;
 
 	/**
-	 * If true, auto tcy includes Roman characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: any;
+	autoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean, BalanceLinesStyle enumerator or NothingEnum enumerator.
@@ -48278,9 +48278,9 @@ declare class FindGrepPreference extends Preference {
 	baselineShift: number | NothingEnum;
 
 	/**
-	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
+	 * Bullet character.
 	 */
-	readonly bulletChar: any;
+	readonly bulletChar: Bullet | NothingEnum;
 
 	/**
 	 * List type for bullets and numbering. Can return: ListType enumerator or NothingEnum enumerator.
@@ -48293,14 +48293,14 @@ declare class FindGrepPreference extends Preference {
 	bulletsCharacterStyle: any;
 
 	/**
-	 * The text after string expression for bullets. Can return: String or NothingEnum enumerator.
+	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: any;
+	bulletsTextAfter: String | NothingEnum;
 
 	/**
-	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: any;
+	bunriKinshi: Boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.
@@ -48323,14 +48323,14 @@ declare class FindGrepPreference extends Preference {
 	characterRotation: number | NothingEnum;
 
 	/**
-	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: any;
+	cjkGridTracking: Boolean | NothingEnum;
 
 	/**
-	 * The text composer to use to compose the text. Can return: String or NothingEnum enumerator.
+	 * The text composer to use to compose the text.
 	 */
-	composer: any;
+	composer: String | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters. Can return: DiacriticPositionOptions enumerator or NothingEnum enumerator.
@@ -48373,9 +48373,9 @@ declare class FindGrepPreference extends Preference {
 	fillTint: number | NothingEnum;
 
 	/**
-	 * The FindGrepPreference to find. Can return: String or NothingEnum enumerator.
+	 * The FindGrepPreference to find.
 	 */
-	findWhat: any;
+	findWhat: String | NothingEnum;
 
 	/**
 	 * The amount to indent the first line.
@@ -48383,9 +48383,9 @@ declare class FindGrepPreference extends Preference {
 	firstLineIndent: number | NothingEnum;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.
@@ -48438,19 +48438,19 @@ declare class FindGrepPreference extends Preference {
 	horizontalScale: number | NothingEnum;
 
 	/**
-	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: any;
+	hyphenateAcrossColumns: Boolean | NothingEnum;
 
 	/**
-	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: any;
+	hyphenateLastWord: Boolean | NothingEnum;
 
 	/**
-	 * If true, ignores optical edge alignment for the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: any;
+	ignoreEdgeAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. . Can return: Short Integer or NothingEnum enumerator.
@@ -48468,9 +48468,9 @@ declare class FindGrepPreference extends Preference {
 	kashidas: any;
 
 	/**
-	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: any;
+	keepAllLinesTogether: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.
@@ -48483,14 +48483,14 @@ declare class FindGrepPreference extends Preference {
 	keepLastLines: any;
 
 	/**
-	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: any;
+	keepLinesTogether: Boolean | NothingEnum;
 
 	/**
-	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: any;
+	keepRuleAboveInFrame: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph. Can return: Short Integer (0 - 5) or NothingEnum enumerator.
@@ -48498,9 +48498,9 @@ declare class FindGrepPreference extends Preference {
 	keepWithNext: any;
 
 	/**
-	 * If the first line in the paragraph should be kept with the last line of previous paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: any;
+	keepWithPrevious: Boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. . Can return: KentenAlignment enumerator or NothingEnum enumerator.
@@ -48513,9 +48513,9 @@ declare class FindGrepPreference extends Preference {
 	kentenCharacterSet: any;
 
 	/**
-	 * The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.
+	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: any;
+	kentenCustomCharacter: String | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -48533,9 +48533,9 @@ declare class FindGrepPreference extends Preference {
 	kentenFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.
@@ -48593,9 +48593,9 @@ declare class FindGrepPreference extends Preference {
 	kentenYScale: number | NothingEnum;
 
 	/**
-	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
+	 * The type of pair kerning.
 	 */
-	kerningMethod: any;
+	kerningMethod: String | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -48648,9 +48648,9 @@ declare class FindGrepPreference extends Preference {
 	leftIndent: number | NothingEnum;
 
 	/**
-	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: any;
+	ligatures: Boolean | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. Can return: Real (0 - 1000) or NothingEnum enumerator.
@@ -48663,14 +48663,14 @@ declare class FindGrepPreference extends Preference {
 	mojikumi: any;
 
 	/**
-	 * If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: any;
+	noBreak: Boolean | NothingEnum;
 
 	/**
-	 * If true, apply the numbering restart policy. Can return: Boolean or NothingEnum enumerator.
+	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: any;
+	numberingApplyRestartPolicy: Boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string. Can return: CharacterStyle, String or NothingEnum enumerator.
@@ -48678,14 +48678,14 @@ declare class FindGrepPreference extends Preference {
 	numberingCharacterStyle: any;
 
 	/**
-	 * Continue the numbering at this level. Can return: Boolean or NothingEnum enumerator.
+	 * Continue the numbering at this level.
 	 */
-	numberingContinue: any;
+	numberingContinue: Boolean | NothingEnum;
 
 	/**
-	 * The number string expression for numbering. Can return: String or NothingEnum enumerator.
+	 * The number string expression for numbering.
 	 */
-	numberingExpression: any;
+	numberingExpression: String | NothingEnum;
 
 	/**
 	 * Numbering format options. Can return: NumberingStyle enumerator, String or NothingEnum enumerator.
@@ -48708,14 +48708,14 @@ declare class FindGrepPreference extends Preference {
 	numberingStartAt: any;
 
 	/**
-	 * If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: any;
+	otfContextualAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: any;
+	otfDiscretionaryLigature: Boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.
@@ -48723,69 +48723,69 @@ declare class FindGrepPreference extends Preference {
 	otfFigureStyle: any;
 
 	/**
-	 * If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: any;
+	otfFraction: Boolean | NothingEnum;
 
 	/**
-	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: any;
+	otfHVKana: Boolean | NothingEnum;
 
 	/**
-	 * If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: any;
+	otfHistorical: Boolean | NothingEnum;
 
 	/**
-	 * If true, use alternate justification forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: any;
+	otfJustificationAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: any;
+	otfLocale: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: any;
+	otfMark: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: any;
+	otfOrdinal: Boolean | NothingEnum;
 
 	/**
-	 * If true, use overlapping swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: any;
+	otfOverlapSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: any;
+	otfProportionalMetrics: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: any;
+	otfRomanItalics: Boolean | NothingEnum;
 
 	/**
-	 * If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: any;
+	otfSlashedZero: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stretched alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: any;
+	otfStretchedAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stylistic alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: any;
+	otfStylisticAlternate: Boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.
@@ -48793,24 +48793,24 @@ declare class FindGrepPreference extends Preference {
 	otfStylisticSets: any;
 
 	/**
-	 * If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: any;
+	otfSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: any;
+	otfTitling: Boolean | NothingEnum;
 
 	/**
-	 * If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction. Can return: ParagraphDirectionOptions enumerator or NothingEnum enumerator.
@@ -48818,9 +48818,9 @@ declare class FindGrepPreference extends Preference {
 	paragraphDirection: any;
 
 	/**
-	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: any;
+	paragraphGyoudori: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification. Can return: ParagraphJustificationOptions enumerator or NothingEnum enumerator.
@@ -48853,9 +48853,9 @@ declare class FindGrepPreference extends Preference {
 	readonly preferences: Preferences;
 
 	/**
-	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers. Can return: Boolean or NothingEnum enumerator.
+	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: any;
+	rensuuji: Boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -48863,9 +48863,9 @@ declare class FindGrepPreference extends Preference {
 	rightIndent: number | NothingEnum;
 
 	/**
-	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: any;
+	rotateSingleByteCharacters: Boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment. Can return: RubyAlignments enumerator or NothingEnum enumerator.
@@ -48873,19 +48873,19 @@ declare class FindGrepPreference extends Preference {
 	rubyAlignment: any;
 
 	/**
-	 * If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: any;
+	rubyAutoAlign: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: any;
+	rubyAutoScaling: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: any;
+	rubyAutoTcyAutoScale: Boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.
@@ -48893,9 +48893,9 @@ declare class FindGrepPreference extends Preference {
 	rubyAutoTcyDigits: any;
 
 	/**
-	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: any;
+	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -48913,19 +48913,19 @@ declare class FindGrepPreference extends Preference {
 	rubyFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
-	 * If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: any;
+	rubyOpenTypePro: Boolean | NothingEnum;
 
 	/**
-	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: any;
+	rubyOverhang: Boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.
@@ -49003,19 +49003,19 @@ declare class FindGrepPreference extends Preference {
 	rubyYScale: number | NothingEnum;
 
 	/**
-	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: any;
+	scaleAffectsLineHeight: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: any;
+	shataiAdjustRotation: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: any;
+	shataiAdjustTsume: Boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -49093,9 +49093,9 @@ declare class FindGrepPreference extends Preference {
 	strikeThroughGapColor: any;
 
 	/**
-	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: any;
+	strikeThroughGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -49108,9 +49108,9 @@ declare class FindGrepPreference extends Preference {
 	strikeThroughOffset: number | NothingEnum;
 
 	/**
-	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: any;
+	strikeThroughOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -49128,9 +49128,9 @@ declare class FindGrepPreference extends Preference {
 	strikeThroughWeight: number | NothingEnum;
 
 	/**
-	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: any;
+	strikeThru: Boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text. Can return: TextStrokeAlign enumerator or NothingEnum enumerator.
@@ -49153,9 +49153,9 @@ declare class FindGrepPreference extends Preference {
 	strokeWeight: number | NothingEnum;
 
 	/**
-	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: any;
+	tatechuyoko: Boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -49178,9 +49178,9 @@ declare class FindGrepPreference extends Preference {
 	trailingAki: number | NothingEnum;
 
 	/**
-	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: any;
+	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -49188,9 +49188,9 @@ declare class FindGrepPreference extends Preference {
 	tsume: number | NothingEnum;
 
 	/**
-	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, underlines the text.
 	 */
-	underline: any;
+	underline: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.
@@ -49203,9 +49203,9 @@ declare class FindGrepPreference extends Preference {
 	underlineGapColor: any;
 
 	/**
-	 * If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: any;
+	underlineGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -49218,9 +49218,9 @@ declare class FindGrepPreference extends Preference {
 	underlineOffset: number | NothingEnum;
 
 	/**
-	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: any;
+	underlineOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -49243,9 +49243,9 @@ declare class FindGrepPreference extends Preference {
 	verticalScale: number | NothingEnum;
 
 	/**
-	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
+	 * If true, turns on warichu.
 	 */
-	warichu: any;
+	warichu: Boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.
@@ -49299,9 +49299,9 @@ declare class FindGlyphPreference extends Preference {
 	appliedFont: any;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The GID/CID of the glyph. Can return: Long Integer or NothingEnum enumerator.
@@ -49375,9 +49375,9 @@ declare class FindObjectPreference extends Preference {
 	applyTagType: any;
 
 	/**
-	 * If true, text wraps on the master spread apply to that spread only, and not to any pages the master spread has been applied to. Can return: Boolean or NothingEnum enumerator.
+	 * If true, text wraps on the master spread apply to that spread only, and not to any pages the master spread has been applied to.
 	 */
-	applyToMasterPageOnly: any;
+	applyToMasterPageOnly: Boolean | NothingEnum;
 
 	/**
 	 * The reference point for auto sizing of text frame. Reference point is automatically adjusted to the suitable value depending on the auto-sizing type value. As an example, top left reference point becomes top center for height only dimension. Can return: AutoSizingReferenceEnum enumerator or NothingEnum enumerator.
@@ -49440,14 +49440,14 @@ declare class FindObjectPreference extends Preference {
 	contourType: any;
 
 	/**
-	 * The custom actual text entered by the user. Can return: String or NothingEnum enumerator.
+	 * The custom actual text entered by the user.
 	 */
-	customActualText: any;
+	customActualText: String | NothingEnum;
 
 	/**
-	 * The custom alternate text entered by the user. Can return: String or NothingEnum enumerator.
+	 * The custom alternate text entered by the user.
 	 */
-	customAltText: any;
+	customAltText: String | NothingEnum;
 
 	/**
 	 * The end shape of an open path. Can return: EndCap enumerator or NothingEnum enumerator.
@@ -49490,9 +49490,9 @@ declare class FindObjectPreference extends Preference {
 	fittingOnEmptyFrame: any;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of a dashed, dotted, or striped stroke. For information, see stroke type. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of a dashed, dotted, or striped stroke. For information, see stroke type.
 	 */
-	gapColor: any;
+	gapColor: Swatch | NothingEnum;
 
 	/**
 	 * The tint as a percentage of the gap color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -49500,9 +49500,9 @@ declare class FindObjectPreference extends Preference {
 	gapTint: number | NothingEnum;
 
 	/**
-	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG. Can return: Boolean or NothingEnum enumerator.
+	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG.
 	 */
-	gifOptionsInterlaced: any;
+	gifOptionsInterlaced: Boolean | NothingEnum;
 
 	/**
 	 * The color palette for GIF conversion. Note: Not valid when image conversion is JPEG. . Can return: GIFOptionsPalette enumerator or NothingEnum enumerator.
@@ -49525,9 +49525,9 @@ declare class FindObjectPreference extends Preference {
 	horizontalReferencePoint: any;
 
 	/**
-	 * If true, ignores text wrap settings for drawn or placed objects in the text frame. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores text wrap settings for drawn or placed objects in the text frame. .
 	 */
-	ignoreWrap: any;
+	ignoreWrap: Boolean | NothingEnum;
 
 	/**
 	 * Alignment applied to images. Can return: ImageAlignmentType enumerator or NothingEnum enumerator.
@@ -49560,9 +49560,9 @@ declare class FindObjectPreference extends Preference {
 	imageSpaceBefore: any;
 
 	/**
-	 * If true, creates interior clipping paths within the surrounding clipping path. Note: Valid only when clipping type is alpha channel or detect edges. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, creates interior clipping paths within the surrounding clipping path. Note: Valid only when clipping type is alpha channel or detect edges. .
 	 */
-	includeInsideEdges: any;
+	includeInsideEdges: Boolean | NothingEnum;
 
 	/**
 	 * The amount to offset text from the edges of the text frame, specified either as a single value applied uniformly to all sides of the text frame or as an array of 4 values in the format [top inset, left inset, bottom inset, right inset]. Can return: Unit (0 - 8640 points), Array of 4 Units (0 - 8640 points) or NothingEnum enumerator.
@@ -49570,9 +49570,9 @@ declare class FindObjectPreference extends Preference {
 	insetSpacing: any;
 
 	/**
-	 * If true, inverts the text wrap. Can return: Boolean or NothingEnum enumerator.
+	 * If true, inverts the text wrap.
 	 */
-	inverse: any;
+	inverse: Boolean | NothingEnum;
 
 	/**
 	 * The formatting method for converted JPEG images. Note: Not validwhen image conversion is GIF. Can return: JPEGOptionsFormat enumerator or NothingEnum enumerator.
@@ -49595,9 +49595,9 @@ declare class FindObjectPreference extends Preference {
 	leftLineEnd: any;
 
 	/**
-	 * If true, prevents manual positioning of the anchored object. Can return: Boolean or NothingEnum enumerator.
+	 * If true, prevents manual positioning of the anchored object.
 	 */
-	lockPosition: any;
+	lockPosition: Boolean | NothingEnum;
 
 	/**
 	 * The minimum distance between the baseline of the text and the top inset of the text frame or cell. Can return: Unit (0 - 8640 points) or NothingEnum enumerator.
@@ -49620,14 +49620,14 @@ declare class FindObjectPreference extends Preference {
 	miterLimit: any;
 
 	/**
-	 * If true, the FindObjectPreference does not print. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the FindObjectPreference does not print.
 	 */
-	nonprinting: any;
+	nonprinting: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjust the position of characters at the edges of the frame to provide a better appearance. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjust the position of characters at the edges of the frame to provide a better appearance.
 	 */
-	opticalMarginAlignment: any;
+	opticalMarginAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The point size used as the basis for calculating optical margin alignment. (Range: 0.1 to 1296). Can return: Unit (0.1 - 1296 points) or NothingEnum enumerator.
@@ -49635,24 +49635,24 @@ declare class FindObjectPreference extends Preference {
 	opticalMarginSize: any;
 
 	/**
-	 * If true, the FindObjectPreference's fill color overprints any underlying objects. If false, the fill color knocks out the underlying colors. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the FindObjectPreference's fill color overprints any underlying objects. If false, the fill color knocks out the underlying colors.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the gap color overprints any underlying colors. If false, the gap color knocks out the underlying colors. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color overprints any underlying colors. If false, the gap color knocks out the underlying colors.
 	 */
-	overprintGap: any;
+	overprintGap: Boolean | NothingEnum;
 
 	/**
-	 * If true, the FindObjectPreference's stroke color overprints any underlying objects. If false, the stroke color knocks out theunderlying colors. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the FindObjectPreference's stroke color overprints any underlying objects. If false, the stroke color knocks out theunderlying colors.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
-	 * If true, pins the position of the anchored object within the text frame top and bottom. Can return: Boolean or NothingEnum enumerator.
+	 * If true, pins the position of the anchored object within the text frame top and bottom.
 	 */
-	pinPosition: any;
+	pinPosition: Boolean | NothingEnum;
 
 	/**
 	 * The point in the referenced object relative to which to position the anchored object. Notes: Valid only when anchored position is custom. Can return: AnchorPoint enumerator or NothingEnum enumerator.
@@ -49680,9 +49680,9 @@ declare class FindObjectPreference extends Preference {
 	rightLineEnd: any;
 
 	/**
-	 * If true, the position of the anchored object is relative to the binding spine of the page or spread. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the position of the anchored object is relative to the binding spine of the page or spread.
 	 */
-	spineRelative: any;
+	spineRelative: Boolean | NothingEnum;
 
 	/**
 	 * The amount to offset the baseline grid. Can return: Unit (0 - 8640 points) or NothingEnum enumerator.
@@ -49795,39 +49795,39 @@ declare class FindObjectPreference extends Preference {
 	readonly transparencySettings: any;
 
 	/**
-	 * If true, uses a custom baseline frame grid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses a custom baseline frame grid.
 	 */
-	useCustomBaselineFrameGrid: any;
+	useCustomBaselineFrameGrid: Boolean | NothingEnum;
 
 	/**
-	 * If true, maintains column width when the text frame is resized. If false, causes columns to resize when the text frame is resized. Note: When true, resizing the frame can change the number of columns in the frame. Can return: Boolean or NothingEnum enumerator.
+	 * If true, maintains column width when the text frame is resized. If false, causes columns to resize when the text frame is resized. Note: When true, resizing the frame can change the number of columns in the frame.
 	 */
-	useFixedColumnWidth: any;
+	useFixedColumnWidth: Boolean | NothingEnum;
 
 	/**
-	 * If true, image page break settings will be used in objects. Can return: Boolean or NothingEnum enumerator.
+	 * If true, image page break settings will be used in objects.
 	 */
-	useImagePageBreak: any;
+	useImagePageBreak: Boolean | NothingEnum;
 
 	/**
-	 * If true, minimum height value is used during the auto-sizing of text frame. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, minimum height value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumHeightForAutoSizing: any;
+	useMinimumHeightForAutoSizing: Boolean | NothingEnum;
 
 	/**
-	 * If true, minimum width value is used during the auto-sizing of text frame. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, minimum width value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumWidthForAutoSizing: any;
+	useMinimumWidthForAutoSizing: Boolean | NothingEnum;
 
 	/**
-	 * If true, line-breaks are not introduced after auto sizing. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, line-breaks are not introduced after auto sizing. .
 	 */
-	useNoLineBreaksForAutoSizing: any;
+	useNoLineBreaksForAutoSizing: Boolean | NothingEnum;
 
 	/**
-	 * If true, the text wrap path has been explicitly modified by the user. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the text wrap path has been explicitly modified by the user.
 	 */
-	readonly userModifiedWrap: any;
+	readonly userModifiedWrap: Boolean | NothingEnum;
 
 	/**
 	 * The vertical alignment of the text content. . Can return: VerticalJustification enumerator or NothingEnum enumerator.
@@ -49861,9 +49861,9 @@ declare class FindObjectPreference extends Preference {
  */
 declare class FindTransliteratePreference extends Preference {
 	/**
-	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character. Can return: Boolean or NothingEnum enumerator.
+	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: any;
+	allowArbitraryHyphenation: Boolean | NothingEnum;
 
 	/**
 	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
@@ -49901,9 +49901,9 @@ declare class FindTransliteratePreference extends Preference {
 	autoTcy: any;
 
 	/**
-	 * If true, auto tcy includes Roman characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: any;
+	autoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean, BalanceLinesStyle enumerator or NothingEnum enumerator.
@@ -49916,9 +49916,9 @@ declare class FindTransliteratePreference extends Preference {
 	baselineShift: number | NothingEnum;
 
 	/**
-	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
+	 * Bullet character.
 	 */
-	readonly bulletChar: any;
+	readonly bulletChar: Bullet | NothingEnum;
 
 	/**
 	 * The alignment of the bullet character. Can return: ListAlignment enumerator or NothingEnum enumerator.
@@ -49936,14 +49936,14 @@ declare class FindTransliteratePreference extends Preference {
 	bulletsCharacterStyle: any;
 
 	/**
-	 * The text after string expression for bullets. Can return: String or NothingEnum enumerator.
+	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: any;
+	bulletsTextAfter: String | NothingEnum;
 
 	/**
-	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: any;
+	bunriKinshi: Boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.
@@ -49961,14 +49961,14 @@ declare class FindTransliteratePreference extends Preference {
 	characterRotation: number | NothingEnum;
 
 	/**
-	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: any;
+	cjkGridTracking: Boolean | NothingEnum;
 
 	/**
-	 * The text composer to use to compose the text. Can return: String or NothingEnum enumerator.
+	 * The text composer to use to compose the text.
 	 */
-	composer: any;
+	composer: String | NothingEnum;
 
 	/**
 	 * The number of characters to drop cap. Can return: Short Integer (0 - 150) or NothingEnum enumerator.
@@ -50006,9 +50006,9 @@ declare class FindTransliteratePreference extends Preference {
 	firstLineIndent: number | NothingEnum;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.
@@ -50061,19 +50061,19 @@ declare class FindTransliteratePreference extends Preference {
 	horizontalScale: number | NothingEnum;
 
 	/**
-	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: any;
+	hyphenateAcrossColumns: Boolean | NothingEnum;
 
 	/**
-	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: any;
+	hyphenateLastWord: Boolean | NothingEnum;
 
 	/**
-	 * If true, ignores optical edge alignment for the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: any;
+	ignoreEdgeAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. . Can return: Short Integer or NothingEnum enumerator.
@@ -50086,9 +50086,9 @@ declare class FindTransliteratePreference extends Preference {
 	justification: any;
 
 	/**
-	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: any;
+	keepAllLinesTogether: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.
@@ -50101,14 +50101,14 @@ declare class FindTransliteratePreference extends Preference {
 	keepLastLines: any;
 
 	/**
-	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: any;
+	keepLinesTogether: Boolean | NothingEnum;
 
 	/**
-	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: any;
+	keepRuleAboveInFrame: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph. Can return: Short Integer (0 - 5) or NothingEnum enumerator.
@@ -50126,9 +50126,9 @@ declare class FindTransliteratePreference extends Preference {
 	kentenCharacterSet: any;
 
 	/**
-	 * The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.
+	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: any;
+	kentenCustomCharacter: String | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -50146,9 +50146,9 @@ declare class FindTransliteratePreference extends Preference {
 	kentenFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.
@@ -50206,9 +50206,9 @@ declare class FindTransliteratePreference extends Preference {
 	kentenYScale: number | NothingEnum;
 
 	/**
-	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
+	 * The type of pair kerning.
 	 */
-	kerningMethod: any;
+	kerningMethod: String | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -50256,9 +50256,9 @@ declare class FindTransliteratePreference extends Preference {
 	leftIndent: number | NothingEnum;
 
 	/**
-	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: any;
+	ligatures: Boolean | NothingEnum;
 
 	/**
 	 * The mojikumi table. For information, see mojikumi table defaults. Can return: MojikumiTable, String, MojikumiTableDefaults enumerator or NothingEnum enumerator.
@@ -50266,9 +50266,9 @@ declare class FindTransliteratePreference extends Preference {
 	mojikumi: any;
 
 	/**
-	 * If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: any;
+	noBreak: Boolean | NothingEnum;
 
 	/**
 	 * The alignment of the number. Can return: ListAlignment enumerator or NothingEnum enumerator.
@@ -50276,9 +50276,9 @@ declare class FindTransliteratePreference extends Preference {
 	numberingAlignment: any;
 
 	/**
-	 * If true, apply the numbering restart policy. Can return: Boolean or NothingEnum enumerator.
+	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: any;
+	numberingApplyRestartPolicy: Boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string. Can return: CharacterStyle, String or NothingEnum enumerator.
@@ -50286,14 +50286,14 @@ declare class FindTransliteratePreference extends Preference {
 	numberingCharacterStyle: any;
 
 	/**
-	 * Continue the numbering at this level. Can return: Boolean or NothingEnum enumerator.
+	 * Continue the numbering at this level.
 	 */
-	numberingContinue: any;
+	numberingContinue: Boolean | NothingEnum;
 
 	/**
-	 * The number string expression for numbering. Can return: String or NothingEnum enumerator.
+	 * The number string expression for numbering.
 	 */
-	numberingExpression: any;
+	numberingExpression: String | NothingEnum;
 
 	/**
 	 * Numbering format options. Can return: NumberingStyle enumerator, String or NothingEnum enumerator.
@@ -50311,14 +50311,14 @@ declare class FindTransliteratePreference extends Preference {
 	numberingStartAt: any;
 
 	/**
-	 * If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: any;
+	otfContextualAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: any;
+	otfDiscretionaryLigature: Boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.
@@ -50326,49 +50326,49 @@ declare class FindTransliteratePreference extends Preference {
 	otfFigureStyle: any;
 
 	/**
-	 * If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: any;
+	otfFraction: Boolean | NothingEnum;
 
 	/**
-	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: any;
+	otfHVKana: Boolean | NothingEnum;
 
 	/**
-	 * If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: any;
+	otfHistorical: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: any;
+	otfLocale: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: any;
+	otfMark: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: any;
+	otfOrdinal: Boolean | NothingEnum;
 
 	/**
-	 * If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: any;
+	otfProportionalMetrics: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: any;
+	otfRomanItalics: Boolean | NothingEnum;
 
 	/**
-	 * If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: any;
+	otfSlashedZero: Boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.
@@ -50376,29 +50376,29 @@ declare class FindTransliteratePreference extends Preference {
 	otfStylisticSets: any;
 
 	/**
-	 * If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: any;
+	otfSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: any;
+	otfTitling: Boolean | NothingEnum;
 
 	/**
-	 * If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
-	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: any;
+	paragraphGyoudori: Boolean | NothingEnum;
 
 	/**
 	 * The text size.
@@ -50421,9 +50421,9 @@ declare class FindTransliteratePreference extends Preference {
 	readonly preferences: Preferences;
 
 	/**
-	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers. Can return: Boolean or NothingEnum enumerator.
+	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: any;
+	rensuuji: Boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -50431,9 +50431,9 @@ declare class FindTransliteratePreference extends Preference {
 	rightIndent: number | NothingEnum;
 
 	/**
-	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: any;
+	rotateSingleByteCharacters: Boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment. Can return: RubyAlignments enumerator or NothingEnum enumerator.
@@ -50441,19 +50441,19 @@ declare class FindTransliteratePreference extends Preference {
 	rubyAlignment: any;
 
 	/**
-	 * If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: any;
+	rubyAutoAlign: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: any;
+	rubyAutoScaling: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: any;
+	rubyAutoTcyAutoScale: Boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.
@@ -50461,9 +50461,9 @@ declare class FindTransliteratePreference extends Preference {
 	rubyAutoTcyDigits: any;
 
 	/**
-	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: any;
+	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -50481,19 +50481,19 @@ declare class FindTransliteratePreference extends Preference {
 	rubyFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
-	 * If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: any;
+	rubyOpenTypePro: Boolean | NothingEnum;
 
 	/**
-	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: any;
+	rubyOverhang: Boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.
@@ -50571,19 +50571,19 @@ declare class FindTransliteratePreference extends Preference {
 	rubyYScale: number | NothingEnum;
 
 	/**
-	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: any;
+	scaleAffectsLineHeight: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: any;
+	shataiAdjustRotation: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: any;
+	shataiAdjustTsume: Boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -50631,9 +50631,9 @@ declare class FindTransliteratePreference extends Preference {
 	strikeThroughGapColor: any;
 
 	/**
-	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: any;
+	strikeThroughGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -50646,9 +50646,9 @@ declare class FindTransliteratePreference extends Preference {
 	strikeThroughOffset: number | NothingEnum;
 
 	/**
-	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: any;
+	strikeThroughOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -50666,9 +50666,9 @@ declare class FindTransliteratePreference extends Preference {
 	strikeThroughWeight: number | NothingEnum;
 
 	/**
-	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: any;
+	strikeThru: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
@@ -50686,9 +50686,9 @@ declare class FindTransliteratePreference extends Preference {
 	strokeWeight: number | NothingEnum;
 
 	/**
-	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: any;
+	tatechuyoko: Boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -50711,9 +50711,9 @@ declare class FindTransliteratePreference extends Preference {
 	trailingAki: number | NothingEnum;
 
 	/**
-	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: any;
+	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -50721,9 +50721,9 @@ declare class FindTransliteratePreference extends Preference {
 	tsume: number | NothingEnum;
 
 	/**
-	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, underlines the text.
 	 */
-	underline: any;
+	underline: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.
@@ -50736,9 +50736,9 @@ declare class FindTransliteratePreference extends Preference {
 	underlineGapColor: any;
 
 	/**
-	 * If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: any;
+	underlineGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -50751,9 +50751,9 @@ declare class FindTransliteratePreference extends Preference {
 	underlineOffset: number | NothingEnum;
 
 	/**
-	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: any;
+	underlineOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -50776,9 +50776,9 @@ declare class FindTransliteratePreference extends Preference {
 	verticalScale: number | NothingEnum;
 
 	/**
-	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
+	 * If true, turns on warichu.
 	 */
-	warichu: any;
+	warichu: Boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.
@@ -50817,9 +50817,9 @@ declare class FindTransliteratePreference extends Preference {
  */
 declare class ChangeTextPreference extends Preference {
 	/**
-	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character. Can return: Boolean or NothingEnum enumerator.
+	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: any;
+	allowArbitraryHyphenation: Boolean | NothingEnum;
 
 	/**
 	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
@@ -50862,9 +50862,9 @@ declare class ChangeTextPreference extends Preference {
 	autoTcy: any;
 
 	/**
-	 * If true, auto tcy includes Roman characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: any;
+	autoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean, BalanceLinesStyle enumerator or NothingEnum enumerator.
@@ -50877,9 +50877,9 @@ declare class ChangeTextPreference extends Preference {
 	baselineShift: number | NothingEnum;
 
 	/**
-	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
+	 * Bullet character.
 	 */
-	readonly bulletChar: any;
+	readonly bulletChar: Bullet | NothingEnum;
 
 	/**
 	 * List type for bullets and numbering. Can return: ListType enumerator or NothingEnum enumerator.
@@ -50892,14 +50892,14 @@ declare class ChangeTextPreference extends Preference {
 	bulletsCharacterStyle: any;
 
 	/**
-	 * The text after string expression for bullets. Can return: String or NothingEnum enumerator.
+	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: any;
+	bulletsTextAfter: String | NothingEnum;
 
 	/**
-	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: any;
+	bunriKinshi: Boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.
@@ -50912,9 +50912,9 @@ declare class ChangeTextPreference extends Preference {
 	changeConditionsMode: any;
 
 	/**
-	 * The replacement ChangeTextPreference. Can return: String or NothingEnum enumerator.
+	 * The replacement ChangeTextPreference.
 	 */
-	changeTo: any;
+	changeTo: String | NothingEnum;
 
 	/**
 	 * The alignment of small characters to the largest character in the line. Can return: CharacterAlignment enumerator or NothingEnum enumerator.
@@ -50932,14 +50932,14 @@ declare class ChangeTextPreference extends Preference {
 	characterRotation: number | NothingEnum;
 
 	/**
-	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: any;
+	cjkGridTracking: Boolean | NothingEnum;
 
 	/**
-	 * The text composer to use to compose the text. Can return: String or NothingEnum enumerator.
+	 * The text composer to use to compose the text.
 	 */
-	composer: any;
+	composer: String | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters. Can return: DiacriticPositionOptions enumerator or NothingEnum enumerator.
@@ -50987,9 +50987,9 @@ declare class ChangeTextPreference extends Preference {
 	firstLineIndent: number | NothingEnum;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.
@@ -51042,19 +51042,19 @@ declare class ChangeTextPreference extends Preference {
 	horizontalScale: number | NothingEnum;
 
 	/**
-	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: any;
+	hyphenateAcrossColumns: Boolean | NothingEnum;
 
 	/**
-	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: any;
+	hyphenateLastWord: Boolean | NothingEnum;
 
 	/**
-	 * If true, ignores optical edge alignment for the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: any;
+	ignoreEdgeAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. . Can return: Short Integer or NothingEnum enumerator.
@@ -51072,9 +51072,9 @@ declare class ChangeTextPreference extends Preference {
 	kashidas: any;
 
 	/**
-	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: any;
+	keepAllLinesTogether: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.
@@ -51087,14 +51087,14 @@ declare class ChangeTextPreference extends Preference {
 	keepLastLines: any;
 
 	/**
-	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: any;
+	keepLinesTogether: Boolean | NothingEnum;
 
 	/**
-	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: any;
+	keepRuleAboveInFrame: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph. Can return: Short Integer (0 - 5) or NothingEnum enumerator.
@@ -51102,9 +51102,9 @@ declare class ChangeTextPreference extends Preference {
 	keepWithNext: any;
 
 	/**
-	 * If the first line in the paragraph should be kept with the last line of previous paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: any;
+	keepWithPrevious: Boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. . Can return: KentenAlignment enumerator or NothingEnum enumerator.
@@ -51117,9 +51117,9 @@ declare class ChangeTextPreference extends Preference {
 	kentenCharacterSet: any;
 
 	/**
-	 * The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.
+	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: any;
+	kentenCustomCharacter: String | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -51137,9 +51137,9 @@ declare class ChangeTextPreference extends Preference {
 	kentenFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.
@@ -51197,9 +51197,9 @@ declare class ChangeTextPreference extends Preference {
 	kentenYScale: number | NothingEnum;
 
 	/**
-	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
+	 * The type of pair kerning.
 	 */
-	kerningMethod: any;
+	kerningMethod: String | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -51252,9 +51252,9 @@ declare class ChangeTextPreference extends Preference {
 	leftIndent: number | NothingEnum;
 
 	/**
-	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: any;
+	ligatures: Boolean | NothingEnum;
 
 	/**
 	 * The XML tag applied to the element. Can return: String or NothingEnum enumerator. Can also accept: XMLTag.
@@ -51272,14 +51272,14 @@ declare class ChangeTextPreference extends Preference {
 	mojikumi: any;
 
 	/**
-	 * If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: any;
+	noBreak: Boolean | NothingEnum;
 
 	/**
-	 * If true, apply the numbering restart policy. Can return: Boolean or NothingEnum enumerator.
+	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: any;
+	numberingApplyRestartPolicy: Boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string. Can return: CharacterStyle, String or NothingEnum enumerator.
@@ -51287,14 +51287,14 @@ declare class ChangeTextPreference extends Preference {
 	numberingCharacterStyle: any;
 
 	/**
-	 * Continue the numbering at this level. Can return: Boolean or NothingEnum enumerator.
+	 * Continue the numbering at this level.
 	 */
-	numberingContinue: any;
+	numberingContinue: Boolean | NothingEnum;
 
 	/**
-	 * The number string expression for numbering. Can return: String or NothingEnum enumerator.
+	 * The number string expression for numbering.
 	 */
-	numberingExpression: any;
+	numberingExpression: String | NothingEnum;
 
 	/**
 	 * Numbering format options. Can return: NumberingStyle enumerator, String or NothingEnum enumerator.
@@ -51317,14 +51317,14 @@ declare class ChangeTextPreference extends Preference {
 	numberingStartAt: any;
 
 	/**
-	 * If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: any;
+	otfContextualAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: any;
+	otfDiscretionaryLigature: Boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.
@@ -51332,69 +51332,69 @@ declare class ChangeTextPreference extends Preference {
 	otfFigureStyle: any;
 
 	/**
-	 * If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: any;
+	otfFraction: Boolean | NothingEnum;
 
 	/**
-	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: any;
+	otfHVKana: Boolean | NothingEnum;
 
 	/**
-	 * If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: any;
+	otfHistorical: Boolean | NothingEnum;
 
 	/**
-	 * If true, use alternate justification forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: any;
+	otfJustificationAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: any;
+	otfLocale: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: any;
+	otfMark: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: any;
+	otfOrdinal: Boolean | NothingEnum;
 
 	/**
-	 * If true, use overlapping swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: any;
+	otfOverlapSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: any;
+	otfProportionalMetrics: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: any;
+	otfRomanItalics: Boolean | NothingEnum;
 
 	/**
-	 * If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: any;
+	otfSlashedZero: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stretched alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: any;
+	otfStretchedAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stylistic alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: any;
+	otfStylisticAlternate: Boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.
@@ -51402,24 +51402,24 @@ declare class ChangeTextPreference extends Preference {
 	otfStylisticSets: any;
 
 	/**
-	 * If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: any;
+	otfSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: any;
+	otfTitling: Boolean | NothingEnum;
 
 	/**
-	 * If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction. Can return: ParagraphDirectionOptions enumerator or NothingEnum enumerator.
@@ -51427,9 +51427,9 @@ declare class ChangeTextPreference extends Preference {
 	paragraphDirection: any;
 
 	/**
-	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: any;
+	paragraphGyoudori: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification. Can return: ParagraphJustificationOptions enumerator or NothingEnum enumerator.
@@ -51462,9 +51462,9 @@ declare class ChangeTextPreference extends Preference {
 	readonly preferences: Preferences;
 
 	/**
-	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers. Can return: Boolean or NothingEnum enumerator.
+	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: any;
+	rensuuji: Boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -51472,9 +51472,9 @@ declare class ChangeTextPreference extends Preference {
 	rightIndent: number | NothingEnum;
 
 	/**
-	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: any;
+	rotateSingleByteCharacters: Boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment. Can return: RubyAlignments enumerator or NothingEnum enumerator.
@@ -51482,19 +51482,19 @@ declare class ChangeTextPreference extends Preference {
 	rubyAlignment: any;
 
 	/**
-	 * If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: any;
+	rubyAutoAlign: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: any;
+	rubyAutoScaling: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: any;
+	rubyAutoTcyAutoScale: Boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.
@@ -51502,9 +51502,9 @@ declare class ChangeTextPreference extends Preference {
 	rubyAutoTcyDigits: any;
 
 	/**
-	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: any;
+	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -51522,19 +51522,19 @@ declare class ChangeTextPreference extends Preference {
 	rubyFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
-	 * If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: any;
+	rubyOpenTypePro: Boolean | NothingEnum;
 
 	/**
-	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: any;
+	rubyOverhang: Boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.
@@ -51612,19 +51612,19 @@ declare class ChangeTextPreference extends Preference {
 	rubyYScale: number | NothingEnum;
 
 	/**
-	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: any;
+	scaleAffectsLineHeight: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: any;
+	shataiAdjustRotation: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: any;
+	shataiAdjustTsume: Boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -51702,9 +51702,9 @@ declare class ChangeTextPreference extends Preference {
 	strikeThroughGapColor: any;
 
 	/**
-	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: any;
+	strikeThroughGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -51717,9 +51717,9 @@ declare class ChangeTextPreference extends Preference {
 	strikeThroughOffset: number | NothingEnum;
 
 	/**
-	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: any;
+	strikeThroughOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -51737,9 +51737,9 @@ declare class ChangeTextPreference extends Preference {
 	strikeThroughWeight: number | NothingEnum;
 
 	/**
-	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: any;
+	strikeThru: Boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text. Can return: TextStrokeAlign enumerator or NothingEnum enumerator.
@@ -51762,9 +51762,9 @@ declare class ChangeTextPreference extends Preference {
 	strokeWeight: number | NothingEnum;
 
 	/**
-	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: any;
+	tatechuyoko: Boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -51787,9 +51787,9 @@ declare class ChangeTextPreference extends Preference {
 	trailingAki: number | NothingEnum;
 
 	/**
-	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: any;
+	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -51797,9 +51797,9 @@ declare class ChangeTextPreference extends Preference {
 	tsume: number | NothingEnum;
 
 	/**
-	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, underlines the text.
 	 */
-	underline: any;
+	underline: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.
@@ -51812,9 +51812,9 @@ declare class ChangeTextPreference extends Preference {
 	underlineGapColor: any;
 
 	/**
-	 * If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: any;
+	underlineGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -51827,9 +51827,9 @@ declare class ChangeTextPreference extends Preference {
 	underlineOffset: number | NothingEnum;
 
 	/**
-	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: any;
+	underlineOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -51852,9 +51852,9 @@ declare class ChangeTextPreference extends Preference {
 	verticalScale: number | NothingEnum;
 
 	/**
-	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
+	 * If true, turns on warichu.
 	 */
-	warichu: any;
+	warichu: Boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.
@@ -51903,9 +51903,9 @@ declare class ChangeTextPreference extends Preference {
  */
 declare class ChangeGrepPreference extends Preference {
 	/**
-	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character. Can return: Boolean or NothingEnum enumerator.
+	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: any;
+	allowArbitraryHyphenation: Boolean | NothingEnum;
 
 	/**
 	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
@@ -51948,9 +51948,9 @@ declare class ChangeGrepPreference extends Preference {
 	autoTcy: any;
 
 	/**
-	 * If true, auto tcy includes Roman characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: any;
+	autoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean, BalanceLinesStyle enumerator or NothingEnum enumerator.
@@ -51963,9 +51963,9 @@ declare class ChangeGrepPreference extends Preference {
 	baselineShift: number | NothingEnum;
 
 	/**
-	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
+	 * Bullet character.
 	 */
-	readonly bulletChar: any;
+	readonly bulletChar: Bullet | NothingEnum;
 
 	/**
 	 * List type for bullets and numbering. Can return: ListType enumerator or NothingEnum enumerator.
@@ -51978,14 +51978,14 @@ declare class ChangeGrepPreference extends Preference {
 	bulletsCharacterStyle: any;
 
 	/**
-	 * The text after string expression for bullets. Can return: String or NothingEnum enumerator.
+	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: any;
+	bulletsTextAfter: String | NothingEnum;
 
 	/**
-	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: any;
+	bunriKinshi: Boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.
@@ -51998,9 +51998,9 @@ declare class ChangeGrepPreference extends Preference {
 	changeConditionsMode: any;
 
 	/**
-	 * The replacement ChangeGrepPreference. Can return: String or NothingEnum enumerator.
+	 * The replacement ChangeGrepPreference.
 	 */
-	changeTo: any;
+	changeTo: String | NothingEnum;
 
 	/**
 	 * The alignment of small characters to the largest character in the line. Can return: CharacterAlignment enumerator or NothingEnum enumerator.
@@ -52018,14 +52018,14 @@ declare class ChangeGrepPreference extends Preference {
 	characterRotation: number | NothingEnum;
 
 	/**
-	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: any;
+	cjkGridTracking: Boolean | NothingEnum;
 
 	/**
-	 * The text composer to use to compose the text. Can return: String or NothingEnum enumerator.
+	 * The text composer to use to compose the text.
 	 */
-	composer: any;
+	composer: String | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters. Can return: DiacriticPositionOptions enumerator or NothingEnum enumerator.
@@ -52073,9 +52073,9 @@ declare class ChangeGrepPreference extends Preference {
 	firstLineIndent: number | NothingEnum;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.
@@ -52128,19 +52128,19 @@ declare class ChangeGrepPreference extends Preference {
 	horizontalScale: number | NothingEnum;
 
 	/**
-	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: any;
+	hyphenateAcrossColumns: Boolean | NothingEnum;
 
 	/**
-	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: any;
+	hyphenateLastWord: Boolean | NothingEnum;
 
 	/**
-	 * If true, ignores optical edge alignment for the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: any;
+	ignoreEdgeAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. . Can return: Short Integer or NothingEnum enumerator.
@@ -52158,9 +52158,9 @@ declare class ChangeGrepPreference extends Preference {
 	kashidas: any;
 
 	/**
-	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: any;
+	keepAllLinesTogether: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.
@@ -52173,14 +52173,14 @@ declare class ChangeGrepPreference extends Preference {
 	keepLastLines: any;
 
 	/**
-	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: any;
+	keepLinesTogether: Boolean | NothingEnum;
 
 	/**
-	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: any;
+	keepRuleAboveInFrame: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph. Can return: Short Integer (0 - 5) or NothingEnum enumerator.
@@ -52188,9 +52188,9 @@ declare class ChangeGrepPreference extends Preference {
 	keepWithNext: any;
 
 	/**
-	 * If the first line in the paragraph should be kept with the last line of previous paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If the first line in the paragraph should be kept with the last line of previous paragraph.
 	 */
-	keepWithPrevious: any;
+	keepWithPrevious: Boolean | NothingEnum;
 
 	/**
 	 * The alignment of kenten characters relative to the parent characters. . Can return: KentenAlignment enumerator or NothingEnum enumerator.
@@ -52203,9 +52203,9 @@ declare class ChangeGrepPreference extends Preference {
 	kentenCharacterSet: any;
 
 	/**
-	 * The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.
+	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: any;
+	kentenCustomCharacter: String | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -52223,9 +52223,9 @@ declare class ChangeGrepPreference extends Preference {
 	kentenFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.
@@ -52283,9 +52283,9 @@ declare class ChangeGrepPreference extends Preference {
 	kentenYScale: number | NothingEnum;
 
 	/**
-	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
+	 * The type of pair kerning.
 	 */
-	kerningMethod: any;
+	kerningMethod: String | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -52338,9 +52338,9 @@ declare class ChangeGrepPreference extends Preference {
 	leftIndent: number | NothingEnum;
 
 	/**
-	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: any;
+	ligatures: Boolean | NothingEnum;
 
 	/**
 	 * The XML tag applied to the element. Can return: String or NothingEnum enumerator. Can also accept: XMLTag.
@@ -52358,14 +52358,14 @@ declare class ChangeGrepPreference extends Preference {
 	mojikumi: any;
 
 	/**
-	 * If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: any;
+	noBreak: Boolean | NothingEnum;
 
 	/**
-	 * If true, apply the numbering restart policy. Can return: Boolean or NothingEnum enumerator.
+	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: any;
+	numberingApplyRestartPolicy: Boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string. Can return: CharacterStyle, String or NothingEnum enumerator.
@@ -52373,14 +52373,14 @@ declare class ChangeGrepPreference extends Preference {
 	numberingCharacterStyle: any;
 
 	/**
-	 * Continue the numbering at this level. Can return: Boolean or NothingEnum enumerator.
+	 * Continue the numbering at this level.
 	 */
-	numberingContinue: any;
+	numberingContinue: Boolean | NothingEnum;
 
 	/**
-	 * The number string expression for numbering. Can return: String or NothingEnum enumerator.
+	 * The number string expression for numbering.
 	 */
-	numberingExpression: any;
+	numberingExpression: String | NothingEnum;
 
 	/**
 	 * Numbering format options. Can return: NumberingStyle enumerator, String or NothingEnum enumerator.
@@ -52403,14 +52403,14 @@ declare class ChangeGrepPreference extends Preference {
 	numberingStartAt: any;
 
 	/**
-	 * If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: any;
+	otfContextualAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: any;
+	otfDiscretionaryLigature: Boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.
@@ -52418,69 +52418,69 @@ declare class ChangeGrepPreference extends Preference {
 	otfFigureStyle: any;
 
 	/**
-	 * If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: any;
+	otfFraction: Boolean | NothingEnum;
 
 	/**
-	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: any;
+	otfHVKana: Boolean | NothingEnum;
 
 	/**
-	 * If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: any;
+	otfHistorical: Boolean | NothingEnum;
 
 	/**
-	 * If true, use alternate justification forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: any;
+	otfJustificationAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: any;
+	otfLocale: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: any;
+	otfMark: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: any;
+	otfOrdinal: Boolean | NothingEnum;
 
 	/**
-	 * If true, use overlapping swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: any;
+	otfOverlapSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: any;
+	otfProportionalMetrics: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: any;
+	otfRomanItalics: Boolean | NothingEnum;
 
 	/**
-	 * If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: any;
+	otfSlashedZero: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stretched alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: any;
+	otfStretchedAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stylistic alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: any;
+	otfStylisticAlternate: Boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.
@@ -52488,24 +52488,24 @@ declare class ChangeGrepPreference extends Preference {
 	otfStylisticSets: any;
 
 	/**
-	 * If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: any;
+	otfSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: any;
+	otfTitling: Boolean | NothingEnum;
 
 	/**
-	 * If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph direction. Can return: ParagraphDirectionOptions enumerator or NothingEnum enumerator.
@@ -52513,9 +52513,9 @@ declare class ChangeGrepPreference extends Preference {
 	paragraphDirection: any;
 
 	/**
-	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: any;
+	paragraphGyoudori: Boolean | NothingEnum;
 
 	/**
 	 * Paragraph justification. Can return: ParagraphJustificationOptions enumerator or NothingEnum enumerator.
@@ -52548,9 +52548,9 @@ declare class ChangeGrepPreference extends Preference {
 	readonly preferences: Preferences;
 
 	/**
-	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers. Can return: Boolean or NothingEnum enumerator.
+	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: any;
+	rensuuji: Boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -52558,9 +52558,9 @@ declare class ChangeGrepPreference extends Preference {
 	rightIndent: number | NothingEnum;
 
 	/**
-	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: any;
+	rotateSingleByteCharacters: Boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment. Can return: RubyAlignments enumerator or NothingEnum enumerator.
@@ -52568,19 +52568,19 @@ declare class ChangeGrepPreference extends Preference {
 	rubyAlignment: any;
 
 	/**
-	 * If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: any;
+	rubyAutoAlign: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: any;
+	rubyAutoScaling: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: any;
+	rubyAutoTcyAutoScale: Boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.
@@ -52588,9 +52588,9 @@ declare class ChangeGrepPreference extends Preference {
 	rubyAutoTcyDigits: any;
 
 	/**
-	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: any;
+	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -52608,19 +52608,19 @@ declare class ChangeGrepPreference extends Preference {
 	rubyFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
-	 * If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: any;
+	rubyOpenTypePro: Boolean | NothingEnum;
 
 	/**
-	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: any;
+	rubyOverhang: Boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.
@@ -52698,19 +52698,19 @@ declare class ChangeGrepPreference extends Preference {
 	rubyYScale: number | NothingEnum;
 
 	/**
-	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: any;
+	scaleAffectsLineHeight: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: any;
+	shataiAdjustRotation: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: any;
+	shataiAdjustTsume: Boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -52788,9 +52788,9 @@ declare class ChangeGrepPreference extends Preference {
 	strikeThroughGapColor: any;
 
 	/**
-	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: any;
+	strikeThroughGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -52803,9 +52803,9 @@ declare class ChangeGrepPreference extends Preference {
 	strikeThroughOffset: number | NothingEnum;
 
 	/**
-	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: any;
+	strikeThroughOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -52823,9 +52823,9 @@ declare class ChangeGrepPreference extends Preference {
 	strikeThroughWeight: number | NothingEnum;
 
 	/**
-	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: any;
+	strikeThru: Boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text. Can return: TextStrokeAlign enumerator or NothingEnum enumerator.
@@ -52848,9 +52848,9 @@ declare class ChangeGrepPreference extends Preference {
 	strokeWeight: number | NothingEnum;
 
 	/**
-	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: any;
+	tatechuyoko: Boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -52873,9 +52873,9 @@ declare class ChangeGrepPreference extends Preference {
 	trailingAki: number | NothingEnum;
 
 	/**
-	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: any;
+	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -52883,9 +52883,9 @@ declare class ChangeGrepPreference extends Preference {
 	tsume: number | NothingEnum;
 
 	/**
-	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, underlines the text.
 	 */
-	underline: any;
+	underline: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.
@@ -52898,9 +52898,9 @@ declare class ChangeGrepPreference extends Preference {
 	underlineGapColor: any;
 
 	/**
-	 * If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: any;
+	underlineGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -52913,9 +52913,9 @@ declare class ChangeGrepPreference extends Preference {
 	underlineOffset: number | NothingEnum;
 
 	/**
-	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: any;
+	underlineOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -52938,9 +52938,9 @@ declare class ChangeGrepPreference extends Preference {
 	verticalScale: number | NothingEnum;
 
 	/**
-	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
+	 * If true, turns on warichu.
 	 */
-	warichu: any;
+	warichu: Boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.
@@ -52994,9 +52994,9 @@ declare class ChangeGlyphPreference extends Preference {
 	appliedFont: any;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The GID/CID of the glyph. Can return: Long Integer or NothingEnum enumerator.
@@ -53065,9 +53065,9 @@ declare class ChangeObjectPreference extends Preference {
 	applyTagType: any;
 
 	/**
-	 * If true, text wraps on the master spread apply to that spread only, and not to any pages the master spread has been applied to. Can return: Boolean or NothingEnum enumerator.
+	 * If true, text wraps on the master spread apply to that spread only, and not to any pages the master spread has been applied to.
 	 */
-	applyToMasterPageOnly: any;
+	applyToMasterPageOnly: Boolean | NothingEnum;
 
 	/**
 	 * The reference point for auto sizing of text frame. Reference point is automatically adjusted to the suitable value depending on the auto-sizing type value. As an example, top left reference point becomes top center for height only dimension. Can return: AutoSizingReferenceEnum enumerator or NothingEnum enumerator.
@@ -53130,14 +53130,14 @@ declare class ChangeObjectPreference extends Preference {
 	contourType: any;
 
 	/**
-	 * The custom actual text entered by the user. Can return: String or NothingEnum enumerator.
+	 * The custom actual text entered by the user.
 	 */
-	customActualText: any;
+	customActualText: String | NothingEnum;
 
 	/**
-	 * The custom alternate text entered by the user. Can return: String or NothingEnum enumerator.
+	 * The custom alternate text entered by the user.
 	 */
-	customAltText: any;
+	customAltText: String | NothingEnum;
 
 	/**
 	 * The end shape of an open path. Can return: EndCap enumerator or NothingEnum enumerator.
@@ -53180,9 +53180,9 @@ declare class ChangeObjectPreference extends Preference {
 	fittingOnEmptyFrame: any;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of a dashed, dotted, or striped stroke. For information, see stroke type. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of a dashed, dotted, or striped stroke. For information, see stroke type.
 	 */
-	gapColor: any;
+	gapColor: Swatch | NothingEnum;
 
 	/**
 	 * The tint as a percentage of the gap color. (To specify a tint percent, use a number in the range of 0 to 100; to use the inherited or overridden value, use -1.).
@@ -53190,9 +53190,9 @@ declare class ChangeObjectPreference extends Preference {
 	gapTint: number | NothingEnum;
 
 	/**
-	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG. Can return: Boolean or NothingEnum enumerator.
+	 * If true, generates interlaced GIFs. Note: Not validwhen image conversion is JPEG.
 	 */
-	gifOptionsInterlaced: any;
+	gifOptionsInterlaced: Boolean | NothingEnum;
 
 	/**
 	 * The color palette for GIF conversion. Note: Not valid when image conversion is JPEG. . Can return: GIFOptionsPalette enumerator or NothingEnum enumerator.
@@ -53215,9 +53215,9 @@ declare class ChangeObjectPreference extends Preference {
 	horizontalReferencePoint: any;
 
 	/**
-	 * If true, ignores text wrap settings for drawn or placed objects in the text frame. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores text wrap settings for drawn or placed objects in the text frame. .
 	 */
-	ignoreWrap: any;
+	ignoreWrap: Boolean | NothingEnum;
 
 	/**
 	 * Alignment applied to images. Can return: ImageAlignmentType enumerator or NothingEnum enumerator.
@@ -53250,9 +53250,9 @@ declare class ChangeObjectPreference extends Preference {
 	imageSpaceBefore: any;
 
 	/**
-	 * If true, creates interior clipping paths within the surrounding clipping path. Note: Valid only when clipping type is alpha channel or detect edges. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, creates interior clipping paths within the surrounding clipping path. Note: Valid only when clipping type is alpha channel or detect edges. .
 	 */
-	includeInsideEdges: any;
+	includeInsideEdges: Boolean | NothingEnum;
 
 	/**
 	 * The amount to offset text from the edges of the text frame, specified either as a single value applied uniformly to all sides of the text frame or as an array of 4 values in the format [top inset, left inset, bottom inset, right inset]. Can return: Unit (0 - 8640 points), Array of 4 Units (0 - 8640 points) or NothingEnum enumerator.
@@ -53260,9 +53260,9 @@ declare class ChangeObjectPreference extends Preference {
 	insetSpacing: any;
 
 	/**
-	 * If true, inverts the text wrap. Can return: Boolean or NothingEnum enumerator.
+	 * If true, inverts the text wrap.
 	 */
-	inverse: any;
+	inverse: Boolean | NothingEnum;
 
 	/**
 	 * The formatting method for converted JPEG images. Note: Not validwhen image conversion is GIF. Can return: JPEGOptionsFormat enumerator or NothingEnum enumerator.
@@ -53285,9 +53285,9 @@ declare class ChangeObjectPreference extends Preference {
 	leftLineEnd: any;
 
 	/**
-	 * If true, prevents manual positioning of the anchored object. Can return: Boolean or NothingEnum enumerator.
+	 * If true, prevents manual positioning of the anchored object.
 	 */
-	lockPosition: any;
+	lockPosition: Boolean | NothingEnum;
 
 	/**
 	 * The minimum distance between the baseline of the text and the top inset of the text frame or cell. Can return: Unit (0 - 8640 points) or NothingEnum enumerator.
@@ -53310,14 +53310,14 @@ declare class ChangeObjectPreference extends Preference {
 	miterLimit: any;
 
 	/**
-	 * If true, the ChangeObjectPreference does not print. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the ChangeObjectPreference does not print.
 	 */
-	nonprinting: any;
+	nonprinting: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjust the position of characters at the edges of the frame to provide a better appearance. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjust the position of characters at the edges of the frame to provide a better appearance.
 	 */
-	opticalMarginAlignment: any;
+	opticalMarginAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The point size used as the basis for calculating optical margin alignment. (Range: 0.1 to 1296). Can return: Unit (0.1 - 1296 points) or NothingEnum enumerator.
@@ -53325,24 +53325,24 @@ declare class ChangeObjectPreference extends Preference {
 	opticalMarginSize: any;
 
 	/**
-	 * If true, the ChangeObjectPreference's fill color overprints any underlying objects. If false, the fill color knocks out the underlying colors. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the ChangeObjectPreference's fill color overprints any underlying objects. If false, the fill color knocks out the underlying colors.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the gap color overprints any underlying colors. If false, the gap color knocks out the underlying colors. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color overprints any underlying colors. If false, the gap color knocks out the underlying colors.
 	 */
-	overprintGap: any;
+	overprintGap: Boolean | NothingEnum;
 
 	/**
-	 * If true, the ChangeObjectPreference's stroke color overprints any underlying objects. If false, the stroke color knocks out theunderlying colors. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the ChangeObjectPreference's stroke color overprints any underlying objects. If false, the stroke color knocks out theunderlying colors.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
-	 * If true, pins the position of the anchored object within the text frame top and bottom. Can return: Boolean or NothingEnum enumerator.
+	 * If true, pins the position of the anchored object within the text frame top and bottom.
 	 */
-	pinPosition: any;
+	pinPosition: Boolean | NothingEnum;
 
 	/**
 	 * The point in the referenced object relative to which to position the anchored object. Notes: Valid only when anchored position is custom. Can return: AnchorPoint enumerator or NothingEnum enumerator.
@@ -53370,9 +53370,9 @@ declare class ChangeObjectPreference extends Preference {
 	rightLineEnd: any;
 
 	/**
-	 * If true, the position of the anchored object is relative to the binding spine of the page or spread. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the position of the anchored object is relative to the binding spine of the page or spread.
 	 */
-	spineRelative: any;
+	spineRelative: Boolean | NothingEnum;
 
 	/**
 	 * The amount to offset the baseline grid. Can return: Unit (0 - 8640 points) or NothingEnum enumerator.
@@ -53485,39 +53485,39 @@ declare class ChangeObjectPreference extends Preference {
 	readonly transparencySettings: any;
 
 	/**
-	 * If true, uses a custom baseline frame grid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses a custom baseline frame grid.
 	 */
-	useCustomBaselineFrameGrid: any;
+	useCustomBaselineFrameGrid: Boolean | NothingEnum;
 
 	/**
-	 * If true, maintains column width when the text frame is resized. If false, causes columns to resize when the text frame is resized. Note: When true, resizing the frame can change the number of columns in the frame. Can return: Boolean or NothingEnum enumerator.
+	 * If true, maintains column width when the text frame is resized. If false, causes columns to resize when the text frame is resized. Note: When true, resizing the frame can change the number of columns in the frame.
 	 */
-	useFixedColumnWidth: any;
+	useFixedColumnWidth: Boolean | NothingEnum;
 
 	/**
-	 * If true, image page break settings will be used in objects. Can return: Boolean or NothingEnum enumerator.
+	 * If true, image page break settings will be used in objects.
 	 */
-	useImagePageBreak: any;
+	useImagePageBreak: Boolean | NothingEnum;
 
 	/**
-	 * If true, minimum height value is used during the auto-sizing of text frame. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, minimum height value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumHeightForAutoSizing: any;
+	useMinimumHeightForAutoSizing: Boolean | NothingEnum;
 
 	/**
-	 * If true, minimum width value is used during the auto-sizing of text frame. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, minimum width value is used during the auto-sizing of text frame. .
 	 */
-	useMinimumWidthForAutoSizing: any;
+	useMinimumWidthForAutoSizing: Boolean | NothingEnum;
 
 	/**
-	 * If true, line-breaks are not introduced after auto sizing. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, line-breaks are not introduced after auto sizing. .
 	 */
-	useNoLineBreaksForAutoSizing: any;
+	useNoLineBreaksForAutoSizing: Boolean | NothingEnum;
 
 	/**
-	 * If true, the text wrap path has been explicitly modified by the user. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the text wrap path has been explicitly modified by the user.
 	 */
-	readonly userModifiedWrap: any;
+	readonly userModifiedWrap: Boolean | NothingEnum;
 
 	/**
 	 * The vertical alignment of the text content. . Can return: VerticalJustification enumerator or NothingEnum enumerator.
@@ -53551,9 +53551,9 @@ declare class ChangeObjectPreference extends Preference {
  */
 declare class ChangeTransliteratePreference extends Preference {
 	/**
-	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character. Can return: Boolean or NothingEnum enumerator.
+	 * If true, words unassociated with a hyphenation dictionary can break to the next line on any character.
 	 */
-	allowArbitraryHyphenation: any;
+	allowArbitraryHyphenation: Boolean | NothingEnum;
 
 	/**
 	 * The character style to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: CharacterStyle.
@@ -53591,9 +53591,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	autoTcy: any;
 
 	/**
-	 * If true, auto tcy includes Roman characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto tcy includes Roman characters.
 	 */
-	autoTcyIncludeRoman: any;
+	autoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * If true or set to an enumeration value, balances ragged lines. Note: Not valid with a single-line text composer. Can return: Boolean, BalanceLinesStyle enumerator or NothingEnum enumerator.
@@ -53606,9 +53606,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	baselineShift: number | NothingEnum;
 
 	/**
-	 * Bullet character. Can return: Bullet or NothingEnum enumerator.
+	 * Bullet character.
 	 */
-	readonly bulletChar: any;
+	readonly bulletChar: Bullet | NothingEnum;
 
 	/**
 	 * The alignment of the bullet character. Can return: ListAlignment enumerator or NothingEnum enumerator.
@@ -53626,14 +53626,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	bulletsCharacterStyle: any;
 
 	/**
-	 * The text after string expression for bullets. Can return: String or NothingEnum enumerator.
+	 * The text after string expression for bullets.
 	 */
-	bulletsTextAfter: any;
+	bulletsTextAfter: String | NothingEnum;
 
 	/**
-	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adds the double period (..), ellipse (...), and double hyphen (--) to the selected kinsoku set. Note: Valid only when a kinsoku set is in effect.
 	 */
-	bunriKinshi: any;
+	bunriKinshi: Boolean | NothingEnum;
 
 	/**
 	 * The capitalization scheme. Can return: Capitalization enumerator or NothingEnum enumerator.
@@ -53656,14 +53656,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	characterRotation: number | NothingEnum;
 
 	/**
-	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: any;
+	cjkGridTracking: Boolean | NothingEnum;
 
 	/**
-	 * The text composer to use to compose the text. Can return: String or NothingEnum enumerator.
+	 * The text composer to use to compose the text.
 	 */
-	composer: any;
+	composer: String | NothingEnum;
 
 	/**
 	 * The number of characters to drop cap. Can return: Short Integer (0 - 150) or NothingEnum enumerator.
@@ -53696,9 +53696,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	firstLineIndent: number | NothingEnum;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.
@@ -53751,19 +53751,19 @@ declare class ChangeTransliteratePreference extends Preference {
 	horizontalScale: number | NothingEnum;
 
 	/**
-	 * If true, allows the last word in a text column to be hyphenated. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows the last word in a text column to be hyphenated.
 	 */
-	hyphenateAcrossColumns: any;
+	hyphenateAcrossColumns: Boolean | NothingEnum;
 
 	/**
-	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, allows hyphenation in the last word in a paragraph. Note: Valid only when hyphenation is true.
 	 */
-	hyphenateLastWord: any;
+	hyphenateLastWord: Boolean | NothingEnum;
 
 	/**
-	 * If true, ignores optical edge alignment for the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ignores optical edge alignment for the paragraph.
 	 */
-	ignoreEdgeAlignment: any;
+	ignoreEdgeAlignment: Boolean | NothingEnum;
 
 	/**
 	 * The number of grid squares in which to arrange the text. . Can return: Short Integer or NothingEnum enumerator.
@@ -53776,9 +53776,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	justification: any;
 
 	/**
-	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps all lines of the paragraph together. If false, allows paragraphs to break across pages or columns.
 	 */
-	keepAllLinesTogether: any;
+	keepAllLinesTogether: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep together in a paragraph before allowing a page break. Can return: Short Integer (1 - 50) or NothingEnum enumerator.
@@ -53791,14 +53791,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	keepLastLines: any;
 
 	/**
-	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames. Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps a specified number of lines together when the paragraph breaks across columns or text frames.
 	 */
-	keepLinesTogether: any;
+	keepLinesTogether: Boolean | NothingEnum;
 
 	/**
-	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true. Can return: Boolean or NothingEnum enumerator.
+	 * If true, forces the rule above the paragraph to remain in the frame bounds. Note: Valid only when rule above is true.
 	 */
-	keepRuleAboveInFrame: any;
+	keepRuleAboveInFrame: Boolean | NothingEnum;
 
 	/**
 	 * The minimum number of lines to keep with the next paragraph. Can return: Short Integer (0 - 5) or NothingEnum enumerator.
@@ -53816,9 +53816,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	kentenCharacterSet: any;
 
 	/**
-	 * The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.
+	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: any;
+	kentenCustomCharacter: String | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -53836,9 +53836,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	kentenFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.
@@ -53896,9 +53896,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	kentenYScale: number | NothingEnum;
 
 	/**
-	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
+	 * The type of pair kerning.
 	 */
-	kerningMethod: any;
+	kerningMethod: String | NothingEnum;
 
 	/**
 	 * The amount of space to add or remove between characters, specified in thousands of an em. .
@@ -53946,9 +53946,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	leftIndent: number | NothingEnum;
 
 	/**
-	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: any;
+	ligatures: Boolean | NothingEnum;
 
 	/**
 	 * The XML tag applied to the element. Can return: String or NothingEnum enumerator. Can also accept: XMLTag.
@@ -53961,9 +53961,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	mojikumi: any;
 
 	/**
-	 * If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: any;
+	noBreak: Boolean | NothingEnum;
 
 	/**
 	 * The alignment of the number. Can return: ListAlignment enumerator or NothingEnum enumerator.
@@ -53971,9 +53971,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	numberingAlignment: any;
 
 	/**
-	 * If true, apply the numbering restart policy. Can return: Boolean or NothingEnum enumerator.
+	 * If true, apply the numbering restart policy.
 	 */
-	numberingApplyRestartPolicy: any;
+	numberingApplyRestartPolicy: Boolean | NothingEnum;
 
 	/**
 	 * The character style to be used for the number string. Can return: CharacterStyle, String or NothingEnum enumerator.
@@ -53981,14 +53981,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	numberingCharacterStyle: any;
 
 	/**
-	 * Continue the numbering at this level. Can return: Boolean or NothingEnum enumerator.
+	 * Continue the numbering at this level.
 	 */
-	numberingContinue: any;
+	numberingContinue: Boolean | NothingEnum;
 
 	/**
-	 * The number string expression for numbering. Can return: String or NothingEnum enumerator.
+	 * The number string expression for numbering.
 	 */
-	numberingExpression: any;
+	numberingExpression: String | NothingEnum;
 
 	/**
 	 * Numbering format options. Can return: NumberingStyle enumerator, String or NothingEnum enumerator.
@@ -54006,14 +54006,14 @@ declare class ChangeTransliteratePreference extends Preference {
 	numberingStartAt: any;
 
 	/**
-	 * If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: any;
+	otfContextualAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: any;
+	otfDiscretionaryLigature: Boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.
@@ -54021,49 +54021,49 @@ declare class ChangeTransliteratePreference extends Preference {
 	otfFigureStyle: any;
 
 	/**
-	 * If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: any;
+	otfFraction: Boolean | NothingEnum;
 
 	/**
-	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: any;
+	otfHVKana: Boolean | NothingEnum;
 
 	/**
-	 * If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: any;
+	otfHistorical: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: any;
+	otfLocale: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: any;
+	otfMark: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: any;
+	otfOrdinal: Boolean | NothingEnum;
 
 	/**
-	 * If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: any;
+	otfProportionalMetrics: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: any;
+	otfRomanItalics: Boolean | NothingEnum;
 
 	/**
-	 * If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: any;
+	otfSlashedZero: Boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.
@@ -54071,29 +54071,29 @@ declare class ChangeTransliteratePreference extends Preference {
 	otfStylisticSets: any;
 
 	/**
-	 * If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: any;
+	otfSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: any;
+	otfTitling: Boolean | NothingEnum;
 
 	/**
-	 * If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
-	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gyoudori mode applies to the entire paragraph. If false, the gyoudori mode applies to each line in the paragraph.
 	 */
-	paragraphGyoudori: any;
+	paragraphGyoudori: Boolean | NothingEnum;
 
 	/**
 	 * The text size.
@@ -54116,9 +54116,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	readonly preferences: Preferences;
 
 	/**
-	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers. Can return: Boolean or NothingEnum enumerator.
+	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
 	 */
-	rensuuji: any;
+	rensuuji: Boolean | NothingEnum;
 
 	/**
 	 * The width of the right indent.
@@ -54126,9 +54126,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	rightIndent: number | NothingEnum;
 
 	/**
-	 * If true, rotates Roman characters in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, rotates Roman characters in vertical text.
 	 */
-	rotateSingleByteCharacters: any;
+	rotateSingleByteCharacters: Boolean | NothingEnum;
 
 	/**
 	 * The ruby alignment. Can return: RubyAlignments enumerator or NothingEnum enumerator.
@@ -54136,19 +54136,19 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyAlignment: any;
 
 	/**
-	 * If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: any;
+	rubyAutoAlign: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: any;
+	rubyAutoScaling: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: any;
+	rubyAutoTcyAutoScale: Boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.
@@ -54156,9 +54156,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyAutoTcyDigits: any;
 
 	/**
-	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: any;
+	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -54176,19 +54176,19 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
-	 * If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: any;
+	rubyOpenTypePro: Boolean | NothingEnum;
 
 	/**
-	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: any;
+	rubyOverhang: Boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.
@@ -54266,19 +54266,19 @@ declare class ChangeTransliteratePreference extends Preference {
 	rubyYScale: number | NothingEnum;
 
 	/**
-	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: any;
+	scaleAffectsLineHeight: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: any;
+	shataiAdjustRotation: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: any;
+	shataiAdjustTsume: Boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -54326,9 +54326,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	strikeThroughGapColor: any;
 
 	/**
-	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: any;
+	strikeThroughGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -54341,9 +54341,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	strikeThroughOffset: number | NothingEnum;
 
 	/**
-	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: any;
+	strikeThroughOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -54361,9 +54361,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	strikeThroughWeight: number | NothingEnum;
 
 	/**
-	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: any;
+	strikeThru: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink), applied as a stroke color, to search for or change to. Can return: String or NothingEnum enumerator. Can also accept: Swatch.
@@ -54381,9 +54381,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	strokeWeight: number | NothingEnum;
 
 	/**
-	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: any;
+	tatechuyoko: Boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -54406,9 +54406,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	trailingAki: number | NothingEnum;
 
 	/**
-	 * If true, ideographic spaces will not wrap to the next line like text characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, ideographic spaces will not wrap to the next line like text characters.
 	 */
-	treatIdeographicSpaceAsSpace: any;
+	treatIdeographicSpaceAsSpace: Boolean | NothingEnum;
 
 	/**
 	 * The amount of horizontal character compression.
@@ -54416,9 +54416,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	tsume: number | NothingEnum;
 
 	/**
-	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, underlines the text.
 	 */
-	underline: any;
+	underline: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.
@@ -54431,9 +54431,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	underlineGapColor: any;
 
 	/**
-	 * If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: any;
+	underlineGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -54446,9 +54446,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	underlineOffset: number | NothingEnum;
 
 	/**
-	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: any;
+	underlineOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -54471,9 +54471,9 @@ declare class ChangeTransliteratePreference extends Preference {
 	verticalScale: number | NothingEnum;
 
 	/**
-	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
+	 * If true, turns on warichu.
 	 */
-	warichu: any;
+	warichu: Boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.
@@ -67813,19 +67813,19 @@ declare class CellStyle {
 	basedOn: CellStyle | String;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the bottom edge border stroke. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the bottom edge border stroke.
 	 */
-	bottomEdgeStrokeColor: any;
+	bottomEdgeStrokeColor: Swatch | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the bottom edge border stroke. Note: Not valid when bottom edge stroke type is solid. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the bottom edge border stroke. Note: Not valid when bottom edge stroke type is solid.
 	 */
-	bottomEdgeStrokeGapColor: any;
+	bottomEdgeStrokeGapColor: Swatch | NothingEnum;
 
 	/**
-	 * If true, the gap color of the bottom edge border stroke will overprint. Note: Not valid when bottom edge stroke type is solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the bottom edge border stroke will overprint. Note: Not valid when bottom edge stroke type is solid.
 	 */
-	bottomEdgeStrokeGapOverprint: any;
+	bottomEdgeStrokeGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the bottom edge border stroke gap color. (Range: 0 to 100) Note: Not valid when bottom edge stroke type is solid.
@@ -67833,9 +67833,9 @@ declare class CellStyle {
 	bottomEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
-	 * If true, the bottom edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the bottom edge border stroke will overprint.
 	 */
-	bottomEdgeStrokeOverprint: any;
+	bottomEdgeStrokeOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the bottom edge border stroke.
@@ -67858,39 +67858,39 @@ declare class CellStyle {
 	bottomInset: number | NothingEnum;
 
 	/**
-	 * If true, clips the cell's content to width and height of the cell. The API has been deprecated. Use ClipContentsToTextCell or ClipContentsToPageItemCell. Can return: Boolean or NothingEnum enumerator.
+	 * If true, clips the cell's content to width and height of the cell. The API has been deprecated. Use ClipContentsToTextCell or ClipContentsToPageItemCell.
 	 */
-	clipContentToCell: any;
+	clipContentToCell: Boolean | NothingEnum;
 
 	/**
-	 * If true, clips the graphic cell's content to width and height of the cell. Can return: Boolean or NothingEnum enumerator.
+	 * If true, clips the graphic cell's content to width and height of the cell.
 	 */
-	clipContentToGraphicCell: any;
+	clipContentToGraphicCell: Boolean | NothingEnum;
 
 	/**
-	 * If true, clips the text cell's content to width and height of the cell. Can return: Boolean or NothingEnum enumerator.
+	 * If true, clips the text cell's content to width and height of the cell.
 	 */
-	clipContentToTextCell: any;
+	clipContentToTextCell: Boolean | NothingEnum;
 
 	/**
-	 * If true, draws the diagonal line in front of cell contents. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws the diagonal line in front of cell contents.
 	 */
-	diagonalLineInFront: any;
+	diagonalLineInFront: Boolean | NothingEnum;
 
 	/**
-	 * The diagonal line color, specified as a swatch. Can return: Swatch or NothingEnum enumerator.
+	 * The diagonal line color, specified as a swatch.
 	 */
-	diagonalLineStrokeColor: any;
+	diagonalLineStrokeColor: Swatch | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the diagonal line stroke. Note: Not valid when diagonal line stroke type is solid. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the diagonal line stroke. Note: Not valid when diagonal line stroke type is solid.
 	 */
-	diagonalLineStrokeGapColor: any;
+	diagonalLineStrokeGapColor: Swatch | NothingEnum;
 
 	/**
-	 * If true, the stroke gap of the diagonal line will overprint. Note: Not valid when diagonal line stroke type is solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke gap of the diagonal line will overprint. Note: Not valid when diagonal line stroke type is solid.
 	 */
-	diagonalLineStrokeGapOverprint: any;
+	diagonalLineStrokeGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the diagonal line stroke gap color. Note: Not valid when diagonal line stroke type is solid.
@@ -67898,9 +67898,9 @@ declare class CellStyle {
 	diagonalLineStrokeGapTint: number | NothingEnum;
 
 	/**
-	 * If true, the diagonal line stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the diagonal line stroke will overprint.
 	 */
-	diagonalLineStrokeOverprint: any;
+	diagonalLineStrokeOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The diagonal line tint (as a percentage). (Range: 0 to 100).
@@ -67998,19 +67998,19 @@ declare class CellStyle {
 	label: string;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the left edge border stroke. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the left edge border stroke.
 	 */
-	leftEdgeStrokeColor: any;
+	leftEdgeStrokeColor: Swatch | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the left edge border stroke. Note: Not valid when left edge stroke type is solid. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the left edge border stroke. Note: Not valid when left edge stroke type is solid.
 	 */
-	leftEdgeStrokeGapColor: any;
+	leftEdgeStrokeGapColor: Swatch | NothingEnum;
 
 	/**
-	 * If true, the gap color of the left edge border stroke will overprint. Note: Not valid when left edge stroke type is solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the left edge border stroke will overprint. Note: Not valid when left edge stroke type is solid.
 	 */
-	leftEdgeStrokeGapOverprint: any;
+	leftEdgeStrokeGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the left edge border stroke gap color. (Range: 0 to 100) Note: Not valid when left edge stroke type is solid.
@@ -68018,9 +68018,9 @@ declare class CellStyle {
 	leftEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
-	 * If true, the left edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the left edge border stroke will overprint.
 	 */
-	leftEdgeStrokeOverprint: any;
+	leftEdgeStrokeOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the left edge border stroke. (Range: 0 to 100).
@@ -68053,9 +68053,9 @@ declare class CellStyle {
 	name: string;
 
 	/**
-	 * If true, the fill of the object will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill of the object will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
 	 * The maximum space that can be added between paragraphs in a cell. Note: Valid only when vertical justification is justified.
@@ -68073,19 +68073,19 @@ declare class CellStyle {
 	properties: Object;
 
 	/**
-	 * The color, specified as a swatch, of the right edge border stroke. Can return: Swatch or NothingEnum enumerator.
+	 * The color, specified as a swatch, of the right edge border stroke.
 	 */
-	rightEdgeStrokeColor: any;
+	rightEdgeStrokeColor: Swatch | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the right edge border stroke. Note: Not valid when right edge stroke type is solid. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the right edge border stroke. Note: Not valid when right edge stroke type is solid.
 	 */
-	rightEdgeStrokeGapColor: any;
+	rightEdgeStrokeGapColor: Swatch | NothingEnum;
 
 	/**
-	 * If true, the gap color of the right edge border stroke will overprint. Note: Not valid when right edge stroke type is solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the right edge border stroke will overprint. Note: Not valid when right edge stroke type is solid.
 	 */
-	rightEdgeStrokeGapOverprint: any;
+	rightEdgeStrokeGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the right edge border stroke gap color. (Range: 0 to 100) Note: Not valid when right edge stroke type is solid.
@@ -68093,9 +68093,9 @@ declare class CellStyle {
 	rightEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
-	 * If true, the right edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the right edge border stroke will overprint.
 	 */
-	rightEdgeStrokeOverprint: any;
+	rightEdgeStrokeOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the right edge border stroke. (Range: 0 to 100).
@@ -68143,19 +68143,19 @@ declare class CellStyle {
 	textTopInset: number | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the top edge border stroke. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the top edge border stroke.
 	 */
-	topEdgeStrokeColor: any;
+	topEdgeStrokeColor: Swatch | NothingEnum;
 
 	/**
-	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the top edge border stroke. Note: Not valid when top edge stroke type is solid. Can return: Swatch or NothingEnum enumerator.
+	 * The swatch (color, gradient, tint, or mixed ink) applied to the gap of the top edge border stroke. Note: Not valid when top edge stroke type is solid.
 	 */
-	topEdgeStrokeGapColor: any;
+	topEdgeStrokeGapColor: Swatch | NothingEnum;
 
 	/**
-	 * If true, the gap color of the top edge border stroke will overprint. Note: Not valid when top edge stroke type is solid. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the top edge border stroke will overprint. Note: Not valid when top edge stroke type is solid. .
 	 */
-	topEdgeStrokeGapOverprint: any;
+	topEdgeStrokeGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the top edge border stroke gap color. (Range: 0 to 100) Note: Not valid when top edge stroke type is solid.
@@ -68163,9 +68163,9 @@ declare class CellStyle {
 	topEdgeStrokeGapTint: number | NothingEnum;
 
 	/**
-	 * If true, the top edge border stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the top edge border stroke will overprint.
 	 */
-	topEdgeStrokeOverprint: any;
+	topEdgeStrokeOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the top edge border stroke. (Range: 0 to 100).
@@ -68188,14 +68188,14 @@ declare class CellStyle {
 	topInset: number | NothingEnum;
 
 	/**
-	 * If true, draws a diagonal line starting from the top left. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a diagonal line starting from the top left.
 	 */
-	topLeftDiagonalLine: any;
+	topLeftDiagonalLine: Boolean | NothingEnum;
 
 	/**
-	 * If true, draws a diagonal line starting from the top right. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a diagonal line starting from the top right.
 	 */
-	topRightDiagonalLine: any;
+	topRightDiagonalLine: Boolean | NothingEnum;
 
 	/**
 	 * The vertical alignment of cell. Can return: VerticalJustification enumerator or NothingEnum enumerator.
@@ -69439,9 +69439,9 @@ declare class Text {
 	kentenFontSize: number;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -69909,9 +69909,9 @@ declare class Text {
 	readonly parentStory: Story;
 
 	/**
-	 * An array of the text frames that contain the text. Can return: Array of TextFrames or TextPaths.
+	 * An array of the text frames that contain the text.
 	 */
-	readonly parentTextFrames: any[];
+	readonly parentTextFrames: TextFrame[] | TextPaths;
 
 	/**
 	 * The text size.
@@ -70019,9 +70019,9 @@ declare class Text {
 	rubyFontSize: number;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -72570,9 +72570,9 @@ declare class Story {
 	kentenFontSize: number;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -73165,9 +73165,9 @@ declare class Story {
 	rubyFontSize: number;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -73615,9 +73615,9 @@ declare class Story {
 	readonly textColumns: TextColumns;
 
 	/**
-	 * Array of text frames or text paths. Can return: Array of TextFrames or TextPaths.
+	 * Array of text frames or text paths.
 	 */
-	readonly textContainers: any[];
+	readonly textContainers: TextFrame[] | TextPaths;
 
 	/**
 	 * A collection of text frames.
@@ -74480,9 +74480,9 @@ declare class ParagraphStyle {
 	kentenFontSize: number;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters.
@@ -75000,9 +75000,9 @@ declare class ParagraphStyle {
 	rubyFontSize: number;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
 	 * If true, uses OpenType Pro fonts for ruby.
@@ -75754,9 +75754,9 @@ declare class CharacterStyle {
 	characterRotation: number | NothingEnum;
 
 	/**
-	 * If true, uses grid tracking to track non-Roman characters in CJK grids. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses grid tracking to track non-Roman characters in CJK grids.
 	 */
-	cjkGridTracking: any;
+	cjkGridTracking: Boolean | NothingEnum;
 
 	/**
 	 * Position of diacriticical characters. Can return: DiacriticPositionOptions enumerator or NothingEnum enumerator.
@@ -75769,9 +75769,9 @@ declare class CharacterStyle {
 	digitsType: any;
 
 	/**
-	 * Emit CSS. Can return: Boolean or NothingEnum enumerator.
+	 * Emit CSS.
 	 */
-	emitCss: any;
+	emitCss: Boolean | NothingEnum;
 
 	/**
 	 * The stroke join type applied to the characters of the text. Can return: OutlineJoin enumerator or NothingEnum enumerator.
@@ -75799,9 +75799,9 @@ declare class CharacterStyle {
 	fillTint: number | NothingEnum;
 
 	/**
-	 * The name of the font style. Can return: String or NothingEnum enumerator.
+	 * The name of the font style.
 	 */
-	fontStyle: any;
+	fontStyle: String | NothingEnum;
 
 	/**
 	 * The glyph variant to substitute for standard glyphs. Can return: AlternateGlyphForms enumerator or NothingEnum enumerator.
@@ -75849,9 +75849,9 @@ declare class CharacterStyle {
 	readonly id: number;
 
 	/**
-	 * If true, the style was imported from another document. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the style was imported from another document.
 	 */
-	readonly imported: any;
+	readonly imported: Boolean | NothingEnum;
 
 	/**
 	 * The index of the CharacterStyle within its containing object.
@@ -75884,9 +75884,9 @@ declare class CharacterStyle {
 	kentenCharacterSet: any;
 
 	/**
-	 * The character used for kenten. Note: Valid only when kenten kind is custom. Can return: String or NothingEnum enumerator.
+	 * The character used for kenten. Note: Valid only when kenten kind is custom.
 	 */
-	kentenCustomCharacter: any;
+	kentenCustomCharacter: String | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of kenten characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -75904,9 +75904,9 @@ declare class CharacterStyle {
 	kentenFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of kenten characters. Can return: String or NothingEnum enumerator.
+	 * The font style of kenten characters.
 	 */
-	kentenFontStyle: any;
+	kentenFontStyle: String | NothingEnum;
 
 	/**
 	 * The style of kenten characters. Can return: KentenCharacter enumerator or NothingEnum enumerator.
@@ -75964,9 +75964,9 @@ declare class CharacterStyle {
 	kentenYScale: number | NothingEnum;
 
 	/**
-	 * The type of pair kerning. Can return: String or NothingEnum enumerator.
+	 * The type of pair kerning.
 	 */
-	kerningMethod: any;
+	kerningMethod: String | NothingEnum;
 
 	/**
 	 * The keyboard direction of the character. Can return: CharacterDirectionOptions enumerator or NothingEnum enumerator.
@@ -75989,9 +75989,9 @@ declare class CharacterStyle {
 	leadingAki: number | NothingEnum;
 
 	/**
-	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters. Can return: Boolean or NothingEnum enumerator.
+	 * If true, replaces specific character combinations (e.g., fl, fi) with ligature characters.
 	 */
-	ligatures: any;
+	ligatures: Boolean | NothingEnum;
 
 	/**
 	 * The limit of the ratio of stroke width to miter length before a miter (pointed) join becomes a bevel (squared-off) join. Can return: Real (0 - 1000) or NothingEnum enumerator.
@@ -76004,19 +76004,19 @@ declare class CharacterStyle {
 	name: string;
 
 	/**
-	 * If true, keeps the text on the same line. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, keeps the text on the same line. .
 	 */
-	noBreak: any;
+	noBreak: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses contextual alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses contextual alternate forms in OpenType fonts.
 	 */
-	otfContextualAlternate: any;
+	otfContextualAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses discretionary ligatures in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses discretionary ligatures in OpenType fonts.
 	 */
-	otfDiscretionaryLigature: any;
+	otfDiscretionaryLigature: Boolean | NothingEnum;
 
 	/**
 	 * The figure style in OpenType fonts. Can return: OTFFigureStyle enumerator or NothingEnum enumerator.
@@ -76024,69 +76024,69 @@ declare class CharacterStyle {
 	otfFigureStyle: any;
 
 	/**
-	 * If true, uses fractions in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses fractions in OpenType fonts.
 	 */
-	otfFraction: any;
+	otfFraction: Boolean | NothingEnum;
 
 	/**
-	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, switches hiragana fonts, which have different glyphs for horizontal and vertical. .
 	 */
-	otfHVKana: any;
+	otfHVKana: Boolean | NothingEnum;
 
 	/**
-	 * If true, use historical forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use historical forms in OpenType fonts.
 	 */
-	otfHistorical: any;
+	otfHistorical: Boolean | NothingEnum;
 
 	/**
-	 * If true, use alternate justification forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use alternate justification forms in OpenType fonts.
 	 */
-	otfJustificationAlternate: any;
+	otfJustificationAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses localized forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses localized forms in OpenType fonts.
 	 */
-	otfLocale: any;
+	otfLocale: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses mark positioning in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses mark positioning in OpenType fonts.
 	 */
-	otfMark: any;
+	otfMark: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses ordinals in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses ordinals in OpenType fonts.
 	 */
-	otfOrdinal: any;
+	otfOrdinal: Boolean | NothingEnum;
 
 	/**
-	 * If true, use overlapping swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use overlapping swash forms in OpenType fonts.
 	 */
-	otfOverlapSwash: any;
+	otfOverlapSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, kerns according to proportional CJK metrics in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, kerns according to proportional CJK metrics in OpenType fonts.
 	 */
-	otfProportionalMetrics: any;
+	otfProportionalMetrics: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies italics to half-width alphanumerics. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies italics to half-width alphanumerics. .
 	 */
-	otfRomanItalics: any;
+	otfRomanItalics: Boolean | NothingEnum;
 
 	/**
-	 * If true, use a slashed zeroes in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use a slashed zeroes in OpenType fonts.
 	 */
-	otfSlashedZero: any;
+	otfSlashedZero: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stretched alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stretched alternate forms in OpenType fonts.
 	 */
-	otfStretchedAlternate: any;
+	otfStretchedAlternate: Boolean | NothingEnum;
 
 	/**
-	 * If true, use stylistic alternate forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, use stylistic alternate forms in OpenType fonts.
 	 */
-	otfStylisticAlternate: any;
+	otfStylisticAlternate: Boolean | NothingEnum;
 
 	/**
 	 * The stylistic sets to use in OpenType fonts. Can return: Long Integer or NothingEnum enumerator.
@@ -76094,24 +76094,24 @@ declare class CharacterStyle {
 	otfStylisticSets: any;
 
 	/**
-	 * If true, uses swash forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses swash forms in OpenType fonts.
 	 */
-	otfSwash: any;
+	otfSwash: Boolean | NothingEnum;
 
 	/**
-	 * If true, uses titling forms in OpenType fonts. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses titling forms in OpenType fonts.
 	 */
-	otfTitling: any;
+	otfTitling: Boolean | NothingEnum;
 
 	/**
-	 * If true, the fill color of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the fill color of the characters will overprint.
 	 */
-	overprintFill: any;
+	overprintFill: Boolean | NothingEnum;
 
 	/**
-	 * If true, the stroke of the characters will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the stroke of the characters will overprint.
 	 */
-	overprintStroke: any;
+	overprintStroke: Boolean | NothingEnum;
 
 	/**
 	 * The parent of the CharacterStyle (a Document, Application or CharacterStyleGroup).
@@ -76149,19 +76149,19 @@ declare class CharacterStyle {
 	rubyAlignment: any;
 
 	/**
-	 * If true, auto aligns ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, auto aligns ruby.
 	 */
-	rubyAutoAlign: any;
+	rubyAutoAlign: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales ruby to the specified percent of parent text size. For information on specifying a percent, see ruby parent scaling percent. .
 	 */
-	rubyAutoScaling: any;
+	rubyAutoScaling: Boolean | NothingEnum;
 
 	/**
-	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em. Can return: Boolean or NothingEnum enumerator.
+	 * If true, automatically scales glyphs in auto tcy (tate-chuu-yoko) in ruby to fit one em.
 	 */
-	rubyAutoTcyAutoScale: any;
+	rubyAutoTcyAutoScale: Boolean | NothingEnum;
 
 	/**
 	 * The number of digits included in auto tcy (tate-chuu-yoko) in ruby. Can return: Short Integer or NothingEnum enumerator.
@@ -76169,9 +76169,9 @@ declare class CharacterStyle {
 	rubyAutoTcyDigits: any;
 
 	/**
-	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, includes Roman characters in auto tcy (tate-chuu-yoko) in ruby.
 	 */
-	rubyAutoTcyIncludeRoman: any;
+	rubyAutoTcyIncludeRoman: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the fill of ruby characters. Can return: Swatch, String or NothingEnum enumerator.
@@ -76189,19 +76189,19 @@ declare class CharacterStyle {
 	rubyFontSize: number | NothingEnum;
 
 	/**
-	 * The font style of ruby characters. Can return: String or NothingEnum enumerator.
+	 * The font style of ruby characters.
 	 */
-	rubyFontStyle: any;
+	rubyFontStyle: String | NothingEnum;
 
 	/**
-	 * If true, uses OpenType Pro fonts for ruby. Can return: Boolean or NothingEnum enumerator.
+	 * If true, uses OpenType Pro fonts for ruby.
 	 */
-	rubyOpenTypePro: any;
+	rubyOpenTypePro: Boolean | NothingEnum;
 
 	/**
-	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, constrains ruby overhang to the specified amount. For information on specifying an amount, see ruby parent overhang amount. .
 	 */
-	rubyOverhang: any;
+	rubyOverhang: Boolean | NothingEnum;
 
 	/**
 	 * The method of overprinting the ruby fill. Can return: AdornmentOverprint enumerator or NothingEnum enumerator.
@@ -76279,19 +76279,19 @@ declare class CharacterStyle {
 	rubyYScale: number | NothingEnum;
 
 	/**
-	 * If true, the line changes size when characters are scaled. . Can return: Boolean or NothingEnum enumerator.
+	 * If true, the line changes size when characters are scaled. .
 	 */
-	scaleAffectsLineHeight: any;
+	scaleAffectsLineHeight: Boolean | NothingEnum;
 
 	/**
-	 * If true, applies shatai rotation. Can return: Boolean or NothingEnum enumerator.
+	 * If true, applies shatai rotation.
 	 */
-	shataiAdjustRotation: any;
+	shataiAdjustRotation: Boolean | NothingEnum;
 
 	/**
-	 * If true, adjusts shatai tsume. Can return: Boolean or NothingEnum enumerator.
+	 * If true, adjusts shatai tsume.
 	 */
-	shataiAdjustTsume: any;
+	shataiAdjustTsume: Boolean | NothingEnum;
 
 	/**
 	 * The shatai lens angle (in degrees).
@@ -76309,9 +76309,9 @@ declare class CharacterStyle {
 	skew: number | NothingEnum;
 
 	/**
-	 * Split Document (EPUB only). Can return: Boolean or NothingEnum enumerator.
+	 * Split Document (EPUB only).
 	 */
-	splitDocument: any;
+	splitDocument: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the strikethrough stroke. Can return: Swatch, String or NothingEnum enumerator.
@@ -76324,9 +76324,9 @@ declare class CharacterStyle {
 	strikeThroughGapColor: any;
 
 	/**
-	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the strikethrough stroke will overprint. Note: Valid when strike through type is not solid.
 	 */
-	strikeThroughGapOverprint: any;
+	strikeThroughGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke gap color. (Range: 0 to 100) Note: Valid when strike through type is not solid.
@@ -76339,9 +76339,9 @@ declare class CharacterStyle {
 	strikeThroughOffset: number | NothingEnum;
 
 	/**
-	 * If true, the strikethrough stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the strikethrough stroke will overprint.
 	 */
-	strikeThroughOverprint: any;
+	strikeThroughOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the strikethrough stroke. (Range: 0 to 100).
@@ -76359,9 +76359,9 @@ declare class CharacterStyle {
 	strikeThroughWeight: number | NothingEnum;
 
 	/**
-	 * If true, draws a strikethrough line through the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, draws a strikethrough line through the text.
 	 */
-	strikeThru: any;
+	strikeThru: Boolean | NothingEnum;
 
 	/**
 	 * The stroke alignment applied to the text. Can return: TextStrokeAlign enumerator or NothingEnum enumerator.
@@ -76389,14 +76389,14 @@ declare class CharacterStyle {
 	readonly styleExportTagMaps: StyleExportTagMaps;
 
 	/**
-	 * A unique id that can be assigned to a style. This can be used to differentiate between the styles. Internal use only. Can return: String or NothingEnum enumerator.
+	 * A unique id that can be assigned to a style. This can be used to differentiate between the styles. Internal use only.
 	 */
-	styleUniqueId: any;
+	styleUniqueId: String | NothingEnum;
 
 	/**
-	 * If true, makes the character horizontal in vertical text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, makes the character horizontal in vertical text.
 	 */
-	tatechuyoko: any;
+	tatechuyoko: Boolean | NothingEnum;
 
 	/**
 	 * The horizontal offset for horizontal characters in vertical text.
@@ -76424,9 +76424,9 @@ declare class CharacterStyle {
 	tsume: number | NothingEnum;
 
 	/**
-	 * If true, underlines the text. Can return: Boolean or NothingEnum enumerator.
+	 * If true, underlines the text.
 	 */
-	underline: any;
+	underline: Boolean | NothingEnum;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the underline stroke. . Can return: Swatch, String or NothingEnum enumerator.
@@ -76439,9 +76439,9 @@ declare class CharacterStyle {
 	underlineGapColor: any;
 
 	/**
-	 * If true, the gap color of the underline stroke will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the gap color of the underline stroke will overprint.
 	 */
-	underlineGapOverprint: any;
+	underlineGapOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The tint (as a percentage) of the gap color of the underline stroke. (Range: 0 to 100) Note: Valid when underline type is not solid.
@@ -76454,9 +76454,9 @@ declare class CharacterStyle {
 	underlineOffset: number | NothingEnum;
 
 	/**
-	 * If true, the underline stroke color will overprint. Can return: Boolean or NothingEnum enumerator.
+	 * If true, the underline stroke color will overprint.
 	 */
-	underlineOverprint: any;
+	underlineOverprint: Boolean | NothingEnum;
 
 	/**
 	 * The underline stroke tint (as a percentage). (Range: 0 to 100).
@@ -76479,9 +76479,9 @@ declare class CharacterStyle {
 	verticalScale: number | NothingEnum;
 
 	/**
-	 * If true, turns on warichu. Can return: Boolean or NothingEnum enumerator.
+	 * If true, turns on warichu.
 	 */
-	warichu: any;
+	warichu: Boolean | NothingEnum;
 
 	/**
 	 * The warichu alignment. Can return: WarichuAlignment enumerator or NothingEnum enumerator.
