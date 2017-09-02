@@ -47154,7 +47154,7 @@ declare class FindTextPreference extends Preference {
 	/**
 	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: String[] | NothingEnum | Condition[];
+	appliedConditions: string[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the FindTextPreference, specified as either a font object or the name of font family.
@@ -48230,7 +48230,7 @@ declare class FindGrepPreference extends Preference {
 	/**
 	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: String[] | NothingEnum | Condition[];
+	appliedConditions: string[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the FindGrepPreference, specified as either a font object or the name of font family.
@@ -50829,7 +50829,7 @@ declare class ChangeTextPreference extends Preference {
 	/**
 	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: String[] | NothingEnum | Condition[];
+	appliedConditions: string[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the ChangeTextPreference, specified as either a font object or the name of font family.
@@ -51915,7 +51915,7 @@ declare class ChangeGrepPreference extends Preference {
 	/**
 	 * The conditions to search for or change to. Specify the "nothing" enum for "Any" or an empty list for "[Unconditional]".
 	 */
-	appliedConditions: String[] | NothingEnum | Condition[];
+	appliedConditions: string[] | NothingEnum | Condition[];
 
 	/**
 	 * The font applied to the ChangeGrepPreference, specified as either a font object or the name of font family.
@@ -63341,7 +63341,7 @@ declare class Cell {
 	/**
 	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on.
 	 */
-	contents: PageItem | string | SpecialCharacters | String[] | SpecialCharacters | PageItems | PageItem | NothingEnum | String[] | SpecialCharacters | NothingEnum | PageItems;
+	contents: PageItem | string | SpecialCharacters | string[] | SpecialCharacters | PageItems | PageItem | NothingEnum | string[] | SpecialCharacters | NothingEnum | PageItems;
 
 	/**
 	 * If true, draws the diagonal line in front of cell contents.
@@ -64330,7 +64330,7 @@ declare class Table {
 	/**
 	 * The contents to place in cells, specified as an array whose first item populates the top left cell and whose second item populates the next cell to the right, and so on until each cell in the top row is populated, at which point the next item populates the left-most cell in the second row, and so on. Note: If the array contains fewer strings than the table contains cells, the remaining cells are left blank.
 	 */
-	contents: String[] | SpecialCharacters | String[] | SpecialCharacters | NothingEnum;
+	contents: string[] | SpecialCharacters | string[] | SpecialCharacters | NothingEnum;
 
 	/**
 	 * If true, then the table will show collapsed in story and galley views.
@@ -65330,7 +65330,7 @@ declare class Column {
 	/**
 	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on.
 	 */
-	contents: PageItem | string | SpecialCharacters | String[] | SpecialCharacters | PageItems | PageItem | NothingEnum | String[] | SpecialCharacters | NothingEnum | PageItems;
+	contents: PageItem | string | SpecialCharacters | string[] | SpecialCharacters | PageItems | PageItem | NothingEnum | string[] | SpecialCharacters | NothingEnum | PageItems;
 
 	/**
 	 * If true, draws the diagonal line in front of cell contents.
@@ -66102,7 +66102,7 @@ declare class Row {
 	/**
 	 * The text contents. For rows or columns, when specified as a string, the sting populates each cell in the row or column; when specified as an array, the first value in the array populates the left-most cell in the row or the top-most cell in the column; the next value populates the next cell to the right (for rows) or the next lowest cell (for columns), and so on.
 	 */
-	contents: PageItem | string | SpecialCharacters | String[] | SpecialCharacters | PageItems | PageItem | NothingEnum | String[] | SpecialCharacters | NothingEnum | PageItems;
+	contents: PageItem | string | SpecialCharacters | string[] | SpecialCharacters | PageItems | PageItem | NothingEnum | string[] | SpecialCharacters | NothingEnum | PageItems;
 
 	/**
 	 * If true, draws the diagonal line in front of cell contents.
@@ -79603,7 +79603,7 @@ declare class Footnote {
 	/**
 	 * The text contents of the footnote.
 	 */
-	contents: string | SpecialCharacters | String[] | SpecialCharacters | NothingEnum | String[] | SpecialCharacters | NothingEnum;
+	contents: string | SpecialCharacters | string[] | SpecialCharacters | NothingEnum | string[] | SpecialCharacters | NothingEnum;
 
 	/**
 	 * EPSTexts
