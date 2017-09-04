@@ -182,6 +182,7 @@ interface $ {
 	writeln(text: any): void;
 
 }
+declare const $: $;
 
 interface ObjectConstructor {
 	readonly prototype: Object;
@@ -552,6 +553,7 @@ interface Math {
 	tan(x: number): number;
 
 }
+declare const Math: Math;
 
 interface DateConstructor {
 	readonly prototype: Date;
@@ -2217,6 +2219,7 @@ interface ReflectionInfo {
 	readonly type: string;
 
 }
+declare const ReflectionInfo: ReflectionInfo;
 
 /**
  * Provides information about a class.
@@ -2279,6 +2282,7 @@ interface Reflection {
 	toXML(): XML;
 
 }
+declare const Reflection: Reflection;
 
 interface QNameConstructor {
 	readonly prototype: QName;
@@ -2628,6 +2632,7 @@ interface XML {
  */
 interface XMLList {
 }
+declare const XMLList: XMLList;
 
 interface UnitValueConstructor {
 	readonly prototype: UnitValue;
