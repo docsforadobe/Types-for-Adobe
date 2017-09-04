@@ -1203,35 +1203,35 @@ interface Number {
 	 * Converts the Number object to a string in scientific notation.
 	 * @param decimals The number of decimals.
 	 */
-	toExponential(decimals: number): number;
+	toExponential(decimals: number): string;
 
 	/**
 	 * Converts the Number object to a string with fixed decimals.
 	 * @param decimals The number of decimals.
 	 */
-	toFixed(decimals: number): number;
+	toFixed(decimals: number): string;
 
 	/**
 	 * Returns the value of a Number object converted to a string, using localized conventions.
 	 */
-	toLocaleString(): number;
+	toLocaleString(): string;
 
 	/**
 	 * Converts the Number object to a string in either scientific or fixed notation, epending on its value.
 	 * @param decimals The number of decimals.
 	 */
-	toPrecision(decimals: number): number;
+	toPrecision(decimals: number): string;
 
 	/**
 	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with built-in classes.
 	 */
-	toSource(): number;
+	toSource(): string;
 
 	/**
 	 * Returns the value of a Number object converted to a string.
 	 * @param radix The optional conversion radix.
 	 */
-	toString(radix?: number): number;
+	toString(radix?: number): string;
 
 	/**
 	 * Returns the value of a Number object as a primitive number.
