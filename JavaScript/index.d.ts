@@ -371,7 +371,7 @@ interface Array<T> {
 	 * @param deleteCount The number of array elements to remove, including start. If omitted, all elements from array index start to the end of the array are removed.
 	 * @param values A list of one or more values to be added to the array starting at index start. Must specify a value for num, to use this argument.
 	 */
-	splice(start: number, deleteCount?: number, ...values): T[];
+	splice(start: number, deleteCount?: number, ...values: T[]): T[];
 
 	/**
 	 * Converts an array to a string and returns the string (localized).
