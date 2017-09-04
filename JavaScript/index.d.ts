@@ -570,7 +570,7 @@ interface DateConstructor {
 	new(): Date;
 	new(value: number): Date;
 	new(value: string): Date;
-	new(year: number, month: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number);
+	new(year: number, month: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number): Date;
 	
 	/**
 	 * Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().
