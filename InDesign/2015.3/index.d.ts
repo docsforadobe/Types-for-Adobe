@@ -34461,7 +34461,7 @@ declare class PageItem {
 	 * @param to The location of the new PageItem, specified in coordinates in the format [x, y].
 	 * @param by Amount by which to offset the new PageItem from the original PageItem's position. 
 	 */
-	duplicate(to: [number | string, number | string] | Spread | Page | Layer, by: string[] | number[]): PageItem;
+	duplicate(to: [number | string, number | string] | Spread | Page | Layer, by?: string[] | number[]): PageItem;
 
 	/**
 	 * Exports the object(s) to a file.
@@ -34522,7 +34522,7 @@ declare class PageItem {
 	 * @param to The new location of the PageItem,in the format (x, y).
 	 * @param by The amount (in measurement units) to move the PageItem relative to its current position, in the format (x, y). 
 	 */
-	move(to: [number | string, number | string] | Spread | Page | Layer, by: string[] | number[]): void;
+	move(to: [number | string, number | string] | Spread | Page | Layer, by?: string[] | number[]): void;
 
 	/**
 	 * Overrides a master page item and places the item on the document page as a new object.
@@ -36621,7 +36621,7 @@ declare class Guide {
 	 * @param to The new location of the guide, in the format [x, y]. 
 	 * @param by The amount to move the guide relative to its current position, in the format [x, y]. 
 	 */
-	move(to: string[] | number[], by: string[] | number[]): void;
+	move(to: string[] | number[], by?: string[] | number[]): void;
 
 	/**
 	 * Overrides a master page item and places the item on the document page as a new object.
