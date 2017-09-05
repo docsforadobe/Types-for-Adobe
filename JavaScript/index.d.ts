@@ -1497,7 +1497,7 @@ interface FileConstructor {
 	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
 	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
 	 */
-	openDialog(prompt: string, filter?: any, multiSelect?: boolean): File;
+	openDialog(prompt?: string, filter?: any, multiSelect?: boolean): File;
 	
 	/**
 	 * Opens a dialog so the user can select a file name to save to.
@@ -1507,7 +1507,7 @@ interface FileConstructor {
 	 * @param prompt The prompt text, displayed if the dialog allows a prompt.
 	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
 	 */
-	saveDialog(prompt: string, filter?: any): File;
+	saveDialog(prompt?: string, filter?: any): File;
 
 }
 declare const File: FileConstructor;
@@ -1688,7 +1688,7 @@ interface File {
 	 * @param filter A filter that limits the types of files displayed in the dialog. In Windows,a filter expression such as "Javascript files:*.jsx;All files:*.*". In Mac OS, a filter function that takes a File instance and returns true if the file should be included in the display, false if it should not.
 	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
 	 */
-	openDlg(prompt: string, filter?: any, multiSelect?: boolean): File;
+	openDlg(prompt?: string, filter?: any, multiSelect?: boolean): File;
 
 	/**
 	 * Reads the contents of the file, starting at the current position.
@@ -1737,7 +1737,7 @@ interface File {
 	 * @param prompt A string containing the prompt text, if the dialog allows a prompt.
 	 * @param filter In Windows only, a filter that limits the types of files displayed in the dialog. In Windows only,a filter expression such as "Javascript files:*.jsx;All files:*.*". Not used In Mac OS.
 	 */
-	saveDlg(prompt: string, filter?: any): File;
+	saveDlg(prompt?: string, filter?: any): File;
 
 	/**
 	 * Seeks to a given position in the file.
@@ -1895,7 +1895,7 @@ interface FolderConstructor {
 	 * If the user cancels, returns null.
 	 * @param prompt The prompt text, if the dialog allows a prompt.
 	 */
-	selectDialog(prompt: string): Folder;
+	selectDialog(prompt?: string): Folder;
 	
 }
 declare const Folder: FolderConstructor;
@@ -2029,7 +2029,7 @@ interface Folder {
 	 * If the user cancels, returns null.
 	 * @param prompt The prompt text, if the dialog allows a prompt.
 	 */
-	selectDlg(prompt: string): Folder;
+	selectDlg(prompt?: string): Folder;
 
 	/**
 	 * Creates and returns a serialized string representation of this object.
