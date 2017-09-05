@@ -2685,7 +2685,9 @@ interface UnitValue {
 
 }
 
-// for TypeScript compatibility
+/**
+ * Only for TypeScript compatibility
+ */
 interface IArguments {
 	[index: number]: any;
 	length: number;
