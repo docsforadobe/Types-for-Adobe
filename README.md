@@ -1,4 +1,6 @@
 # Use TypeScript for Adobe Products
+[github.com/pravdomil/types-for-adobe](https://github.com/pravdomil/types-for-adobe)
+
 ## Prerequisites
 Install [Node.js](https://nodejs.org/en/download/) and [TypeScript](https://www.typescriptlang.org/#download-links).
 
