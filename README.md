@@ -1,5 +1,5 @@
 # Use TypeScript for Adobe Products
-[github.com/pravdomil/types-for-adobe](https://github.com/pravdomil/types-for-adobe)
+[<img src="https://i.imgur.com/VMx9MeE.jpg" width="560" height="315" />](http://youtu.be/h-c7A8pQzx8)
 
 ## Prerequisites
 Install [Node.js](https://nodejs.org/en/download/) and [TypeScript](https://www.typescriptlang.org/#download-links).
