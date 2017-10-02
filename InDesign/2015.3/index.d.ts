@@ -207,7 +207,7 @@ declare class Assignments {
 	/**
 	 * Returns every Assignment in the collection.
 	 */
-	everyItem(): Assignment[];
+	everyItem(): Assignment;
 
 	/**
 	 * Returns the first Assignment in the collection.
@@ -408,7 +408,7 @@ declare class AssignedStories {
 	/**
 	 * Returns every AssignedStory in the collection.
 	 */
-	everyItem(): AssignedStory[];
+	everyItem(): AssignedStory;
 
 	/**
 	 * Returns the first AssignedStory in the collection.
@@ -771,7 +771,7 @@ declare class EventListeners {
 	/**
 	 * Returns every EventListener in the collection.
 	 */
-	everyItem(): EventListener[];
+	everyItem(): EventListener;
 
 	/**
 	 * Returns the first EventListener in the collection.
@@ -1101,7 +1101,7 @@ declare class Events {
 	/**
 	 * Returns every Event in the collection.
 	 */
-	everyItem(): Event[];
+	everyItem(): Event;
 
 	/**
 	 * Returns the first Event in the collection.
@@ -1337,7 +1337,7 @@ declare class IdleTasks {
 	/**
 	 * Returns every IdleTask in the collection.
 	 */
-	everyItem(): IdleTask[];
+	everyItem(): IdleTask;
 
 	/**
 	 * Returns the first IdleTask in the collection.
@@ -3233,7 +3233,7 @@ declare class BackgroundTasks {
 	/**
 	 * Returns every BackgroundTask in the collection.
 	 */
-	everyItem(): BackgroundTask[];
+	everyItem(): BackgroundTask;
 
 	/**
 	 * Returns the first BackgroundTask in the collection.
@@ -4939,7 +4939,7 @@ declare class Documents {
 	/**
 	 * Returns every Document in the collection.
 	 */
-	everyItem(): Document[];
+	everyItem(): Document;
 
 	/**
 	 * Returns the first Document in the collection.
@@ -5193,7 +5193,7 @@ declare class Windows {
 	/**
 	 * Returns every Window in the collection.
 	 */
-	everyItem(): Window[];
+	everyItem(): Window;
 
 	/**
 	 * Returns the first Window in the collection.
@@ -5353,7 +5353,7 @@ declare class LayoutWindows {
 	/**
 	 * Returns every LayoutWindow in the collection.
 	 */
-	everyItem(): LayoutWindow[];
+	everyItem(): LayoutWindow;
 
 	/**
 	 * Returns the first LayoutWindow in the collection.
@@ -5442,7 +5442,7 @@ declare class StoryWindows {
 	/**
 	 * Returns every StoryWindow in the collection.
 	 */
-	everyItem(): StoryWindow[];
+	everyItem(): StoryWindow;
 
 	/**
 	 * Returns the first StoryWindow in the collection.
@@ -5986,7 +5986,7 @@ declare class Books {
 	/**
 	 * Returns every Book in the collection.
 	 */
-	everyItem(): Book[];
+	everyItem(): Book;
 
 	/**
 	 * Returns the first Book in the collection.
@@ -6232,7 +6232,7 @@ declare class BookContents {
 	/**
 	 * Returns every BookContent in the collection.
 	 */
-	everyItem(): BookContent[];
+	everyItem(): BookContent;
 
 	/**
 	 * Returns the first BookContent in the collection.
@@ -6466,7 +6466,7 @@ declare class Inks {
 	/**
 	 * Returns every Ink in the collection.
 	 */
-	everyItem(): Ink[];
+	everyItem(): Ink;
 
 	/**
 	 * Returns the first Ink in the collection.
@@ -6737,7 +6737,7 @@ declare class TrapPresets {
 	/**
 	 * Returns every TrapPreset in the collection.
 	 */
-	everyItem(): TrapPreset[];
+	everyItem(): TrapPreset;
 
 	/**
 	 * Returns the first TrapPreset in the collection.
@@ -6865,7 +6865,7 @@ declare class MixedInks {
 	/**
 	 * Returns every MixedInk in the collection.
 	 */
-	everyItem(): MixedInk[];
+	everyItem(): MixedInk;
 
 	/**
 	 * Returns the first MixedInk in the collection.
@@ -6980,7 +6980,7 @@ declare class MixedInkGroups {
 	/**
 	 * Returns every MixedInkGroup in the collection.
 	 */
-	everyItem(): MixedInkGroup[];
+	everyItem(): MixedInkGroup;
 
 	/**
 	 * Returns the first MixedInkGroup in the collection.
@@ -7091,7 +7091,7 @@ declare class Gradients {
 	/**
 	 * Returns every Gradient in the collection.
 	 */
-	everyItem(): Gradient[];
+	everyItem(): Gradient;
 
 	/**
 	 * Returns the first Gradient in the collection.
@@ -7273,7 +7273,7 @@ declare class GradientStops {
 	/**
 	 * Returns every GradientStop in the collection.
 	 */
-	everyItem(): GradientStop[];
+	everyItem(): GradientStop;
 
 	/**
 	 * Returns the first GradientStop in the collection.
@@ -7467,7 +7467,7 @@ declare class Swatches {
 	/**
 	 * Returns every Swatch in the collection.
 	 */
-	everyItem(): Swatch[];
+	everyItem(): Swatch;
 
 	/**
 	 * Returns the first Swatch in the collection.
@@ -7583,7 +7583,7 @@ declare class Colors {
 	/**
 	 * Returns every Color in the collection.
 	 */
-	everyItem(): Color[];
+	everyItem(): Color;
 
 	/**
 	 * Returns the first Color in the collection.
@@ -7695,7 +7695,7 @@ declare class Tints {
 	/**
 	 * Returns every Tint in the collection.
 	 */
-	everyItem(): Tint[];
+	everyItem(): Tint;
 
 	/**
 	 * Returns the first Tint in the collection.
@@ -7907,7 +7907,7 @@ declare class ColorGroups {
 	/**
 	 * Returns every ColorGroup in the collection.
 	 */
-	everyItem(): ColorGroup[];
+	everyItem(): ColorGroup;
 
 	/**
 	 * Returns the first ColorGroup in the collection.
@@ -8080,7 +8080,7 @@ declare class ColorGroupSwatches {
 	/**
 	 * Returns every ColorGroupSwatch in the collection.
 	 */
-	everyItem(): ColorGroupSwatch[];
+	everyItem(): ColorGroupSwatch;
 
 	/**
 	 * Returns the first ColorGroupSwatch in the collection.
@@ -8256,7 +8256,7 @@ declare class OpacityGradientStops {
 	/**
 	 * Returns every OpacityGradientStop in the collection.
 	 */
-	everyItem(): OpacityGradientStop[];
+	everyItem(): OpacityGradientStop;
 
 	/**
 	 * Returns the first OpacityGradientStop in the collection.
@@ -8429,7 +8429,7 @@ declare class DataMergeTextPlaceholders {
 	/**
 	 * Returns every DataMergeTextPlaceholder in the collection.
 	 */
-	everyItem(): DataMergeTextPlaceholder[];
+	everyItem(): DataMergeTextPlaceholder;
 
 	/**
 	 * Returns the first DataMergeTextPlaceholder in the collection.
@@ -8591,7 +8591,7 @@ declare class DataMergeImagePlaceholders {
 	/**
 	 * Returns every DataMergeImagePlaceholder in the collection.
 	 */
-	everyItem(): DataMergeImagePlaceholder[];
+	everyItem(): DataMergeImagePlaceholder;
 
 	/**
 	 * Returns the first DataMergeImagePlaceholder in the collection.
@@ -8745,7 +8745,7 @@ declare class DataMergeFields {
 	/**
 	 * Returns every DataMergeField in the collection.
 	 */
-	everyItem(): DataMergeField[];
+	everyItem(): DataMergeField;
 
 	/**
 	 * Returns the first DataMergeField in the collection.
@@ -8907,7 +8907,7 @@ declare class DataMergeQrcodePlaceholders {
 	/**
 	 * Returns every DataMergeQrcodePlaceholder in the collection.
 	 */
-	everyItem(): DataMergeQrcodePlaceholder[];
+	everyItem(): DataMergeQrcodePlaceholder;
 
 	/**
 	 * Returns the first DataMergeQrcodePlaceholder in the collection.
@@ -22162,7 +22162,7 @@ declare class Hyperlinks {
 	/**
 	 * Returns every Hyperlink in the collection.
 	 */
-	everyItem(): Hyperlink[];
+	everyItem(): Hyperlink;
 
 	/**
 	 * Returns the first Hyperlink in the collection.
@@ -22385,7 +22385,7 @@ declare class Bookmarks {
 	/**
 	 * Returns every Bookmark in the collection.
 	 */
-	everyItem(): Bookmark[];
+	everyItem(): Bookmark;
 
 	/**
 	 * Returns the first Bookmark in the collection.
@@ -22596,7 +22596,7 @@ declare class HyperlinkPageItemSources {
 	/**
 	 * Returns every HyperlinkPageItemSource in the collection.
 	 */
-	everyItem(): HyperlinkPageItemSource[];
+	everyItem(): HyperlinkPageItemSource;
 
 	/**
 	 * Returns the first HyperlinkPageItemSource in the collection.
@@ -22812,7 +22812,7 @@ declare class HyperlinkTextSources {
 	/**
 	 * Returns every HyperlinkTextSource in the collection.
 	 */
-	everyItem(): HyperlinkTextSource[];
+	everyItem(): HyperlinkTextSource;
 
 	/**
 	 * Returns the first HyperlinkTextSource in the collection.
@@ -23023,7 +23023,7 @@ declare class HyperlinkTextDestinations {
 	/**
 	 * Returns every HyperlinkTextDestination in the collection.
 	 */
-	everyItem(): HyperlinkTextDestination[];
+	everyItem(): HyperlinkTextDestination;
 
 	/**
 	 * Returns the first HyperlinkTextDestination in the collection.
@@ -23254,7 +23254,7 @@ declare class HyperlinkPageDestinations {
 	/**
 	 * Returns every HyperlinkPageDestination in the collection.
 	 */
-	everyItem(): HyperlinkPageDestination[];
+	everyItem(): HyperlinkPageDestination;
 
 	/**
 	 * Returns the first HyperlinkPageDestination in the collection.
@@ -23485,7 +23485,7 @@ declare class HyperlinkExternalPageDestinations {
 	/**
 	 * Returns every HyperlinkExternalPageDestination in the collection.
 	 */
-	everyItem(): HyperlinkExternalPageDestination[];
+	everyItem(): HyperlinkExternalPageDestination;
 
 	/**
 	 * Returns the first HyperlinkExternalPageDestination in the collection.
@@ -23696,7 +23696,7 @@ declare class HyperlinkURLDestinations {
 	/**
 	 * Returns every HyperlinkURLDestination in the collection.
 	 */
-	everyItem(): HyperlinkURLDestination[];
+	everyItem(): HyperlinkURLDestination;
 
 	/**
 	 * Returns the first HyperlinkURLDestination in the collection.
@@ -23902,7 +23902,7 @@ declare class CrossReferenceFormats {
 	/**
 	 * Returns every CrossReferenceFormat in the collection.
 	 */
-	everyItem(): CrossReferenceFormat[];
+	everyItem(): CrossReferenceFormat;
 
 	/**
 	 * Returns the first CrossReferenceFormat in the collection.
@@ -24015,7 +24015,7 @@ declare class CrossReferenceSources {
 	/**
 	 * Returns every CrossReferenceSource in the collection.
 	 */
-	everyItem(): CrossReferenceSource[];
+	everyItem(): CrossReferenceSource;
 
 	/**
 	 * Returns the first CrossReferenceSource in the collection.
@@ -24210,7 +24210,7 @@ declare class BuildingBlocks {
 	/**
 	 * Returns every BuildingBlock in the collection.
 	 */
-	everyItem(): BuildingBlock[];
+	everyItem(): BuildingBlock;
 
 	/**
 	 * Returns the first BuildingBlock in the collection.
@@ -24300,7 +24300,7 @@ declare class ParagraphDestinations {
 	/**
 	 * Returns every ParagraphDestination in the collection.
 	 */
-	everyItem(): ParagraphDestination[];
+	everyItem(): ParagraphDestination;
 
 	/**
 	 * Returns the first ParagraphDestination in the collection.
@@ -24537,7 +24537,7 @@ declare class Indexes {
 	/**
 	 * Returns every Index in the collection.
 	 */
-	everyItem(): Index[];
+	everyItem(): Index;
 
 	/**
 	 * Returns the first Index in the collection.
@@ -24853,7 +24853,7 @@ declare class Topics {
 	/**
 	 * Returns every Topic in the collection.
 	 */
-	everyItem(): Topic[];
+	everyItem(): Topic;
 
 	/**
 	 * Returns the first Topic in the collection.
@@ -25060,7 +25060,7 @@ declare class CrossReferences {
 	/**
 	 * Returns every CrossReference in the collection.
 	 */
-	everyItem(): CrossReference[];
+	everyItem(): CrossReference;
 
 	/**
 	 * Returns the first CrossReference in the collection.
@@ -25279,7 +25279,7 @@ declare class PageReferences {
 	/**
 	 * Returns every PageReference in the collection.
 	 */
-	everyItem(): PageReference[];
+	everyItem(): PageReference;
 
 	/**
 	 * Returns the first PageReference in the collection.
@@ -25473,7 +25473,7 @@ declare class IndexSections {
 	/**
 	 * Returns every IndexSection in the collection.
 	 */
-	everyItem(): IndexSection[];
+	everyItem(): IndexSection;
 
 	/**
 	 * Returns the first IndexSection in the collection.
@@ -25592,7 +25592,7 @@ declare class FormFields {
 	/**
 	 * Returns every FormField in the collection.
 	 */
-	everyItem(): FormField[];
+	everyItem(): FormField;
 
 	/**
 	 * Returns the first FormField in the collection.
@@ -25928,7 +25928,7 @@ declare class Buttons {
 	/**
 	 * Returns every Button in the collection.
 	 */
-	everyItem(): Button[];
+	everyItem(): Button;
 
 	/**
 	 * Returns the first Button in the collection.
@@ -26212,7 +26212,7 @@ declare class States {
 	/**
 	 * Returns every State in the collection.
 	 */
-	everyItem(): State[];
+	everyItem(): State;
 
 	/**
 	 * Returns the first State in the collection.
@@ -26439,7 +26439,7 @@ declare class MultiStateObjects {
 	/**
 	 * Returns every MultiStateObject in the collection.
 	 */
-	everyItem(): MultiStateObject[];
+	everyItem(): MultiStateObject;
 
 	/**
 	 * Returns the first MultiStateObject in the collection.
@@ -26765,7 +26765,7 @@ declare class CheckBoxes {
 	/**
 	 * Returns every CheckBox in the collection.
 	 */
-	everyItem(): CheckBox[];
+	everyItem(): CheckBox;
 
 	/**
 	 * Returns the first CheckBox in the collection.
@@ -27096,7 +27096,7 @@ declare class ComboBoxes {
 	/**
 	 * Returns every ComboBox in the collection.
 	 */
-	everyItem(): ComboBox[];
+	everyItem(): ComboBox;
 
 	/**
 	 * Returns the first ComboBox in the collection.
@@ -27432,7 +27432,7 @@ declare class ListBoxes {
 	/**
 	 * Returns every ListBox in the collection.
 	 */
-	everyItem(): ListBox[];
+	everyItem(): ListBox;
 
 	/**
 	 * Returns the first ListBox in the collection.
@@ -27758,7 +27758,7 @@ declare class RadioButtons {
 	/**
 	 * Returns every RadioButton in the collection.
 	 */
-	everyItem(): RadioButton[];
+	everyItem(): RadioButton;
 
 	/**
 	 * Returns the first RadioButton in the collection.
@@ -28094,7 +28094,7 @@ declare class TextBoxes {
 	/**
 	 * Returns every TextBox in the collection.
 	 */
-	everyItem(): TextBox[];
+	everyItem(): TextBox;
 
 	/**
 	 * Returns the first TextBox in the collection.
@@ -28405,7 +28405,7 @@ declare class SignatureFields {
 	/**
 	 * Returns every SignatureField in the collection.
 	 */
-	everyItem(): SignatureField[];
+	everyItem(): SignatureField;
 
 	/**
 	 * Returns the first SignatureField in the collection.
@@ -28631,7 +28631,7 @@ declare class Movies {
 	/**
 	 * Returns every Movie in the collection.
 	 */
-	everyItem(): Movie[];
+	everyItem(): Movie;
 
 	/**
 	 * Returns the first Movie in the collection.
@@ -28813,7 +28813,7 @@ declare class NavigationPoints {
 	/**
 	 * Returns every NavigationPoint in the collection.
 	 */
-	everyItem(): NavigationPoint[];
+	everyItem(): NavigationPoint;
 
 	/**
 	 * Returns the first NavigationPoint in the collection.
@@ -29004,7 +29004,7 @@ declare class Sounds {
 	/**
 	 * Returns every Sound in the collection.
 	 */
-	everyItem(): Sound[];
+	everyItem(): Sound;
 
 	/**
 	 * Returns the first Sound in the collection.
@@ -29203,7 +29203,7 @@ declare class Behaviors {
 	/**
 	 * Returns every Behavior in the collection.
 	 */
-	everyItem(): Behavior[];
+	everyItem(): Behavior;
 
 	/**
 	 * Returns the first Behavior in the collection.
@@ -29309,7 +29309,7 @@ declare class GotoFirstPageBehaviors {
 	/**
 	 * Returns every GotoFirstPageBehavior in the collection.
 	 */
-	everyItem(): GotoFirstPageBehavior[];
+	everyItem(): GotoFirstPageBehavior;
 
 	/**
 	 * Returns the first GotoFirstPageBehavior in the collection.
@@ -29415,7 +29415,7 @@ declare class GotoLastPageBehaviors {
 	/**
 	 * Returns every GotoLastPageBehavior in the collection.
 	 */
-	everyItem(): GotoLastPageBehavior[];
+	everyItem(): GotoLastPageBehavior;
 
 	/**
 	 * Returns the first GotoLastPageBehavior in the collection.
@@ -29521,7 +29521,7 @@ declare class GotoNextPageBehaviors {
 	/**
 	 * Returns every GotoNextPageBehavior in the collection.
 	 */
-	everyItem(): GotoNextPageBehavior[];
+	everyItem(): GotoNextPageBehavior;
 
 	/**
 	 * Returns the first GotoNextPageBehavior in the collection.
@@ -29627,7 +29627,7 @@ declare class GotoPreviousPageBehaviors {
 	/**
 	 * Returns every GotoPreviousPageBehavior in the collection.
 	 */
-	everyItem(): GotoPreviousPageBehavior[];
+	everyItem(): GotoPreviousPageBehavior;
 
 	/**
 	 * Returns the first GotoPreviousPageBehavior in the collection.
@@ -29733,7 +29733,7 @@ declare class GotoNextViewBehaviors {
 	/**
 	 * Returns every GotoNextViewBehavior in the collection.
 	 */
-	everyItem(): GotoNextViewBehavior[];
+	everyItem(): GotoNextViewBehavior;
 
 	/**
 	 * Returns the first GotoNextViewBehavior in the collection.
@@ -29839,7 +29839,7 @@ declare class GotoPreviousViewBehaviors {
 	/**
 	 * Returns every GotoPreviousViewBehavior in the collection.
 	 */
-	everyItem(): GotoPreviousViewBehavior[];
+	everyItem(): GotoPreviousViewBehavior;
 
 	/**
 	 * Returns the first GotoPreviousViewBehavior in the collection.
@@ -29945,7 +29945,7 @@ declare class GotoURLBehaviors {
 	/**
 	 * Returns every GotoURLBehavior in the collection.
 	 */
-	everyItem(): GotoURLBehavior[];
+	everyItem(): GotoURLBehavior;
 
 	/**
 	 * Returns the first GotoURLBehavior in the collection.
@@ -30061,7 +30061,7 @@ declare class MovieBehaviors {
 	/**
 	 * Returns every MovieBehavior in the collection.
 	 */
-	everyItem(): MovieBehavior[];
+	everyItem(): MovieBehavior;
 
 	/**
 	 * Returns the first MovieBehavior in the collection.
@@ -30172,7 +30172,7 @@ declare class ShowHideFieldsBehaviors {
 	/**
 	 * Returns every ShowHideFieldsBehavior in the collection.
 	 */
-	everyItem(): ShowHideFieldsBehavior[];
+	everyItem(): ShowHideFieldsBehavior;
 
 	/**
 	 * Returns the first ShowHideFieldsBehavior in the collection.
@@ -30288,7 +30288,7 @@ declare class AnimationBehaviors {
 	/**
 	 * Returns every AnimationBehavior in the collection.
 	 */
-	everyItem(): AnimationBehavior[];
+	everyItem(): AnimationBehavior;
 
 	/**
 	 * Returns the first AnimationBehavior in the collection.
@@ -30394,7 +30394,7 @@ declare class OpenFileBehaviors {
 	/**
 	 * Returns every OpenFileBehavior in the collection.
 	 */
-	everyItem(): OpenFileBehavior[];
+	everyItem(): OpenFileBehavior;
 
 	/**
 	 * Returns the first OpenFileBehavior in the collection.
@@ -30505,7 +30505,7 @@ declare class GotoNextStateBehaviors {
 	/**
 	 * Returns every GotoNextStateBehavior in the collection.
 	 */
-	everyItem(): GotoNextStateBehavior[];
+	everyItem(): GotoNextStateBehavior;
 
 	/**
 	 * Returns the first GotoNextStateBehavior in the collection.
@@ -30616,7 +30616,7 @@ declare class GotoPreviousStateBehaviors {
 	/**
 	 * Returns every GotoPreviousStateBehavior in the collection.
 	 */
-	everyItem(): GotoPreviousStateBehavior[];
+	everyItem(): GotoPreviousStateBehavior;
 
 	/**
 	 * Returns the first GotoPreviousStateBehavior in the collection.
@@ -30732,7 +30732,7 @@ declare class GotoStateBehaviors {
 	/**
 	 * Returns every GotoStateBehavior in the collection.
 	 */
-	everyItem(): GotoStateBehavior[];
+	everyItem(): GotoStateBehavior;
 
 	/**
 	 * Returns the first GotoStateBehavior in the collection.
@@ -30838,7 +30838,7 @@ declare class ViewZoomBehaviors {
 	/**
 	 * Returns every ViewZoomBehavior in the collection.
 	 */
-	everyItem(): ViewZoomBehavior[];
+	everyItem(): ViewZoomBehavior;
 
 	/**
 	 * Returns the first ViewZoomBehavior in the collection.
@@ -30949,7 +30949,7 @@ declare class SoundBehaviors {
 	/**
 	 * Returns every SoundBehavior in the collection.
 	 */
-	everyItem(): SoundBehavior[];
+	everyItem(): SoundBehavior;
 
 	/**
 	 * Returns the first SoundBehavior in the collection.
@@ -31070,7 +31070,7 @@ declare class GotoAnchorBehaviors {
 	/**
 	 * Returns every GotoAnchorBehavior in the collection.
 	 */
-	everyItem(): GotoAnchorBehavior[];
+	everyItem(): GotoAnchorBehavior;
 
 	/**
 	 * Returns the first GotoAnchorBehavior in the collection.
@@ -31181,7 +31181,7 @@ declare class GotoPageBehaviors {
 	/**
 	 * Returns every GotoPageBehavior in the collection.
 	 */
-	everyItem(): GotoPageBehavior[];
+	everyItem(): GotoPageBehavior;
 
 	/**
 	 * Returns the first GotoPageBehavior in the collection.
@@ -31282,7 +31282,7 @@ declare class ClearFormBehaviors {
 	/**
 	 * Returns every ClearFormBehavior in the collection.
 	 */
-	everyItem(): ClearFormBehavior[];
+	everyItem(): ClearFormBehavior;
 
 	/**
 	 * Returns the first ClearFormBehavior in the collection.
@@ -31383,7 +31383,7 @@ declare class PrintFormBehaviors {
 	/**
 	 * Returns every PrintFormBehavior in the collection.
 	 */
-	everyItem(): PrintFormBehavior[];
+	everyItem(): PrintFormBehavior;
 
 	/**
 	 * Returns the first PrintFormBehavior in the collection.
@@ -31489,7 +31489,7 @@ declare class SubmitFormBehaviors {
 	/**
 	 * Returns every SubmitFormBehavior in the collection.
 	 */
-	everyItem(): SubmitFormBehavior[];
+	everyItem(): SubmitFormBehavior;
 
 	/**
 	 * Returns the first SubmitFormBehavior in the collection.
@@ -31683,7 +31683,7 @@ declare class TimingLists {
 	/**
 	 * Returns every TimingList in the collection.
 	 */
-	everyItem(): TimingList[];
+	everyItem(): TimingList;
 
 	/**
 	 * Returns the first TimingList in the collection.
@@ -31872,7 +31872,7 @@ declare class TimingGroups {
 	/**
 	 * Returns every TimingGroup in the collection.
 	 */
-	everyItem(): TimingGroup[];
+	everyItem(): TimingGroup;
 
 	/**
 	 * Returns the first TimingGroup in the collection.
@@ -32056,7 +32056,7 @@ declare class TimingTargets {
 	/**
 	 * Returns every TimingTarget in the collection.
 	 */
-	everyItem(): TimingTarget[];
+	everyItem(): TimingTarget;
 
 	/**
 	 * Returns the first TimingTarget in the collection.
@@ -32397,7 +32397,7 @@ declare class Layers {
 	/**
 	 * Returns every Layer in the collection.
 	 */
-	everyItem(): Layer[];
+	everyItem(): Layer;
 
 	/**
 	 * Returns the first Layer in the collection.
@@ -32873,7 +32873,7 @@ declare class Spreads {
 	/**
 	 * Returns every Spread in the collection.
 	 */
-	everyItem(): Spread[];
+	everyItem(): Spread;
 
 	/**
 	 * Returns the first Spread in the collection.
@@ -33395,7 +33395,7 @@ declare class Pages {
 	/**
 	 * Returns every Page in the collection.
 	 */
-	everyItem(): Page[];
+	everyItem(): Page;
 
 	/**
 	 * Returns the first Page in the collection.
@@ -33838,7 +33838,7 @@ declare class MasterSpreads {
 	/**
 	 * Returns every MasterSpread in the collection.
 	 */
-	everyItem(): MasterSpread[];
+	everyItem(): MasterSpread;
 
 	/**
 	 * Returns the first MasterSpread in the collection.
@@ -34683,7 +34683,7 @@ declare class PageItems {
 	/**
 	 * Returns every PageItem in the collection.
 	 */
-	everyItem(): PageItem[];
+	everyItem(): PageItem;
 
 	/**
 	 * Returns the first PageItem in the collection.
@@ -34807,7 +34807,7 @@ declare class Ovals {
 	/**
 	 * Returns every Oval in the collection.
 	 */
-	everyItem(): Oval[];
+	everyItem(): Oval;
 
 	/**
 	 * Returns the first Oval in the collection.
@@ -34931,7 +34931,7 @@ declare class Rectangles {
 	/**
 	 * Returns every Rectangle in the collection.
 	 */
-	everyItem(): Rectangle[];
+	everyItem(): Rectangle;
 
 	/**
 	 * Returns the first Rectangle in the collection.
@@ -35035,7 +35035,7 @@ declare class GraphicLines {
 	/**
 	 * Returns every GraphicLine in the collection.
 	 */
-	everyItem(): GraphicLine[];
+	everyItem(): GraphicLine;
 
 	/**
 	 * Returns the first GraphicLine in the collection.
@@ -35161,7 +35161,7 @@ declare class Polygons {
 	/**
 	 * Returns every Polygon in the collection.
 	 */
-	everyItem(): Polygon[];
+	everyItem(): Polygon;
 
 	/**
 	 * Returns the first Polygon in the collection.
@@ -35398,7 +35398,7 @@ declare class Groups {
 	/**
 	 * Returns every Group in the collection.
 	 */
-	everyItem(): Group[];
+	everyItem(): Group;
 
 	/**
 	 * Returns the first Group in the collection.
@@ -35538,7 +35538,7 @@ declare class Images {
 	/**
 	 * Returns every Image in the collection.
 	 */
-	everyItem(): Image[];
+	everyItem(): Image;
 
 	/**
 	 * Returns the first Image in the collection.
@@ -35668,7 +35668,7 @@ declare class EPSs {
 	/**
 	 * Returns every EPS in the collection.
 	 */
-	everyItem(): EPS[];
+	everyItem(): EPS;
 
 	/**
 	 * Returns the first EPS in the collection.
@@ -35793,7 +35793,7 @@ declare class PDFs {
 	/**
 	 * Returns every PDF in the collection.
 	 */
-	everyItem(): PDF[];
+	everyItem(): PDF;
 
 	/**
 	 * Returns the first PDF in the collection.
@@ -35893,7 +35893,7 @@ declare class WMFs {
 	/**
 	 * Returns every WMF in the collection.
 	 */
-	everyItem(): WMF[];
+	everyItem(): WMF;
 
 	/**
 	 * Returns the first WMF in the collection.
@@ -35993,7 +35993,7 @@ declare class PICTs {
 	/**
 	 * Returns every PICT in the collection.
 	 */
-	everyItem(): PICT[];
+	everyItem(): PICT;
 
 	/**
 	 * Returns the first PICT in the collection.
@@ -36104,7 +36104,7 @@ declare class Graphics {
 	/**
 	 * Returns every Graphic in the collection.
 	 */
-	everyItem(): Graphic[];
+	everyItem(): Graphic;
 
 	/**
 	 * Returns the first Graphic in the collection.
@@ -36365,7 +36365,7 @@ declare class TransformationMatrices {
 	/**
 	 * Returns every TransformationMatrix in the collection.
 	 */
-	everyItem(): TransformationMatrix[];
+	everyItem(): TransformationMatrix;
 
 	/**
 	 * Returns the first TransformationMatrix in the collection.
@@ -36714,7 +36714,7 @@ declare class Guides {
 	/**
 	 * Returns every Guide in the collection.
 	 */
-	everyItem(): Guide[];
+	everyItem(): Guide;
 
 	/**
 	 * Returns the first Guide in the collection.
@@ -37042,7 +37042,7 @@ declare class Sections {
 	/**
 	 * Returns every Section in the collection.
 	 */
-	everyItem(): Section[];
+	everyItem(): Section;
 
 	/**
 	 * Returns the first Section in the collection.
@@ -37229,7 +37229,7 @@ declare class Paths {
 	/**
 	 * Returns every Path in the collection.
 	 */
-	everyItem(): Path[];
+	everyItem(): Path;
 
 	/**
 	 * Returns the first Path in the collection.
@@ -37411,7 +37411,7 @@ declare class PathPoints {
 	/**
 	 * Returns every PathPoint in the collection.
 	 */
-	everyItem(): PathPoint[];
+	everyItem(): PathPoint;
 
 	/**
 	 * Returns the first PathPoint in the collection.
@@ -37749,7 +37749,7 @@ declare class SplineItems {
 	/**
 	 * Returns every SplineItem in the collection.
 	 */
-	everyItem(): SplineItem[];
+	everyItem(): SplineItem;
 
 	/**
 	 * Returns the first SplineItem in the collection.
@@ -37876,7 +37876,7 @@ declare class EPSTexts {
 	/**
 	 * Returns every EPSText in the collection.
 	 */
-	everyItem(): EPSText[];
+	everyItem(): EPSText;
 
 	/**
 	 * Returns the first EPSText in the collection.
@@ -38002,7 +38002,7 @@ declare class ImportedPages {
 	/**
 	 * Returns every ImportedPage in the collection.
 	 */
-	everyItem(): ImportedPage[];
+	everyItem(): ImportedPage;
 
 	/**
 	 * Returns the first ImportedPage in the collection.
@@ -38107,7 +38107,7 @@ declare class MediaItems {
 	/**
 	 * Returns every MediaItem in the collection.
 	 */
-	everyItem(): MediaItem[];
+	everyItem(): MediaItem;
 
 	/**
 	 * Returns the first MediaItem in the collection.
@@ -38421,7 +38421,7 @@ declare class Snippets {
 	/**
 	 * Returns every Snippet in the collection.
 	 */
-	everyItem(): Snippet[];
+	everyItem(): Snippet;
 
 	/**
 	 * Returns the first Snippet in the collection.
@@ -38633,7 +38633,7 @@ declare class MotionPresets {
 	/**
 	 * Returns every MotionPreset in the collection.
 	 */
-	everyItem(): MotionPreset[];
+	everyItem(): MotionPreset;
 
 	/**
 	 * Returns the first MotionPreset in the collection.
@@ -38854,7 +38854,7 @@ declare class Articles {
 	/**
 	 * Returns every Article in the collection.
 	 */
-	everyItem(): Article[];
+	everyItem(): Article;
 
 	/**
 	 * Returns the first Article in the collection.
@@ -39041,7 +39041,7 @@ declare class ArticleMembers {
 	/**
 	 * Returns every ArticleMember in the collection.
 	 */
-	everyItem(): ArticleMember[];
+	everyItem(): ArticleMember;
 
 	/**
 	 * Returns the first ArticleMember in the collection.
@@ -39208,7 +39208,7 @@ declare class ArticleChildren {
 	/**
 	 * Returns every ArticleChild in the collection.
 	 */
-	everyItem(): ArticleChild[];
+	everyItem(): ArticleChild;
 
 	/**
 	 * Returns the first ArticleChild in the collection.
@@ -39316,7 +39316,7 @@ declare class HtmlItems {
 	/**
 	 * Returns every HtmlItem in the collection.
 	 */
-	everyItem(): HtmlItem[];
+	everyItem(): HtmlItem;
 
 	/**
 	 * Returns the first HtmlItem in the collection.
@@ -39516,7 +39516,7 @@ declare class Libraries {
 	/**
 	 * Returns every Library in the collection.
 	 */
-	everyItem(): Library[];
+	everyItem(): Library;
 
 	/**
 	 * Returns the first Library in the collection.
@@ -39726,7 +39726,7 @@ declare class Assets {
 	/**
 	 * Returns every Asset in the collection.
 	 */
-	everyItem(): Asset[];
+	everyItem(): Asset;
 
 	/**
 	 * Returns the first Asset in the collection.
@@ -40104,7 +40104,7 @@ declare class Links {
 	/**
 	 * Returns every Link in the collection.
 	 */
-	everyItem(): Link[];
+	everyItem(): Link;
 
 	/**
 	 * Returns the first Link in the collection.
@@ -40717,7 +40717,7 @@ declare class ObjectStyles {
 	/**
 	 * Returns every ObjectStyle in the collection.
 	 */
-	everyItem(): ObjectStyle[];
+	everyItem(): ObjectStyle;
 
 	/**
 	 * Returns the first ObjectStyle in the collection.
@@ -40908,7 +40908,7 @@ declare class ObjectStyleExportTagMaps {
 	/**
 	 * Returns every ObjectStyleExportTagMap in the collection.
 	 */
-	everyItem(): ObjectStyleExportTagMap[];
+	everyItem(): ObjectStyleExportTagMap;
 
 	/**
 	 * Returns the first ObjectStyleExportTagMap in the collection.
@@ -43326,7 +43326,7 @@ declare class DocumentPresets {
 	/**
 	 * Returns every DocumentPreset in the collection.
 	 */
-	everyItem(): DocumentPreset[];
+	everyItem(): DocumentPreset;
 
 	/**
 	 * Returns the first DocumentPreset in the collection.
@@ -44766,7 +44766,7 @@ declare class GraphicLayers {
 	/**
 	 * Returns every GraphicLayer in the collection.
 	 */
-	everyItem(): GraphicLayer[];
+	everyItem(): GraphicLayer;
 
 	/**
 	 * Returns the first GraphicLayer in the collection.
@@ -45730,7 +45730,7 @@ declare class PDFExportPresets {
 	/**
 	 * Returns every PDFExportPreset in the collection.
 	 */
-	everyItem(): PDFExportPreset[];
+	everyItem(): PDFExportPreset;
 
 	/**
 	 * Returns the first PDFExportPreset in the collection.
@@ -46705,7 +46705,7 @@ declare class Preferences {
 	/**
 	 * Returns every Preference in the collection.
 	 */
-	everyItem(): Preference[];
+	everyItem(): Preference;
 
 	/**
 	 * Returns the first Preference in the collection.
@@ -55094,7 +55094,7 @@ declare class PrinterPresets {
 	/**
 	 * Returns every PrinterPreset in the collection.
 	 */
-	everyItem(): PrinterPreset[];
+	everyItem(): PrinterPreset;
 
 	/**
 	 * Returns the first PrinterPreset in the collection.
@@ -56467,7 +56467,7 @@ declare class FlattenerPresets {
 	/**
 	 * Returns every FlattenerPreset in the collection.
 	 */
-	everyItem(): FlattenerPreset[];
+	everyItem(): FlattenerPreset;
 
 	/**
 	 * Returns the first FlattenerPreset in the collection.
@@ -58162,7 +58162,7 @@ declare class DisplaySettings {
 	/**
 	 * Returns every DisplaySetting in the collection.
 	 */
-	everyItem(): DisplaySetting[];
+	everyItem(): DisplaySetting;
 
 	/**
 	 * Returns the first DisplaySetting in the collection.
@@ -60515,7 +60515,7 @@ declare class ParaStyleMappings {
 	/**
 	 * Returns every ParaStyleMapping in the collection.
 	 */
-	everyItem(): ParaStyleMapping[];
+	everyItem(): ParaStyleMapping;
 
 	/**
 	 * Returns the first ParaStyleMapping in the collection.
@@ -60688,7 +60688,7 @@ declare class CellStyleMappings {
 	/**
 	 * Returns every CellStyleMapping in the collection.
 	 */
-	everyItem(): CellStyleMapping[];
+	everyItem(): CellStyleMapping;
 
 	/**
 	 * Returns the first CellStyleMapping in the collection.
@@ -60861,7 +60861,7 @@ declare class CharStyleMappings {
 	/**
 	 * Returns every CharStyleMapping in the collection.
 	 */
-	everyItem(): CharStyleMapping[];
+	everyItem(): CharStyleMapping;
 
 	/**
 	 * Returns the first CharStyleMapping in the collection.
@@ -61034,7 +61034,7 @@ declare class TableStyleMappings {
 	/**
 	 * Returns every TableStyleMapping in the collection.
 	 */
-	everyItem(): TableStyleMapping[];
+	everyItem(): TableStyleMapping;
 
 	/**
 	 * Returns the first TableStyleMapping in the collection.
@@ -61239,7 +61239,7 @@ declare class PreflightRules {
 	/**
 	 * Returns every PreflightRule in the collection.
 	 */
-	everyItem(): PreflightRule[];
+	everyItem(): PreflightRule;
 
 	/**
 	 * Returns the first PreflightRule in the collection.
@@ -61429,7 +61429,7 @@ declare class RuleDataObjects {
 	/**
 	 * Returns every RuleDataObject in the collection.
 	 */
-	everyItem(): RuleDataObject[];
+	everyItem(): RuleDataObject;
 
 	/**
 	 * Returns the first RuleDataObject in the collection.
@@ -61531,7 +61531,7 @@ declare class PreflightRuleInstances {
 	/**
 	 * Returns every PreflightRuleInstance in the collection.
 	 */
-	everyItem(): PreflightRuleInstance[];
+	everyItem(): PreflightRuleInstance;
 
 	/**
 	 * Returns the first PreflightRuleInstance in the collection.
@@ -61763,7 +61763,7 @@ declare class PreflightProfiles {
 	/**
 	 * Returns every PreflightProfile in the collection.
 	 */
-	everyItem(): PreflightProfile[];
+	everyItem(): PreflightProfile;
 
 	/**
 	 * Returns the first PreflightProfile in the collection.
@@ -61976,7 +61976,7 @@ declare class PreflightProcesses {
 	/**
 	 * Returns every PreflightProcess in the collection.
 	 */
-	everyItem(): PreflightProcess[];
+	everyItem(): PreflightProcess;
 
 	/**
 	 * Returns the first PreflightProcess in the collection.
@@ -62175,7 +62175,7 @@ declare class PreflightProfileRules {
 	/**
 	 * Returns every PreflightProfileRule in the collection.
 	 */
-	everyItem(): PreflightProfileRule[];
+	everyItem(): PreflightProfileRule;
 
 	/**
 	 * Returns the first PreflightProfileRule in the collection.
@@ -62357,7 +62357,7 @@ declare class StrokeStyles {
 	/**
 	 * Returns every StrokeStyle in the collection.
 	 */
-	everyItem(): StrokeStyle[];
+	everyItem(): StrokeStyle;
 
 	/**
 	 * Returns the first StrokeStyle in the collection.
@@ -62473,7 +62473,7 @@ declare class DashedStrokeStyles {
 	/**
 	 * Returns every DashedStrokeStyle in the collection.
 	 */
-	everyItem(): DashedStrokeStyle[];
+	everyItem(): DashedStrokeStyle;
 
 	/**
 	 * Returns the first DashedStrokeStyle in the collection.
@@ -62584,7 +62584,7 @@ declare class DottedStrokeStyles {
 	/**
 	 * Returns every DottedStrokeStyle in the collection.
 	 */
-	everyItem(): DottedStrokeStyle[];
+	everyItem(): DottedStrokeStyle;
 
 	/**
 	 * Returns the first DottedStrokeStyle in the collection.
@@ -62690,7 +62690,7 @@ declare class StripedStrokeStyles {
 	/**
 	 * Returns every StripedStrokeStyle in the collection.
 	 */
-	everyItem(): StripedStrokeStyle[];
+	everyItem(): StripedStrokeStyle;
 
 	/**
 	 * Returns the first StripedStrokeStyle in the collection.
@@ -62940,7 +62940,7 @@ declare class TOCStyles {
 	/**
 	 * Returns every TOCStyle in the collection.
 	 */
-	everyItem(): TOCStyle[];
+	everyItem(): TOCStyle;
 
 	/**
 	 * Returns the first TOCStyle in the collection.
@@ -63148,7 +63148,7 @@ declare class TOCStyleEntries {
 	/**
 	 * Returns every TOCStyleEntry in the collection.
 	 */
-	everyItem(): TOCStyleEntry[];
+	everyItem(): TOCStyleEntry;
 
 	/**
 	 * Returns the first TOCStyleEntry in the collection.
@@ -64131,7 +64131,7 @@ declare class Cells {
 	/**
 	 * Returns every Cell in the collection.
 	 */
-	everyItem(): Cell[];
+	everyItem(): Cell;
 
 	/**
 	 * Returns the first Cell in the collection.
@@ -65181,7 +65181,7 @@ declare class Tables {
 	/**
 	 * Returns every Table in the collection.
 	 */
-	everyItem(): Table[];
+	everyItem(): Table;
 
 	/**
 	 * Returns the first Table in the collection.
@@ -65959,7 +65959,7 @@ declare class Columns {
 	/**
 	 * Returns every Column in the collection.
 	 */
-	everyItem(): Column[];
+	everyItem(): Column;
 
 	/**
 	 * Returns the first Column in the collection.
@@ -66731,7 +66731,7 @@ declare class Rows {
 	/**
 	 * Returns every Row in the collection.
 	 */
-	everyItem(): Row[];
+	everyItem(): Row;
 
 	/**
 	 * Returns the first Row in the collection.
@@ -67513,7 +67513,7 @@ declare class TableStyles {
 	/**
 	 * Returns every TableStyle in the collection.
 	 */
-	everyItem(): TableStyle[];
+	everyItem(): TableStyle;
 
 	/**
 	 * Returns the first TableStyle in the collection.
@@ -67736,7 +67736,7 @@ declare class TableStyleGroups {
 	/**
 	 * Returns every TableStyleGroup in the collection.
 	 */
-	everyItem(): TableStyleGroup[];
+	everyItem(): TableStyleGroup;
 
 	/**
 	 * Returns the first TableStyleGroup in the collection.
@@ -68299,7 +68299,7 @@ declare class CellStyles {
 	/**
 	 * Returns every CellStyle in the collection.
 	 */
-	everyItem(): CellStyle[];
+	everyItem(): CellStyle;
 
 	/**
 	 * Returns the first CellStyle in the collection.
@@ -68522,7 +68522,7 @@ declare class CellStyleGroups {
 	/**
 	 * Returns every CellStyleGroup in the collection.
 	 */
-	everyItem(): CellStyleGroup[];
+	everyItem(): CellStyleGroup;
 
 	/**
 	 * Returns the first CellStyleGroup in the collection.
@@ -68704,7 +68704,7 @@ declare class NestedLineStyles {
 	/**
 	 * Returns every NestedLineStyle in the collection.
 	 */
-	everyItem(): NestedLineStyle[];
+	everyItem(): NestedLineStyle;
 
 	/**
 	 * Returns the first NestedLineStyle in the collection.
@@ -68869,7 +68869,7 @@ declare class NestedGrepStyles {
 	/**
 	 * Returns every NestedGrepStyle in the collection.
 	 */
-	everyItem(): NestedGrepStyle[];
+	everyItem(): NestedGrepStyle;
 
 	/**
 	 * Returns the first NestedGrepStyle in the collection.
@@ -70921,7 +70921,7 @@ declare class Texts {
 	/**
 	 * Returns every Text in the collection.
 	 */
-	everyItem(): Text[];
+	everyItem(): Text;
 
 	/**
 	 * Returns the first Text in the collection.
@@ -71004,7 +71004,7 @@ declare class Characters {
 	/**
 	 * Returns every Character in the collection.
 	 */
-	everyItem(): Character[];
+	everyItem(): Character;
 
 	/**
 	 * Returns the first Character in the collection.
@@ -71087,7 +71087,7 @@ declare class Words {
 	/**
 	 * Returns every Word in the collection.
 	 */
-	everyItem(): Word[];
+	everyItem(): Word;
 
 	/**
 	 * Returns the first Word in the collection.
@@ -71170,7 +71170,7 @@ declare class Lines {
 	/**
 	 * Returns every Line in the collection.
 	 */
-	everyItem(): Line[];
+	everyItem(): Line;
 
 	/**
 	 * Returns the first Line in the collection.
@@ -71253,7 +71253,7 @@ declare class TextColumns {
 	/**
 	 * Returns every TextColumn in the collection.
 	 */
-	everyItem(): TextColumn[];
+	everyItem(): TextColumn;
 
 	/**
 	 * Returns the first TextColumn in the collection.
@@ -71346,7 +71346,7 @@ declare class Paragraphs {
 	/**
 	 * Returns every Paragraph in the collection.
 	 */
-	everyItem(): Paragraph[];
+	everyItem(): Paragraph;
 
 	/**
 	 * Returns the first Paragraph in the collection.
@@ -71429,7 +71429,7 @@ declare class TextStyleRanges {
 	/**
 	 * Returns every TextStyleRange in the collection.
 	 */
-	everyItem(): TextStyleRange[];
+	everyItem(): TextStyleRange;
 
 	/**
 	 * Returns the first TextStyleRange in the collection.
@@ -71512,7 +71512,7 @@ declare class InsertionPoints {
 	/**
 	 * Returns every InsertionPoint in the collection.
 	 */
-	everyItem(): InsertionPoint[];
+	everyItem(): InsertionPoint;
 
 	/**
 	 * Returns the first InsertionPoint in the collection.
@@ -71968,7 +71968,7 @@ declare class TextFrames {
 	/**
 	 * Returns every TextFrame in the collection.
 	 */
-	everyItem(): TextFrame[];
+	everyItem(): TextFrame;
 
 	/**
 	 * Returns the first TextFrame in the collection.
@@ -74003,7 +74003,7 @@ declare class Stories {
 	/**
 	 * Returns every Story in the collection.
 	 */
-	everyItem(): Story[];
+	everyItem(): Story;
 
 	/**
 	 * Returns the first Story in the collection.
@@ -75647,7 +75647,7 @@ declare class ParagraphStyles {
 	/**
 	 * Returns every ParagraphStyle in the collection.
 	 */
-	everyItem(): ParagraphStyle[];
+	everyItem(): ParagraphStyle;
 
 	/**
 	 * Returns the first ParagraphStyle in the collection.
@@ -76630,7 +76630,7 @@ declare class CharacterStyles {
 	/**
 	 * Returns every CharacterStyle in the collection.
 	 */
-	everyItem(): CharacterStyle[];
+	everyItem(): CharacterStyle;
 
 	/**
 	 * Returns the first CharacterStyle in the collection.
@@ -76817,7 +76817,7 @@ declare class TabStops {
 	/**
 	 * Returns every TabStop in the collection.
 	 */
-	everyItem(): TabStop[];
+	everyItem(): TabStop;
 
 	/**
 	 * Returns the first TabStop in the collection.
@@ -76992,7 +76992,7 @@ declare class NestedStyles {
 	/**
 	 * Returns every NestedStyle in the collection.
 	 */
-	everyItem(): NestedStyle[];
+	everyItem(): NestedStyle;
 
 	/**
 	 * Returns the first NestedStyle in the collection.
@@ -77194,7 +77194,7 @@ declare class Languages {
 	/**
 	 * Returns every Language in the collection.
 	 */
-	everyItem(): Language[];
+	everyItem(): Language;
 
 	/**
 	 * Returns the first Language in the collection.
@@ -77440,7 +77440,7 @@ declare class LanguagesWithVendors {
 	/**
 	 * Returns every LanguageWithVendors in the collection.
 	 */
-	everyItem(): LanguageWithVendors[];
+	everyItem(): LanguageWithVendors;
 
 	/**
 	 * Returns the first LanguageWithVendors in the collection.
@@ -77709,7 +77709,7 @@ declare class Fonts {
 	/**
 	 * Returns every Font in the collection.
 	 */
-	everyItem(): Font[];
+	everyItem(): Font;
 
 	/**
 	 * Returns the first Font in the collection.
@@ -77919,7 +77919,7 @@ declare class KinsokuTables {
 	/**
 	 * Returns every KinsokuTable in the collection.
 	 */
-	everyItem(): KinsokuTable[];
+	everyItem(): KinsokuTable;
 
 	/**
 	 * Returns the first KinsokuTable in the collection.
@@ -78125,7 +78125,7 @@ declare class MojikumiTables {
 	/**
 	 * Returns every MojikumiTable in the collection.
 	 */
-	everyItem(): MojikumiTable[];
+	everyItem(): MojikumiTable;
 
 	/**
 	 * Returns the first MojikumiTable in the collection.
@@ -78310,7 +78310,7 @@ declare class HyphenationExceptions {
 	/**
 	 * Returns every HyphenationException in the collection.
 	 */
-	everyItem(): HyphenationException[];
+	everyItem(): HyphenationException;
 
 	/**
 	 * Returns the first HyphenationException in the collection.
@@ -78489,7 +78489,7 @@ declare class UserDictionaries {
 	/**
 	 * Returns every UserDictionary in the collection.
 	 */
-	everyItem(): UserDictionary[];
+	everyItem(): UserDictionary;
 
 	/**
 	 * Returns the first UserDictionary in the collection.
@@ -78649,7 +78649,7 @@ declare class AutoCorrectTables {
 	/**
 	 * Returns every AutoCorrectTable in the collection.
 	 */
-	everyItem(): AutoCorrectTable[];
+	everyItem(): AutoCorrectTable;
 
 	/**
 	 * Returns the first AutoCorrectTable in the collection.
@@ -78874,7 +78874,7 @@ declare class Changes {
 	/**
 	 * Returns every Change in the collection.
 	 */
-	everyItem(): Change[];
+	everyItem(): Change;
 
 	/**
 	 * Returns the first Change in the collection.
@@ -79235,7 +79235,7 @@ declare class TextPaths {
 	/**
 	 * Returns every TextPath in the collection.
 	 */
-	everyItem(): TextPath[];
+	everyItem(): TextPath;
 
 	/**
 	 * Returns the first TextPath in the collection.
@@ -79519,7 +79519,7 @@ declare class Notes {
 	/**
 	 * Returns every Note in the collection.
 	 */
-	everyItem(): Note[];
+	everyItem(): Note;
 
 	/**
 	 * Returns the first Note in the collection.
@@ -79836,7 +79836,7 @@ declare class Footnotes {
 	/**
 	 * Returns every Footnote in the collection.
 	 */
-	everyItem(): Footnote[];
+	everyItem(): Footnote;
 
 	/**
 	 * Returns the first Footnote in the collection.
@@ -80033,7 +80033,7 @@ declare class TextVariables {
 	/**
 	 * Returns every TextVariable in the collection.
 	 */
-	everyItem(): TextVariable[];
+	everyItem(): TextVariable;
 
 	/**
 	 * Returns the first TextVariable in the collection.
@@ -80244,7 +80244,7 @@ declare class TextVariableInstances {
 	/**
 	 * Returns every TextVariableInstance in the collection.
 	 */
-	everyItem(): TextVariableInstance[];
+	everyItem(): TextVariableInstance;
 
 	/**
 	 * Returns the first TextVariableInstance in the collection.
@@ -80435,7 +80435,7 @@ declare class StyleExportTagMaps {
 	/**
 	 * Returns every StyleExportTagMap in the collection.
 	 */
-	everyItem(): StyleExportTagMap[];
+	everyItem(): StyleExportTagMap;
 
 	/**
 	 * Returns the first StyleExportTagMap in the collection.
@@ -80646,7 +80646,7 @@ declare class ParagraphStyleGroups {
 	/**
 	 * Returns every ParagraphStyleGroup in the collection.
 	 */
-	everyItem(): ParagraphStyleGroup[];
+	everyItem(): ParagraphStyleGroup;
 
 	/**
 	 * Returns the first ParagraphStyleGroup in the collection.
@@ -80869,7 +80869,7 @@ declare class CharacterStyleGroups {
 	/**
 	 * Returns every CharacterStyleGroup in the collection.
 	 */
-	everyItem(): CharacterStyleGroup[];
+	everyItem(): CharacterStyleGroup;
 
 	/**
 	 * Returns the first CharacterStyleGroup in the collection.
@@ -81069,7 +81069,7 @@ declare class CompositeFonts {
 	/**
 	 * Returns every CompositeFont in the collection.
 	 */
-	everyItem(): CompositeFont[];
+	everyItem(): CompositeFont;
 
 	/**
 	 * Returns the first CompositeFont in the collection.
@@ -81309,7 +81309,7 @@ declare class CompositeFontEntries {
 	/**
 	 * Returns every CompositeFontEntry in the collection.
 	 */
-	everyItem(): CompositeFontEntry[];
+	everyItem(): CompositeFontEntry;
 
 	/**
 	 * Returns the first CompositeFontEntry in the collection.
@@ -81514,7 +81514,7 @@ declare class NamedGrids {
 	/**
 	 * Returns every NamedGrid in the collection.
 	 */
-	everyItem(): NamedGrid[];
+	everyItem(): NamedGrid;
 
 	/**
 	 * Returns the first NamedGrid in the collection.
@@ -81690,7 +81690,7 @@ declare class IndexingSortOptions {
 	/**
 	 * Returns every IndexingSortOption in the collection.
 	 */
-	everyItem(): IndexingSortOption[];
+	everyItem(): IndexingSortOption;
 
 	/**
 	 * Returns the first IndexingSortOption in the collection.
@@ -81940,7 +81940,7 @@ declare class NumberingLists {
 	/**
 	 * Returns every NumberingList in the collection.
 	 */
-	everyItem(): NumberingList[];
+	everyItem(): NumberingList;
 
 	/**
 	 * Returns the first NumberingList in the collection.
@@ -82163,7 +82163,7 @@ declare class ObjectStyleGroups {
 	/**
 	 * Returns every ObjectStyleGroup in the collection.
 	 */
-	everyItem(): ObjectStyleGroup[];
+	everyItem(): ObjectStyleGroup;
 
 	/**
 	 * Returns the first ObjectStyleGroup in the collection.
@@ -82379,7 +82379,7 @@ declare class Conditions {
 	/**
 	 * Returns every Condition in the collection.
 	 */
-	everyItem(): Condition[];
+	everyItem(): Condition;
 
 	/**
 	 * Returns the first Condition in the collection.
@@ -82608,7 +82608,7 @@ declare class HiddenTexts {
 	/**
 	 * Returns every HiddenText in the collection.
 	 */
-	everyItem(): HiddenText[];
+	everyItem(): HiddenText;
 
 	/**
 	 * Returns the first HiddenText in the collection.
@@ -82814,7 +82814,7 @@ declare class ConditionSets {
 	/**
 	 * Returns every ConditionSet in the collection.
 	 */
-	everyItem(): ConditionSet[];
+	everyItem(): ConditionSet;
 
 	/**
 	 * Returns the first ConditionSet in the collection.
@@ -83132,7 +83132,7 @@ declare class MenuActions {
 	/**
 	 * Returns every MenuAction in the collection.
 	 */
-	everyItem(): MenuAction[];
+	everyItem(): MenuAction;
 
 	/**
 	 * Returns the first MenuAction in the collection.
@@ -83249,7 +83249,7 @@ declare class ScriptMenuActions {
 	/**
 	 * Returns every ScriptMenuAction in the collection.
 	 */
-	everyItem(): ScriptMenuAction[];
+	everyItem(): ScriptMenuAction;
 
 	/**
 	 * Returns the first ScriptMenuAction in the collection.
@@ -83440,7 +83440,7 @@ declare class Menus {
 	/**
 	 * Returns every Menu in the collection.
 	 */
-	everyItem(): Menu[];
+	everyItem(): Menu;
 
 	/**
 	 * Returns the first Menu in the collection.
@@ -83595,7 +83595,7 @@ declare class MenuElements {
 	/**
 	 * Returns every MenuElement in the collection.
 	 */
-	everyItem(): MenuElement[];
+	everyItem(): MenuElement;
 
 	/**
 	 * Returns the first MenuElement in the collection.
@@ -83722,7 +83722,7 @@ declare class Submenus {
 	/**
 	 * Returns every Submenu in the collection.
 	 */
-	everyItem(): Submenu[];
+	everyItem(): Submenu;
 
 	/**
 	 * Returns the first Submenu in the collection.
@@ -83855,7 +83855,7 @@ declare class MenuItems {
 	/**
 	 * Returns every MenuItem in the collection.
 	 */
-	everyItem(): MenuItem[];
+	everyItem(): MenuItem;
 
 	/**
 	 * Returns the first MenuItem in the collection.
@@ -83963,7 +83963,7 @@ declare class MenuSeparators {
 	/**
 	 * Returns every MenuSeparator in the collection.
 	 */
-	everyItem(): MenuSeparator[];
+	everyItem(): MenuSeparator;
 
 	/**
 	 * Returns the first MenuSeparator in the collection.
@@ -84123,7 +84123,7 @@ declare class Panels {
 	/**
 	 * Returns every Panel in the collection.
 	 */
-	everyItem(): Panel[];
+	everyItem(): Panel;
 
 	/**
 	 * Returns the first Panel in the collection.
@@ -84327,7 +84327,7 @@ declare class Dialogs {
 	/**
 	 * Returns every Dialog in the collection.
 	 */
-	everyItem(): Dialog[];
+	everyItem(): Dialog;
 
 	/**
 	 * Returns the first Dialog in the collection.
@@ -84493,7 +84493,7 @@ declare class Widgets {
 	/**
 	 * Returns every Widget in the collection.
 	 */
-	everyItem(): Widget[];
+	everyItem(): Widget;
 
 	/**
 	 * Returns the first Widget in the collection.
@@ -84593,7 +84593,7 @@ declare class TextEditboxes {
 	/**
 	 * Returns every TextEditbox in the collection.
 	 */
-	everyItem(): TextEditbox[];
+	everyItem(): TextEditbox;
 
 	/**
 	 * Returns the first TextEditbox in the collection.
@@ -84698,7 +84698,7 @@ declare class StaticTexts {
 	/**
 	 * Returns every StaticText in the collection.
 	 */
-	everyItem(): StaticText[];
+	everyItem(): StaticText;
 
 	/**
 	 * Returns the first StaticText in the collection.
@@ -84803,7 +84803,7 @@ declare class Dropdowns {
 	/**
 	 * Returns every Dropdown in the collection.
 	 */
-	everyItem(): Dropdown[];
+	everyItem(): Dropdown;
 
 	/**
 	 * Returns the first Dropdown in the collection.
@@ -84908,7 +84908,7 @@ declare class CheckboxControls {
 	/**
 	 * Returns every CheckboxControl in the collection.
 	 */
-	everyItem(): CheckboxControl[];
+	everyItem(): CheckboxControl;
 
 	/**
 	 * Returns the first CheckboxControl in the collection.
@@ -85164,7 +85164,7 @@ declare class DialogColumns {
 	/**
 	 * Returns every DialogColumn in the collection.
 	 */
-	everyItem(): DialogColumn[];
+	everyItem(): DialogColumn;
 
 	/**
 	 * Returns the first DialogColumn in the collection.
@@ -85274,7 +85274,7 @@ declare class RadiobuttonGroups {
 	/**
 	 * Returns every RadiobuttonGroup in the collection.
 	 */
-	everyItem(): RadiobuttonGroup[];
+	everyItem(): RadiobuttonGroup;
 
 	/**
 	 * Returns the first RadiobuttonGroup in the collection.
@@ -85379,7 +85379,7 @@ declare class RadiobuttonControls {
 	/**
 	 * Returns every RadiobuttonControl in the collection.
 	 */
-	everyItem(): RadiobuttonControl[];
+	everyItem(): RadiobuttonControl;
 
 	/**
 	 * Returns the first RadiobuttonControl in the collection.
@@ -85504,7 +85504,7 @@ declare class IntegerEditboxes {
 	/**
 	 * Returns every IntegerEditbox in the collection.
 	 */
-	everyItem(): IntegerEditbox[];
+	everyItem(): IntegerEditbox;
 
 	/**
 	 * Returns the first IntegerEditbox in the collection.
@@ -85634,7 +85634,7 @@ declare class IntegerComboboxes {
 	/**
 	 * Returns every IntegerCombobox in the collection.
 	 */
-	everyItem(): IntegerCombobox[];
+	everyItem(): IntegerCombobox;
 
 	/**
 	 * Returns the first IntegerCombobox in the collection.
@@ -85834,7 +85834,7 @@ declare class EnablingGroups {
 	/**
 	 * Returns every EnablingGroup in the collection.
 	 */
-	everyItem(): EnablingGroup[];
+	everyItem(): EnablingGroup;
 
 	/**
 	 * Returns the first EnablingGroup in the collection.
@@ -85964,7 +85964,7 @@ declare class AngleComboboxes {
 	/**
 	 * Returns every AngleCombobox in the collection.
 	 */
-	everyItem(): AngleCombobox[];
+	everyItem(): AngleCombobox;
 
 	/**
 	 * Returns the first AngleCombobox in the collection.
@@ -86094,7 +86094,7 @@ declare class PercentComboboxes {
 	/**
 	 * Returns every PercentCombobox in the collection.
 	 */
-	everyItem(): PercentCombobox[];
+	everyItem(): PercentCombobox;
 
 	/**
 	 * Returns the first PercentCombobox in the collection.
@@ -86219,7 +86219,7 @@ declare class RealEditboxes {
 	/**
 	 * Returns every RealEditbox in the collection.
 	 */
-	everyItem(): RealEditbox[];
+	everyItem(): RealEditbox;
 
 	/**
 	 * Returns the first RealEditbox in the collection.
@@ -86344,7 +86344,7 @@ declare class PercentEditboxes {
 	/**
 	 * Returns every PercentEditbox in the collection.
 	 */
-	everyItem(): PercentEditbox[];
+	everyItem(): PercentEditbox;
 
 	/**
 	 * Returns the first PercentEditbox in the collection.
@@ -86469,7 +86469,7 @@ declare class AngleEditboxes {
 	/**
 	 * Returns every AngleEditbox in the collection.
 	 */
-	everyItem(): AngleEditbox[];
+	everyItem(): AngleEditbox;
 
 	/**
 	 * Returns the first AngleEditbox in the collection.
@@ -86599,7 +86599,7 @@ declare class RealComboboxes {
 	/**
 	 * Returns every RealCombobox in the collection.
 	 */
-	everyItem(): RealCombobox[];
+	everyItem(): RealCombobox;
 
 	/**
 	 * Returns the first RealCombobox in the collection.
@@ -86734,7 +86734,7 @@ declare class MeasurementComboboxes {
 	/**
 	 * Returns every MeasurementCombobox in the collection.
 	 */
-	everyItem(): MeasurementCombobox[];
+	everyItem(): MeasurementCombobox;
 
 	/**
 	 * Returns the first MeasurementCombobox in the collection.
@@ -86864,7 +86864,7 @@ declare class MeasurementEditboxes {
 	/**
 	 * Returns every MeasurementEditbox in the collection.
 	 */
-	everyItem(): MeasurementEditbox[];
+	everyItem(): MeasurementEditbox;
 
 	/**
 	 * Returns the first MeasurementEditbox in the collection.
@@ -87054,7 +87054,7 @@ declare class BorderPanels {
 	/**
 	 * Returns every BorderPanel in the collection.
 	 */
-	everyItem(): BorderPanel[];
+	everyItem(): BorderPanel;
 
 	/**
 	 * Returns the first BorderPanel in the collection.
@@ -87310,7 +87310,7 @@ declare class DialogRows {
 	/**
 	 * Returns every DialogRow in the collection.
 	 */
-	everyItem(): DialogRow[];
+	everyItem(): DialogRow;
 
 	/**
 	 * Returns the first DialogRow in the collection.
@@ -87746,7 +87746,7 @@ declare class XMLElements {
 	/**
 	 * Returns every XMLElement in the collection.
 	 */
-	everyItem(): XMLElement[];
+	everyItem(): XMLElement;
 
 	/**
 	 * Returns the first XMLElement in the collection.
@@ -87932,7 +87932,7 @@ declare class XMLAttributes {
 	/**
 	 * Returns every XMLAttribute in the collection.
 	 */
-	everyItem(): XMLAttribute[];
+	everyItem(): XMLAttribute;
 
 	/**
 	 * Returns the first XMLAttribute in the collection.
@@ -88129,7 +88129,7 @@ declare class XMLTags {
 	/**
 	 * Returns every XMLTag in the collection.
 	 */
-	everyItem(): XMLTag[];
+	everyItem(): XMLTag;
 
 	/**
 	 * Returns the first XMLTag in the collection.
@@ -88308,7 +88308,7 @@ declare class XMLImportMaps {
 	/**
 	 * Returns every XMLImportMap in the collection.
 	 */
-	everyItem(): XMLImportMap[];
+	everyItem(): XMLImportMap;
 
 	/**
 	 * Returns the first XMLImportMap in the collection.
@@ -88490,7 +88490,7 @@ declare class XMLExportMaps {
 	/**
 	 * Returns every XMLExportMap in the collection.
 	 */
-	everyItem(): XMLExportMap[];
+	everyItem(): XMLExportMap;
 
 	/**
 	 * Returns the first XMLExportMap in the collection.
@@ -88649,7 +88649,7 @@ declare class ValidationErrors {
 	/**
 	 * Returns every ValidationError in the collection.
 	 */
-	everyItem(): ValidationError[];
+	everyItem(): ValidationError;
 
 	/**
 	 * Returns the first ValidationError in the collection.
@@ -88757,7 +88757,7 @@ declare class XMLComments {
 	/**
 	 * Returns every XMLComment in the collection.
 	 */
-	everyItem(): XMLComment[];
+	everyItem(): XMLComment;
 
 	/**
 	 * Returns the first XMLComment in the collection.
@@ -88877,7 +88877,7 @@ declare class XMLInstructions {
 	/**
 	 * Returns every XMLInstruction in the collection.
 	 */
-	everyItem(): XMLInstruction[];
+	everyItem(): XMLInstruction;
 
 	/**
 	 * Returns the first XMLInstruction in the collection.
@@ -89048,7 +89048,7 @@ declare class XMLItems {
 	/**
 	 * Returns every XMLItem in the collection.
 	 */
-	everyItem(): XMLItem[];
+	everyItem(): XMLItem;
 
 	/**
 	 * Returns the first XMLItem in the collection.
@@ -89157,7 +89157,7 @@ declare class DTDs {
 	/**
 	 * Returns every DTD in the collection.
 	 */
-	everyItem(): DTD[];
+	everyItem(): DTD;
 
 	/**
 	 * Returns the first DTD in the collection.
@@ -89246,7 +89246,7 @@ declare class XmlStories {
 	/**
 	 * Returns every XmlStory in the collection.
 	 */
-	everyItem(): XmlStory[];
+	everyItem(): XmlStory;
 
 	/**
 	 * Returns the first XmlStory in the collection.
@@ -89484,7 +89484,7 @@ declare class XMLRuleProcessors {
 	/**
 	 * Returns every XMLRuleProcessor in the collection.
 	 */
-	everyItem(): XMLRuleProcessor[];
+	everyItem(): XMLRuleProcessor;
 
 	/**
 	 * Returns the first XMLRuleProcessor in the collection.
