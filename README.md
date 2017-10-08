@@ -5,7 +5,7 @@
 Install [Node.js](https://nodejs.org/en/download/) and [TypeScript](https://www.typescriptlang.org/#download-links).
 
 ## Your first script for eg. Adobe Illustrator
-```
+```bash
 mkdir test
 cd test
 npm init -y
