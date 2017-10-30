@@ -7289,6 +7289,19 @@ declare class ActionDescriptor {
 	 */
 	static readonly count: number;
 
+	putBoolean(...args: any[]): void;
+	putInteger(...args: any[]): void;
+	putDouble(...args: any[]): void;
+	putUnitDouble(...args: any[]): void;
+	putEnumerated(...args: any[]): void;
+	putString(...args: any[]): void;
+	putName(...args: any[]): void;
+	putObject(...args: any[]): void;
+	putList(...args: any[]): void;
+	putPath(...args: any[]): void;
+	putClass(...args: any[]): void;
+	putProperty(...args: any[]): void;
+	putReference(...args: any[]): void;
 }
 
 /**
@@ -7300,12 +7313,38 @@ declare class ActionList {
 	 */
 	static readonly count: number;
 
+	putBoolean(...args: any[]): void;
+	putInteger(...args: any[]): void;
+	putDouble(...args: any[]): void;
+	putUnitDouble(...args: any[]): void;
+	putEnumerated(...args: any[]): void;
+	putString(...args: any[]): void;
+	putName(...args: any[]): void;
+	putObject(...args: any[]): void;
+	putList(...args: any[]): void;
+	putPath(...args: any[]): void;
+	putClass(...args: any[]): void;
+	putProperty(...args: any[]): void;
+	putReference(...args: any[]): void;
 }
 
 /**
  * Contains data describing a referenced Action. The action reference object is part of the Action Manager functionality. For details on using the Action Manager, see the Photoshop Scripting Guide.
  */
 declare class ActionReference {
+	putBoolean(...args: any[]): void;
+	putInteger(...args: any[]): void;
+	putDouble(...args: any[]): void;
+	putUnitDouble(...args: any[]): void;
+	putEnumerated(...args: any[]): void;
+	putString(...args: any[]): void;
+	putName(...args: any[]): void;
+	putObject(...args: any[]): void;
+	putList(...args: any[]): void;
+	putPath(...args: any[]): void;
+	putClass(...args: any[]): void;
+	putProperty(...args: any[]): void;
+	putReference(...args: any[]): void;
 }
 
 /**
