@@ -7655,7 +7655,7 @@ declare class ActionList {
  */
 declare class ActionReference {
 	/**
-	 * The class name of the referenced Action object.
+	 * The class name of the referenced ActionReference object.
 	 */
 	static readonly typename: string;
 
