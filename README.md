@@ -6,19 +6,26 @@ Install [Node.js](https://nodejs.org/en/download/) and [TypeScript](https://www.
 
 ## Your first script for eg. Adobe Illustrator
 ```bash
+# create new folder
 mkdir test
 cd test
+
+# install types-for-adobe
 npm init -y
 npm i pravdomil/types-for-adobe
 
+# create tsconfig.json
 printf '{"compilerOptions":{"module":"none","noLib":true,"types":["types-for-adobe/illustrator/2015.3"]},"exclude":["node_modules"]}' > tsconfig.json
 # change tsconfig.json types value to Adobe product you're targeting
 
+# create index.ts
 printf 'alert(String(app))' > index.ts
 # open index.ts your favourite TypeScript editor and start scripting
 
+# compile typescript files
 tsc -p .
-# compile files and run index.js in Adobe Illustrator
+
+# run index.js in Adobe Illustrator -> File -> Scripts -> Other Script
 ```
 
 ## Note
