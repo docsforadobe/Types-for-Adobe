@@ -10,12 +10,15 @@ mkdir test
 cd test
 npm init -y
 npm i pravdomil/types-for-adobe
+
 printf '{"compilerOptions":{"module":"none","noLib":true,"types":["types-for-adobe/illustrator/2015.3"]},"exclude":["node_modules"]}' > tsconfig.json
-printf 'alert(String(app))' > index.ts
-tsc -p .
-# open index.ts your favourite TypeScript editor and start scripting
-# run index.js in Adobe Illustrator
 # change tsconfig.json types value to Adobe product you're targeting
+
+printf 'alert(String(app))' > index.ts
+# open index.ts your favourite TypeScript editor and start scripting
+
+tsc -p .
+# compile files and run index.js in Adobe Illustrator
 ```
 
 ## Note
