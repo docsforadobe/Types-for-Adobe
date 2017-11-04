@@ -7700,7 +7700,7 @@ declare class ActionReference {
 	getName(): string;
 
 	/**
-	 * Gets the offset of the object’s index value.
+	 * Gets the offset of the object's index value.
 	 */
 	getOffset(): number;
 
