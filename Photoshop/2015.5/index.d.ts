@@ -7290,7 +7290,7 @@ declare class ActionDescriptor {
 	static readonly count: number;
 
 	/**
-	 * The class name of the referenced actionDescriptor object.
+	 * The class name of the referenced ActionDescriptor object.
 	 */
 	static readonly typename: string;
 	
