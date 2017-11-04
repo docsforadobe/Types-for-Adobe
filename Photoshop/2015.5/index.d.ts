@@ -7355,7 +7355,7 @@ declare class ActionDescriptor {
 	getLargeInteger(key: number): number;
 	
 	/**
-	 *  Gets the value of a key of type list.
+	 * Gets the value of a key of type list.
 	 */
 	getList(key: number): ActionList;
 	
@@ -7465,12 +7465,12 @@ declare class ActionDescriptor {
 	putReference(key: number, value: ActionReference): void;
 	
 	/**
-	 *  Sets the value for a key whose type is string.
+	 * Sets the value for a key whose type is string.
 	 */
 	putString(key: number, value: string): void;
 	
 	/**
-	 *  Sets the value for a key whose type is a unit value formatted as a double.
+	 * Sets the value for a key whose type is a unit value formatted as a double.
 	 */
 	putUnitDouble(key: number, unitID: number, value: number): void;
 	
@@ -7540,7 +7540,7 @@ declare class ActionList {
 	getLargeInteger(index: number): number;
 	
 	/**
-	 *  Gets the value of a list element of type list.
+	 * Gets the value of a list element of type list.
 	 */
 	getList(index: number): ActionList;
 	
@@ -7640,12 +7640,12 @@ declare class ActionList {
 	putReference(value: ActionReference): void;
 	
 	/**
-	 *  Appends a new value, a string.
+	 * Appends a new value, a string.
 	 */
 	putString(value: string): void;
 	
 	/**
-	 *  Appends a new value, a unit/value pair.
+	 * Appends a new value, a unit/value pair.
 	 */
 	putUnitDouble(classID: number, value: number): void;
 }
