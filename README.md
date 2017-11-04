@@ -25,7 +25,7 @@ printf 'alert(String(app))' > index.ts
 # compile typescript files
 tsc -p .
 
-# run index.js in Adobe Illustrator -> File -> Scripts -> Other Script
+# open Adobe Illustrator -> File -> Scripts -> Other Script -> and select index.js
 ```
 
 ## Note
