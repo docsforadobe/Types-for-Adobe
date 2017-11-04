@@ -7288,7 +7288,17 @@ declare class ActionDescriptor {
 	 * The number of keys contained in the descriptor.
 	 */
 	static readonly count: number;
+
+	/**
+	 * The class name of the referenced ActionDescriptor object.
+	 */
+	static readonly typename: string;
 	
+	/**
+	 * Clears the descriptor.
+	 */
+	clear(): void;
+
 	/**
 	 * Erases a key from the descriptor.
 	 */
@@ -7345,7 +7355,7 @@ declare class ActionDescriptor {
 	getLargeInteger(key: number): number;
 	
 	/**
-	 *  Gets the value of a key of type list.
+	 * Gets the value of a key of type list.
 	 */
 	getList(key: number): ActionList;
 	
@@ -7440,7 +7450,7 @@ declare class ActionDescriptor {
 	putList(key: number, value: ActionList): void;
 	
 	/**
-	 * Sets the value for a key whose type is an object, represented by an Action Descriptor.
+	 * Sets the value for a key whose type is an object, represented by an ActionDescriptor.
 	 */
 	putObject(key: number, classID: number, value: ActionDescriptor): void;
 	
@@ -7455,12 +7465,12 @@ declare class ActionDescriptor {
 	putReference(key: number, value: ActionReference): void;
 	
 	/**
-	 *  Sets the value for a key whose type is string.
+	 * Sets the value for a key whose type is string.
 	 */
 	putString(key: number, value: string): void;
 	
 	/**
-	 *  Sets the value for a key whose type is a unit value formatted as a double.
+	 * Sets the value for a key whose type is a unit value formatted as a double.
 	 */
 	putUnitDouble(key: number, unitID: number, value: number): void;
 	
@@ -7479,12 +7489,260 @@ declare class ActionList {
 	 */
 	static readonly count: number;
 
+	/**
+	 * The class name of the referenced ActionList object.
+	 */
+	static readonly typename: string;
+
+	/**
+	 * Clears the list.
+	 */
+	clear(): void;
+	
+	/**
+	 * Gets the value of a list element of type boolean.
+	 */
+	getBoolean(index: number): boolean;
+	
+	/**
+	 * Gets the value of a list element of type class.
+	 */
+	getClass(index: number): number;
+	
+	/**
+	 * Gets raw byte data as a string value.
+	 */
+	getData(index: number): string;
+	
+	/**
+	 * Gets the value of a list element of type double.
+	 */
+	getDouble(index: number): number;
+	
+	/**
+	 * Gets the enumeration type of a list element.
+	 */
+	getEnumerationType(index: number): number;
+	
+	/**
+	 * Gets the enumeration value of a list element.
+	 */
+	getEnumerationValue(index: number): number;
+	
+	/**
+	 * Gets the value of a list element of type integer.
+	 */
+	getInteger(index: number): number;
+	
+	/**
+	 * Gets the value of a list element of type large integer.
+	 */
+	getLargeInteger(index: number): number;
+	
+	/**
+	 * Gets the value of a list element of type list.
+	 */
+	getList(index: number): ActionList;
+	
+	/**
+	 * Gets the class ID of a list element of type object.
+	 */
+	getObjectType(index: number): number;
+	
+	/**
+	 * Gets the value of a list element of type object.
+	 */
+	getObjectValue(index: number): ActionDescriptor;
+	
+	/**
+	 * Gets the value of a list element of type File.
+	 */
+	getPath(index: number): File;
+	
+	/**
+	 * Gets the value of a list element of type ActionReference.
+	 */
+	getReference(index: number): ActionReference;
+	
+	/**
+	 * Gets the value of a list element of type string.
+	 */
+	getString(index: number): string;
+	
+	/**
+	 * Gets the type of a list element.
+	 */
+	getType(index: number): DescValueType;
+	
+	/**
+	 * Gets the unit value type of a list element of type double.
+	 */
+	getUnitDoubleType(index: number): number;
+	
+	/**
+	 * Gets the unit value of a list element of type double.
+	 */
+	getUnitDoubleValue(index: number): number;
+			
+	/**
+	 * Appends a new value, true or false.
+	 */
+	putBoolean(value: boolean): void;
+	
+	/**
+	 * Appends a new value, a class or data type.
+	 */
+	putClass(value: number): void;
+	
+	/**
+	 * Appends a new value, a string containing raw byte data.
+	 */
+	putData(value: string): void;
+	
+	/**
+	 * Appends a new value, a double.
+	 */
+	putDouble(value: number): void;
+	
+	/**
+	 * Appends a new value, an enumerated (constant) value.
+	 */
+	putEnumerated(enumType: number, value: number): void;
+	
+	/**
+	 * Appends a new value, an integer.
+	 */
+	putInteger(value: number): void;
+	
+	/**
+	 * Appends a new value, a large integer.
+	 */
+	putLargeInteger(value: number): void;
+	
+	/**
+	 * Appends a new value, a nested action list.
+	 */
+	putList(value: ActionList): void;
+	
+	/**
+	 * Appends a new value, an object.
+	 */
+	putObject(classID: number, value: ActionDescriptor): void;
+	
+	/**
+	 * Appends a new value, a path.
+	 */
+	putPath(value: File): void;
+	
+	/**
+	 * Appends a new value, a reference to an object created in the script.
+	 */
+	putReference(value: ActionReference): void;
+	
+	/**
+	 * Appends a new value, a string.
+	 */
+	putString(value: string): void;
+	
+	/**
+	 * Appends a new value, a unit/value pair.
+	 */
+	putUnitDouble(classID: number, value: number): void;
 }
 
 /**
  * Contains data describing a referenced Action. The action reference object is part of the Action Manager functionality. For details on using the Action Manager, see the Photoshop Scripting Guide.
  */
 declare class ActionReference {
+	/**
+	 * The class name of the referenced ActionReference object.
+	 */
+	static readonly typename: string;
+
+	/**
+	 * Gets a reference contained in this reference. Container references provide additional pieces to the reference. This looks like another reference, but it is actually part of the same reference.
+	 */
+	getContainer(): ActionReference;
+
+	/**
+	 * Gets a number representing the class of the object.
+	 */
+	getDesiredClass(): number;
+
+	/**
+	 * Gets the enumeration type.
+	 */
+	getEnumeratedType(): number;
+
+	/**
+	 * Gets the enumeration value.
+	 */
+	getEnumeratedValue(): number;
+
+	/**
+	 * Gets the form of this action reference.
+	 */
+	getForm(): ReferenceFormType;
+
+	/**
+	 * Gets the identifier value for a reference whose form is identifier.
+	 */
+	getIdentifier(): number;
+
+	/**
+	 * Gets the index value for a reference in a list or array.
+	 */
+	getIndex(): number;
+
+	/**
+	 * Gets the name of a reference.
+	 */
+	getName(): string;
+
+	/**
+	 * Gets the offset of the object's index value.
+	 */
+	getOffset(): number;
+
+	/**
+	 * Gets the property ID value.
+	 */
+	getProperty(): number;
+
+	/**
+	 * Puts a new class form and class type into the reference.
+	 */
+	putClass(desiredClass: number): void;
+	
+	/**
+	 * Puts an enumeration type and ID into a reference along with the desired class for the reference.
+	 */
+	putEnumerated(desiredClass: number, enumType:number, value: number): void;
+	
+	/**
+	 * Puts a new identifier and value into the reference.
+	 */
+	putIdentifier(desiredClass: number, value: number): void;
+	
+	/**
+	 * Puts a new index and value into the reference.
+	 */
+	putIndex(desiredClass: number, value: number): void;
+	
+	/**
+	 * Puts a new name and value into the reference.
+	 */
+	putName(desiredClass: number, value: string): void;
+
+	/**
+	 * Puts a new offset and value into the reference.
+	 */
+	putOffset(desiredClass: number, value: number): void;
+	
+	/**
+	 * Puts a new property and value into the reference.
+	 */
+	putProperty(desiredClass: number, value: number): void;
 }
 
 /**
