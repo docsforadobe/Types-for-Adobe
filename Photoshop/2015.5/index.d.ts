@@ -7450,7 +7450,7 @@ declare class ActionDescriptor {
 	putList(key: number, value: ActionList): void;
 	
 	/**
-	 * Sets the value for a key whose type is an object, represented by an Action Descriptor.
+	 * Sets the value for a key whose type is an object, represented by an ActionDescriptor.
 	 */
 	putObject(key: number, classID: number, value: ActionDescriptor): void;
 	
@@ -7575,7 +7575,7 @@ declare class ActionList {
 	getType(index: number): DescValueType;
 	
 	/**
-	 * Gets the unit value type of a list element of type Double.
+	 * Gets the unit value type of a list element of type double.
 	 */
 	getUnitDoubleType(index: number): number;
 	
