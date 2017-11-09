@@ -6089,7 +6089,7 @@ declare class DCS1_SaveOptions {
 	 * The type of preview.
 	 */
 	public preview: Preview;
-
+  
 	/**
 	 * If true, includes transfer functions in the document to compensate for dot gain between the image and film.
 	 */
