@@ -4740,7 +4740,7 @@ declare class Guides {
 	 * @param direction Indicates whether the guide is vertical or horizontal.
 	 * @param coordinate Location of the guide from origin of image.
 	 */
-	static add(direction: Direction, coordinate: UnitValue | number): Guide;
+	public add(direction: Direction, coordinate: UnitValue | number): Guide;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4816,7 +4816,7 @@ declare class LayerComps {
 	 * @param position If true, uses the layer position for this layer comp.
 	 * @param visibility If true, uses the layer visibility for this layer comp.
 	 */
-	static add(name: string, comment?: string, appearance?: boolean, position?: boolean, visibility?: boolean): LayerComp;
+	public add(name: string, comment?: string, appearance?: boolean, position?: boolean, visibility?: boolean): LayerComp;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4889,7 +4889,7 @@ declare class PathItems {
 	 * @param name The name for the new path.
 	 * @param entirePath The item's sub paths.
 	 */
-	static add(name: string, entirePath: SubPathInfo[]): PathItem;
+	public add(name: string, entirePath: SubPathInfo[]): PathItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4996,7 +4996,7 @@ declare class Notifiers {
 	 * @param eventFile The script file to execute when the event occurs.
 	 * @param eventClass The class of the object the event is applied to, four characters or a unique string. When an event applies to multiple types of objects, you use the event class parameter to distinguish which object this Notifier applies to. For example, the Make event (“Mk“) applies to documents (“Dcmn”), channels (“Chnl”) and other objects.
 	 */
-	static add(event: string, eventFile: File, eventClass?: string): Notifier;
+	public add(event: string, eventFile: File, eventClass?: string): Notifier;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5007,7 +5007,7 @@ declare class Notifiers {
 	/**
 	 * Deletes all elements.
 	 */
-	static removeAll(): void;
+	public removeAll(): void;
 
 }
 
@@ -5040,7 +5040,7 @@ declare class CountItems {
 	 * Creates a count item.
 	 * @param position The position of origin.
 	 */
-	static add(position: UnitPoint): CountItem;
+	public add(position: UnitPoint): CountItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5079,7 +5079,7 @@ declare class ColorSamplers {
 	 * Creates a color sampler.
 	 * @param position The horizontal and vertical (x,y) locations, respectively, of the color sampler.
 	 */
-	static add(position: UnitPoint): ColorSampler;
+	public add(position: UnitPoint): ColorSampler;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5102,27 +5102,27 @@ declare class PhotoCDOpenOptions extends OpenOptions {
 	/**
 	 * The profile to use when reading the image.
 	 */
-	static colorProfileName: string;
+	public colorProfileName: string;
 
 	/**
 	 * The color space for the image.
 	 */
-	static colorSpace: PhotoCDColorSpace;
+	public colorSpace: PhotoCDColorSpace;
 
 	/**
 	 * The image orientation.
 	 */
-	static orientation: Orientation;
+	public orientation: Orientation;
 
 	/**
 	 * The dimensions of the image.
 	 */
-	static pixelSize: PhotoCDSize;
+	public pixelSize: PhotoCDSize;
 
 	/**
 	 * The resolution of the image (in pixels per inch)
 	 */
-	static resolution: number;
+	public resolution: number;
 
 }
 
@@ -5133,42 +5133,42 @@ declare class RawFormatOpenOptions extends OpenOptions {
 	/**
 	 * The number of bits for each channel. Valid values: 8 or 16.
 	 */
-	static bitsPerChannel: number;
+	public bitsPerChannel: number;
 
 	/**
 	 * The order in which bytes will be read. Valid only when 'bits per channel' = 16.
 	 */
-	static byteOrder: ByteOrder;
+	public byteOrder: ByteOrder;
 
 	/**
 	 * The number of channels in the image. Valid only when 'bits per channel' = 16. Range: 1 to 56.
 	 */
-	static channelNumber: number;
+	public channelNumber: number;
 
 	/**
 	 * The number of bytes of information that will appear in the file before actual image information begins; that is, the number of zeroes inserted at the beginning of the file as placeholders. Range: 0 to 1919999.
 	 */
-	static headerSize: number;
+	public headerSize: number;
 
 	/**
 	 * The image height (in pixels)
 	 */
-	static height: number;
+	public height: number;
 
 	/**
 	 * If true, color values are stored sequentially.
 	 */
-	static interleaveChannels: boolean;
+	public interleaveChannels: boolean;
 
 	/**
 	 * If true, the header is retained when saving.
 	 */
-	static retainHeader: boolean;
+	public retainHeader: boolean;
 
 	/**
 	 * The image width (in pixels)
 	 */
-	static width: number;
+	public width: number;
 
 }
 
@@ -5179,72 +5179,72 @@ declare class GenericPDFOpenOptions extends OpenOptions {
 	/**
 	 * If true, anti-aliasing is used.
 	 */
-	static antiAlias: boolean;
+	public antiAlias: boolean;
 
 	/**
 	 * The number of bits per channel.
 	 */
-	static bitsPerChannel: BitsPerChannelType;
+	public bitsPerChannel: BitsPerChannelType;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static constrainProportions: boolean;
+	public constrainProportions: boolean;
 
 	/**
 	 * The cropping method to use.
 	 */
-	static cropPage: CropToType;
+	public cropPage: CropToType;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static height: UnitValue | number;
+	public height: UnitValue | number;
 
 	/**
 	 * The document mode.
 	 */
-	static mode: OpenDocumentMode;
+	public mode: OpenDocumentMode;
 
 	/**
 	 * The name of the document.
 	 */
-	static name: string;
+	public name: string;
 
 	/**
 	 * The number of the 3d object to open.
 	 */
-	static object: number;
+	public object: number;
 
 	/**
 	 * The number of the page or image to open.
 	 */
-	static page: number;
+	public page: number;
 
 	/**
 	 * The resolution of the document (in pixels per inch)
 	 */
-	static resolution: number;
+	public resolution: number;
 
 	/**
 	 * If true, suppresses any warnings that may occur during opening.
 	 */
-	static suppressWarnings: boolean;
+	public suppressWarnings: boolean;
 
 	/**
 	 * If true, the value specified in the page property refers to a page number. If false, the value specifies an image number.
 	 */
-	static use3DObjectNumber: boolean;
+	public use3DObjectNumber: boolean;
 
 	/**
 	 * If true, the value specified in the page property refers to a page number. If false, the value specifies an image number.
 	 */
-	static usePageNumber: boolean;
+	public usePageNumber: boolean;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static width: UnitValue | number;
+	public width: UnitValue | number;
 
 }
 
@@ -5255,32 +5255,32 @@ declare class GenericEPSOpenOptions extends OpenOptions {
 	/**
 	 * If true, anti-aliasing is used.
 	 */
-	static antiAlias: boolean;
+	public antiAlias: boolean;
 
 	/**
 	 * If true, the image proportions are constrained.
 	 */
-	static constrainProportions: boolean;
+	public constrainProportions: boolean;
 
 	/**
 	 * The image height.
 	 */
-	static height: UnitValue | number;
+	public height: UnitValue | number;
 
 	/**
 	 * The document mode.
 	 */
-	static mode: OpenDocumentMode;
+	public mode: OpenDocumentMode;
 
 	/**
 	 * The resolution of the document (in pixels per inch)
 	 */
-	static resolution: number;
+	public resolution: number;
 
 	/**
 	 * The image width.
 	 */
-	static width: UnitValue | number;
+	public width: UnitValue | number;
 
 }
 
@@ -5291,37 +5291,37 @@ declare class DICOMOpenOptions extends OpenOptions {
 	/**
 	 * If true, patient information is anonymized.
 	 */
-	static anonymize: boolean;
+	public anonymize: boolean;
 
 	/**
 	 * The number of columns in an n-up configuration.
 	 */
-	static columns: number;
+	public columns: number;
 
 	/**
 	 * If true, the image is inverted.
 	 */
-	static reverse: boolean;
+	public reverse: boolean;
 
 	/**
 	 * The number of rows in an n-up configuration.
 	 */
-	static rows: number;
+	public rows: number;
 
 	/**
 	 * If true, overlays are shown (if present).
 	 */
-	static showOverlays: boolean;
+	public showOverlays: boolean;
 
 	/**
 	 * The contrast of the image in Houndsfield units.
 	 */
-	static windowLevel: number;
+	public windowLevel: number;
 
 	/**
 	 * The brightness of the image in Houndsfield units.
 	 */
-	static windowWidth: number;
+	public windowWidth: number;
 
 }
 
@@ -5332,137 +5332,137 @@ declare class CameraRAWOpenOptions extends OpenOptions {
 	/**
 	 * The number of bits per channel.
 	 */
-	static bitsPerChannel: BitsPerChannelType;
+	public bitsPerChannel: BitsPerChannelType;
 
 	/**
 	 * The blue hue of the shot. Range: -100 to 100.
 	 */
-	static blueHue: number;
+	public blueHue: number;
 
 	/**
 	 * The blue saturation of the shot. Range: -100 to 100.
 	 */
-	static blueSaturation: number;
+	public blueSaturation: number;
 
 	/**
 	 * The brightness of the shot. Range: 0 to 150.
 	 */
-	static brightness: number;
+	public brightness: number;
 
 	/**
 	 * The chromatic aberration B/Y of the shot. Range: -100 to 100.
 	 */
-	static chromaticAberrationBY: number;
+	public chromaticAberrationBY: number;
 
 	/**
 	 * The chromatic aberration R/C of the shot. Range: -100 to 100.
 	 */
-	static chromaticAberrationRC: number;
+	public chromaticAberrationRC: number;
 
 	/**
 	 * The color noise reduction of the shot. Range: 0 to 100.
 	 */
-	static colorNoiseReduction: number;
+	public colorNoiseReduction: number;
 
 	/**
 	 * The image color space.
 	 */
-	static colorSpace: ColorSpaceType;
+	public colorSpace: ColorSpaceType;
 
 	/**
 	 * The constrast of the shot. Range: -50 to 100.
 	 */
-	static contrast: number;
+	public contrast: number;
 
 	/**
 	 * The exposure of the shot. Range: -4.0 to 4.0.
 	 */
-	static exposure: number;
+	public exposure: number;
 
 	/**
 	 * The green hue of the shot. Range: -100 to 100.
 	 */
-	static greenHue: number;
+	public greenHue: number;
 
 	/**
 	 * The green saturation of the shot. Range: -100 to 100.
 	 */
-	static greenSaturation: number;
+	public greenSaturation: number;
 
 	/**
 	 * The luminance smoothing of the shot. Range: 0 to 100.
 	 */
-	static luminanceSmoothing: number;
+	public luminanceSmoothing: number;
 
 	/**
 	 * The red hue of the shot. Range: -100 to 100.
 	 */
-	static redHue: number;
+	public redHue: number;
 
 	/**
 	 * The red saturation of the shot. Range: -100 to 100.
 	 */
-	static redSaturation: number;
+	public redSaturation: number;
 
 	/**
 	 * The resolution of the document (in pixels per inch)
 	 */
-	static resolution: number;
+	public resolution: number;
 
 	/**
 	 * The saturation of the shot. Range: -100 to 100.
 	 */
-	static saturation: number;
+	public saturation: number;
 
 	/**
 	 * The global settings for all Camera RAW options.
 	 */
-	static settings: CameraRAWSettingsType;
+	public settings: CameraRAWSettingsType;
 
 	/**
 	 * The shadow tint of the shot. Range: -100 to 100.
 	 */
-	static shadowTint: number;
+	public shadowTint: number;
 
 	/**
 	 * The shadows of the shot. Range: 0 to 100.
 	 */
-	static shadows: number;
+	public shadows: number;
 
 	/**
 	 * The sharpness of the shot. Range: 0 to 100.
 	 */
-	static sharpness: number;
+	public sharpness: number;
 
 	/**
 	 * The size of the new document.
 	 */
-	static size: CameraRAWSize;
+	public size: CameraRAWSize;
 
 	/**
 	 * The temperature of the shot. Range: 2000 to 50000.
 	 */
-	static temperature: number;
+	public temperature: number;
 
 	/**
 	 * The tint of the shot. Range: -150 to 150.
 	 */
-	static tint: number;
+	public tint: number;
 
 	/**
 	 * The vignetting amount of the shot. Range: -100 to 100.
 	 */
-	static vignettingAmount: number;
+	public vignettingAmount: number;
 
 	/**
 	 * The vignetting mid point of the shot. Range: -100 to 100.
 	 */
-	static vignettingMidpoint: number;
+	public vignettingMidpoint: number;
 
 	/**
 	 * The white balance options for the image.
 	 */
-	static whiteBalance: WhiteBalanceType;
+	public whiteBalance: WhiteBalanceType;
 
 }
 
@@ -5494,27 +5494,27 @@ declare class PhotoshopSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * If true, the annotations are saved.
 	 */
-	static annotations: boolean;
+	public annotations: boolean;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * If true, the layers are saved.
 	 */
-	static layers: boolean;
+	public layers: boolean;
 
 	/**
 	 * If true, spot colors are saved.
 	 */
-	static spotColors: boolean;
+	public spotColors: boolean;
 
 }
 
@@ -5525,27 +5525,27 @@ declare class BMPSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * The number of bits per sample.
 	 */
-	static depth: BMPDepthType;
+	public depth: BMPDepthType;
 
 	/**
 	 * If true, the image is written from bottom to top.
 	 */
-	static flipRowOrder: boolean;
+	public flipRowOrder: boolean;
 
 	/**
 	 * The target operating system.
 	 */
-	static osType: OperatingSystem;
+	public osType: OperatingSystem;
 
 	/**
 	 * If true, RLE compression is used.
 	 */
-	static rleCompression: boolean;
+	public rleCompression: boolean;
 
 }
 
@@ -5556,47 +5556,47 @@ declare class GIFSaveOptions {
 	/**
 	 * The number of colors in palette. Not valid for all palette types.
 	 */
-	static colors: number;
+	public colors: number;
 
 	/**
 	 * The type of dither.
 	 */
-	static dither: Dither;
+	public dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither type' is diffusion. Range: 1 to 100.
 	 */
-	static ditherAmount: number;
+	public ditherAmount: number;
 
 	/**
 	 * The type of colors to force into the color palette.
 	 */
-	static forced: ForcedColors;
+	public forced: ForcedColors;
 
 	/**
 	 * If true, rows are interlaced.
 	 */
-	static interlaced: boolean;
+	public interlaced: boolean;
 
 	/**
 	 * The color to use to fill anti-aliased edges adjacent to transparent areas of the image. Default: white.
 	 */
-	static matte: MatteType;
+	public matte: MatteType;
 
 	/**
 	 * The type of palette to use.
 	 */
-	static palette: PaletteType;
+	public palette: PaletteType;
 
 	/**
 	 * If true, protects colors in the image that contain entries in the color table from being dithered. Valid only when 'dither' = diffusion.
 	 */
-	static preserveExactColors: boolean;
+	public preserveExactColors: boolean;
 
 	/**
 	 * If true, preserves transparent ares of the image during GIF conversion.
 	 */
-	static transparency: boolean;
+	public transparency: boolean;
 
 }
 
@@ -5607,47 +5607,47 @@ declare class EPSSaveOptions {
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * The type of encoding to use for the document.
 	 */
-	static encoding: SaveEncoding;
+	public encoding: SaveEncoding;
 
 	/**
 	 * If true, includes the halftone screen.
 	 */
-	static halftoneScreen: boolean;
+	public halftoneScreen: boolean;
 
 	/**
 	 * If true, uses image interpolation.
 	 */
-	static interpolation: boolean;
+	public interpolation: boolean;
 
 	/**
 	 * The type of preview.
 	 */
-	static preview: Preview;
+	public preview: Preview;
 
 	/**
 	 * If true, uses PostScript color management.
 	 */
-	static psColorManagement: boolean;
+	public psColorManagement: boolean;
 
 	/**
 	 * If true, includes the transfer functions in the document to compensate for dot gain between the image and film.
 	 */
-	static transferFunction: boolean;
+	public transferFunction: boolean;
 
 	/**
 	 * If true, displays white areas as transparent. Valid only for documents in BitMap mode.
 	 */
-	static transparentWhites: boolean;
+	public transparentWhites: boolean;
 
 	/**
 	 * If true, includes vector data. Valid only when the document contains vector data (un-rasterized text).
 	 */
-	static vectorData: boolean;
+	public vectorData: boolean;
 
 }
 
@@ -5658,27 +5658,27 @@ declare class JPEGSaveOptions {
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * The download format to use.
 	 */
-	static formatOptions: FormatOptions;
+	public formatOptions: FormatOptions;
 
 	/**
 	 * The color to use to fill anti-aliased edges adjacent to transparent areas of the image. Default: white.
 	 */
-	static matte: MatteType;
+	public matte: MatteType;
 
 	/**
 	 * The quality of the produced image.
 	 */
-	static quality: number;
+	public quality: number;
 
 	/**
 	 * The number of scans. Valid only for progressive type JPEG files.
 	 */
-	static scans: number;
+	public scans: number;
 
 }
 
@@ -5689,162 +5689,162 @@ declare class PDFSaveOptions {
 	/**
 	 * The PDF version to make the document compatible with.
 	 */
-	static PDFCompatibility: PDFCompatibility;
+	public PDFCompatibility: PDFCompatibility;
 
 	/**
 	 * The PDF standard to make the document compatible with.
 	 */
-	static PDFStandard: PDFStandard;
+	public PDFStandard: PDFStandard;
 
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * If true, the annotations are saved.
 	 */
-	static annotations: boolean;
+	public annotations: boolean;
 
 	/**
 	 * If true, converts the color profile to the destination profile.
 	 */
-	static colorConversion: boolean;
+	public colorConversion: boolean;
 
 	/**
 	 * If true, converts a 16-bit image to 8-bit for better compatibility with other applications.
 	 */
-	static convertToEightBit: boolean;
+	public convertToEightBit: boolean;
 
 	/**
 	 * Description of the save options in use.
 	 */
-	static description: string;
+	public description: string;
 
 	/**
 	 * Describes the final RGB or CMYK output device, such as a monitor or press standard.
 	 */
-	static destinationProfile: string;
+	public destinationProfile: string;
 
 	/**
 	 * The downsample method to use.
 	 */
-	static downSample: PDFResample;
+	public downSample: PDFResample;
 
 	/**
 	 * The size (in pixels per inch) to downsample images to if they exceed the value specified for 'down sample size limit'.
 	 */
-	static downSampleSize: number;
+	public downSampleSize: number;
 
 	/**
 	 * Limits downsampling or subsampling to images that exceed this value (in pixels per inch).
 	 */
-	static downSampleSizeLimit: number;
+	public downSampleSizeLimit: number;
 
 	/**
 	 * DEPRECATED, ( should the embedded color profile be downgraded to version 2 )
 	 */
-	static downgradeColorProfile: boolean;
+	public downgradeColorProfile: boolean;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * DEPRECATED. ( embed fonts? Only valid if a text layer is included )
 	 */
-	static embedFonts: boolean;
+	public embedFonts: boolean;
 
 	/**
 	 * If true, includes a small preview image in Acrobat.
 	 */
-	static embedThumbnail: boolean;
+	public embedThumbnail: boolean;
 
 	/**
 	 * The encoding method to use.
 	 */
-	static encoding: PDFEncoding;
+	public encoding: PDFEncoding;
 
 	/**
 	 * DEPRECATED. ( use image interpolation? )
 	 */
-	static interpolation: boolean;
+	public interpolation: boolean;
 
 	/**
 	 * The quality of the produced image. Valid only for JPEG-encoded PDF documents. Range: 0 to 12.
 	 */
-	static jpegQuality: number;
+	public jpegQuality: number;
 
 	/**
 	 * If true, the layers are saved.
 	 */
-	static layers: boolean;
+	public layers: boolean;
 
 	/**
 	 * If true, improves performance of PDFs on Web servers.
 	 */
-	static optimizeForWeb: boolean;
+	public optimizeForWeb: boolean;
 
 	/**
 	 * An optional comment field for inserting descriptions of the output condition. The text is stored in the PDF/X file.
 	 */
-	static outputCondition: string;
+	public outputCondition: string;
 
 	/**
 	 * The identifier for the output condition.
 	 */
-	static outputConditionID: string;
+	public outputConditionID: string;
 
 	/**
 	 * If true, allows users to reopen the PDF in Photoshop with native Photoshop data intact.
 	 */
-	static preserveEditing: boolean;
+	public preserveEditing: boolean;
 
 	/**
 	 * The preset file to use for settings; overrides other settings.
 	 */
-	static presetFile: string;
+	public presetFile: string;
 
 	/**
 	 * If true, shows which profiles to include.
 	 */
-	static profileInclusionPolicy: boolean;
+	public profileInclusionPolicy: boolean;
 
 	/**
 	 * The URL where the output condition is registered.
 	 */
-	static registryName: string;
+	public registryName: string;
 
 	/**
 	 * If true, the spot colors are saved.
 	 */
-	static spotColors: boolean;
+	public spotColors: boolean;
 
 	/**
 	 * The compression option. Valid only when encoding is JPEG2000.
 	 */
-	static tileSize: number;
+	public tileSize: number;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static transparency: boolean;
+	public transparency: boolean;
 
 	/**
 	 * DEPRECATED. ( use outlines for text? Only valid if vector data is included )
 	 */
-	static useOutlines: boolean;
+	public useOutlines: boolean;
 
 	/**
 	 * DEPRECATED. ( include vector data )
 	 */
-	static vectorData: boolean;
+	public vectorData: boolean;
 
 	/**
 	 * If true, opens the saved PDF in Acrobat.
 	 */
-	static view: boolean;
+	public view: boolean;
 
 }
 
@@ -5855,22 +5855,22 @@ declare class PICTFileSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * The compression method.
 	 */
-	static compression: PICTCompression;
+	public compression: PICTCompression;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * The number of bits per pixel.
 	 */
-	static resolution: PICTBitsPerPixels;
+	public resolution: PICTBitsPerPixels;
 
 }
 
@@ -5881,32 +5881,32 @@ declare class PICTResourceSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * The compression type.
 	 */
-	static compression: PICTCompression;
+	public compression: PICTCompression;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * The name of PICT resource.
 	 */
-	static name: string;
+	public name: string;
 
 	/**
 	 * The number of bits per pixel.
 	 */
-	static resolution: PICTBitsPerPixels;
+	public resolution: PICTBitsPerPixels;
 
 	/**
 	 * The ID of the PICT resource.
 	 */
-	static resourceID: number;
+	public resourceID: number;
 
 }
 
@@ -5917,7 +5917,7 @@ declare class PixarSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 }
 
@@ -5928,12 +5928,12 @@ declare class PNGSaveOptions {
 	/**
 	 * Compression used on the image.
 	 */
-	static compression: number;
+	public compression: number;
 
 	/**
 	 * If true, rows are interlaced.
 	 */
-	static interlaced: boolean;
+	public interlaced: boolean;
 
 }
 
@@ -5944,12 +5944,12 @@ declare class RawSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * If true, spot colors are saved.
 	 */
-	static spotColors: boolean;
+	public spotColors: boolean;
 
 }
 
@@ -5960,12 +5960,12 @@ declare class SGIRGBSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * If true, the spot colors are saved.
 	 */
-	static spotColors: boolean;
+	public spotColors: boolean;
 
 }
 
@@ -5976,17 +5976,17 @@ declare class TargaSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * The number of bits per pixel.
 	 */
-	static resolution: TargaBitsPerPixels;
+	public resolution: TargaBitsPerPixels;
 
 	/**
 	 * If true, RLE compression is used.
 	 */
-	static rleCompression: boolean;
+	public rleCompression: boolean;
 
 }
 
@@ -5997,62 +5997,62 @@ declare class TiffSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	public alphaChannels: boolean;
 
 	/**
 	 * If true, the annotations are saved.
 	 */
-	static annotations: boolean;
+	public annotations: boolean;
 
 	/**
 	 * The order in which the bytes will be read. Default: Mac OS when running in Mac OS, and IBM PC when running in Windows.
 	 */
-	static byteOrder: ByteOrder;
+	public byteOrder: ByteOrder;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * The compression type.
 	 */
-	static imageCompression: TIFFEncoding;
+	public imageCompression: TIFFEncoding;
 
 	/**
 	 * If true, the channels in the image are interleaved.
 	 */
-	static interleaveChannels: boolean;
+	public interleaveChannels: boolean;
 
 	/**
 	 * The quality of the produced image, which is inversely proportionate to the amount of JPEG compression. Valid only for JPEG compressed TIFF documents. Range: 0 to 12.
 	 */
-	static jpegQuality: number;
+	public jpegQuality: number;
 
 	/**
 	 * The method of compression to use when saving layers (as opposed to saving composite data). Valid only when 'layers' = true.
 	 */
-	static layerCompression: LayerCompression;
+	public layerCompression: LayerCompression;
 
 	/**
 	 * If true, the layers are saved.
 	 */
-	static layers: boolean;
+	public layers: boolean;
 
 	/**
 	 * If true, preserves multi-resolution information.
 	 */
-	static saveImagePyramid: boolean;
+	public saveImagePyramid: boolean;
 
 	/**
 	 * If true, spot colors are saved.
 	 */
-	static spotColors: boolean;
+	public spotColors: boolean;
 
 	/**
 	 * If true, saves the transparency as an additional alpha channel when the file is opened in another application.
 	 */
-	static transparency: boolean;
+	public transparency: boolean;
 
 }
 
@@ -6063,42 +6063,42 @@ declare class DCS1_SaveOptions {
 	/**
 	 * The DCS type.
 	 */
-	static DCS: DCSType;
+	public DCS: DCSType;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * The type of encoding to use for the document.
 	 */
-	static encoding: SaveEncoding;
+	public encoding: SaveEncoding;
 
 	/**
 	 * If true, includes halftone screen.
 	 */
-	static halftoneScreen: boolean;
+	public halftoneScreen: boolean;
 
 	/**
 	 * If true, image interpolation is used.
 	 */
-	static interpolation: boolean;
+	public interpolation: boolean;
 
 	/**
 	 * The type of preview.
 	 */
-	static preview: Preview;
-
+	public preview: Preview;
+  
 	/**
 	 * If true, includes transfer functions in the document to compensate for dot gain between the image and film.
 	 */
-	static transferFunction: boolean;
+	public transferFunction: boolean;
 
 	/**
 	 * If true, includes vector data. Valid only if the document contains vector data (un-rasterized text).
 	 */
-	static vectorData: boolean;
+	public vectorData: boolean;
 
 }
 
@@ -6109,52 +6109,52 @@ declare class DCS2_SaveOptions {
 	/**
 	 * The DCS type.
 	 */
-	static DCS: DCSType;
+	public DCS: DCSType;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	public embedColorProfile: boolean;
 
 	/**
 	 * The type of encoding to use for document.
 	 */
-	static encoding: SaveEncoding;
+	public encoding: SaveEncoding;
 
 	/**
 	 * If true, includes halftone screen.
 	 */
-	static halftoneScreen: boolean;
+	public halftoneScreen: boolean;
 
 	/**
 	 * If true, image interpolation is used.
 	 */
-	static interpolation: boolean;
+	public interpolation: boolean;
 
 	/**
 	 * If true, saves color channels as multiple files.
 	 */
-	static multiFileDCS: boolean;
+	public multiFileDCS: boolean;
 
 	/**
 	 * The type of preview.
 	 */
-	static preview: Preview;
+	public preview: Preview;
 
 	/**
 	 * If true, the spot colors are saved.
 	 */
-	static spotColors: boolean;
+	public spotColors: boolean;
 
 	/**
 	 * If true, includes transfer functions in the document to compensate for dot gain between the image and film.
 	 */
-	static transferFunction: boolean;
+	public transferFunction: boolean;
 
 	/**
 	 * If true, includes vector data. Valid only if the document contains vector data (un-rasterized text).
 	 */
-	static vectorData: boolean;
+	public vectorData: boolean;
 
 }
 
@@ -6171,12 +6171,12 @@ declare class ExportOptionsIllustrator extends ExportOptions {
 	/**
 	 * The path to export.
 	 */
-	static path: IllustratorPathType;
+	public path: IllustratorPathType;
 
 	/**
 	 * The name of the path to export. Valid only for named paths.
 	 */
-	static pathName: string;
+	public pathName: string;
 
 }
 
@@ -6187,87 +6187,87 @@ declare class ExportOptionsSaveForWeb extends ExportOptions {
 	/**
 	 * If true, uses 8 bits. If false, uses 24 bits. Valid only when 'format' = PNG.
 	 */
-	static PNG8: boolean;
+	public PNG8: boolean;
 
 	/**
 	 * The amount of blur to apply to the image to reduce artifacts.
 	 */
-	static blur: number;
+	public blur: number;
 
 	/**
 	 * The color reduction algorithm.
 	 */
-	static colorReduction: ColorReductionType;
+	public colorReduction: ColorReductionType;
 
 	/**
 	 * The number of colors in the palette.
 	 */
-	static colors: number;
+	public colors: number;
 
 	/**
 	 * The type of dither.
 	 */
-	static dither: Dither;
+	public dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither' = diffusion.
 	 */
-	static ditherAmount: number;
+	public ditherAmount: number;
 
 	/**
 	 * The file format to use. Save For Web supports only Compuserve GIF, JPEG, PNG-8, PNG-24, and BMP formats.
 	 */
-	static format: SaveDocumentType;
+	public format: SaveDocumentType;
 
 	/**
 	 * If true, includes the document's embedded profile.
 	 */
-	static includeProfile: boolean;
+	public includeProfile: boolean;
 
 	/**
 	 * If true, the image downloads in multiple passes, progressive.
 	 */
-	static interlaced: boolean;
+	public interlaced: boolean;
 
 	/**
 	 * The amount of lossiness allowed.
 	 */
-	static lossy: number;
+	public lossy: number;
 
 	/**
 	 * The colors to blend transparent pixels against.
 	 */
-	static matteColor: RGBColor;
+	public matteColor: RGBColor;
 
 	/**
 	 * If true, creates smaller but less compatible files.
 	 */
-	static optimized: boolean;
+	public optimized: boolean;
 
 	/**
 	 * The quality of the produced image (as a percentage). Range: 0 to 100.
 	 */
-	static quality: number;
+	public quality: number;
 
 	/**
 	 * If true, transparent areas of the image are included in the saved image.
 	 */
-	static transparency: boolean;
+	public transparency: boolean;
 
 	/**
 	 * The amount of transparency dither. Valid only when 'transparency' = true.
 	 */
-	static transparencyAmount: number;
+	public transparencyAmount: number;
 
 	/**
 	 * The transparency dither algorithm.
 	 */
-	static transparencyDither: Dither;
+	public transparencyDither: Dither;
 
 	/**
 	 * The tolerance amount within which to snap close colors to web palette colors.
 	 */
-	static webSnap: number;
+	public webSnap: number;
 
 }
 
@@ -6284,32 +6284,32 @@ declare class BitmapConversionOptions extends DocumentConversionOptions {
 	/**
 	 * The angle (in degrees) at which to orient individual dots. Valid only when 'method' = halftone screen. Range: -180 to 180.
 	 */
-	static angle: number;
+	public angle: number;
 
 	/**
 	 * The number of printer dots per inch. Valid only when 'method' = halftone screen. Range: 1.0 to 999.99.
 	 */
-	static frequency: number;
+	public frequency: number;
 
 	/**
 	 * The conversion method.
 	 */
-	static method: BitmapConversionType;
+	public method: BitmapConversionType;
 
 	/**
 	 * The name of the pattern to use. Valid only when 'method' = custom.
 	 */
-	static patternName: string;
+	public patternName: string;
 
 	/**
 	 * The output resolution (in pixels per inch)
 	 */
-	static resolution: number;
+	public resolution: number;
 
 	/**
 	 * The dot shape. Valid only when 'method' = halftone screen.
 	 */
-	static shape: BitmapHalfToneType;
+	public shape: BitmapHalfToneType;
 
 }
 
@@ -6320,42 +6320,42 @@ declare class IndexedConversionOptions extends DocumentConversionOptions {
 	/**
 	 * The number of colors in the palette. Not valid for all palette types.
 	 */
-	static colors: number;
+	public colors: number;
 
 	/**
 	 * The type of dither.
 	 */
-	static dither: Dither;
+	public dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither' = diffusion.
 	 */
-	static ditherAmount: number;
+	public ditherAmount: number;
 
 	/**
 	 * The type of colors to force into the color palette.
 	 */
-	static forced: ForcedColors;
+	public forced: ForcedColors;
 
 	/**
 	 * The color to use to fill anti-aliased edges adjacent to transparent areas of the image. When transparency = false, the matte color is applied to transparent areas.
 	 */
-	static matte: MatteType;
+	public matte: MatteType;
 
 	/**
 	 * The type of palette.
 	 */
-	static palette: PaletteType;
+	public palette: PaletteType;
 
 	/**
 	 * If true, protects colors in the image that contain entries in the color table from being dithered. Valid only when 'dither' = diffusion.
 	 */
-	static preserveExactColors: boolean;
+	public preserveExactColors: boolean;
 
 	/**
 	 * If true, preserves transparent areas of the image during conversion to GIF format.
 	 */
-	static transparency: boolean;
+	public transparency: boolean;
 
 }
 
@@ -6372,7 +6372,7 @@ declare class SolidColor {
 	/**
 	 * The CMYK color model.
 	 */
-	static cmyk: CMYKColor;
+	public cmyk: CMYKColor;
 
 	/**
 	 * The CMYK color model.
@@ -6382,7 +6382,7 @@ declare class SolidColor {
 	/**
 	 * The grayscale color model.
 	 */
-	static gray: GrayColor;
+	public gray: GrayColor;
 
 	/**
 	 * The grayscale color model.
@@ -6392,7 +6392,7 @@ declare class SolidColor {
 	/**
 	 * The HSB color model.
 	 */
-	static hsb: HSBColor;
+	public hsb: HSBColor;
 
 	/**
 	 * The HSB color model.
@@ -6402,7 +6402,7 @@ declare class SolidColor {
 	/**
 	 * The lab color model.
 	 */
-	static lab: LabColor;
+	public lab: LabColor;
 
 	/**
 	 * The lab color model.
@@ -6417,12 +6417,12 @@ declare class SolidColor {
 	/**
 	 * The color model.
 	 */
-	static model: ColorModel;
+	public model: ColorModel;
 
 	/**
 	 * The nearest web color to the current color.
 	 */
-	static readonly nearestWebColor: RGBColor;
+	public readonly nearestWebColor: RGBColor;
 
 	/**
 	 * The nearest web color to the current color.
@@ -6437,7 +6437,7 @@ declare class SolidColor {
 	/**
 	 * The RGB color model.
 	 */
-	static rgb: RGBColor;
+	public rgb: RGBColor;
 
 	/**
 	 * Compares two colors.
@@ -6454,7 +6454,7 @@ declare class GrayColor extends Color {
 	/**
 	 * The gray value. Range: 0.0 to 100.0.
 	 */
-	static gray: number;
+	public gray: number;
 
 	/**
 	 * The gray value. Range: 0.0 to 100.0.
@@ -6470,7 +6470,7 @@ declare class RGBColor extends Color {
 	/**
 	 * The blue color value. Range: 0.0 to 255.0.
 	 */
-	static blue: number;
+	public blue: number;
 
 	/**
 	 * The blue color value. Range: 0.0 to 255.0.
@@ -6480,7 +6480,7 @@ declare class RGBColor extends Color {
 	/**
 	 * The green color value. Range: 0.0 to 255.0.
 	 */
-	static green: number;
+	public green: number;
 
 	/**
 	 * The green color value. Range: 0.0 to 255.0.
@@ -6490,7 +6490,7 @@ declare class RGBColor extends Color {
 	/**
 	 * The hex representation of this color.
 	 */
-	static hexValue: string;
+	public hexValue: string;
 
 	/**
 	 * The hex representation of this color.
@@ -6500,7 +6500,7 @@ declare class RGBColor extends Color {
 	/**
 	 * The red color value. Range: 0.0 to 255.0.
 	 */
-	static red: number;
+	public red: number;
 
 	/**
 	 * The red color value. Range: 0.0 to 255.0.
@@ -6516,7 +6516,7 @@ declare class CMYKColor extends Color {
 	/**
 	 * The black color value. Range: 0.0 to 100.0.
 	 */
-	static black: number;
+	public black: number;
 
 	/**
 	 * The black color value. Range: 0.0 to 100.0.
@@ -6526,7 +6526,7 @@ declare class CMYKColor extends Color {
 	/**
 	 * The cyan color value. Range: 0.0 to 100.0.
 	 */
-	static cyan: number;
+	public cyan: number;
 
 	/**
 	 * The cyan color value. Range: 0.0 to 100.0.
@@ -6536,7 +6536,7 @@ declare class CMYKColor extends Color {
 	/**
 	 * The magenta color value. Range: 0.0 to 100.0.
 	 */
-	static magenta: number;
+	public magenta: number;
 
 	/**
 	 * The magenta color value. Range: 0.0 to 100.0.
@@ -6546,7 +6546,7 @@ declare class CMYKColor extends Color {
 	/**
 	 * The yellow color value. Range: 0.0 to 100.0.
 	 */
-	static yellow: number;
+	public yellow: number;
 
 	/**
 	 * The yellow color value. Range: 0.0 to 100.0.
@@ -6562,7 +6562,7 @@ declare class LabColor extends Color {
 	/**
 	 * The a-value. Range: -128.0 and 127.0.
 	 */
-	static A: number;
+	public A: number;
 
 	/**
 	 * The a-value. Range: -128.0 and 127.0.
@@ -6572,7 +6572,7 @@ declare class LabColor extends Color {
 	/**
 	 * The b-value. Range: -128.0 and 127.0.
 	 */
-	static B: number;
+	public B: number;
 
 	/**
 	 * The b-value. Range: -128.0 and 127.0.
@@ -6582,7 +6582,7 @@ declare class LabColor extends Color {
 	/**
 	 * The L-value. Range: 0.0 to 100.0.
 	 */
-	static L: number;
+	public L: number;
 
 	/**
 	 * The L-value. Range: 0.0 to 100.0.
@@ -6598,7 +6598,7 @@ declare class HSBColor extends Color {
 	/**
 	 * The brightness value. Range: 0.0 to 100.0.
 	 */
-	static brightness: number;
+	public brightness: number;
 
 	/**
 	 * The brightness value. Range: 0.0 to 100.0.
@@ -6608,7 +6608,7 @@ declare class HSBColor extends Color {
 	/**
 	 * The hue value. Range: 0.0 to 360.0.
 	 */
-	static hue: number;
+	public hue: number;
 
 	/**
 	 * The hue value. Range: 0.0 to 360.0.
@@ -6618,7 +6618,7 @@ declare class HSBColor extends Color {
 	/**
 	 * The saturation value. Range: 0.0 to 100.0.
 	 */
-	static saturation: number;
+	public saturation: number;
 
 	/**
 	 * The saturation value. Range: 0.0 to 100.0.
@@ -6640,42 +6640,42 @@ declare class PresentationOptions {
 	/**
 	 * Options for creating the PDF file.
 	 */
-	static PDFFileOptions: PDFSaveOptions;
+	public PDFFileOptions: PDFSaveOptions;
 
 	/**
 	 * If true, the presentation auto advances.
 	 */
-	static autoAdvance: boolean;
+	public autoAdvance: boolean;
 
 	/**
 	 * If true, includes the file name for the image.
 	 */
-	static includeFilename: boolean;
+	public includeFilename: boolean;
 
 	/**
 	 * The amount of time (in seconds) before auto advancing the view. Valid only when 'auto advance' is true. Range: 1 to 60.
 	 */
-	static interval: number;
+	public interval: number;
 
 	/**
 	 * If true, the presentation loops after the last page.
 	 */
-	static loop: boolean;
+	public loop: boolean;
 
 	/**
 	 * The magnification type when viewing the image.
 	 */
-	static magnification: MagnificationType;
+	public magnification: MagnificationType;
 
 	/**
 	 * If true, the file type is presentation. If false, the file type is Multi-Page document.
 	 */
-	static presentation: boolean;
+	public presentation: boolean;
 
 	/**
 	 * The image transition type.
 	 */
-	static transition: TransitionType;
+	public transition: TransitionType;
 
 }
 
@@ -6686,62 +6686,62 @@ declare class GalleryOptions {
 	/**
 	 * Add width and height attributes for images.
 	 */
-	static addSizeAttributes: boolean;
+	public addSizeAttributes: boolean;
 
 	/**
 	 * Options related to banner settings.
 	 */
-	static bannerOptions: GalleryBannerOptions;
+	public bannerOptions: GalleryBannerOptions;
 
 	/**
 	 * Options related to custom color settings.
 	 */
-	static customColorOptions: GalleryCustomColorOptions;
+	public customColorOptions: GalleryCustomColorOptions;
 
 	/**
 	 * The email address to show on the web page.
 	 */
-	static emailAddress: string;
+	public emailAddress: string;
 
 	/**
 	 * Options related to images settings.
 	 */
-	static imagesOptions: GalleryImagesOptions;
+	public imagesOptions: GalleryImagesOptions;
 
 	/**
 	 * Include all files found in sub folders of the input folder.
 	 */
-	static includeSubFolders: boolean;
+	public includeSubFolders: boolean;
 
 	/**
 	 * The style to use for laying out the web page.
 	 */
-	static layoutStyle: string;
+	public layoutStyle: string;
 
 	/**
 	 * Save all of the metadata in the JPEG files.
 	 */
-	static preserveAllMetadata: boolean;
+	public preserveAllMetadata: boolean;
 
 	/**
 	 * Options related to security settings.
 	 */
-	static securityOptions: GallerySecurityOptions;
+	public securityOptions: GallerySecurityOptions;
 
 	/**
 	 * Options related to thumbnail settings.
 	 */
-	static thumbnailOptions: GalleryThumbnailOptions;
+	public thumbnailOptions: GalleryThumbnailOptions;
 
 	/**
 	 * Short web page extension .htm or long web page extension .html.
 	 */
-	static useShortExtension: boolean;
+	public useShortExtension: boolean;
 
 	/**
 	 * Web page should use UTF-8 encoding.
 	 */
-	static useUTF8Encoding: boolean;
+	public useUTF8Encoding: boolean;
 
 }
 
@@ -6752,32 +6752,32 @@ declare class GalleryBannerOptions {
 	/**
 	 * Web photo gallery contact info.
 	 */
-	static contactInfo: string;
+	public contactInfo: string;
 
 	/**
 	 * Web photo gallery date.
 	 */
-	static date: string;
+	public date: string;
 
 	/**
 	 * The font setting for the banner text.
 	 */
-	static font: GalleryFontType;
+	public font: GalleryFontType;
 
 	/**
 	 * The size of the font for the banner text.
 	 */
-	static fontSize: number;
+	public fontSize: number;
 
 	/**
 	 * Web photo gallery photographer.
 	 */
-	static photographer: string;
+	public photographer: string;
 
 	/**
 	 * Web photo gallery site name.
 	 */
-	static siteName: string;
+	public siteName: string;
 
 }
 
@@ -6788,67 +6788,67 @@ declare class GalleryImagesOptions {
 	/**
 	 * The amount of border pixels you want between your images.
 	 */
-	static border: number;
+	public border: number;
 
 	/**
 	 * Generate a caption for the images.
 	 */
-	static caption: boolean;
+	public caption: boolean;
 
 	/**
 	 * Resized image dimensions in pixels.
 	 */
-	static dimension: number;
+	public dimension: number;
 
 	/**
 	 * Font for the gallery images text.
 	 */
-	static font: GalleryFontType;
+	public font: GalleryFontType;
 
 	/**
 	 * Font size for the gallery images text.
 	 */
-	static fontSize: number;
+	public fontSize: number;
 
 	/**
 	 * The quality setting for the JPEG image.
 	 */
-	static imageQuality: number;
+	public imageQuality: number;
 
 	/**
 	 * Include the copyright in the text for the gallery images.
 	 */
-	static includeCopyright: boolean;
+	public includeCopyright: boolean;
 
 	/**
 	 * Include the credits in the text for the gallery images.
 	 */
-	static includeCredits: boolean;
+	public includeCredits: boolean;
 
 	/**
 	 * Include the file name in the text for the gallery images.
 	 */
-	static includeFilename: boolean;
+	public includeFilename: boolean;
 
 	/**
 	 * Include the title in the text for the gallery images.
 	 */
-	static includeTitle: boolean;
+	public includeTitle: boolean;
 
 	/**
 	 * Add numeric links.
 	 */
-	static numericLinks: boolean;
+	public numericLinks: boolean;
 
 	/**
 	 * How should the image be constrained.
 	 */
-	static resizeConstraint: GalleryConstrainType;
+	public resizeConstraint: GalleryConstrainType;
 
 	/**
 	 * Resize images data.
 	 */
-	static resizeImages: boolean;
+	public resizeImages: boolean;
 
 }
 
@@ -6859,62 +6859,62 @@ declare class GalleryThumbnailOptions {
 	/**
 	 * The amount of border pixels you want around your thumbnail images.
 	 */
-	static border: number;
+	public border: number;
 
 	/**
 	 * With caption.
 	 */
-	static caption: boolean;
+	public caption: boolean;
 
 	/**
 	 * Web photo gallery thumbnail columns.
 	 */
-	static columnCount: number;
+	public columnCount: number;
 
 	/**
 	 * Web photo gallery thumbnail dimension in pixels.
 	 */
-	static dimension: number;
+	public dimension: number;
 
 	/**
 	 * Web photo gallery font.
 	 */
-	static font: GalleryFontType;
+	public font: GalleryFontType;
 
 	/**
 	 * The size of the font for the thumbnail images text.
 	 */
-	static fontSize: number;
+	public fontSize: number;
 
 	/**
 	 * Include copyright for thumbnail.
 	 */
-	static includeCopyright: boolean;
+	public includeCopyright: boolean;
 
 	/**
 	 * Include credits for thumbnail.
 	 */
-	static includeCredits: boolean;
+	public includeCredits: boolean;
 
 	/**
 	 * Include file name for thumbnail.
 	 */
-	static includeFilename: boolean;
+	public includeFilename: boolean;
 
 	/**
 	 * Include title for thumbnail.
 	 */
-	static includeTitle: boolean;
+	public includeTitle: boolean;
 
 	/**
 	 * Web photo gallery thumbnail rows.
 	 */
-	static rowCount: number;
+	public rowCount: number;
 
 	/**
 	 * The size of the thumbnail images.
 	 */
-	static size: GalleryThumbSizeType;
+	public size: GalleryThumbSizeType;
 
 }
 
@@ -6925,32 +6925,32 @@ declare class GalleryCustomColorOptions {
 	/**
 	 * Active link color.
 	 */
-	static activeLinkColor: RGBColor;
+	public activeLinkColor: RGBColor;
 
 	/**
 	 * Background color.
 	 */
-	static backgroundColor: RGBColor;
+	public backgroundColor: RGBColor;
 
 	/**
 	 * Banner color.
 	 */
-	static bannerColor: RGBColor;
+	public bannerColor: RGBColor;
 
 	/**
 	 * Link color.
 	 */
-	static linkColor: RGBColor;
+	public linkColor: RGBColor;
 
 	/**
 	 * Text color.
 	 */
-	static textColor: RGBColor;
+	public textColor: RGBColor;
 
 	/**
 	 * Visited link color.
 	 */
-	static visitedLinkColor: RGBColor;
+	public visitedLinkColor: RGBColor;
 
 }
 
@@ -6961,42 +6961,42 @@ declare class GallerySecurityOptions {
 	/**
 	 * Web photo gallery security content.
 	 */
-	static content: GallerySecurityType;
+	public content: GallerySecurityType;
 
 	/**
 	 * Web photo gallery security font.
 	 */
-	static font: GalleryFontType;
+	public font: GalleryFontType;
 
 	/**
 	 * Web photo gallery security font size.
 	 */
-	static fontSize: number;
+	public fontSize: number;
 
 	/**
 	 * Web page security opacity as a percent.
 	 */
-	static opacity: number;
+	public opacity: number;
 
 	/**
 	 * Web photo gallery security custom text.
 	 */
-	static text: string;
+	public text: string;
 
 	/**
 	 * Web page security text color.
 	 */
-	static textColor: RGBColor;
+	public textColor: RGBColor;
 
 	/**
 	 * Web photo gallery security text position.
 	 */
-	static textPosition: GallerySecurityTextPositionType;
+	public textPosition: GallerySecurityTextPositionType;
 
 	/**
 	 * Web photo gallery security text rotate.
 	 */
-	static textRotate: GallerySecurityTextRotateType;
+	public textRotate: GallerySecurityTextRotateType;
 
 }
 
@@ -7007,77 +7007,77 @@ declare class ContactSheetOptions {
 	/**
 	 * If true, places the images horizontally first.
 	 */
-	static acrossFirst: boolean;
+	public acrossFirst: boolean;
 
 	/**
 	 * If true, rotates images for best fit.
 	 */
-	static bestFit: boolean;
+	public bestFit: boolean;
 
 	/**
 	 * If true, uses the filename as a caption for the image.
 	 */
-	static caption: boolean;
+	public caption: boolean;
 
 	/**
 	 * The number of contact sheet columns.
 	 */
-	static columnCount: number;
+	public columnCount: number;
 
 	/**
 	 * If true, flattens all layers in the final document.
 	 */
-	static flatten: boolean;
+	public flatten: boolean;
 
 	/**
 	 * The font used for the caption.
 	 */
-	static font: GalleryFontType;
+	public font: GalleryFontType;
 
 	/**
 	 * The caption font size.
 	 */
-	static fontSize: number;
+	public fontSize: number;
 
 	/**
 	 * The height (in pixels) of the resulting document. Range: 100 to 2900.
 	 */
-	static height: number;
+	public height: number;
 
 	/**
 	 * The horizontal spacing (in pixels) between images. Range: 0 to 29000.
 	 */
-	static horizontal: number;
+	public horizontal: number;
 
 	/**
 	 * The document color mode.
 	 */
-	static mode: NewDocumentMode;
+	public mode: NewDocumentMode;
 
 	/**
 	 * The resolution of the document (in pixels per inch). Range: 35 to 1200.
 	 */
-	static resolution: number;
+	public resolution: number;
 
 	/**
 	 * The number of contact sheet rows.
 	 */
-	static rowCount: number;
+	public rowCount: number;
 
 	/**
 	 * If true, auto spaces the images in the contact sheet.
 	 */
-	static useAutoSpacing: boolean;
+	public useAutoSpacing: boolean;
 
 	/**
 	 * The vertical spacing (in pixels) between images. Range: 0 to 29000.
 	 */
-	static vertical: number;
+	public vertical: number;
 
 	/**
 	 * The width (in pixels) of the resulting document. Range: 100 to 2900.
 	 */
-	static width: number;
+	public width: number;
 
 }
 
@@ -7088,62 +7088,62 @@ declare class PicturePackageOptions {
 	/**
 	 * The content information.
 	 */
-	static content: PicturePackageTextType;
+	public content: PicturePackageTextType;
 
 	/**
 	 * If true, flattens all layers in the final document.
 	 */
-	static flatten: boolean;
+	public flatten: boolean;
 
 	/**
 	 * The font used for security text.
 	 */
-	static font: GalleryFontType;
+	public font: GalleryFontType;
 
 	/**
 	 * The font size.
 	 */
-	static fontSize: number;
+	public fontSize: number;
 
 	/**
 	 * The layout to use to generate the picture package.
 	 */
-	static layout: string;
+	public layout: string;
 
 	/**
 	 * The document color mode.
 	 */
-	static mode: NewDocumentMode;
+	public mode: NewDocumentMode;
 
 	/**
 	 * The web page security text opacity (as a percentage) Range: 0 to 100.
 	 */
-	static opacity: number;
+	public opacity: number;
 
 	/**
 	 * The resolution of the document (in pixels per inch)
 	 */
-	static resolution: number;
+	public resolution: number;
 
 	/**
 	 * The picture package custom text.
 	 */
-	static text: string;
+	public text: string;
 
 	/**
 	 * The color of the security text.
 	 */
-	static textColor: RGBColor;
+	public textColor: RGBColor;
 
 	/**
 	 * The position of the security text.
 	 */
-	static textPosition: GallerySecurityTextPositionType;
+	public textPosition: GallerySecurityTextPositionType;
 
 	/**
 	 * The orientation of the security text.
 	 */
-	static textRotate: GallerySecurityTextRotateType;
+	public textRotate: GallerySecurityTextRotateType;
 
 }
 
@@ -7154,62 +7154,62 @@ declare class BatchOptions {
 	/**
 	 * The type of destination for the processed files.
 	 */
-	static destination: BatchDestinationType;
+	public destination: BatchDestinationType;
 
 	/**
 	 * The folder location for the processed files. Valid only when 'destination' = folder.
 	 */
-	static destinationFolder: File;
+	public destinationFolder: File;
 
 	/**
 	 * The file in which to log errors encountered. To display errors on the screen and stop batch processing when errors occur, leave blank.
 	 */
-	static errorFile: File;
+	public errorFile: File;
 
 	/**
 	 * A list of file naming options. Maximum: 6.
 	 */
-	static fileNaming: FileNamingType[];
+	public fileNaming: FileNamingType[];
 
 	/**
 	 * If true, the final file names are Macintosh compatible.
 	 */
-	static macintoshCompatible: boolean;
+	public macintoshCompatible: boolean;
 
 	/**
 	 * If true, overrides action open commands.
 	 */
-	static overrideOpen: boolean;
+	public overrideOpen: boolean;
 
 	/**
 	 * If true, overrides save as action steps with the specified destination.
 	 */
-	static overrideSave: boolean;
+	public overrideSave: boolean;
 
 	/**
 	 * The starting serial number to use in naming files.
 	 */
-	static startingSerial: number;
+	public startingSerial: number;
 
 	/**
 	 * If true, suppresses file open options dialogs.
 	 */
-	static suppressOpen: boolean;
+	public suppressOpen: boolean;
 
 	/**
 	 * If true, suppresses color profile warnings.
 	 */
-	static suppressProfile: boolean;
+	public suppressProfile: boolean;
 
 	/**
 	 * If true, the final file names are Unix compatible.
 	 */
-	static unixCompatible: boolean;
+	public unixCompatible: boolean;
 
 	/**
 	 * If true, the final file names are Windows compatible.
 	 */
-	static windowsCompatible: boolean;
+	public windowsCompatible: boolean;
 
 }
 
@@ -7220,17 +7220,17 @@ declare class SubPathInfo {
 	/**
 	 * If true, the path is closed.
 	 */
-	static closed: boolean;
+	public closed: boolean;
 
 	/**
 	 * All of the sub path item's path points.
 	 */
-	static entireSubPath: PathPointInfo[];
+	public entireSubPath: PathPointInfo[];
 
 	/**
 	 * The sub path operation on other sub paths.
 	 */
-	static operation: ShapeOperation;
+	public operation: ShapeOperation;
 
 }
 
@@ -7241,7 +7241,7 @@ declare class PathPointInfo {
 	/**
 	 * The x and y coordinates of one end point of the path segment.
 	 */
-	static anchor: Point[];
+	public anchor: Point[];
 
 	/**
 	 * The x and y coordinates of one end point of the path segment.
@@ -7251,7 +7251,7 @@ declare class PathPointInfo {
 	/**
 	 * The point type.
 	 */
-	static kind: PointKind;
+	public kind: PointKind;
 
 	/**
 	 * The point type.
@@ -7261,7 +7261,7 @@ declare class PathPointInfo {
 	/**
 	 * The location of the left direction point ("in" position).
 	 */
-	static leftDirection: Point[];
+	public leftDirection: Point[];
 
 	/**
 	 * The location of the left direction point ("in" position).
@@ -7271,7 +7271,7 @@ declare class PathPointInfo {
 	/**
 	 * The location of the right direction point ("out" position).
 	 */
-	static rightDirection: Point[];
+	public rightDirection: Point[];
 
 	/**
 	 * The location of the right direction point ("out" position).
@@ -7287,12 +7287,12 @@ declare class ActionDescriptor {
 	/**
 	 * The number of keys contained in the descriptor.
 	 */
-	static readonly count: number;
+	public readonly count: number;
 
 	/**
 	 * The class name of the referenced ActionDescriptor object.
 	 */
-	static readonly typename: string;
+	public readonly typename: string;
 	
 	/**
 	 * Clears the descriptor.
@@ -7487,12 +7487,12 @@ declare class ActionList {
 	/**
 	 * The number of commands that comprise the action.
 	 */
-	static readonly count: number;
+	public readonly count: number;
 
 	/**
 	 * The class name of the referenced ActionList object.
 	 */
-	static readonly typename: string;
+	public readonly typename: string;
 
 	/**
 	 * Clears the list.
@@ -7657,7 +7657,7 @@ declare class ActionReference {
 	/**
 	 * The class name of the referenced ActionReference object.
 	 */
-	static readonly typename: string;
+	public readonly typename: string;
 
 	/**
 	 * Gets reference contained in this reference. Container references provide additional pieces to the reference. This looks like another reference, but it is actually part of the same reference.
