@@ -8322,7 +8322,7 @@ declare class Document {
 	/**
 	 * The path to the document.
 	 */
-	readonly path: File;
+	readonly path: Folder;
 
 	/**
 	 * The path items collection in this document.
