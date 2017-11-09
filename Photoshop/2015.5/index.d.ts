@@ -866,7 +866,7 @@ declare enum PaletteType {
 /**
  * The type of dither.
  */
-declare enum DitherType {
+declare enum Dither {
 	/**
 	 * Diffuses dither effects in random patterns across adjacent pixels.
 	 */
@@ -892,7 +892,7 @@ declare enum DitherType {
 /**
  * The type of image to use as a low-resolution preview in the destination application.
  */
-declare enum MacPreviewType {
+declare enum Preview {
 	/**
 	 * 8-bit TIFF.
 	 */
@@ -964,7 +964,7 @@ declare enum SaveEncoding {
 /**
  * The options for saving a JPEG file.
  */
-declare enum FormatOptionsType {
+declare enum FormatOptions {
 	/**
 	 * Baseline (Optimized). Optimized color and a slightly reduced file size.
 	 */
@@ -985,7 +985,7 @@ declare enum FormatOptionsType {
 /**
  * The type of compression to use when saving a document in PDF format.
  */
-declare enum PDFEncodingType {
+declare enum PDFEncoding {
 	/**
 	 * JPEG compression.
 	 */
@@ -1067,7 +1067,7 @@ declare enum PDFEncodingType {
  * The PDF/X standard with which the document complies.
  * PDF/X compliant files must contain information describing the printing condition for which they are prepared.
  */
-declare enum PDFStandardType {
+declare enum PDFStandard {
 	/**
 	 * The document does not use the PDF/X standard.
 	 */
@@ -1103,7 +1103,7 @@ declare enum PDFStandardType {
 /**
  * The PDF version with which to make the document compatible.
  */
-declare enum PDFCompatibilityType {
+declare enum PDFCompatibility {
 	/**
 	 * PDF 1.3 (Acrobat 4 or higher).
 	 */
@@ -1134,7 +1134,7 @@ declare enum PDFCompatibilityType {
 /**
  * Downsampling options when saving as PDF.
  */
-declare enum PDFResampleType {
+declare enum PDFResample {
 	/**
 	 * Does not downsample.
 	 */
@@ -1191,7 +1191,7 @@ declare enum PICTCompression {
 /**
  * The formatting for the filename extension.
  */
-declare enum MacExtensionType {
+declare enum Extension {
 	/**
 	 * The extension is in lowercase letters.
 	 */
@@ -1212,7 +1212,7 @@ declare enum MacExtensionType {
 /**
  * The encoding to use when saving to TIFF format.
  */
-declare enum TiffEncodingType {
+declare enum TIFFEncoding {
 	/**
 	 * JPEG compression, which is lossy and recommended for continuous-tone images, such as photographs.
 	 */
@@ -1238,7 +1238,7 @@ declare enum TiffEncodingType {
 /**
  * The layer compression type.
  */
-declare enum LayerCompressionType {
+declare enum LayerCompression {
 	/**
 	 * Run Length Encoding, which is lossless.
 	 */
@@ -1254,7 +1254,7 @@ declare enum LayerCompressionType {
 /**
  * The platform-specific order in which bytes will be read.
  */
-declare enum ByteOrderType {
+declare enum ByteOrder {
 	/**
 	 * IBM PC.
 	 */
@@ -5138,7 +5138,7 @@ declare class RawFormatOpenOptions extends OpenOptions {
 	/**
 	 * The order in which bytes will be read. Valid only when 'bits per channel' = 16.
 	 */
-	static byteOrder: ByteOrderType;
+	static byteOrder: ByteOrder;
 
 	/**
 	 * The number of channels in the image. Valid only when 'bits per channel' = 16. Range: 1 to 56.
@@ -5561,7 +5561,7 @@ declare class GIFSaveOptions {
 	/**
 	 * The type of dither.
 	 */
-	static dither: DitherType;
+	static dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither type' is diffusion. Range: 1 to 100.
@@ -5627,7 +5627,7 @@ declare class EPSSaveOptions {
 	/**
 	 * The type of preview.
 	 */
-	static preview: MacPreviewType;
+	static preview: Preview;
 
 	/**
 	 * If true, uses PostScript color management.
@@ -5663,7 +5663,7 @@ declare class JPEGSaveOptions {
 	/**
 	 * The download format to use.
 	 */
-	static formatOptions: FormatOptionsType;
+	static formatOptions: FormatOptions;
 
 	/**
 	 * The color to use to fill anti-aliased edges adjacent to transparent areas of the image. Default: white.
@@ -5689,12 +5689,12 @@ declare class PDFSaveOptions {
 	/**
 	 * The PDF version to make the document compatible with.
 	 */
-	static PDFCompatibility: PDFCompatibilityType;
+	static PDFCompatibility: PDFCompatibility;
 
 	/**
 	 * The PDF standard to make the document compatible with.
 	 */
-	static PDFStandard: PDFStandardType;
+	static PDFStandard: PDFStandard;
 
 	/**
 	 * If true, the alpha channels are saved.
@@ -5729,7 +5729,7 @@ declare class PDFSaveOptions {
 	/**
 	 * The downsample method to use.
 	 */
-	static downSample: PDFResampleType;
+	static downSample: PDFResample;
 
 	/**
 	 * The size (in pixels per inch) to downsample images to if they exceed the value specified for 'down sample size limit'.
@@ -5764,7 +5764,7 @@ declare class PDFSaveOptions {
 	/**
 	 * The encoding method to use.
 	 */
-	static encoding: PDFEncodingType;
+	static encoding: PDFEncoding;
 
 	/**
 	 * DEPRECATED. ( use image interpolation? )
@@ -6007,7 +6007,7 @@ declare class TiffSaveOptions {
 	/**
 	 * The order in which the bytes will be read. Default: Mac OS when running in Mac OS, and IBM PC when running in Windows.
 	 */
-	static byteOrder: ByteOrderType;
+	static byteOrder: ByteOrder;
 
 	/**
 	 * If true, the color profile is embedded in the document.
@@ -6017,7 +6017,7 @@ declare class TiffSaveOptions {
 	/**
 	 * The compression type.
 	 */
-	static imageCompression: TiffEncodingType;
+	static imageCompression: TIFFEncoding;
 
 	/**
 	 * If true, the channels in the image are interleaved.
@@ -6032,7 +6032,7 @@ declare class TiffSaveOptions {
 	/**
 	 * The method of compression to use when saving layers (as opposed to saving composite data). Valid only when 'layers' = true.
 	 */
-	static layerCompression: LayerCompressionType;
+	static layerCompression: LayerCompression;
 
 	/**
 	 * If true, the layers are saved.
@@ -6088,7 +6088,7 @@ declare class DCS1_SaveOptions {
 	/**
 	 * The type of preview.
 	 */
-	static preview: MacPreviewType;
+	static preview: Preview;
 
 	/**
 	 * If true, includes transfer functions in the document to compensate for dot gain between the image and film.
@@ -6139,7 +6139,7 @@ declare class DCS2_SaveOptions {
 	/**
 	 * The type of preview.
 	 */
-	static preview: MacPreviewType;
+	static preview: Preview;
 
 	/**
 	 * If true, the spot colors are saved.
@@ -6207,7 +6207,7 @@ declare class ExportOptionsSaveForWeb extends ExportOptions {
 	/**
 	 * The type of dither.
 	 */
-	static dither: DitherType;
+	static dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither' = diffusion.
@@ -6262,7 +6262,7 @@ declare class ExportOptionsSaveForWeb extends ExportOptions {
 	/**
 	 * The transparency dither algorithm.
 	 */
-	static transparencyDither: DitherType;
+	static transparencyDither: Dither;
 
 	/**
 	 * The tolerance amount within which to snap close colors to web palette colors.
@@ -6325,7 +6325,7 @@ declare class IndexedConversionOptions extends DocumentConversionOptions {
 	/**
 	 * The type of dither.
 	 */
-	static dither: DitherType;
+	static dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither' = diffusion.
@@ -8529,7 +8529,7 @@ declare class Document {
 	 * @param asCopy Saves the document as a copy, leaving the original open.
 	 * @param extensionType Appends the specified extension to the file name.
 	 */
-	saveAs(saveIn: File, options?: any, asCopy?: boolean, extensionType?: MacExtensionType): void;
+	saveAs(saveIn: File, options?: any, asCopy?: boolean, extensionType?: Extension): void;
 
 	/**
 	 * Splits the channels of the document.
