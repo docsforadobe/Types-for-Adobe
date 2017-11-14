@@ -7,8 +7,8 @@ Install [Node.js](https://nodejs.org/en/download/) and [TypeScript](https://www.
 ## Your first script for eg. Adobe Illustrator
 ```bash
 # create new folder
-mkdir test
-cd test
+mkdir my-script
+cd my-script
 
 # install types-for-adobe
 npm init -y
