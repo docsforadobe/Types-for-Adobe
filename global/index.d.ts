@@ -6,16 +6,6 @@
 declare var BridgeTalk: any;
 
 /**
- * The Infinity global property is a predefined variable with the value for infinity.
- */
-declare var Infinity: number;
-
-/**
- * The NaN global property is a predefined variable with the value NaN (Not-a-Number), as specified by the IEEE-754 standard.
- */
-declare var NaN: number;
-
-/**
  * The application object
  */
 declare var app: Application;
