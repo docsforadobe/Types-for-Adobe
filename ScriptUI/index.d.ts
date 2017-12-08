@@ -4139,7 +4139,7 @@ declare class Dimension {
  * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
  * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
  */
-declare class Bounds {
+declare class ObjectBounds {
 	/**
 	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
@@ -4184,8 +4184,9 @@ declare class Bounds {
 	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
 	y: number;
-
 }
+
+declare type Bounds = number[] | ObjectBounds
 
 /**
  * Encapsulates input event information for an event that propagates through a container and control hierarchy.
