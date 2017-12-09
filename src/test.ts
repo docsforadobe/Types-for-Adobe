@@ -23,7 +23,7 @@ async function test() {
 
     const queue = files.map((file) => {
         const cwd = file.replace("tsconfig.json", "");
-        return exec("cd " + cwd + "; tsc -p .");
+        return exec("cd " + cwd + "; tsc -p . --pretty");
     });
     
     await Promise.all(queue);
