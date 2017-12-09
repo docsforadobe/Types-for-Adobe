@@ -1,7 +1,7 @@
 /**
  * The $ object provides a number of debugging facilities and informational methods.
  */
-interface $ {
+interface $<Global = Object> {
 	/**
 	 * The ExtendScript build information.
 	 */
@@ -47,7 +47,7 @@ interface $ {
 	/**
 	 * A reference to the global object, which contains the JavaScript global namespace.
 	 */
-	readonly global: Object;
+	readonly global: Global;
 
 	/**
 	 * A high-resolution timer, measuring the time in microseconds. The timer starts when ExtendScript is
@@ -182,7 +182,6 @@ interface $ {
 	writeln(text: any): void;
 
 }
-declare const $: $;
 
 interface ObjectConstructor {
 	readonly prototype: Object;
