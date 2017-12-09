@@ -47,7 +47,7 @@ interface $ {
 	/**
 	 * A reference to the global object, which contains the JavaScript global namespace.
 	 */
-	readonly global: Global;
+	readonly global: any;
 
 	/**
 	 * A high-resolution timer, measuring the time in microseconds. The timer starts when ExtendScript is
