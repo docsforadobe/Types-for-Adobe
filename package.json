@@ -5,7 +5,11 @@
   },
   "dependencies": {
     "typescript": "^2.6.2",
+    "glob": "^7.1.2",
     "ts-node": "^3.3.0"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/glob": "^5.0.33"
+  }
 }
