@@ -13,6 +13,7 @@ async function main() {
     } catch (e) {
         console.error(e.cmd);
         console.error(e.stdout);
+        console.log("Test failed.");
         process.exit(1);
     }
 }
