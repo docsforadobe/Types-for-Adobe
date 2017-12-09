@@ -113,7 +113,7 @@ declare class MultitrackDocument {
 	/**
 	 * Returns an array of marker objects. Each marker object consists of the properties 'start' 'length' 'name' 'description' and 'type'.
 	 */
-	readonly markers: Array;
+	readonly markers: any[];
 
 	/**
 	 * Returns the document's current metadata as a vanilla Object. Each property is readonly and represents an metadata entry.
@@ -199,7 +199,7 @@ declare class WaveDocument {
 	/**
 	 * Returns an array of marker objects. Each marker object consists of the properties 'start' 'length' 'name' 'description' and 'type'.
 	 */
-	readonly markers: Array;
+	readonly markers: any[];
 
 	/**
 	 * Returns the document's current metadata as a vanilla Object. Each property is readonly and represents an metadata entry.
@@ -595,7 +595,7 @@ declare class AudioClip {
 	/**
 	 * Mapping of source channels to clip channels. The array contains indices of source channels which are routed to the according clip channels. The array has to have as many source channel indices as there are clip channels. Each source channel can be routed to exactly one clip channel.
 	 */
-	sourceChannelRouting: Array;
+	sourceChannelRouting: any[];
 
 	/**
 	 * The start time of the clip measured in samples at the multitrack document's sample rate.
@@ -1257,7 +1257,7 @@ declare class AudioChannelLayout {
 	 * 
 	 * @param labels Create a audio channel layout.
 	 */
-	static createAudioChannelLayout(labels: Array): AudioChannelLayout;
+	static createAudioChannelLayout(labels: any[]): AudioChannelLayout;
 
 	/**
 	 * 
@@ -4262,7 +4262,7 @@ declare class Application {
 	/**
 	 * Get currently opened documents
 	 */
-	readonly documents: Array;
+	readonly documents: Document[];
 
 	/**
 	 * Engine local persitent settings.
@@ -4723,12 +4723,12 @@ declare class Effect {
 	/**
 	 * Return an array of objects containing information about each parameter of the effect.Each object provides the following properties; name - paramater name; label - parameter title; unit - unit of the parameter values (not all effects provide this information); minimum - the lower bound of the arameter value range (not all effects provide this information); maximum - the upper bound of the parameter value range (not all effects provide this information)
 	 */
-	readonly parameterInfos: Array;
+	readonly parameterInfos: any[];
 
 	/**
 	 * Return an array containing all presets of this effect.
 	 */
-	readonly presets: Array;
+	readonly presets: EffectPreset[];
 
 	/**
 	 * 
@@ -4908,7 +4908,7 @@ declare class AMEFormatsEvent {
 	/**
 	 * The formats available for running an export.
 	 */
-	readonly formats: Array;
+	readonly formats: any[];
 
 	/**
 	 * 
@@ -5029,7 +5029,7 @@ declare class AMEServer {
 	 * @param temporaryFilesDir 
 	 * @param outputFile Add the selected tracks of a multitrack document to the AME queue. The routing information is passed in as an array of tracks. The first track in the array will be routed to the first channels in the output file. A channel can be left unassigned by adding null to the array "trackRouting". Beside the final output file you have to specify a directory to store temporary wave files as well as the temporary project file. The temporary files will be deleted by AME after the export has been completed. An event with type AMEAddMultitrackDocumentToQueueEvent.EVENT_ADDMULTITRACKDOCUMENTTOQUEUE_SUCCESS or AMEAddMultitrackDocumentToQueueEvent.EVENT_ADDMULTITRACKDOCUMENTTOQUEUE_ERROR will be sent to notify about success or failure. Add the selected tracks of a multitrack document to the AME queue.
 	 */
-	addMultitrackDocumentAndRoutingToQueue(multitrackDocument: Document, trackRouting: Array, preset: AMEPreset, temporaryFilesDir: string, outputFile: string): boolean;
+	addMultitrackDocumentAndRoutingToQueue(multitrackDocument: Document, trackRouting: any[], preset: AMEPreset, temporaryFilesDir: string, outputFile: string): boolean;
 
 	/**
 	 * Connect to AME. An event with type DynamicLinkConnectionEvent.EVENT_CONNECTION will be sent to notify about success or failure.
@@ -5101,17 +5101,17 @@ declare class AMEPresetsEvent {
 	/**
 	 * Available match source presets for this format.
 	 */
-	readonly matchSourcePresets: Array;
+	readonly matchSourcePresets: any[];
 
 	/**
 	 * Available system presets for this format.
 	 */
-	readonly systemPresets: Array;
+	readonly systemPresets: any[];
 
 	/**
 	 * Available user presets for this format.
 	 */
-	readonly userPresets: Array;
+	readonly userPresets: any[];
 
 	/**
 	 * 
