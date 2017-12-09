@@ -1,4 +1,5 @@
 /// <reference path="../../global/index.d.ts" />
+/// <reference path="../../ScriptUI/index.d.ts" />
 
 /**
  * Document formats that Photoshop can open.
@@ -10963,37 +10964,6 @@ declare class XMPMetadata {
 	 * The class name of the object.
 	 */
 	readonly typename: string;
-
-}
-
-/**
- * Describes a point. This class is also a two-element collection.
- */
-declare class Point {
-	/**
-	 * The left coordinate.
-	 */
-	left: number;
-
-	/**
-	 * The array length.
-	 */
-	readonly length: number;
-
-	/**
-	 * The top coordinate.
-	 */
-	top: number;
-
-	/**
-	 * The left coordinate.
-	 */
-	x: number;
-
-	/**
-	 * The top coordinate.
-	 */
-	y: number;
 
 }
 
