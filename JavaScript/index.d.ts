@@ -957,6 +957,11 @@ interface String {
 	readonly length: number;
 
 	/**
+	 * Get character at index.
+	 */
+	readonly [index: number]: string;
+
+	/**
 	 * Returns a string consisting of this string enclosed in a <a> tag.
 	 * @param name The text to be stored in the anchors' name attribute.
 	 */
@@ -1155,10 +1160,6 @@ interface String {
 	 */
 	valueOf(): string;
 
-	/**
-	 * Get character at index.
-	 */
-	readonly [index: number]: string;
 }
 
 interface NumberConstructor {
