@@ -7,8 +7,11 @@ main();
 
 async function main() {
     try {
-        await test();
-        console.log("Test passed!");
+        const tests = await test();
+        
+        console.log(tests.map(t => t.stdout).join(""));
+        console.log("Tests passed.");
+        process.exit(0);
         
     } catch (e) {
         console.error(e.cmd);
@@ -24,8 +27,9 @@ async function test() {
 
     const queue = files.map((file) => {
         const cwd = file.replace("tsconfig.json", "");
-        return exec("cd " + cwd + "; tsc -p . --pretty");
+        const ok = JSON.stringify("PASS " + cwd);
+        return exec("cd " + cwd + "; tsc -p . --pretty && echo " + ok);
     });
     
-    await Promise.all(queue);
+    return await Promise.all(queue);
 }
