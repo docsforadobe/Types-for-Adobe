@@ -1,5 +1,5 @@
-/// <reference path="../../global/index.d.ts" />
-/// <reference path="../../ScriptUI/index.d.ts" />
+/// <reference path="../../shared/global.d.ts" />
+/// <reference path="../../shared/ScriptUI.d.ts" />
 
 /**
  * Document formats that Photoshop can open.

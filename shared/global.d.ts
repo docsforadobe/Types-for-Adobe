@@ -1,4 +1,4 @@
-/// <reference path="../JavaScript/index.d.ts" />
+/// <reference path="JavaScript.d.ts" />
 
 /**
  * The global BridgeTalk object.

@@ -1,4 +1,4 @@
-/// <reference path="../../global/index.d.ts" />
+/// <reference path="../../shared/global.d.ts" />
 
 /**
  * This events propagates changes of the Audition transport like e.g. playback started.
