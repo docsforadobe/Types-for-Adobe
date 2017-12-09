@@ -32,7 +32,7 @@ tsc -p .
 For typings for CSInterface check [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS).
 
 ## Autocomplete works
-<img src="autocomplete.png"/>
+<img src="resources/autocomplete.png"/>
 
 ## Contributors
 Thanks to [vespakoen](https://github.com/vespakoen).
