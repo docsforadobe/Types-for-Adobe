@@ -1155,6 +1155,9 @@ interface String {
 	 */
 	valueOf(): string;
 
+	/**
+	 * Get character at index.
+	 */
 	readonly [index: number]: string;
 }
 
