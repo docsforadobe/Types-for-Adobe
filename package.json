@@ -1,5 +1,8 @@
 {
   "name": "types-for-adobe",
+  "scripts": {
+    "test": "ts-node src/test"
+  },
   "dependencies": {
     "typescript": "^2.6.2",
     "ts-node": "^3.3.0"
