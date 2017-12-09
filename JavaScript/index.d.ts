@@ -47,7 +47,7 @@ interface $ {
 	/**
 	 * A reference to the global object, which contains the JavaScript global namespace.
 	 */
-	readonly global: Object;
+	readonly global: Global;
 
 	/**
 	 * A high-resolution timer, measuring the time in microseconds. The timer starts when ExtendScript is
@@ -944,6 +944,7 @@ interface StringConstructor {
 	 */
 	fromCharCode(value1: number): string;
 	
+	readonly [index: number]: string;
 }
 declare const String: StringConstructor;
 
@@ -1083,7 +1084,7 @@ interface String {
 	 * @param delimiter Specifies the string to use for delimiting. If delimiter is omitted, the array returned contains one element, consisting of the entire string.
 	 * @param limit 
 	 */
-	split(delimiter: string, limit: number): string[];
+	split(delimiter: string, limit?: number): string[];
 
 	/**
 	 * Returns a string consisting of this string enclosed in a <strike> tag.
@@ -1155,6 +1156,7 @@ interface String {
 	 */
 	valueOf(): string;
 
+	readonly [index: number]: string;
 }
 
 interface NumberConstructor {
