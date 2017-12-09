@@ -4187,7 +4187,7 @@ declare class ObjectBounds {
 
 }
 
-declare type Bounds = ObjectBounds | number[]
+declare type Bounds = ObjectBounds | number[];
 
 /**
  * Encapsulates input event information for an event that propagates through a container and control hierarchy.
