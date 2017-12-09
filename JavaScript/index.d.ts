@@ -944,7 +944,6 @@ interface StringConstructor {
 	 */
 	fromCharCode(value1: number): string;
 	
-	readonly [index: number]: string;
 }
 declare const String: StringConstructor;
 
