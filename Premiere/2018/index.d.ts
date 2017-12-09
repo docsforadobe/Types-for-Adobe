@@ -1,6 +1,13 @@
 /// <reference path="../../global/index.d.ts" />
 
 /**
+ *
+ */
+declare class Application {
+    
+}
+
+/**
  * 
  */
 declare class Sequence {
@@ -657,7 +664,7 @@ declare class TrackItem {
 	/**
 	 * 
 	 */
-	readonly components: ComponentCollection;
+	readonly components: any;
 
 	/**
 	 * 
@@ -768,7 +775,7 @@ declare class ProjectItem {
 	/**
 	 * 
 	 */
-	readonly videoComponents: ComponentCollection;
+	readonly videoComponents: any;
 
 	/**
 	 * 
