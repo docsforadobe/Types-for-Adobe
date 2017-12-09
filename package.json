@@ -1,4 +1,8 @@
 {
   "name": "types-for-adobe",
+  "dependencies": {
+    "typescript": "^2.6.2",
+    "ts-node": "^3.3.0"
+  },
   "version": "0.0.1"
 }
