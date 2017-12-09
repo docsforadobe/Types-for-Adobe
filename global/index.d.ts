@@ -19,6 +19,9 @@ declare var NaN: number;
  * The application object
  */
 declare var app: Application;
+declare interface Application {
+    
+}
 
 /**
  * Displays an alert box

@@ -1,13 +1,6 @@
 /// <reference path="../../global/index.d.ts" />
 
 /**
- *
- */
-declare class Application {
-    
-}
-
-/**
  * 
  */
 declare class Sequence {
