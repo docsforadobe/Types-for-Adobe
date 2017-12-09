@@ -1152,7 +1152,7 @@ interface String {
 	toUpperCase(): string;
 
 	/**
-	 * Returns itself.
+	 * The valueOf() method returns the number of milliseconds that have passed since midnight, Returns an integer.
 	 */
 	valueOf(): string;
 
