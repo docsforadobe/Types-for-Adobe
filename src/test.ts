@@ -26,7 +26,7 @@ async function test() {
     const files = glob("*/**/tsconfig.json", options);
 
     const queue = files.map((file) => {
-        const cwd = file.replace("tsconfig.json", "");
+        const cwd = file.replace("/tsconfig.json", "");
         const ok = JSON.stringify("PASS " + cwd);
         return exec("cd " + cwd + "; tsc -p . --pretty && echo " + ok);
     });
