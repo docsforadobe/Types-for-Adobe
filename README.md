@@ -28,6 +28,9 @@ tsc -p .
 # open Adobe Illustrator -> File -> Scripts -> Other Script -> and select index.js
 ```
 
+## CSInterface
+For typings for CSInterface check [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS).
+
 ## Autocomplete works
 <img src="autocomplete.png"/>
 
