@@ -1,5 +1,24 @@
 /// <reference path="../JavaScript/index.d.ts" />
 
+/**
+ * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
+ * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
+ */
+declare type Bounds = [number, number, number, number];
+
+/**
+ * Defines the size of a window or UI element. Contains a 2-element array.
+ * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
+ */
+declare type Dimension = [number, number];
+
+/**
+ * Defines the location of a window or UI element. Contains a 2-element array.
+ * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
+ * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
+ */
+declare type Point = [number, number];
+
 declare type Margins = [number, number, number, number];
 
 declare type Alignment = number | 'top' | 'bottom' | 'left' | 'right' | 'fill' | 'center';
@@ -569,278 +588,6 @@ declare class LayoutManager {
 	 * Resizes the child elements of the managed container with a given alignment type, after the window has been resized by the user.
 	 */
 	resize(): void;
-
-}
-
-/**
- * A horizontal bar with an indicator that shows the progress of an operation.
- * All progressbar controls have a horizontal orientation. The value property contains the current position of the progress indicator; the default is 0. There is a minvalue property, but it is always 0; attempts to set it to a different value are silently ignored.
- */
-declare class Progressbar {
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
-	 * An array of child elements.
-	 */
-	readonly children: Object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
-	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
-	 */
-	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The maximum value in the range. Default is 100.
-	 */
-	maxvalue: number;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
-
-	/**
-	 * The minimum value in the range; always 0. If set to a different value, it is ignored.
-	 */
-	minvalue: number;
-
-	/**
-	 * The parent element.
-	 */
-	readonly parent: Object;
-
-	/**
-	 * The preferred size, used by layout managers to determine the best size for each element.
-	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
-	 */
-	preferredSize: Dimension;
-
-	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
-	 */
-	properties: Object;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
-	 * The element type, "progessbar".
-	 */
-	readonly type: string;
-
-	/**
-	 * The current position of the indicator.
-	 * If set to a value outside the range specified by 0 to maxvalue, it is automatically reset to the closest boundary.
-	 */
-	value: number;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
-	 * An event-handler callback function, called when the window is about to be drawn.
-	 * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
-	 */
-	onDraw(): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
-}
-
-/**
- * Defines the location of a window or UI element. Contains a 2-element array.
- * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
- * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
- */
-declare class Point {
-	/**
-	 * The left coordinate.
-	 */
-	left: number;
-
-	/**
-	 * The array length.
-	 */
-	readonly length: number;
-
-	/**
-	 * The top coordinate.
-	 */
-	top: number;
-
-	/**
-	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
-	 */
-	x: number;
-
-	/**
-	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
-	 */
-	y: number;
-
-}
-
-/**
- * Defines the size of a window or UI element. Contains a 2-element array.
- * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
- */
-declare class Dimension {
-	/**
-	 * The height in pixels.
-	 */
-	height: number;
-
-	/**
-	 * The array length.
-	 */
-	readonly length: number;
-
-	/**
-	 * The width in pixels.
-	 */
-	width: number;
-
-}
-
-/**
- * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
- * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
- */
-declare class Bounds {
-	/**
-	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
-	 */
-	bottom: number;
-
-	/**
-	 * The height in pixels.
-	 */
-	height: number;
-
-	/**
-	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
-	 */
-	left: number;
-
-	/**
-	 * The array length.
-	 */
-	readonly length: number;
-
-	/**
-	 * The width in pixels.
-	 */
-	right: number;
-
-	/**
-	 * The height in pixels.
-	 */
-	top: number;
-
-	/**
-	 * The width in pixels.
-	 */
-	width: number;
-
-	/**
-	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
-	 */
-	x: number;
-
-	/**
-	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
-	 */
-	y: number;
 
 }
 
