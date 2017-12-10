@@ -18,7 +18,7 @@ npm i pravdomil/types-for-adobe
 printf '{"compilerOptions":{"module":"none","noLib":true}}' > tsconfig.json
 
 # create index.ts
-printf '/// <reference types="types-for-adobe/illustrator/2015.3"/>\nalert(String(app))' > index.ts
+printf '/// <reference types="types-for-adobe/illustrator/2015.3"/>\nalert(String(app));\n' > index.ts
 # change to Adobe product you're targeting
 
 # compile typescript files
