@@ -150,11 +150,6 @@ declare class Window extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
 	 * The number of pixels to indent the element.
 	 */
 	indent: number;
@@ -863,11 +858,6 @@ declare class StaticText extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
@@ -1030,11 +1020,6 @@ declare class Button extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help string that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -1211,11 +1196,6 @@ declare class IconButton extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
 	 * The image object that defines the image to be drawn.
 	 */
 	image: ScriptUIImage;
@@ -1388,11 +1368,6 @@ declare class EditText extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -1594,11 +1569,6 @@ declare class ListBox extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -1819,11 +1789,6 @@ declare class DropDownList extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -2105,11 +2070,6 @@ declare class Checkbox extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
@@ -2289,11 +2249,6 @@ declare class Scrollbar extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -2499,11 +2454,6 @@ declare class RadioButton extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
@@ -2681,11 +2631,6 @@ declare class Slider extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -2869,11 +2814,6 @@ declare class Progressbar extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
@@ -3017,11 +2957,6 @@ declare class TreeView extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -3233,11 +3168,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
-
-	/**
 	 * The number of pixels to indent the element during automatic layout.
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
@@ -3398,11 +3328,6 @@ declare class Group extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -3577,11 +3502,6 @@ declare class Panel extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The help text that is displayed when the mouse hovers over the element.
-	 */
-	helpTip: string;
 
 	/**
 	 * The number of pixels to indent the element during automatic layout.
@@ -4115,6 +4035,11 @@ class _Control {
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
 	enabled: boolean;
+
+	/**
+	 * The help text that is displayed when the mouse hovers over the element.
+	 */
+	helpTip: string;
 }
 
 interface WindowPanelGroupAddMap {
