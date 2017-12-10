@@ -14,18 +14,18 @@ declare class ScriptUI {
 	 * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
 	 * Predefined styles are REGULAR, BOLD, ITALIC, BOLDITALIC.
 	 */
-	static readonly FontStyle: Object;
+	static readonly FontStyle: object;
 
 	/**
 	 * The font constants defined by the host application.
 	 */
-	static readonly applicationFonts: Object;
+	static readonly applicationFonts: object;
 
 	/**
 	 * An object whose properties are the names of compatability modes supported by the host application.
 	 * The presence of ScriptUI.compatability.su1PanelCoordinates means that the application allows backward compatibility with the coordinate system of Panel elements in ScriptUI version 1.
 	 */
-	static readonly compatibility: Object;
+	static readonly compatibility: object;
 
 	/**
 	 * A string containing the internal version number of the ScriptUI module.
@@ -117,7 +117,7 @@ declare class Window {
 	 * For windows of type dialog, the UI element to notify when the user presses a cancellation key combination.
 	 * The cancellation key is the Esc key. By default, looks for a button whose name or text is "cancel" (case disregarded).
 	 */
-	cancelElement: Object;
+	cancelElement: object;
 
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the window.
@@ -128,13 +128,13 @@ declare class Window {
 	 * The collection of UI elements that have been added to this container.
 	 * An array indexed by number or by a string containing an element's name. The length property of this array is the number of child elements for container elements, and is zero for controls.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * For windows of type dialog, the UI element to notify when the user presses a Enter key.
 	 * By default, looks for a button whose name or text is "ok" (case disregarded).
 	 */
-	defaultElement: Object;
+	defaultElement: object;
 
 	/**
 	 * True if this element is enabled.
@@ -238,7 +238,7 @@ declare class Window {
 	/**
 	 * The immediate parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size of the window.
@@ -254,7 +254,7 @@ declare class Window {
 	 * closeButton: Bridge only. When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs.
 	 * maximizeButton: Bridge only. When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The keypress combination that invokes this element's onShortcutKey() callback.
@@ -311,7 +311,7 @@ declare class Window {
 	 * @param bounds The window's position and size.
 	 * @param properties An object containing creation-only properties. Can contain any of these properties: resizeable: When true, the window can be resized by the user. Default is false. su1PanelCoordinates: Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting. closeButton:When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs. maximizeButton:When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs. minimizeButton: When true, the title bar includes a button to minimize or iconify the window, if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Main windows cannot have a minimize button in Mac OS. Not used for dialogs. independent:When true, a window of type window is independent of other application windows, and can be hidden behind them in Windows. In Mac OS, has no effect. Default is false. borderless:When true, the window has no title bar or borders. Properties that control those features are ignored.
 	 */
-	constructor(type: string, title?: string, bounds?: Bounds, properties?: Object);
+	constructor(type: string, title?: string, bounds?: Bounds, properties?: object);
 
 	/**
 	 * Creates and returns a new control or container object and adds it to the children of this window.
@@ -320,7 +320,7 @@ declare class Window {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: string, bounds?: Bounds, text?: string, properties?: Object): Object;
+	add(type: string, bounds?: Bounds, text?: string, properties?: object): object;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this window.
@@ -561,13 +561,13 @@ declare class ScriptUIGraphics {
 	 * Contains the enumerated constants for the type argument of newBrush().
 	 * Type constants are: SOLID_COLOR, THEME_COLOR.
 	 */
-	static readonly BrushType: Object;
+	static readonly BrushType: object;
 
 	/**
 	 * Contains the enumerated constants for the type argument of newPen().
 	 * Type constants are: SOLID_COLOR, THEME_COLOR.
 	 */
-	static readonly PenType: Object;
+	static readonly PenType: object;
 
 	/**
 	 * The background color for containers; for non-containers, the parent background color.
@@ -821,7 +821,7 @@ declare class ScriptUIFont {
 	/**
 	 * The font style. One of the constants in ScriptUIGraphics.FontStyle.
 	 */
-	readonly style: Object;
+	readonly style: object;
 
 	/**
 	 * The name of a substitution font, a fallback font to substitute for this font if the requested font family or style is not available.
@@ -890,7 +890,7 @@ declare class StaticText {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -939,7 +939,7 @@ declare class StaticText {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -953,7 +953,7 @@ declare class StaticText {
 	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
 	 * scrolling: When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1080,7 +1080,7 @@ declare class Button {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -1129,7 +1129,7 @@ declare class Button {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1141,7 +1141,7 @@ declare class Button {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Button object has no creation properties, but the third argument to the add() method that creates it can be the initial text value.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1280,7 +1280,7 @@ declare class IconButton {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -1328,7 +1328,7 @@ declare class IconButton {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1341,7 +1341,7 @@ declare class IconButton {
 	 * Creation properties of an IconButton object can include:
 	 * style:A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1480,7 +1480,7 @@ declare class EditText {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -1529,7 +1529,7 @@ declare class EditText {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1546,7 +1546,7 @@ declare class EditText {
 	 * enterKeySignalsOnChange: When false (the default), the control signals an onChange event when the editable text is changed and the control loses the keyboard focus (that is, the user tabs to another control, clicks outside the control, or types Enter). When true, the control only signals an onChange() event when the editable text is changed and the user types Enter; other changes to the keyboard focus do not signal the event.
 	 * wantReturn: Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1698,7 +1698,7 @@ declare class ListBox {
 	/**
 	 * An array of child ListItem elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * For a multi-column list box, the column properties.
@@ -1707,7 +1707,7 @@ declare class ListBox {
 	 * preferredWidths: An array of column widths, whose length matches the number of columns specified at creation.
 	 * visible: An array of boolean visible attributes, whose length matches the number of columns specified at creation.This property can be used to show/hide a column. Avaiblable in ScriptUI Version 6.0 or later provided ScriptUI.frameworkName == 'Flex'.
 	 */
-	readonly columns: Object;
+	readonly columns: object;
 
 	/**
 	 * True if this element is enabled.
@@ -1762,7 +1762,7 @@ declare class ListBox {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1780,7 +1780,7 @@ declare class ListBox {
 	 * columnWidths: An array of numbers for the preferred width in pixels of each column.
 	 * columnTitles: A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The currently selected item for a single-selection list, or an array of items for current selection in a multi-selection list.
@@ -1953,7 +1953,7 @@ declare class DropDownList {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -2008,7 +2008,7 @@ declare class DropDownList {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -2021,7 +2021,7 @@ declare class DropDownList {
 	 * Creation properties of a DropDownList object can include:
 	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The currently selectedlist item.
@@ -2188,13 +2188,13 @@ declare class ListItem {
 	/**
 	 * The parent element, a list control.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * An object that contains one or more creation properties of the item (properties used only when the element is created).
 	 * A ListItem object has no creation properties.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The selection state of this item.
@@ -2258,7 +2258,7 @@ declare class Checkbox {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -2307,7 +2307,7 @@ declare class Checkbox {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -2319,7 +2319,7 @@ declare class Checkbox {
 	 * An object that contains one or more creation properties of the item (properties used only when the element is created).
 	 * A CheckBox object has no creation properties. The third argument to the add() method that creates it is the text to be displayed.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -2465,7 +2465,7 @@ declare class Scrollbar {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -2526,7 +2526,7 @@ declare class Scrollbar {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -2538,7 +2538,7 @@ declare class Scrollbar {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Scrollbar object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the  onShortcutKey() callback for this element (in Windows only).
@@ -2694,7 +2694,7 @@ declare class RadioButton {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -2743,7 +2743,7 @@ declare class RadioButton {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -2755,7 +2755,7 @@ declare class RadioButton {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A RadioButton object has no creation properties. The third argument of the add() method that creates can be the label text.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -2899,7 +2899,7 @@ declare class Slider {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -2954,7 +2954,7 @@ declare class Slider {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -2966,7 +2966,7 @@ declare class Slider {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Slider object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -3106,7 +3106,7 @@ declare class Progressbar {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -3159,7 +3159,7 @@ declare class Progressbar {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -3171,7 +3171,7 @@ declare class Progressbar {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The current dimensions of this element.
@@ -3277,7 +3277,7 @@ declare class TreeView {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -3332,7 +3332,7 @@ declare class TreeView {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -3345,7 +3345,7 @@ declare class TreeView {
 	 * Creation properties of a ListBox object can include:
 	 * items: An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The currently selectedlist item.
@@ -3555,7 +3555,7 @@ declare class FlashPlayer {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -3567,7 +3567,7 @@ declare class FlashPlayer {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A FlashPlayer object has no creation properties.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The current dimensions of this element.
@@ -3700,7 +3700,7 @@ declare class Group {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -3761,7 +3761,7 @@ declare class Group {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -3773,7 +3773,7 @@ declare class Group {
 	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
 	 * A Group object has no creation properties.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The current dimensions of this element.
@@ -3816,7 +3816,7 @@ declare class Group {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: string, bounds?: Bounds, text?: string, properties?: Object): Object;
+	add(type: string, bounds?: Bounds, text?: string, properties?: object): object;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -3900,7 +3900,7 @@ declare class Panel {
 	/**
 	 * An array of child elements.
 	 */
-	readonly children: Object[];
+	readonly children: object[];
 
 	/**
 	 * True if this element is enabled.
@@ -3967,7 +3967,7 @@ declare class Panel {
 	/**
 	 * The parent element.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -3981,7 +3981,7 @@ declare class Panel {
 	 * borderStyle: A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
 	 * su1PanelCoordinates: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The current dimensions of this element.
@@ -4029,7 +4029,7 @@ declare class Panel {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: string, bounds?: Bounds, text?: string, properties?: Object): Object;
+	add(type: string, bounds?: Bounds, text?: string, properties?: object): object;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -4225,7 +4225,7 @@ declare class UIEvent {
 	/**
 	 * The event target object for this event.
 	 */
-	readonly target: Object;
+	readonly target: object;
 
 	/**
 	 * The date and time at which the event occurred.
@@ -4252,7 +4252,7 @@ declare class UIEvent {
 	 * @param view The ScriptUI element that this event relates to.
 	 * @param detail The click count for a mouse-click event.
 	 */
-	constructor(type: string, captures: boolean, bubbles: boolean, view?: Object, detail?: number);
+	constructor(type: string, captures: boolean, bubbles: boolean, view?: object, detail?: number);
 
 	/**
 	 * Initializes a UI event as a core W3C event.
@@ -4271,7 +4271,7 @@ declare class UIEvent {
 	 * @param view The ScriptUI element that this event relates to.
 	 * @param detail The click count for a mouse-click event.
 	 */
-	initUIEvent(type: string, captures: boolean, bubbles: boolean, view?: Object, detail?: number): void;
+	initUIEvent(type: string, captures: boolean, bubbles: boolean, view?: object, detail?: number): void;
 
 	/**
 	 * Prevents the default action associated with this event from being called.
@@ -4338,7 +4338,7 @@ declare class Event {
 	/**
 	 * The event target object for this event.
 	 */
-	readonly target: Object;
+	readonly target: object;
 
 	/**
 	 * The date and time at which the event occurred.
