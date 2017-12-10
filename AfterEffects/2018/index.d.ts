@@ -2254,9 +2254,9 @@ declare class ViewOptions {
 	zoom: number;
 }
 
-/*
-* Properties for Shortcuts
-*/
+/**
+ * Properties for Shortcuts
+ */
 declare class _TransformGroup extends PropertyGroup {
 	readonly anchorPoint: Property;
 	readonly position: Property;
