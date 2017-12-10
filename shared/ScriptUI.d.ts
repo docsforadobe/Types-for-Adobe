@@ -123,12 +123,6 @@ declare class Window extends _Control {
 	defaultElement: object;
 
 	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
 	 * The bounds of the window frame in screen coordinates.
 	 * The frame consists of the title bar and borders that enclose the content region of a window, depending on the windowing system.
 	 */
@@ -864,12 +858,6 @@ declare class StaticText extends _Control {
 	readonly children: object[];
 
 	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
@@ -1037,12 +1025,6 @@ declare class Button extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1224,12 +1206,6 @@ declare class IconButton extends _Control {
 	readonly children: object[];
 
 	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
@@ -1407,12 +1383,6 @@ declare class EditText extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1619,12 +1589,6 @@ declare class ListBox extends _Control {
 	 * visible: An array of boolean visible attributes, whose length matches the number of columns specified at creation.This property can be used to show/hide a column. Avaiblable in ScriptUI Version 6.0 or later provided ScriptUI.frameworkName == 'Flex'.
 	 */
 	readonly columns: object;
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1850,12 +1814,6 @@ declare class DropDownList extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -2142,12 +2100,6 @@ declare class Checkbox extends _Control {
 	readonly children: object[];
 
 	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
@@ -2332,12 +2284,6 @@ declare class Scrollbar extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -2548,12 +2494,6 @@ declare class RadioButton extends _Control {
 	readonly children: object[];
 
 	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw event.
 	 */
 	readonly graphics: ScriptUIGraphics;
@@ -2736,12 +2676,6 @@ declare class Slider extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -2930,12 +2864,6 @@ declare class Progressbar extends _Control {
 	readonly children: object[];
 
 	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
@@ -3084,12 +3012,6 @@ declare class TreeView extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -3311,12 +3233,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
-
-	/**
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
 	helpTip: string;
@@ -3477,12 +3393,6 @@ declare class Group extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -3662,12 +3572,6 @@ declare class Panel extends _Control {
 	 * An array of child elements.
 	 */
 	readonly children: object[];
-
-	/**
-	 * True if this element is enabled.
-	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
-	 */
-	enabled: boolean;
 
 	/**
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -4205,6 +4109,12 @@ class _Control {
 	 * The bounds of the window's drawable area, excluding the frame, in screen coordinates.
 	 */
 	bounds: Bounds;
+
+	/**
+	 * True if this element is enabled.
+	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
+	 */
+	enabled: boolean;
 }
 
 interface WindowPanelGroupAddMap {
