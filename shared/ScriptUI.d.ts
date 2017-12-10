@@ -190,11 +190,6 @@ declare class Window extends _Control {
 	orientation: string;
 
 	/**
-	 * The immediate parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size of the window.
 	 * Used in automatic layout and resizing. To set a specific value for only one dimension, specify the other dimension as -1.
 	 */
@@ -843,11 +838,6 @@ declare class StaticText extends _Control {
 	justify: string;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -983,11 +973,6 @@ declare class Button extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1136,11 +1121,6 @@ declare class IconButton extends _Control {
 	image: ScriptUIImage;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -1287,11 +1267,6 @@ declare class EditText extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1472,11 +1447,6 @@ declare class ListBox extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1670,11 +1640,6 @@ declare class DropDownList extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Items in a drop-down list can be of type separator, in which case they cannot be selected, and are shown as a horizontal line. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -1923,11 +1888,6 @@ declare class Checkbox extends _Control {
 	justify: string;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -2094,11 +2054,6 @@ declare class Scrollbar extends _Control {
 	minvalue: number;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -2263,11 +2218,6 @@ declare class RadioButton extends _Control {
 	justify: string;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes. A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -2426,11 +2376,6 @@ declare class Slider extends _Control {
 	minvalue: number;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -2583,11 +2528,6 @@ declare class Progressbar extends _Control {
 	minvalue: number;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -2706,11 +2646,6 @@ declare class TreeView extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -2883,11 +2818,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -3041,11 +2971,6 @@ declare class Group extends _Control {
 	orientation: string;
 
 	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
-
-	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
 	 */
@@ -3197,11 +3122,6 @@ declare class Panel extends _Control {
 	 * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
 	 */
 	orientation: string;
-
-	/**
-	 * The parent element.
-	 */
-	readonly parent: object;
 
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
@@ -3712,6 +3632,12 @@ declare class _Control {
 	 * The minimum height and width to which the element can be resized.
 	 */
 	minimumSize: Dimension;
+
+	/**
+	 * The parent element.
+	 */
+	readonly parent: object;
+
 }
 
 interface WindowPanelGroupAddMap {
