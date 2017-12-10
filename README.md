@@ -25,6 +25,7 @@ printf '/// <reference types="types-for-adobe/illustrator/2015.3"/>\nalert(Strin
 tsc
 
 # open Adobe Illustrator -> File -> Scripts -> Other Script -> and select index.js
+ 
 ```
 
 ## CSInterface
