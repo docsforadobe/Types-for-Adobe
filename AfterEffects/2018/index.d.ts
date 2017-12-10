@@ -1,7 +1,7 @@
 /// <reference path="../../shared/global.d.ts" />
 
 declare class Global {
-	app: Application
+	app: Application;
 }
 
 // CONSTANTS
