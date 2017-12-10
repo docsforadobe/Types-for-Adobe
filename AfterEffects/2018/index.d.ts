@@ -794,7 +794,7 @@ declare class Application {
 
 	/** CC2015- */
 	getenv(name: string): string;
-	setTimeout(func: Function, delay?: number): number;
+	setTimeout(func: () => void, delay?: number): number;
 	cancelTimeout(id: number): void;
 }
 
