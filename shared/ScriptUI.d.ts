@@ -240,14 +240,6 @@ declare class Window extends _Control {
 	add: WindowPanelGroupAdd;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this window.
-	 * @param eventName The name of the event. Predefined event names are: change, changing, move, moving, resize, resizing, show , enterKey, focus, blur, keydown, keyup, mousedown, mouseup, mousemove, mouseover, mouseout, click (detail = 1 for single, 2 for double).
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase?: boolean): boolean;
-
-	/**
 	 * Displays a platform-standard dialog containing a short message and an OK button.
 	 * @param message TThe string for the displayed message.
 	 * @param title A string to appear as the title of the dialog, if the platform supports a title. Ignored in Mac OS, which does not support titles for alert dialogs. The default title string is "Script Alert".
@@ -824,14 +816,6 @@ declare class StaticText extends _Control {
 	text: string;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -924,14 +908,6 @@ declare class Button extends _Control {
 	 * The text to display, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1033,14 +1009,6 @@ declare class IconButton extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1163,14 +1131,6 @@ declare class EditText extends _Control {
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
 	textselection: string;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1318,14 +1278,6 @@ declare class ListBox extends _Control {
 	add(type: string, text?: string): ListItem;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -1469,14 +1421,6 @@ declare class DropDownList extends _Control {
 	 * @param text The localizable text label for the item.
 	 */
 	add(type: string, text?: string): ListItem;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -1680,14 +1624,6 @@ declare class Checkbox extends _Control {
 	value: boolean;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -1813,14 +1749,6 @@ declare class Scrollbar extends _Control {
 	value: number;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -1943,14 +1871,6 @@ declare class RadioButton extends _Control {
 	value: boolean;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -2064,14 +1984,6 @@ declare class Slider extends _Control {
 	value: number;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -2178,14 +2090,6 @@ declare class Progressbar extends _Control {
 	value: number;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -2277,14 +2181,6 @@ declare class TreeView extends _Control {
 	 * @param text The localizable text label for the item.
 	 */
 	add(type: string, text?: string): ListItem;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -2394,14 +2290,6 @@ declare class FlashPlayer extends _Control {
 	 * A FlashPlayer object has no creation properties.
 	 */
 	properties: object;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * A function definition for a callback from the Flash ActionScript environment.
@@ -2532,14 +2420,6 @@ declare class Group extends _Control {
 	add: WindowPanelGroupAdd;
 
 	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
@@ -2657,14 +2537,6 @@ declare class Panel extends _Control {
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
 	add: WindowPanelGroupAdd;
-
-	/**
-	 * Registers an event handler for a particular type of event occuring in this element.
-	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
-	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
-	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
-	 */
-	addEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Simulates the occurrence of an event in this target.
@@ -3144,6 +3016,14 @@ declare class _Control {
 	 * The bounds of this element relative to the top-level parent window.
 	 */
 	readonly windowBounds: Bounds;
+
+	/**
+	 * Registers an event handler for a particular type of event occuring in this element.
+	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
+	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
+	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
+	 */
+	addEventListener(eventName: string, handler: Function, capturePhase?: boolean): boolean;
 
 }
 
