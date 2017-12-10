@@ -4,20 +4,130 @@
  * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
  * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
  */
-declare type Bounds = [number, number, number, number];
+declare type ArrayBounds = [number, number, number, number];
+
+/**
+ * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
+ * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
+ */
+declare class ObjectBounds {
+	/**
+	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	bottom: number;
+
+	/**
+	 * The height in pixels.
+	 */
+	height: number;
+
+	/**
+	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	left: number;
+
+	/**
+	 * The array length.
+	 */
+	readonly length: number;
+
+	/**
+	 * The width in pixels.
+	 */
+	right: number;
+
+	/**
+	 * The height in pixels.
+	 */
+	top: number;
+
+	/**
+	 * The width in pixels.
+	 */
+	width: number;
+
+	/**
+	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	x: number;
+
+	/**
+	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	y: number;
+}
+
+declare type Bounds = ObjectBounds | ArrayBounds
 
 /**
  * Defines the size of a window or UI element. Contains a 2-element array.
  * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
  */
-declare type Dimension = [number, number];
+declare type ArrayDimension = [number, number];
+
+/**
+ * Defines the size of a window or UI element. Contains a 2-element array.
+ * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
+ */
+declare class ObjectDimension {
+	/**
+	 * The height in pixels.
+	 */
+	height: number;
+
+	/**
+	 * The array length.
+	 */
+	readonly length: number;
+
+	/**
+	 * The width in pixels.
+	 */
+	width: number;
+}
+
+declare type Dimension = ObjectDimension | ArrayDimension
 
 /**
  * Defines the location of a window or UI element. Contains a 2-element array.
  * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
  * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
  */
-declare type Point = [number, number];
+declare type ArrayPoint = [number, number];
+
+/**
+ * Defines the location of a window or UI element. Contains a 2-element array.
+ * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
+ * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
+ */
+declare class ObjectPoint {
+	/**
+	 * The left coordinate.
+	 */
+	left: number;
+
+	/**
+	 * The array length.
+	 */
+	readonly length: number;
+
+	/**
+	 * The top coordinate.
+	 */
+	top: number;
+
+	/**
+	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	x: number;
+
+	/**
+	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	y: number;
+}
+
+declare type Point = ObjectPoint | ArrayPoint
 
 /**
  * Defines the number of pixels between the edges of a container and its outermost child elements. Contains an array [ left, top, right, bottom ] whose elements define the margins between the left edge of a container and its leftmost child element, and so on.
