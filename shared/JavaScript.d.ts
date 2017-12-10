@@ -882,7 +882,7 @@ interface Function {
 	 * The function arguments, packed into an array.
 	 * This property is deprecated; use the arguments property within the function body.
 	 */
-	arguments: Object;
+	arguments: object;
 
 	/**
 	 * The number of formal arguments.
@@ -906,7 +906,7 @@ interface Function {
 	 * @param thisObj The object to be used as this.
 	 * @param args An array of arguments.
 	 */
-	apply(thisObj: Object, args: any): any;
+	apply(thisObj: object, args: any): any;
 
 	/**
 	 * Apply a this object and arguments to a function.
@@ -914,7 +914,7 @@ interface Function {
 	 * @param thisObj The object to be used as this.
 	 * @param arguments The first agument to the function. Add as many as needed.
 	 */
-	call(thisObj: Object, ...arguments: any[]): any;
+	call(thisObj: object, ...arguments: any[]): any;
 
 	/**
 	 * Creates a string representation of this object that can be fed back to eval() to re-create an object. Works only with JavaScript functions.
