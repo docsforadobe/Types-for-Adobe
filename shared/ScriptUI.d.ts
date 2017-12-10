@@ -222,16 +222,6 @@ declare class Window extends _Control {
 	static readonly version: any;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this window relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Creates a new window.
 	 * @param type The window type. One of: window: Creates a simple window that can be used as a main window for an application. (Not supported by Photoshop CS3.) palette: Creates a modeless dialog, also called a floating palette. (Not supported by Photoshop CS3.) dialog: Creates a modal dialog. This argument can also be a ScriptUI resource specification; in that case, all other arguments are ignored.
 	 * @param title The window title, a localizable string.
@@ -834,16 +824,6 @@ declare class StaticText extends _Control {
 	text: string;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
 	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
@@ -944,16 +924,6 @@ declare class Button extends _Control {
 	 * The text to display, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -1063,16 +1033,6 @@ declare class IconButton extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -1203,16 +1163,6 @@ declare class EditText extends _Control {
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
 	textselection: string;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -1358,16 +1308,6 @@ declare class ListBox extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Adds an item to the choices in this list.
@@ -1521,16 +1461,6 @@ declare class DropDownList extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Adds an item or separator to the choices in this list.
@@ -1750,16 +1680,6 @@ declare class Checkbox extends _Control {
 	value: boolean;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
 	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
@@ -1893,16 +1813,6 @@ declare class Scrollbar extends _Control {
 	value: number;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
 	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
@@ -2033,16 +1943,6 @@ declare class RadioButton extends _Control {
 	value: boolean;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
 	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
@@ -2164,16 +2064,6 @@ declare class Slider extends _Control {
 	value: number;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
 	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
@@ -2288,16 +2178,6 @@ declare class Progressbar extends _Control {
 	value: number;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
 	 * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
 	 * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
@@ -2389,16 +2269,6 @@ declare class TreeView extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Adds an item to the top-level choices in this list.
@@ -2524,16 +2394,6 @@ declare class FlashPlayer extends _Control {
 	 * A FlashPlayer object has no creation properties.
 	 */
 	properties: object;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -2662,16 +2522,6 @@ declare class Group extends _Control {
 	spacing: number;
 
 	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
-
-	/**
 	 * Adds a child element to this container.
 	 * Creates and returns a new control or container object and adds it to the children of this group.
 	 * @param type The type of the child element, as specified for the type property. Control types are listed in the JavaScript Tools Guide.
@@ -2797,16 +2647,6 @@ declare class Panel extends _Control {
 	 * The title or label text, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * The window that this element belongs to.
-	 */
-	readonly window: Window;
-
-	/**
-	 * The bounds of this element relative to the top-level parent window.
-	 */
-	readonly windowBounds: Bounds;
 
 	/**
 	 * Adds a child element to this container.
@@ -3294,6 +3134,16 @@ declare class _Control {
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
 	visible: boolean;
+
+	/**
+	 * The window that this element belongs to.
+	 */
+	readonly window: Window;
+
+	/**
+	 * The bounds of this element relative to the top-level parent window.
+	 */
+	readonly windowBounds: Bounds;
 
 }
 
