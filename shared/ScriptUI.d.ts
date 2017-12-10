@@ -2631,8 +2631,9 @@ declare class _Control {
 	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
+	 * If an onShow() callback is defined for a window, calls that function before showing the window.When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states. For a modal dialog, opens the dialog and does not return until the dialog is dismissed. If it is dismissed via the close() method, this method returns any result value passed to that method. Otherwise, returns 0.
 	 */
-	show(): void;
+	show(): number | undefined;
 
 }
 
