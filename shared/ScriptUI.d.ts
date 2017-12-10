@@ -278,12 +278,6 @@ declare class Window extends _Control {
 	static find(type: string, title: string): Window;
 
 	/**
-	 * Hides this windows.
-	 * When a window is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states. For a modal dialog, closes the dialog and sets its result to 0.
-	 */
-	hide(): void;
-
-	/**
 	 * Sends a notification message to all listeners, simulating the specified user interaction event.
 	 * @param eventName The event name; if omitted, the default event is sent. One of: onClose, onMove, onMoving, onResize, onResizing, onShow
 	 */
@@ -810,11 +804,6 @@ declare class StaticText extends _Control {
 	text: string;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
@@ -896,11 +885,6 @@ declare class Button extends _Control {
 	 * The text to display, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
 
 	/**
 	 * Sends a notification message, simulating the specified user interaction event.
@@ -991,11 +975,6 @@ declare class IconButton extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
 
 	/**
 	 * Sends a notification message, simulating the specified user interaction event.
@@ -1107,11 +1086,6 @@ declare class EditText extends _Control {
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
 	textselection: string;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
 
 	/**
 	 * Sends a notification message, simulating the specified user interaction event.
@@ -1254,11 +1228,6 @@ declare class ListBox extends _Control {
 	find(text: string): ListItem;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
@@ -1391,11 +1360,6 @@ declare class DropDownList extends _Control {
 	 * @param text The text string to match.
 	 */
 	find(text: string): ListItem;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
 
 	/**
 	 * Sends a notification message, simulating the specified user interaction event.
@@ -1582,11 +1546,6 @@ declare class Checkbox extends _Control {
 	value: boolean;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
@@ -1701,11 +1660,6 @@ declare class Scrollbar extends _Control {
 	value: number;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
@@ -1817,11 +1771,6 @@ declare class RadioButton extends _Control {
 	value: boolean;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
@@ -1924,11 +1873,6 @@ declare class Slider extends _Control {
 	value: number;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * Sends a notification message, simulating the specified user interaction event.
 	 * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
 	 */
@@ -2024,11 +1968,6 @@ declare class Progressbar extends _Control {
 	value: number;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * An event-handler callback function, called when the window is about to be drawn.
 	 * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
 	 */
@@ -2115,11 +2054,6 @@ declare class TreeView extends _Control {
 	 * @param text The text string to match.
 	 */
 	find(text: string): ListItem;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
 
 	/**
 	 * Sends a notification message, simulating the specified user interaction event.
@@ -2218,11 +2152,6 @@ declare class FlashPlayer extends _Control {
 	 * The Flash ActionScript code can call any callback function defined on the ExtendScript side of the FlashPlayer object, invoking it by name as a property of the control object. The function can take any arguments of a supported data types, and can return any value of a supported data type. data types:Number, String, Boolean, null, undefined, Object, Array.
 	 */
 	callback(): void;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
 
 	/**
 	 * Invokes an ActionScript function defined in the Flash application.
@@ -2336,11 +2265,6 @@ declare class Group extends _Control {
 	add: WindowPanelGroupAdd;
 
 	/**
-	 * Hides this element.
-	 */
-	hide(): void;
-
-	/**
 	 * An event-handler callback function, called when the group is about to be drawn.
 	 * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
 	 */
@@ -2447,11 +2371,6 @@ declare class Panel extends _Control {
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
 	add: WindowPanelGroupAdd;
-
-	/**
-	 * Hides this element.
-	 */
-	hide(): void;
 
 	/**
 	 * An event-handler callback function, called when the panel is about to be drawn.
@@ -2934,6 +2853,11 @@ declare class _Control {
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
 	 */
 	dispatchEvent(): Event;
+
+	/**
+	 * Hides this element.
+	 */
+	hide(): void;
 
 }
 
