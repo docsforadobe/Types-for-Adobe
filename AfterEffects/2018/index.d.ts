@@ -976,7 +976,7 @@ declare class AVLayer extends Layer {
 	/** CC 2014.2(13.2)- */
 	compPointToSource(point: [number, number]): [number, number];
 
-	//Shortcuts
+	/** Shortcuts */
 	readonly timeRemap: Property;
 	readonly mask: PropertyGroup;
 	readonly effect: PropertyGroup;
@@ -988,7 +988,7 @@ declare class AVLayer extends Layer {
 
 /** The CameraLayer object represents a camera layer within a composition. Create it using the LayerCollection object’s addCamera method */
 declare class CameraLayer extends Layer {
-	//Shortcuts
+	/** Shortcuts */
 	readonly cameraOption: _CameraOptionsGroup;
 }
 
