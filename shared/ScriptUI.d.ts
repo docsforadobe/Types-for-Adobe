@@ -421,7 +421,7 @@ declare class Window extends _Control {
 	 * Displays a modal dialog that returns the user’s text input.
 	 * Returns the value of the text edit field if the user clicked OK, null if the user clicked Cancel.
 	 * @param prompt The string for the displayed message.
-	 * @param default The initial value to be displayed in the text edit field.
+	 * @param default_ The initial value to be displayed in the text edit field.
 	 * @param title A string to appear as the title of the dialog. In Windows, this appears in the window’s frame; in Mac OS it appears above the message. The default title string is "Script Prompt".
 	 */
 	static prompt(prompt: string, default_?: string, title?: string): string;
