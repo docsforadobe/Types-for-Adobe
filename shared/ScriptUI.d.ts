@@ -173,19 +173,9 @@ declare class Window extends _Control {
 	maximized: boolean;
 
 	/**
-	 * The largest rectangle to which the window can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
 	 * True if the window is minimized or iconified.
 	 */
 	minimized: boolean;
-
-	/**
-	 * The smallest rectangle to which the window can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The opacity of the window, in the range [0..1].
@@ -853,16 +843,6 @@ declare class StaticText extends _Control {
 	justify: string;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
-
-	/**
 	 * The parent element.
 	 */
 	readonly parent: object;
@@ -1003,16 +983,6 @@ declare class Button extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The parent element.
@@ -1166,16 +1136,6 @@ declare class IconButton extends _Control {
 	image: ScriptUIImage;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
-
-	/**
 	 * The parent element.
 	 */
 	readonly parent: object;
@@ -1327,16 +1287,6 @@ declare class EditText extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The parent element.
@@ -1522,16 +1472,6 @@ declare class ListBox extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The parent element.
@@ -1730,16 +1670,6 @@ declare class DropDownList extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Items in a drop-down list can be of type separator, in which case they cannot be selected, and are shown as a horizontal line. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The parent element.
@@ -1993,16 +1923,6 @@ declare class Checkbox extends _Control {
 	justify: string;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
-
-	/**
 	 * The parent element.
 	 */
 	readonly parent: object;
@@ -2162,20 +2082,10 @@ declare class Scrollbar extends _Control {
 	jumpdelta: number;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
 	 * The maximum value allowed in the value property.
 	 * Together with minvalue, sets the scrolling range. Default is 100.
 	 */
 	maxvalue: number;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The minimum value allowed in the value property.
@@ -2353,16 +2263,6 @@ declare class RadioButton extends _Control {
 	justify: string;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
-
-	/**
 	 * The parent element.
 	 */
 	readonly parent: object;
@@ -2514,20 +2414,10 @@ declare class Slider extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
 	 * The maximum value allowed in the value property.
 	 * Together with minvalue, sets therange.Default is 100.
 	 */
 	maxvalue: number;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The minimum value allowed in the value property.
@@ -2683,19 +2573,9 @@ declare class Progressbar extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
 	 * The maximum value in the range. Default is 100.
 	 */
 	maxvalue: number;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The minimum value in the range; always 0. If set to a different value, it is ignored.
@@ -2826,16 +2706,6 @@ declare class TreeView extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The parent element.
@@ -3013,16 +2883,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
-
-	/**
 	 * The parent element.
 	 */
 	readonly parent: object;
@@ -3173,16 +3033,6 @@ declare class Group extends _Control {
 	 * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
 	 */
 	margins: number;
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The layout orientation of children in a container.
@@ -3341,16 +3191,6 @@ declare class Panel extends _Control {
 	 * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
 	 */
 	margins: number;
-
-	/**
-	 * The maximum height and width to which the element can be resized.
-	 */
-	maximumSize: Dimension;
-
-	/**
-	 * The minimum height and width to which the element can be resized.
-	 */
-	minimumSize: Dimension;
 
 	/**
 	 * The layout orientation of children in a container.
@@ -3862,6 +3702,16 @@ declare class _Control {
 	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
 	 */
 	location: Point;
+
+	/**
+	 * The maximum height and width to which the element can be resized.
+	 */
+	maximumSize: Dimension;
+
+	/**
+	 * The minimum height and width to which the element can be resized.
+	 */
+	minimumSize: Dimension;
 }
 
 interface WindowPanelGroupAddMap {
