@@ -621,7 +621,7 @@ declare class Track {
 	/**
 	 * 
 	 */
-	insertClip(clipProjectItem: ProjectItem, time: Object): void;
+	insertClip(clipProjectItem: ProjectItem, time: object): void;
 
 	/**
 	 * 
@@ -631,7 +631,7 @@ declare class Track {
 	/**
 	 * 
 	 */
-	overwriteClip(clipProjectItem: ProjectItem, time: Object): void;
+	overwriteClip(clipProjectItem: ProjectItem, time: object): void;
 
 	/**
 	 * 
@@ -808,7 +808,7 @@ declare class ProjectItem {
 	/**
 	 * 
 	 */
-	createSubClip(name: string, startTime: Object, endTime: Object, hasHardBoundaries: number, takeVideo?: number, takeAudio?: number): ProjectItem;
+	createSubClip(name: string, startTime: object, endTime: object, hasHardBoundaries: number, takeVideo?: number, takeAudio?: number): ProjectItem;
 
 	/**
 	 * 
@@ -898,7 +898,7 @@ declare class ProjectItem {
 	/**
 	 * 
 	 */
-	setStartTime(arg1: Object): void;
+	setStartTime(arg1: object): void;
 
 	/**
 	 * 
@@ -1197,7 +1197,7 @@ declare class Encoder {
 	/**
 	 * 
 	 */
-	encodeFile(inputFilePath: string, outputFilePath: string, presetPath: string, removeOnCompletion?: number, startTime?: Object, stopTime?: Object): string;
+	encodeFile(inputFilePath: string, outputFilePath: string, presetPath: string, removeOnCompletion?: number, startTime?: object, stopTime?: object): string;
 
 	/**
 	 * 

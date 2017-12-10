@@ -29,7 +29,7 @@ declare class DynamicLink {
 	 * 
 	 * @param name Create connection to the named DynaicLink object Create Connection.
 	 */
-	static createConnection(name: string): Object;
+	static createConnection(name: string): object;
 
 }
 
@@ -164,7 +164,7 @@ declare class WaveDocument {
 	/**
 	 * The audio format of the document (sample rate bit depth channel layout)
 	 */
-	readonly audioFormat: Object;
+	readonly audioFormat: object;
 
 	/**
 	 * Returns that amount of progress from 0 to 100 for the document's current operation.
@@ -337,7 +337,7 @@ declare class AudioTrack {
 	/**
 	 * The audio format of the track (sample rate bit depth channel layout)
 	 */
-	readonly audioFormat: Object;
+	readonly audioFormat: object;
 
 	/**
 	 * Unique id of the track.
@@ -418,7 +418,7 @@ declare class AudioFormat {
 	/**
 	 * Channel layout
 	 */
-	channelLayout: Object;
+	channelLayout: object;
 
 	/**
 	 * Samplerate
@@ -458,7 +458,7 @@ declare class AudioClipSelectionCollection {
 	 * 
 	 * @param AudioClip Add clip to the selection.
 	 */
-	add(AudioClip: any): Object;
+	add(AudioClip: any): object;
 
 	/**
 	 * Clear the selection
@@ -543,7 +543,7 @@ declare class AudioClipCollection {
 	 * @param AudioClip 
 	 * @param sourceChannelRouting Add new clip to the track based on the passed in document or move the passed in clip to this track.
 	 */
-	add(AudioClip: any, sourceChannelRouting: any): Object;
+	add(AudioClip: any, sourceChannelRouting: any): object;
 
 	/**
 	 * 
@@ -565,7 +565,7 @@ declare class AudioClip {
 	/**
 	 * The audio format of the clip (sample rate bit depth channel layout)
 	 */
-	readonly audioFormat: Object;
+	readonly audioFormat: object;
 
 	/**
 	 * The end time of the clip measured in samples (exclusive) at the multitrack document's sample rate.
@@ -580,7 +580,7 @@ declare class AudioClip {
 	/**
 	 * Document associated with this clip.
 	 */
-	link: Object;
+	link: object;
 
 	/**
 	 * The name of the clip.
@@ -1336,7 +1336,7 @@ declare class Clip {
 	/**
 	 * Document associated with this clip.
 	 */
-	link: Object;
+	link: object;
 
 	/**
 	 * The name of the clip.
@@ -4287,7 +4287,7 @@ declare class Application {
 	/**
 	 * Playing recording and navigating time
 	 */
-	readonly transport: Object;
+	readonly transport: object;
 
 	/**
 	 * Application version
@@ -4640,13 +4640,13 @@ declare class OnboardingSupport {
 	 * 
 	 * @param stepData WorkflowStatus : [String] workflow step action WorkflowID : [String] workflow guid WorkflowName : [String] name WorkflowSessionID : [String] session identifier WorkflowAttempts : [Number] number of attempts WorkflowStepsTotal : [Number] total number of steps WorkflowDurationMS : [Number] duration
 	 */
-	onWorkflowAction(stepData: Object): boolean;
+	onWorkflowAction(stepData: object): boolean;
 
 	/**
 	 * 
 	 * @param stepData WorkflowStatus : [String] workflow step action WorkflowID : [String] workflow guid WorkflowName : [String] name WorkflowSessionID : [String] session identifier WorkflowAttempts : [Number] number of attempts WorkflowStepsTotal : [Number] total number of steps WorkflowStepInteractivity : [String] step interactivity WorkflowStep : [Number] current step WorkflowStepDurationMS : [Number] duration WorkflowStepRetries : [Number] number of retries WorkflowDurationMS : [Number] duration
 	 */
-	onWorkflowStepAction(stepData: Object): boolean;
+	onWorkflowStepAction(stepData: object): boolean;
 
 }
 

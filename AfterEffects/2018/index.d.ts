@@ -675,7 +675,7 @@ declare var write: (text: string) => void;
 declare var writeLn: (text: string) => void;
 
 /** When true, the specified object exists. */
-declare var isValid: (obj: Object) => boolean;
+declare var isValid: (obj: object) => boolean;
 
 /** Provides access to objects and application settings within the After Effects application. The single global object is always available by its name, app. */
 declare class Application {
@@ -960,7 +960,7 @@ declare class AVLayer extends Layer {
 	audioActiveAtTime(time: number): boolean;
 
 	/** Calculates a transformation from a set of points in this layer. */
-	calculateTransformFromPoints(pointTopLeft: [number, number, number], pointTopRight: typeof pointTopLeft, pointBottomRight: typeof pointTopLeft): Object;
+	calculateTransformFromPoints(pointTopLeft: [number, number, number], pointTopRight: typeof pointTopLeft, pointBottomRight: typeof pointTopLeft): object;
 
 	/** Changes the source item for this layer. */
 	replaceSource(newSource: AVItem, fixExpressions: boolean): void;
@@ -1443,10 +1443,10 @@ declare class MarkerValue {
 	frameTarget: string;
 
 	/** Retrieves the key-value pairs associated with the marker value. */
-	getParameters(): Object;
+	getParameters(): object;
 
 	/** Sets the key-value pairs associated with the marker value. */
-	setParameters(keyValuePairs: Object): void;
+	setParameters(keyValuePairs: object): void;
 }
 
 /** The MaskPropertyGroup object encapsulates mask attributes in a layer. */
@@ -1537,7 +1537,7 @@ declare class OutputModule {
 
 	setSetting(key: string, value: string | number): void;
 
-	setSettings(settings: Object): void;
+	setSettings(settings: object): void;
 }
 
 /** The PlaceholderSource object describes the footage source of a placeholder. */
@@ -1987,11 +1987,11 @@ declare class RenderQueueItem {
 
 	getSetting(key: string): string | number;
 
-	getSettings(format: GetSettingsFormat): Object;
+	getSettings(format: GetSettingsFormat): object;
 
 	setSetting(key: string, value: string | number): void;
 
-	setSettings(settings: Object): void;
+	setSettings(settings: object): void;
 }
 
 /** The RQItemCollection contains all of the render-queue items in a project, as shown in the Render Queue panel of the project. The collection provides access to the RenderQueueItem objects, and allows you to create them from compositions. The first RenderQueueItem object in the collection is at index position 1. */

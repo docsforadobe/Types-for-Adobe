@@ -92,7 +92,7 @@ declare class Assignment {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The user name to assign to tracked changes and notes.
@@ -118,7 +118,7 @@ declare class Assignment {
 	 * @param submit If true, submits assigned stories before packaging the assignment. 
 	 * @param withProperties Initial values for properties of the new Assignment 
 	 */
-	createPackage(filePath: File, submit?: boolean, withProperties?: Object): File;
+	createPackage(filePath: File, submit?: boolean, withProperties?: object): File;
 
 	/**
 	 * Gets the label value associated with the specified key.
@@ -192,7 +192,7 @@ declare class Assignments {
 	 * @param forceSave If true, forcibly saves a version. 
 	 * @param withProperties Initial values for properties of the new Assignment 
 	 */
-	add(filePath: File, versionComments: string, forceSave?: boolean, withProperties?: Object): Assignment;
+	add(filePath: File, versionComments: string, forceSave?: boolean, withProperties?: object): Assignment;
 
 	/**
 	 * Returns any Assignment in the collection.
@@ -320,7 +320,7 @@ declare class AssignedStory {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A reference to the assigned story.
@@ -640,7 +640,7 @@ declare class PlaceGun extends Preference {
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	loadPlaceGun(fileName: File | File[], showingOptions?: boolean, withProperties?: Object): void;
+	loadPlaceGun(fileName: File | File[], showingOptions?: boolean, withProperties?: object): void;
 
 	/**
 	 * Rotate the contents of the place gun.
@@ -697,7 +697,7 @@ declare class EventListener {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Gets the label value associated with the specified key.
@@ -756,7 +756,7 @@ declare class EventListeners {
 	 * @param captures This parameter is obsolete. 
 	 * @param withProperties Initial values for properties of the new EventListener 
 	 */
-	add(eventType: string, handler: File | Function, captures?: boolean, withProperties?: Object): EventListener;
+	add(eventType: string, handler: File | Function, captures?: boolean, withProperties?: object): EventListener;
 
 	/**
 	 * Returns any EventListener in the collection.
@@ -989,7 +989,7 @@ declare class Event {
 	/**
 	 * The current propagation target of the event.
 	 */
-	readonly currentTarget: Object;
+	readonly currentTarget: object;
 
 	/**
 	 * If true, the default behavior of the event on its target has been canceled.
@@ -1034,12 +1034,12 @@ declare class Event {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The target of the event.
 	 */
-	readonly target: Object;
+	readonly target: object;
 
 	/**
 	 * The time the event was initialized.
@@ -1245,7 +1245,7 @@ declare class IdleTask {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Amount of time to sleep (in milliseconds) before calling this task again. Setting this to zero will cause task to be deleted.
@@ -1322,7 +1322,7 @@ declare class IdleTasks {
 	 * Creates a new IdleTask.
 	 * @param withProperties Initial values for properties of the new IdleTask 
 	 */
-	add(withProperties: Object): IdleTask;
+	add(withProperties: object): IdleTask;
 
 	/**
 	 * Returns any IdleTask in the collection.
@@ -2243,7 +2243,7 @@ declare class Application {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The names of the items in the redo stack.
@@ -2273,7 +2273,7 @@ declare class Application {
 	/**
 	 * The selected object(s).
 	 */
-	selection: Object[] | Object | NothingEnum;
+	selection: object[] | object | NothingEnum;
 
 	/**
 	 * The key object of the selection.
@@ -2957,7 +2957,7 @@ declare class Application {
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	place(fileName: File | File[], showingOptions?: boolean, withProperties?: Object): void;
+	place(fileName: File | File[], showingOptions?: boolean, withProperties?: object): void;
 
 	/**
 	 * Prints the specified file(s).
@@ -3021,7 +3021,7 @@ declare class Application {
 	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the Application in relation to previously selected objects. 
 	 */
-	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
+	select(selectableItems: object | object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
 
 	/**
 	 * Sets the application's preferences.
@@ -3149,7 +3149,7 @@ declare class BackgroundTask {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The current status of this task object.
@@ -4076,7 +4076,7 @@ declare class Document {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Publish export preference settings.
@@ -4141,7 +4141,7 @@ declare class Document {
 	/**
 	 * The selected object(s).
 	 */
-	selection: Object[] | Object | NothingEnum;
+	selection: object[] | object | NothingEnum;
 
 	/**
 	 * The key object of the selection.
@@ -4766,7 +4766,7 @@ declare class Document {
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	place(fileName: File | File[], showingOptions?: boolean, withProperties?: Object): void;
+	place(fileName: File | File[], showingOptions?: boolean, withProperties?: object): void;
 
 	/**
 	 * Deprecated: Use ContentPlacerObject load method. Original Description: Place following the behavior of the place and link story menu item. This will load the place gun.
@@ -4872,7 +4872,7 @@ declare class Document {
 	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the Document in relation to previously selected objects. 
 	 */
-	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
+	select(selectableItems: object | object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
 
 	/**
 	 * Synchronizes the file with the Version Cue project.
@@ -4924,7 +4924,7 @@ declare class Documents {
 	 * @param documentPreset The document preset to use. 
 	 * @param withProperties Initial values for properties of the new Document 
 	 */
-	add(showingWindow?: boolean, documentPreset?: DocumentPreset, withProperties?: Object): Document;
+	add(showingWindow?: boolean, documentPreset?: DocumentPreset, withProperties?: object): Document;
 
 	/**
 	 * Returns any Document in the collection.
@@ -5082,12 +5082,12 @@ declare class Window {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The selected object(s).
 	 */
-	selection: Object[] | Object | NothingEnum;
+	selection: object[] | object | NothingEnum;
 
 	/**
 	 * The key object of the selection.
@@ -5145,7 +5145,7 @@ declare class Window {
 	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the Window in relation to previously selected objects. 
 	 */
-	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
+	select(selectableItems: object | object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
 
 	/**
 	 * Generates a string which, if executed, will return the Window.
@@ -5178,7 +5178,7 @@ declare class Windows {
 	 * Creates a new Window.
 	 * @param withProperties Initial values for properties of the new Window 
 	 */
-	add(withProperties: Object): Window;
+	add(withProperties: object): Window;
 
 	/**
 	 * Returns any Window in the collection.
@@ -5737,7 +5737,7 @@ declare class Book {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Page numbering options for book content objects within the book.
@@ -5971,7 +5971,7 @@ declare class Books {
 	 * @param fullName The full path name of the new book file, including the book file extension '.indb'.
 	 * @param withProperties Initial values for properties of the new Book 
 	 */
-	add(fullName: File, withProperties: Object): Book;
+	add(fullName: File, withProperties: object): Book;
 
 	/**
 	 * Returns any Book in the collection.
@@ -6108,7 +6108,7 @@ declare class BookContent {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The size of the BookContent file.
@@ -6217,7 +6217,7 @@ declare class BookContents {
 	 * @param at The location of the book content object within the book. 
 	 * @param withProperties Initial values for properties of the new BookContent 
 	 */
-	add(fullName: File, at?: number, withProperties?: Object): BookContent;
+	add(fullName: File, at?: number, withProperties?: object): BookContent;
 
 	/**
 	 * Returns any BookContent in the collection.
@@ -6380,7 +6380,7 @@ declare class Ink {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The solidity value of the ink. (Range: 0.0 to 1.0)
@@ -6624,7 +6624,7 @@ declare class TrapPreset {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The difference (as a percentage) between the neutral densities of abutting colors at which the trap is moved from the darker side of a color edge toward the centerline. (Range: 0 to 100)
@@ -6722,7 +6722,7 @@ declare class TrapPresets {
 	 * Creates a new TrapPreset.
 	 * @param withProperties Initial values for properties of the new TrapPreset 
 	 */
-	add(withProperties: Object): TrapPreset;
+	add(withProperties: object): TrapPreset;
 
 	/**
 	 * Returns any TrapPreset in the collection.
@@ -6850,7 +6850,7 @@ declare class MixedInks {
 	 * @param inkPercentages The percent to use of each ink in the ink list. (Range: 0 to 100 for each ink)
 	 * @param withProperties Initial values for properties of the new MixedInk 
 	 */
-	add(inkList: Ink[] | MixedInkGroup, inkPercentages: number[], withProperties: Object): MixedInk;
+	add(inkList: Ink[] | MixedInkGroup, inkPercentages: number[], withProperties: object): MixedInk;
 
 	/**
 	 * Returns any MixedInk in the collection.
@@ -6965,7 +6965,7 @@ declare class MixedInkGroups {
 	 * @param incrementValues The increment percent per repetition for each ink. (Range: 0 to 100) Note: The cumulative ink percentage per ink cannot exceed 100.) 
 	 * @param withProperties Initial values for properties of the new MixedInkGroup 
 	 */
-	add(inkList: Ink[], inkPercentages: number[], repeatValues: number[], incrementValues: number[], withProperties: Object): MixedInkGroup;
+	add(inkList: Ink[], inkPercentages: number[], repeatValues: number[], incrementValues: number[], withProperties: object): MixedInkGroup;
 
 	/**
 	 * Returns any MixedInkGroup in the collection.
@@ -7076,7 +7076,7 @@ declare class Gradients {
 	 * Creates a new Gradient.
 	 * @param withProperties Initial values for properties of the new Gradient 
 	 */
-	add(withProperties: Object): Gradient;
+	add(withProperties: object): Gradient;
 
 	/**
 	 * Returns any Gradient in the collection.
@@ -7194,7 +7194,7 @@ declare class GradientStop {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The swatch (color, gradient, tint, or mixed ink) applied to the gradient stop.
@@ -7258,7 +7258,7 @@ declare class GradientStops {
 	 * Creates a new GradientStop.
 	 * @param withProperties Initial values for properties of the new GradientStop 
 	 */
-	add(withProperties: Object): GradientStop;
+	add(withProperties: object): GradientStop;
 
 	/**
 	 * Returns any GradientStop in the collection.
@@ -7374,7 +7374,7 @@ declare class Swatch {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -7568,7 +7568,7 @@ declare class Colors {
 	 * Creates a new Color.
 	 * @param withProperties Initial values for properties of the new Color 
 	 */
-	add(withProperties: Object): Color;
+	add(withProperties: object): Color;
 
 	/**
 	 * Returns any Color in the collection.
@@ -7680,7 +7680,7 @@ declare class Tints {
 	 * @param baseColor The color that the tint is based upon.
 	 * @param withProperties Initial values for properties of the new Tint 
 	 */
-	add(baseColor: Color, withProperties: Object): Tint;
+	add(baseColor: Color, withProperties: object): Tint;
 
 	/**
 	 * Returns any Tint in the collection.
@@ -7808,7 +7808,7 @@ declare class ColorGroup {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -7892,7 +7892,7 @@ declare class ColorGroups {
 	 * @param swatchList The swatches to add in color group. 
 	 * @param withProperties Initial values for properties of the new ColorGroup 
 	 */
-	add(name: string, swatchList: Swatch[], withProperties: Object): ColorGroup;
+	add(name: string, swatchList: Swatch[], withProperties: object): ColorGroup;
 
 	/**
 	 * Returns any ColorGroup in the collection.
@@ -8005,7 +8005,7 @@ declare class ColorGroupSwatch {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The underlying swatch item
@@ -8065,7 +8065,7 @@ declare class ColorGroupSwatches {
 	 * @param swatchItemRef swatch to be added to color group
 	 * @param withProperties Initial values for properties of the new ColorGroupSwatch 
 	 */
-	add(swatchItemRef: Swatch, withProperties: Object): ColorGroupSwatch;
+	add(swatchItemRef: Swatch, withProperties: object): ColorGroupSwatch;
 
 	/**
 	 * Returns any ColorGroupSwatch in the collection.
@@ -8182,7 +8182,7 @@ declare class OpacityGradientStop {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -8241,7 +8241,7 @@ declare class OpacityGradientStops {
 	 * Creates a new OpacityGradientStop.
 	 * @param withProperties Initial values for properties of the new OpacityGradientStop 
 	 */
-	add(withProperties: Object): OpacityGradientStop;
+	add(withProperties: object): OpacityGradientStop;
 
 	/**
 	 * Returns any OpacityGradientStop in the collection.
@@ -8352,7 +8352,7 @@ declare class DataMergeTextPlaceholder {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The insertion point before the table in the story containing the table.
@@ -8414,7 +8414,7 @@ declare class DataMergeTextPlaceholders {
 	 * @param field The field to insert.
 	 * @param withProperties Initial values for properties of the new DataMergeTextPlaceholder 
 	 */
-	add(parentStory: Story, storyOffset: InsertionPoint | number, field: DataMergeField, withProperties: Object): DataMergeTextPlaceholder;
+	add(parentStory: Story, storyOffset: InsertionPoint | number, field: DataMergeField, withProperties: object): DataMergeTextPlaceholder;
 
 	/**
 	 * Returns any DataMergeTextPlaceholder in the collection.
@@ -8520,7 +8520,7 @@ declare class DataMergeImagePlaceholder {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -8576,7 +8576,7 @@ declare class DataMergeImagePlaceholders {
 	 * @param field The data merge field to insert.
 	 * @param withProperties Initial values for properties of the new DataMergeImagePlaceholder 
 	 */
-	add(placeholder: PageItem, field: DataMergeField, withProperties: Object): DataMergeImagePlaceholder;
+	add(placeholder: PageItem, field: DataMergeField, withProperties: object): DataMergeImagePlaceholder;
 
 	/**
 	 * Returns any DataMergeImagePlaceholder in the collection.
@@ -8682,7 +8682,7 @@ declare class DataMergeField {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -8836,7 +8836,7 @@ declare class DataMergeQrcodePlaceholder {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -8892,7 +8892,7 @@ declare class DataMergeQrcodePlaceholders {
 	 * @param field The data merge field to insert.
 	 * @param withProperties Initial values for properties of the new DataMergeQrcodePlaceholder 
 	 */
-	add(placeholder: PageItem, field: DataMergeField, withProperties: Object): DataMergeQrcodePlaceholder;
+	add(placeholder: PageItem, field: DataMergeField, withProperties: object): DataMergeQrcodePlaceholder;
 
 	/**
 	 * Returns any DataMergeQrcodePlaceholder in the collection.
@@ -22048,7 +22048,7 @@ declare class Hyperlink {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The hyperlinked text or page item.
@@ -22147,7 +22147,7 @@ declare class Hyperlinks {
 	 * @param hyperlinkDestination The destination that the hyperlink points to. Can accept: Ordered array containing fileName:String, volumn:String, directoryId:Long Integer, dataLinkClassId:Long Integer, destinationUid:Long Integer, HyperlinkTextDestination, HyperlinkPageDestination, HyperlinkExternalPageDestination, HyperlinkURLDestination or ParagraphDestination. 
 	 * @param withProperties Initial values for properties of the new Hyperlink 
 	 */
-	add(hyperlinkSource: HyperlinkPageItemSource | HyperlinkTextSource | CrossReferenceSource, hyperlinkDestination: any, withProperties: Object): Hyperlink;
+	add(hyperlinkSource: HyperlinkPageItemSource | HyperlinkTextSource | CrossReferenceSource, hyperlinkDestination: any, withProperties: object): Hyperlink;
 
 	/**
 	 * Returns any Hyperlink in the collection.
@@ -22285,7 +22285,7 @@ declare class Bookmark {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -22370,7 +22370,7 @@ declare class Bookmarks {
 	 * @param destination The bookmark destination.
 	 * @param withProperties Initial values for properties of the new Bookmark 
 	 */
-	add(destination: HyperlinkTextDestination | HyperlinkPageDestination | HyperlinkExternalPageDestination | Page, withProperties: Object): Bookmark;
+	add(destination: HyperlinkTextDestination | HyperlinkPageDestination | HyperlinkExternalPageDestination | Page, withProperties: object): Bookmark;
 
 	/**
 	 * Returns any Bookmark in the collection.
@@ -22498,7 +22498,7 @@ declare class HyperlinkPageItemSource {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The hyperlinked page item.
@@ -22581,7 +22581,7 @@ declare class HyperlinkPageItemSources {
 	 * @param source The page item to hyperlink.
 	 * @param withProperties Initial values for properties of the new HyperlinkPageItemSource 
 	 */
-	add(source: PageItem, withProperties: Object): HyperlinkPageItemSource;
+	add(source: PageItem, withProperties: object): HyperlinkPageItemSource;
 
 	/**
 	 * Returns any HyperlinkPageItemSource in the collection.
@@ -22714,7 +22714,7 @@ declare class HyperlinkTextSource {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The hyperlinked text or insertion point.
@@ -22797,7 +22797,7 @@ declare class HyperlinkTextSources {
 	 * @param source The text or insertion point to hyperlink.
 	 * @param withProperties Initial values for properties of the new HyperlinkTextSource 
 	 */
-	add(source: Text, withProperties: Object): HyperlinkTextSource;
+	add(source: Text, withProperties: object): HyperlinkTextSource;
 
 	/**
 	 * Returns any HyperlinkTextSource in the collection.
@@ -22930,7 +22930,7 @@ declare class HyperlinkTextDestination {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -23008,7 +23008,7 @@ declare class HyperlinkTextDestinations {
 	 * @param destination The text or insertion point location that the hyperlink points to.
 	 * @param withProperties Initial values for properties of the new HyperlinkTextDestination 
 	 */
-	add(destination: Text, withProperties: Object): HyperlinkTextDestination;
+	add(destination: Text, withProperties: object): HyperlinkTextDestination;
 
 	/**
 	 * Returns any HyperlinkTextDestination in the collection.
@@ -23146,7 +23146,7 @@ declare class HyperlinkPageDestination {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The view rectangle, specified in the format [y1, x1, y2, x2]. Note: Valid only when view setting is fixed. Can return: Ordered array containing top:Unit, left:Unit, bottom:Unit, right:Unit.
@@ -23239,7 +23239,7 @@ declare class HyperlinkPageDestinations {
 	 * @param destination The document page that the hyperlink points to. 
 	 * @param withProperties Initial values for properties of the new HyperlinkPageDestination 
 	 */
-	add(destination: Page, withProperties: Object): HyperlinkPageDestination;
+	add(destination: Page, withProperties: object): HyperlinkPageDestination;
 
 	/**
 	 * Returns any HyperlinkPageDestination in the collection.
@@ -23377,7 +23377,7 @@ declare class HyperlinkExternalPageDestination {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The view rectangle, specified in the format [y1, x1, y2, x2]. Note: Valid only when view setting is fixed. Can return: Ordered array containing top:Unit, left:Unit, bottom:Unit, right:Unit.
@@ -23470,7 +23470,7 @@ declare class HyperlinkExternalPageDestinations {
 	 * @param destination The destination page. 
 	 * @param withProperties Initial values for properties of the new HyperlinkExternalPageDestination 
 	 */
-	add(destination: Page, withProperties: Object): HyperlinkExternalPageDestination;
+	add(destination: Page, withProperties: object): HyperlinkExternalPageDestination;
 
 	/**
 	 * Returns any HyperlinkExternalPageDestination in the collection.
@@ -23603,7 +23603,7 @@ declare class HyperlinkURLDestination {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -23681,7 +23681,7 @@ declare class HyperlinkURLDestinations {
 	 * @param destination The URL that the hyperlink points to. 
 	 * @param withProperties Initial values for properties of the new HyperlinkURLDestination 
 	 */
-	add(destination: string, withProperties: Object): HyperlinkURLDestination;
+	add(destination: string, withProperties: object): HyperlinkURLDestination;
 
 	/**
 	 * Returns any HyperlinkURLDestination in the collection.
@@ -23814,7 +23814,7 @@ declare class CrossReferenceFormat {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -23887,7 +23887,7 @@ declare class CrossReferenceFormats {
 	 * @param name The format name. 
 	 * @param withProperties Initial values for properties of the new CrossReferenceFormat 
 	 */
-	add(name: string, withProperties: Object): CrossReferenceFormat;
+	add(name: string, withProperties: object): CrossReferenceFormat;
 
 	/**
 	 * Returns any CrossReferenceFormat in the collection.
@@ -24000,7 +24000,7 @@ declare class CrossReferenceSources {
 	 * @param appliedFormat Format used for cross reference source.
 	 * @param withProperties Initial values for properties of the new CrossReferenceSource 
 	 */
-	add(source: Text, appliedFormat: CrossReferenceFormat, withProperties: Object): CrossReferenceSource;
+	add(source: Text, appliedFormat: CrossReferenceFormat, withProperties: object): CrossReferenceSource;
 
 	/**
 	 * Returns any CrossReferenceSource in the collection.
@@ -24133,7 +24133,7 @@ declare class BuildingBlock {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -24195,7 +24195,7 @@ declare class BuildingBlocks {
 	 * @param customText Building block custom text. Currently this is only useful in custom string building block. It is ignored for other types of building blocks. 
 	 * @param withProperties Initial values for properties of the new BuildingBlock 
 	 */
-	add(blockType: BuildingBlockTypes, appliedCharacterStyle: CharacterStyle, customText: string, withProperties: Object): BuildingBlock;
+	add(blockType: BuildingBlockTypes, appliedCharacterStyle: CharacterStyle, customText: string, withProperties: object): BuildingBlock;
 
 	/**
 	 * Returns any BuildingBlock in the collection.
@@ -24285,7 +24285,7 @@ declare class ParagraphDestinations {
 	 * @param destination The text or insertion point inside the paragraph that the cross reference points to. The insertion point is always adjusted to the beginning of the paragraph.
 	 * @param withProperties Initial values for properties of the new ParagraphDestination 
 	 */
-	add(destination: Text, withProperties: Object): ParagraphDestination;
+	add(destination: Text, withProperties: object): ParagraphDestination;
 
 	/**
 	 * Returns any ParagraphDestination in the collection.
@@ -24418,7 +24418,7 @@ declare class Index {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of index topics.
@@ -24522,7 +24522,7 @@ declare class Indexes {
 	 * Creates a new Index.
 	 * @param withProperties Initial values for properties of the new Index 
 	 */
-	add(withProperties: Object): Index;
+	add(withProperties: object): Index;
 
 	/**
 	 * Returns any Index in the collection.
@@ -24761,7 +24761,7 @@ declare class Topic {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The string by which the topic is sorted instead of the topic name is not used. Note: The actual topic text, rather than the sort order text, appears in the index.
@@ -24838,7 +24838,7 @@ declare class Topics {
 	 * @param sortBy The string to sort this topic by instead of the topic name. Note: The actual topic text, rather than the sort order text, appears in the index. 
 	 * @param withProperties Initial values for properties of the new Topic 
 	 */
-	add(name: string, sortBy: string, withProperties: Object): Topic;
+	add(name: string, sortBy: string, withProperties: object): Topic;
 
 	/**
 	 * Returns any Topic in the collection.
@@ -24965,7 +24965,7 @@ declare class CrossReference {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The topic to which this CrossReference points.
@@ -25045,7 +25045,7 @@ declare class CrossReferences {
 	 * @param customTypeString The custom string to use in the cross reference. Valid only for custom cross reference types. 
 	 * @param withProperties Initial values for properties of the new CrossReference 
 	 */
-	add(referencedTopic: Topic, crossReferenceType: CrossReferenceType, customTypeString: string, withProperties: Object): CrossReference;
+	add(referencedTopic: Topic, crossReferenceType: CrossReferenceType, customTypeString: string, withProperties: object): CrossReference;
 
 	/**
 	 * Returns any CrossReference in the collection.
@@ -25183,7 +25183,7 @@ declare class PageReference {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The hyperlinked text or insertion point.
@@ -25264,7 +25264,7 @@ declare class PageReferences {
 	 * @param pageNumberStyleOverride The style override for the page number.
 	 * @param withProperties Initial values for properties of the new PageReference 
 	 */
-	add(source: Text, pageReferenceType?: PageReferenceType, pageReferenceLimit?: ParagraphStyle | number, pageNumberStyleOverride?: CharacterStyle, withProperties?: Object): PageReference;
+	add(source: Text, pageReferenceType?: PageReferenceType, pageReferenceLimit?: ParagraphStyle | number, pageNumberStyleOverride?: CharacterStyle, withProperties?: object): PageReference;
 
 	/**
 	 * Returns any PageReference in the collection.
@@ -25392,7 +25392,7 @@ declare class IndexSection {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of index topics.
@@ -25577,7 +25577,7 @@ declare class FormFields {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new FormField 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): FormField;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): FormField;
 
 	/**
 	 * Returns any FormField in the collection.
@@ -25913,7 +25913,7 @@ declare class Buttons {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Button 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Button;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Button;
 
 	/**
 	 * Returns any Button in the collection.
@@ -26096,7 +26096,7 @@ declare class State {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of rectangles.
@@ -26197,7 +26197,7 @@ declare class States {
 	 * Creates a new State.
 	 * @param withProperties Initial values for properties of the new State 
 	 */
-	add(withProperties: Object): State;
+	add(withProperties: object): State;
 
 	/**
 	 * Returns any State in the collection.
@@ -26424,7 +26424,7 @@ declare class MultiStateObjects {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new MultiStateObject 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): MultiStateObject;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): MultiStateObject;
 
 	/**
 	 * Returns any MultiStateObject in the collection.
@@ -26750,7 +26750,7 @@ declare class CheckBoxes {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new CheckBox 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): CheckBox;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): CheckBox;
 
 	/**
 	 * Returns any CheckBox in the collection.
@@ -27081,7 +27081,7 @@ declare class ComboBoxes {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new ComboBox 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): ComboBox;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): ComboBox;
 
 	/**
 	 * Returns any ComboBox in the collection.
@@ -27417,7 +27417,7 @@ declare class ListBoxes {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new ListBox 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): ListBox;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): ListBox;
 
 	/**
 	 * Returns any ListBox in the collection.
@@ -27743,7 +27743,7 @@ declare class RadioButtons {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new RadioButton 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): RadioButton;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): RadioButton;
 
 	/**
 	 * Returns any RadioButton in the collection.
@@ -28079,7 +28079,7 @@ declare class TextBoxes {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new TextBox 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): TextBox;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): TextBox;
 
 	/**
 	 * Returns any TextBox in the collection.
@@ -28390,7 +28390,7 @@ declare class SignatureFields {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new SignatureField 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): SignatureField;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): SignatureField;
 
 	/**
 	 * Returns any SignatureField in the collection.
@@ -28616,7 +28616,7 @@ declare class Movies {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Movie 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Movie;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Movie;
 
 	/**
 	 * Returns any Movie in the collection.
@@ -28734,7 +28734,7 @@ declare class NavigationPoint {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The time in seconds rounded up to two decimal places (e.g., 3.115 rounded to 3.12).
@@ -28798,7 +28798,7 @@ declare class NavigationPoints {
 	 * Creates a new NavigationPoint.
 	 * @param withProperties Initial values for properties of the new NavigationPoint 
 	 */
-	add(withProperties: Object): NavigationPoint;
+	add(withProperties: object): NavigationPoint;
 
 	/**
 	 * Returns any NavigationPoint in the collection.
@@ -28989,7 +28989,7 @@ declare class Sounds {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Sound 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Sound;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Sound;
 
 	/**
 	 * Returns any Sound in the collection.
@@ -29122,7 +29122,7 @@ declare class Behavior {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -29294,7 +29294,7 @@ declare class GotoFirstPageBehaviors {
 	 * Creates a new GotoFirstPageBehavior.
 	 * @param withProperties Initial values for properties of the new GotoFirstPageBehavior 
 	 */
-	add(withProperties: Object): GotoFirstPageBehavior;
+	add(withProperties: object): GotoFirstPageBehavior;
 
 	/**
 	 * Returns any GotoFirstPageBehavior in the collection.
@@ -29400,7 +29400,7 @@ declare class GotoLastPageBehaviors {
 	 * Creates a new GotoLastPageBehavior.
 	 * @param withProperties Initial values for properties of the new GotoLastPageBehavior 
 	 */
-	add(withProperties: Object): GotoLastPageBehavior;
+	add(withProperties: object): GotoLastPageBehavior;
 
 	/**
 	 * Returns any GotoLastPageBehavior in the collection.
@@ -29506,7 +29506,7 @@ declare class GotoNextPageBehaviors {
 	 * Creates a new GotoNextPageBehavior.
 	 * @param withProperties Initial values for properties of the new GotoNextPageBehavior 
 	 */
-	add(withProperties: Object): GotoNextPageBehavior;
+	add(withProperties: object): GotoNextPageBehavior;
 
 	/**
 	 * Returns any GotoNextPageBehavior in the collection.
@@ -29612,7 +29612,7 @@ declare class GotoPreviousPageBehaviors {
 	 * Creates a new GotoPreviousPageBehavior.
 	 * @param withProperties Initial values for properties of the new GotoPreviousPageBehavior 
 	 */
-	add(withProperties: Object): GotoPreviousPageBehavior;
+	add(withProperties: object): GotoPreviousPageBehavior;
 
 	/**
 	 * Returns any GotoPreviousPageBehavior in the collection.
@@ -29718,7 +29718,7 @@ declare class GotoNextViewBehaviors {
 	 * Creates a new GotoNextViewBehavior.
 	 * @param withProperties Initial values for properties of the new GotoNextViewBehavior 
 	 */
-	add(withProperties: Object): GotoNextViewBehavior;
+	add(withProperties: object): GotoNextViewBehavior;
 
 	/**
 	 * Returns any GotoNextViewBehavior in the collection.
@@ -29824,7 +29824,7 @@ declare class GotoPreviousViewBehaviors {
 	 * Creates a new GotoPreviousViewBehavior.
 	 * @param withProperties Initial values for properties of the new GotoPreviousViewBehavior 
 	 */
-	add(withProperties: Object): GotoPreviousViewBehavior;
+	add(withProperties: object): GotoPreviousViewBehavior;
 
 	/**
 	 * Returns any GotoPreviousViewBehavior in the collection.
@@ -29930,7 +29930,7 @@ declare class GotoURLBehaviors {
 	 * Creates a new GotoURLBehavior.
 	 * @param withProperties Initial values for properties of the new GotoURLBehavior 
 	 */
-	add(withProperties: Object): GotoURLBehavior;
+	add(withProperties: object): GotoURLBehavior;
 
 	/**
 	 * Returns any GotoURLBehavior in the collection.
@@ -30046,7 +30046,7 @@ declare class MovieBehaviors {
 	 * Creates a new MovieBehavior.
 	 * @param withProperties Initial values for properties of the new MovieBehavior 
 	 */
-	add(withProperties: Object): MovieBehavior;
+	add(withProperties: object): MovieBehavior;
 
 	/**
 	 * Returns any MovieBehavior in the collection.
@@ -30157,7 +30157,7 @@ declare class ShowHideFieldsBehaviors {
 	 * Creates a new ShowHideFieldsBehavior.
 	 * @param withProperties Initial values for properties of the new ShowHideFieldsBehavior 
 	 */
-	add(withProperties: Object): ShowHideFieldsBehavior;
+	add(withProperties: object): ShowHideFieldsBehavior;
 
 	/**
 	 * Returns any ShowHideFieldsBehavior in the collection.
@@ -30273,7 +30273,7 @@ declare class AnimationBehaviors {
 	 * Creates a new AnimationBehavior.
 	 * @param withProperties Initial values for properties of the new AnimationBehavior 
 	 */
-	add(withProperties: Object): AnimationBehavior;
+	add(withProperties: object): AnimationBehavior;
 
 	/**
 	 * Returns any AnimationBehavior in the collection.
@@ -30379,7 +30379,7 @@ declare class OpenFileBehaviors {
 	 * Creates a new OpenFileBehavior.
 	 * @param withProperties Initial values for properties of the new OpenFileBehavior 
 	 */
-	add(withProperties: Object): OpenFileBehavior;
+	add(withProperties: object): OpenFileBehavior;
 
 	/**
 	 * Returns any OpenFileBehavior in the collection.
@@ -30490,7 +30490,7 @@ declare class GotoNextStateBehaviors {
 	 * Creates a new GotoNextStateBehavior.
 	 * @param withProperties Initial values for properties of the new GotoNextStateBehavior 
 	 */
-	add(withProperties: Object): GotoNextStateBehavior;
+	add(withProperties: object): GotoNextStateBehavior;
 
 	/**
 	 * Returns any GotoNextStateBehavior in the collection.
@@ -30601,7 +30601,7 @@ declare class GotoPreviousStateBehaviors {
 	 * Creates a new GotoPreviousStateBehavior.
 	 * @param withProperties Initial values for properties of the new GotoPreviousStateBehavior 
 	 */
-	add(withProperties: Object): GotoPreviousStateBehavior;
+	add(withProperties: object): GotoPreviousStateBehavior;
 
 	/**
 	 * Returns any GotoPreviousStateBehavior in the collection.
@@ -30717,7 +30717,7 @@ declare class GotoStateBehaviors {
 	 * Creates a new GotoStateBehavior.
 	 * @param withProperties Initial values for properties of the new GotoStateBehavior 
 	 */
-	add(withProperties: Object): GotoStateBehavior;
+	add(withProperties: object): GotoStateBehavior;
 
 	/**
 	 * Returns any GotoStateBehavior in the collection.
@@ -30823,7 +30823,7 @@ declare class ViewZoomBehaviors {
 	 * Creates a new ViewZoomBehavior.
 	 * @param withProperties Initial values for properties of the new ViewZoomBehavior 
 	 */
-	add(withProperties: Object): ViewZoomBehavior;
+	add(withProperties: object): ViewZoomBehavior;
 
 	/**
 	 * Returns any ViewZoomBehavior in the collection.
@@ -30934,7 +30934,7 @@ declare class SoundBehaviors {
 	 * Creates a new SoundBehavior.
 	 * @param withProperties Initial values for properties of the new SoundBehavior 
 	 */
-	add(withProperties: Object): SoundBehavior;
+	add(withProperties: object): SoundBehavior;
 
 	/**
 	 * Returns any SoundBehavior in the collection.
@@ -31055,7 +31055,7 @@ declare class GotoAnchorBehaviors {
 	 * Creates a new GotoAnchorBehavior.
 	 * @param withProperties Initial values for properties of the new GotoAnchorBehavior 
 	 */
-	add(withProperties: Object): GotoAnchorBehavior;
+	add(withProperties: object): GotoAnchorBehavior;
 
 	/**
 	 * Returns any GotoAnchorBehavior in the collection.
@@ -31166,7 +31166,7 @@ declare class GotoPageBehaviors {
 	 * Creates a new GotoPageBehavior.
 	 * @param withProperties Initial values for properties of the new GotoPageBehavior 
 	 */
-	add(withProperties: Object): GotoPageBehavior;
+	add(withProperties: object): GotoPageBehavior;
 
 	/**
 	 * Returns any GotoPageBehavior in the collection.
@@ -31267,7 +31267,7 @@ declare class ClearFormBehaviors {
 	 * Creates a new ClearFormBehavior.
 	 * @param withProperties Initial values for properties of the new ClearFormBehavior 
 	 */
-	add(withProperties: Object): ClearFormBehavior;
+	add(withProperties: object): ClearFormBehavior;
 
 	/**
 	 * Returns any ClearFormBehavior in the collection.
@@ -31368,7 +31368,7 @@ declare class PrintFormBehaviors {
 	 * Creates a new PrintFormBehavior.
 	 * @param withProperties Initial values for properties of the new PrintFormBehavior 
 	 */
-	add(withProperties: Object): PrintFormBehavior;
+	add(withProperties: object): PrintFormBehavior;
 
 	/**
 	 * Returns any PrintFormBehavior in the collection.
@@ -31474,7 +31474,7 @@ declare class SubmitFormBehaviors {
 	 * Creates a new SubmitFormBehavior.
 	 * @param withProperties Initial values for properties of the new SubmitFormBehavior 
 	 */
-	add(withProperties: Object): SubmitFormBehavior;
+	add(withProperties: object): SubmitFormBehavior;
 
 	/**
 	 * Returns any SubmitFormBehavior in the collection.
@@ -31562,7 +31562,7 @@ declare class TimingSetting extends Preference {
 	/**
 	 * Dynamic targets on the spread that are not assigned.
 	 */
-	readonly unassignedDynamicTargets: Object[];
+	readonly unassignedDynamicTargets: object[];
 
 }
 
@@ -31598,7 +31598,7 @@ declare class TimingList {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of timing data objects.
@@ -31668,7 +31668,7 @@ declare class TimingLists {
 	 * @param triggerEvent Trigger Event
 	 * @param withProperties Initial values for properties of the new TimingList 
 	 */
-	add(triggerEvent: DynamicTriggerEvents, withProperties: Object): TimingList;
+	add(triggerEvent: DynamicTriggerEvents, withProperties: object): TimingList;
 
 	/**
 	 * Returns any TimingList in the collection.
@@ -31779,7 +31779,7 @@ declare class TimingGroup {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of timing target.
@@ -31857,7 +31857,7 @@ declare class TimingGroups {
 	 * @param delaySeconds The time delay in seconds for a target. 
 	 * @param withProperties Initial values for properties of the new TimingGroup 
 	 */
-	add(dynamicTarget: PageItem | Graphic | Behavior | MediaItem, delaySeconds?: number, withProperties?: Object): TimingGroup;
+	add(dynamicTarget: PageItem | Graphic | Behavior | MediaItem, delaySeconds?: number, withProperties?: object): TimingGroup;
 
 	/**
 	 * Returns any TimingGroup in the collection.
@@ -31963,7 +31963,7 @@ declare class TimingTarget {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Set to true if reversing animation on rolloff. Valid only for self rolloff trigger event.
@@ -32041,7 +32041,7 @@ declare class TimingTargets {
 	 * @param delaySeconds The time delay in seconds for a target. 
 	 * @param withProperties Initial values for properties of the new TimingTarget 
 	 */
-	add(dynamicTarget: PageItem | Graphic | Behavior | MediaItem, delaySeconds?: number, withProperties?: Object): TimingTarget;
+	add(dynamicTarget: PageItem | Graphic | Behavior | MediaItem, delaySeconds?: number, withProperties?: object): TimingTarget;
 
 	/**
 	 * Returns any TimingTarget in the collection.
@@ -32252,7 +32252,7 @@ declare class Layer {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -32382,7 +32382,7 @@ declare class Layers {
 	 * Creates a new Layer.
 	 * @param withProperties Initial values for properties of the new Layer 
 	 */
-	add(withProperties: Object): Layer;
+	add(withProperties: object): Layer;
 
 	/**
 	 * Returns any Layer in the collection.
@@ -32630,7 +32630,7 @@ declare class Spread {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -32751,7 +32751,7 @@ declare class Spread {
 	 * @param autoflowing Whether to autoflow placed text 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	place(fileName: File, placePoint: string[] | number[], destinationLayer: Layer, showingOptions?: boolean, autoflowing?: boolean, withProperties?: Object): any[];
+	place(fileName: File, placePoint: string[] | number[], destinationLayer: Layer, showingOptions?: boolean, autoflowing?: boolean, withProperties?: object): any[];
 
 	/**
 	 * Deprecated: Use contentPlace method. Original Description: Create a linked story and place it into the target.
@@ -32858,7 +32858,7 @@ declare class Spreads {
 	 * @param reference The reference object. Note: Required when the at parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new Spread 
 	 */
-	add(at?: LocationOptions, reference?: Spread | Document, withProperties?: Object): Spread;
+	add(at?: LocationOptions, reference?: Spread | Document, withProperties?: object): Spread;
 
 	/**
 	 * Returns any Spread in the collection.
@@ -33126,7 +33126,7 @@ declare class Page {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -33250,7 +33250,7 @@ declare class Page {
 	 * @param autoflowing Whether to autoflow placed text 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	place(fileName: File, placePoint: string[] | number[], destinationLayer: Layer, showingOptions?: boolean, autoflowing?: boolean, withProperties?: Object): any[];
+	place(fileName: File, placePoint: string[] | number[], destinationLayer: Layer, showingOptions?: boolean, autoflowing?: boolean, withProperties?: object): any[];
 
 	/**
 	 * Deprecated: Use contentPlace method. Original Description: Create a linked story and place it into the target.
@@ -33380,7 +33380,7 @@ declare class Pages {
 	 * @param reference The reference object. Note: Required when the at parameter value specifies before or after.
 	 * @param withProperties Initial values for properties of the new Page 
 	 */
-	add(at?: LocationOptions, reference?: Page | Spread | MasterSpread | Document, withProperties?: Object): Page;
+	add(at?: LocationOptions, reference?: Page | Spread | MasterSpread | Document, withProperties?: object): Page;
 
 	/**
 	 * Returns any Page in the collection.
@@ -33618,7 +33618,7 @@ declare class MasterSpread {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -33732,7 +33732,7 @@ declare class MasterSpread {
 	 * @param autoflowing Whether to autoflow placed text 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	place(fileName: File, placePoint: string[] | number[], destinationLayer: Layer, showingOptions?: boolean, autoflowing?: boolean, withProperties?: Object): any[];
+	place(fileName: File, placePoint: string[] | number[], destinationLayer: Layer, showingOptions?: boolean, autoflowing?: boolean, withProperties?: object): any[];
 
 	/**
 	 * Deprecated: Use contentPlace method. Original Description: Create a linked story and place it into the target.
@@ -33823,7 +33823,7 @@ declare class MasterSpreads {
 	 * @param pagesPerSpread The number of pages to include in the master spread. 
 	 * @param withProperties Initial values for properties of the new MasterSpread 
 	 */
-	add(pagesPerSpread: number, withProperties: Object): MasterSpread;
+	add(pagesPerSpread: number, withProperties: object): MasterSpread;
 
 	/**
 	 * Returns any MasterSpread in the collection.
@@ -34217,7 +34217,7 @@ declare class PageItem {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The arrowhead applied to the end of the path.
@@ -34536,7 +34536,7 @@ declare class PageItem {
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	place(fileName: File, showingOptions?: boolean, withProperties?: Object): any[];
+	place(fileName: File, showingOptions?: boolean, withProperties?: object): any[];
 
 	/**
 	 * Places XML content into the specified object. Note: Replaces any existing content.
@@ -34605,7 +34605,7 @@ declare class PageItem {
 	 * @param using The library in which to store the object.
 	 * @param withProperties Initial values for properties of the new PageItem 
 	 */
-	store(using: Library, withProperties: Object): Asset;
+	store(using: Library, withProperties: object): Asset;
 
 	/**
 	 * Generates a string which, if executed, will return the PageItem.
@@ -34792,7 +34792,7 @@ declare class Ovals {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Oval 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Oval;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Oval;
 
 	/**
 	 * Returns any Oval in the collection.
@@ -34916,7 +34916,7 @@ declare class Rectangles {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Rectangle 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Rectangle;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Rectangle;
 
 	/**
 	 * Returns any Rectangle in the collection.
@@ -35020,7 +35020,7 @@ declare class GraphicLines {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new GraphicLine 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): GraphicLine;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): GraphicLine;
 
 	/**
 	 * Returns any GraphicLine in the collection.
@@ -35146,7 +35146,7 @@ declare class Polygons {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Polygon 
 	 */
-	add(layer: Layer, numberOfSides: number, insetPercentage: number, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Polygon;
+	add(layer: Layer, numberOfSides: number, insetPercentage: number, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Polygon;
 
 	/**
 	 * Returns any Polygon in the collection.
@@ -35383,7 +35383,7 @@ declare class Groups {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new Group 
 	 */
-	add(groupItems: PageItem[], layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): Group;
+	add(groupItems: PageItem[], layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Group;
 
 	/**
 	 * Returns any Group in the collection.
@@ -36232,7 +36232,7 @@ declare class TransformationMatrix {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The vertical scale factor of the transformation matrix.
@@ -36350,7 +36350,7 @@ declare class TransformationMatrices {
 	 * @param matrixMapping The mapping the transformation matrix performs on the unit triangle. Can accept: Array of Array of 2 Arrays of 2 Reals. 
 	 * @param withProperties Initial values for properties of the new TransformationMatrix 
 	 */
-	add(horizontalScaleFactor: number, verticalScaleFactor: number, clockwiseShearAngle: number, counterclockwiseRotationAngle: number, horizontalTranslation: number, verticalTranslation: number, matrixValues: number[], matrixMapping: any[], withProperties: Object): TransformationMatrix;
+	add(horizontalScaleFactor: number, verticalScaleFactor: number, clockwiseShearAngle: number, counterclockwiseRotationAngle: number, horizontalTranslation: number, verticalTranslation: number, matrixValues: number[], matrixMapping: any[], withProperties: object): TransformationMatrix;
 
 	/**
 	 * Returns any TransformationMatrix in the collection.
@@ -36573,7 +36573,7 @@ declare class Guide {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The view magnification as a percentage below which guides are no longer displayed. (Range: 5.0 to 4000.0)
@@ -36699,7 +36699,7 @@ declare class Guides {
 	 * @param layer The layer on which to create the guide. 
 	 * @param withProperties Initial values for properties of the new Guide 
 	 */
-	add(layer: Layer, withProperties: Object): Guide;
+	add(layer: Layer, withProperties: object): Guide;
 
 	/**
 	 * Returns any Guide in the collection.
@@ -36949,7 +36949,7 @@ declare class Section {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The prefix to place before page numbers on pages in the section. May include up to 8 characters. Note: Valid only when include section prefix is true.
@@ -37027,7 +37027,7 @@ declare class Sections {
 	 * @param reference The page on which the section begins. 
 	 * @param withProperties Initial values for properties of the new Section 
 	 */
-	add(reference: Page, withProperties: Object): Section;
+	add(reference: Page, withProperties: object): Section;
 
 	/**
 	 * Returns any Section in the collection.
@@ -37150,7 +37150,7 @@ declare class Path {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -37214,7 +37214,7 @@ declare class Paths {
 	 * Creates a new Path.
 	 * @param withProperties Initial values for properties of the new Path 
 	 */
-	add(withProperties: Object): Path;
+	add(withProperties: object): Path;
 
 	/**
 	 * Returns any Path in the collection.
@@ -37325,7 +37325,7 @@ declare class PathPoint {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The right-direction point, which controls the curve of the line segment following the path point on the path, in the format [x, y].
@@ -37396,7 +37396,7 @@ declare class PathPoints {
 	 * Creates a new PathPoint.
 	 * @param withProperties Initial values for properties of the new PathPoint 
 	 */
-	add(withProperties: Object): PathPoint;
+	add(withProperties: object): PathPoint;
 
 	/**
 	 * Returns any PathPoint in the collection.
@@ -37987,7 +37987,7 @@ declare class ImportedPages {
 	 * Creates a new ImportedPage.
 	 * @param withProperties Initial values for properties of the new ImportedPage 
 	 */
-	add(withProperties: Object): ImportedPage;
+	add(withProperties: object): ImportedPage;
 
 	/**
 	 * Returns any ImportedPage in the collection.
@@ -38305,7 +38305,7 @@ declare class Snippet {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -38534,7 +38534,7 @@ declare class MotionPreset {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -38618,7 +38618,7 @@ declare class MotionPresets {
 	 * Creates a new MotionPreset.
 	 * @param withProperties Initial values for properties of the new MotionPreset 
 	 */
-	add(withProperties: Object): MotionPreset;
+	add(withProperties: object): MotionPreset;
 
 	/**
 	 * Returns any MotionPreset in the collection.
@@ -38751,7 +38751,7 @@ declare class Article {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Populates the article with all page items in the document.
@@ -38839,7 +38839,7 @@ declare class Articles {
 	 * @param reference The reference object. Note: Required when the to value specifies before or after. 
 	 * @param withProperties Initial values for properties of the new Article 
 	 */
-	add(name: string, articleExportStatus: boolean, at?: LocationOptions, reference?: Article, withProperties?: Object): Article;
+	add(name: string, articleExportStatus: boolean, at?: LocationOptions, reference?: Article, withProperties?: object): Article;
 
 	/**
 	 * Returns any Article in the collection.
@@ -38957,7 +38957,7 @@ declare class ArticleMember {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -39026,7 +39026,7 @@ declare class ArticleMembers {
 	 * @param reference The reference object. Note: Required when the to value specifies before or after. 
 	 * @param withProperties Initial values for properties of the new ArticleMember 
 	 */
-	add(itemRef: PageItem, at?: LocationOptions, reference?: ArticleMember, withProperties?: Object): ArticleMember;
+	add(itemRef: PageItem, at?: LocationOptions, reference?: ArticleMember, withProperties?: object): ArticleMember;
 
 	/**
 	 * Returns any ArticleMember in the collection.
@@ -39138,7 +39138,7 @@ declare class ArticleChild {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -39301,7 +39301,7 @@ declare class HtmlItems {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new HtmlItem 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): HtmlItem;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): HtmlItem;
 
 	/**
 	 * Returns any HtmlItem in the collection.
@@ -39434,7 +39434,7 @@ declare class Library {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -39467,7 +39467,7 @@ declare class Library {
 	 * @param using The page item(s) to store.
 	 * @param withProperties Initial values for properties of the new Library 
 	 */
-	store(using: PageItem[] | Movies | Sounds | Graphics | XMLElements, withProperties: Object): Asset;
+	store(using: PageItem[] | Movies | Sounds | Graphics | XMLElements, withProperties: object): Asset;
 
 	/**
 	 * Generates a string which, if executed, will return the Library.
@@ -39501,7 +39501,7 @@ declare class Libraries {
 	 * @param fullName The library's path and file name.
 	 * @param withProperties Initial values for properties of the new Library 
 	 */
-	add(fullName: File, withProperties: Object): Library;
+	add(fullName: File, withProperties: object): Library;
 
 	/**
 	 * Returns any Library in the collection.
@@ -39633,7 +39633,7 @@ declare class Asset {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -39949,7 +39949,7 @@ declare class Link {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The size of the Link file.
@@ -40537,7 +40537,7 @@ declare class ObjectStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The arrowhead applied to the end of the path.
@@ -40702,7 +40702,7 @@ declare class ObjectStyles {
 	 * Creates a new ObjectStyle.
 	 * @param withProperties Initial values for properties of the new ObjectStyle 
 	 */
-	add(withProperties: Object): ObjectStyle;
+	add(withProperties: object): ObjectStyle;
 
 	/**
 	 * Returns any ObjectStyle in the collection.
@@ -40830,7 +40830,7 @@ declare class ObjectStyleExportTagMap {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -40893,7 +40893,7 @@ declare class ObjectStyleExportTagMaps {
 	 * @param exportAttributes The attributes to map.
 	 * @param withProperties Initial values for properties of the new ObjectStyleExportTagMap 
 	 */
-	add(exportType: string, exportTag: string, exportClass: string, exportAttributes: string, withProperties: Object): ObjectStyleExportTagMap;
+	add(exportType: string, exportTag: string, exportClass: string, exportAttributes: string, withProperties: object): ObjectStyleExportTagMap;
 
 	/**
 	 * Returns any ObjectStyleExportTagMap in the collection.
@@ -43199,7 +43199,7 @@ declare class DocumentPreset {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The right edge of the DocumentPreset.
@@ -43311,7 +43311,7 @@ declare class DocumentPresets {
 	 * Creates a new DocumentPreset.
 	 * @param withProperties Initial values for properties of the new DocumentPreset 
 	 */
-	add(withProperties: Object): DocumentPreset;
+	add(withProperties: object): DocumentPreset;
 
 	/**
 	 * Returns any DocumentPreset in the collection.
@@ -44688,7 +44688,7 @@ declare class GraphicLayer {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * If true, the layer is a section divider layer.
@@ -45611,7 +45611,7 @@ declare class PDFExportPreset {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * If true, prints small targets outside the page area for aligning color separations.
@@ -45715,7 +45715,7 @@ declare class PDFExportPresets {
 	 * Creates a new PDFExportPreset.
 	 * @param withProperties Initial values for properties of the new PDFExportPreset 
 	 */
-	add(withProperties: Object): PDFExportPreset;
+	add(withProperties: object): PDFExportPreset;
 
 	/**
 	 * Returns any PDFExportPreset in the collection.
@@ -46642,7 +46642,7 @@ declare class Preference {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -54905,7 +54905,7 @@ declare class PrinterPreset {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * If true, prints small targets outside the page area for aligning color separations.
@@ -55079,7 +55079,7 @@ declare class PrinterPresets {
 	 * Creates a new PrinterPreset.
 	 * @param withProperties Initial values for properties of the new PrinterPreset 
 	 */
-	add(withProperties: Object): PrinterPreset;
+	add(withProperties: object): PrinterPreset;
 
 	/**
 	 * Returns any PrinterPreset in the collection.
@@ -56370,7 +56370,7 @@ declare class FlattenerPreset {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The amount of vector artwork to rasterize during flattening, specified as an enumerator or as a percentage in the range 0 to 100.
@@ -56452,7 +56452,7 @@ declare class FlattenerPresets {
 	 * Creates a new FlattenerPreset.
 	 * @param withProperties Initial values for properties of the new FlattenerPreset 
 	 */
-	add(withProperties: Object): FlattenerPreset;
+	add(withProperties: object): FlattenerPreset;
 
 	/**
 	 * Returns any FlattenerPreset in the collection.
@@ -58084,7 +58084,7 @@ declare class DisplaySetting {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The display method for raster images.
@@ -60255,14 +60255,14 @@ declare class EPubExportPreviewAppPreference extends Preference {
 	 * @param selectedForFixedLayoutEpub Check if the app is selected in Fixed Layout ePub export.
 	 * @param withProperties Initial values for properties of the new EPubExportPreviewAppPreference 
 	 */
-	addApplication(applicationPath: string, selectedForReflowableEpub: boolean, selectedForFixedLayoutEpub: boolean, withProperties: Object): void;
+	addApplication(applicationPath: string, selectedForReflowableEpub: boolean, selectedForFixedLayoutEpub: boolean, withProperties: object): void;
 
 	/**
 	 * Get the application at index.
 	 * @param indexOfApp The index of the application to get information for.
 	 * @param withProperties Initial values for properties of the new EPubExportPreviewAppPreference 
 	 */
-	getApplicationAtIndex(indexOfApp: boolean, withProperties: Object): any;
+	getApplicationAtIndex(indexOfApp: boolean, withProperties: object): any;
 
 	/**
 	 * Number of applications added for ePub Preview.
@@ -60274,7 +60274,7 @@ declare class EPubExportPreviewAppPreference extends Preference {
 	 * @param indexOfApp The index of the application to be removed.
 	 * @param withProperties Initial values for properties of the new EPubExportPreviewAppPreference 
 	 */
-	removeApplication(indexOfApp: number, withProperties: Object): void;
+	removeApplication(indexOfApp: number, withProperties: object): void;
 
 }
 
@@ -60433,7 +60433,7 @@ declare class ParaStyleMapping {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The source style name property.
@@ -60500,7 +60500,7 @@ declare class ParaStyleMappings {
 	 * @param mappingRuleType The mapping type
 	 * @param withProperties Initial values for properties of the new ParaStyleMapping 
 	 */
-	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: Object): ParaStyleMapping;
+	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: object): ParaStyleMapping;
 
 	/**
 	 * Returns any ParaStyleMapping in the collection.
@@ -60606,7 +60606,7 @@ declare class CellStyleMapping {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The source style name property.
@@ -60673,7 +60673,7 @@ declare class CellStyleMappings {
 	 * @param mappingRuleType The mapping type
 	 * @param withProperties Initial values for properties of the new CellStyleMapping 
 	 */
-	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: Object): CellStyleMapping;
+	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: object): CellStyleMapping;
 
 	/**
 	 * Returns any CellStyleMapping in the collection.
@@ -60779,7 +60779,7 @@ declare class CharStyleMapping {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The source style name property.
@@ -60846,7 +60846,7 @@ declare class CharStyleMappings {
 	 * @param mappingRuleType The mapping type
 	 * @param withProperties Initial values for properties of the new CharStyleMapping 
 	 */
-	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: Object): CharStyleMapping;
+	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: object): CharStyleMapping;
 
 	/**
 	 * Returns any CharStyleMapping in the collection.
@@ -60952,7 +60952,7 @@ declare class TableStyleMapping {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The source style name property.
@@ -61019,7 +61019,7 @@ declare class TableStyleMappings {
 	 * @param mappingRuleType The mapping type
 	 * @param withProperties Initial values for properties of the new TableStyleMapping 
 	 */
-	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: Object): TableStyleMapping;
+	add(sourceStyleName: string, destinationStyleName: string, mappingRuleType: MapType, withProperties: object): TableStyleMapping;
 
 	/**
 	 * Returns any TableStyleMapping in the collection.
@@ -61176,7 +61176,7 @@ declare class PreflightRule {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -61352,7 +61352,7 @@ declare class RuleDataObject {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -61414,7 +61414,7 @@ declare class RuleDataObjects {
 	 * @param dataValue The value of data. Can accept: String, Real, Long Integer, Short Integer, Boolean, Object or Array of Strings, Reals, Long Integers, Short Integers, Booleans, Objects or Arrays of Array of Arrays of Array of Strings, Reals, Long Integers, Short Integers, Booleans or Objects.
 	 * @param withProperties Initial values for properties of the new RuleDataObject 
 	 */
-	add(name: string, dataType: RuleDataType, dataValue: any, withProperties: Object): RuleDataObject;
+	add(name: string, dataType: RuleDataType, dataValue: any, withProperties: object): RuleDataObject;
 
 	/**
 	 * Returns any RuleDataObject in the collection.
@@ -61516,7 +61516,7 @@ declare class PreflightRuleInstances {
 	 * @param id The ID of the rule to be added
 	 * @param withProperties Initial values for properties of the new PreflightRuleInstance 
 	 */
-	add(id: string, withProperties: Object): any;
+	add(id: string, withProperties: object): any;
 
 	/**
 	 * Returns any PreflightRuleInstance in the collection.
@@ -61654,7 +61654,7 @@ declare class PreflightProfile {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -61748,7 +61748,7 @@ declare class PreflightProfiles {
 	 * Creates a new PreflightProfile.
 	 * @param withProperties Initial values for properties of the new PreflightProfile 
 	 */
-	add(withProperties: Object): PreflightProfile;
+	add(withProperties: object): PreflightProfile;
 
 	/**
 	 * Returns any PreflightProfile in the collection.
@@ -61881,7 +61881,7 @@ declare class PreflightProcess {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The target document the process is inspecting.
@@ -61961,7 +61961,7 @@ declare class PreflightProcesses {
 	 * @param preflightOptions The preflight options that should be used. 
 	 * @param withProperties Initial values for properties of the new PreflightProcess 
 	 */
-	add(targetObject: Document, appliedProfile: PreflightProfile, preflightOptions: PreflightOption, withProperties: Object): PreflightProcess;
+	add(targetObject: Document, appliedProfile: PreflightProfile, preflightOptions: PreflightOption, withProperties: object): PreflightProcess;
 
 	/**
 	 * Returns any PreflightProcess in the collection.
@@ -62082,7 +62082,7 @@ declare class PreflightProfileRule {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of prefight rule data objects.
@@ -62160,7 +62160,7 @@ declare class PreflightProfileRules {
 	 * @param id The ID of the rule to be added
 	 * @param withProperties Initial values for properties of the new PreflightProfileRule 
 	 */
-	add(id: string, withProperties: Object): any;
+	add(id: string, withProperties: object): any;
 
 	/**
 	 * Returns any PreflightProfileRule in the collection.
@@ -62278,7 +62278,7 @@ declare class StrokeStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The stroke style type.
@@ -62458,7 +62458,7 @@ declare class DashedStrokeStyles {
 	 * Creates a new DashedStrokeStyle.
 	 * @param withProperties Initial values for properties of the new DashedStrokeStyle 
 	 */
-	add(withProperties: Object): DashedStrokeStyle;
+	add(withProperties: object): DashedStrokeStyle;
 
 	/**
 	 * Returns any DashedStrokeStyle in the collection.
@@ -62569,7 +62569,7 @@ declare class DottedStrokeStyles {
 	 * Creates a new DottedStrokeStyle.
 	 * @param withProperties Initial values for properties of the new DottedStrokeStyle 
 	 */
-	add(withProperties: Object): DottedStrokeStyle;
+	add(withProperties: object): DottedStrokeStyle;
 
 	/**
 	 * Returns any DottedStrokeStyle in the collection.
@@ -62675,7 +62675,7 @@ declare class StripedStrokeStyles {
 	 * Creates a new StripedStrokeStyle.
 	 * @param withProperties Initial values for properties of the new StripedStrokeStyle 
 	 */
-	add(withProperties: Object): StripedStrokeStyle;
+	add(withProperties: object): StripedStrokeStyle;
 
 	/**
 	 * Returns any StripedStrokeStyle in the collection.
@@ -62823,7 +62823,7 @@ declare class TOCStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * If true, the lowest-level TOC entries are placed on the same line as the previous entry.
@@ -62925,7 +62925,7 @@ declare class TOCStyles {
 	 * Creates a new TOCStyle.
 	 * @param withProperties Initial values for properties of the new TOCStyle 
 	 */
-	add(withProperties: Object): TOCStyle;
+	add(withProperties: object): TOCStyle;
 
 	/**
 	 * Returns any TOCStyle in the collection.
@@ -63058,7 +63058,7 @@ declare class TOCStyleEntry {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The string to insert between the entry text and the page numbers.
@@ -63133,7 +63133,7 @@ declare class TOCStyleEntries {
 	 * @param styleName The paragraph style to include as TOC entries in the TOC. 
 	 * @param withProperties Initial values for properties of the new TOCStyleEntry 
 	 */
-	add(styleName: string, withProperties: Object): TOCStyleEntry;
+	add(styleName: string, withProperties: object): TOCStyleEntry;
 
 	/**
 	 * Returns any TOCStyleEntry in the collection.
@@ -63725,7 +63725,7 @@ declare class Cell {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -64644,7 +64644,7 @@ declare class Table {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -65166,7 +65166,7 @@ declare class Tables {
 	 * @param reference The reference object. Note: Required when the to value specifies before or after.
 	 * @param withProperties Initial values for properties of the new Table 
 	 */
-	add(to?: LocationOptions, reference?: Table | XMLElement | XmlStory | TextFrame | Text | InsertionPoint | TextStyleRange | Paragraph | TextColumn | Line | Word | Character | Story | Cell, withProperties?: Object): Table;
+	add(to?: LocationOptions, reference?: Table | XMLElement | XmlStory | TextFrame | Text | InsertionPoint | TextStyleRange | Paragraph | TextColumn | Line | Word | Character | Story | Cell, withProperties?: object): Table;
 
 	/**
 	 * Returns any Table in the collection.
@@ -65634,7 +65634,7 @@ declare class Column {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The color, specified as a swatch, of the right edge border stroke.
@@ -65944,7 +65944,7 @@ declare class Columns {
 	 * @param reference The reference object. Note: The reference object must be within the table. Required only when the at value contains before or after.
 	 * @param withProperties Initial values for properties of the new Column 
 	 */
-	add(at?: LocationOptions, reference?: Row | Column | Cell | Table, withProperties?: Object): any;
+	add(at?: LocationOptions, reference?: Row | Column | Cell | Table, withProperties?: object): any;
 
 	/**
 	 * Returns any Column in the collection.
@@ -66406,7 +66406,7 @@ declare class Row {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The color, specified as a swatch, of the right edge border stroke.
@@ -66716,7 +66716,7 @@ declare class Rows {
 	 * @param reference The reference object. Note: The reference object must be within the table. Required only when the at value contains before or after.
 	 * @param withProperties Initial values for properties of the new Row 
 	 */
-	add(at?: LocationOptions, reference?: Row | Column | Cell | Table, withProperties?: Object): any;
+	add(at?: LocationOptions, reference?: Row | Column | Cell | Table, withProperties?: object): any;
 
 	/**
 	 * Returns any Row in the collection.
@@ -67118,7 +67118,7 @@ declare class TableStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The color, specified as a swatch (color, gradient, tint, or mixed ink), of the right border stroke.
@@ -67498,7 +67498,7 @@ declare class TableStyles {
 	 * Creates a new TableStyle.
 	 * @param withProperties Initial values for properties of the new TableStyle 
 	 */
-	add(withProperties: Object): TableStyle;
+	add(withProperties: object): TableStyle;
 
 	/**
 	 * Returns any TableStyle in the collection.
@@ -67626,7 +67626,7 @@ declare class TableStyleGroup {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of table style groups.
@@ -67721,7 +67721,7 @@ declare class TableStyleGroups {
 	 * Creates a new TableStyleGroup.
 	 * @param withProperties Initial values for properties of the new TableStyleGroup 
 	 */
-	add(withProperties: Object): TableStyleGroup;
+	add(withProperties: object): TableStyleGroup;
 
 	/**
 	 * Returns any TableStyleGroup in the collection.
@@ -68069,7 +68069,7 @@ declare class CellStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The color, specified as a swatch, of the right edge border stroke.
@@ -68284,7 +68284,7 @@ declare class CellStyles {
 	 * Creates a new CellStyle.
 	 * @param withProperties Initial values for properties of the new CellStyle 
 	 */
-	add(withProperties: Object): CellStyle;
+	add(withProperties: object): CellStyle;
 
 	/**
 	 * Returns any CellStyle in the collection.
@@ -68422,7 +68422,7 @@ declare class CellStyleGroup {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -68507,7 +68507,7 @@ declare class CellStyleGroups {
 	 * Creates a new CellStyleGroup.
 	 * @param withProperties Initial values for properties of the new CellStyleGroup 
 	 */
-	add(withProperties: Object): CellStyleGroup;
+	add(withProperties: object): CellStyleGroup;
 
 	/**
 	 * Returns any CellStyleGroup in the collection.
@@ -68625,7 +68625,7 @@ declare class NestedLineStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The number line-style rules to back up.
@@ -68689,7 +68689,7 @@ declare class NestedLineStyles {
 	 * Creates a new NestedLineStyle.
 	 * @param withProperties Initial values for properties of the new NestedLineStyle 
 	 */
-	add(withProperties: Object): NestedLineStyle;
+	add(withProperties: object): NestedLineStyle;
 
 	/**
 	 * Returns any NestedLineStyle in the collection.
@@ -68795,7 +68795,7 @@ declare class NestedGrepStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -68854,7 +68854,7 @@ declare class NestedGrepStyles {
 	 * Creates a new NestedGrepStyle.
 	 * @param withProperties Initial values for properties of the new NestedGrepStyle 
 	 */
-	add(withProperties: Object): NestedGrepStyle;
+	add(withProperties: object): NestedGrepStyle;
 
 	/**
 	 * Returns any NestedGrepStyle in the collection.
@@ -69940,7 +69940,7 @@ declare class Text {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -70844,7 +70844,7 @@ declare class Text {
 	 * @param showingOptions Whether to display the import options dialog 
 	 * @param withProperties Initial values for properties of the placed object(s) 
 	 */
-	place(fileName: File, showingOptions?: boolean, withProperties?: Object): any[];
+	place(fileName: File, showingOptions?: boolean, withProperties?: object): any[];
 
 	/**
 	 * Recomposes the text in the Text.
@@ -71953,7 +71953,7 @@ declare class TextFrames {
 	 * @param reference The reference object. Note: Required when the at parameter is before or after.
 	 * @param withProperties Initial values for properties of the new TextFrame 
 	 */
-	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: Object): TextFrame;
+	add(layer: Layer, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): TextFrame;
 
 	/**
 	 * Returns any TextFrame in the collection.
@@ -73086,7 +73086,7 @@ declare class Story {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radio buttons.
@@ -74936,7 +74936,7 @@ declare class ParagraphStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * If true, disallows line breaks in numbers. If false, lines can break between digits in multi-digit numbers.
@@ -75632,7 +75632,7 @@ declare class ParagraphStyles {
 	 * Creates a new ParagraphStyle.
 	 * @param withProperties Initial values for properties of the new ParagraphStyle 
 	 */
-	add(withProperties: Object): ParagraphStyle;
+	add(withProperties: object): ParagraphStyle;
 
 	/**
 	 * Returns any ParagraphStyle in the collection.
@@ -76140,7 +76140,7 @@ declare class CharacterStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The ruby alignment.
@@ -76615,7 +76615,7 @@ declare class CharacterStyles {
 	 * Creates a new CharacterStyle.
 	 * @param withProperties Initial values for properties of the new CharacterStyle 
 	 */
-	add(withProperties: Object): CharacterStyle;
+	add(withProperties: object): CharacterStyle;
 
 	/**
 	 * Returns any CharacterStyle in the collection.
@@ -76743,7 +76743,7 @@ declare class TabStop {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -76802,7 +76802,7 @@ declare class TabStops {
 	 * Creates a new TabStop.
 	 * @param withProperties Initial values for properties of the new TabStop 
 	 */
-	add(withProperties: Object): TabStop;
+	add(withProperties: object): TabStop;
 
 	/**
 	 * Returns any TabStop in the collection.
@@ -76913,7 +76913,7 @@ declare class NestedStyle {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The number instances of the specified delimiter up to which, or through which, to apply the nested style.
@@ -76977,7 +76977,7 @@ declare class NestedStyles {
 	 * Creates a new NestedStyle.
 	 * @param withProperties Initial values for properties of the new NestedStyle 
 	 */
-	add(withProperties: Object): NestedStyle;
+	add(withProperties: object): NestedStyle;
 
 	/**
 	 * Returns any NestedStyle in the collection.
@@ -77103,7 +77103,7 @@ declare class Language {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The single quotes pair for the language.
@@ -77327,7 +77327,7 @@ declare class LanguageWithVendors {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The single quotes pair for the language.
@@ -77608,7 +77608,7 @@ declare class Font {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The registry of a CID font.
@@ -77831,7 +77831,7 @@ declare class KinsokuTable {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -77904,7 +77904,7 @@ declare class KinsokuTables {
 	 * @param name The name of the new kinsoku table.
 	 * @param withProperties Initial values for properties of the new KinsokuTable 
 	 */
-	add(name: string, withProperties: Object): KinsokuTable;
+	add(name: string, withProperties: object): KinsokuTable;
 
 	/**
 	 * Returns any KinsokuTable in the collection.
@@ -78037,7 +78037,7 @@ declare class MojikumiTable {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -78110,7 +78110,7 @@ declare class MojikumiTables {
 	 * @param name The name of the new mojikumi table.
 	 * @param withProperties Initial values for properties of the new MojikumiTable 
 	 */
-	add(name: string, withProperties: Object): MojikumiTable;
+	add(name: string, withProperties: object): MojikumiTable;
 
 	/**
 	 * Returns any MojikumiTable in the collection.
@@ -78228,7 +78228,7 @@ declare class HyphenationException {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A list of words removed from the hyphenation exceptions list.
@@ -78407,7 +78407,7 @@ declare class UserDictionary {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A list of words removed from the user dictionary.
@@ -78586,7 +78586,7 @@ declare class AutoCorrectTable {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -78766,7 +78766,7 @@ declare class Change {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The location of the first insertion point in the object (relative to the beginning of the story).
@@ -79060,7 +79060,7 @@ declare class TextPath {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The location of the start of the type on the path, expressed in points. Note: 0 is the first point on the path.
@@ -79220,7 +79220,7 @@ declare class TextPaths {
 	 * Creates a new TextPath.
 	 * @param withProperties Initial values for properties of the new TextPath 
 	 */
-	add(withProperties: Object): TextPath;
+	add(withProperties: object): TextPath;
 
 	/**
 	 * Returns any TextPath in the collection.
@@ -79383,7 +79383,7 @@ declare class Note {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The insertion point before the table in the story containing the table.
@@ -79504,7 +79504,7 @@ declare class Notes {
 	 * @param reference The reference object. Note: Required when the at parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new Note 
 	 */
-	add(at?: LocationOptions, reference?: Note | InsertionPoint, withProperties?: Object): Note;
+	add(at?: LocationOptions, reference?: Note | InsertionPoint, withProperties?: object): Note;
 
 	/**
 	 * Returns any Note in the collection.
@@ -79697,7 +79697,7 @@ declare class Footnote {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of rectangles.
@@ -79821,7 +79821,7 @@ declare class Footnotes {
 	 * @param reference The reference object. Note: Must be an insertion point or a note. Required when the at parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new Footnote 
 	 */
-	add(at?: LocationOptions, reference?: Note | InsertionPoint, withProperties?: Object): Footnote;
+	add(at?: LocationOptions, reference?: Note | InsertionPoint, withProperties?: object): Footnote;
 
 	/**
 	 * Returns any Footnote in the collection.
@@ -79944,7 +79944,7 @@ declare class TextVariable {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The preferences associated with the text variable.
@@ -80018,7 +80018,7 @@ declare class TextVariables {
 	 * Creates a new TextVariable.
 	 * @param withProperties Initial values for properties of the new TextVariable 
 	 */
-	add(withProperties: Object): TextVariable;
+	add(withProperties: object): TextVariable;
 
 	/**
 	 * Returns any TextVariable in the collection.
@@ -80140,7 +80140,7 @@ declare class TextVariableInstance {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The text that replaces the variable marker. Note: This property cannot be set; it can be used only to update variables. .
@@ -80229,7 +80229,7 @@ declare class TextVariableInstances {
 	 * @param reference The reference object. Note: Required only when the to parameter specifies before or after.
 	 * @param withProperties Initial values for properties of the new TextVariableInstance 
 	 */
-	add(to?: LocationOptions, reference?: TextVariableInstance | XmlStory | TextFrame | Story | Note | Cell | Footnote | Table | TextColumn | TextStyleRange | Text | InsertionPoint | Paragraph | Line | Word | Character | Change, withProperties?: Object): TextVariableInstance;
+	add(to?: LocationOptions, reference?: TextVariableInstance | XmlStory | TextFrame | Story | Note | Cell | Footnote | Table | TextColumn | TextStyleRange | Text | InsertionPoint | Paragraph | Line | Word | Character | Change, withProperties?: object): TextVariableInstance;
 
 	/**
 	 * Returns any TextVariableInstance in the collection.
@@ -80357,7 +80357,7 @@ declare class StyleExportTagMap {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -80420,7 +80420,7 @@ declare class StyleExportTagMaps {
 	 * @param exportAttributes The attributes to map.
 	 * @param withProperties Initial values for properties of the new StyleExportTagMap 
 	 */
-	add(exportType: string, exportTag: string, exportClass: string, exportAttributes: string, withProperties: Object): StyleExportTagMap;
+	add(exportType: string, exportTag: string, exportClass: string, exportAttributes: string, withProperties: object): StyleExportTagMap;
 
 	/**
 	 * Returns any StyleExportTagMap in the collection.
@@ -80546,7 +80546,7 @@ declare class ParagraphStyleGroup {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -80631,7 +80631,7 @@ declare class ParagraphStyleGroups {
 	 * Creates a new ParagraphStyleGroup.
 	 * @param withProperties Initial values for properties of the new ParagraphStyleGroup 
 	 */
-	add(withProperties: Object): ParagraphStyleGroup;
+	add(withProperties: object): ParagraphStyleGroup;
 
 	/**
 	 * Returns any ParagraphStyleGroup in the collection.
@@ -80769,7 +80769,7 @@ declare class CharacterStyleGroup {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -80854,7 +80854,7 @@ declare class CharacterStyleGroups {
 	 * Creates a new CharacterStyleGroup.
 	 * @param withProperties Initial values for properties of the new CharacterStyleGroup 
 	 */
-	add(withProperties: Object): CharacterStyleGroup;
+	add(withProperties: object): CharacterStyleGroup;
 
 	/**
 	 * Returns any CharacterStyleGroup in the collection.
@@ -80982,7 +80982,7 @@ declare class CompositeFont {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -81054,7 +81054,7 @@ declare class CompositeFonts {
 	 * Creates a new CompositeFont.
 	 * @param withProperties Initial values for properties of the new CompositeFont 
 	 */
-	add(withProperties: Object): CompositeFont;
+	add(withProperties: object): CompositeFont;
 
 	/**
 	 * Returns any CompositeFont in the collection.
@@ -81207,7 +81207,7 @@ declare class CompositeFontEntry {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The size of the entry relative to the base entry. Note: The base entry cannot be modified.
@@ -81294,7 +81294,7 @@ declare class CompositeFontEntries {
 	 * Creates a new CompositeFontEntry.
 	 * @param withProperties Initial values for properties of the new CompositeFontEntry 
 	 */
-	add(withProperties: Object): CompositeFontEntry;
+	add(withProperties: object): CompositeFontEntry;
 
 	/**
 	 * Returns any CompositeFontEntry in the collection.
@@ -81427,7 +81427,7 @@ declare class NamedGrid {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -81499,7 +81499,7 @@ declare class NamedGrids {
 	 * Creates a new NamedGrid.
 	 * @param withProperties Initial values for properties of the new NamedGrid 
 	 */
-	add(withProperties: Object): NamedGrid;
+	add(withProperties: object): NamedGrid;
 
 	/**
 	 * Returns any NamedGrid in the collection.
@@ -81627,7 +81627,7 @@ declare class IndexingSortOption {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -81849,7 +81849,7 @@ declare class NumberingList {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -81925,7 +81925,7 @@ declare class NumberingLists {
 	 * @param continueNumbersAcrossDocuments If true, numbering will continue across book documents. 
 	 * @param withProperties Initial values for properties of the new NumberingList 
 	 */
-	add(name: string, continueNumbersAcrossStories: boolean, continueNumbersAcrossDocuments: boolean, withProperties: Object): NumberingList;
+	add(name: string, continueNumbersAcrossStories: boolean, continueNumbersAcrossDocuments: boolean, withProperties: object): NumberingList;
 
 	/**
 	 * Returns any NumberingList in the collection.
@@ -82063,7 +82063,7 @@ declare class ObjectStyleGroup {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -82148,7 +82148,7 @@ declare class ObjectStyleGroups {
 	 * Creates a new ObjectStyleGroup.
 	 * @param withProperties Initial values for properties of the new ObjectStyleGroup 
 	 */
-	add(withProperties: Object): ObjectStyleGroup;
+	add(withProperties: object): ObjectStyleGroup;
 
 	/**
 	 * Returns any ObjectStyleGroup in the collection.
@@ -82281,7 +82281,7 @@ declare class Condition {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The condition underline indicator appearance.
@@ -82364,7 +82364,7 @@ declare class Conditions {
 	 * Creates a new Condition.
 	 * @param withProperties Initial values for properties of the new Condition 
 	 */
-	add(withProperties: Object): Condition;
+	add(withProperties: object): Condition;
 
 	/**
 	 * Returns any Condition in the collection.
@@ -82507,7 +82507,7 @@ declare class HiddenText {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The insertion point before the table in the story containing the table.
@@ -82716,7 +82716,7 @@ declare class ConditionSet {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * List of conditions and visibilities in the set. Can return: Ordered array containing condition:Condition, visibility:Boolean.
@@ -82799,7 +82799,7 @@ declare class ConditionSets {
 	 * Creates a new ConditionSet.
 	 * @param withProperties Initial values for properties of the new ConditionSet 
 	 */
-	add(withProperties: Object): ConditionSet;
+	add(withProperties: object): ConditionSet;
 
 	/**
 	 * Returns any ConditionSet in the collection.
@@ -82948,7 +82948,7 @@ declare class LibraryPanel extends Panel {
 	/**
 	 * The selected object(s).
 	 */
-	selection: Object[] | Object | NothingEnum;
+	selection: object[] | object | NothingEnum;
 
 	/**
 	 * The sort order of the assets in the LibraryPanel
@@ -82965,7 +82965,7 @@ declare class LibraryPanel extends Panel {
 	 * @param selectableItems The objects to select.
 	 * @param existingSelection The selection status of the LibraryPanel in relation to previously selected objects. 
 	 */
-	select(selectableItems: Object | Object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
+	select(selectableItems: object | object[] | NothingEnum | SelectAll, existingSelection?: SelectionOptions): void;
 
 	/**
 	 * Show all assets
@@ -83046,7 +83046,7 @@ declare class MenuAction {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The name of the MenuAction for display in the user interface. The title includes any ampersand characters (&), which are used to tell the Windows OS to underline the following character in the name for use with the Alt key to navigate to a menu item. Double ampersands are used to display an actual ampersand character in the name. The Mac OS ignores and removes the extra ampersand characters.
@@ -83234,7 +83234,7 @@ declare class ScriptMenuActions {
 	 * @param title The name of the ScriptMenuAction for display in the user interface. The title includes any ampersand characters (&), which are used to tell the Windows OS to underline the following character in the name for use with the Alt key to navigate to a menu item. Double ampersands are used to display an actual ampersand character in the name. The Mac OS ignores and removes the extra ampersand characters. 
 	 * @param withProperties Initial values for properties of the new ScriptMenuAction 
 	 */
-	add(title: string, withProperties: Object): ScriptMenuAction;
+	add(title: string, withProperties: object): ScriptMenuAction;
 
 	/**
 	 * Returns any ScriptMenuAction in the collection.
@@ -83367,7 +83367,7 @@ declare class Menu {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of submenus.
@@ -83527,7 +83527,7 @@ declare class MenuElement {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -83707,7 +83707,7 @@ declare class Submenus {
 	 * @param reference The reference object. Note: Required when the at parameter specifies before or after. 
 	 * @param withProperties Initial values for properties of the new Submenu 
 	 */
-	add(title: string, at?: LocationOptions, reference?: MenuElement, withProperties?: Object): Submenu;
+	add(title: string, at?: LocationOptions, reference?: MenuElement, withProperties?: object): Submenu;
 
 	/**
 	 * Returns any Submenu in the collection.
@@ -83840,7 +83840,7 @@ declare class MenuItems {
 	 * @param reference The reference object. Note: Required when the at parameter specifies before or after. 
 	 * @param withProperties Initial values for properties of the new MenuItem 
 	 */
-	add(associatedMenuAction: MenuAction, at?: LocationOptions, reference?: MenuElement, withProperties?: Object): MenuItem;
+	add(associatedMenuAction: MenuAction, at?: LocationOptions, reference?: MenuElement, withProperties?: object): MenuItem;
 
 	/**
 	 * Returns any MenuItem in the collection.
@@ -83948,7 +83948,7 @@ declare class MenuSeparators {
 	 * @param reference The reference object. Note: Required when the at parameter specifies before or after. 
 	 * @param withProperties Initial values for properties of the new MenuSeparator 
 	 */
-	add(at?: LocationOptions, reference?: MenuElement, withProperties?: Object): MenuSeparator;
+	add(at?: LocationOptions, reference?: MenuElement, withProperties?: object): MenuSeparator;
 
 	/**
 	 * Returns any MenuSeparator in the collection.
@@ -84055,7 +84055,7 @@ declare class Panel {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * If true, the panel is visible.
@@ -84235,7 +84235,7 @@ declare class Dialog {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -84312,7 +84312,7 @@ declare class Dialogs {
 	 * Creates a new Dialog.
 	 * @param withProperties Initial values for properties of the new Dialog 
 	 */
-	add(withProperties: Object): Dialog;
+	add(withProperties: object): Dialog;
 
 	/**
 	 * Returns any Dialog in the collection.
@@ -84430,7 +84430,7 @@ declare class Widget {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -84578,7 +84578,7 @@ declare class TextEditboxes {
 	 * Creates a new TextEditbox.
 	 * @param withProperties Initial values for properties of the new TextEditbox 
 	 */
-	add(withProperties: Object): TextEditbox;
+	add(withProperties: object): TextEditbox;
 
 	/**
 	 * Returns any TextEditbox in the collection.
@@ -84683,7 +84683,7 @@ declare class StaticTexts {
 	 * Creates a new StaticText.
 	 * @param withProperties Initial values for properties of the new StaticText 
 	 */
-	add(withProperties: Object): StaticText;
+	add(withProperties: object): StaticText;
 
 	/**
 	 * Returns any StaticText in the collection.
@@ -84788,7 +84788,7 @@ declare class Dropdowns {
 	 * Creates a new Dropdown.
 	 * @param withProperties Initial values for properties of the new Dropdown 
 	 */
-	add(withProperties: Object): Dropdown;
+	add(withProperties: object): Dropdown;
 
 	/**
 	 * Returns any Dropdown in the collection.
@@ -84893,7 +84893,7 @@ declare class CheckboxControls {
 	 * Creates a new CheckboxControl.
 	 * @param withProperties Initial values for properties of the new CheckboxControl 
 	 */
-	add(withProperties: Object): CheckboxControl;
+	add(withProperties: object): CheckboxControl;
 
 	/**
 	 * Returns any CheckboxControl in the collection.
@@ -85065,7 +85065,7 @@ declare class DialogColumn {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radiobutton groups.
@@ -85149,7 +85149,7 @@ declare class DialogColumns {
 	 * Creates a new DialogColumn.
 	 * @param withProperties Initial values for properties of the new DialogColumn 
 	 */
-	add(withProperties: Object): DialogColumn;
+	add(withProperties: object): DialogColumn;
 
 	/**
 	 * Returns any DialogColumn in the collection.
@@ -85259,7 +85259,7 @@ declare class RadiobuttonGroups {
 	 * Creates a new RadiobuttonGroup.
 	 * @param withProperties Initial values for properties of the new RadiobuttonGroup 
 	 */
-	add(withProperties: Object): RadiobuttonGroup;
+	add(withProperties: object): RadiobuttonGroup;
 
 	/**
 	 * Returns any RadiobuttonGroup in the collection.
@@ -85364,7 +85364,7 @@ declare class RadiobuttonControls {
 	 * Creates a new RadiobuttonControl.
 	 * @param withProperties Initial values for properties of the new RadiobuttonControl 
 	 */
-	add(withProperties: Object): RadiobuttonControl;
+	add(withProperties: object): RadiobuttonControl;
 
 	/**
 	 * Returns any RadiobuttonControl in the collection.
@@ -85489,7 +85489,7 @@ declare class IntegerEditboxes {
 	 * Creates a new IntegerEditbox.
 	 * @param withProperties Initial values for properties of the new IntegerEditbox 
 	 */
-	add(withProperties: Object): IntegerEditbox;
+	add(withProperties: object): IntegerEditbox;
 
 	/**
 	 * Returns any IntegerEditbox in the collection.
@@ -85619,7 +85619,7 @@ declare class IntegerComboboxes {
 	 * Creates a new IntegerCombobox.
 	 * @param withProperties Initial values for properties of the new IntegerCombobox 
 	 */
-	add(withProperties: Object): IntegerCombobox;
+	add(withProperties: object): IntegerCombobox;
 
 	/**
 	 * Returns any IntegerCombobox in the collection.
@@ -85819,7 +85819,7 @@ declare class EnablingGroups {
 	 * Creates a new EnablingGroup.
 	 * @param withProperties Initial values for properties of the new EnablingGroup 
 	 */
-	add(withProperties: Object): EnablingGroup;
+	add(withProperties: object): EnablingGroup;
 
 	/**
 	 * Returns any EnablingGroup in the collection.
@@ -85949,7 +85949,7 @@ declare class AngleComboboxes {
 	 * Creates a new AngleCombobox.
 	 * @param withProperties Initial values for properties of the new AngleCombobox 
 	 */
-	add(withProperties: Object): AngleCombobox;
+	add(withProperties: object): AngleCombobox;
 
 	/**
 	 * Returns any AngleCombobox in the collection.
@@ -86079,7 +86079,7 @@ declare class PercentComboboxes {
 	 * Creates a new PercentCombobox.
 	 * @param withProperties Initial values for properties of the new PercentCombobox 
 	 */
-	add(withProperties: Object): PercentCombobox;
+	add(withProperties: object): PercentCombobox;
 
 	/**
 	 * Returns any PercentCombobox in the collection.
@@ -86204,7 +86204,7 @@ declare class RealEditboxes {
 	 * Creates a new RealEditbox.
 	 * @param withProperties Initial values for properties of the new RealEditbox 
 	 */
-	add(withProperties: Object): RealEditbox;
+	add(withProperties: object): RealEditbox;
 
 	/**
 	 * Returns any RealEditbox in the collection.
@@ -86329,7 +86329,7 @@ declare class PercentEditboxes {
 	 * Creates a new PercentEditbox.
 	 * @param withProperties Initial values for properties of the new PercentEditbox 
 	 */
-	add(withProperties: Object): PercentEditbox;
+	add(withProperties: object): PercentEditbox;
 
 	/**
 	 * Returns any PercentEditbox in the collection.
@@ -86454,7 +86454,7 @@ declare class AngleEditboxes {
 	 * Creates a new AngleEditbox.
 	 * @param withProperties Initial values for properties of the new AngleEditbox 
 	 */
-	add(withProperties: Object): AngleEditbox;
+	add(withProperties: object): AngleEditbox;
 
 	/**
 	 * Returns any AngleEditbox in the collection.
@@ -86584,7 +86584,7 @@ declare class RealComboboxes {
 	 * Creates a new RealCombobox.
 	 * @param withProperties Initial values for properties of the new RealCombobox 
 	 */
-	add(withProperties: Object): RealCombobox;
+	add(withProperties: object): RealCombobox;
 
 	/**
 	 * Returns any RealCombobox in the collection.
@@ -86719,7 +86719,7 @@ declare class MeasurementComboboxes {
 	 * Creates a new MeasurementCombobox.
 	 * @param withProperties Initial values for properties of the new MeasurementCombobox 
 	 */
-	add(withProperties: Object): MeasurementCombobox;
+	add(withProperties: object): MeasurementCombobox;
 
 	/**
 	 * Returns any MeasurementCombobox in the collection.
@@ -86849,7 +86849,7 @@ declare class MeasurementEditboxes {
 	 * Creates a new MeasurementEditbox.
 	 * @param withProperties Initial values for properties of the new MeasurementEditbox 
 	 */
-	add(withProperties: Object): MeasurementEditbox;
+	add(withProperties: object): MeasurementEditbox;
 
 	/**
 	 * Returns any MeasurementEditbox in the collection.
@@ -87039,7 +87039,7 @@ declare class BorderPanels {
 	 * Creates a new BorderPanel.
 	 * @param withProperties Initial values for properties of the new BorderPanel 
 	 */
-	add(withProperties: Object): BorderPanel;
+	add(withProperties: object): BorderPanel;
 
 	/**
 	 * Returns any BorderPanel in the collection.
@@ -87211,7 +87211,7 @@ declare class DialogRow {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * A collection of radiobutton groups.
@@ -87295,7 +87295,7 @@ declare class DialogRows {
 	 * Creates a new DialogRow.
 	 * @param withProperties Initial values for properties of the new DialogRow 
 	 */
-	add(withProperties: Object): DialogRow;
+	add(withProperties: object): DialogRow;
 
 	/**
 	 * Returns any DialogRow in the collection.
@@ -87695,7 +87695,7 @@ declare class XMLElement extends XMLItem {
 	 * @param using The library in which to store the object.
 	 * @param withProperties Initial values for properties of the new XMLElement 
 	 */
-	store(using: Library, withProperties: Object): Asset;
+	store(using: Library, withProperties: object): Asset;
 
 	/**
 	 * Untags an element.
@@ -87731,7 +87731,7 @@ declare class XMLElements {
 	 * @param xmlContent The content to be marked up.
 	 * @param withProperties Initial values for properties of the new XMLElement 
 	 */
-	add(markupTag: string | XMLTag, xmlContent: Text | Story | PageItem | Movie | Sound | Graphic | Table | Cell, withProperties: Object): XMLElement;
+	add(markupTag: string | XMLTag, xmlContent: Text | Story | PageItem | Movie | Sound | Graphic | Table | Cell, withProperties: object): XMLElement;
 
 	/**
 	 * Returns any XMLElement in the collection.
@@ -87838,7 +87838,7 @@ declare class XMLAttribute {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The value of the XMLAttribute.
@@ -87917,7 +87917,7 @@ declare class XMLAttributes {
 	 * @param value The value of the attribute.
 	 * @param withProperties Initial values for properties of the new XMLAttribute 
 	 */
-	add(name: string, value: string, withProperties: Object): XMLAttribute;
+	add(name: string, value: string, withProperties: object): XMLAttribute;
 
 	/**
 	 * Returns any XMLAttribute in the collection.
@@ -88034,7 +88034,7 @@ declare class XMLTag {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The color of the tag, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color.
@@ -88114,7 +88114,7 @@ declare class XMLTags {
 	 * @param tagColor The dolor of the tag, specified either as an array of three doubles, each in the range 0 to 255 and representing R, G, and B values, or as a UI color.
 	 * @param withProperties Initial values for properties of the new XMLTag 
 	 */
-	add(name: string, tagColor: [number, number, number] | UIColors, withProperties: Object): XMLTag;
+	add(name: string, tagColor: [number, number, number] | UIColors, withProperties: object): XMLTag;
 
 	/**
 	 * Returns any XMLTag in the collection.
@@ -88232,7 +88232,7 @@ declare class XMLImportMap {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -88293,7 +88293,7 @@ declare class XMLImportMaps {
 	 * @param mappedStyle the mapped style.
 	 * @param withProperties Initial values for properties of the new XMLImportMap 
 	 */
-	add(markupTag: XMLTag | string, mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string, withProperties: Object): XMLImportMap;
+	add(markupTag: XMLTag | string, mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string, withProperties: object): XMLImportMap;
 
 	/**
 	 * Returns any XMLImportMap in the collection.
@@ -88414,7 +88414,7 @@ declare class XMLExportMap {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -88475,7 +88475,7 @@ declare class XMLExportMaps {
 	 * @param markupTag The tag to map.
 	 * @param withProperties Initial values for properties of the new XMLExportMap 
 	 */
-	add(mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string, markupTag: XMLTag | string, withProperties: Object): XMLExportMap;
+	add(mappedStyle: ParagraphStyle | CharacterStyle | TableStyle | CellStyle | string, markupTag: XMLTag | string, withProperties: object): XMLExportMap;
 
 	/**
 	 * Returns any XMLExportMap in the collection.
@@ -88586,7 +88586,7 @@ declare class ValidationError {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -88742,7 +88742,7 @@ declare class XMLComments {
 	 * @param storyOffset The location within the story, specified as an insertion point.
 	 * @param withProperties Initial values for properties of the new XMLComment 
 	 */
-	add(value?: string, storyOffset?: InsertionPoint | number, withProperties?: Object): XMLComment;
+	add(value?: string, storyOffset?: InsertionPoint | number, withProperties?: object): XMLComment;
 
 	/**
 	 * Returns any XMLComment in the collection.
@@ -88862,7 +88862,7 @@ declare class XMLInstructions {
 	 * @param storyOffset The location within the story, specified as an insertion point.
 	 * @param withProperties Initial values for properties of the new XMLInstruction 
 	 */
-	add(target: string, data?: string, storyOffset?: InsertionPoint | number, withProperties?: Object): XMLInstruction;
+	add(target: string, data?: string, storyOffset?: InsertionPoint | number, withProperties?: object): XMLInstruction;
 
 	/**
 	 * Returns any XMLInstruction in the collection.
@@ -88969,7 +88969,7 @@ declare class XMLItem {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.
@@ -89359,7 +89359,7 @@ declare class XMLRuleProcessor {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * The XPath condition paths of the rules in the rule set.
@@ -89469,7 +89469,7 @@ declare class XMLRuleProcessors {
 	 * @param prefixMappingTable The namespace mapping table. Can accept: Array of Arrays of 2 Strings. 
 	 * @param withProperties Initial values for properties of the new XMLRuleProcessor 
 	 */
-	add(rulePaths: string[], prefixMappingTable: any[], withProperties: Object): XMLRuleProcessor;
+	add(rulePaths: string[], prefixMappingTable: any[], withProperties: object): XMLRuleProcessor;
 
 	/**
 	 * Returns any XMLRuleProcessor in the collection.
@@ -89587,7 +89587,7 @@ declare class XMLRuleMatchData {
 	/**
 	 * A property that allows setting of several properties at the same time.
 	 */
-	properties: Object;
+	properties: object;
 
 	/**
 	 * Adds an event listener.

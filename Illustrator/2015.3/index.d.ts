@@ -3805,7 +3805,7 @@ declare class Artboards {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -3873,7 +3873,7 @@ declare class Documents {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -3933,7 +3933,7 @@ declare class Layers {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -3970,7 +3970,7 @@ declare class GroupItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4013,7 +4013,7 @@ declare class PageItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4040,7 +4040,7 @@ declare class PathItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4131,7 +4131,7 @@ declare class PathPoints {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4168,7 +4168,7 @@ declare class CompoundPathItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4205,7 +4205,7 @@ declare class Stories {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4232,7 +4232,7 @@ declare class TextFrameItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4296,7 +4296,7 @@ declare class LegacyTextItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4328,7 +4328,7 @@ declare class TextRanges {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4355,7 +4355,7 @@ declare class InsertionPoints {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4382,7 +4382,7 @@ declare class Characters {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4426,7 +4426,7 @@ declare class Words {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4470,7 +4470,7 @@ declare class Lines {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4497,7 +4497,7 @@ declare class Paragraphs {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4541,7 +4541,7 @@ declare class CharacterStyles {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4579,7 +4579,7 @@ declare class ParagraphStyles {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4617,7 +4617,7 @@ declare class Spots {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4654,7 +4654,7 @@ declare class Swatches {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4697,7 +4697,7 @@ declare class SwatchGroups {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4739,7 +4739,7 @@ declare class Gradients {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4776,7 +4776,7 @@ declare class GradientStops {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4813,7 +4813,7 @@ declare class Patterns {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4850,7 +4850,7 @@ declare class Symbols {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4889,7 +4889,7 @@ declare class SymbolItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4927,7 +4927,7 @@ declare class Brushes {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4967,7 +4967,7 @@ declare class ArtStyles {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4999,7 +4999,7 @@ declare class TextFonts {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5043,7 +5043,7 @@ declare class Tags {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5080,7 +5080,7 @@ declare class RasterItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5112,7 +5112,7 @@ declare class PlacedItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5149,7 +5149,7 @@ declare class EmbeddedItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5186,7 +5186,7 @@ declare class MeshItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5218,7 +5218,7 @@ declare class GraphItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5250,7 +5250,7 @@ declare class PluginItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5282,7 +5282,7 @@ declare class NonNativeItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5309,7 +5309,7 @@ declare class Views {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5336,7 +5336,7 @@ declare class Variables {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5373,7 +5373,7 @@ declare class DataSets {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -7872,7 +7872,7 @@ declare class Application {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Does paste operation remember layers structure?
@@ -8678,7 +8678,7 @@ declare class Document {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Path specification for the document.
@@ -9145,7 +9145,7 @@ declare class Layer {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The path artwork in this layer.
@@ -9212,7 +9212,7 @@ declare class Layer {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	move(relativeObject: Object, insertionLocation: any): Layer;
+	move(relativeObject: object, insertionLocation: any): Layer;
 
 	/**
 	 * Deletes this object.
@@ -9249,7 +9249,7 @@ declare class View {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The mode of display.
@@ -9285,7 +9285,7 @@ declare class Gradient {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The gradient type.
@@ -9331,7 +9331,7 @@ declare class GradientStop {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Location of color in the blend (in percent)
@@ -9372,7 +9372,7 @@ declare class Preferences {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Options to use when opening or placing a Photoshop file.
@@ -9466,7 +9466,7 @@ declare class Spot {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Kind of the spot color (i.e. RGB, CMYK or LAB), it is the name of color kind contained in spot.
@@ -9517,7 +9517,7 @@ declare class Variable {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9548,7 +9548,7 @@ declare class DataSet {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9594,7 +9594,7 @@ declare class Swatch {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9625,7 +9625,7 @@ declare class SwatchGroup {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9673,7 +9673,7 @@ declare class Pattern {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9704,7 +9704,7 @@ declare class Symbol {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9716,7 +9716,7 @@ declare class Symbol {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: any): Symbol;
+	duplicate(relativeObject: object, insertionLocation: any): Symbol;
 
 	/**
 	 * Deletes this object.
@@ -9742,7 +9742,7 @@ declare class Brush {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9769,7 +9769,7 @@ declare class ArtStyle {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9817,7 +9817,7 @@ declare class TextFont {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The font's style name.
@@ -9918,7 +9918,7 @@ declare class PageItem {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Is this artwork item aligned to Pixel Grid?
@@ -10009,14 +10009,14 @@ declare class PageItem {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: any): PageItem;
+	duplicate(relativeObject: object, insertionLocation: any): PageItem;
 
 	/**
 	 * Move the object.
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	move(relativeObject: Object, insertionLocation: any): PageItem;
+	move(relativeObject: object, insertionLocation: any): PageItem;
 
 	/**
 	 * Deletes this object.
@@ -10114,7 +10114,7 @@ declare class Tag {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -10277,7 +10277,7 @@ declare class PathPoint {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The type of point: smooth/corner.
@@ -10654,7 +10654,7 @@ declare class TextPath {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * 
@@ -10781,7 +10781,7 @@ declare class Story {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The text frame items in this story.
@@ -11078,7 +11078,7 @@ declare class TextRange {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The story of the text range.
@@ -11121,14 +11121,14 @@ declare class TextRange {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: any): TextRange;
+	duplicate(relativeObject: object, insertionLocation: any): TextRange;
 
 	/**
 	 * Move the object.
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	move(relativeObject: Object, insertionLocation: any): TextRange;
+	move(relativeObject: object, insertionLocation: any): TextRange;
 
 	/**
 	 * Deletes this object.
@@ -11170,7 +11170,7 @@ declare class InsertionPoint {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The story of the text range.
@@ -11211,7 +11211,7 @@ declare class CharacterStyle {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -11269,7 +11269,7 @@ declare class ParagraphStyle {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -11452,7 +11452,7 @@ declare class CharacterAttributes {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Does the Japanese OpenType support proportional font?
@@ -11723,7 +11723,7 @@ declare class ParagraphAttributes {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Right indent of margin expressed in points.
@@ -11774,7 +11774,7 @@ declare class OpenOptionsPhotoshop {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Should hidden layers be preserved when the document is converted (default: false)
@@ -11820,7 +11820,7 @@ declare class OpenOptionsPDF {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -11856,7 +11856,7 @@ declare class OpenOptionsAutoCAD {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * To scale lineweights by the same amount as rest of the drawing (default: false)
@@ -11937,7 +11937,7 @@ declare class TracingOptions {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Path fidelity for tracing.
@@ -12020,7 +12020,7 @@ declare class TracingObject {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The number of paths in the tracing result.
@@ -12077,7 +12077,7 @@ declare class Artboard {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * Ruler origin of artboard.It is relative to left-bottom corner of the Artboard.

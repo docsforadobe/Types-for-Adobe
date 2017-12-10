@@ -185,7 +185,7 @@ declare class DynamicLink {
 	 * 
 	 * @param name Create connection to the named DynaicLink object Create Connection.
 	 */
-	static createConnection(name: string): Object;
+	static createConnection(name: string): object;
 
 }
 
@@ -3388,7 +3388,7 @@ declare class Application {
 	/**
 	 * Playing recording and navigating time
 	 */
-	readonly transport: Object;
+	readonly transport: object;
 
 	/**
 	 * Application version

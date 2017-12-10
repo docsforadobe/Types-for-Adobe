@@ -4515,7 +4515,7 @@ declare class Documents {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4562,7 +4562,7 @@ declare class Layers {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4600,7 +4600,7 @@ declare class LayerSets {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4643,7 +4643,7 @@ declare class ArtLayers {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4686,7 +4686,7 @@ declare class Channels {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4729,7 +4729,7 @@ declare class Guides {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4763,7 +4763,7 @@ declare class HistoryStates {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4796,7 +4796,7 @@ declare class LayerComps {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4839,7 +4839,7 @@ declare class TextFonts {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4872,7 +4872,7 @@ declare class PathItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4912,7 +4912,7 @@ declare class SubPathItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4945,7 +4945,7 @@ declare class PathPoints {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -4978,7 +4978,7 @@ declare class Notifiers {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5024,7 +5024,7 @@ declare class CountItems {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -5063,7 +5063,7 @@ declare class ColorSamplers {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -7834,7 +7834,7 @@ declare class Application {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The full path of the location of the Adobe Photoshop application.
@@ -8318,7 +8318,7 @@ declare class Document {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The path to the document.
@@ -8425,7 +8425,7 @@ declare class Document {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: ElementPlacement): Document;
+	duplicate(relativeObject: object, insertionLocation: ElementPlacement): Document;
 
 	/**
 	 * Exports the document.
@@ -8654,7 +8654,7 @@ declare class DocumentInfo {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The state or province.
@@ -8865,7 +8865,7 @@ declare class Preferences {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * If true, halves the resolution or (doubles the size of pixels) to make previews display more quickly.
@@ -9066,7 +9066,7 @@ declare class DocumentPrintSettings {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * X position of image on page.
@@ -9146,7 +9146,7 @@ declare class Selection {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * If true, the bounding rectangle a solid rectangle.
@@ -9941,7 +9941,7 @@ declare class Layer {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -9963,7 +9963,7 @@ declare class Layer {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: ElementPlacement): Layer;
+	duplicate(relativeObject: object, insertionLocation: ElementPlacement): Layer;
 
 	/**
 	 * Links the layer with the specified layer.
@@ -9976,7 +9976,7 @@ declare class Layer {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	move(relativeObject: Object, insertionLocation: ElementPlacement): Layer;
+	move(relativeObject: object, insertionLocation: ElementPlacement): Layer;
 
 	/**
 	 * ...
@@ -10055,7 +10055,7 @@ declare class Channel {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -10077,7 +10077,7 @@ declare class Channel {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: ElementPlacement): Channel;
+	duplicate(relativeObject: object, insertionLocation: ElementPlacement): Channel;
 
 	/**
 	 * Duplicates the channel.
@@ -10119,7 +10119,7 @@ declare class Guide {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -10150,7 +10150,7 @@ declare class HistoryState {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * If true, the history state is a snapshot.
@@ -10181,7 +10181,7 @@ declare class TextFont {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The PostScript name of the font.
@@ -10407,7 +10407,7 @@ declare class TextItem {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The position of the origin for the text. The array must contain two values. Setting this property is basically equivalent to clicking the text tool at a point in the document to create the point of origin for text.
@@ -10533,7 +10533,7 @@ declare class LayerComp {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * If true, uses layer position.
@@ -10604,7 +10604,7 @@ declare class PathItem {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The sub path objects for this path item.
@@ -10631,7 +10631,7 @@ declare class PathItem {
 	 * @param relativeObject 
 	 * @param insertionLocation 
 	 */
-	duplicate(relativeObject: Object, insertionLocation: ElementPlacement): PathItem;
+	duplicate(relativeObject: object, insertionLocation: ElementPlacement): PathItem;
 
 	/**
 	 * Duplicates this path item.
@@ -10706,7 +10706,7 @@ declare class SubPathItem {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The path points collection in the sub path.
@@ -10742,7 +10742,7 @@ declare class PathPoint {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The location of the right direction point (the "out" position).
@@ -10763,7 +10763,7 @@ declare class MeasurementLog {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -10808,7 +10808,7 @@ declare class MeasurementScale {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The length (in pixels) to which this scale equates.
@@ -10844,7 +10844,7 @@ declare class Notifier {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The class name of the object.
@@ -10870,7 +10870,7 @@ declare class CountItem {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The position of count item in the document.
@@ -10911,7 +10911,7 @@ declare class ColorSampler {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The position of the color sampler in the document.
@@ -10953,7 +10953,7 @@ declare class XMPMetadata {
 	/**
 	 * The object's container.
 	 */
-	readonly parent: Object;
+	readonly parent: object;
 
 	/**
 	 * The raw XML form of file information.
