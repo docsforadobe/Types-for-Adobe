@@ -21,7 +21,7 @@ declare const enum AppVersion {
 }
 
 declare const enum CommandID {
-	/*
+	/**
 	* File
 	*/
 	NewProject = 2,
@@ -96,7 +96,7 @@ declare const enum CommandID {
 
 	ProjectSettings = 2611,
 
-	/*
+	/**
 	* Edit
 	*/
 	Undo = 16,
@@ -129,7 +129,7 @@ declare const enum CommandID {
 	TemplatesOutputModule = 2150,
 	PasteMochaMask = 5006,
 
-	/*
+	/**
 	* Composition
 	*/
 	NewComposition = 2000,
@@ -149,7 +149,7 @@ declare const enum CommandID {
 	CompositionFlowchart = 2258,
 	CompositionMiniFlowchart = 3792,
 
-	/*
+	/**
 	* Layer
 	*/
 	NewText = 2836,
@@ -227,7 +227,7 @@ declare const enum CommandID {
 	AutoTrace = 3044,
 	PreCompose = 2071,
 
-	/*
+	/**
 	* Animation
 	*/
 	SaveAnimationPreset = 3075,
@@ -260,7 +260,7 @@ declare const enum CommandID {
 	RevealPropertiesWithAnimation = 4011,
 	RevealAllModifiedProperties = 2771,
 
-	/*
+	/**
 	* View
 	*/
 	ZoomIn = 2092,
@@ -286,7 +286,7 @@ declare const enum CommandID {
 
 	ShowLayerControls = 2435,
 
-	/*
+	/**
 	* Window
 	*/
 	Align = 5022,
