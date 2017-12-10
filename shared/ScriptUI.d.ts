@@ -320,7 +320,7 @@ declare class Window {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: string, bounds?: Bounds, text?: string, properties?: object): object;
+	add: WindowPanelGroupAdd;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this window.
@@ -3816,7 +3816,7 @@ declare class Group {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: string, bounds?: Bounds, text?: string, properties?: object): object;
+	add: WindowPanelGroupAdd;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -4029,7 +4029,7 @@ declare class Panel {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add(type: string, bounds?: Bounds, text?: string, properties?: object): object;
+	add: WindowPanelGroupAdd;
 
 	/**
 	 * Registers an event handler for a particular type of event occuring in this element.
@@ -4426,3 +4426,22 @@ declare class KeyboardState {
 
 }
 
+interface WindowPanelGroupAddMap {
+	"button": Button;
+	"checkbox": Checkbox;
+	"dropdownlist": DropDownList;
+	"edittext": EditText;
+	"flashplayer": FlashPlayer;
+	"group": Group;
+	"iconbutton": IconButton;
+	"listbox": ListBox;
+	"panel": Panel;
+	"progressbar": Progressbar;
+	"radiobutton": RadioButton;
+	"scrollbar": Scrollbar;
+	"slider": Slider;
+	"statictext": StaticText;
+	"treeview": TreeView;
+}
+
+type WindowPanelGroupAdd = <K extends keyof WindowPanelGroupAddMap>(type: K, bounds?: Bounds, text?: string, properties?: object) => WindowPanelGroupAddMap[K];
