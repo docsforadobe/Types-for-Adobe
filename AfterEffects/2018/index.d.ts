@@ -880,7 +880,7 @@ declare class AVLayer extends Layer {
 	/** When true, the layer has no expressly set name, but contains a named source. */
 	readonly isNameFromSource: boolean;
 
-	/**  The height of the layer.*/
+	/** The height of the layer.*/
 	readonly height: number;
 
 	/** The width of the layer. */
