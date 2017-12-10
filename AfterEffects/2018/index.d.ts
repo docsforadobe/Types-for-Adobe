@@ -1355,7 +1355,7 @@ declare class Layer {
 	/** Applies a named collection of animation settings to the layer. */
 	applyPreset(presetName: File): void;
 
-	//From PropertyGroup
+	/** From PropertyGroup */
 	readonly matchName: string;
 	readonly propertyDepth: number;
 	readonly propertyType: PropertyType;
