@@ -5,6 +5,8 @@ const exec = promisify(child_process.exec);
 
 main();
 
+// TODO add tslint -c resources/tslint.json */**/*.ts
+
 async function main() {
     try {
         const tests = await test();
