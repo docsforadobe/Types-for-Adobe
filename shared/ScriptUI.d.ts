@@ -270,12 +270,6 @@ declare class Window extends _Control {
 	static confirm(message: string, noAsDefault: boolean, title?: string): boolean;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): UIEvent;
-
-	/**
 	 * Use this method to find an existing window.
 	 * This includes windows defined by ScriptUI resource strings, windows already created by a script, and windows created by the application (if the application supports this case). This function is not supported by all applications. Returns a Window object found or generated from the resource, or null if no such window or resource exists.
 	 * @param type The name of a predefined resource available to JavaScript in the current application; or the window type. If a title is specified, the type is used if more than one window with that title is found. Can be null or the empty string.
@@ -816,12 +810,6 @@ declare class StaticText extends _Control {
 	text: string;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Hides this element.
 	 */
 	hide(): void;
@@ -908,12 +896,6 @@ declare class Button extends _Control {
 	 * The text to display, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
 
 	/**
 	 * Hides this element.
@@ -1009,12 +991,6 @@ declare class IconButton extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
 
 	/**
 	 * Hides this element.
@@ -1131,12 +1107,6 @@ declare class EditText extends _Control {
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
 	textselection: string;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
 
 	/**
 	 * Hides this element.
@@ -1278,12 +1248,6 @@ declare class ListBox extends _Control {
 	add(type: string, text?: string): ListItem;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Retrieves an item object from the list that has a given text label.
 	 * @param text The text string to match.
 	 */
@@ -1421,12 +1385,6 @@ declare class DropDownList extends _Control {
 	 * @param text The localizable text label for the item.
 	 */
 	add(type: string, text?: string): ListItem;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
 
 	/**
 	 * Retrieves an item object from the list that has a given text label.
@@ -1624,12 +1582,6 @@ declare class Checkbox extends _Control {
 	value: boolean;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Hides this element.
 	 */
 	hide(): void;
@@ -1749,12 +1701,6 @@ declare class Scrollbar extends _Control {
 	value: number;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Hides this element.
 	 */
 	hide(): void;
@@ -1871,12 +1817,6 @@ declare class RadioButton extends _Control {
 	value: boolean;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Hides this element.
 	 */
 	hide(): void;
@@ -1984,12 +1924,6 @@ declare class Slider extends _Control {
 	value: number;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Hides this element.
 	 */
 	hide(): void;
@@ -2090,12 +2024,6 @@ declare class Progressbar extends _Control {
 	value: number;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Hides this element.
 	 */
 	hide(): void;
@@ -2181,12 +2109,6 @@ declare class TreeView extends _Control {
 	 * @param text The localizable text label for the item.
 	 */
 	add(type: string, text?: string): ListItem;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
 
 	/**
 	 * Retrieves an item object from the list that has a given text label.
@@ -2296,12 +2218,6 @@ declare class FlashPlayer extends _Control {
 	 * The Flash ActionScript code can call any callback function defined on the ExtendScript side of the FlashPlayer object, invoking it by name as a property of the control object. The function can take any arguments of a supported data types, and can return any value of a supported data type. data types:Number, String, Boolean, null, undefined, Object, Array.
 	 */
 	callback(): void;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
 
 	/**
 	 * Hides this element.
@@ -2420,12 +2336,6 @@ declare class Group extends _Control {
 	add: WindowPanelGroupAdd;
 
 	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
-
-	/**
 	 * Hides this element.
 	 */
 	hide(): void;
@@ -2537,12 +2447,6 @@ declare class Panel extends _Control {
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
 	add: WindowPanelGroupAdd;
-
-	/**
-	 * Simulates the occurrence of an event in this target.
-	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
-	 */
-	dispatchEvent(): Event;
 
 	/**
 	 * Hides this element.
@@ -3024,6 +2928,12 @@ declare class _Control {
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
 	addEventListener(eventName: string, handler: Function, capturePhase?: boolean): boolean;
+
+	/**
+	 * Simulates the occurrence of an event in this target.
+	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
+	 */
+	dispatchEvent(): Event;
 
 }
 
