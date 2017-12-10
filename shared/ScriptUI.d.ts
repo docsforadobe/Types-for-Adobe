@@ -205,11 +205,6 @@ declare class Window extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The current size and location of the content area of the window in screen coordinates.
-	 */
-	size: Dimension;
-
-	/**
 	 * The number of pixels separating one child element from its adjacent sibling element.
 	 * Because each container holds only a single row or column of children, only a single spacing value is needed for a container. The default value is based on the type of container, and is chosen to match standard Adobe UI guidelines.
 	 */
@@ -845,12 +840,6 @@ declare class StaticText extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The text to display, a localizable string.
 	 */
 	text: string;
@@ -972,12 +961,6 @@ declare class Button extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
 
 	/**
 	 * The text to display, a localizable string.
@@ -1113,12 +1096,6 @@ declare class IconButton extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
 
 	/**
 	 * The element type; "iconbutton".
@@ -1259,12 +1236,6 @@ declare class EditText extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
 
 	/**
 	 * The current text displayed in the field, a localizable string.
@@ -1444,12 +1415,6 @@ declare class ListBox extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The element type; "listbox".
 	 */
 	readonly type: string;
@@ -1622,12 +1587,6 @@ declare class DropDownList extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
 
 	/**
 	 * The element type; "dropdownlist".
@@ -1857,12 +1816,6 @@ declare class Checkbox extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The text to display, a localizable string.
 	 */
 	text: string;
@@ -2017,12 +1970,6 @@ declare class Scrollbar extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The amount by which to increment or decrement a scrollbar element's position when the user clicks a stepper button.
 	 */
 	stepdelta: number;
@@ -2175,12 +2122,6 @@ declare class RadioButton extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The label text for this button, a localizable string.
 	 */
 	text: string;
@@ -2327,12 +2268,6 @@ declare class Slider extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The element type, "slider".
 	 */
 	readonly type: string;
@@ -2468,12 +2403,6 @@ declare class Progressbar extends _Control {
 	properties: object;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The element type, "progessbar".
 	 */
 	readonly type: string;
@@ -2592,12 +2521,6 @@ declare class TreeView extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
 
 	/**
 	 * The element type, "treeview".
@@ -2746,12 +2669,6 @@ declare class FlashPlayer extends _Control {
 	properties: object;
 
 	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
-
-	/**
 	 * The element type, "flashplayer".
 	 */
 	readonly type: string;
@@ -2891,12 +2808,6 @@ declare class Group extends _Control {
 	 * A Group object has no creation properties.
 	 */
 	properties: object;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
 
 	/**
 	 * The number of pixels separating one child element from its adjacent sibling element.
@@ -3040,12 +2951,6 @@ declare class Panel extends _Control {
 	 * su1PanelCoordinates: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
 	 */
 	properties: object;
-
-	/**
-	 * The current dimensions of this element.
-	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
-	 */
-	size: Dimension;
 
 	/**
 	 * The number of pixels separating one child element from its adjacent sibling element.
@@ -3548,6 +3453,12 @@ declare class _Control {
 	 * To set a specific value for only one dimension, specify the other dimension as -1.
 	 */
 	preferredSize: Dimension;
+
+	/**
+	 * The current dimensions of this element.
+	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
+	 */
+	size: Dimension;
 
 }
 
