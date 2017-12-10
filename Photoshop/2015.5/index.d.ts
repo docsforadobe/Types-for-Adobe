@@ -7718,7 +7718,7 @@ declare class ActionReference {
 	/**
 	 * Puts an enumeration type and ID into reference along with the desired class for the reference.
 	 */
-	putEnumerated(desiredClass: number, enumType:number, value: number): void;
+	putEnumerated(desiredClass: number, enumType: number, value: number): void;
 	
 	/**
 	 * Puts new identifier and value into the reference.
