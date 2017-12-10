@@ -4,7 +4,7 @@ declare class Global {
 	app: Application;
 }
 
-// CONSTANTS
+/** CONSTANTS */
 declare const enum AppVersion {
 	CS3 = 8.0,
 	CS4 = 9.0,
@@ -731,7 +731,7 @@ declare class Application {
 	/** The currently focused or last-focused viewer panel. */
 	readonly activeViewer: Viewer | null;
 
-	// Preferences
+	/** Preferences */
 	readonly preferences: Preferences;
 
 	/** CC2017- */
