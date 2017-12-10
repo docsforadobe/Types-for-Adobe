@@ -351,15 +351,6 @@ declare class Window extends _Control {
 	remove(what: any): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this window.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Makes this window visible.
 	 * If an onShow() callback is defined for a window, calls that function before showing the window.When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states. For a modal dialog, opens the dialog and does not return until the dialog is dismissed. If it is dismissed via the close() method, this method returns any result value passed to that method. Otherwise, returns 0.
 	 */
@@ -822,15 +813,6 @@ declare class StaticText extends _Control {
 	onShortcutKey(): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
@@ -922,15 +904,6 @@ declare class Button extends _Control {
 	onShortcutKey(): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
@@ -1010,15 +983,6 @@ declare class IconButton extends _Control {
 	 * In Windows only.
 	 */
 	onShortcutKey(): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1128,15 +1092,6 @@ declare class EditText extends _Control {
 	 * In Windows only.
 	 */
 	onShortcutKey(): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1280,15 +1235,6 @@ declare class ListBox extends _Control {
 	removeAll(): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
@@ -1406,15 +1352,6 @@ declare class DropDownList extends _Control {
 	 * Removes all child items from the list.
 	 */
 	removeAll(): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1581,15 +1518,6 @@ declare class Checkbox extends _Control {
 	onShortcutKey(): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
@@ -1701,15 +1629,6 @@ declare class Scrollbar extends _Control {
 	onShortcutKey(): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
@@ -1804,15 +1723,6 @@ declare class RadioButton extends _Control {
 	 * In Windows only.
 	 */
 	onShortcutKey(): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -1914,15 +1824,6 @@ declare class Slider extends _Control {
 	onShortcutKey(): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
@@ -1972,15 +1873,6 @@ declare class Progressbar extends _Control {
 	 * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
 	 */
 	onDraw(): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2114,15 +2006,6 @@ declare class TreeView extends _Control {
 	removeAll(): void;
 
 	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
-
-	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
@@ -2179,15 +2062,6 @@ declare class FlashPlayer extends _Control {
 	 * @param rewind When true, restarts the movie from the beginning; otherwise, starts playing from the	point where it was stopped.
 	 */
 	playMovie(rewind: boolean): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2276,15 +2150,6 @@ declare class Group extends _Control {
 	 * @param what The child control to remove, specified by 0-based index, text property value, or as a control object.
 	 */
 	remove(what: any): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2384,15 +2249,6 @@ declare class Panel extends _Control {
 	 * @param what The child control to remove, specified by 0-based index, text property value, or as a control object.
 	 */
 	remove(what: any): void;
-
-	/**
-	 * Unregisters an event handler for a particular type of event occuring in this element.
-	 * All arguments must be identical to those that were used to register the event handler.
-	 * @param eventName The name of the event.
-	 * @param handler The function that handles the event.
-	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
-	 */
-	removeEventListener(eventName: string, handler: Function, capturePhase: boolean): boolean;
 
 	/**
 	 * Shows this element.
@@ -2858,6 +2714,15 @@ declare class _Control {
 	 * Hides this element.
 	 */
 	hide(): void;
+
+	/**
+	 * Unregisters an event handler for a particular type of event occuring in this element.
+	 * All arguments must be identical to those that were used to register the event handler.
+	 * @param eventName The name of the event.
+	 * @param handler The function that handles the event.
+	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
+	 */
+	removeEventListener(eventName: string, handler: Function, capturePhase?: boolean): boolean;
 
 }
 
