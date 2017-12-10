@@ -96,7 +96,7 @@ interface $ {
 	 * An array of objects containing information about the display screens attached to your computer.
 	 * Each object has the properties left, top, right, bottom, which contain the four corners of each screen in global coordinates.A property primary is true if that object describes the primary display.
 	 */
-	readonly screens: Object[];
+	readonly screens: object[];
 
 	/**
 	 * The current stack trace.
