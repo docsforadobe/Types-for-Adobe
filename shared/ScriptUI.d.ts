@@ -350,12 +350,6 @@ declare class Window extends _Control {
 	 */
 	remove(what: any): void;
 
-	/**
-	 * Makes this window visible.
-	 * If an onShow() callback is defined for a window, calls that function before showing the window.When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states. For a modal dialog, opens the dialog and does not return until the dialog is dismissed. If it is dismissed via the close() method, this method returns any result value passed to that method. Otherwise, returns 0.
-	 */
-	show(): number | any;
-
 }
 
 /**
@@ -812,12 +806,6 @@ declare class StaticText extends _Control {
 	 */
 	onShortcutKey(): void;
 
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
 }
 
 /**
@@ -903,12 +891,6 @@ declare class Button extends _Control {
 	 */
 	onShortcutKey(): void;
 
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
 }
 
 /**
@@ -983,12 +965,6 @@ declare class IconButton extends _Control {
 	 * In Windows only.
 	 */
 	onShortcutKey(): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 }
 
@@ -1092,12 +1068,6 @@ declare class EditText extends _Control {
 	 * In Windows only.
 	 */
 	onShortcutKey(): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 }
 
@@ -1234,12 +1204,6 @@ declare class ListBox extends _Control {
 	 */
 	removeAll(): void;
 
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
 }
 
 /**
@@ -1352,12 +1316,6 @@ declare class DropDownList extends _Control {
 	 * Removes all child items from the list.
 	 */
 	removeAll(): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 }
 
@@ -1517,12 +1475,6 @@ declare class Checkbox extends _Control {
 	 */
 	onShortcutKey(): void;
 
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
 }
 
 /**
@@ -1628,12 +1580,6 @@ declare class Scrollbar extends _Control {
 	 */
 	onShortcutKey(): void;
 
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
 }
 
 /**
@@ -1723,12 +1669,6 @@ declare class RadioButton extends _Control {
 	 * In Windows only.
 	 */
 	onShortcutKey(): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 }
 
@@ -1823,12 +1763,6 @@ declare class Slider extends _Control {
 	 */
 	onShortcutKey(): void;
 
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
 }
 
 /**
@@ -1873,12 +1807,6 @@ declare class Progressbar extends _Control {
 	 * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
 	 */
 	onDraw(): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 }
 
@@ -2005,12 +1933,6 @@ declare class TreeView extends _Control {
 	 */
 	removeAll(): void;
 
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
-
 }
 
 /**
@@ -2062,12 +1984,6 @@ declare class FlashPlayer extends _Control {
 	 * @param rewind When true, restarts the movie from the beginning; otherwise, starts playing from the	point where it was stopped.
 	 */
 	playMovie(rewind: boolean): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 	/**
 	 * Halts playback of the current movie.
@@ -2150,12 +2066,6 @@ declare class Group extends _Control {
 	 * @param what The child control to remove, specified by 0-based index, text property value, or as a control object.
 	 */
 	remove(what: any): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 }
 
@@ -2249,12 +2159,6 @@ declare class Panel extends _Control {
 	 * @param what The child control to remove, specified by 0-based index, text property value, or as a control object.
 	 */
 	remove(what: any): void;
-
-	/**
-	 * Shows this element.
-	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
-	 */
-	show(): void;
 
 }
 
@@ -2723,6 +2627,12 @@ declare class _Control {
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
 	removeEventListener(eventName: string, handler: Function, capturePhase?: boolean): boolean;
+
+	/**
+	 * Shows this element.
+	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
+	 */
+	show(): void;
 
 }
 
