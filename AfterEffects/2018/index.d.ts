@@ -655,7 +655,9 @@ declare enum ToolType {
 	Tool_Hairbrush,
 }
 
-// TYPES
+/**
+ * TYPES
+ */
 
 /** Clears text from the Info panel. */
 declare var clearOutput: () => void;
