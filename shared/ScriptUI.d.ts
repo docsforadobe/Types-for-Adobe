@@ -222,12 +222,6 @@ declare class Window extends _Control {
 	static readonly version: any;
 
 	/**
-	 * When true, the element is shown, when false it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -840,12 +834,6 @@ declare class StaticText extends _Control {
 	text: string;
 
 	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -956,12 +944,6 @@ declare class Button extends _Control {
 	 * The text to display, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1081,12 +1063,6 @@ declare class IconButton extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1227,12 +1203,6 @@ declare class EditText extends _Control {
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
 	textselection: string;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1388,12 +1358,6 @@ declare class ListBox extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1557,12 +1521,6 @@ declare class DropDownList extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -1792,12 +1750,6 @@ declare class Checkbox extends _Control {
 	value: boolean;
 
 	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -1941,12 +1893,6 @@ declare class Scrollbar extends _Control {
 	value: number;
 
 	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -2087,12 +2033,6 @@ declare class RadioButton extends _Control {
 	value: boolean;
 
 	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -2224,12 +2164,6 @@ declare class Slider extends _Control {
 	value: number;
 
 	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -2354,12 +2288,6 @@ declare class Progressbar extends _Control {
 	value: number;
 
 	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -2461,12 +2389,6 @@ declare class TreeView extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -2602,12 +2524,6 @@ declare class FlashPlayer extends _Control {
 	 * A FlashPlayer object has no creation properties.
 	 */
 	properties: object;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -2746,12 +2662,6 @@ declare class Group extends _Control {
 	spacing: number;
 
 	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
-
-	/**
 	 * The window that this element belongs to.
 	 */
 	readonly window: Window;
@@ -2887,12 +2797,6 @@ declare class Panel extends _Control {
 	 * The title or label text, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * True if this element is shown, false if it is hidden.
-	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
-	 */
-	visible: boolean;
 
 	/**
 	 * The window that this element belongs to.
@@ -3384,6 +3288,12 @@ declare class _Control {
 	 * The element type.
 	 */
 	readonly type: string;
+
+	/**
+	 * True if this element is shown, false if it is hidden.
+	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
+	 */
+	visible: boolean;
 
 }
 
