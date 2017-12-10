@@ -2387,18 +2387,18 @@ interface XMLConstructor {
 	/**
 	 * Returns an object containing the default parsing and print settings for XML.
 	 */
-	defaultSettings(): Object;
+	defaultSettings(): object;
 	
 	/**
 	 * Sets the parsing and print setting for XML using an object returned by the settings() method.
 	 * @param obj The object containing the settings to set.
 	 */
-	setSettings(obj: Object): void;
+	setSettings(obj: object): void;
 
 	/**
 	 * Returns an object containing the current parsing and print settings for XML.
 	 */
-	settings(): Object;
+	settings(): object;
 	
 }
 declare const XML: XMLConstructor;
