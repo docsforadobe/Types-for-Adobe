@@ -22,8 +22,8 @@ declare const enum AppVersion {
 
 declare const enum CommandID {
 	/**
-	* File
-	*/
+	 * File
+	 */
 	NewProject = 2,
 	NewFolder = 2139,
 	NewAdobePhotoshopFile = 3147,
@@ -97,8 +97,8 @@ declare const enum CommandID {
 	ProjectSettings = 2611,
 
 	/**
-	* Edit
-	*/
+	 * Edit
+	 */
 	Undo = 16,
 	Redo = 17,
 
@@ -130,8 +130,8 @@ declare const enum CommandID {
 	PasteMochaMask = 5006,
 
 	/**
-	* Composition
-	*/
+	 * Composition
+	 */
 	NewComposition = 2000,
 
 	CompositionSettings = 2007,
@@ -150,8 +150,8 @@ declare const enum CommandID {
 	CompositionMiniFlowchart = 3792,
 
 	/**
-	* Layer
-	*/
+	 * Layer
+	 */
 	NewText = 2836,
 	NewSolid = 2038,
 	NewLight = 2563,
@@ -228,8 +228,8 @@ declare const enum CommandID {
 	PreCompose = 2071,
 
 	/**
-	* Animation
-	*/
+	 * Animation
+	 */
 	SaveAnimationPreset = 3075,
 	ApplyAnimationPreset = 2450,
 	RecentAnimationPreset1 = 2460,
@@ -261,8 +261,8 @@ declare const enum CommandID {
 	RevealAllModifiedProperties = 2771,
 
 	/**
-	* View
-	*/
+	 * View
+	 */
 	ZoomIn = 2092,
 	ZoomOut = 2093,
 
@@ -287,8 +287,8 @@ declare const enum CommandID {
 	ShowLayerControls = 2435,
 
 	/**
-	* Window
-	*/
+	 * Window
+	 */
 	Align = 5022,
 	Audio = 2029,
 	Brushed = 3014,
