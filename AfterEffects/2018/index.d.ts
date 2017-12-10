@@ -159,14 +159,14 @@ declare const enum CommandID {
 	NewNullObject = 2767,
 	NewShapeLayer = 3736,
 	NewAdjustmentLayer = 2279,
-	//NewAdobePhotoshopFile = 3147,
-	//NewMAXONCINEMA4DFile = 4007,
+	// NewAdobePhotoshopFile = 3147,
+	// NewMAXONCINEMA4DFile = 4007,
 	LayerSettings = 2021,
 
 	OpenLayer = 3784,
 	OpenLayerSource = 2523,
-	//RevealInExploler = 2562,
-	//RevealInFinder = 2562,
+	// RevealInExploler = 2562,
+	// RevealInFinder = 2562,
 
 	NewMask = 2367,
 	ResetMask = 2448,
