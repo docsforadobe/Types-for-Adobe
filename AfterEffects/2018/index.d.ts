@@ -330,14 +330,14 @@ declare enum PurgeTarget {
 	/** Purges all data cached as composition/layer snapshots. */
 	SNAPSHOT_CACHES,
 	/** Purges all saved image data. */
-	IMAGE_CACHES
+	IMAGE_CACHES,
 }
 
 
 declare enum FrameBlendingType {
 	FRAME_MIX,
 	NO_FRAME_BLEND,
-	PIXEL_MOTION
+	PIXEL_MOTION,
 }
 
 declare enum BlendingMode {
@@ -376,7 +376,7 @@ declare enum BlendingMode {
 	SOFT_LIGHT,
 	STENCIL_ALPHA,
 	STENCIL_LUMA,
-	VIVID_LIGHT
+	VIVID_LIGHT,
 }
 
 declare enum TrackMatteType {
@@ -384,13 +384,13 @@ declare enum TrackMatteType {
 	ALPHA_INVERTED,
 	LUMA,
 	LUMA_INVERTED,
-	NO_TRACK_MATTE
+	NO_TRACK_MATTE,
 }
 
 declare enum LayerQuality {
 	BEST,
 	DRAFT,
-	WIREFRAME
+	WIREFRAME,
 }
 
 declare enum AutoOrientType {
@@ -401,24 +401,24 @@ declare enum AutoOrientType {
 	/** Each character in a per-character 3D text layer automatically faces the active camera. */
 	CHARACTERS_TOWARD_CAMERA,
 	/** Layer rotates freely, independent of any motion path, point of interest, or other layers. */
-	NO_AUTO_ORIENT
+	NO_AUTO_ORIENT,
 }
 
 declare enum LayerSamplingQuality {
 	BICUBIC,
-	BILINEAR
+	BILINEAR,
 }
 
 declare enum AlphaMode {
 	IGNORE,
 	STRAIGHT,
-	PREMULTIPLIED
+	PREMULTIPLIED,
 }
 
 declare enum FieldSeparationType {
 	OFF,
 	UPPER_FIELD_FIRST,
-	LOWER_FIELD_FIRST
+	LOWER_FIELD_FIRST,
 }
 
 declare enum PulldownPhase {
@@ -432,26 +432,26 @@ declare enum PulldownPhase {
 	WWSWW_24P_ADVANCE,
 	WWWSS,
 	WWWSW_24P_ADVANCE,
-	WWWWS_24P_ADVANCE
+	WWWWS_24P_ADVANCE,
 }
 
 declare enum PulldownMethod {
 	PULLDOWN_3_2,
-	ADVANCE_24P
+	ADVANCE_24P,
 }
 
 declare enum ImportAsType {
 	COMP_CROPPED_LAYERS,
 	FOOTAGE,
 	COMP,
-	PROJECT
+	PROJECT,
 }
 
 declare enum LightType {
 	PARALLEL,
 	SPOT,
 	POINT,
-	AMBIENT
+	AMBIENT,
 }
 
 declare enum MaskMode {
@@ -461,25 +461,25 @@ declare enum MaskMode {
 	INTERSECT,
 	LIGHTEN,
 	DARKEN,
-	DIFFERENCE
+	DIFFERENCE,
 }
 
 declare enum MaskMotionBlur {
 	SAME_AS_LAYER,
 	ON,
-	OFF
+	OFF,
 }
 
 declare enum MaskFeatherFalloff {
 	FFO_LINEAR,
-	FFO_SMOOTH
+	FFO_SMOOTH,
 }
 
 declare enum PostRenderAction {
 	NONE,
 	IMPORT,
 	IMPORT_AND_REPLACE_USAGE,
-	SET_PROXY
+	SET_PROXY,
 }
 
 declare enum GetSettingsFormat {
@@ -487,28 +487,28 @@ declare enum GetSettingsFormat {
 	STRING_SETTABLE,
 	NUMBER,
 	NUMBER_SETTABLE,
-	SPEC
+	SPEC,
 }
 
 declare enum TimeDisplayType {
 	FRAMES,
-	TIMECODE
+	TIMECODE,
 }
 
 declare enum FootageTimecodeDisplayStartType {
 	FTCS_START_0,
-	FTCS_USE_SOURCE_MEDIA
+	FTCS_USE_SOURCE_MEDIA,
 }
 
 declare enum FeetFramesFilmType {
 	MM16,
-	MM35
+	MM35,
 }
 
 declare enum FramesCountType {
 	FC_START_0,
 	FC_START_1,
-	FC_TIMECODE_CONVERSION
+	FC_TIMECODE_CONVERSION,
 }
 
 declare enum CloseOptions {
@@ -517,7 +517,7 @@ declare enum CloseOptions {
 	/** Prompt for whether to save changes before close. */
 	PROMPT_TO_SAVE_CHANGES,
 	/** Save automatically on close. */
-	SAVE_CHANGES
+	SAVE_CHANGES,
 }
 
 declare enum PropertyValueType {
@@ -533,19 +533,19 @@ declare enum PropertyValueType {
 	LAYER_INDEX,
 	MASK_INDEX,
 	SHAPE,
-	TEXT_DOCUMENT
+	TEXT_DOCUMENT,
 }
 
 declare enum KeyframeInterpolationType {
 	LINEAR,
 	BEZIER,
-	HOLD
+	HOLD,
 }
 
 declare enum PropertyType {
 	PROPERTY,
 	INDEXED_GROUP,
-	NAMED_GROUP
+	NAMED_GROUP,
 }
 
 declare enum RQItemStatus {
@@ -556,13 +556,13 @@ declare enum RQItemStatus {
 	RENDERING,
 	USER_STOPPED,
 	ERR_STOPPED,
-	DONE
+	DONE,
 }
 
 declare enum LogType {
 	ERRORS_ONLY,
 	ERRORS_AND_SETTINGS,
-	ERRORS_AND_PER_FRAME_INFO
+	ERRORS_AND_PER_FRAME_INFO,
 }
 
 declare enum PREFType {
@@ -572,7 +572,7 @@ declare enum PREFType {
 	PREF_Type_MACHINE_INDEPENDENT_OUTPUT,
 	PREF_Type_MACHINE_INDEPENDENT_COMPOSITION,
 	PREF_Type_MACHINE_SPECIFIC_TEXT,
-	PREF_Type_MACHINE_SPECIFIC_PAINT
+	PREF_Type_MACHINE_SPECIFIC_PAINT,
 }
 
 declare enum ParagraphJustification {
@@ -583,13 +583,13 @@ declare enum ParagraphJustification {
 	FULL_JUSTIFY_LASTLINE_RIGHT,
 	FULL_JUSTIFY_LASTLINE_CENTER,
 	FULL_JUSTIFY_LASTLINE_FULL,
-	MULTIPLE_JUSTIFICATIONS
+	MULTIPLE_JUSTIFICATIONS,
 }
 
 declare enum ViewerType {
 	VIEWER_COMPOSITION,
 	VIEWER_LAYER,
-	VIEWER_FOOTAGE
+	VIEWER_FOOTAGE,
 }
 
 declare enum FastPreviewType {
@@ -597,7 +597,7 @@ declare enum FastPreviewType {
 	FP_ADAPTIVE_RESOLUTION,
 	FP_DRAFT,
 	FP_FAST_DRAFT,
-	FP_WIREFRAME
+	FP_WIREFRAME,
 }
 
 declare enum ChannelType {
