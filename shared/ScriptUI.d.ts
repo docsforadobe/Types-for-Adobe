@@ -4026,7 +4026,8 @@ class _Control {
 	alignment: string;
 
 	/**
-	 * The bounds of the window's drawable area, excluding the frame, in screen coordinates.
+	 * The boundaries of the element, in parent-relative coordinates.
+	 * Setting an element's size or location changes its bounds property, and vice-versa.
 	 */
 	bounds: Bounds;
 
