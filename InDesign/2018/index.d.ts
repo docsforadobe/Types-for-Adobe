@@ -2758,8 +2758,7 @@ The following are fields in the array for "metadata":
 
 	/**
 	 * Export the specified documents to an article folio.
-
-Note: This method behaves identically to @method(exportMiniFolio), but differs in its return value. @method(exportMiniFolio) returns an array of warning strings whereas this method returns an XML structure.
+     * Note: This method behaves identically to @method(exportMiniFolio), but differs in its return value. @method(exportMiniFolio) returns an array of warning strings whereas this method returns an XML structure.
 	 * @param destination The location to write the file.
 	 * @param portraitDocument The InDesign document for the stack's portrait orientation.
 	 * @param landscapeDocument The InDesign document for the stack's landscape orientation.
@@ -2770,7 +2769,7 @@ Note: This method behaves identically to @method(exportMiniFolio), but differs i
 
 	/**
 	 * Export the specified document to a DPS article.
-Note: This method behaves similarly to @method(exportMiniFolio), but differs in its parameters.
+     * Note: This method behaves similarly to @method(exportMiniFolio), but differs in its parameters.
 	 * @param destination The location to write the file.
 	 * @param document The source InDesign document.
 	 * @param dpsArticleParams Options for exporting a DPS article. Can accept: Ordered array containing dataField:String, dataValue:Any Type.
