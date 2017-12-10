@@ -162,12 +162,6 @@ declare class Window extends _Control {
 	layout: LayoutManager;
 
 	/**
-	 * The upper left corner of the window's drawable area.
-	 * The same as [bounds.x, bounds.y].
-	 */
-	location: Point;
-
-	/**
 	 * The number of pixels between the edges of a container and the outermost child elements.
 	 * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
 	 */
@@ -859,12 +853,6 @@ declare class StaticText extends _Control {
 	justify: string;
 
 	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
-
-	/**
 	 * The maximum height and width to which the element can be resized.
 	 */
 	maximumSize: Dimension;
@@ -1015,12 +1003,6 @@ declare class Button extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -1184,12 +1166,6 @@ declare class IconButton extends _Control {
 	image: ScriptUIImage;
 
 	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
-
-	/**
 	 * The maximum height and width to which the element can be resized.
 	 */
 	maximumSize: Dimension;
@@ -1351,12 +1327,6 @@ declare class EditText extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -1552,12 +1522,6 @@ declare class ListBox extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -1766,12 +1730,6 @@ declare class DropDownList extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Items in a drop-down list can be of type separator, in which case they cannot be selected, and are shown as a horizontal line. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -2035,12 +1993,6 @@ declare class Checkbox extends _Control {
 	justify: string;
 
 	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
-
-	/**
 	 * The maximum height and width to which the element can be resized.
 	 */
 	maximumSize: Dimension;
@@ -2208,12 +2160,6 @@ declare class Scrollbar extends _Control {
 	 * Default is 20% of the range between the maxvalue and minvalue property values.
 	 */
 	jumpdelta: number;
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -2407,12 +2353,6 @@ declare class RadioButton extends _Control {
 	justify: string;
 
 	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
-
-	/**
 	 * The maximum height and width to which the element can be resized.
 	 */
 	maximumSize: Dimension;
@@ -2572,12 +2512,6 @@ declare class Slider extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -2749,12 +2683,6 @@ declare class Progressbar extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
-
-	/**
 	 * The maximum height and width to which the element can be resized.
 	 */
 	maximumSize: Dimension;
@@ -2898,12 +2826,6 @@ declare class TreeView extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The maximum height and width to which the element can be resized.
@@ -3091,12 +3013,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
-
-	/**
 	 * The maximum height and width to which the element can be resized.
 	 */
 	maximumSize: Dimension;
@@ -3251,12 +3167,6 @@ declare class Group extends _Control {
 	 * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
 	 */
 	layout: LayoutManager;
-
-	/**
-	 * The upper left corner of this element relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The number of pixels between the edges of a container and the outermost child elements.
@@ -3425,12 +3335,6 @@ declare class Panel extends _Control {
 	 * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
 	 */
 	layout: LayoutManager;
-
-	/**
-	 * The upper left corner of this element's frame relative to its parent.
-	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */
-	location: Point;
 
 	/**
 	 * The number of pixels between the edges of a container and the outermost child elements.
@@ -3952,6 +3856,12 @@ declare class _Control {
 	 * Applies for column orientation and left alignment, or row orientation and top alignment.
 	 */
 	indent: number;
+
+	/**
+	 * The upper left corner of this element relative to its parent.
+	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
+	 */
+	location: Point;
 }
 
 interface WindowPanelGroupAddMap {
