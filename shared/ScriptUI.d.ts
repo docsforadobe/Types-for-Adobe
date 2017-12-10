@@ -150,11 +150,6 @@ declare class Window extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The number of pixels to indent the element.
-	 */
-	indent: number;
-
-	/**
 	 * The default text justification style for child text elements.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
@@ -858,12 +853,6 @@ declare class StaticText extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
-
-	/**
 	 * The text justification style.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
@@ -1020,12 +1009,6 @@ declare class Button extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The text justification style.
@@ -1201,12 +1184,6 @@ declare class IconButton extends _Control {
 	image: ScriptUIImage;
 
 	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
-
-	/**
 	 * The upper left corner of this element relative to its parent.
 	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
 	 */
@@ -1368,12 +1345,6 @@ declare class EditText extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The text justification style.
@@ -1569,12 +1540,6 @@ declare class ListBox extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The width and height in pixels of each item in the list.
@@ -1789,12 +1754,6 @@ declare class DropDownList extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The width and height in pixels of each item in the list.
@@ -2070,12 +2029,6 @@ declare class Checkbox extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
-
-	/**
 	 * The default text justification style for child text elements.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
@@ -2249,12 +2202,6 @@ declare class Scrollbar extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The amount to increment or decrement a scrollbar indicator's position when the user clicks ahead or behind the moveable element.
@@ -2454,12 +2401,6 @@ declare class RadioButton extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
-
-	/**
 	 * The default text justification style for child text elements.
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
@@ -2631,12 +2572,6 @@ declare class Slider extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The upper left corner of this element relative to its parent.
@@ -2814,12 +2749,6 @@ declare class Progressbar extends _Control {
 	readonly graphics: ScriptUIGraphics;
 
 	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
-
-	/**
 	 * The upper left corner of this element relative to its parent.
 	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
 	 */
@@ -2957,12 +2886,6 @@ declare class TreeView extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The width and height in pixels of each item in the list.
@@ -3168,12 +3091,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
-
-	/**
 	 * The upper left corner of this element relative to its parent.
 	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
 	 */
@@ -3328,12 +3245,6 @@ declare class Group extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The layout manager for this container.
@@ -3502,12 +3413,6 @@ declare class Panel extends _Control {
 	 * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
 	 */
 	readonly graphics: ScriptUIGraphics;
-
-	/**
-	 * The number of pixels to indent the element during automatic layout.
-	 * Applies for column orientation and left alignment, or row orientation and top alignment.
-	 */
-	indent: number;
 
 	/**
 	 * The default text justification style for child text elements.
@@ -4041,6 +3946,12 @@ class _Control {
 	 * The help text that is displayed when the mouse hovers over the element.
 	 */
 	helpTip: string;
+
+	/**
+	 * The number of pixels to indent the element during automatic layout.
+	 * Applies for column orientation and left alignment, or row orientation and top alignment.
+	 */
+	indent: number;
 }
 
 interface WindowPanelGroupAddMap {
