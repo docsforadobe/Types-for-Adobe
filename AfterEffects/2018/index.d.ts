@@ -710,9 +710,10 @@ declare class Application {
 	onError: string | null;
 
 	/** A numeric status code used when executing a script
-	 externally (that is, from a command line or AppleScript).
-	 0 if no error occurred. A positive number indicates an
-	 error that occurred while running the script. */
+	 * externally (that is, from a command line or AppleScript).
+	 * 0 if no error occurred. A positive number indicates an
+	 * error that occurred while running the script.
+	 */
 	exitCode: number;
 
 	/** When true, the application remains open after running a script from the command line on Windows. */
@@ -880,7 +881,7 @@ declare class AVLayer extends Layer {
 	/** When true, the layer has no expressly set name, but contains a named source. */
 	readonly isNameFromSource: boolean;
 
-	/** The height of the layer.*/
+	/** The height of the layer. */
 	readonly height: number;
 
 	/** The width of the layer. */
