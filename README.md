@@ -5,7 +5,7 @@
 Install [Node.js](https://nodejs.org/en/download/) and [TypeScript](https://www.typescriptlang.org/#download-links).
 
 ## Your first script for eg. Adobe Illustrator
-TLDR: `tsc script.ts --out script.jsx -t es3 --noLib`
+TLDR: `tsc script.ts --out script.jsx --noLib`
 
 ```bash
 # create new folder
