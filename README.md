@@ -15,15 +15,14 @@ npm init -y
 npm i pravdomil/types-for-adobe
 
 # create tsconfig.json
-printf '{"compilerOptions":{"module":"none","noLib":true,"types":["types-for-adobe/illustrator/2015.3"]},"exclude":["node_modules"]}' > tsconfig.json
-# change tsconfig.json types value to Adobe product you're targeting
+echo '{"compilerOptions":{"module":"none","noLib":true}' > tsconfig.json
 
 # create index.ts
-printf 'alert(String(app))' > index.ts
-# open index.ts your favourite TypeScript editor and start scripting
+echo '/// <reference types="types-for-adobe/illustrator/2015.3"/>\nalert(String(app))' > index.ts
+# change to Adobe product you're targeting
 
 # compile typescript files
-tsc -p .
+tsc
 
 # open Adobe Illustrator -> File -> Scripts -> Other Script -> and select index.js
 ```
