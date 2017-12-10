@@ -2511,7 +2511,6 @@ declare class KeyboardState {
 /**
  * Added by types-for-adobe
  */
-
 declare class _Control {
 	/**
 	 * The alignment style for child elements of a container. If defined, this value overrides the alignChildren setting for the parent container.
