@@ -100,20 +100,6 @@ declare class Window extends _Control {
 	alignChildren: string;
 
 	/**
-	 * The alignment style for child elements of a container. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The bounds of the window's drawable area, excluding the frame, in screen coordinates.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * For windows of type dialog, the UI element to notify when the user presses a cancellation key combination.
 	 * The cancellation key is the Esc key. By default, looks for a button whose name or text is "cancel" (case disregarded).
 	 */
@@ -868,21 +854,6 @@ declare class StaticText extends _Control {
 	active: boolean;
 
 	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
 	characters: number;
@@ -1056,21 +1027,6 @@ declare class Button extends _Control {
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
 	active: boolean;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
@@ -1263,21 +1219,6 @@ declare class IconButton extends _Control {
 	active: boolean;
 
 	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * An array of child elements.
 	 */
 	readonly children: object[];
@@ -1456,21 +1397,6 @@ declare class EditText extends _Control {
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
 	active: boolean;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
@@ -1679,21 +1605,6 @@ declare class ListBox extends _Control {
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
 	active: boolean;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * An array of child ListItem elements.
@@ -1934,21 +1845,6 @@ declare class DropDownList extends _Control {
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
 	active: boolean;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * An array of child elements.
@@ -2236,21 +2132,6 @@ declare class Checkbox extends _Control {
 	active: boolean;
 
 	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
 	characters: number;
@@ -2446,21 +2327,6 @@ declare class Scrollbar extends _Control {
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
 	active: boolean;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * An array of child elements.
@@ -2672,21 +2538,6 @@ declare class RadioButton extends _Control {
 	active: boolean;
 
 	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * A number of characters for which to reserve space when calculating the preferred size of the element.
 	 */
 	characters: number;
@@ -2882,21 +2733,6 @@ declare class Slider extends _Control {
 	active: boolean;
 
 	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * An array of child elements.
 	 */
 	readonly children: object[];
@@ -3089,21 +2925,6 @@ declare class Slider extends _Control {
  */
 declare class Progressbar extends _Control {
 	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * An array of child elements.
 	 */
 	readonly children: object[];
@@ -3258,21 +3079,6 @@ declare class TreeView extends _Control {
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
 	 */
 	active: boolean;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * An array of child elements.
@@ -3505,21 +3311,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
-
-	/**
 	 * True if this element is enabled.
 	 * An enabled element can accept input, according to its type. When false, control elements do not accept input, and all types of elements have a dimmed appearance.
 	 */
@@ -3681,21 +3472,6 @@ declare class Group extends _Control {
 	 * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
 	 */
 	alignChildren: string;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * An array of child elements.
@@ -3876,21 +3652,6 @@ declare class Panel extends _Control {
 	 * Specifies how to align the child elements.
 	 */
 	alignChildren: string;
-
-	/**
-	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
-	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-	 * For orientation=row:top, bottom, fill
-	 * For orientation=column: left, right, fill
-	 * For orientation=stack:top, bottom, left, right, fill
-	 */
-	alignment: string;
-
-	/**
-	 * The boundaries of the element, in parent-relative coordinates.
-	 * Setting an element's size or location changes its bounds property, and vice-versa.
-	 */
-	bounds: Bounds;
 
 	/**
 	 * Reserve space for the specified number of characters; affects calculation of preferredSize .
@@ -4431,7 +4192,19 @@ declare class KeyboardState {
  */
 
 class _Control {
-	
+    /**
+     * The alignment style for child elements of a container. If defined, this value overrides the alignChildren setting for the parent container.
+     * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
+     * For orientation=row:top, bottom, fill
+     * For orientation=column: left, right, fill
+     * For orientation=stack:top, bottom, left, right, fill
+     */
+    alignment: string;
+
+    /**
+     * The bounds of the window's drawable area, excluding the frame, in screen coordinates.
+     */
+    bounds: Bounds;
 }
 
 interface WindowPanelGroupAddMap {
