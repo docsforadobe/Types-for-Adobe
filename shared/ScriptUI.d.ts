@@ -84,7 +84,7 @@ declare class ScriptUI {
  * The instance represents a top-level window or dialog box, which contains user-interface elements.
  * The globally available Window object provides access to predefined and script-defined windows.
  */
-declare class Window {
+declare class Window extends _Control {
 	/**
 	 * Set to true to make this window active.
 	 * A modal dialog that is visible is by definition the active dialog.
@@ -860,7 +860,7 @@ declare class ScriptUIImage {
 /**
  * A text label that the user cannot change.
  */
-declare class StaticText {
+declare class StaticText extends _Control {
 	/**
 	 * Always false. This element cannot have input focus.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -1050,7 +1050,7 @@ declare class StaticText {
  * A pushbutton element containing a mouse-sensitive text string.
  * Calls the onClick() callback if the control is clicked or if its notify() method is called.
  */
-declare class Button {
+declare class Button extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -1255,7 +1255,7 @@ declare class Button {
  * Amouse-sensitive pushbutton that displays an image instead of text.
  * Calls the onClick() callback if the control is clicked or if its notify() method is called.
  */
-declare class IconButton {
+declare class IconButton extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -1450,7 +1450,7 @@ declare class IconButton {
  * An editable text field that the user can select and change.
  * Calls the onChange() callback if the text is changed and the user types Enter or the control loses focus, or if its notify() method is called. Calls the onChanging() callback when any change is made to the text. The textselection property contains currently selected text.
  */
-declare class EditText {
+declare class EditText extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -1673,7 +1673,7 @@ declare class EditText {
  * Displays a list of choices, represented by ListItem objects.
  * When you create the object, you specify whether it allows the user to select only one or multiple items. If a list contains more items than can be displayed in the available area, a scrollbar may appear that allows the user to scroll through all the list items.You can specify the items on creation of the list object, or afterward using the list object’s add() method. You can remove items programmatically with the list object’s remove() and removeAll() methods. You can create a list box with multiple columns; in this case, each row is a selectable choice, and each ListItem represents one row.
  */
-declare class ListBox {
+declare class ListBox extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -1928,7 +1928,7 @@ declare class ListBox {
  * Displays a single visible item. When you click the control, a list drops down or pops up, and allows you to select one of the other items in the list.
  * Drop-down lists can have nonselectable separator items for visually separating groups of related items, as in a menu. You can specify the items on creation of the list object, or afterward using the list object’s add() method. You can remove items programmatically with the list object’s remove() and removeAll() methods. Calls the onChange() callback if the item selection is changed or if its notify() method is called.
  */
-declare class DropDownList {
+declare class DropDownList extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -2228,7 +2228,7 @@ declare class ListItem {
  * A dual-state control showing a box that has a checkmark when the value is true, and is empty when the value is false.
  * Calls the onClick() callback if the control is clicked or if its notify() method is called.
  */
-declare class Checkbox {
+declare class Checkbox extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -2440,7 +2440,7 @@ declare class Checkbox {
  * The scrollbar control has a horizontal orientation if the width is greater than the height at creation time, or vertical if its height is greater than its width.
  * Calls the onChange() callback after the position of the indicator is changed or if its notify() method is called. Calls the onChanging() callback repeatedly while the user is moving the indicator. Scrollbars are often created with an associated EditText field to display the current value of the scrollbar, and to allow setting the scrollbar's position to a specific value.
  */
-declare class Scrollbar {
+declare class Scrollbar extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -2664,7 +2664,7 @@ declare class Scrollbar {
  * A dual-state control, grouped with other radiobuttons, of which only one can be in the selected state.
  * Shows the selected state when value=true, empty when value=false. Calls the onClick() callback if the control is clicked or if its notify() method is called.
  */
-declare class RadioButton {
+declare class RadioButton extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -2874,7 +2874,7 @@ declare class RadioButton {
  * A slider bar that indicates a numeric value with a moveable position indicator.
  * All slider controls have a horizontal orientation. Calls the onChange() callback after the position of the indicator is changed or if its notify() method is called. Calls the onChanging() callback repeatedly while the user is moving the indicator. The value property contains the current position of the indicator within the range of minvalue to maxvalue.
  */
-declare class Slider {
+declare class Slider extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -3087,7 +3087,7 @@ declare class Slider {
  * A horizontal bar with an indicator that shows the progress of an operation.
  * All progressbar controls have a horizontal orientation. The value property contains the current position of the progress indicator; the default is 0. There is a minvalue property, but it is always 0; attempts to set it to a different value are silently ignored.
  */
-declare class Progressbar {
+declare class Progressbar extends _Control {
 	/**
 	 * The alignment style for this element. If defined, this value overrides the alignChildren setting for the parent container.
 	 * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
@@ -3252,7 +3252,7 @@ declare class Progressbar {
  * A hierarchical list whose items can contain child items.
  * The ListItem children of this control (in the items array) can be of type node, which means that they can contain child items. An item with child items can expanded, so that the child items are displayed, or collapsed, so that the child items are hidden Individual items can be selected at any level of the tree.
  */
-declare class TreeView {
+declare class TreeView extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -3497,7 +3497,7 @@ declare class TreeView {
  * A control that contains a Flash Player, which can load and play Flash movies stored in SWF files.
  * The ScriptUI FlashPlayer element runs the Flash application within an Adobe application. The Flash application runs ActionScript, a different implementation of JavaScript from the ExtendScript version of JavaScript that Adobe applications run. A control object of this type contains functions that allow your script to load SWF files, control movie playback, and communicate with the ActionScript environment.
  */
-declare class FlashPlayer {
+declare class FlashPlayer extends _Control {
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -3675,7 +3675,7 @@ declare class FlashPlayer {
  * A container for other controls within a window.
  * A group can specify layout options for its child elements. Hiding a group hides all its children. Making it visible makes visible those children that are not individually hidden.
  */
-declare class Group {
+declare class Group extends _Control {
 	/**
 	 * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
 	 * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
@@ -3871,7 +3871,7 @@ declare class Group {
  * A container for other types of controls, with an optional frame.
  * A panel can specify layout options for its child elements. Hiding a panel hides all its children. Making it visible makes visible those children that are not individually hidden.
  */
-declare class Panel {
+declare class Panel extends _Control {
 	/**
 	 * Specifies how to align the child elements.
 	 */
@@ -4429,6 +4429,10 @@ declare class KeyboardState {
 /**
  * Added by types-for-adobe
  */
+
+class _Control {
+	
+}
 
 interface WindowPanelGroupAddMap {
 	"button": Button;
