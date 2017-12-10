@@ -1412,7 +1412,7 @@ declare class LightLayer extends Layer {
 	/** For light layers, the type of light. */
 	lightType: LightType;
 
-    /** Shortcuts */
+	/** Shortcuts */
 	readonly lightOption: _LightOptionsGroup;
 }
 
