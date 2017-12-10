@@ -4426,6 +4426,10 @@ declare class KeyboardState {
 
 }
 
+/**
+ * Added by types-for-adobe
+ */
+
 interface WindowPanelGroupAddMap {
 	"button": Button;
 	"checkbox": Checkbox;
