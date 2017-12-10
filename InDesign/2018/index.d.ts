@@ -2671,40 +2671,40 @@ declare class Application {
 
 	/**
 	 * Create a mini-folio out of asset and overlay descriptions.
-
-Schema for the mini folio description:
-|| Key || Type || Required? || Description ||
-| contentstackid | string | yes | The explicit ID to be used for this stack |
-| tocImage | file | no | The TOC image for the mini-folio |
-| narrowdimension | int | no | Targetted export size, measured along narrow dimension |
-| widedimension | int | no | Targetted export size, measured along wide dimension |
-| smoothscrolling | @enum(SmoothScrollingOptions) | no | The smooth scrolling behavior for this stack (default is noSmoothScroll) |
-| locationforgeneratedassets | file | no | If included, this is an existing directory where the generated assets should be created. |
-| overlays | array | no | see the SDK Overlay Builder APIs |
-| assets | array | yes | The assets for the mini - folio, described below. |
-| assetDependencies | array | no | Files that are needed by the asset, that will be included in the package but not the manifest. |
-| metadata | array | no | The metadata for the mini-folio described below. |
-| showprogressbar | boolean | no | Either true or false to indicate whether we should show a progress bar (default is false) |
-| targetviewerversion | string | no | If provided (in the form "major.minor.revision") a folio compatible with the viewer version is produced. If omitted, the latest folio format is produced. | CS5 |
-
-The following are fields in the array for "assets":
-|| Key || Type || Required? || Description ||
-| file | file | yes | The asset file |
-| type | string | yes | The asset file type, either "web" for HTML or "image" for a raster |
-| width | int | yes | The asset width |
-| height | int | yes | The asset height |
-| orientation | string | yes | The asset orientation, either "portrait" or "landscape" |
-| thumbnail | file | no | A thumbnail of the asset to be used in browse mode |
-| scrubber | file | no | A thumbnail of the asset to be used in scrubber mode |
-
-The following are fields in the array for "assetDependencies":
-|| Key || Type || Required? || Description ||
-| file | file | no | The dependent file |
-| relativePath | string | no | The relative path to the file, for use in the package |
-
-The following are fields in the array for "metadata":
-|| Key || Type || Required? || Description ||
-| any string | string or boolean | no | any key/value where the key is a string, and the value is either a string or a boolean, such as those described in "export folio meta data" |
+	 * 
+	 * Schema for the mini folio description:
+	 * || Key || Type || Required? || Description ||
+	 * | contentstackid | string | yes | The explicit ID to be used for this stack |
+	 * | tocImage | file | no | The TOC image for the mini-folio |
+	 * | narrowdimension | int | no | Targetted export size, measured along narrow dimension |
+	 * | widedimension | int | no | Targetted export size, measured along wide dimension |
+	 * | smoothscrolling | @enum(SmoothScrollingOptions) | no | The smooth scrolling behavior for this stack (default is noSmoothScroll) |
+	 * | locationforgeneratedassets | file | no | If included, this is an existing directory where the generated assets should be created. |
+	 * | overlays | array | no | see the SDK Overlay Builder APIs |
+	 * | assets | array | yes | The assets for the mini - folio, described below. |
+	 * | assetDependencies | array | no | Files that are needed by the asset, that will be included in the package but not the manifest. |
+	 * | metadata | array | no | The metadata for the mini-folio described below. |
+	 * | showprogressbar | boolean | no | Either true or false to indicate whether we should show a progress bar (default is false) |
+	 * | targetviewerversion | string | no | If provided (in the form "major.minor.revision") a folio compatible with the viewer version is produced. If omitted, the latest folio format is produced. | CS5 |
+	 * 
+	 * The following are fields in the array for "assets":
+	 * || Key || Type || Required? || Description ||
+	 * | file | file | yes | The asset file |
+	 * | type | string | yes | The asset file type, either "web" for HTML or "image" for a raster |
+	 * | width | int | yes | The asset width |
+	 * | height | int | yes | The asset height |
+	 * | orientation | string | yes | The asset orientation, either "portrait" or "landscape" |
+	 * | thumbnail | file | no | A thumbnail of the asset to be used in browse mode |
+	 * | scrubber | file | no | A thumbnail of the asset to be used in scrubber mode |
+	 * 
+	 * The following are fields in the array for "assetDependencies":
+	 * || Key || Type || Required? || Description ||
+	 * | file | file | no | The dependent file |
+	 * | relativePath | string | no | The relative path to the file, for use in the package |
+	 * 
+	 * The following are fields in the array for "metadata":
+	 * || Key || Type || Required? || Description ||
+	 * | any string | string or boolean | no | any key/value where the key is a string, and the value is either a string or a boolean, such as those described in "export folio meta data" |
 	 * @param miniFolioDescription A dictionary describing the custom mini folio to create. Can accept: Ordered array containing key:String, value:Boolean, Long Integer, Long Long Integer, String, File or Array of Any Types.
 	 * @param destination The location to write the file.
 	 */
