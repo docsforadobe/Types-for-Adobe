@@ -1366,7 +1366,7 @@ declare class Layer {
 	property(index: number): PropertyBase;
 	property(name: string): PropertyBase;
 
-	//Shortcuts
+	/** Shortcuts */
 	readonly marker: Property;
 	readonly transform: _TransformGroup;
 }
