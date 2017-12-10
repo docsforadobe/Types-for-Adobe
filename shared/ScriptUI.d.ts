@@ -43,7 +43,7 @@ declare module ScriptUI {
 		FILL,
 		CENTER
 	}
-	
+
 	/**
 	 * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
 	 * Predefined styles are REGULAR, BOLD, ITALIC, BOLDITALIC.
@@ -64,13 +64,13 @@ declare class ScriptUI {
 	 * The font constants defined by the host application.
 	 */
 	static readonly applicationFonts: Object;
-	
+
 	/**
 	 * An object whose properties are the names of compatability modes supported by the host application.
 	 * The presence of ScriptUI.compatability.su1PanelCoordinates means that the application allows backward compatibility with the coordinate system of Panel elements in ScriptUI version 1.
 	 */
 	static readonly compatibility: any;
-	
+
 	/**
 	 * A string containing the internal version number of the ScriptUI module.
 	 */
@@ -80,7 +80,7 @@ declare class ScriptUI {
 	 * An object whose properties define attributes of the environment in which ScriptUI operates.
 	 */
 	static readonly environment: Environment;
-	
+
 	/**
 	 * An object whose properties and methods provide access to objects used in the ScriptUI event system.
 	 * It contains one function, createEvent(), which allows you to create event objects in order to simulate user-interaction event
@@ -111,7 +111,7 @@ declare class ScriptUI {
 	 * @param size The font size in points.
 	 */
 	static newFont(name: string, style: string, size: number): ScriptUIFont;
-	
+
 	/**
 	 * Loads a new image from resources or disk files into an image object.
 	 * Creates a new global image object for use in controls that can display images, loading the associated images from the specified resources or image files.
@@ -138,7 +138,7 @@ declare class _WindowOrContainer {
 	 * For orientation=stack:top, bottom, left, right, fill
 	 */
 	alignment: Alignment | [Alignment, Alignment];
-	
+
 	/**
 	 * The boundaries of the element, in parent-relative coordinates.
 	 * Setting an element's size or location changes its bounds property, and vice-versa.
@@ -175,7 +175,7 @@ declare class _WindowOrContainer {
 	/**
 	 * The upper left corner of this element's frame relative to its parent.
 	 * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
-	 */	
+	 */
 	location: Point;
 
 	/**
@@ -199,7 +199,7 @@ declare class _WindowOrContainer {
 	 * The parent element.
 	 */
 	readonly parent: _WindowOrContainer;
-	
+
 	/**
 	 * The preferred size, used by layout managers to determine the best size for each element.
 	 * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes.A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
@@ -248,7 +248,7 @@ declare class _WindowOrContainer {
 	 * The bounds of this element relative to the top-level parent window.
 	 */
 	readonly windowBounds: Bounds;
-	
+
 	add(type: 'button', bounds?: Bounds, text?: string, creation_properties?: {
 		name?: string;
 	}): Button;
@@ -349,7 +349,7 @@ declare class _WindowOrContainer {
 	 * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
 	addEventListener(eventName: string, handler: (e: UIEvent) => void, capturePhase?: boolean): void;
-	
+
 	/**
 	 * Simulates the occurrence of an event in this target.
 	 * A script can create a UIEvent object for a specific event and pass it to this method to start the event propagation for the event.
@@ -402,13 +402,13 @@ declare class _WindowOrContainer {
 	 * @param capturePhase Whether to call the handler only in the capturing phase of the event propagation.
 	 */
 	removeEventListener(eventName: string, handler: (e: UIEvent) => void, capturePhase?: boolean): boolean;
-	
+
 	/**
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
 	show(): void;
-	
+
 	/**
 	 * An event-handler callback function, called when the panel is about to be drawn.
 	 * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
@@ -489,7 +489,7 @@ declare class Window extends _WindowOrContainer {
 	 * @param errorIcon When true, the platform-standard alert icon is replaced by the platform-standard error icon in the dialog. Ignored in Mac OS, which does not support icons for alert dialogs.
 	 */
 	static alert(message: string, title?: string, errorIcon?: boolean): void;
-	
+
 	/**
 	 * Displays a platform-standard dialog containing a short message and two buttons labeled Yes and No.
 	 * Returns true if the user clicked Yes, false if the user clicked No.
@@ -498,7 +498,7 @@ declare class Window extends _WindowOrContainer {
 	 * @param title A string to appear as the title of the dialog, if the platform supports a title. Ignored in Mac OS, which does not support titles for alert dialogs. The default title string is "Script Alert".
 	 */
 	static confirm(message: string, noAsDefault?: boolean, title?: string): boolean;
-	
+
 	/**
 	 * Use this method to find an existing window.
 	 * This includes windows defined by ScriptUI resource strings, windows already created by a script, and windows created by the application (if the application supports this case). This function is not supported by all applications. Returns a Window object found or generated from the resource, or null if no such window or resource exists.
@@ -506,7 +506,7 @@ declare class Window extends _WindowOrContainer {
 	 * @param title The window title.
 	 */
 	static find(type: string, title: string): Window;
-	
+
 	/**
 	 * Displays a modal dialog that returns the user’s text input.
 	 * Returns the value of the text edit field if the user clicked OK, null if the user clicked Cancel.
@@ -515,7 +515,7 @@ declare class Window extends _WindowOrContainer {
 	 * @param title A string to appear as the title of the dialog. In Windows, this appears in the window’s frame; in Mac OS it appears above the message. The default title string is "Script Prompt".
 	 */
 	static prompt(prompt: string, default_?: string, title?: string): string;
-	
+
 	/**
 	 * Creates a new window.
 	 * @param type The window type. One of:
@@ -534,7 +534,7 @@ declare class Window extends _WindowOrContainer {
 		independent?: boolean;
 		borderless?: boolean;
 	});
-	
+
 	/**
 	 * Set to true to make this window active.
 	 * A modal dialog that is visible is by definition the active dialog.
@@ -554,7 +554,7 @@ declare class Window extends _WindowOrContainer {
 	 * By default, looks for a button whose name or text is "ok" (case disregarded).
 	 */
 	defaultElement: any;
-	
+
 	/**
 	 * The bounds of the window frame in screen coordinates.
 	 * The frame consists of the title bar and borders that enclose the content region of a window, depending on the windowing system.
@@ -785,7 +785,7 @@ declare class Panel extends _Container {
 	 * Shows this element.
 	 * When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
-	show(): void;	
+	show(): void;
 }
 
 /**
@@ -887,13 +887,13 @@ declare class ScriptUIGraphics {
 	 * The paint color and style is defined in this pen object.
 	 */
 	foregroundColor: ScriptUIPen;
-	
+
 	/**
 	 * Closes the current path.
 	 * Defines a line from the current postion (currentPoint) to the start point of the current path (the value of currentPath).
 	 */
 	closePath(): void;
-	
+
 	/**
 	 * Draws a focus ring within a region of this element.
 	 * @param left The left coordinate of the region. Value is relative to the origin of this element.
@@ -989,7 +989,7 @@ declare class ScriptUIGraphics {
 	 * @param type The pen type, solid or theme. One of the constants ScriptUIGraphics.PenType.SOLID_COLOR or ScriptUIGraphics.PenType.THEME_COLOR.
 	 * @param color The pen color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
 	 * @param width The width of the pen line in pixels. The line is centered around the current point. For example, if the value is 2, drawing a line from (0, 10) to (5, 10) paints the two rows of pixels directly above and below y-position 10.
-	 */	
+	 */
 	newPen(penType: number, color: [number, number, number, number] | string, lineWidth: number): ScriptUIPen;
 
 	/**
@@ -1007,7 +1007,7 @@ declare class ScriptUIGraphics {
 	 * @param pen The drawing pen that defines the color and line width.
 	 * @param path The path object. Default is the currentPath.
 	 */
-	strokePath(pen: ScriptUIPen, path?: ScriptUIPath): void;	
+	strokePath(pen: ScriptUIPen, path?: ScriptUIPath): void;
 }
 
 /**
@@ -1247,7 +1247,7 @@ declare class UIEvent {
 	 * @param detail Details of the event, which vary according to the event type. The value is 1 or 2 for the click event, indicating a single or double click.
 	 */
 	initUIEvent(eventName: string, bubble: boolean, isCancelable: boolean, view: any, detail: number): void;
-	
+
 	/**
 	 * Prevents the default action associated with this event from being called.
 	 */
@@ -1284,7 +1284,7 @@ declare class KeyboardEvent extends UIEvent {
 	 * The key whose keypress generated the event, as a W3C identifier contained in a string; for example, "U+0044"
 	 */
 	keyIdentifier: string;
-	
+
 	/**
 	 * A constant that identifies where on the keyboard the keypress occurred. One of:
 	 * - DOM_KEY_LOCATION_STANDARD
@@ -1293,7 +1293,7 @@ declare class KeyboardEvent extends UIEvent {
 	 * - DOM_KEY_LOCATION_NUMPAD
 	 */
 	keyLocation: number;
-	
+
 	/**
 	 * The key whose keypress generated the event, as a simple key name; for example "A".
 	 */
@@ -1305,13 +1305,13 @@ declare class KeyboardEvent extends UIEvent {
 	 * - keydown
 	 */
 	type: string;
-	
+
 	/**
 	 * Returns true if the given modifier was active when the event occurred, false otherwise.
 	 * @param keyIdentifier A string containing a modifier key identifier, one of: Alt, CapsLock, Control, Meta, NumLock, Scroll, Shift
 	 */
 	getModifierState(keyIdentifier: string): boolean;
-	
+
 	/**
 	 * Reinitializes the object, allowing you to change the event properties after construction. Arguments set the corresponding properties. Returns undefined.
 	 * @param eventName The event name string.
@@ -1344,54 +1344,54 @@ declare class MouseEvent extends UIEvent {
 	 * 2 - The right button, used to display a context menu, if present.
 	 */
 	button: number;
-	
+
 	/**
 	 * The horizontal coordinate at which the event occurred relative to the target object. The origin is the top left of the control or window, inside any border decorations.
 	 */
 	clientX: number;
-	
+
 	/**
 	 * The vertical coordinate at which the event occurred relative to the target object. The origin is the top left of the control or window, inside any border decorations.
 	 */
 	clientY: number;
-	
+
 	/**
 	 * When true, the CTRL key was active. Value is undefined if the keyIdentifier is for a modifier key.
 	 */
 	ctrlKey: boolean;
-	
+
 	/**
 	 * Details of the event, which vary according to the event type. For the click, mousedown, and mouseup events, the value is 1 for a single click, or 2 for a double click.
 	 */
 	detail: number;
-	
+
 	/**
 	 * When true, the META or COMMAND` key was active. Value is undefined if the keyIdentifier is for a modifier key.
 	 */
 	metaKey: boolean;
-	
+
 	/**
      * - For a mouseover event, the UI element the pointer is leaving, if any.
      * - For a mouseout event, the UI element the pointer is entering, if any.
      * - Otherwise undefined.
 	 */
 	relatedTarget: any;
-	
+
 	/**
 	 * The horizontal coordinate at which the event occurred relative to the screen.
 	 */
 	screenX: number;
-	
+
 	/**
 	 * The vertical coordinate at which the event occurred relative to the screen.
 	 */
 	screenY: number;
-	
+
 	/**
 	 * When true, the SHIFT key was active. Value is undefined if the keyIdentifier is for a modifier key.
 	 */
 	shiftKey: boolean;
-	
+
 	/**
 	 * The name of the event that occurred. Mouse events types are:
 	 * - mousedown
@@ -1403,13 +1403,13 @@ declare class MouseEvent extends UIEvent {
 	 * The sequence of click events is: mousedown, mouseup, click.
 	 */
 	type: string;
-	
+
 	/**
 	 * Returns true if the given modifier was active when the event occurred, false otherwise.
 	 * @param keyIdentifier A string containing a modifier key identifier, one of: Alt, CapsLock, Control, Meta, NumLock, Scroll, Shift
 	 */
 	getModifierState(keyIdentifier: string): boolean;
-	
+
 	/**
 	 * Reinitializes the object, allowing you to change the event properties after construction. Arguments set the corresponding properties.
 	 * @param eventName The event name string.
@@ -1452,7 +1452,7 @@ declare interface _LayoutManager {
 
 declare class AutoLayoutManager implements _LayoutManager {
 	layout(recalculate?: boolean): void;
-	
+
 	resize(): void;
 }
 
@@ -1462,12 +1462,12 @@ interface _TitleLayout {
 	 * For possible alignment values, see Alignment. Note that fill is not a valid alignment value for either horizontal or vertical alignment in this context.
 	 */
 	alignment: [Alignment, Alignment];
-	
+
 	/**
 	 * A number; if 1 or greater, reserves a title width wide enough to hold the specified number of “X” characters in the font for this element. If 0, the title width is calculated based on the value of the title property during layout operations.
 	 */
 	characters: number;
-	
+
 	/**
 	 * A number; 0 or greater. The number of pixels separating the title from the element.
 	 */
@@ -1477,12 +1477,12 @@ interface _TitleLayout {
 	 * An array of numbers, [left, top, right, bottom] for the number of pixels separating each edge of an element and the visible content within that element. This overrides the default margins.
 	 */
 	margins: Margins;
-	
+
 	/**
 	 * One of 'left', 'center', or 'right', how to justify the text when the space allocated for the title width is greater than the actual width of the text.
 	 */
 	justify: string;
-	
+
 	/**
 	 * If 'middle' or 'end', defines where to remove characters from the text and replace them with an ellipsis (…) if the specified title does not fit within the space reserved for it. If 'none', and the text does not fit, characters are removed from the end, without any replacement ellipsis character.
 	 */
@@ -1497,7 +1497,7 @@ declare class __Control {
 	 * @param capturePhase Optional. When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
 	 */
 	addEventListener(eventName: string, handler: (e: UIEvent) => void, capturePhase?: boolean): void;
-	
+
 	/**
 	 * Simulates the occurrence of an event in this target. A script can create an event object for a specific event, using ScriptUI.events.createEvent(), and pass it to this method to start the event propagation for the event.
 	 * Returns false if any of the registered listeners that handled the event called the event object’s preventDefault() method, true otherwise.
@@ -1528,7 +1528,7 @@ declare class __Control {
 	 * Shows this container or control. When a window or container is hidden, its children are also hidden, but when it is shown again, the children retain their own visibility states.
 	 */
 	show(): void;
-	
+
 	/**
 	 * Called when a container or control is about to be drawn. Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
 	 */
@@ -1659,7 +1659,7 @@ declare class _ListControl extends _Control {
 	 * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
 	 */
 	itemSize: Dimension;
-	
+
 	/**
 	 * Adds an item to the choices in this list.
 	 * Returns the item control object
@@ -1891,7 +1891,7 @@ declare class EditText extends _Control {
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
 	textselection: string;
-	
+
 	/**
 	 * An event-handler callback function, called when the content of the element has been changed
 	 * The handler is called only when the change is complete—that is, when focus moves to another control, or the user types Enter. The exact behavior depends on the creation parameter enterKeySignalsOnChange;see the properties property.
@@ -1969,7 +1969,7 @@ declare class FlashPlayer extends _Control {
 	 * The stopMovie()-playMovie() sequence does not work for SWF files produced by Flex, or for some files produced by Flash Authoring (depending on how they were implemented).Using stopMovie() from the player's hosting environment has no effect on an SWF file playing in a ScriptUI Flash Player element. It is, however, possible to produce an SWF using Flash Authoring that can stop itself in response to user interaction.
 	 */
 	stopMovie(): void;
-	
+
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
@@ -2020,7 +2020,7 @@ declare class IconButton extends _Control {
 	 * The way the text label is shown in relation to the element.
 	 */
 	titleLayout: _TitleLayout;
-	
+
 	/**
 	 * An event-handler callback function, called when the element has been clicked.
 	 */
@@ -2115,7 +2115,7 @@ declare class ListBox extends _ListControl {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-	
+
 	/**
 	 * Scrolls the list to make the specified item visible, if necessary.
 	 * @param item The item or child to reveal, a control object.
@@ -2209,7 +2209,7 @@ declare class ListItem extends __Control{
 	 * Normally "item", but an item whose parent is a DropDownList control can have type "separator". A separator item is not mouse-sensitive and is drawn as a horizontal line across the drop-down or pop-up menu.
 	 */
 	type: string;
-	
+
 	/**
 	 * Retrieves the value of this item’s text property as a string.
 	 */
@@ -2277,7 +2277,7 @@ declare class RadioButton extends _Control {
 	 * A RadioButton object has no creation properties. The third argument of the add() method that creates can be the label text.
 	 */
 	properties: Object;
-	
+
 	/**
 	 * True if this element is active.
 	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
@@ -2304,7 +2304,7 @@ declare class RadioButton extends _Control {
 	 * The selection state of this button, selected when true.
 	 */
 	value: boolean;
-	
+
 	/**
 	 * An event-handler callback function, called when the element has been clicked.
 	 */
@@ -2362,7 +2362,7 @@ declare class Scrollbar extends _Control {
 	 * If set to a value outside the range specified by minvalue and maxvalue, it is automatically reset to the closest boundary.
 	 */
 	value: number;
-	
+
 	/**
 	 * An event-handler callback function, called when the user has finished dragging the position indicator, or has clicked the control.
 	 */
