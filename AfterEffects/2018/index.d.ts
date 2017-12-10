@@ -1885,8 +1885,8 @@ declare class PropertyGroup extends PropertyBase {
 	readonly numProperties: number;
 
 	/** Gets a member property or group. */
-	//property(index: number): PropertyBase;
-	//property(name: string): PropertyBase;
+	// property(index: number): PropertyBase;
+	// property(name: string): PropertyBase;
 
 	/** Reports whether a property can be added to the group. */
 	canAddProperty(name: string): boolean;
