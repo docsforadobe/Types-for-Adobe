@@ -217,11 +217,6 @@ declare class Window extends _Control {
 	text: string;
 
 	/**
-	 * The element type; "dialog", "palette", or "window".
-	 */
-	readonly type: string;
-
-	/**
 	 * Deprecated. Use ScriptUI.version instead.
 	 */
 	static readonly version: any;
@@ -845,11 +840,6 @@ declare class StaticText extends _Control {
 	text: string;
 
 	/**
-	 * The element type, "statictext".
-	 */
-	readonly type: string;
-
-	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
@@ -966,11 +956,6 @@ declare class Button extends _Control {
 	 * The text to display, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * The element type; "button".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -1096,11 +1081,6 @@ declare class IconButton extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The element type; "iconbutton".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -1247,11 +1227,6 @@ declare class EditText extends _Control {
 	 * Setting the value replaces the current text selection and modifies the value of the text property. If there is no current selection, inserts the new value into the text string at the current insertion point. The textselection value is reset to an empty string after it modifies the text value. Note that setting the textselection property before the element’s parent Window exists is an undefined operation.
 	 */
 	textselection: string;
-
-	/**
-	 * The element type; "edittext".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -1413,11 +1388,6 @@ declare class ListBox extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The element type; "listbox".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -1587,11 +1557,6 @@ declare class DropDownList extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The element type; "dropdownlist".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -1821,11 +1786,6 @@ declare class Checkbox extends _Control {
 	text: string;
 
 	/**
-	 * The element type; "checkbox".
-	 */
-	readonly type: string;
-
-	/**
 	 * The selection state of the control.
 	 * When true, the control is in the selected or set state and displays the check mark. When false, shows an empty box.
 	 */
@@ -1975,11 +1935,6 @@ declare class Scrollbar extends _Control {
 	stepdelta: number;
 
 	/**
-	 * The element type, "scrollbar".
-	 */
-	readonly type: string;
-
-	/**
 	 * The current position of the indicator.
 	 * If set to a value outside the range specified by minvalue and maxvalue, it is automatically reset to the closest boundary.
 	 */
@@ -2127,11 +2082,6 @@ declare class RadioButton extends _Control {
 	text: string;
 
 	/**
-	 * The element type; "radiobutton".
-	 */
-	readonly type: string;
-
-	/**
 	 * The selection state of this button, selected when true.
 	 */
 	value: boolean;
@@ -2268,11 +2218,6 @@ declare class Slider extends _Control {
 	shortcutKey: string;
 
 	/**
-	 * The element type, "slider".
-	 */
-	readonly type: string;
-
-	/**
 	 * The current position of the indicator.
 	 * If set to a value outside the range specified by minvalue and maxvalue, it is automatically reset to the closest boundary.
 	 */
@@ -2403,11 +2348,6 @@ declare class Progressbar extends _Control {
 	properties: object;
 
 	/**
-	 * The element type, "progessbar".
-	 */
-	readonly type: string;
-
-	/**
 	 * The current position of the indicator.
 	 * If set to a value outside the range specified by 0 to maxvalue, it is automatically reset to the closest boundary.
 	 */
@@ -2521,11 +2461,6 @@ declare class TreeView extends _Control {
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
-
-	/**
-	 * The element type, "treeview".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -2667,11 +2602,6 @@ declare class FlashPlayer extends _Control {
 	 * A FlashPlayer object has no creation properties.
 	 */
 	properties: object;
-
-	/**
-	 * The element type, "flashplayer".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -2816,11 +2746,6 @@ declare class Group extends _Control {
 	spacing: number;
 
 	/**
-	 * The element type; "group".
-	 */
-	readonly type: string;
-
-	/**
 	 * True if this element is shown, false if it is hidden.
 	 * When a container is hidden, its children are also hidden, but they retain their own visibility values, and are shown or hidden accordingly when the parent is next shown.
 	 */
@@ -2962,11 +2887,6 @@ declare class Panel extends _Control {
 	 * The title or label text, a localizable string.
 	 */
 	text: string;
-
-	/**
-	 * The element type; "panel".
-	 */
-	readonly type: string;
 
 	/**
 	 * True if this element is shown, false if it is hidden.
@@ -3459,6 +3379,11 @@ declare class _Control {
 	 * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
 	 */
 	size: Dimension;
+
+	/**
+	 * The element type.
+	 */
+	readonly type: string;
 
 }
 
