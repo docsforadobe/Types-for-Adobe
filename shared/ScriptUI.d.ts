@@ -2637,31 +2637,31 @@ declare class _Control {
 }
 
 interface WindowPanelGroupAddMap {
-	"button": Button;
-	"checkbox": Checkbox;
-	"dropdownlist": DropDownList;
-	"edittext": EditText;
-	"flashplayer": FlashPlayer;
-	"group": Group;
-	"iconbutton": IconButton;
-	"listbox": ListBox;
-	"panel": Panel;
-	"progressbar": Progressbar;
-	"radiobutton": RadioButton;
-	"scrollbar": Scrollbar;
-	"slider": Slider;
-	"statictext": StaticText;
-	"treeview": TreeView;
+	button: Button;
+	checkbox: Checkbox;
+	dropdownlist: DropDownList;
+	edittext: EditText;
+	flashplayer: FlashPlayer;
+	group: Group;
+	iconbutton: IconButton;
+	listbox: ListBox;
+	panel: Panel;
+	progressbar: Progressbar;
+	radiobutton: RadioButton;
+	scrollbar: Scrollbar;
+	slider: Slider;
+	statictext: StaticText;
+	treeview: TreeView;
 }
 
 interface ControlPropertiesMap {
-	"button": {};
-	"checkbox": {};
-	"dropdownlist": {
+	button: {};
+	checkbox: {};
+	dropdownlist: {
 		name: string;
 		items: string[];
 	};
-	"edittext": {
+	edittext: {
 		multiline: boolean;
 		readonly: boolean;
 		noecho: boolean;
@@ -2669,12 +2669,12 @@ interface ControlPropertiesMap {
 		borderless: boolean;
 		scrollable: boolean;
 	};
-	"flashplayer": {};
-	"group": {};
-	"iconbutton": {
+	flashplayer: {};
+	group: {};
+	iconbutton: {
 		style: "button" | "toolbutton";
 	};
-	"listbox": {
+	listbox: {
 		name: string;
 		multiselect: boolean;
 		items: string[];
@@ -2683,20 +2683,20 @@ interface ControlPropertiesMap {
 		columnWidths: number[];
 		columnTitles: string[];
 	};
-	"panel": {
+	panel: {
 		name: string;
 		borderStyle: string;
 		su1PanelCoordinates: boolean;
 	};
-	"progressbar": {};
-	"radiobutton": {};
-	"scrollbar": {};
-	"slider": {};
-	"statictext": {
+	progressbar: {};
+	radiobutton: {};
+	scrollbar: {};
+	slider: {};
+	statictext: {
 		multiline: boolean;
 		scrolling: boolean;
 	};
-	"treeview": {
+	treeview: {
 		name: string;
 		items: string[];
 	};
