@@ -2723,4 +2723,20 @@ interface ControlPropertiesMap {
 	};
 }
 
-type WindowPanelGroupAdd = <K extends keyof WindowPanelGroupAddMap>(type: K, bounds?: Bounds, text?: string, properties?: ControlPropertiesMap[K]) => WindowPanelGroupAddMap[K];
+interface WindowPanelGroupAdd {
+	(type: "button", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["button"]): Button;
+	(type: "checkbox", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["checkbox"]): Checkbox;
+	(type: "dropdownlist", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["dropdownlist"]): DropDownList;
+	(type: "edittext", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["edittext"]): EditText;
+	(type: "flashplayer", bounds?: Bounds, movieToLoad?: string | File, properties?: ControlPropertiesMap["flashplayer"]): FlashPlayer;
+	(type: "group", bounds?: Bounds, properties?: ControlPropertiesMap["group"]): Group;
+	(type: "iconbutton", bounds?: Bounds, icon?: string | File, properties?: ControlPropertiesMap["iconbutton"]): IconButton;
+	(type: "listbox", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["listbox"]): ListBox;
+	(type: "panel", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["panel"]): Panel;
+	(type: "progressbar", bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, properties?: ControlPropertiesMap["progressbar"]): Progressbar;
+	(type: "radiobutton", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["radiobutton"]): RadioButton;
+	(type: "scrollbar", bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, properties?: ControlPropertiesMap["scrollbar"]): Scrollbar;
+	(type: "slider", bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, properties?: ControlPropertiesMap["slider"]): Slider;
+	(type: "statictext", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["statictext"]): StaticText;
+	(type: "treeview", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["treeview"]): TreeView;
+}
