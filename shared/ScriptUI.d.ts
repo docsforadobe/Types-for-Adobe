@@ -230,13 +230,6 @@ declare class Window extends _Control {
 	 */
 	constructor(type: string, title?: string, bounds?: Bounds, properties?: object);
 
-	/**
-	 * Creates and returns a new control or container object and adds it to the children of this window.
-	 * @param type The type of the child element, as specified for the type property. Control types are listed in the JavaScript Tools Guide.
-	 * @param bounds A bounds specification that describes the size and position of the new control or container, relative to its parent. If supplied, this value creates a new Bounds object which is assigned to the new object’s bounds property.
-	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
-	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
-	 */
 	add: WindowPanelGroupAdd;
 
 	/**
@@ -1250,7 +1243,7 @@ declare class DropDownList extends _Control {
 	 * The currently selectedlist item.
 	 * Setting this value causes the selected item to be highlighted and to be scrolled into view if necessary. If no items are selected, the value is null. Set to null to deselect all items.You can set the value using the index of an item, rather than an object reference. If set to an index value that is out of range, the operation is ignored. When set with an index value, the property still returns an object reference.
 	 */
-	selection: ListItem;
+	selection: ListItem | number;
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1993,6 +1986,144 @@ declare class FlashPlayer extends _Control {
 
 }
 
+declare class Image extends _Control {
+	/**
+	 * True if this element is active.
+	 * An active control is the one with keyboard focus—that is, the one that accepts keystrokes, or in the case of a Button, is selected when the user types Return or Enter in Windows, or the space bar in Mac OS.
+	 */
+	active: boolean;
+
+	icon: string | File;
+
+	/**
+	 * The image object that defines the image to be drawn.
+	 */
+	image: ScriptUIImage | string | File;
+
+	/**
+	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
+	 */
+	shortcutKey: string;
+
+	/**
+	 * The title of the element.
+	 */
+	title: string;
+
+	/**
+	 * The way the text label is shown in relation to the element.
+	 */
+	titleLayout: _TitleLayout;
+
+	/**
+	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
+	 */
+	onShortcutKey: Function;
+
+}
+
+
+/**
+ * A horizontal bar with an indicator that shows the progress of an operation.
+ * All progressbar controls have a horizontal orientation. The value property contains the current position of the progress indicator; the default is 0. There is a minvalue property, but it is always 0; attempts to set it to a different value are silently ignored.
+ */
+declare class ProgressBar extends _Control {
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
+	 */
+	properties: Object;
+
+	/**
+	 * The maximum value in the range. Default is 100.
+	 */
+	maxvalue: number;
+
+	/**
+	 * The minimum value in the range; always 0. If set to a different value, it is ignored.
+	 */
+	minvalue: number;
+
+	text: string;
+
+	/**
+	 * The current position of the indicator.
+	 * If set to a value outside the range specified by 0 to maxvalue, it is automatically reset to the closest boundary.
+	 */
+	value: number;
+
+}
+
+
+interface _TitleLayout {
+	/**
+	 * The position of the title relative to the element, an array of [horizontal_alignment, vertical_alignment].
+	 * For possible alignment values, see Alignment. Note that fill is not a valid alignment value for either horizontal or vertical alignment in this context.
+	 */
+	alignment: [Alignment, Alignment];
+
+	/**
+	 * A number; if 1 or greater, reserves a title width wide enough to hold the specified number of “X” characters in the font for this element. If 0, the title width is calculated based on the value of the title property during layout operations.
+	 */
+	characters: number;
+
+	/**
+	 * A number; 0 or greater. The number of pixels separating the title from the element.
+	 */
+	spacing: number;
+
+	/**
+	 * An array of numbers, [left, top, right, bottom] for the number of pixels separating each edge of an element and the visible content within that element. This overrides the default margins.
+	 */
+	margins: Margins;
+
+	/**
+	 * One of 'left', 'center', or 'right', how to justify the text when the space allocated for the title width is greater than the actual width of the text.
+	 */
+	justify: string;
+
+	/**
+	 * If 'middle' or 'end', defines where to remove characters from the text and replace them with an ellipsis (…) if the specified title does not fit within the space reserved for it. If 'none', and the text does not fit, characters are removed from the end, without any replacement ellipsis character.
+	 */
+	truncate: string;
+
+}
+
+
+/**
+ * A panel that contains only Tab objects as its immediate children. It has a selection property that contains the currently active Tab child. When the value of the selection property changes, either by a user selecting a different tab, or by a script setting the property, the TabbedPanel receives an onChange notification.
+ */
+declare class TabbedPanel extends _Control {
+	selection: Tab;
+
+	/**
+	 * The text to display, a localizable string.
+	 */
+	text: string;
+
+	/**
+	 * The title of the element.
+	 */
+	title: string;
+
+	/**
+	 * The way the text label is shown in relation to the element.
+	 */
+	titleLayout: _TitleLayout;
+
+}
+
+/**
+ * A general container whose parent is a TabbedPanel, with a selectable tab showing a localizable text value. Its size and position are determined by the parent.
+ */
+declare class Tab extends _Control {
+	/**
+	 * The text to display, a localizable string.
+	 */
+	text: string;
+
+}
+
 /**
  * A container for other controls within a window.
  * A group can specify layout options for its child elements. Hiding a group hides all its children. Making it visible makes visible those children that are not individually hidden.
@@ -2162,12 +2293,7 @@ declare class Panel extends _Control {
 
 }
 
-/**
- * Defines the location of a window or UI element. Contains a 2-element array.
- * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
- * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
- */
-declare class Point {
+declare class ObjectPoint {
 	/**
 	 * The left coordinate.
 	 */
@@ -2195,11 +2321,16 @@ declare class Point {
 
 }
 
+declare type ArrayPoint = [number, number]
+
 /**
- * Defines the size of a window or UI element. Contains a 2-element array.
- * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
+ * Defines the location of a window or UI element. Contains a 2-element array.
+ * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
+ * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
  */
-declare class Dimension {
+declare type Point = ArrayPoint | ObjectPoint
+
+declare class ObjectDimension {
 	/**
 	 * The height in pixels.
 	 */
@@ -2215,13 +2346,21 @@ declare class Dimension {
 	 */
 	width: number;
 
+	[0]: number;
+
+	[1]: number;
+
 }
 
+declare type ArrayDimension = [number, number]
+
 /**
- * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
- * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
+ * Defines the size of a window or UI element. Contains a 2-element array.
+ * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
  */
-declare class Bounds {
+declare type Dimension = ArrayDimension | ObjectDimension
+
+declare class ObjectBounds {
 	/**
 	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
@@ -2267,7 +2406,30 @@ declare class Bounds {
 	 */
 	y: number;
 
+	[0]: number;
+
+	[1]: number;
+
+	[2]: number;
+
+	[3]: number;
+
 }
+
+declare type ArrayBounds = [number, number, number, number]
+
+/**
+ * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
+ * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
+ */
+declare type Bounds = ArrayBounds | ObjectBounds
+
+/**
+ * Defines the number of pixels between the edges of a container and its outermost child elements. Contains an array [ left, top, right, bottom ] whose elements define the margins between the left edge of a container and its leftmost child element, and so on.
+ */
+declare type Margins = [number, number, number, number];
+
+declare type Alignment = number | 'top' | 'bottom' | 'left' | 'right' | 'fill' | 'center';
 
 /**
  * Encapsulates input event information for an event that propagates through a container and control hierarchy.
@@ -2636,22 +2798,104 @@ declare class _Control {
 
 }
 
-interface WindowPanelGroupAddMap {
-	"button": Button;
-	"checkbox": Checkbox;
-	"dropdownlist": DropDownList;
-	"edittext": EditText;
-	"flashplayer": FlashPlayer;
-	"group": Group;
-	"iconbutton": IconButton;
-	"listbox": ListBox;
-	"panel": Panel;
-	"progressbar": Progressbar;
-	"radiobutton": RadioButton;
-	"scrollbar": Scrollbar;
-	"slider": Slider;
-	"statictext": StaticText;
-	"treeview": TreeView;
-}
+interface WindowPanelGroupAdd {
+	/**
+	 * Creates and returns a new control or container object and adds it to the children of this window.
+	 * @param type The type of the child element, as specified for the type property. Control types are listed in the JavaScript Tools Guide.
+	 * @param bounds A bounds specification that describes the size and position of the new control or container, relative to its parent. If supplied, this value creates a new Bounds object which is assigned to the new object’s bounds property.
+	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
+	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
+	 */
+	(type: 'button', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+	}): Button;
 
-type WindowPanelGroupAdd = <K extends keyof WindowPanelGroupAddMap>(type: K, bounds?: Bounds, text?: string, properties?: object) => WindowPanelGroupAddMap[K];
+	(type: 'checkbox', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+	}): Checkbox;
+
+	(type: 'dropdownlist', bounds?: Bounds, items?: string[], creation_properties?: {
+		name?: string;
+		items?: string[];
+	}): DropDownList;
+
+	(type: 'edittext', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+		readonly?: boolean;
+		noecho?: boolean;
+		enterKeySignalsOnChange?: boolean;
+		borderless?: boolean;
+		multiline?: boolean;
+		scrollable?: boolean;
+	}): EditText;
+
+	(type: 'flashplayer', bounds?: Bounds, movieToLoad?: string | File, creation_properties?: {
+		name?: string;
+	}): FlashPlayer;
+
+	(type: 'group', bounds?: Bounds, creation_properties?: {
+		name?: string;
+	}): Group;
+
+	(type: 'iconbutton', bounds?: Bounds, icon?: string | File, creation_properties?: {
+		name?: string;
+		style?: string;
+		toggle?: boolean;
+	}): IconButton;
+
+	(type: 'image', bounds?: Bounds, icon?: string | File, creation_properties?: {
+		name?: string;
+	}): Image;
+
+	(type: 'listbox', bounds?: Bounds, items?: string[], creation_properties?: {
+		name?: string;
+		multiselect?: boolean;
+		items?: string[];
+		numberOfColumns?: number;
+		showHeaders?: boolean;
+		columnWidths?: number[];
+		columnTitles?: string[];
+	}): ListBox;
+
+	(type: 'panel', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+		borderStyle?: string;
+		su1PanelCoordinates?: boolean;
+	}): Panel;
+
+	(type: 'progressbar', bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, creation_properties?: {
+		name?: string;
+	}): ProgressBar;
+
+	(type: 'radiobutton', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+	}): RadioButton;
+
+	(type: 'scrollbar', bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, creation_properties?: {
+		name?: string;
+	}): Scrollbar;
+
+	(type: 'slider', bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, creation_properties?: {
+		name?: string;
+	}): Slider;
+
+	(type: 'statictext', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+		multiline?: boolean;
+		scrolling?: boolean;
+		truncate?: string;
+	}): StaticText;
+
+	(type: 'tab', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+	}): Tab;
+
+	(type: 'tabbedpanel', bounds?: Bounds, text?: string, creation_properties?: {
+		name?: string;
+	}): TabbedPanel;
+
+	(type: 'treeview', bounds?: Bounds, items?: string[], creation_properties?: {
+		name?: string;
+		items?: string[];
+	}): TreeView;
+}
