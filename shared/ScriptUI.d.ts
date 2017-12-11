@@ -2655,12 +2655,8 @@ interface WindowPanelGroupAddMap {
 }
 
 interface ControlPropertiesMap {
-	"button": {
-		name?: string;
-	};
-	"checkbox": {
-		name?: string;
-	};
+	"button": undefined;
+	"checkbox": undefined;
 	"dropdownlist": {
 		name?: string;
 		items?: string[];
