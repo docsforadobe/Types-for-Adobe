@@ -2670,9 +2670,7 @@ interface ControlPropertiesMap {
 		multiline?: boolean;
 		scrollable?: boolean;
 	};
-	"flashplayer": {
-		name?: string;
-	};
+	"flashplayer": undefined;
 	"group": {
 		name?: string;
 	};
