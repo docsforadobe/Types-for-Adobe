@@ -2549,7 +2549,6 @@ interface ControlPropertiesMap {
 	 * @param items An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
 	dropdownlist: {
-		name: string;
 		items: string[];
 	};
 
