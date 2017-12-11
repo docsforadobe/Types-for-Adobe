@@ -2658,64 +2658,64 @@ interface ControlPropertiesMap {
 	"button": {};
 	"checkbox": {};
 	"dropdownlist": {
-		name?: string;
-		items?: string[];
+		name: string;
+		items: string[];
 	};
 	"edittext": {
-		multiline?: boolean;
-		readonly?: boolean;
-		noecho?: boolean;
-		enterKeySignalsOnChange?: boolean;
-		borderless?: boolean;
-		scrollable?: boolean;
+		multiline: boolean;
+		readonly: boolean;
+		noecho: boolean;
+		enterKeySignalsOnChange: boolean;
+		borderless: boolean;
+		scrollable: boolean;
 	};
 	"flashplayer": {};
 	"group": {};
 	"iconbutton": {
-		style?: "button" | "toolbutton";
+		style: "button" | "toolbutton";
 	};
 	"listbox": {
-		name?: string;
-		multiselect?: boolean;
-		items?: string[];
-		numberOfColumns?: number;
-		showHeaders?: boolean;
-		columnWidths?: number[];
-		columnTitles?: string[];
+		name: string;
+		multiselect: boolean;
+		items: string[];
+		numberOfColumns: number;
+		showHeaders: boolean;
+		columnWidths: number[];
+		columnTitles: string[];
 	};
 	"panel": {
-		name?: string;
-		borderStyle?: string;
-		su1PanelCoordinates?: boolean;
+		name: string;
+		borderStyle: string;
+		su1PanelCoordinates: boolean;
 	};
 	"progressbar": {};
 	"radiobutton": {};
 	"scrollbar": {};
 	"slider": {};
 	"statictext": {
-		multiline?: boolean;
-		scrolling?: boolean;
+		multiline: boolean;
+		scrolling: boolean;
 	};
 	"treeview": {
-		name?: string;
-		items?: string[];
+		name: string;
+		items: string[];
 	};
 }
 
 interface WindowPanelGroupAdd {
-	(type: "button", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["button"]): Button;
-	(type: "checkbox", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["checkbox"]): Checkbox;
-	(type: "dropdownlist", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["dropdownlist"]): DropDownList;
-	(type: "edittext", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["edittext"]): EditText;
-	(type: "flashplayer", bounds?: Bounds, movieToLoad?: string | File, properties?: ControlPropertiesMap["flashplayer"]): FlashPlayer;
-	(type: "group", bounds?: Bounds, properties?: ControlPropertiesMap["group"]): Group;
-	(type: "iconbutton", bounds?: Bounds, icon?: string | File, properties?: ControlPropertiesMap["iconbutton"]): IconButton;
-	(type: "listbox", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["listbox"]): ListBox;
-	(type: "panel", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["panel"]): Panel;
-	(type: "progressbar", bounds?: Bounds, value?: number, max?: number, properties?: ControlPropertiesMap["progressbar"]): Progressbar;
-	(type: "radiobutton", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["radiobutton"]): RadioButton;
-	(type: "scrollbar", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: ControlPropertiesMap["scrollbar"]): Scrollbar;
-	(type: "slider", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: ControlPropertiesMap["slider"]): Slider;
-	(type: "statictext", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["statictext"]): StaticText;
-	(type: "treeview", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["treeview"]): TreeView;
+	(type: "button", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["button"]>): Button;
+	(type: "checkbox", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["checkbox"]>): Checkbox;
+	(type: "dropdownlist", bounds?: Bounds, items?: string[], properties?: Partial<ControlPropertiesMap["dropdownlist"]>): DropDownList;
+	(type: "edittext", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["edittext"]>): EditText;
+	(type: "flashplayer", bounds?: Bounds, movieToLoad?: string | File, properties?: Partial<ControlPropertiesMap["flashplayer"]>): FlashPlayer;
+	(type: "group", bounds?: Bounds, properties?: Partial<ControlPropertiesMap["group"]>): Group;
+	(type: "iconbutton", bounds?: Bounds, icon?: string | File, properties?: Partial<ControlPropertiesMap["iconbutton"]>): IconButton;
+	(type: "listbox", bounds?: Bounds, items?: string[], properties?: Partial<ControlPropertiesMap["listbox"]>): ListBox;
+	(type: "panel", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["panel"]>): Panel;
+	(type: "progressbar", bounds?: Bounds, value?: number, max?: number, properties?: Partial<ControlPropertiesMap["progressbar"]>): Progressbar;
+	(type: "radiobutton", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["radiobutton"]>): RadioButton;
+	(type: "scrollbar", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: Partial<ControlPropertiesMap["scrollbar"]>): Scrollbar;
+	(type: "slider", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: Partial<ControlPropertiesMap["slider"]>): Slider;
+	(type: "statictext", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["statictext"]>): StaticText;
+	(type: "treeview", bounds?: Bounds, items?: string[], properties?: Partial<ControlPropertiesMap["treeview"]>): TreeView;
 }
