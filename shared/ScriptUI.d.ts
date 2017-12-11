@@ -2673,9 +2673,7 @@ interface ControlPropertiesMap {
 	"flashplayer": undefined;
 	"group": undefined;
 	"iconbutton": {
-		name?: string;
-		style?: string;
-		toggle?: boolean;
+		style?: "button" | "toolbutton";
 	};
 	"listbox": {
 		name?: string;
