@@ -2663,11 +2663,11 @@ interface ControlPropertiesMap {
 	};
 	"edittext": {
 		name?: string;
+		multiline?: boolean;
 		readonly?: boolean;
 		noecho?: boolean;
 		enterKeySignalsOnChange?: boolean;
 		borderless?: boolean;
-		multiline?: boolean;
 		scrollable?: boolean;
 	};
 	"flashplayer": {};
