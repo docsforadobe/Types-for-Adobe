@@ -2546,7 +2546,7 @@ interface ControlPropertiesMap {
 
 	/**
 	 * Creation properties of a DropDownList object can include:
-	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
+	 * @param items An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
 	dropdownlist: {
 		name: string;
@@ -2555,11 +2555,11 @@ interface ControlPropertiesMap {
 
 	/**
 	 * Creation properties of an EditText object can include:
-	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
-	 * readonly: When false (the default),the control accepts text input. When true, the control does not accept input but only displays the contents of the text property.
-	 * noecho: When false (the default), the control displays input text. When true, the control does not display input text (used for password input fields).
-	 * enterKeySignalsOnChange: When false (the default), the control signals an onChange event when the editable text is changed and the control loses the keyboard focus (that is, the user tabs to another control, clicks outside the control, or types Enter). When true, the control only signals an onChange() event when the editable text is changed and the user types Enter; other changes to the keyboard focus do not signal the event.
-	 * wantReturn: Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
+	 * @param multiline When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
+	 * @param readonly When false (the default),the control accepts text input. When true, the control does not accept input but only displays the contents of the text property.
+	 * @param noecho When false (the default), the control displays input text. When true, the control does not display input text (used for password input fields).
+	 * @param enterKeySignalsOnChange When false (the default), the control signals an onChange event when the editable text is changed and the control loses the keyboard focus (that is, the user tabs to another control, clicks outside the control, or types Enter). When true, the control only signals an onChange() event when the editable text is changed and the user types Enter; other changes to the keyboard focus do not signal the event.
+	 * @param wantReturn Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
 	 */
 	edittext: {
 		multiline: boolean;
@@ -2582,7 +2582,7 @@ interface ControlPropertiesMap {
 
 	/**
 	 * Creation properties of an IconButton object can include:
-	 * style: A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
+	 * @param style A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
 	 */
 	iconbutton: {
 		style: "button" | "toolbutton";
@@ -2590,12 +2590,12 @@ interface ControlPropertiesMap {
 
 	/**
 	 * Creation properties of a ListBox object can include:
-	 * multiselect: When false (the default), only one item can be selected. When true, multiple items can be selected.
-	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
-	 * numberOfColumns: A number of columns in which to display the items; default is 1. When there are multiple columns, each ListItem object represents a selectable row. Its text and image values specify the label in the first column, and the subitems property specifies the labels in the additional columns.
-	 * showHeaders: True to display column titles.
-	 * columnWidths: An array of numbers for the preferred width in pixels of each column.
-	 * columnTitles: A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
+	 * @param multiselect When false (the default), only one item can be selected. When true, multiple items can be selected.
+	 * @param items An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
+	 * @param numberOfColumns A number of columns in which to display the items; default is 1. When there are multiple columns, each ListItem object represents a selectable row. Its text and image values specify the label in the first column, and the subitems property specifies the labels in the additional columns.
+	 * @param showHeaders True to display column titles.
+	 * @param columnWidths An array of numbers for the preferred width in pixels of each column.
+	 * @param columnTitles A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
 	 */
 	listbox: {
 		name: string;
@@ -2609,8 +2609,8 @@ interface ControlPropertiesMap {
 
 	/**
 	 * Creation properties of a Panel object can include:
-	 * borderStyle: A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
-	 * su1PanelCoordinates: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
+	 * @param borderStyle A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
+	 * @param su1PanelCoordinates Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
 	 */
 	panel: {
 		name: string;
@@ -2644,8 +2644,8 @@ interface ControlPropertiesMap {
 
 	/**
 	 * Creation properties of a StaticText object can include:
-	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
-	 * scrolling: When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
+	 * @param multiline When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
+	 * @param scrolling When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
 	 */
 	statictext: {
 		multiline: boolean;
@@ -2654,7 +2654,7 @@ interface ControlPropertiesMap {
 
 	/**
 	 * Creation properties of a TreeView object can include:
-	 * items: An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
+	 * @param items An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
 	treeview: {
 		name: string;
