@@ -30,7 +30,7 @@ tsc
 ## CSInterface
 For typings for CSInterface check [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS).
 
-## Autocomplete works
+## Autocomplete and typecheck
 <img src="resources/autocomplete.png"/>
 
 ## Contributors
