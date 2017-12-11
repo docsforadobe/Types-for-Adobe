@@ -771,14 +771,6 @@ declare class StaticText extends _Control {
 	justify: string;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * Creation properties of a StaticText object can include:
-	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
-	 * scrolling: When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
-	 */
-	properties: ControlPropertiesMap["statictext"];
-
-	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
@@ -839,12 +831,6 @@ declare class Button extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * A Button object has no creation properties, but the third argument to the add() method that creates it can be the initial text value.
-	 */
-	properties: ControlPropertiesMap["button"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -920,13 +906,6 @@ declare class IconButton extends _Control {
 	image: ScriptUIImage;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * Creation properties of an IconButton object can include:
-	 * style: A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
-	 */
-	properties: ControlPropertiesMap["iconbutton"];
-
-	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
@@ -999,17 +978,6 @@ declare class EditText extends _Control {
 	 * One of left, center, or right. Justification only works if this value is set on creation of the element.
 	 */
 	justify: string;
-
-	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * Creation properties of an EditText object can include:
-	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
-	 * readonly: When false (the default),the control accepts text input. When true, the control does not accept input but only displays the contents of the text property.
-	 * noecho: When false (the default), the control displays input text. When true, the control does not display input text (used for password input fields).
-	 * enterKeySignalsOnChange: When false (the default), the control signals an onChange event when the editable text is changed and the control loses the keyboard focus (that is, the user tabs to another control, clicks outside the control, or types Enter). When true, the control only signals an onChange() event when the editable text is changed and the user types Enter; other changes to the keyboard focus do not signal the event.
-	 * wantReturn: Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
-	 */
-	properties: ControlPropertiesMap["edittext"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1112,18 +1080,6 @@ declare class ListBox extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
-	 * Creation properties of a ListBox object can include:
-	 * multiselect: When false (the default), only one item can be selected. When true, multiple items can be selected.
-	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
-	 * numberOfColumns: A number of columns in which to display the items; default is 1. When there are multiple columns, each ListItem object represents a selectable row. Its text and image values specify the label in the first column, and the subitems property specifies the labels in the additional columns.
-	 * showHeaders: True to display column titles.
-	 * columnWidths: An array of numbers for the preferred width in pixels of each column.
-	 * columnTitles: A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
-	 */
-	properties: ControlPropertiesMap["listbox"];
 
 	/**
 	 * The currently selected item for a single-selection list, or an array of items for current selection in a multi-selection list.
@@ -1238,13 +1194,6 @@ declare class DropDownList extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method. Items in a drop-down list can be of type separator, in which case they cannot be selected, and are shown as a horizontal line. Each item has a selected property that is true when it is in the selected state.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * Creation properties of a DropDownList object can include:
-	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
-	 */
-	properties: ControlPropertiesMap["dropdownlist"];
 
 	/**
 	 * The currently selectedlist item.
@@ -1419,12 +1368,6 @@ declare class Checkbox extends _Control {
 	justify: string;
 
 	/**
-	 * An object that contains one or more creation properties of the item (properties used only when the element is created).
-	 * A CheckBox object has no creation properties. The third argument to the add() method that creates it is the text to be displayed.
-	 */
-	properties: ControlPropertiesMap["checkbox"];
-
-	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
@@ -1518,12 +1461,6 @@ declare class Scrollbar extends _Control {
 	minvalue: number;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * A Scrollbar object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
-	 */
-	properties: ControlPropertiesMap["scrollbar"];
-
-	/**
 	 * The key sequence that invokes the  onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
@@ -1615,12 +1552,6 @@ declare class RadioButton extends _Control {
 	justify: string;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * A RadioButton object has no creation properties. The third argument of the add() method that creates can be the label text.
-	 */
-	properties: ControlPropertiesMap["radiobutton"];
-
-	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
@@ -1706,12 +1637,6 @@ declare class Slider extends _Control {
 	minvalue: number;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * A Slider object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
-	 */
-	properties: ControlPropertiesMap["slider"];
-
-	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
 	 */
 	shortcutKey: string;
@@ -1791,12 +1716,6 @@ declare class Progressbar extends _Control {
 	minvalue: number;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
-	 */
-	properties: ControlPropertiesMap["progressbar"];
-
-	/**
 	 * The current position of the indicator.
 	 * If set to a value outside the range specified by 0 to maxvalue, it is automatically reset to the closest boundary.
 	 */
@@ -1842,13 +1761,6 @@ declare class TreeView extends _Control {
 	 * Access this array with a 0-based index. To obtain the number of items in the list, use items.length.The objects are created when items are specified on creation of the parent list object, or afterward using the list control’s add() method.
 	 */
 	readonly items: ListItem[];
-
-	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
-	 * Creation properties of a ListBox object can include:
-	 * items: An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
-	 */
-	properties: ControlPropertiesMap["treeview"];
 
 	/**
 	 * The currently selectedlist item.
@@ -1947,12 +1859,6 @@ declare class FlashPlayer extends _Control {
 	active: boolean;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * A FlashPlayer object has no creation properties.
-	 */
-	properties: ControlPropertiesMap["flashplayer"];
-
-	/**
 	 * A function definition for a callback from the Flash ActionScript environment.
 	 * The Flash ActionScript code can call any callback function defined on the ExtendScript side of the FlashPlayer object, invoking it by name as a property of the control object. The function can take any arguments of a supported data types, and can return any value of a supported data type. data types:Number, String, Boolean, null, undefined, Object, Array.
 	 */
@@ -2033,12 +1939,6 @@ declare class Group extends _Control {
 	orientation: string;
 
 	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
-	 * A Group object has no creation properties.
-	 */
-	properties: ControlPropertiesMap["group"];
-
-	/**
 	 * The number of pixels separating one child element from its adjacent sibling element.
 	 * Because each container holds only a single row or column of children, only a single spacing value is needed for a container. The default value is based on the type of container, and is chosen to match standard Adobe UI guidelines.
 	 */
@@ -2117,14 +2017,6 @@ declare class Panel extends _Control {
 	 * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
 	 */
 	orientation: string;
-
-	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
-	 * Creation properties of a Panel object can include:
-	 * borderStyle: A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
-	 * su1PanelCoordinates: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
-	 */
-	properties: ControlPropertiesMap["panel"];
 
 	/**
 	 * The number of pixels separating one child element from its adjacent sibling element.
@@ -2655,12 +2547,37 @@ interface WindowPanelGroupAddMap {
 }
 
 interface ControlPropertiesMap {
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * A Button object has no creation properties, but the third argument to the add() method that creates it can be the initial text value.
+	 */
 	button: {};
+
+	/**
+	 * An object that contains one or more creation properties of the item (properties used only when the element is created).
+	 * A CheckBox object has no creation properties. The third argument to the add() method that creates it is the text to be displayed.
+	 */
 	checkbox: {};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * Creation properties of a DropDownList object can include:
+	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
+	 */
 	dropdownlist: {
 		name: string;
 		items: string[];
 	};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * Creation properties of an EditText object can include:
+	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
+	 * readonly: When false (the default),the control accepts text input. When true, the control does not accept input but only displays the contents of the text property.
+	 * noecho: When false (the default), the control displays input text. When true, the control does not display input text (used for password input fields).
+	 * enterKeySignalsOnChange: When false (the default), the control signals an onChange event when the editable text is changed and the control loses the keyboard focus (that is, the user tabs to another control, clicks outside the control, or types Enter). When true, the control only signals an onChange() event when the editable text is changed and the user types Enter; other changes to the keyboard focus do not signal the event.
+	 * wantReturn: Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
+	 */
 	edittext: {
 		multiline: boolean;
 		readonly: boolean;
@@ -2669,11 +2586,38 @@ interface ControlPropertiesMap {
 		borderless: boolean;
 		scrollable: boolean;
 	};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * A FlashPlayer object has no creation properties.
+	 */
 	flashplayer: {};
+
+	/**
+	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
+	 * A Group object has no creation properties.
+	 */
 	group: {};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * Creation properties of an IconButton object can include:
+	 * style: A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
+	 */
 	iconbutton: {
 		style: "button" | "toolbutton";
 	};
+
+	/**
+	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
+	 * Creation properties of a ListBox object can include:
+	 * multiselect: When false (the default), only one item can be selected. When true, multiple items can be selected.
+	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
+	 * numberOfColumns: A number of columns in which to display the items; default is 1. When there are multiple columns, each ListItem object represents a selectable row. Its text and image values specify the label in the first column, and the subitems property specifies the labels in the additional columns.
+	 * showHeaders: True to display column titles.
+	 * columnWidths: An array of numbers for the preferred width in pixels of each column.
+	 * columnTitles: A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
+	 */
 	listbox: {
 		name: string;
 		multiselect: boolean;
@@ -2683,19 +2627,59 @@ interface ControlPropertiesMap {
 		columnWidths: number[];
 		columnTitles: string[];
 	};
+
+	/**
+	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
+	 * Creation properties of a Panel object can include:
+	 * borderStyle: A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
+	 * su1PanelCoordinates: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
+	 */
 	panel: {
 		name: string;
 		borderStyle: string;
 		su1PanelCoordinates: boolean;
 	};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
+	 */
 	progressbar: {};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * A RadioButton object has no creation properties. The third argument of the add() method that creates can be the label text.
+	 */
 	radiobutton: {};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * A Scrollbar object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+	 */
 	scrollbar: {};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * A Slider object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+	 */
 	slider: {};
+
+	/**
+	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
+	 * Creation properties of a StaticText object can include:
+	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
+	 * scrolling: When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
+	 */
 	statictext: {
 		multiline: boolean;
 		scrolling: boolean;
 	};
+
+	/**
+	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
+	 * Creation properties of a ListBox object can include:
+	 * items: An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
+	 */
 	treeview: {
 		name: string;
 		items: string[];
