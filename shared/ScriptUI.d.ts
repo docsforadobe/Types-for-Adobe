@@ -2696,10 +2696,8 @@ interface ControlPropertiesMap {
 	"scrollbar": undefined;
 	"slider": undefined;
 	"statictext": {
-		name?: string;
 		multiline?: boolean;
 		scrolling?: boolean;
-		truncate?: string;
 	};
 	"treeview": {
 		name?: string;
