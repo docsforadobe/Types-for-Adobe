@@ -2565,7 +2565,7 @@ interface ControlPropertiesMap {
 		readonly: boolean;
 		noecho: boolean;
 		enterKeySignalsOnChange: boolean;
-        wantReturn: boolean;
+		wantReturn: boolean;
 	};
 
 	/**
