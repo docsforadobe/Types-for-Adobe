@@ -2662,7 +2662,6 @@ interface ControlPropertiesMap {
 		items?: string[];
 	};
 	"edittext": {
-		name?: string;
 		multiline?: boolean;
 		readonly?: boolean;
 		noecho?: boolean;
