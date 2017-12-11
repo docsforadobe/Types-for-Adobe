@@ -190,16 +190,6 @@ declare class Window extends _Control {
 	orientation: string;
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
-	 * Creation properties of a Window object can include:
-	 * resizeable: When true, the window can be resized by the user. Default is false.
-	 * su1PanelCoordinates: Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting.
-	 * closeButton: Bridge only. When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs.
-	 * maximizeButton: Bridge only. When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs.
-	 */
-	properties: object;
-
-	/**
 	 * The keypress combination that invokes this element's onShortcutKey() callback.
 	 */
 	shortcutKey: string;
@@ -228,7 +218,7 @@ declare class Window extends _Control {
 	 * @param bounds The window's position and size.
 	 * @param properties An object containing creation-only properties. Can contain any of these properties: resizeable: When true, the window can be resized by the user. Default is false. su1PanelCoordinates: Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting. closeButton:When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs. maximizeButton:When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs. minimizeButton: When true, the title bar includes a button to minimize or iconify the window, if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Main windows cannot have a minimize button in Mac OS. Not used for dialogs. independent:When true, a window of type window is independent of other application windows, and can be hidden behind them in Windows. In Mac OS, has no effect. Default is false. borderless:When true, the window has no title bar or borders. Properties that control those features are ignored.
 	 */
-	constructor(type: string, title?: string, bounds?: Bounds, properties?: object);
+	constructor(type: string, title?: string, bounds?: Bounds, properties?: Partial<ControlPropertiesMap["window"]>);
 
 	/**
 	 * Creates and returns a new control or container object and adds it to the children of this window.
@@ -2648,6 +2638,20 @@ interface ControlPropertiesMap {
 	 */
 	treeview: {
 		items: string[];
+	};
+
+	/**
+	 * Creation properties of a Window object can include:
+	 * @param resizeable When true, the window can be resized by the user. Default is false.
+	 * @param su1PanelCoordinates Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting.
+	 * @param closeButton Bridge only. When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs.
+	 * @param maximizeButton Bridge only. When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs.
+	 */
+	window: {
+		resizeable: boolean;
+		su1PanelCoordinates: boolean;
+		closeButton: boolean;
+		maximizeButton: boolean;
 	};
 
 	/**
