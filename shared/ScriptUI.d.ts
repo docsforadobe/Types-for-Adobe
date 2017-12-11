@@ -2699,7 +2699,7 @@ interface ControlPropertiesMap {
 		name?: string;
 	};
 	"radiobutton": undefined;
-	"scrollbar": undefined,
+	"scrollbar": undefined;
 	"slider": {
 		name?: string;
 	};
