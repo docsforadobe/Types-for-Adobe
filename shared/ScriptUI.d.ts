@@ -1302,12 +1302,6 @@ declare class ListItem {
 	readonly parent: object;
 
 	/**
-	 * An object that contains one or more creation properties of the item (properties used only when the element is created).
-	 * A ListItem object has no creation properties.
-	 */
-	properties: object;
-
-	/**
 	 * The selection state of this item.
 	 * When true, the item is part of the selection for its parent list. When false, the item is not selected. Set to true to select this item in a single-selection list, or to add it to the selection array for a multi-selection list.
 	 */
@@ -2655,6 +2649,12 @@ interface ControlPropertiesMap {
 	treeview: {
 		items: string[];
 	};
+
+	/**
+	 * A ListItem object has no creation properties.
+	 */
+	listitem: {};
+
 }
 
 interface WindowPanelGroupAdd {
