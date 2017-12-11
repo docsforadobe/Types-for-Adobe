@@ -2723,4 +2723,4 @@ interface ControlPropertiesMap {
 	};
 }
 
-type WindowPanelGroupAdd = <K extends keyof WindowPanelGroupAddMap>(type: K, bounds?: Bounds, text?: string, properties?: object) => WindowPanelGroupAddMap[K];
+type WindowPanelGroupAdd = <K extends keyof WindowPanelGroupAddMap>(type: K, bounds?: Bounds, text?: string, properties?: ControlPropertiesMap[K]) => WindowPanelGroupAddMap[K];
