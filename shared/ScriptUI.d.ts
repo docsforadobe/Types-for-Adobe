@@ -2701,9 +2701,7 @@ interface ControlPropertiesMap {
 	"radiobutton": {
 		name?: string;
 	};
-	"scrollbar": {
-		name?: string;
-	};
+	"scrollbar": undefined,
 	"slider": {
 		name?: string;
 	};
@@ -2731,7 +2729,7 @@ interface WindowPanelGroupAdd {
 	(type: "panel", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["panel"]): Panel;
 	(type: "progressbar", bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, properties?: ControlPropertiesMap["progressbar"]): Progressbar;
 	(type: "radiobutton", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["radiobutton"]): RadioButton;
-	(type: "scrollbar", bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, properties?: ControlPropertiesMap["scrollbar"]): Scrollbar;
+	(type: "scrollbar", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: ControlPropertiesMap["scrollbar"]): Scrollbar;
 	(type: "slider", bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, properties?: ControlPropertiesMap["slider"]): Slider;
 	(type: "statictext", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["statictext"]): StaticText;
 	(type: "treeview", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["treeview"]): TreeView;
