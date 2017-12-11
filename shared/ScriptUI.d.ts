@@ -2671,9 +2671,7 @@ interface ControlPropertiesMap {
 		scrollable?: boolean;
 	};
 	"flashplayer": undefined;
-	"group": {
-		name?: string;
-	};
+	"group": undefined;
 	"iconbutton": {
 		name?: string;
 		style?: string;
