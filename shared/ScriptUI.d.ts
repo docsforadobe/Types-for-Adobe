@@ -2596,7 +2596,6 @@ interface ControlPropertiesMap {
 	 * @param columnTitles A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
 	 */
 	listbox: {
-		name: string;
 		multiselect: boolean;
 		items: string[];
 		numberOfColumns: number;
