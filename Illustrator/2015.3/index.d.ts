@@ -12123,37 +12123,6 @@ declare class Artboard {
 }
 
 /**
- * Describes a point. This class is also a two-element collection.
- */
-declare class Point {
-	/**
-	 * The left coordinate.
-	 */
-	left: number;
-
-	/**
-	 * The array length.
-	 */
-	readonly length: number;
-
-	/**
-	 * The top coordinate.
-	 */
-	top: number;
-
-	/**
-	 * The left coordinate.
-	 */
-	x: number;
-
-	/**
-	 * The top coordinate.
-	 */
-	y: number;
-
-}
-
-/**
  * Describes a rectangle. This class is also a four-element collection.
  */
 declare class Rect {
