@@ -2655,8 +2655,8 @@ interface WindowPanelGroupAddMap {
 }
 
 interface ControlPropertiesMap {
-	"button": undefined;
-	"checkbox": undefined;
+	"button": {};
+	"checkbox": {};
 	"dropdownlist": {
 		name?: string;
 		items?: string[];
@@ -2670,8 +2670,8 @@ interface ControlPropertiesMap {
 		multiline?: boolean;
 		scrollable?: boolean;
 	};
-	"flashplayer": undefined;
-	"group": undefined;
+	"flashplayer": {};
+	"group": {};
 	"iconbutton": {
 		style?: "button" | "toolbutton";
 	};
@@ -2689,10 +2689,10 @@ interface ControlPropertiesMap {
 		borderStyle?: string;
 		su1PanelCoordinates?: boolean;
 	};
-	"progressbar": undefined;
-	"radiobutton": undefined;
-	"scrollbar": undefined;
-	"slider": undefined;
+	"progressbar": {};
+	"radiobutton": {};
+	"scrollbar": {};
+	"slider": {};
 	"statictext": {
 		multiline?: boolean;
 		scrolling?: boolean;
