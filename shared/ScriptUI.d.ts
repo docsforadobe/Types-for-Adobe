@@ -2565,8 +2565,7 @@ interface ControlPropertiesMap {
 		readonly: boolean;
 		noecho: boolean;
 		enterKeySignalsOnChange: boolean;
-		borderless: boolean;
-		scrollable: boolean;
+        wantReturn: boolean;
 	};
 
 	/**
