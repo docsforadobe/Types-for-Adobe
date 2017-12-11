@@ -2533,12 +2533,14 @@ declare class _Control {
  */
 interface ControlPropertiesMap {
 	/**
-	 * A Button object has no creation properties, but the third argument to the add() method that creates it can be the initial text value.
+	 * A Button object has no creation properties.
+	 * But the third argument to the add() method that creates it can be the initial text value.
 	 */
 	button: {};
 
 	/**
-	 * A CheckBox object has no creation properties. The third argument to the add() method that creates it is the text to be displayed.
+	 * A CheckBox object has no creation properties.
+	 * The third argument to the add() method that creates it is the text to be displayed.
 	 */
 	checkbox: {};
 
@@ -2617,22 +2619,26 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
+	 * A ProgressBar object has no creation properties.
+	 * The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
 	 */
 	progressbar: {};
 
 	/**
-	 * A RadioButton object has no creation properties. The third argument of the add() method that creates can be the label text.
+	 * A RadioButton object has no creation properties.
+	 * The third argument of the add() method that creates can be the label text.
 	 */
 	radiobutton: {};
 
 	/**
-	 * A Scrollbar object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+	 * A Scrollbar object has no creation properties.
+	 * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
 	scrollbar: {};
 
 	/**
-	 * A Slider object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+	 * A Slider object has no creation properties.
+	 * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
 	slider: {};
 
