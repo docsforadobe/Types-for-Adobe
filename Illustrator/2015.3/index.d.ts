@@ -1,4 +1,5 @@
 /// <reference path="../../shared/global.d.ts" />
+/// <reference path="../../shared/ScriptUI.d.ts" />
 
 /**
  * The screen mode.
@@ -12118,37 +12119,6 @@ declare class Artboard {
 	 * Deletes all elements.
 	 */
 	removeAll(): void;
-
-}
-
-/**
- * Describes a point. This class is also a two-element collection.
- */
-declare class Point {
-	/**
-	 * The left coordinate.
-	 */
-	left: number;
-
-	/**
-	 * The array length.
-	 */
-	readonly length: number;
-
-	/**
-	 * The top coordinate.
-	 */
-	top: number;
-
-	/**
-	 * The left coordinate.
-	 */
-	x: number;
-
-	/**
-	 * The top coordinate.
-	 */
-	y: number;
 
 }
 
