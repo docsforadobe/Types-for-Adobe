@@ -2528,24 +2528,6 @@ declare class _Control {
 
 }
 
-interface WindowPanelGroupAddMap {
-	button: Button;
-	checkbox: Checkbox;
-	dropdownlist: DropDownList;
-	edittext: EditText;
-	flashplayer: FlashPlayer;
-	group: Group;
-	iconbutton: IconButton;
-	listbox: ListBox;
-	panel: Panel;
-	progressbar: Progressbar;
-	radiobutton: RadioButton;
-	scrollbar: Scrollbar;
-	slider: Slider;
-	statictext: StaticText;
-	treeview: TreeView;
-}
-
 interface ControlPropertiesMap {
 	/**
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
