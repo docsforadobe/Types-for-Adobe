@@ -776,7 +776,7 @@ declare class StaticText extends _Control {
 	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
 	 * scrolling: When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["statictext"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -844,7 +844,7 @@ declare class Button extends _Control {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Button object has no creation properties, but the third argument to the add() method that creates it can be the initial text value.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["button"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -924,7 +924,7 @@ declare class IconButton extends _Control {
 	 * Creation properties of an IconButton object can include:
 	 * style:A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["iconbutton"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1009,7 +1009,7 @@ declare class EditText extends _Control {
 	 * enterKeySignalsOnChange: When false (the default), the control signals an onChange event when the editable text is changed and the control loses the keyboard focus (that is, the user tabs to another control, clicks outside the control, or types Enter). When true, the control only signals an onChange() event when the editable text is changed and the user types Enter; other changes to the keyboard focus do not signal the event.
 	 * wantReturn: Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["edittext"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1123,7 +1123,7 @@ declare class ListBox extends _Control {
 	 * columnWidths: An array of numbers for the preferred width in pixels of each column.
 	 * columnTitles: A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["listbox"];
 
 	/**
 	 * The currently selected item for a single-selection list, or an array of items for current selection in a multi-selection list.
@@ -1244,7 +1244,7 @@ declare class DropDownList extends _Control {
 	 * Creation properties of a DropDownList object can include:
 	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["dropdownlist"];
 
 	/**
 	 * The currently selectedlist item.
@@ -1422,7 +1422,7 @@ declare class Checkbox extends _Control {
 	 * An object that contains one or more creation properties of the item (properties used only when the element is created).
 	 * A CheckBox object has no creation properties. The third argument to the add() method that creates it is the text to be displayed.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["checkbox"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1521,7 +1521,7 @@ declare class Scrollbar extends _Control {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Scrollbar object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["scrollbar"];
 
 	/**
 	 * The key sequence that invokes the  onShortcutKey() callback for this element (in Windows only).
@@ -1618,7 +1618,7 @@ declare class RadioButton extends _Control {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A RadioButton object has no creation properties. The third argument of the add() method that creates can be the label text.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["radiobutton"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1709,7 +1709,7 @@ declare class Slider extends _Control {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Slider object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["slider"];
 
 	/**
 	 * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1794,7 +1794,7 @@ declare class Progressbar extends _Control {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["progressbar"];
 
 	/**
 	 * The current position of the indicator.
@@ -1848,7 +1848,7 @@ declare class TreeView extends _Control {
 	 * Creation properties of a ListBox object can include:
 	 * items: An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["treeview"];
 
 	/**
 	 * The currently selectedlist item.
@@ -1950,7 +1950,7 @@ declare class FlashPlayer extends _Control {
 	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A FlashPlayer object has no creation properties.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["flashplayer"];
 
 	/**
 	 * A function definition for a callback from the Flash ActionScript environment.
@@ -2036,7 +2036,7 @@ declare class Group extends _Control {
 	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
 	 * A Group object has no creation properties.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["group"];
 
 	/**
 	 * The number of pixels separating one child element from its adjacent sibling element.
@@ -2124,7 +2124,7 @@ declare class Panel extends _Control {
 	 * borderStyle: A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
 	 * su1PanelCoordinates: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
 	 */
-	properties: object;
+	properties: ControlPropertiesMap["panel"];
 
 	/**
 	 * The number of pixels separating one child element from its adjacent sibling element.
