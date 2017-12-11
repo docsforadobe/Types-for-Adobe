@@ -2528,21 +2528,21 @@ declare class _Control {
 
 }
 
+/**
+ * An object that contains one or more creation properties of the element (properties used only when the element is created).
+ */
 interface ControlPropertiesMap {
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Button object has no creation properties, but the third argument to the add() method that creates it can be the initial text value.
 	 */
 	button: {};
 
 	/**
-	 * An object that contains one or more creation properties of the item (properties used only when the element is created).
 	 * A CheckBox object has no creation properties. The third argument to the add() method that creates it is the text to be displayed.
 	 */
 	checkbox: {};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * Creation properties of a DropDownList object can include:
 	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
@@ -2552,7 +2552,6 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * Creation properties of an EditText object can include:
 	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
 	 * readonly: When false (the default),the control accepts text input. When true, the control does not accept input but only displays the contents of the text property.
@@ -2570,19 +2569,16 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A FlashPlayer object has no creation properties.
 	 */
 	flashplayer: {};
 
 	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
 	 * A Group object has no creation properties.
 	 */
 	group: {};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * Creation properties of an IconButton object can include:
 	 * style: A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
 	 */
@@ -2591,7 +2587,6 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
 	 * Creation properties of a ListBox object can include:
 	 * multiselect: When false (the default), only one item can be selected. When true, multiple items can be selected.
 	 * items: An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
@@ -2611,7 +2606,6 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
 	 * Creation properties of a Panel object can include:
 	 * borderStyle: A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
 	 * su1PanelCoordinates: Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
@@ -2623,31 +2617,26 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A ProgressBar object has no creation properties. The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
 	 */
 	progressbar: {};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A RadioButton object has no creation properties. The third argument of the add() method that creates can be the label text.
 	 */
 	radiobutton: {};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Scrollbar object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
 	scrollbar: {};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * A Slider object has no creation properties. The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 */
 	slider: {};
 
 	/**
-	 * An object that contains one or more creation properties of the container (properties used only when the element is created).
 	 * Creation properties of a StaticText object can include:
 	 * multiline: When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
 	 * scrolling: When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
@@ -2658,7 +2647,6 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * An object that contains one or more creation properties of the control (properties used only when the element is created).
 	 * Creation properties of a TreeView object can include:
 	 * items: An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
