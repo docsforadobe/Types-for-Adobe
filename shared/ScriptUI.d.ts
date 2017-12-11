@@ -2654,4 +2654,73 @@ interface WindowPanelGroupAddMap {
 	"treeview": TreeView;
 }
 
+interface ControlPropertiesMap {
+	"button": {
+		name?: string;
+	};
+	"checkbox": {
+		name?: string;
+	};
+	"dropdownlist": {
+		name?: string;
+		items?: string[];
+	};
+	"edittext": {
+		name?: string;
+		readonly?: boolean;
+		noecho?: boolean;
+		enterKeySignalsOnChange?: boolean;
+		borderless?: boolean;
+		multiline?: boolean;
+		scrollable?: boolean;
+	};
+	"flashplayer": {
+		name?: string;
+	};
+	"group": {
+		name?: string;
+	};
+	"iconbutton": {
+		name?: string;
+		style?: string;
+		toggle?: boolean;
+	};
+	"listbox": {
+		name?: string;
+		multiselect?: boolean;
+		items?: string[];
+		numberOfColumns?: number;
+		showHeaders?: boolean;
+		columnWidths?: number[];
+		columnTitles?: string[];
+	};
+	"panel": {
+		name?: string;
+		borderStyle?: string;
+		su1PanelCoordinates?: boolean;
+	};
+	"progressbar": {
+		name?: string;
+	};
+	"radiobutton": {
+		name?: string;
+	};
+	"scrollbar": {
+		name?: string;
+	};
+	"slider": {
+		name?: string;
+	};
+	"statictext": {
+		name?: string;
+		multiline?: boolean;
+		scrolling?: boolean;
+		truncate?: string;
+	};
+	"treeview": {
+		name?: string;
+		items?: string[];
+	};
+}
+
 type WindowPanelGroupAdd = <K extends keyof WindowPanelGroupAddMap>(type: K, bounds?: Bounds, text?: string, properties?: object) => WindowPanelGroupAddMap[K];
