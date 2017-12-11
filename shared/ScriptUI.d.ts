@@ -2695,9 +2695,7 @@ interface ControlPropertiesMap {
 		borderStyle?: string;
 		su1PanelCoordinates?: boolean;
 	};
-	"progressbar": {
-		name?: string;
-	};
+	"progressbar": undefined;
 	"radiobutton": undefined;
 	"scrollbar": undefined;
 	"slider": undefined;
@@ -2723,7 +2721,7 @@ interface WindowPanelGroupAdd {
 	(type: "iconbutton", bounds?: Bounds, icon?: string | File, properties?: ControlPropertiesMap["iconbutton"]): IconButton;
 	(type: "listbox", bounds?: Bounds, items?: string[], properties?: ControlPropertiesMap["listbox"]): ListBox;
 	(type: "panel", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["panel"]): Panel;
-	(type: "progressbar", bounds?: Bounds, value?: number, minvalue?: number, maxvalue?: number, properties?: ControlPropertiesMap["progressbar"]): Progressbar;
+	(type: "progressbar", bounds?: Bounds, value?: number, max?: number, properties?: ControlPropertiesMap["progressbar"]): Progressbar;
 	(type: "radiobutton", bounds?: Bounds, text?: string, properties?: ControlPropertiesMap["radiobutton"]): RadioButton;
 	(type: "scrollbar", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: ControlPropertiesMap["scrollbar"]): Scrollbar;
 	(type: "slider", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: ControlPropertiesMap["slider"]): Slider;
