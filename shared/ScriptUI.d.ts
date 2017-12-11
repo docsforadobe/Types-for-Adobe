@@ -2698,9 +2698,7 @@ interface ControlPropertiesMap {
 	"progressbar": {
 		name?: string;
 	};
-	"radiobutton": {
-		name?: string;
-	};
+	"radiobutton": undefined;
 	"scrollbar": undefined,
 	"slider": {
 		name?: string;
