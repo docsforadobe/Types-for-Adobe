@@ -2610,7 +2610,6 @@ interface ControlPropertiesMap {
 	 * @param su1PanelCoordinates Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
 	 */
 	panel: {
-		name: string;
 		borderStyle: string;
 		su1PanelCoordinates: boolean;
 	};
