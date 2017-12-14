@@ -2164,30 +2164,30 @@ declare class Panel extends _Control {
 
 
 declare class ObjectPoint {
-  /**
-   * The left coordinate.
-   */
-  left: number;
+	/**
+	 * The left coordinate.
+	 */
+	left: number;
 
-  /**
-   * The array length.
-   */
-  readonly length: number;
+	/**
+	 * The array length.
+	 */
+	readonly length: number;
 
-  /**
-   * The top coordinate.
-   */
-  top: number;
+	/**
+	 * The top coordinate.
+	 */
+	top: number;
 
-  /**
-   * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
-   */
-  x: number;
+	/**
+	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	x: number;
 
-  /**
-   * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
-   */
-  y: number;
+	/**
+	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	y: number;
 
 }
 
@@ -2201,24 +2201,24 @@ declare type ArrayPoint = [number, number]
 declare type Point = ArrayPoint | ObjectPoint
 
 declare class ObjectDimension {
-  /**
-   * The height in pixels.
-   */
-  height: number;
+	/**
+	 * The height in pixels.
+	 */
+	height: number;
 
-  /**
-   * The array length.
-   */
-  readonly length: number;
+	/**
+	 * The array length.
+	 */
+	readonly length: number;
 
-  /**
-   * The width in pixels.
-   */
-  width: number;
+	/**
+	 * The width in pixels.
+	 */
+	width: number;
 
-  [0]: number;
+	[0]: number;
 
-  [1]: number;
+	[1]: number;
 
 }
 
@@ -2231,58 +2231,58 @@ declare type ArrayDimension = [number, number]
 declare type Dimension = ArrayDimension | ObjectDimension
 
 declare class ObjectBounds {
-  /**
-   * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
-   */
-  bottom: number;
+	/**
+	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	bottom: number;
 
-  /**
-   * The height in pixels.
-   */
-  height: number;
+	/**
+	 * The height in pixels.
+	 */
+	height: number;
 
-  /**
-   * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
-   */
-  left: number;
+	/**
+	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	left: number;
 
-  /**
-   * The array length.
-   */
-  readonly length: number;
+	/**
+	 * The array length.
+	 */
+	readonly length: number;
 
-  /**
-   * The width in pixels.
-   */
-  right: number;
+	/**
+	 * The width in pixels.
+	 */
+	right: number;
 
-  /**
-   * The height in pixels.
-   */
-  top: number;
+	/**
+	 * The height in pixels.
+	 */
+	top: number;
 
-  /**
-   * The width in pixels.
-   */
-  width: number;
+	/**
+	 * The width in pixels.
+	 */
+	width: number;
 
-  /**
-   * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
-   */
-  x: number;
+	/**
+	 * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	x: number;
 
-  /**
-   * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
-   */
-  y: number;
+	/**
+	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
+	 */
+	y: number;
 
-  [0]: number;
+	[0]: number;
 
-  [1]: number;
+	[1]: number;
 
-  [2]: number;
+	[2]: number;
 
-  [3]: number;
+	[3]: number;
 
 }
 
