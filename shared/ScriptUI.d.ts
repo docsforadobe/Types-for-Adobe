@@ -2513,11 +2513,12 @@ declare class _Control {
 }
 
 /**
+ * Creation properties map
  * An object that contains one or more creation properties of the element (properties used only when the element is created).
  */
 interface ControlPropertiesMap {
 	/**
-	 * A Button object has no creation properties.
+	 * Creation properties of a Button
 	 * But the third argument to the add() method that creates it can be the initial text value.
 	 * @param name A unique name for the control. For a modal dialog, the special name "ok" makes this defaultElement, and the special name "cancel" makes this the cancelElement of the parent dialog.
 	 */
@@ -2526,7 +2527,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A CheckBox object has no creation properties.
+	 * Creation properties of a CheckBox
 	 * The third argument to the add() method that creates it is the text to be displayed.
 	 * @param name A unique name for the control.
 	 */
@@ -2535,7 +2536,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of a DropDownList object can include:
+	 * Creation properties of a DropDownList
 	 * @param name A unique name for the control.
 	 * @param items An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
@@ -2545,7 +2546,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of an EditText object can include:
+	 * Creation properties of an EditText
 	 * @param name A unique name for the control.
 	 * @param multiline When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
 	 * @param borderless When true, the control is drawn with no border. Default is false.
@@ -2567,7 +2568,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A FlashPlayer object has no creation properties.
+	 * Creation properties of a FlashPlayer
 	 * @param name A unique name for the control.
 	 */
 	flashplayer: {
@@ -2575,7 +2576,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A Group object has no creation properties.
+	 * Creation properties of a Group
 	 * @param name A unique name for the control.
 	 */
 	group: {
@@ -2583,7 +2584,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of an IconButton object can include:
+	 * Creation properties of an IconButton
 	 * @param name A unique name for the control.
 	 * @param style A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
 	 * @param toggle For a button-style control, a value of true causes it to get a button-pressed appearance the first time it is clicked, and alternate with the unpressed appearance each time it is clicked. The toggle state is reflected in the control’s value property.
@@ -2595,7 +2596,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of a ListBox object can include:
+	 * Creation properties of a ListBox
 	 * @param name A unique name for the control.
 	 * @param multiselect When false (the default), only one item can be selected. When true, multiple items can be selected.
 	 * @param selected When true, multiple items can be selected.
@@ -2617,7 +2618,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of a Panel object can include:
+	 * Creation properties of a Panel
 	 * @param name A unique name for the control.
 	 * @param borderStyle A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
 	 * @param su1PanelCoordinates Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
@@ -2629,7 +2630,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A ProgressBar object has no creation properties.
+	 * Creation properties of a ProgressBar
 	 * The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
 	 * @param name A unique name for the control.
 	 */
@@ -2638,7 +2639,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A RadioButton object has no creation properties.
+	 * Creation properties of a RadioButton
 	 * The third argument of the add() method that creates can be the label text.
 	 * @param name A unique name for the control.
 	 */
@@ -2647,7 +2648,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A Scrollbar object has no creation properties.
+	 * Creation properties of a Scrollbar
 	 * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 * @param name A unique name for the control.
 	 */
@@ -2656,7 +2657,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * A Slider object has no creation properties.
+	 * Creation properties of a Slider
 	 * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
 	 * @param name A unique name for the control.
 	 */
@@ -2665,7 +2666,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of a StaticText object can include:
+	 * Creation properties of a StaticText
 	 * @param name A unique name for the control.
 	 * @param multiline When false (the default), the control displays a single line of text. When true, the control displays multiple lines, in which case the text wraps within the width of the control.
 	 * @param scrolling When false (the default), the displayed text cannot be scrolled. When true, the displayed text can be vertically scrolled using the Up Arrow and Down Arrow; this case implies multiline=true.
@@ -2679,7 +2680,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of a TreeView object can include:
+	 * Creation properties of a TreeView
 	 * @param name A unique name for the control.
 	 * @param items An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
 	 */
@@ -2689,7 +2690,7 @@ interface ControlPropertiesMap {
 	};
 
 	/**
-	 * Creation properties of a Window object can include:
+	 * Creation properties of a Window
 	 * @param resizeable When true, the window can be resized by the user. Default is false.
 	 * @param su1PanelCoordinates Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting.
 	 * @param closeButton Bridge only. When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs.
