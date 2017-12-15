@@ -2196,6 +2196,11 @@ declare class ObjectPoint {
 
 }
 
+/**
+ * Defines the size of a window or UI element. Contains a 2-element array.
+ * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
+ */
+declare type Dimension = ObjectDimension | [number, number]
 declare class ObjectDimension {
 	/**
 	 * The height in pixels.
@@ -2217,12 +2222,6 @@ declare class ObjectDimension {
 	[1]: number;
 
 }
-
-/**
- * Defines the size of a window or UI element. Contains a 2-element array.
- * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
- */
-declare type Dimension = ObjectDimension | [number, number]
 
 declare class ObjectBounds {
 	/**
