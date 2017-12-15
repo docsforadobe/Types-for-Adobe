@@ -2398,22 +2398,22 @@ declare class UIEvent {
  */
 declare class Event {
 	/**
-	 *
+	 * 
 	 */
 	static readonly AT_TARGET: any;
 
 	/**
-	 *
+	 * 
 	 */
 	static readonly BUBBLING_PHASE: any;
 
 	/**
-	 *
+	 * 
 	 */
 	static readonly CAPTURING_PHASE: any;
 
 	/**
-	 *
+	 * 
 	 */
 	static readonly NOT_DISPATCHING: any;
 
