@@ -218,7 +218,7 @@ declare class Window extends _Control {
 	 * @param bounds The window's position and size.
 	 * @param properties An object containing creation-only properties. Can contain any of these properties: resizeable: When true, the window can be resized by the user. Default is false. su1PanelCoordinates: Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting. closeButton:When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs. maximizeButton:When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs. minimizeButton: When true, the title bar includes a button to minimize or iconify the window, if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Main windows cannot have a minimize button in Mac OS. Not used for dialogs. independent:When true, a window of type window is independent of other application windows, and can be hidden behind them in Windows. In Mac OS, has no effect. Default is false. borderless:When true, the window has no title bar or borders. Properties that control those features are ignored.
 	 */
-	constructor(type: string, title?: string, bounds?: Bounds, properties?: Partial<ControlPropertiesMap["window"]>);
+	constructor(type: string, title?: string, bounds?: Bounds, properties?: Partial<_ControlPropertiesMap["window"]>);
 
 	/**
 	 * Creates and returns a new control or container object and adds it to the children of this window.
@@ -2515,7 +2515,7 @@ declare class _Control {
 /**
  * An object that contains one or more creation properties of the element (properties used only when the element is created).
  */
-interface ControlPropertiesMap {
+interface _ControlPropertiesMap {
 	/**
 	 * A Button object has no creation properties.
 	 * But the third argument to the add() method that creates it can be the initial text value.
@@ -2662,19 +2662,19 @@ interface ControlPropertiesMap {
 }
 
 interface _WindowPanelGroupAdd {
-	(type: "button", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["button"]>): Button;
-	(type: "checkbox", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["checkbox"]>): Checkbox;
-	(type: "dropdownlist", bounds?: Bounds, items?: string[], properties?: Partial<ControlPropertiesMap["dropdownlist"]>): DropDownList;
-	(type: "edittext", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["edittext"]>): EditText;
-	(type: "flashplayer", bounds?: Bounds, movieToLoad?: string | File, properties?: Partial<ControlPropertiesMap["flashplayer"]>): FlashPlayer;
-	(type: "group", bounds?: Bounds, properties?: Partial<ControlPropertiesMap["group"]>): Group;
-	(type: "iconbutton", bounds?: Bounds, icon?: string | File, properties?: Partial<ControlPropertiesMap["iconbutton"]>): IconButton;
-	(type: "listbox", bounds?: Bounds, items?: string[], properties?: Partial<ControlPropertiesMap["listbox"]>): ListBox;
-	(type: "panel", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["panel"]>): Panel;
-	(type: "progressbar", bounds?: Bounds, value?: number, max?: number, properties?: Partial<ControlPropertiesMap["progressbar"]>): Progressbar;
-	(type: "radiobutton", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["radiobutton"]>): RadioButton;
-	(type: "scrollbar", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: Partial<ControlPropertiesMap["scrollbar"]>): Scrollbar;
-	(type: "slider", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: Partial<ControlPropertiesMap["slider"]>): Slider;
-	(type: "statictext", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["statictext"]>): StaticText;
-	(type: "treeview", bounds?: Bounds, items?: string[], properties?: Partial<ControlPropertiesMap["treeview"]>): TreeView;
+	(type: "button", bounds?: Bounds, text?: string, properties?: Partial<_ControlPropertiesMap["button"]>): Button;
+	(type: "checkbox", bounds?: Bounds, text?: string, properties?: Partial<_ControlPropertiesMap["checkbox"]>): Checkbox;
+	(type: "dropdownlist", bounds?: Bounds, items?: string[], properties?: Partial<_ControlPropertiesMap["dropdownlist"]>): DropDownList;
+	(type: "edittext", bounds?: Bounds, text?: string, properties?: Partial<_ControlPropertiesMap["edittext"]>): EditText;
+	(type: "flashplayer", bounds?: Bounds, movieToLoad?: string | File, properties?: Partial<_ControlPropertiesMap["flashplayer"]>): FlashPlayer;
+	(type: "group", bounds?: Bounds, properties?: Partial<_ControlPropertiesMap["group"]>): Group;
+	(type: "iconbutton", bounds?: Bounds, icon?: string | File, properties?: Partial<_ControlPropertiesMap["iconbutton"]>): IconButton;
+	(type: "listbox", bounds?: Bounds, items?: string[], properties?: Partial<_ControlPropertiesMap["listbox"]>): ListBox;
+	(type: "panel", bounds?: Bounds, text?: string, properties?: Partial<_ControlPropertiesMap["panel"]>): Panel;
+	(type: "progressbar", bounds?: Bounds, value?: number, max?: number, properties?: Partial<_ControlPropertiesMap["progressbar"]>): Progressbar;
+	(type: "radiobutton", bounds?: Bounds, text?: string, properties?: Partial<_ControlPropertiesMap["radiobutton"]>): RadioButton;
+	(type: "scrollbar", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: Partial<_ControlPropertiesMap["scrollbar"]>): Scrollbar;
+	(type: "slider", bounds?: Bounds, value?: number, min?: number, max?: number, properties?: Partial<_ControlPropertiesMap["slider"]>): Slider;
+	(type: "statictext", bounds?: Bounds, text?: string, properties?: Partial<_ControlPropertiesMap["statictext"]>): StaticText;
+	(type: "treeview", bounds?: Bounds, items?: string[], properties?: Partial<_ControlPropertiesMap["treeview"]>): TreeView;
 }
