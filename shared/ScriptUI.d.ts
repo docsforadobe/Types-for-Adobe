@@ -227,7 +227,7 @@ declare class Window extends _Control {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add: WindowPanelGroupAdd;
+	add: _WindowPanelGroupAdd;
 
 	/**
 	 * Displays a platform-standard dialog containing a short message and an OK button.
@@ -1936,7 +1936,7 @@ declare class Group extends _Control {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add: WindowPanelGroupAdd;
+	add: _WindowPanelGroupAdd;
 
 	/**
 	 * An event-handler callback function, called when the group is about to be drawn.
@@ -2021,7 +2021,7 @@ declare class Panel extends _Control {
 	 * @param text The text or label, a localizable string. Initial text to be displayed in the control as the title, label, or contents, depending on the control type. If supplied, this value is assigned to the new object’s text property.
 	 * @param properties An object that contains one or more creation properties of the new child (properties used only when the element is created). The creation properties depend on the element type. See properties property of each control type.
 	 */
-	add: WindowPanelGroupAdd;
+	add: _WindowPanelGroupAdd;
 
 	/**
 	 * An event-handler callback function, called when the panel is about to be drawn.
@@ -2661,7 +2661,7 @@ interface ControlPropertiesMap {
 
 }
 
-interface WindowPanelGroupAdd {
+interface _WindowPanelGroupAdd {
 	(type: "button", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["button"]>): Button;
 	(type: "checkbox", bounds?: Bounds, text?: string, properties?: Partial<ControlPropertiesMap["checkbox"]>): Checkbox;
 	(type: "dropdownlist", bounds?: Bounds, items?: string[], properties?: Partial<ControlPropertiesMap["dropdownlist"]>): DropDownList;
