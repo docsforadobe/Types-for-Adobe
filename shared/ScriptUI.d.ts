@@ -2194,6 +2194,10 @@ declare class _ObjectPoint {
 	 */
 	y: number;
 
+	[0]: number;
+
+	[1]: number;
+
 }
 
 /**
