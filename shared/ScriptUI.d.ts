@@ -2520,7 +2520,7 @@ interface ControlPropertiesMap {
 	/**
 	 * Creation properties of a Button
 	 * But the third argument to the add() method that creates it can be the initial text value.
-	 * @param name A unique name for the control. For a modal dialog, the special name "ok" makes this defaultElement, and the special name "cancel" makes this the cancelElement of the parent dialog.
+	 * @param name A unique name for the control. Special name "ok" makes the button primary for parent dialog, and the special name "cancel" makes the button default cancel button for parent dialog.
 	 */
 	button: {
 		name: string;
