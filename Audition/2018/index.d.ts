@@ -1,4 +1,5 @@
 /// <reference path="../../shared/global.d.ts" />
+/// <reference path="../../shared/ScriptUI.d.ts" />
 
 /**
  * The Metadata class provides access to document metadata
