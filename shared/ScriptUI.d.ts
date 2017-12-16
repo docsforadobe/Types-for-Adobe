@@ -2043,8 +2043,8 @@ declare class Panel extends _Control {
  * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
  * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
  */
-declare type Point = _ObjectPoint | [number, number];
-declare class _ObjectPoint {
+declare type Point = _Point | [number, number];
+declare class _Point {
 	/**
 	 * The left coordinate.
 	 */
