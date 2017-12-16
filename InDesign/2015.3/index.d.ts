@@ -1,5 +1,4 @@
 /// <reference path="../../shared/global.d.ts" />
-/// <reference path="../../shared/ScriptUI.d.ts" />
 
 /**
  * An assignment.
