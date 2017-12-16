@@ -2107,8 +2107,8 @@ declare class _Dimension {
  * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
  * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
  */
-declare type Bounds = _ObjectBounds | [number, number, number, number];
-declare class _ObjectBounds {
+declare type Bounds = _Bounds | [number, number, number, number];
+declare class _Bounds {
 	/**
 	 * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
 	 */
