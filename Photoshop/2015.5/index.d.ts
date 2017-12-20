@@ -6172,12 +6172,12 @@ declare class ExportOptionsIllustrator extends ExportOptions {
 	/**
 	 * The path to export.
 	 */
-	static path: IllustratorPathType;
+	path: IllustratorPathType;
 
 	/**
 	 * The name of the path to export. Valid only for named paths.
 	 */
-	static pathName: string;
+	pathName: string;
 
 }
 
@@ -6188,87 +6188,87 @@ declare class ExportOptionsSaveForWeb extends ExportOptions {
 	/**
 	 * If true, uses 8 bits. If false, uses 24 bits. Valid only when 'format' = PNG.
 	 */
-	static PNG8: boolean;
+	PNG8: boolean;
 
 	/**
 	 * The amount of blur to apply to the image to reduce artifacts.
 	 */
-	static blur: number;
+	blur: number;
 
 	/**
 	 * The color reduction algorithm.
 	 */
-	static colorReduction: ColorReductionType;
+	colorReduction: ColorReductionType;
 
 	/**
 	 * The number of colors in the palette.
 	 */
-	static colors: number;
+	colors: number;
 
 	/**
 	 * The type of dither.
 	 */
-	static dither: Dither;
+	dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither' = diffusion.
 	 */
-	static ditherAmount: number;
+	ditherAmount: number;
 
 	/**
 	 * The file format to use. Save For Web supports only Compuserve GIF, JPEG, PNG-8, PNG-24, and BMP formats.
 	 */
-	static format: SaveDocumentType;
+	format: SaveDocumentType;
 
 	/**
 	 * If true, includes the document's embedded profile.
 	 */
-	static includeProfile: boolean;
+	includeProfile: boolean;
 
 	/**
 	 * If true, the image downloads in multiple passes, progressive.
 	 */
-	static interlaced: boolean;
+	interlaced: boolean;
 
 	/**
 	 * The amount of lossiness allowed.
 	 */
-	static lossy: number;
+	lossy: number;
 
 	/**
 	 * The colors to blend transparent pixels against.
 	 */
-	static matteColor: RGBColor;
+	matteColor: RGBColor;
 
 	/**
 	 * If true, creates smaller but less compatible files.
 	 */
-	static optimized: boolean;
+	optimized: boolean;
 
 	/**
 	 * The quality of the produced image (as a percentage). Range: 0 to 100.
 	 */
-	static quality: number;
+	quality: number;
 
 	/**
 	 * If true, transparent areas of the image are included in the saved image.
 	 */
-	static transparency: boolean;
+	transparency: boolean;
 
 	/**
 	 * The amount of transparency dither. Valid only when 'transparency' = true.
 	 */
-	static transparencyAmount: number;
+	transparencyAmount: number;
 
 	/**
 	 * The transparency dither algorithm.
 	 */
-	static transparencyDither: Dither;
+	transparencyDither: Dither;
 
 	/**
 	 * The tolerance amount within which to snap close colors to web palette colors.
 	 */
-	static webSnap: number;
+	webSnap: number;
 
 }
 
