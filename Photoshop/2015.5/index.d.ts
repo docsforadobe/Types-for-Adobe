@@ -5103,27 +5103,27 @@ declare class PhotoCDOpenOptions extends OpenOptions {
 	/**
 	 * The profile to use when reading the image.
 	 */
-	static colorProfileName: string;
+	colorProfileName: string;
 
 	/**
 	 * The color space for the image.
 	 */
-	static colorSpace: PhotoCDColorSpace;
+	colorSpace: PhotoCDColorSpace;
 
 	/**
 	 * The image orientation.
 	 */
-	static orientation: Orientation;
+	orientation: Orientation;
 
 	/**
 	 * The dimensions of the image.
 	 */
-	static pixelSize: PhotoCDSize;
+	pixelSize: PhotoCDSize;
 
 	/**
 	 * The resolution of the image (in pixels per inch)
 	 */
-	static resolution: number;
+	resolution: number;
 
 }
 
@@ -5134,42 +5134,42 @@ declare class RawFormatOpenOptions extends OpenOptions {
 	/**
 	 * The number of bits for each channel. Valid values: 8 or 16.
 	 */
-	static bitsPerChannel: number;
+	bitsPerChannel: number;
 
 	/**
 	 * The order in which bytes will be read. Valid only when 'bits per channel' = 16.
 	 */
-	static byteOrder: ByteOrder;
+	byteOrder: ByteOrder;
 
 	/**
 	 * The number of channels in the image. Valid only when 'bits per channel' = 16. Range: 1 to 56.
 	 */
-	static channelNumber: number;
+	channelNumber: number;
 
 	/**
 	 * The number of bytes of information that will appear in the file before actual image information begins; that is, the number of zeroes inserted at the beginning of the file as placeholders. Range: 0 to 1919999.
 	 */
-	static headerSize: number;
+	headerSize: number;
 
 	/**
 	 * The image height (in pixels)
 	 */
-	static height: number;
+	height: number;
 
 	/**
 	 * If true, color values are stored sequentially.
 	 */
-	static interleaveChannels: boolean;
+	interleaveChannels: boolean;
 
 	/**
 	 * If true, the header is retained when saving.
 	 */
-	static retainHeader: boolean;
+	retainHeader: boolean;
 
 	/**
 	 * The image width (in pixels)
 	 */
-	static width: number;
+	width: number;
 
 }
 
@@ -5180,72 +5180,72 @@ declare class GenericPDFOpenOptions extends OpenOptions {
 	/**
 	 * If true, anti-aliasing is used.
 	 */
-	static antiAlias: boolean;
+	antiAlias: boolean;
 
 	/**
 	 * The number of bits per channel.
 	 */
-	static bitsPerChannel: BitsPerChannelType;
+	bitsPerChannel: BitsPerChannelType;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static constrainProportions: boolean;
+	constrainProportions: boolean;
 
 	/**
 	 * The cropping method to use.
 	 */
-	static cropPage: CropToType;
+	cropPage: CropToType;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static height: UnitValue | number;
+	height: UnitValue | number;
 
 	/**
 	 * The document mode.
 	 */
-	static mode: OpenDocumentMode;
+	mode: OpenDocumentMode;
 
 	/**
 	 * The name of the document.
 	 */
-	static name: string;
+	name: string;
 
 	/**
 	 * The number of the 3d object to open.
 	 */
-	static object: number;
+	object: number;
 
 	/**
 	 * The number of the page or image to open.
 	 */
-	static page: number;
+	page: number;
 
 	/**
 	 * The resolution of the document (in pixels per inch)
 	 */
-	static resolution: number;
+	resolution: number;
 
 	/**
 	 * If true, suppresses any warnings that may occur during opening.
 	 */
-	static suppressWarnings: boolean;
+	suppressWarnings: boolean;
 
 	/**
 	 * If true, the value specified in the page property refers to a page number. If false, the value specifies an image number.
 	 */
-	static use3DObjectNumber: boolean;
+	use3DObjectNumber: boolean;
 
 	/**
 	 * If true, the value specified in the page property refers to a page number. If false, the value specifies an image number.
 	 */
-	static usePageNumber: boolean;
+	usePageNumber: boolean;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static width: UnitValue | number;
+	width: UnitValue | number;
 
 }
 
@@ -5256,32 +5256,32 @@ declare class GenericEPSOpenOptions extends OpenOptions {
 	/**
 	 * If true, anti-aliasing is used.
 	 */
-	static antiAlias: boolean;
+	antiAlias: boolean;
 
 	/**
 	 * If true, the image proportions are constrained.
 	 */
-	static constrainProportions: boolean;
+	constrainProportions: boolean;
 
 	/**
 	 * The image height.
 	 */
-	static height: UnitValue | number;
+	height: UnitValue | number;
 
 	/**
 	 * The document mode.
 	 */
-	static mode: OpenDocumentMode;
+	mode: OpenDocumentMode;
 
 	/**
 	 * The resolution of the document (in pixels per inch)
 	 */
-	static resolution: number;
+	resolution: number;
 
 	/**
 	 * The image width.
 	 */
-	static width: UnitValue | number;
+	width: UnitValue | number;
 
 }
 
@@ -5292,37 +5292,37 @@ declare class DICOMOpenOptions extends OpenOptions {
 	/**
 	 * If true, patient information is anonymized.
 	 */
-	static anonymize: boolean;
+	anonymize: boolean;
 
 	/**
 	 * The number of columns in an n-up configuration.
 	 */
-	static columns: number;
+	columns: number;
 
 	/**
 	 * If true, the image is inverted.
 	 */
-	static reverse: boolean;
+	reverse: boolean;
 
 	/**
 	 * The number of rows in an n-up configuration.
 	 */
-	static rows: number;
+	rows: number;
 
 	/**
 	 * If true, overlays are shown (if present).
 	 */
-	static showOverlays: boolean;
+	showOverlays: boolean;
 
 	/**
 	 * The contrast of the image in Houndsfield units.
 	 */
-	static windowLevel: number;
+	windowLevel: number;
 
 	/**
 	 * The brightness of the image in Houndsfield units.
 	 */
-	static windowWidth: number;
+	windowWidth: number;
 
 }
 
@@ -5333,137 +5333,137 @@ declare class CameraRAWOpenOptions extends OpenOptions {
 	/**
 	 * The number of bits per channel.
 	 */
-	static bitsPerChannel: BitsPerChannelType;
+	bitsPerChannel: BitsPerChannelType;
 
 	/**
 	 * The blue hue of the shot. Range: -100 to 100.
 	 */
-	static blueHue: number;
+	blueHue: number;
 
 	/**
 	 * The blue saturation of the shot. Range: -100 to 100.
 	 */
-	static blueSaturation: number;
+	blueSaturation: number;
 
 	/**
 	 * The brightness of the shot. Range: 0 to 150.
 	 */
-	static brightness: number;
+	brightness: number;
 
 	/**
 	 * The chromatic aberration B/Y of the shot. Range: -100 to 100.
 	 */
-	static chromaticAberrationBY: number;
+	chromaticAberrationBY: number;
 
 	/**
 	 * The chromatic aberration R/C of the shot. Range: -100 to 100.
 	 */
-	static chromaticAberrationRC: number;
+	chromaticAberrationRC: number;
 
 	/**
 	 * The color noise reduction of the shot. Range: 0 to 100.
 	 */
-	static colorNoiseReduction: number;
+	colorNoiseReduction: number;
 
 	/**
 	 * The image color space.
 	 */
-	static colorSpace: ColorSpaceType;
+	colorSpace: ColorSpaceType;
 
 	/**
 	 * The constrast of the shot. Range: -50 to 100.
 	 */
-	static contrast: number;
+	contrast: number;
 
 	/**
 	 * The exposure of the shot. Range: -4.0 to 4.0.
 	 */
-	static exposure: number;
+	exposure: number;
 
 	/**
 	 * The green hue of the shot. Range: -100 to 100.
 	 */
-	static greenHue: number;
+	greenHue: number;
 
 	/**
 	 * The green saturation of the shot. Range: -100 to 100.
 	 */
-	static greenSaturation: number;
+	greenSaturation: number;
 
 	/**
 	 * The luminance smoothing of the shot. Range: 0 to 100.
 	 */
-	static luminanceSmoothing: number;
+	luminanceSmoothing: number;
 
 	/**
 	 * The red hue of the shot. Range: -100 to 100.
 	 */
-	static redHue: number;
+	redHue: number;
 
 	/**
 	 * The red saturation of the shot. Range: -100 to 100.
 	 */
-	static redSaturation: number;
+	redSaturation: number;
 
 	/**
 	 * The resolution of the document (in pixels per inch)
 	 */
-	static resolution: number;
+	resolution: number;
 
 	/**
 	 * The saturation of the shot. Range: -100 to 100.
 	 */
-	static saturation: number;
+	saturation: number;
 
 	/**
 	 * The global settings for all Camera RAW options.
 	 */
-	static settings: CameraRAWSettingsType;
+	settings: CameraRAWSettingsType;
 
 	/**
 	 * The shadow tint of the shot. Range: -100 to 100.
 	 */
-	static shadowTint: number;
+	shadowTint: number;
 
 	/**
 	 * The shadows of the shot. Range: 0 to 100.
 	 */
-	static shadows: number;
+	shadows: number;
 
 	/**
 	 * The sharpness of the shot. Range: 0 to 100.
 	 */
-	static sharpness: number;
+	sharpness: number;
 
 	/**
 	 * The size of the new document.
 	 */
-	static size: CameraRAWSize;
+	size: CameraRAWSize;
 
 	/**
 	 * The temperature of the shot. Range: 2000 to 50000.
 	 */
-	static temperature: number;
+	temperature: number;
 
 	/**
 	 * The tint of the shot. Range: -150 to 150.
 	 */
-	static tint: number;
+	tint: number;
 
 	/**
 	 * The vignetting amount of the shot. Range: -100 to 100.
 	 */
-	static vignettingAmount: number;
+	vignettingAmount: number;
 
 	/**
 	 * The vignetting mid point of the shot. Range: -100 to 100.
 	 */
-	static vignettingMidpoint: number;
+	vignettingMidpoint: number;
 
 	/**
 	 * The white balance options for the image.
 	 */
-	static whiteBalance: WhiteBalanceType;
+	whiteBalance: WhiteBalanceType;
 
 }
 
@@ -5495,27 +5495,27 @@ declare class PhotoshopSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * If true, the annotations are saved.
 	 */
-	static annotations: boolean;
+	annotations: boolean;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * If true, the layers are saved.
 	 */
-	static layers: boolean;
+	layers: boolean;
 
 	/**
 	 * If true, spot colors are saved.
 	 */
-	static spotColors: boolean;
+	spotColors: boolean;
 
 }
 
@@ -5526,27 +5526,27 @@ declare class BMPSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * The number of bits per sample.
 	 */
-	static depth: BMPDepthType;
+	depth: BMPDepthType;
 
 	/**
 	 * If true, the image is written from bottom to top.
 	 */
-	static flipRowOrder: boolean;
+	flipRowOrder: boolean;
 
 	/**
 	 * The target operating system.
 	 */
-	static osType: OperatingSystem;
+	osType: OperatingSystem;
 
 	/**
 	 * If true, RLE compression is used.
 	 */
-	static rleCompression: boolean;
+	rleCompression: boolean;
 
 }
 
@@ -5557,47 +5557,47 @@ declare class GIFSaveOptions {
 	/**
 	 * The number of colors in palette. Not valid for all palette types.
 	 */
-	static colors: number;
+	colors: number;
 
 	/**
 	 * The type of dither.
 	 */
-	static dither: Dither;
+	dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither type' is diffusion. Range: 1 to 100.
 	 */
-	static ditherAmount: number;
+	ditherAmount: number;
 
 	/**
 	 * The type of colors to force into the color palette.
 	 */
-	static forced: ForcedColors;
+	forced: ForcedColors;
 
 	/**
 	 * If true, rows are interlaced.
 	 */
-	static interlaced: boolean;
+	interlaced: boolean;
 
 	/**
 	 * The color to use to fill anti-aliased edges adjacent to transparent areas of the image. Default: white.
 	 */
-	static matte: MatteType;
+	matte: MatteType;
 
 	/**
 	 * The type of palette to use.
 	 */
-	static palette: PaletteType;
+	palette: PaletteType;
 
 	/**
 	 * If true, protects colors in the image that contain entries in the color table from being dithered. Valid only when 'dither' = diffusion.
 	 */
-	static preserveExactColors: boolean;
+	preserveExactColors: boolean;
 
 	/**
 	 * If true, preserves transparent ares of the image during GIF conversion.
 	 */
-	static transparency: boolean;
+	transparency: boolean;
 
 }
 
@@ -5608,47 +5608,47 @@ declare class EPSSaveOptions {
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * The type of encoding to use for the document.
 	 */
-	static encoding: SaveEncoding;
+	encoding: SaveEncoding;
 
 	/**
 	 * If true, includes the halftone screen.
 	 */
-	static halftoneScreen: boolean;
+	halftoneScreen: boolean;
 
 	/**
 	 * If true, uses image interpolation.
 	 */
-	static interpolation: boolean;
+	interpolation: boolean;
 
 	/**
 	 * The type of preview.
 	 */
-	static preview: Preview;
+	preview: Preview;
 
 	/**
 	 * If true, uses PostScript color management.
 	 */
-	static psColorManagement: boolean;
+	psColorManagement: boolean;
 
 	/**
 	 * If true, includes the transfer functions in the document to compensate for dot gain between the image and film.
 	 */
-	static transferFunction: boolean;
+	transferFunction: boolean;
 
 	/**
 	 * If true, displays white areas as transparent. Valid only for documents in BitMap mode.
 	 */
-	static transparentWhites: boolean;
+	transparentWhites: boolean;
 
 	/**
 	 * If true, includes vector data. Valid only when the document contains vector data (un-rasterized text).
 	 */
-	static vectorData: boolean;
+	vectorData: boolean;
 
 }
 
@@ -5659,27 +5659,27 @@ declare class JPEGSaveOptions {
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * The download format to use.
 	 */
-	static formatOptions: FormatOptions;
+	formatOptions: FormatOptions;
 
 	/**
 	 * The color to use to fill anti-aliased edges adjacent to transparent areas of the image. Default: white.
 	 */
-	static matte: MatteType;
+	matte: MatteType;
 
 	/**
 	 * The quality of the produced image.
 	 */
-	static quality: number;
+	quality: number;
 
 	/**
 	 * The number of scans. Valid only for progressive type JPEG files.
 	 */
-	static scans: number;
+	scans: number;
 
 }
 
@@ -5690,162 +5690,162 @@ declare class PDFSaveOptions {
 	/**
 	 * The PDF version to make the document compatible with.
 	 */
-	static PDFCompatibility: PDFCompatibility;
+	PDFCompatibility: PDFCompatibility;
 
 	/**
 	 * The PDF standard to make the document compatible with.
 	 */
-	static PDFStandard: PDFStandard;
+	PDFStandard: PDFStandard;
 
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * If true, the annotations are saved.
 	 */
-	static annotations: boolean;
+	annotations: boolean;
 
 	/**
 	 * If true, converts the color profile to the destination profile.
 	 */
-	static colorConversion: boolean;
+	colorConversion: boolean;
 
 	/**
 	 * If true, converts a 16-bit image to 8-bit for better compatibility with other applications.
 	 */
-	static convertToEightBit: boolean;
+	convertToEightBit: boolean;
 
 	/**
 	 * Description of the save options in use.
 	 */
-	static description: string;
+	description: string;
 
 	/**
 	 * Describes the final RGB or CMYK output device, such as a monitor or press standard.
 	 */
-	static destinationProfile: string;
+	destinationProfile: string;
 
 	/**
 	 * The downsample method to use.
 	 */
-	static downSample: PDFResample;
+	downSample: PDFResample;
 
 	/**
 	 * The size (in pixels per inch) to downsample images to if they exceed the value specified for 'down sample size limit'.
 	 */
-	static downSampleSize: number;
+	downSampleSize: number;
 
 	/**
 	 * Limits downsampling or subsampling to images that exceed this value (in pixels per inch).
 	 */
-	static downSampleSizeLimit: number;
+	downSampleSizeLimit: number;
 
 	/**
 	 * DEPRECATED, ( should the embedded color profile be downgraded to version 2 )
 	 */
-	static downgradeColorProfile: boolean;
+	downgradeColorProfile: boolean;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * DEPRECATED. ( embed fonts? Only valid if a text layer is included )
 	 */
-	static embedFonts: boolean;
+	embedFonts: boolean;
 
 	/**
 	 * If true, includes a small preview image in Acrobat.
 	 */
-	static embedThumbnail: boolean;
+	embedThumbnail: boolean;
 
 	/**
 	 * The encoding method to use.
 	 */
-	static encoding: PDFEncoding;
+	encoding: PDFEncoding;
 
 	/**
 	 * DEPRECATED. ( use image interpolation? )
 	 */
-	static interpolation: boolean;
+	interpolation: boolean;
 
 	/**
 	 * The quality of the produced image. Valid only for JPEG-encoded PDF documents. Range: 0 to 12.
 	 */
-	static jpegQuality: number;
+	jpegQuality: number;
 
 	/**
 	 * If true, the layers are saved.
 	 */
-	static layers: boolean;
+	layers: boolean;
 
 	/**
 	 * If true, improves performance of PDFs on Web servers.
 	 */
-	static optimizeForWeb: boolean;
+	optimizeForWeb: boolean;
 
 	/**
 	 * An optional comment field for inserting descriptions of the output condition. The text is stored in the PDF/X file.
 	 */
-	static outputCondition: string;
+	outputCondition: string;
 
 	/**
 	 * The identifier for the output condition.
 	 */
-	static outputConditionID: string;
+	outputConditionID: string;
 
 	/**
 	 * If true, allows users to reopen the PDF in Photoshop with native Photoshop data intact.
 	 */
-	static preserveEditing: boolean;
+	preserveEditing: boolean;
 
 	/**
 	 * The preset file to use for settings; overrides other settings.
 	 */
-	static presetFile: string;
+	presetFile: string;
 
 	/**
 	 * If true, shows which profiles to include.
 	 */
-	static profileInclusionPolicy: boolean;
+	profileInclusionPolicy: boolean;
 
 	/**
 	 * The URL where the output condition is registered.
 	 */
-	static registryName: string;
+	registryName: string;
 
 	/**
 	 * If true, the spot colors are saved.
 	 */
-	static spotColors: boolean;
+	spotColors: boolean;
 
 	/**
 	 * The compression option. Valid only when encoding is JPEG2000.
 	 */
-	static tileSize: number;
+	tileSize: number;
 
 	/**
 	 * DEPRECATED.
 	 */
-	static transparency: boolean;
+	transparency: boolean;
 
 	/**
 	 * DEPRECATED. ( use outlines for text? Only valid if vector data is included )
 	 */
-	static useOutlines: boolean;
+	useOutlines: boolean;
 
 	/**
 	 * DEPRECATED. ( include vector data )
 	 */
-	static vectorData: boolean;
+	vectorData: boolean;
 
 	/**
 	 * If true, opens the saved PDF in Acrobat.
 	 */
-	static view: boolean;
+	view: boolean;
 
 }
 
@@ -5882,32 +5882,32 @@ declare class PICTResourceSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * The compression type.
 	 */
-	static compression: PICTCompression;
+	compression: PICTCompression;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * The name of PICT resource.
 	 */
-	static name: string;
+	name: string;
 
 	/**
 	 * The number of bits per pixel.
 	 */
-	static resolution: PICTBitsPerPixels;
+	resolution: PICTBitsPerPixels;
 
 	/**
 	 * The ID of the PICT resource.
 	 */
-	static resourceID: number;
+	resourceID: number;
 
 }
 
@@ -5918,7 +5918,7 @@ declare class PixarSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 }
 
@@ -5929,12 +5929,12 @@ declare class PNGSaveOptions {
 	/**
 	 * Compression used on the image.
 	 */
-	static compression: number;
+	compression: number;
 
 	/**
 	 * If true, rows are interlaced.
 	 */
-	static interlaced: boolean;
+	interlaced: boolean;
 
 }
 
@@ -5945,12 +5945,12 @@ declare class RawSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * If true, spot colors are saved.
 	 */
-	static spotColors: boolean;
+	spotColors: boolean;
 
 }
 
@@ -5961,12 +5961,12 @@ declare class SGIRGBSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * If true, the spot colors are saved.
 	 */
-	static spotColors: boolean;
+	spotColors: boolean;
 
 }
 
@@ -5977,17 +5977,17 @@ declare class TargaSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * The number of bits per pixel.
 	 */
-	static resolution: TargaBitsPerPixels;
+	resolution: TargaBitsPerPixels;
 
 	/**
 	 * If true, RLE compression is used.
 	 */
-	static rleCompression: boolean;
+	rleCompression: boolean;
 
 }
 
@@ -5998,62 +5998,62 @@ declare class TiffSaveOptions {
 	/**
 	 * If true, the alpha channels are saved.
 	 */
-	static alphaChannels: boolean;
+	alphaChannels: boolean;
 
 	/**
 	 * If true, the annotations are saved.
 	 */
-	static annotations: boolean;
+	annotations: boolean;
 
 	/**
 	 * The order in which the bytes will be read. Default: Mac OS when running in Mac OS, and IBM PC when running in Windows.
 	 */
-	static byteOrder: ByteOrder;
+	byteOrder: ByteOrder;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * The compression type.
 	 */
-	static imageCompression: TIFFEncoding;
+	imageCompression: TIFFEncoding;
 
 	/**
 	 * If true, the channels in the image are interleaved.
 	 */
-	static interleaveChannels: boolean;
+	interleaveChannels: boolean;
 
 	/**
 	 * The quality of the produced image, which is inversely proportionate to the amount of JPEG compression. Valid only for JPEG compressed TIFF documents. Range: 0 to 12.
 	 */
-	static jpegQuality: number;
+	jpegQuality: number;
 
 	/**
 	 * The method of compression to use when saving layers (as opposed to saving composite data). Valid only when 'layers' = true.
 	 */
-	static layerCompression: LayerCompression;
+	layerCompression: LayerCompression;
 
 	/**
 	 * If true, the layers are saved.
 	 */
-	static layers: boolean;
+	layers: boolean;
 
 	/**
 	 * If true, preserves multi-resolution information.
 	 */
-	static saveImagePyramid: boolean;
+	saveImagePyramid: boolean;
 
 	/**
 	 * If true, spot colors are saved.
 	 */
-	static spotColors: boolean;
+	spotColors: boolean;
 
 	/**
 	 * If true, saves the transparency as an additional alpha channel when the file is opened in another application.
 	 */
-	static transparency: boolean;
+	transparency: boolean;
 
 }
 
@@ -6064,42 +6064,42 @@ declare class DCS1_SaveOptions {
 	/**
 	 * The DCS type.
 	 */
-	static DCS: DCSType;
+	DCS: DCSType;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * The type of encoding to use for the document.
 	 */
-	static encoding: SaveEncoding;
+	encoding: SaveEncoding;
 
 	/**
 	 * If true, includes halftone screen.
 	 */
-	static halftoneScreen: boolean;
+	halftoneScreen: boolean;
 
 	/**
 	 * If true, image interpolation is used.
 	 */
-	static interpolation: boolean;
+	interpolation: boolean;
 
 	/**
 	 * The type of preview.
 	 */
-	static preview: Preview;
+	preview: Preview;
 
 	/**
 	 * If true, includes transfer functions in the document to compensate for dot gain between the image and film.
 	 */
-	static transferFunction: boolean;
+	transferFunction: boolean;
 
 	/**
 	 * If true, includes vector data. Valid only if the document contains vector data (un-rasterized text).
 	 */
-	static vectorData: boolean;
+	vectorData: boolean;
 
 }
 
@@ -6110,52 +6110,52 @@ declare class DCS2_SaveOptions {
 	/**
 	 * The DCS type.
 	 */
-	static DCS: DCSType;
+	DCS: DCSType;
 
 	/**
 	 * If true, the color profile is embedded in the document.
 	 */
-	static embedColorProfile: boolean;
+	embedColorProfile: boolean;
 
 	/**
 	 * The type of encoding to use for document.
 	 */
-	static encoding: SaveEncoding;
+	encoding: SaveEncoding;
 
 	/**
 	 * If true, includes halftone screen.
 	 */
-	static halftoneScreen: boolean;
+	halftoneScreen: boolean;
 
 	/**
 	 * If true, image interpolation is used.
 	 */
-	static interpolation: boolean;
+	interpolation: boolean;
 
 	/**
 	 * If true, saves color channels as multiple files.
 	 */
-	static multiFileDCS: boolean;
+	multiFileDCS: boolean;
 
 	/**
 	 * The type of preview.
 	 */
-	static preview: Preview;
+	preview: Preview;
 
 	/**
 	 * If true, the spot colors are saved.
 	 */
-	static spotColors: boolean;
+	spotColors: boolean;
 
 	/**
 	 * If true, includes transfer functions in the document to compensate for dot gain between the image and film.
 	 */
-	static transferFunction: boolean;
+	transferFunction: boolean;
 
 	/**
 	 * If true, includes vector data. Valid only if the document contains vector data (un-rasterized text).
 	 */
-	static vectorData: boolean;
+	vectorData: boolean;
 
 }
 
@@ -6285,32 +6285,32 @@ declare class BitmapConversionOptions extends DocumentConversionOptions {
 	/**
 	 * The angle (in degrees) at which to orient individual dots. Valid only when 'method' = halftone screen. Range: -180 to 180.
 	 */
-	static angle: number;
+	angle: number;
 
 	/**
 	 * The number of printer dots per inch. Valid only when 'method' = halftone screen. Range: 1.0 to 999.99.
 	 */
-	static frequency: number;
+	frequency: number;
 
 	/**
 	 * The conversion method.
 	 */
-	static method: BitmapConversionType;
+	method: BitmapConversionType;
 
 	/**
 	 * The name of the pattern to use. Valid only when 'method' = custom.
 	 */
-	static patternName: string;
+	patternName: string;
 
 	/**
 	 * The output resolution (in pixels per inch)
 	 */
-	static resolution: number;
+	resolution: number;
 
 	/**
 	 * The dot shape. Valid only when 'method' = halftone screen.
 	 */
-	static shape: BitmapHalfToneType;
+	shape: BitmapHalfToneType;
 
 }
 
@@ -6321,42 +6321,42 @@ declare class IndexedConversionOptions extends DocumentConversionOptions {
 	/**
 	 * The number of colors in the palette. Not valid for all palette types.
 	 */
-	static colors: number;
+	colors: number;
 
 	/**
 	 * The type of dither.
 	 */
-	static dither: Dither;
+	dither: Dither;
 
 	/**
 	 * The amount of dither. Valid only when 'dither' = diffusion.
 	 */
-	static ditherAmount: number;
+	ditherAmount: number;
 
 	/**
 	 * The type of colors to force into the color palette.
 	 */
-	static forced: ForcedColors;
+	forced: ForcedColors;
 
 	/**
 	 * The color to use to fill anti-aliased edges adjacent to transparent areas of the image. When transparency = false, the matte color is applied to transparent areas.
 	 */
-	static matte: MatteType;
+	matte: MatteType;
 
 	/**
 	 * The type of palette.
 	 */
-	static palette: PaletteType;
+	palette: PaletteType;
 
 	/**
 	 * If true, protects colors in the image that contain entries in the color table from being dithered. Valid only when 'dither' = diffusion.
 	 */
-	static preserveExactColors: boolean;
+	preserveExactColors: boolean;
 
 	/**
 	 * If true, preserves transparent areas of the image during conversion to GIF format.
 	 */
-	static transparency: boolean;
+	transparency: boolean;
 
 }
 
