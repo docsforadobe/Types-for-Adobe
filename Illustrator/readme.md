@@ -1,4 +1,4 @@
-# Types for Adobe Audition
+# Types for Adobe Illustrator
 
 ## Notes
 Newly converted files needs to by process like so:
