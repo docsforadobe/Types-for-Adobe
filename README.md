@@ -1,4 +1,7 @@
 # TypeScript types for Adobe Products [![Build Status](https://travis-ci.org/pravdomil/types-for-adobe.svg?branch=master)](https://travis-ci.org/pravdomil/types-for-adobe)
+
+![preview](gif.gif)
+
 [<img src="https://i.imgur.com/VMx9MeE.jpg" width="560" height="315" />](http://youtu.be/h-c7A8pQzx8)
 
 ## Prerequisites
@@ -29,9 +32,6 @@ tsc
 
 ## CSInterface
 For typings for CSInterface check [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS).
-
-## Autocomplete and typecheck
-<img src="resources/autocomplete.png"/>
 
 ## Contributors
 Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.com/atarabi).
