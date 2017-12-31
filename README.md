@@ -1,4 +1,4 @@
-# TypeScript types for Adobe Products [![Build Status](https://travis-ci.org/pravdomil/types-for-adobe.svg?branch=master)](https://travis-ci.org/pravdomil/types-for-adobe)
+# TypeScript types for Adobe Products [![Build Status](https://travis-ci.org/pravdomil/Types-for-Adobe.svg?branch=master)](https://travis-ci.org/pravdomil/types-for-adobe)
 
 ![preview](resources/gif.gif)
 
