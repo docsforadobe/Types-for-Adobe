@@ -2094,8 +2094,8 @@ interface CSXSEventConstructor {
 	/**
 	 * Creates a new CSXSEvent object.
 	 */
-	new(type: string, scope: string, data: string): CSXSEvent;
-	(type: string, scope: string, data: string): CSXSEvent;
+	new(type?: string, scope?: string, data?: string): CSXSEvent;
+	(type?: string, scope?: string, data?: string): CSXSEvent;
 }
 declare const CSXSEvent: CSXSEventConstructor;
 
