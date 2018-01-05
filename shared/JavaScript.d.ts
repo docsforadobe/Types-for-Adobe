@@ -2085,7 +2085,7 @@ interface CSXSEvent {
 	/**
 	 * Dispatch the event
 	 */
-	dispatch: () => void;
+	dispatch(): void;
 }
 
 interface CSXSEventConstructor {
