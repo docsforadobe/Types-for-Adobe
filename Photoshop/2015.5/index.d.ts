@@ -294,27 +294,6 @@ declare enum SaveDocumentType {
 }
 
 /**
- * The save options for closing a file.
- */
-declare enum SaveOptionsType {
-	/**
-	 * Do not save changes.
-	 */
-	DONOTSAVECHANGES = 2,
-
-	/**
-	 * Ask the user whether to save.
-	 */
-	PROMPTTOSAVECHANGES = 3,
-
-	/**
-	 * Save changes.
-	 */
-	SAVECHANGES = 1,
-
-}
-
-/**
  * Controls whether Photoshop displays dialogs during scripts.
  */
 declare enum DialogModes {
@@ -8393,7 +8372,7 @@ declare class Document {
 	 * Closes the document.
 	 * @param saving Specifies whether changes should be saved before closing.
 	 */
-	close(saving?: SaveOptionsType): void;
+	close(saving?: SaveOptions): void;
 
 	/**
 	 * Converts the document from using one color profile to using another.
