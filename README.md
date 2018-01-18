@@ -43,5 +43,8 @@ Open pull request and be sure that:
 - additional types are prefixed with underscore
 - follow [resources/tslint.json](resources/tslint.json)
 
+## Showcase
+- [Pravdomil scripts for InDesign](https://github.com/pravdomil/Pravdomil-scripts-for-InDesign#readme)
+
 ## Become a backer
 Support this project by [buying a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=types-for-adobe%20Beer).
