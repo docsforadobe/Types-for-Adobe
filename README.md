@@ -34,7 +34,7 @@ tsc
 For typings for CSInterface check [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS).
 
 ## Contributors
-Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.com/atarabi).
+Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.com/atarabi), [lm913](https://github.com/lm913).
 
 ## Contributing
 Open pull request and be sure that:
