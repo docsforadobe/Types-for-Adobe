@@ -28,7 +28,7 @@ printf '/// <reference types="types-for-adobe/illustrator/2015.3"/>\nalert(Strin
 # compile typescript files
 tsc
 
-# open Adobe Illustrator -> File -> Scripts -> Other Script -> and select index.js
+# open Adobe Illustrator -> File -> Scripts -> Other Script -> and open index.js
  
 ```
 
