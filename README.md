@@ -32,8 +32,10 @@ tsc
  
 ```
 
-## CSInterface
-For typings for CSInterface check [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS).
+## More typings
+
+- [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS)
+- [Premiere](https://gitcdn.xyz/repo/Adobe-CEP/Samples/master/PProPanel/payloads/api_doc.html)
 
 ## Contributors
 Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.com/atarabi), [lm913](https://github.com/lm913).
