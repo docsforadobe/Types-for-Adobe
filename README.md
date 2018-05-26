@@ -21,7 +21,7 @@ cd my-script
 
 # install types-for-adobe
 npm init -y
-npm i pravdomil/types-for-adobe
+npm i types-for-adobe
 
 # create tsconfig.json
 printf '{"compilerOptions":{"module":"none","noLib":true}}' > tsconfig.json
