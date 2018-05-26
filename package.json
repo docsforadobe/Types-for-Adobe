@@ -1,10 +1,10 @@
 {
   "name": "types-for-adobe",
+  "version": "0.0.1",
   "scripts": {
     "pretest": "npm i typescript ts-node glob @types/glob",
     "test": "ts-node src/test"
   },
-  "version": "0.0.1",
   "files":[
     "AfterEffects",
     "Audition",
