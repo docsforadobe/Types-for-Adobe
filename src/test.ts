@@ -1,37 +1,28 @@
 import * as child_process from "child_process";
 import { IOptions, sync as glob } from "glob";
 import { promisify } from "util";
-const exec = promisify(child_process.exec);
-
-main();
+const execFile = promisify(child_process.execFile);
 
 // TODO add tslint -c resources/tslint.json */**/*.ts
 
+main();
+
 async function main() {
     try {
-        const tests = await test();
+        const options: IOptions = { ignore: "node_modules/**" };
+        const files = glob("*/**/tsconfig.json", options);
         
-        console.log(tests.map(t => t.stdout).join(""));
+        for (const file of files) {
+            const dir = file.replace("/tsconfig.json", "");
+            await execFile("tsc", ["-p", ".", "--pretty"], { cwd: dir });
+            console.log("OK " + dir);
+        }
+        
         console.log("Tests passed.");
         process.exit(0);
         
     } catch (e) {
-        console.error(e.cmd);
-        console.error(e.stdout);
-        console.log("Test failed.");
+        console.log("🚨", e instanceof Error ? e.message : e || "")
         process.exit(1);
     }
-}
-
-async function test() {
-    const options: IOptions = { ignore: "node_modules/**" };
-    const files = glob("*/**/tsconfig.json", options);
-
-    const queue = files.map((file) => {
-        const cwd = file.replace("/tsconfig.json", "");
-        const ok = JSON.stringify("PASS " + cwd);
-        return exec("cd " + cwd + "; tsc -p . --pretty && echo " + ok);
-    });
-    
-    return await Promise.all(queue);
 }
