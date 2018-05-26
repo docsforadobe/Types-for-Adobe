@@ -10,6 +10,10 @@
     "Premiere",
     "shared"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pravdomil/types-for-adobe.git"
+  },
   "scripts": {
     "pretest": "npm i typescript ts-node glob @types/glob",
     "test": "ts-node src/test"
