@@ -4,5 +4,14 @@
     "pretest": "npm i typescript ts-node glob @types/glob",
     "test": "ts-node src/test"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "files":[
+    "AfterEffects",
+    "Audition",
+    "InDesign",
+    "Illustrator",
+    "Photoshop",
+    "Premiere",
+    "shared"
+  ]
 }
