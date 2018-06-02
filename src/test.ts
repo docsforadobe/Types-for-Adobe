@@ -22,7 +22,7 @@ async function main() {
         process.exit(0);
         
     } catch (e) {
-        console.log("🚨", e instanceof Error ? e.message : e || "")
+        console.log(e instanceof Error ? e.message : typeof e === "string" ? e : "😞");
         process.exit(1);
     }
 }
