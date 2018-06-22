@@ -38,6 +38,7 @@ tsc
 
 ## More typings
 
+- [Adobe's offical typings](https://github.com/Adobe-CEP/Samples/tree/master/TypeScript/typings)
 - [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS)
 - [Premiere](https://gitcdn.xyz/repo/Adobe-CEP/Samples/master/PProPanel/payloads/api_doc.html)
 
