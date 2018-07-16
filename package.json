@@ -23,5 +23,6 @@
   "scripts": {
     "pretest": "npm i typescript ts-node glob @types/glob",
     "test": "ts-node src/test"
-  }
+  },
+  "license": "MIT"
 }
