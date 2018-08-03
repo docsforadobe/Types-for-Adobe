@@ -1090,6 +1090,9 @@ declare class CompItem extends AVItem {
 
 	/** Save the specific frame to a png file */
 	saveFrameToPng(time: number, file: File): void;
+
+	/** Open this Composition in the Preview panel, and change the zoom and exposure settings. */
+	ramPreviewTest(unknown: any, zoom: number, exposure: number) : void;
 }
 
 /** The FileSource object describes footage that comes from a file. */
