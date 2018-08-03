@@ -1628,7 +1628,7 @@ declare class Project {
 	importPlaceholder(name: string, width: number, height: number, frameRate: number, duration: number): PlaceholderItem;
 
 	/** Imports a file into the project. */
-	importFile(importOptions: ImportOptions): FootageItem;
+	importFile(importOptions: ImportOptions): FootageItem | FolderItem;
 
 	/** Displays an Import File dialog box. */
 	importFileWithDialog(): Item[] | null;
