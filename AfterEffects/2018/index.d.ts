@@ -1746,7 +1746,7 @@ declare class Property extends PropertyBase {
 	isInterpolationTypeValid(type: KeyframeInterpolationType): boolean;
 
 	/** Sets the interpolation type for a key. */
-	setInterpolationTypeAtKey(keyIndex: number, inType: KeyframeInterpolationType, outType: KeyframeInterpolationType): void;
+	setInterpolationTypeAtKey(keyIndex: number, inType: KeyframeInterpolationType, outType?: KeyframeInterpolationType): void;
 
 	/** Gets the 'in' interpolation type for a key. */
 	keyInInterpolationType(keyIndex: number): KeyframeInterpolationType;
