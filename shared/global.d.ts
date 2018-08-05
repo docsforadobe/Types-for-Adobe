@@ -20,7 +20,7 @@ declare var NaN: number;
  */
 declare var app: Application;
 declare interface Application {
-    
+
 }
 
 /**
@@ -37,7 +37,7 @@ declare function alert(message: string, title?: string, errorIcon?: boolean): vo
  * @param noAsDefault Set to true to set the No button as the default button
  * @param title The title of the alert; ignored on the Macintosh
  */
-declare function confirm(message: string, noAsDefault: boolean, title?: string): boolean;
+declare function confirm(message: string, noAsDefault?: boolean, title?: string): boolean;
 
 /**
  * Decodes a string created with encodeURI().
