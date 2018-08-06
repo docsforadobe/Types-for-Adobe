@@ -1090,6 +1090,9 @@ declare class CompItem extends AVItem {
 
 	/** Save the specific frame to a png file */
 	saveFrameToPng(time: number, file: File): void;
+
+	/** Open this Composition in the Preview panel, and change the zoom and exposure settings. */
+	ramPreviewTest(unknown: any, zoom: number, exposure: number) : void;
 }
 
 /** The FileSource object describes footage that comes from a file. */
@@ -1628,7 +1631,7 @@ declare class Project {
 	importPlaceholder(name: string, width: number, height: number, frameRate: number, duration: number): PlaceholderItem;
 
 	/** Imports a file into the project. */
-	importFile(importOptions: ImportOptions): FootageItem;
+	importFile(importOptions: ImportOptions): Item;
 
 	/** Displays an Import File dialog box. */
 	importFileWithDialog(): Item[] | null;
@@ -1746,7 +1749,7 @@ declare class Property extends PropertyBase {
 	isInterpolationTypeValid(type: KeyframeInterpolationType): boolean;
 
 	/** Sets the interpolation type for a key. */
-	setInterpolationTypeAtKey(keyIndex: number, inType: KeyframeInterpolationType, outType: KeyframeInterpolationType): void;
+	setInterpolationTypeAtKey(keyIndex: number, inType: KeyframeInterpolationType, outType?: KeyframeInterpolationType): void;
 
 	/** Gets the 'in' interpolation type for a key. */
 	keyInInterpolationType(keyIndex: number): KeyframeInterpolationType;
