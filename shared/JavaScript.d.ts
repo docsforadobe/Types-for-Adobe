@@ -194,13 +194,13 @@ interface ObjectConstructor {
 	new(what: any): Object;
 	(): any;
 	(what: any): any;
-
+	
 	/**
 	 * Reports whether an object is still valid.
 	 * @param what The object to check.
 	 */
 	isValid(what: Object): boolean;
-
+	
 }
 declare const Object: ObjectConstructor;
 
@@ -285,7 +285,7 @@ interface Object {
 
 interface ArrayConstructor {
 	readonly prototype: Array<any>;
-
+	
 	/**
 	 * Creates and returns a new array.
 	 * Takes any number of parameters, which become the elements of the array, or a single value which becomes the length of an empty array. Note that you cannot create a one-element array, as the single parameter value is interpreted as the length. Returns the new array.
@@ -298,7 +298,7 @@ interface ArrayConstructor {
 	(arrayLength?: number): any[];
 	<T>(arrayLength: number): T[];
 	<T>(...values: T[]): T[];
-
+	
 }
 declare const Array: ArrayConstructor;
 
@@ -307,12 +307,12 @@ declare const Array: ArrayConstructor;
  */
 interface Array<T> {
 	[n: number]: T;
-
+	
 	/**
 	 * The length of the array
 	 */
 	length: number;
-
+	
 	/**
 	 * Returns a new array created by concatenating the given values to the end of the original array.
 	 * The original array is unchanged.If an array is provided as a parameter to concat(), each of its elements are appended as separate array elements at the end of the new array.Returns a new array, the result of concatenation the given values to the end of the original array.
@@ -519,7 +519,7 @@ interface Math {
 	/**
 	 * Returns x raised to the power of y.
 	 * @param x Numbers.
-	 * @param y
+	 * @param y 
 	 */
 	pow(x: number, y: number): number;
 
@@ -557,7 +557,7 @@ declare const Math: Math;
 
 interface DateConstructor {
 	readonly prototype: Date;
-
+	
 	/**
 	 * Returns a new Date object holding the current date and time.
 	 * If parameters are supplied, returns a new Date object holding the supplied date and time.
@@ -573,13 +573,13 @@ interface DateConstructor {
 	new(value: number): Date;
 	new(value: string): Date;
 	new(year: number, month: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number): Date;
-
+	
 	/**
 	 * Parses a string, returning a new Date object. The string should be similar to the string returned bt toString().
 	 * @param text The string to parse.
 	 */
 	parse(text: string): Date;
-
+	
 	/**
 	 * Returns the number of milliseconds between midnight January 1, 1970, UTC, and the specified time.
 	 * @param year The year expressed in four digits, for example, 2001. To indicate for a year from 1900 to 1999, you can specify a value from 0 to 99.
@@ -591,7 +591,7 @@ interface DateConstructor {
 	 * @param ms An integer value from 0 to 999. If this argument is not supplied, its value is set to 0.
 	 */
 	UTC(year: number, month?: number, day?: number, hours?: number, min?: number, sec?: number, ms?: number): Date;
-
+	
 }
 declare const Date: DateConstructor;
 
@@ -862,7 +862,7 @@ interface Date {
 
 interface FunctionConstructor {
 	readonly prototype: Function;
-
+	
 	/**
 	 * The Function constructor parses the argument list and creates a Function object.
 	 * @param arguments The list of formal arguments, separated by commas. The formal arguments can also be supplied one by one; in this case, the last argument to the Function constructor is considered to be the function body.
@@ -930,20 +930,20 @@ interface Function {
 
 interface StringConstructor {
 	readonly prototype: String;
-
+	
 	/**
 	 * Returns a string representation of the value given as an argument.
 	 * @param value A number, variable, or object to convert to a string.
 	 */
 	new(value?: any): String;
 	(value: any): string;
-
+	
 	/**
 	 * Returns a string created by concatenation one or more characters specified as ASCII values.
 	 * @param value1 One or more ASCII values.
 	 */
 	fromCharCode(value1: number): string;
-
+	
 }
 declare const String: StringConstructor;
 
@@ -1017,7 +1017,7 @@ interface String {
 	 * @param size The value to be stored in the tag's size attribute.
 	 */
 	fontsize(size: number): string;
-
+	
 	/**
 	 * Returns the index within the string of the first occurrence of the specified string, starting the search at fromIndex if provided.
 	 * @param searchValue The string for which to search.
@@ -1057,15 +1057,15 @@ interface String {
 	match(regexp: RegExp | string): RegExpMatchArray | null;
 
 	/**
-	 *
-	 * @param what
-	 * @param with
+	 * 
+	 * @param what 
+	 * @param with 
 	 */
 	replace(what: any, with_: string): string;
 
 	/**
-	 *
-	 * @param search
+	 * 
+	 * @param search 
 	 */
 	search(search: RegExp): number;
 
@@ -1086,7 +1086,7 @@ interface String {
 	 * Splits a string into a group of substrings, places those strings in an array, and returns the array.
 	 * The substrings are created by breaking the original string at places that match delimiter, the delimiter characters are removed.Returns an array whose elements are the substrings.
 	 * @param delimiter Specifies the string to use for delimiting. If delimiter is omitted, the array returned contains one element, consisting of the entire string.
-	 * @param limit
+	 * @param limit 
 	 */
 	split(delimiter: string, limit?: number): string[];
 
@@ -1171,7 +1171,7 @@ interface NumberConstructor {
 	 */
 	new(value?: any): Number;
 	(value: any): number;
-
+	
 	/**
 	 * A constant representing the largest representable number.
 	 */
@@ -1196,7 +1196,7 @@ interface NumberConstructor {
 	 * A constant representing positive infinity.
 	 */
 	readonly POSITIVE_INFINITY: number;
-
+	
 }
 declare const Number: NumberConstructor;
 
@@ -1254,7 +1254,7 @@ interface BooleanConstructor {
 	 */
 	new(value?: any): Boolean;
 	(value: any): boolean;
-
+	
 }
 declare const Boolean: BooleanConstructor;
 
@@ -1421,7 +1421,7 @@ interface RegExpExecArray extends Array<string> {
 
 interface ErrorConstructor {
 	readonly prototype: Error;
-
+	
 	/**
 	 * Creates a new Error object.
 	 * @param msg The error message.
@@ -1470,7 +1470,7 @@ interface FileConstructor {
 	 * This is a class property accessed through the File constructor. Valid values are "Windows", "Macintosh", and "Unix".
 	 */
 	readonly fs: string;
-
+	
 	/**
 	 * Decodes a UTF-8 encoded string as required by RFC 2396, and returns the decoded string.
 	 * See also String.decodeURI().
@@ -1486,13 +1486,13 @@ interface FileConstructor {
 	 * @param name The string to encode.
 	 */
 	encode(name: string): string;
-
+	
 	/**
 	 * Reports whether a given encoding is available.
 	 * @param name The encoding name. Typical values are "ASCII", "binary", or "UTF-8".For a complete list of supported encodings, see the JavaScript Tools Guide.
 	 */
 	isEncodingAvailable(name: string): boolean;
-
+	
 	/**
 	 * Opens a dialog so the user can select one or more files to open.
 	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file or multiple files, and creates new File objects to represent the selected files.
@@ -1503,7 +1503,7 @@ interface FileConstructor {
 	 * @param multiSelect When true, the user can select multiple files and the return value is an array.
 	 */
 	openDialog(prompt?: string, filter?: any, multiSelect?: boolean): File;
-
+	
 	/**
 	 * Opens a dialog so the user can select a file name to save to.
 	 * Opens the built-in platform-specific file-browsing dialog in which a user can select an existing file location to which to save information, and creates a new File object to represent the selected file location.
@@ -1787,7 +1787,7 @@ interface File {
 
 interface FolderConstructor {
 	readonly prototype: Folder;
-
+	
 	/**
 	 * Creates and returns a new Folder object referring to a given file-system location.
 	 * If the path name refers to an already existing disk file, a File object is returned instead.Returns the new Folder object.
@@ -1795,7 +1795,7 @@ interface FolderConstructor {
 	 */
 	new(path?: string): Folder;
 	(path?: string): Folder;
-
+	
 	/**
 	 * The folder containing the application data for all users.
 	 * In Windows, the value of %APPDATA% (by default, C:\\Documents and Settings\\All Users\\Application Data)
@@ -1833,7 +1833,7 @@ interface FolderConstructor {
 	 * One of "Windows", "Macintosh", or "Unix".
 	 */
 	readonly fs: string;
-
+	
 	/**
 	 * A folder pointing to the user's My Documents folder.
 	 * In Windows, C:\\Documents and Settings\\username\\My Documents
@@ -1901,7 +1901,7 @@ interface FolderConstructor {
 	 * @param prompt The prompt text, if the dialog allows a prompt.
 	 */
 	selectDialog(prompt?: string): Folder;
-
+	
 }
 declare const Folder: FolderConstructor;
 
@@ -2051,13 +2051,13 @@ interface Folder {
 
 interface SocketConstructor {
 	readonly prototype: Socket;
-
+	
 	/**
 	 * Creates a new Socket object.
 	 */
 	new(): Socket;
 	(): Socket;
-
+	
 }
 declare const Socket: SocketConstructor;
 
@@ -2329,7 +2329,7 @@ interface NamespaceConstructor {
 	 */
 	new(prefix: any, uri?: string): Namespace;
 	(prefix: any, uri?: string): Namespace;
-
+	
 }
 declare const Namespace: NamespaceConstructor;
 
@@ -2388,7 +2388,7 @@ interface XMLConstructor {
 	 * Returns an object containing the default parsing and print settings for XML.
 	 */
 	defaultSettings(): object;
-
+	
 	/**
 	 * Sets the parsing and print setting for XML using an object returned by the settings() method.
 	 * @param obj The object containing the settings to set.
@@ -2399,7 +2399,7 @@ interface XMLConstructor {
 	 * Returns an object containing the current parsing and print settings for XML.
 	 */
 	settings(): object;
-
+	
 }
 declare const XML: XMLConstructor;
 

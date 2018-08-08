@@ -20,7 +20,7 @@ declare var NaN: number;
  */
 declare var app: Application;
 declare interface Application {
-
+    
 }
 
 /**
