@@ -1147,6 +1147,9 @@ declare class PlaceholderItem extends FootageItem { }
 
 /** The FootageSource object holds information describing the source of some footage. It is used as the mainSource of a FootageItem, or the proxySource of a CompItem or FootageItem. */
 declare class FootageSource {
+	/** The footage source file. */
+	readonly file: File | null;
+
 	/** When true, a footage clip or proxy includes an alpha channel. */
 	hasAlpha: boolean;
 
