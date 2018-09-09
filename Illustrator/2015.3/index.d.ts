@@ -3817,7 +3817,7 @@ declare class Artboards extends Array {
 	 * Add artboard object.
 	 * @param artboardRect Size and position of artboard.
 	 */
-	static add(artboardRect: Rect): Artboard;
+	add(artboardRect: Rect): Artboard;
 
 	/**
 	 * Retrieves the index position of the active artboard in the document's list.
@@ -3891,7 +3891,7 @@ declare class Documents extends Array {
 	 * @param artboardSpacing Spacing between artboards for new document.
 	 * @param artboardRowsOrCols Number of rows (for rows layout) OR column(for column layouts)of artboards.Range is 1 to (docNumArtboards - 1) or 1 for single row or column layouts.
 	 */
-	static add(documentColorSpace?: DocumentColorSpace, width?: number, height?: number, numArtboards?: number, artboardLayout?: DocumentArtboardLayout, artboardSpacing?: number, artboardRowsOrCols?: number): Document;
+	add(documentColorSpace?: DocumentColorSpace, width?: number, height?: number, numArtboards?: number, artboardLayout?: DocumentArtboardLayout, artboardSpacing?: number, artboardRowsOrCols?: number): Document;
 
 	/**
 	 * Create a new document from a preset.
@@ -3944,7 +3944,7 @@ declare class Layers extends Array {
 	/**
 	 * Create a layer.
 	 */
-	static add(): Layer;
+	add(): Layer;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -3981,7 +3981,7 @@ declare class GroupItems extends Array {
 	/**
 	 * Create a group item.
 	 */
-	static add(): GroupItem;
+	add(): GroupItem;
 
 	/**
 	 * Create a group item from a vector graphics file.
@@ -4051,7 +4051,7 @@ declare class PathItems extends Array {
 	/**
 	 * Create a path.
 	 */
-	static add(): PathItem;
+	add(): PathItem;
 
 	/**
 	 * Create an elliptical path item.
@@ -4142,7 +4142,7 @@ declare class PathPoints extends Array {
 	/**
 	 * Create a path point.
 	 */
-	static add(): PathPoint;
+	add(): PathPoint;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4179,7 +4179,7 @@ declare class CompoundPathItems extends Array {
 	/**
 	 * Create a compound path item.
 	 */
-	static add(): CompoundPathItem;
+	add(): CompoundPathItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4243,7 +4243,7 @@ declare class TextFrameItems extends Array {
 	/**
 	 * Create a point text frame item.
 	 */
-	static add(): TextFrameItem;
+	add(): TextFrameItem;
 
 	/**
 	 * Create an area text frame item.
@@ -4394,7 +4394,7 @@ declare class Characters extends Array {
 	 * Create a character.
 	 * @param contents The text string.
 	 */
-	static add(contents: string): TextRange;
+	add(contents: string): TextRange;
 
 	/**
 	 *
@@ -4438,7 +4438,7 @@ declare class Words extends Array {
 	 * Create a word.
 	 * @param contents The text string.
 	 */
-	static add(contents: string): TextRange;
+	add(contents: string): TextRange;
 
 	/**
 	 *
@@ -4509,7 +4509,7 @@ declare class Paragraphs extends Array {
 	 * Create a text art item.
 	 * @param contents The text string.
 	 */
-	static add(contents: string): TextRange;
+	add(contents: string): TextRange;
 
 	/**
 	 *
@@ -4553,7 +4553,7 @@ declare class CharacterStyles extends Array {
 	 * Create a named character style.
 	 * @param name The character style name.
 	 */
-	static add(name: string): CharacterStyle;
+	add(name: string): CharacterStyle;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4591,7 +4591,7 @@ declare class ParagraphStyles extends Array {
 	 * Create a named paragraph style.
 	 * @param name The paragraph style name.
 	 */
-	static add(name: string): ParagraphStyle;
+	add(name: string): ParagraphStyle;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4628,7 +4628,7 @@ declare class Spots extends Array {
 	/**
 	 * Create a spot color.
 	 */
-	static add(): Spot;
+	add(): Spot;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4665,7 +4665,7 @@ declare class Swatches extends Array {
 	/**
 	 * Create a swatch.
 	 */
-	static add(): Swatch;
+	add(): Swatch;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4708,7 +4708,7 @@ declare class SwatchGroups extends Array {
 	/**
 	 * Create a Swatch group.
 	 */
-	static add(): SwatchGroup;
+	add(): SwatchGroup;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4750,7 +4750,7 @@ declare class Gradients extends Array {
 	/**
 	 * Create a gradient.
 	 */
-	static add(): Gradient;
+	add(): Gradient;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4787,7 +4787,7 @@ declare class GradientStops extends Array {
 	/**
 	 * Create a gradient stop.
 	 */
-	static add(): GradientStop;
+	add(): GradientStop;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4824,7 +4824,7 @@ declare class Patterns extends Array {
 	/**
 	 * Create a pattern.
 	 */
-	static add(): Pattern;
+	add(): Pattern;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4863,7 +4863,7 @@ declare class Symbols extends Array {
 	 * @param sourceArt The art item from which to make this symbol.
 	 * @param registrationPoint The symbol registration point.
 	 */
-	static add(sourceArt: PageItem, registrationPoint?: SymbolRegistrationPoint): Symbol;
+	add(sourceArt: PageItem, registrationPoint?: SymbolRegistrationPoint): Symbol;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4901,7 +4901,7 @@ declare class SymbolItems extends Array {
 	 * An instance of a symbol item.
 	 * @param symbol The symbol to make an instance of.
 	 */
-	static add(symbol: Symbol): SymbolItem;
+	add(symbol: Symbol): SymbolItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -4940,7 +4940,7 @@ declare class Brushes extends Array {
 	 * @param brushDefinition The brush definition from which the brush would be created.
 	 * @param brushName The name of the brush.
 	 */
-	static add(brushDefinition: File, brushName?: string): Brush;
+	add(brushDefinition: File, brushName?: string): Brush;
 
 	/**
 	 * Create a brush, select the brush tool and load the created brush in the brush tool.
@@ -5054,7 +5054,7 @@ declare class Tags extends Array {
 	/**
 	 * Create a tag.
 	 */
-	static add(): Tag;
+	add(): Tag;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5123,7 +5123,7 @@ declare class PlacedItems extends Array {
 	/**
 	 * Create a placed item.
 	 */
-	static add(): PlacedItem;
+	add(): PlacedItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5160,7 +5160,7 @@ declare class EmbeddedItems extends Array {
 	/**
 	 * Create an embedded item.
 	 */
-	static add(): EmbedItem;
+	add(): EmbedItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5347,7 +5347,7 @@ declare class Variables extends Array {
 	/**
 	 * Create a variable.
 	 */
-	static add(): Variable;
+	add(): Variable;
 
 	/**
 	 * Get the first element in the collection with the provided name.
@@ -5384,7 +5384,7 @@ declare class DataSets extends Array {
 	/**
 	 * Create a data set.
 	 */
-	static add(): DataSet;
+	add(): DataSet;
 
 	/**
 	 * Get the first element in the collection with the provided name.
