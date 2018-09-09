@@ -8995,7 +8995,7 @@ declare class Document {
 	 * @param clipBounds The rectangular region of the artwork for the rasterization. If the parameter is omitted, the bounds of the source art(s) is used instead.
 	 * @param options Describes the rasterization options.
 	 */
-	rasterize(sourceArt: any, clipBounds?: Rect, options?: RasterizeOptions): PageItem;
+	rasterize(sourceArt: any, clipBounds?: Rect, options?: RasterizeOptions): RasterItem;
 
 	/**
 	 * Rearrange Artboards in the document.
