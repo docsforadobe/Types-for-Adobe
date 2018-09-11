@@ -125,7 +125,7 @@ declare function parseInt(text: string, base?: number): number
  * Displays a dialog allowing the user to enter text
  * Returns null if the user cancelled the dialog, the text otherwise
  * @param prompt The text to display
- * @param default The default text to preset the edit field with
+ * @param default_ The default text to preset the edit field with
  * @param title The title of the dialog;
  */
 declare function prompt(prompt: string, default_?: string, title?: string): string

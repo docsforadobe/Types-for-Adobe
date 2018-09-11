@@ -9894,7 +9894,7 @@ declare class Layer {
 
   /**
    * Links the layer with the specified layer.
-   * @param with The layer to link to.
+   * @param with_ The layer to link to.
    */
   link(with_: Layer): void
 

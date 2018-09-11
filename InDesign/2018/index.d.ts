@@ -2857,7 +2857,7 @@ declare class Application {
 
 	/**
 	 * Returns the locale-independent string(s) from the internal string localization database that correspond to the specified string (in the current locale).
-	 * @param for The string to search for.
+	 * @param for_ The string to search for.
 	 */
 	findKeyStrings(for_: string): string[];
 
@@ -3094,19 +3094,19 @@ declare class Application {
 
 	/**
 	 * Gets the current value of the specified performance metric.
-	 * @param for The status to get from InDesign.
+	 * @param for_ The status to get from InDesign.
 	 */
 	performanceMetric(for_: number | PerformanceMetricOptions): any;
 
 	/**
 	 * Gets the long name of the specified performance metric.
-	 * @param for The status to get from InDesign.
+	 * @param for_ The status to get from InDesign.
 	 */
 	performanceMetricLongName(for_: number | PerformanceMetricOptions): string;
 
 	/**
 	 * Gets the short name of the specified performance metric.
-	 * @param for The status to get from InDesign.
+	 * @param for_ The status to get from InDesign.
 	 */
 	performanceMetricShortName(for_: number | PerformanceMetricOptions): string;
 
@@ -3229,7 +3229,7 @@ declare class Application {
 
 	/**
 	 * Translates a key string into localized form based on current application locale.
-	 * @param for The key string to translate
+	 * @param for_ The key string to translate
 	 */
 	translateKeyString(for_: string): string;
 

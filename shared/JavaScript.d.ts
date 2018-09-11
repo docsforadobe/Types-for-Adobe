@@ -501,13 +501,13 @@ interface Math {
 
   /**
    * Returns the largest of zero or more numbers.
-   * @param ...rest Numbers.
+   * @param rest Numbers.
    */
   max(...rest: number[]): number
 
   /**
    * Returns the smallest of zero or more numbers.
-   * @param ...rest Numbers.
+   * @param rest Numbers.
    */
   min(...rest: number[]): number
 
@@ -1064,7 +1064,7 @@ interface String {
   /**
    *
    * @param what
-   * @param with
+   * @param with_
    */
   replace(what: any, with_: string): string
 
