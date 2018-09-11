@@ -258,7 +258,7 @@ declare class WaveDocument {
   /**
    *
    * @param path
-   * @param export Save the document at the given location. Do an export if the parameter 'export' is true. Returns true on success.
+   * @param export_ Save the document at the given location. Do an export if the parameter 'export' is true. Returns true on success.
    */
   saveAs(path: string, export_: boolean): boolean
 }

@@ -7568,7 +7568,7 @@ declare class Swatch {
 
   /**
    * Merges the specified swatches with the swatch.
-   * @param with The swatches to merge.
+   * @param with_ The swatches to merge.
    */
   merge(with_: Swatch[] | Swatch | string): Swatch
 
@@ -32222,7 +32222,7 @@ declare class Layer {
 
   /**
    * Merges the layer with other layer(s).
-   * @param with The layer(s) with which to merge.
+   * @param with_ The layer(s) with which to merge.
    */
   merge(with_: Layer[]): Layer
 
@@ -32713,7 +32713,7 @@ declare class Spread {
   /**
    * Get the coordinates of the given location in the specified coordinate system.
    * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-   * @param in The coordinate space to use.
+   * @param in_ The coordinate space to use.
    * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page.
    */
   resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any
@@ -32743,7 +32743,7 @@ declare class Spread {
 
   /**
    * Transform the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
    * @param withMatrix Transform matrix.
    * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
@@ -32759,7 +32759,7 @@ declare class Spread {
 
   /**
    * Get the transformation values of the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    */
   transformValuesOf(in_: CoordinateSpaces): TransformationMatrix[]
 }
@@ -33224,7 +33224,7 @@ declare class Page {
 
   /**
    * Move the bounding box of the page item
-   * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
+   * @param in_ The bounding box to resize. Can accept: CoordinateSpaces enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
    * @param opposingCorners Opposing corners of new bounding box in the given coordinate space
    */
   reframe(in_: any, opposingCorners: any[]): void
@@ -33249,7 +33249,7 @@ declare class Page {
 
   /**
    * Resize the page item.
-   * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
+   * @param in_ The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
    * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
    * @param by How the current dimensions are affected by the given values
    * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method).
@@ -33268,7 +33268,7 @@ declare class Page {
   /**
    * Get the coordinates of the given location in the specified coordinate system.
    * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-   * @param in The coordinate space to use.
+   * @param in_ The coordinate space to use.
    * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page.
    */
   resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any
@@ -33303,7 +33303,7 @@ declare class Page {
 
   /**
    * Transform the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
    * @param withMatrix Transform matrix.
    * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
@@ -33319,7 +33319,7 @@ declare class Page {
 
   /**
    * Get the transformation values of the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    */
   transformValuesOf(in_: CoordinateSpaces): TransformationMatrix[]
 }
@@ -33761,7 +33761,7 @@ declare class MasterSpread {
   /**
    * Get the coordinates of the given location in the specified coordinate system.
    * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-   * @param in The coordinate space to use.
+   * @param in_ The coordinate space to use.
    * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page.
    */
   resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any
@@ -33784,7 +33784,7 @@ declare class MasterSpread {
 
   /**
    * Transform the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
    * @param withMatrix Transform matrix.
    * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
@@ -33800,7 +33800,7 @@ declare class MasterSpread {
 
   /**
    * Get the transformation values of the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    */
   transformValuesOf(in_: CoordinateSpaces): TransformationMatrix[]
 }
@@ -34625,7 +34625,7 @@ declare class PageItem {
 
   /**
    * Move the bounding box of the page item
-   * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
+   * @param in_ The bounding box to resize. Can accept: CoordinateSpaces enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
    * @param opposingCorners Opposing corners of new bounding box in the given coordinate space
    */
   reframe(in_: any, opposingCorners: any[]): void
@@ -34650,7 +34650,7 @@ declare class PageItem {
 
   /**
    * Resize the page item.
-   * @param in The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
+   * @param in_ The bounding box to resize. Can accept: CoordinateSpaces enumerator, BoundingBoxLimits enumerator or Ordered array containing coordinateSpace:CoordinateSpaces enumerator, boundsKind:BoundingBoxLimits enumerator.
    * @param from The transform origin. Legal specifications: relative to bounding box: anchor | {anchor | {x,y}, bounds kind [, coordinate space]}; relative to coordinate space: {x,y} | {{x,y}[, coordinate space]}; relative to layout window ruler: {{x,y}, page index | bounds kind}. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
    * @param by How the current dimensions are affected by the given values
    * @param values The width and height values. Legal dimensions specifications: {x, y [, coordinate space]}, {x, resize constraint [, coordinate space]}, or {resize constraint, y [, coordinate space]}; where x and y are real numbers and coordinate space is used to determine _only_ the unit of length for x and y; coordinate space is ignored for the 'current dimensions times' resize method).
@@ -34669,7 +34669,7 @@ declare class PageItem {
   /**
    * Get the coordinates of the given location in the specified coordinate system.
    * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-   * @param in The coordinate space to use.
+   * @param in_ The coordinate space to use.
    * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page.
    */
   resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any
@@ -34699,7 +34699,7 @@ declare class PageItem {
 
   /**
    * Transform the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    * @param from The temporary origin during the transformation. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
    * @param withMatrix Transform matrix.
    * @param replacingCurrent Transform components to consider; providing this optional parameter causes the target's existing transform components to be replaced with new values.Without this parameter, the given matrix is concatenated onto the target's existing transform combining the effect of the two.
@@ -34735,7 +34735,7 @@ declare class PageItem {
 
   /**
    * Get the transformation values of the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    */
   transformValuesOf(in_: CoordinateSpaces): TransformationMatrix[]
 }
@@ -36750,7 +36750,7 @@ declare class Guide {
   /**
    * Get the coordinates of the given location in the specified coordinate system.
    * @param location The location requested. Can accept: Array of 2 Reals, AnchorPoint enumerator or Array of Arrays of 2 Reals, CoordinateSpaces enumerators, AnchorPoint enumerators, BoundingBoxLimits enumerators or Long Integers.
-   * @param in The coordinate space to use.
+   * @param in_ The coordinate space to use.
    * @param consideringRulerUnits If true then a ruler location is interpreted using ruler units rather than points. The default value is false. This parameter has no effect unless the reference point is specified relative to a page.
    */
   resolve(location: any, in_: CoordinateSpaces, consideringRulerUnits?: boolean): any
@@ -36773,7 +36773,7 @@ declare class Guide {
 
   /**
    * Get the transformation values of the page item.
-   * @param in The coordinate space to use
+   * @param in_ The coordinate space to use
    */
   transformValuesOf(in_: CoordinateSpaces): TransformationMatrix[]
 }
@@ -37731,7 +37731,7 @@ declare class SplineItem extends PageItem {
 
   /**
    * Creates a new page item by combining the SplineItem with other objects. Deletes the objects if they do not intersect.
-   * @param with The object(s) to add.
+   * @param with_ The object(s) to add.
    */
   addPath(with_: PageItem[]): PageItem
 
@@ -37760,25 +37760,25 @@ declare class SplineItem extends PageItem {
 
   /**
    * Creates a new page item by excluding the overlapping areas of the SplineItem and other objects.
-   * @param with The object(s) to exclude.
+   * @param with_ The object(s) to exclude.
    */
   excludeOverlapPath(with_: PageItem[]): PageItem
 
   /**
    * Creates a new page item by intersecting the SplineItem with other objects. Returns an error if the objects do not intersect.
-   * @param with The object(s) with which to intersect.
+   * @param with_ The object(s) with which to intersect.
    */
   intersectPath(with_: PageItem[]): PageItem
 
   /**
    * Creates a compound path by combining the path(s) of the SplineItem with the paths of other objects.
-   * @param with The other objects whose paths to include in the new compound path.
+   * @param with_ The other objects whose paths to include in the new compound path.
    */
   makeCompoundPath(with_: PageItem[]): PageItem
 
   /**
    * Creates a new page item by reverse subtracting the overlapping areas of the SplineItem and other objects.
-   * @param with The object(s) to reverse subtract.
+   * @param with_ The object(s) to reverse subtract.
    */
   minusBack(with_: PageItem[]): PageItem
 
@@ -37805,7 +37805,7 @@ declare class SplineItem extends PageItem {
 
   /**
    * Creates a new page item by subtracting the overlapping areas of the SplineItem and other objects.
-   * @param with The object(s) to subtract.
+   * @param with_ The object(s) to subtract.
    */
   subtractPath(with_: PageItem[]): PageItem
 }
@@ -64052,7 +64052,7 @@ declare class Cell {
 
   /**
    * Merges the cells.
-   * @param with The cell(s) to merge with.
+   * @param with_ The cell(s) to merge with.
    */
   merge(with_: Cell | Row | Column): Cell
 
@@ -65879,7 +65879,7 @@ declare class Column {
 
   /**
    * Merges the cells.
-   * @param with The cell(s) to merge with.
+   * @param with_ The cell(s) to merge with.
    */
   merge(with_: Cell | Row | Column): Cell
 
@@ -66649,7 +66649,7 @@ declare class Row {
 
   /**
    * Merges the cells.
-   * @param with The cell(s) to merge with.
+   * @param with_ The cell(s) to merge with.
    */
   merge(with_: Cell | Row | Column): Cell
 
@@ -71919,7 +71919,7 @@ declare class TextFrame extends PageItem {
 
   /**
    * Creates a new page item by combining the TextFrame with other objects. Deletes the objects if they do not intersect.
-   * @param with The object(s) to add.
+   * @param with_ The object(s) to add.
    */
   addPath(with_: PageItem[]): PageItem
 
@@ -71966,7 +71966,7 @@ declare class TextFrame extends PageItem {
 
   /**
    * Creates a new page item by excluding the overlapping areas of the TextFrame and other objects.
-   * @param with The object(s) to exclude.
+   * @param with_ The object(s) to exclude.
    */
   excludeOverlapPath(with_: PageItem[]): PageItem
 
@@ -71996,19 +71996,19 @@ declare class TextFrame extends PageItem {
 
   /**
    * Creates a new page item by intersecting the TextFrame with other objects. Returns an error if the objects do not intersect.
-   * @param with The object(s) with which to intersect.
+   * @param with_ The object(s) with which to intersect.
    */
   intersectPath(with_: PageItem[]): PageItem
 
   /**
    * Creates a compound path by combining the path(s) of the TextFrame with the paths of other objects.
-   * @param with The other objects whose paths to include in the new compound path.
+   * @param with_ The other objects whose paths to include in the new compound path.
    */
   makeCompoundPath(with_: PageItem[]): PageItem
 
   /**
    * Creates a new page item by reverse subtracting the overlapping areas of the TextFrame and other objects.
-   * @param with The object(s) to reverse subtract.
+   * @param with_ The object(s) to reverse subtract.
    */
   minusBack(with_: PageItem[]): PageItem
 
@@ -72042,7 +72042,7 @@ declare class TextFrame extends PageItem {
 
   /**
    * Creates a new page item by subtracting the overlapping areas of the TextFrame and other objects.
-   * @param with The object(s) to subtract.
+   * @param with_ The object(s) to subtract.
    */
   subtractPath(with_: PageItem[]): PageItem
 }
