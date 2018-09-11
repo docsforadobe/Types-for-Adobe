@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "productName": "TypeScript types for Adobe Products",
   "description": "TypeScript types for Adobe Audition, Illustrator, InDesign, Photoshop, AfterEffects, Premiere, ScriptUI",
-  "homepage": "https://types-for-adobe.pravdomil.com",
   "keywords": [
     "adobe"
   ],
