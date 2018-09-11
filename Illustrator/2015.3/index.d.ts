@@ -27,37 +27,37 @@ declare enum ScreenMode {
  */
 declare enum ColorType {
 	/**
-	 * 
+	 *
 	 */
 	CMYK = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	GRADIENT = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	GRAY = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	None = 6,
 
 	/**
-	 * 
+	 *
 	 */
 	PATTERN = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	RGB = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	SPOT = 3,
 
@@ -436,7 +436,7 @@ declare enum GradientType {
 	LINEAR = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	RADIAL = 2,
 
@@ -500,22 +500,22 @@ declare enum RasterLinkState {
  */
 declare enum TabStopAlignment {
 	/**
-	 * 
+	 *
 	 */
 	Center = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	Decimal = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	Left = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	Right = 2,
 
@@ -526,37 +526,37 @@ declare enum TabStopAlignment {
  */
 declare enum Justification {
 	/**
-	 * 
+	 *
 	 */
 	CENTER = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	FULLJUSTIFY = 6,
 
 	/**
-	 * 
+	 *
 	 */
 	FULLJUSTIFYLASTLINECENTER = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	FULLJUSTIFYLASTLINELEFT = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	FULLJUSTIFYLASTLINERIGHT = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	LEFT = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	RIGHT = 1,
 
@@ -736,22 +736,22 @@ declare enum ExportType {
  */
 declare enum ColorReductionMethod {
 	/**
-	 * 
+	 *
 	 */
 	ADAPTIVE = 0x41647074,
 
 	/**
-	 * 
+	 *
 	 */
 	PERCEPTUAL = 0x50726370,
 
 	/**
-	 * 
+	 *
 	 */
 	SELECTIVE = 0x536C7476,
 
 	/**
-	 * 
+	 *
 	 */
 	WEB = 0x57656220,
 
@@ -762,12 +762,12 @@ declare enum ColorReductionMethod {
  */
 declare enum ColorDitherMethod {
 	/**
-	 * 
+	 *
 	 */
 	DIFFUSION = 0x4466736E,
 
 	/**
-	 * 
+	 *
 	 */
 	NOISE = 0x424E6F69,
 
@@ -777,7 +777,7 @@ declare enum ColorDitherMethod {
 	NOREDUCTION = 0x4E6F6E65,
 
 	/**
-	 * 
+	 *
 	 */
 	PATTERNDITHER = 0x5074726E,
 
@@ -788,62 +788,62 @@ declare enum ColorDitherMethod {
  */
 declare enum Compatibility {
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR10 = 10,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR11 = 11,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR12 = 12,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR13 = 13,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR14 = 14,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR15 = 15,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR16 = 16,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR17 = 17,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR3 = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR8 = 8,
 
 	/**
-	 * 
+	 *
 	 */
 	ILLUSTRATOR9 = 9,
 
 	/**
-	 * 
+	 *
 	 */
 	JAPANESEVERSION3 = 3,
 
@@ -997,57 +997,57 @@ declare enum CompressionQuality {
 	AUTOMATICJPEGMINIMUM = 10,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEG2000HIGH = 24,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEG2000LOSSLESS = 26,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEG2000LOW = 22,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEG2000MAXIMUM = 25,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEG2000MEDIUM = 23,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEG2000MINIMUM = 21,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEGHIGH = 6,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEGLOW = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEGMAXIMUM = 7,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEGMEDIUM = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	JPEGMINIMUM = 3,
 
@@ -1057,12 +1057,12 @@ declare enum CompressionQuality {
 	None = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	ZIP4BIT = 8,
 
 	/**
-	 * 
+	 *
 	 */
 	ZIP8BIT = 9,
 
@@ -1192,17 +1192,17 @@ declare enum MonochromeCompression {
  */
 declare enum PDFTrimMarkWeight {
 	/**
-	 * 
+	 *
 	 */
 	TRIMMARKWEIGHT0125 = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	TRIMMARKWEIGHT025 = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	TRIMMARKWEIGHT05 = 3,
 
@@ -1427,7 +1427,7 @@ declare enum SaveOptions {
 }
 
 /**
- * 
+ *
  */
 declare enum RulerUnits {
 	/**
@@ -1477,82 +1477,82 @@ declare enum RulerUnits {
  */
 declare enum BlendModes {
 	/**
-	 * 
+	 *
 	 */
 	COLORBLEND = 14,
 
 	/**
-	 * 
+	 *
 	 */
 	COLORBURN = 7,
 
 	/**
-	 * 
+	 *
 	 */
 	COLORDODGE = 6,
 
 	/**
-	 * 
+	 *
 	 */
 	DARKEN = 8,
 
 	/**
-	 * 
+	 *
 	 */
 	DIFFERENCE = 10,
 
 	/**
-	 * 
+	 *
 	 */
 	EXCLUSION = 11,
 
 	/**
-	 * 
+	 *
 	 */
 	HARDLIGHT = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	HUE = 12,
 
 	/**
-	 * 
+	 *
 	 */
 	LIGHTEN = 9,
 
 	/**
-	 * 
+	 *
 	 */
 	LUMINOSITY = 15,
 
 	/**
-	 * 
+	 *
 	 */
 	MULTIPLY = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	NORMAL = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	OVERLAY = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	SATURATIONBLEND = 13,
 
 	/**
-	 * 
+	 *
 	 */
 	SCREEN = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	SOFTLIGHT = 4,
 
@@ -1651,12 +1651,12 @@ declare enum SVGDTDVersion {
  */
 declare enum SVGFontType {
 	/**
-	 * 
+	 *
 	 */
 	OUTLINEFONT = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	SVGFONT = 2,
 
@@ -1667,32 +1667,32 @@ declare enum SVGFontType {
  */
 declare enum SVGFontSubsetting {
 	/**
-	 * 
+	 *
 	 */
 	ALLGLYPHS = 7,
 
 	/**
-	 * 
+	 *
 	 */
 	COMMONENGLISH = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	COMMONROMAN = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	GLYPHSUSED = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	GLYPHSUSEDPLUSENGLISH = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	GLYPHSUSEDPLUSROMAN = 6,
 
@@ -1704,7 +1704,7 @@ declare enum SVGFontSubsetting {
 }
 
 /**
- * 
+ *
  */
 declare enum SVGDocumentEncoding {
 	/**
@@ -1713,19 +1713,19 @@ declare enum SVGDocumentEncoding {
 	ASCII = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	UTF16 = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	UTF8 = 2,
 
 }
 
 /**
- * 
+ *
  */
 declare enum SVGCSSPropertyLocation {
 	/**
@@ -1734,17 +1734,17 @@ declare enum SVGCSSPropertyLocation {
 	ENTITIES = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	PRESENTATIONATTRIBUTES = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	STYLEATTRIBUTES = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	STYLEELEMENTS = 3,
 
@@ -1760,12 +1760,12 @@ declare enum SVGIdType {
 	SVGIDMINIMAL = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	SVGIDREGULAR = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	SVGIDUNIQUE = 2,
 
@@ -1781,12 +1781,12 @@ declare enum RasterImageLocation {
 	EMBED = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	LINK = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	PRESERVE = 2,
 
@@ -1797,7 +1797,7 @@ declare enum RasterImageLocation {
  */
 declare enum OutputFlattening {
 	/**
-	 * 
+	 *
 	 */
 	PRESERVEAPPEARANCE = 1,
 
@@ -1851,7 +1851,7 @@ declare enum SpotColorKind {
 }
 
 /**
- * 
+ *
  */
 declare enum FlashExportStyle {
 	/**
@@ -1954,48 +1954,48 @@ declare enum FlashExportVersion {
 }
 
 /**
- * 
+ *
  */
 declare enum FlashImageFormat {
 	/**
-	 * 
+	 *
 	 */
 	LOSSLESS = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	LOSSY = 2,
 
 }
 
 /**
- * 
+ *
  */
 declare enum LayerOrderType {
 	/**
-	 * 
+	 *
 	 */
 	BOTTOMUP = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	TOPDOWN = 2,
 
 }
 
 /**
- * 
+ *
  */
 declare enum BlendAnimationType {
 	/**
-	 * 
+	 *
 	 */
 	INBUILD = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	INSEQUENCE = 1,
 
@@ -2007,230 +2007,230 @@ declare enum BlendAnimationType {
 }
 
 /**
- * 
+ *
  */
 declare enum FlashJPEGMethod {
 	/**
-	 * 
+	 *
 	 */
 	Optimized = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	Standard = 1,
 
 }
 
 /**
- * 
+ *
  */
 declare enum FlashPlaybackSecurity {
 	/**
-	 * 
+	 *
 	 */
 	PlaybackLocal = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	PlaybackNetwork = 2,
 
 }
 
 /**
- * 
+ *
  */
 declare enum VariableKind {
 	/**
-	 * 
+	 *
 	 */
 	GRAPH = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	IMAGE = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	TEXTUAL = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	Unknown = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	VISIBILITY = 2,
 
 }
 
 /**
- * 
+ *
  */
 declare enum AutoCADExportFileFormat {
 	/**
-	 * 
+	 *
 	 */
 	DWG = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	DXF = 0,
 
 }
 
 /**
- * 
+ *
  */
 declare enum AutoCADCompatibility {
 	/**
-	 * 
+	 *
 	 */
 	AutoCADRelease13 = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	AutoCADRelease14 = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	AutoCADRelease15 = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	AutoCADRelease18 = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	AutoCADRelease21 = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	AutoCADRelease24 = 5,
 
 }
 
 /**
- * 
+ *
  */
 declare enum AutoCADUnit {
 	/**
-	 * 
+	 *
 	 */
 	Centimeters = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	Inches = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	Millimeters = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	Picas = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	Pixels = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	Points = 0,
 
 }
 
 /**
- * 
+ *
  */
 declare enum AutoCADColors {
 	/**
-	 * 
+	 *
 	 */
 	Max16Colors = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	Max256Colors = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	Max8Colors = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	TrueColors = 3,
 
 }
 
 /**
- * 
+ *
  */
 declare enum AutoCADRasterFormat {
 	/**
-	 * 
+	 *
 	 */
 	JPEG = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	PNG = 0,
 
 }
 
 /**
- * 
+ *
  */
 declare enum AutoCADExportOption {
 	/**
-	 * 
+	 *
 	 */
 	MaximumEditability = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	PreserveAppearance = 0,
 
 }
 
 /**
- * 
+ *
  */
 declare enum AutoCADGlobalScaleOption {
 	/**
-	 * 
+	 *
 	 */
 	FitArtboard = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	OriginalSize = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	ScaleByValue = 2,
 
@@ -2241,12 +2241,12 @@ declare enum AutoCADGlobalScaleOption {
  */
 declare enum TIFFByteOrder {
 	/**
-	 * 
+	 *
 	 */
 	IBMPC = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	MACINTOSH = 1,
 
@@ -2257,28 +2257,28 @@ declare enum TIFFByteOrder {
  */
 declare enum UserInteractionLevel {
 	/**
-	 * 
+	 *
 	 */
 	DISPLAYALERTS = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	DONTDISPLAYALERTS = -1,
 
 }
 
 /**
- * 
+ *
  */
 declare enum PolarityValues {
 	/**
-	 * 
+	 *
 	 */
 	NEGATIVE = -1,
 
 	/**
-	 * 
+	 *
 	 */
 	POSITIVE = 1,
 
@@ -2904,17 +2904,17 @@ declare enum FigureStyleType {
  */
 declare enum BaselineDirectionType {
 	/**
-	 * 
+	 *
 	 */
 	Standard = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	TateChuYoko = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	VerticalRotated = 2,
 
@@ -2925,132 +2925,132 @@ declare enum BaselineDirectionType {
  */
 declare enum LanguageType {
 	/**
-	 * 
+	 *
 	 */
 	ARABIC = 39,
 
 	/**
-	 * 
+	 *
 	 */
 	BENGALIINDIA = 51,
 
 	/**
-	 * 
+	 *
 	 */
 	BOKMALNORWEGIAN = 8,
 
 	/**
-	 * 
+	 *
 	 */
 	BRAZILLIANPORTUGUESE = 11,
 
 	/**
-	 * 
+	 *
 	 */
 	BULGARIAN = 20,
 
 	/**
-	 * 
+	 *
 	 */
 	CANADIANFRENCH = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	CATALAN = 17,
 
 	/**
-	 * 
+	 *
 	 */
 	CHINESE = 29,
 
 	/**
-	 * 
+	 *
 	 */
 	CZECH = 22,
 
 	/**
-	 * 
+	 *
 	 */
 	DANISH = 16,
 
 	/**
-	 * 
+	 *
 	 */
 	DUTCH = 15,
 
 	/**
-	 * 
+	 *
 	 */
 	DUTCH2005REFORM = 43,
 
 	/**
-	 * 
+	 *
 	 */
 	ENGLISH = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	FARSI = 41,
 
 	/**
-	 * 
+	 *
 	 */
 	FINNISH = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	GERMAN2006REFORM = 42,
 
 	/**
-	 * 
+	 *
 	 */
 	GREEK = 25,
 
 	/**
-	 * 
+	 *
 	 */
 	GUJARATI = 53,
 
 	/**
-	 * 
+	 *
 	 */
 	HINDI = 49,
 
 	/**
-	 * 
+	 *
 	 */
 	HUNGARIAN = 28,
 
 	/**
-	 * 
+	 *
 	 */
 	ICELANDIC = 27,
 
 	/**
-	 * 
+	 *
 	 */
 	ITALIAN = 7,
 
 	/**
-	 * 
+	 *
 	 */
 	JAPANESE = 30,
 
 	/**
-	 * 
+	 *
 	 */
 	KANNADA = 57,
 
 	/**
-	 * 
+	 *
 	 */
 	MALAYALAM = 58,
 
 	/**
-	 * 
+	 *
 	 */
 	MARATHI = 50,
 
@@ -3060,97 +3060,97 @@ declare enum LanguageType {
 	NYNORSKNORWEGIAN = 9,
 
 	/**
-	 * 
+	 *
 	 */
 	OLDGERMAN = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	ORIYA = 54,
 
 	/**
-	 * 
+	 *
 	 */
 	POLISH = 23,
 
 	/**
-	 * 
+	 *
 	 */
 	PUNJABI = 52,
 
 	/**
-	 * 
+	 *
 	 */
 	RUMANIAN = 24,
 
 	/**
-	 * 
+	 *
 	 */
 	RUSSIAN = 18,
 
 	/**
-	 * 
+	 *
 	 */
 	SERBIAN = 21,
 
 	/**
-	 * 
+	 *
 	 */
 	SPANISH = 12,
 
 	/**
-	 * 
+	 *
 	 */
 	STANDARDFRENCH = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	STANDARDGERMAN = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	STANDARDPORTUGUESE = 10,
 
 	/**
-	 * 
+	 *
 	 */
 	SWEDISH = 13,
 
 	/**
-	 * 
+	 *
 	 */
 	SWISSGERMAN = 6,
 
 	/**
-	 * 
+	 *
 	 */
 	SWISSGERMAN2006REFORM = 44,
 
 	/**
-	 * 
+	 *
 	 */
 	TAMIL = 55,
 
 	/**
-	 * 
+	 *
 	 */
 	TELUGU = 56,
 
 	/**
-	 * 
+	 *
 	 */
 	TURKISH = 26,
 
 	/**
-	 * 
+	 *
 	 */
 	UKENGLISH = 14,
 
 	/**
-	 * 
+	 *
 	 */
 	UKRANIAN = 19,
 
@@ -3161,62 +3161,62 @@ declare enum LanguageType {
  */
 declare enum AlternateGlyphsForm {
 	/**
-	 * 
+	 *
 	 */
 	DEFAULTFORM = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	EXPERT = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	FULLWIDTH = 8,
 
 	/**
-	 * 
+	 *
 	 */
 	HALFWIDTH = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	JIS04FORM = 11,
 
 	/**
-	 * 
+	 *
 	 */
 	JIS78FORM = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	JIS83FORM = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	JIS90FORM = 10,
 
 	/**
-	 * 
+	 *
 	 */
 	PROPORTIONALWIDTH = 9,
 
 	/**
-	 * 
+	 *
 	 */
 	QUARTERWIDTH = 7,
 
 	/**
-	 * 
+	 *
 	 */
 	THIRDWIDTH = 6,
 
 	/**
-	 * 
+	 *
 	 */
 	TRADITIONAL = 1,
 
@@ -3227,32 +3227,32 @@ declare enum AlternateGlyphsForm {
  */
 declare enum StyleRunAlignmentType {
 	/**
-	 * 
+	 *
 	 */
 	ROMANBASELINE = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	bottom = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	center = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	icfBottom = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	icfTop = 4,
 
 	/**
-	 * 
+	 *
 	 */
 	top = 5,
 
@@ -3263,42 +3263,42 @@ declare enum StyleRunAlignmentType {
  */
 declare enum WariChuJustificationType {
 	/**
-	 * 
+	 *
 	 */
 	Center = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	Left = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	Right = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	WARICHUAUTOJUSTIFY = 7,
 
 	/**
-	 * 
+	 *
 	 */
 	WARICHUFULLJUSTIFY = 6,
 
 	/**
-	 * 
+	 *
 	 */
 	WARICHUFULLJUSTIFYLASTLINECENTER = 5,
 
 	/**
-	 * 
+	 *
 	 */
 	WARICHUFULLJUSTIFYLASTLINELEFT = 3,
 
 	/**
-	 * 
+	 *
 	 */
 	WARICHUFULLJUSTIFYLASTLINERIGHT = 4,
 
@@ -3309,17 +3309,17 @@ declare enum WariChuJustificationType {
  */
 declare enum BurasagariTypeEnum {
 	/**
-	 * 
+	 *
 	 */
 	Forced = 2,
 
 	/**
-	 * 
+	 *
 	 */
 	None = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	Standard = 1,
 
@@ -3330,17 +3330,17 @@ declare enum BurasagariTypeEnum {
  */
 declare enum KinsokuOrderEnum {
 	/**
-	 * 
+	 *
 	 */
 	PUSHIN = 0,
 
 	/**
-	 * 
+	 *
 	 */
 	PUSHOUTFIRST = 1,
 
 	/**
-	 * 
+	 *
 	 */
 	PUSHOUTONLY = 2,
 
@@ -3797,7 +3797,7 @@ declare enum DocumentLayoutStyle {
 /**
  * A collection of artboards.
  */
-declare class Artboards {
+declare class Artboards extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -3817,7 +3817,7 @@ declare class Artboards {
 	 * Add artboard object.
 	 * @param artboardRect Size and position of artboard.
 	 */
-	static add(artboardRect: Rect): Artboard;
+	add(artboardRect: Rect): Artboard;
 
 	/**
 	 * Retrieves the index position of the active artboard in the document's list.
@@ -3826,7 +3826,7 @@ declare class Artboards {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Artboard;
 
@@ -3865,7 +3865,7 @@ declare class Artboards {
 /**
  * A collection of documents.
  */
-declare class Documents {
+declare class Documents extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -3891,7 +3891,7 @@ declare class Documents {
 	 * @param artboardSpacing Spacing between artboards for new document.
 	 * @param artboardRowsOrCols Number of rows (for rows layout) OR column(for column layouts)of artboards.Range is 1 to (docNumArtboards - 1) or 1 for single row or column layouts.
 	 */
-	static add(documentColorSpace?: DocumentColorSpace, width?: number, height?: number, numArtboards?: number, artboardLayout?: DocumentArtboardLayout, artboardSpacing?: number, artboardRowsOrCols?: number): Document;
+	add(documentColorSpace?: DocumentColorSpace, width?: number, height?: number, numArtboards?: number, artboardLayout?: DocumentArtboardLayout, artboardSpacing?: number, artboardRowsOrCols?: number): Document;
 
 	/**
 	 * Create a new document from a preset.
@@ -3916,7 +3916,7 @@ declare class Documents {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Document;
 
@@ -3925,7 +3925,7 @@ declare class Documents {
 /**
  * A collection of layers.
  */
-declare class Layers {
+declare class Layers extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -3944,11 +3944,11 @@ declare class Layers {
 	/**
 	 * Create a layer.
 	 */
-	static add(): Layer;
+	add(): Layer;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Layer;
 
@@ -3962,7 +3962,7 @@ declare class Layers {
 /**
  * A collection of group items.
  */
-declare class GroupItems {
+declare class GroupItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -3981,7 +3981,7 @@ declare class GroupItems {
 	/**
 	 * Create a group item.
 	 */
-	static add(): GroupItem;
+	add(): GroupItem;
 
 	/**
 	 * Create a group item from a vector graphics file.
@@ -3991,7 +3991,7 @@ declare class GroupItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): GroupItem;
 
@@ -4005,7 +4005,7 @@ declare class GroupItems {
 /**
  * A collection of page items.
  */
-declare class PageItems {
+declare class PageItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4023,7 +4023,7 @@ declare class PageItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): PageItem;
 
@@ -4032,7 +4032,7 @@ declare class PageItems {
 /**
  * A collection of path items.
  */
-declare class PathItems {
+declare class PathItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4051,7 +4051,7 @@ declare class PathItems {
 	/**
 	 * Create a path.
 	 */
-	static add(): PathItem;
+	add(): PathItem;
 
 	/**
 	 * Create an elliptical path item.
@@ -4066,14 +4066,14 @@ declare class PathItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): PathItem;
 
 	/**
 	 * Used to create a regular polygon path item. Not for path item access.
-	 * @param centerX 
-	 * @param centerY 
+	 * @param centerX
+	 * @param centerY
 	 * @param radius The radius of the polygon points.
 	 * @param sides The number of sides on the polygon.
 	 * @param reversed Is the polygon path reversed?
@@ -4097,10 +4097,10 @@ declare class PathItems {
 
 	/**
 	 * Used to create a rounded-corner rectangular path item. Not for path item access.
-	 * @param top 
-	 * @param left 
-	 * @param width 
-	 * @param height 
+	 * @param top
+	 * @param left
+	 * @param width
+	 * @param height
 	 * @param horizontalRadius Horizontal corner radius.
 	 * @param verticalRadius Vertical corner radius.
 	 * @param reversed Is the rectangle path reversed?
@@ -4109,8 +4109,8 @@ declare class PathItems {
 
 	/**
 	 * Used to create a star-shaped path item. Not for path item access.
-	 * @param centerX 
-	 * @param centerY 
+	 * @param centerX
+	 * @param centerY
 	 * @param radius The outside radius of the star points.
 	 * @param innerRadius The inside radius of the star points.
 	 * @param points The number of points on the star.
@@ -4123,7 +4123,7 @@ declare class PathItems {
 /**
  * A collection of path points.
  */
-declare class PathPoints {
+declare class PathPoints extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4142,11 +4142,11 @@ declare class PathPoints {
 	/**
 	 * Create a path point.
 	 */
-	static add(): PathPoint;
+	add(): PathPoint;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): PathPoint;
 
@@ -4160,7 +4160,7 @@ declare class PathPoints {
 /**
  * A collection of compound path items.
  */
-declare class CompoundPathItems {
+declare class CompoundPathItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4179,11 +4179,11 @@ declare class CompoundPathItems {
 	/**
 	 * Create a compound path item.
 	 */
-	static add(): CompoundPathItem;
+	add(): CompoundPathItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): CompoundPathItem;
 
@@ -4197,7 +4197,7 @@ declare class CompoundPathItems {
 /**
  * A collection of stories.
  */
-declare class Stories {
+declare class Stories extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4215,7 +4215,7 @@ declare class Stories {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Story;
 
@@ -4224,7 +4224,7 @@ declare class Stories {
 /**
  * A collection of text frame items.
  */
-declare class TextFrameItems {
+declare class TextFrameItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4243,7 +4243,7 @@ declare class TextFrameItems {
 	/**
 	 * Create a point text frame item.
 	 */
-	static add(): TextFrameItem;
+	add(): TextFrameItem;
 
 	/**
 	 * Create an area text frame item.
@@ -4256,7 +4256,7 @@ declare class TextFrameItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): TextFrameItem;
 
@@ -4288,7 +4288,7 @@ declare class TextFrameItems {
 /**
  * A collection of legacy text items.
  */
-declare class LegacyTextItems {
+declare class LegacyTextItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4311,7 +4311,7 @@ declare class LegacyTextItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): LegacyTextItem;
 
@@ -4320,7 +4320,7 @@ declare class LegacyTextItems {
 /**
  * A collection of text range items.
  */
-declare class TextRanges {
+declare class TextRanges extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4338,7 +4338,7 @@ declare class TextRanges {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): TextRange;
 
@@ -4347,7 +4347,7 @@ declare class TextRanges {
 /**
  * A collection of insertion points.
  */
-declare class InsertionPoints {
+declare class InsertionPoints extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4365,7 +4365,7 @@ declare class InsertionPoints {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): InsertionPoint;
 
@@ -4374,7 +4374,7 @@ declare class InsertionPoints {
 /**
  * A collection of characters.
  */
-declare class Characters {
+declare class Characters extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4394,17 +4394,17 @@ declare class Characters {
 	 * Create a character.
 	 * @param contents The text string.
 	 */
-	static add(contents: string): TextRange;
+	add(contents: string): TextRange;
 
 	/**
-	 * 
+	 *
 	 * @param contents The text string.
 	 */
 	static addBefore(contents: string): TextRange;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): TextRange;
 
@@ -4418,7 +4418,7 @@ declare class Characters {
 /**
  * A collection of words.
  */
-declare class Words {
+declare class Words extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4438,17 +4438,17 @@ declare class Words {
 	 * Create a word.
 	 * @param contents The text string.
 	 */
-	static add(contents: string): TextRange;
+	add(contents: string): TextRange;
 
 	/**
-	 * 
+	 *
 	 * @param contents The text string.
 	 */
 	static addBefore(contents: string): TextRange;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): TextRange;
 
@@ -4462,7 +4462,7 @@ declare class Words {
 /**
  * A collection of lines.
  */
-declare class Lines {
+declare class Lines extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4480,7 +4480,7 @@ declare class Lines {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): TextRange;
 
@@ -4489,7 +4489,7 @@ declare class Lines {
 /**
  * A collection of Paragraphs.
  */
-declare class Paragraphs {
+declare class Paragraphs extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4509,17 +4509,17 @@ declare class Paragraphs {
 	 * Create a text art item.
 	 * @param contents The text string.
 	 */
-	static add(contents: string): TextRange;
+	add(contents: string): TextRange;
 
 	/**
-	 * 
+	 *
 	 * @param contents The text string.
 	 */
 	static addBefore(contents: string): TextRange;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): TextRange;
 
@@ -4533,7 +4533,7 @@ declare class Paragraphs {
 /**
  * A collection of character styles.
  */
-declare class CharacterStyles {
+declare class CharacterStyles extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4553,11 +4553,11 @@ declare class CharacterStyles {
 	 * Create a named character style.
 	 * @param name The character style name.
 	 */
-	static add(name: string): CharacterStyle;
+	add(name: string): CharacterStyle;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): CharacterStyle;
 
@@ -4571,7 +4571,7 @@ declare class CharacterStyles {
 /**
  * A collection of paragraph styles.
  */
-declare class ParagraphStyles {
+declare class ParagraphStyles extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4591,11 +4591,11 @@ declare class ParagraphStyles {
 	 * Create a named paragraph style.
 	 * @param name The paragraph style name.
 	 */
-	static add(name: string): ParagraphStyle;
+	add(name: string): ParagraphStyle;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): ParagraphStyle;
 
@@ -4609,7 +4609,7 @@ declare class ParagraphStyles {
 /**
  * A collection of custom spot colors.
  */
-declare class Spots {
+declare class Spots extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4628,11 +4628,11 @@ declare class Spots {
 	/**
 	 * Create a spot color.
 	 */
-	static add(): Spot;
+	add(): Spot;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Spot;
 
@@ -4646,7 +4646,7 @@ declare class Spots {
 /**
  * A collection of swatches.
  */
-declare class Swatches {
+declare class Swatches extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4665,11 +4665,11 @@ declare class Swatches {
 	/**
 	 * Create a swatch.
 	 */
-	static add(): Swatch;
+	add(): Swatch;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Swatch;
 
@@ -4689,7 +4689,7 @@ declare class Swatches {
 /**
  * A collection of Swatch groups.
  */
-declare class SwatchGroups {
+declare class SwatchGroups extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4708,11 +4708,11 @@ declare class SwatchGroups {
 	/**
 	 * Create a Swatch group.
 	 */
-	static add(): SwatchGroup;
+	add(): SwatchGroup;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): SwatchGroup;
 
@@ -4731,7 +4731,7 @@ declare class SwatchGroups {
 /**
  * A collection of gradients.
  */
-declare class Gradients {
+declare class Gradients extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4750,11 +4750,11 @@ declare class Gradients {
 	/**
 	 * Create a gradient.
 	 */
-	static add(): Gradient;
+	add(): Gradient;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Gradient;
 
@@ -4768,7 +4768,7 @@ declare class Gradients {
 /**
  * A collection of gradient stops.
  */
-declare class GradientStops {
+declare class GradientStops extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4787,11 +4787,11 @@ declare class GradientStops {
 	/**
 	 * Create a gradient stop.
 	 */
-	static add(): GradientStop;
+	add(): GradientStop;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): GradientStop;
 
@@ -4805,7 +4805,7 @@ declare class GradientStops {
 /**
  * A collection of patterns.
  */
-declare class Patterns {
+declare class Patterns extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4824,11 +4824,11 @@ declare class Patterns {
 	/**
 	 * Create a pattern.
 	 */
-	static add(): Pattern;
+	add(): Pattern;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Pattern;
 
@@ -4842,7 +4842,7 @@ declare class Patterns {
 /**
  * A collection of symbols.
  */
-declare class Symbols {
+declare class Symbols extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4863,11 +4863,11 @@ declare class Symbols {
 	 * @param sourceArt The art item from which to make this symbol.
 	 * @param registrationPoint The symbol registration point.
 	 */
-	static add(sourceArt: PageItem, registrationPoint?: SymbolRegistrationPoint): Symbol;
+	add(sourceArt: PageItem, registrationPoint?: SymbolRegistrationPoint): Symbol;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Symbol;
 
@@ -4881,7 +4881,7 @@ declare class Symbols {
 /**
  * A collection of symbol items.
  */
-declare class SymbolItems {
+declare class SymbolItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4901,11 +4901,11 @@ declare class SymbolItems {
 	 * An instance of a symbol item.
 	 * @param symbol The symbol to make an instance of.
 	 */
-	static add(symbol: Symbol): SymbolItem;
+	add(symbol: Symbol): SymbolItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): SymbolItem;
 
@@ -4919,7 +4919,7 @@ declare class SymbolItems {
 /**
  * A collection of brushes.
  */
-declare class Brushes {
+declare class Brushes extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4940,7 +4940,7 @@ declare class Brushes {
 	 * @param brushDefinition The brush definition from which the brush would be created.
 	 * @param brushName The name of the brush.
 	 */
-	static add(brushDefinition: File, brushName?: string): Brush;
+	add(brushDefinition: File, brushName?: string): Brush;
 
 	/**
 	 * Create a brush, select the brush tool and load the created brush in the brush tool.
@@ -4950,7 +4950,7 @@ declare class Brushes {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Brush;
 
@@ -4959,7 +4959,7 @@ declare class Brushes {
 /**
  * A collection of art styles.
  */
-declare class ArtStyles {
+declare class ArtStyles extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -4977,7 +4977,7 @@ declare class ArtStyles {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): ArtStyle;
 
@@ -4991,7 +4991,7 @@ declare class ArtStyles {
 /**
  * A collection of fonts.
  */
-declare class TextFonts {
+declare class TextFonts extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5009,7 +5009,7 @@ declare class TextFonts {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): TextFont;
 
@@ -5035,7 +5035,7 @@ declare class TextFonts {
 /**
  * The collection of tags associated with a page item.
  */
-declare class Tags {
+declare class Tags extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5054,11 +5054,11 @@ declare class Tags {
 	/**
 	 * Create a tag.
 	 */
-	static add(): Tag;
+	add(): Tag;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Tag;
 
@@ -5070,9 +5070,9 @@ declare class Tags {
 }
 
 /**
- * 
+ * A collection of RasterItems.
  */
-declare class RasterItems {
+declare class RasterItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5090,7 +5090,7 @@ declare class RasterItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): RasterItem;
 
@@ -5102,9 +5102,9 @@ declare class RasterItems {
 }
 
 /**
- * 
+ * A collection of PlacedItems.
  */
-declare class PlacedItems {
+declare class PlacedItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5123,11 +5123,11 @@ declare class PlacedItems {
 	/**
 	 * Create a placed item.
 	 */
-	static add(): PlacedItem;
+	add(): PlacedItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): PlacedItem;
 
@@ -5141,7 +5141,7 @@ declare class PlacedItems {
 /**
  * EmbeddedItems Collection.
  */
-declare class EmbeddedItems {
+declare class EmbeddedItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5160,11 +5160,11 @@ declare class EmbeddedItems {
 	/**
 	 * Create an embedded item.
 	 */
-	static add(): EmbedItem;
+	add(): EmbedItem;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): EmbedItem;
 
@@ -5176,9 +5176,9 @@ declare class EmbeddedItems {
 }
 
 /**
- * 
+ * A collection of MeshItems.
  */
-declare class MeshItems {
+declare class MeshItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5196,7 +5196,7 @@ declare class MeshItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): MeshItem;
 
@@ -5208,9 +5208,9 @@ declare class MeshItems {
 }
 
 /**
- * 
+ * A collection of GraphItems.
  */
-declare class GraphItems {
+declare class GraphItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5228,7 +5228,7 @@ declare class GraphItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): GraphItem;
 
@@ -5240,9 +5240,9 @@ declare class GraphItems {
 }
 
 /**
- * 
+ * A collection of PluginItems.
  */
-declare class PluginItems {
+declare class PluginItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5260,7 +5260,7 @@ declare class PluginItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): PluginItem;
 
@@ -5272,9 +5272,9 @@ declare class PluginItems {
 }
 
 /**
- * 
+ * A collection of NonNativeItems.
  */
-declare class NonNativeItems {
+declare class NonNativeItems extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5292,7 +5292,7 @@ declare class NonNativeItems {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): NonNativeItem;
 
@@ -5301,7 +5301,7 @@ declare class NonNativeItems {
 /**
  * A collection of views.
  */
-declare class Views {
+declare class Views extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5319,7 +5319,7 @@ declare class Views {
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): View;
 
@@ -5328,7 +5328,7 @@ declare class Views {
 /**
  * A collection of variables.
  */
-declare class Variables {
+declare class Variables extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5347,11 +5347,11 @@ declare class Variables {
 	/**
 	 * Create a variable.
 	 */
-	static add(): Variable;
+	add(): Variable;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): Variable;
 
@@ -5365,7 +5365,7 @@ declare class Variables {
 /**
  * A collection of datasets.
  */
-declare class DataSets {
+declare class DataSets extends Array {
 	/**
 	 * Number of elements in the collection.
 	 */
@@ -5384,11 +5384,11 @@ declare class DataSets {
 	/**
 	 * Create a data set.
 	 */
-	static add(): DataSet;
+	add(): DataSet;
 
 	/**
 	 * Get the first element in the collection with the provided name.
-	 * @param name 
+	 * @param name
 	 */
 	getByName(name: string): DataSet;
 
@@ -5551,7 +5551,7 @@ declare class EPSSaveOptions {
 	static includeDocumentThumbnails: boolean;
 
 	/**
-	 * 
+	 *
 	 */
 	static overprint: PDFOverprint;
 
@@ -5910,36 +5910,36 @@ declare class IllustratorSaveOptions {
 }
 
 /**
- * 
+ *
  */
 declare class Matrix {
 	/**
-	 * 
+	 *
 	 */
 	static mValueA: number;
 
 	/**
-	 * 
+	 *
 	 */
 	static mValueB: number;
 
 	/**
-	 * 
+	 *
 	 */
 	static mValueC: number;
 
 	/**
-	 * 
+	 *
 	 */
 	static mValueD: number;
 
 	/**
-	 * 
+	 *
 	 */
 	static mValueTX: number;
 
 	/**
-	 * 
+	 *
 	 */
 	static mValueTY: number;
 
@@ -6315,22 +6315,22 @@ declare class ExportOptionsSVG {
 	static fontType: SVGFontType;
 
 	/**
-	 * 
+	 *
 	 */
 	static includeFileInfo: boolean;
 
 	/**
-	 * 
+	 *
 	 */
 	static includeUnusedStyles: boolean;
 
 	/**
-	 * 
+	 *
 	 */
 	static includeVariablesAndDatasets: boolean;
 
 	/**
-	 * 
+	 *
 	 */
 	static optimizeForSVGViewer: boolean;
 
@@ -6762,7 +6762,7 @@ declare class NoColor extends Color {
  */
 declare class SpotColor extends Color {
 	/**
-	 * 
+	 *
 	 */
 	static spot: Spot;
 
@@ -6783,7 +6783,7 @@ declare class PatternColor extends Color {
 	static matrix: Matrix;
 
 	/**
-	 * 
+	 *
 	 */
 	static pattern: Pattern;
 
@@ -8110,7 +8110,7 @@ declare class Application {
 	applySingleDataPointToItem(sessionIndex: number, item: string, dataID: string, data: string): boolean;
 
 	/**
-	 * 
+	 *
 	 */
 	beep(): void;
 
@@ -8497,12 +8497,12 @@ declare class Document {
 	readonly compoundPathItems: CompoundPathItems;
 
 	/**
-	 * 
+	 *
 	 */
 	cropBox: Rect;
 
 	/**
-	 * 
+	 *
 	 */
 	cropStyle: CropOptions;
 
@@ -8612,7 +8612,7 @@ declare class Document {
 	readonly groupItems: GroupItems;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly height: number;
 
@@ -8657,7 +8657,7 @@ declare class Document {
 	readonly nonNativeItems: NonNativeItems;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly outputResolution: number;
 
@@ -8667,7 +8667,7 @@ declare class Document {
 	readonly pageItems: PageItems;
 
 	/**
-	 * 
+	 *
 	 */
 	pageOrigin: Point;
 
@@ -8707,7 +8707,7 @@ declare class Document {
 	readonly pluginItems: PluginItems;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly printTiles: boolean;
 
@@ -8722,12 +8722,12 @@ declare class Document {
 	readonly rasterItems: RasterItems;
 
 	/**
-	 * 
+	 *
 	 */
 	rulerOrigin: Point;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly rulerUnits: RulerUnits;
 
@@ -8742,12 +8742,12 @@ declare class Document {
 	selection: any;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly showPlacedImages: boolean;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly splitLongPaths: boolean;
 
@@ -8797,7 +8797,7 @@ declare class Document {
 	readonly textFrames: TextFrameItems;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly tileFullPages: boolean;
 
@@ -8807,7 +8807,7 @@ declare class Document {
 	readonly typename: string;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly useDefaultScreen: boolean;
 
@@ -8832,7 +8832,7 @@ declare class Document {
 	readonly visibleBounds: Rect;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly width: number;
 
@@ -8995,7 +8995,7 @@ declare class Document {
 	 * @param clipBounds The rectangular region of the artwork for the rasterization. If the parameter is omitted, the bounds of the source art(s) is used instead.
 	 * @param options Describes the rasterization options.
 	 */
-	rasterize(sourceArt: any, clipBounds?: Rect, options?: RasterizeOptions): PageItem;
+	rasterize(sourceArt: any, clipBounds?: Rect, options?: RasterizeOptions): RasterItem;
 
 	/**
 	 * Rearrange Artboards in the document.
@@ -9210,8 +9210,8 @@ declare class Layer {
 
 	/**
 	 * Move the object.
-	 * @param relativeObject 
-	 * @param insertionLocation 
+	 * @param relativeObject
+	 * @param insertionLocation
 	 */
 	move(relativeObject: object, insertionLocation: any): Layer;
 
@@ -9450,7 +9450,7 @@ declare class Preferences {
  */
 declare class Spot {
 	/**
-	 * 
+	 *
 	 */
 	color: Color;
 
@@ -9714,8 +9714,8 @@ declare class Symbol {
 
 	/**
 	 * Duplicate this object.
-	 * @param relativeObject 
-	 * @param insertionLocation 
+	 * @param relativeObject
+	 * @param insertionLocation
 	 */
 	duplicate(relativeObject: object, insertionLocation: any): Symbol;
 
@@ -9993,7 +9993,7 @@ declare class PageItem {
 
 	/**
 	 * Apply effect to selected artItem.
-	 * @param liveEffectXML 
+	 * @param liveEffectXML
 	 */
 	applyEffect(liveEffectXML: string): void;
 
@@ -10007,15 +10007,15 @@ declare class PageItem {
 
 	/**
 	 * Duplicate this object.
-	 * @param relativeObject 
-	 * @param insertionLocation 
+	 * @param relativeObject
+	 * @param insertionLocation
 	 */
 	duplicate(relativeObject: object, insertionLocation: any): PageItem;
 
 	/**
 	 * Move the object.
-	 * @param relativeObject 
-	 * @param insertionLocation 
+	 * @param relativeObject
+	 * @param insertionLocation
 	 */
 	move(relativeObject: object, insertionLocation: any): PageItem;
 
@@ -10189,7 +10189,7 @@ declare class PathItem extends PageItem {
 	readonly length: number;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly pathPoints: PathPoints;
 
@@ -10658,7 +10658,7 @@ declare class TextPath {
 	readonly parent: object;
 
 	/**
-	 * 
+	 *
 	 */
 	readonly pathPoints: PathPoints;
 
@@ -11119,15 +11119,15 @@ declare class TextRange {
 
 	/**
 	 * Duplicate this object.
-	 * @param relativeObject 
-	 * @param insertionLocation 
+	 * @param relativeObject
+	 * @param insertionLocation
 	 */
 	duplicate(relativeObject: object, insertionLocation: any): TextRange;
 
 	/**
 	 * Move the object.
-	 * @param relativeObject 
-	 * @param insertionLocation 
+	 * @param relativeObject
+	 * @param insertionLocation
 	 */
 	move(relativeObject: object, insertionLocation: any): TextRange;
 
@@ -11536,12 +11536,12 @@ declare class CharacterAttributes {
 	verticalScale: number;
 
 	/**
-	 * 
+	 *
 	 */
 	wariChuCharactersAfterBreak: number;
 
 	/**
-	 * 
+	 *
 	 */
 	wariChuCharactersBeforeBreak: number;
 
@@ -11551,7 +11551,7 @@ declare class CharacterAttributes {
 	wariChuEnabled: boolean;
 
 	/**
-	 * 
+	 *
 	 */
 	wariChuJustification: WariChuJustificationType;
 
