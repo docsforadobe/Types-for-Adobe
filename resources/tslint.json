@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "tslint:recommended"
-  ],
+  "extends": ["tslint:recommended"],
   "rules": {
     "radix": false,
     "arrow-parens": false,
@@ -25,9 +23,9 @@
     "only-arrow-functions": false,
     "interface-over-type-literal": false,
     "max-classes-per-file": [false],
-    
+
     "no-parameter-reassignment": true,
-    
+
     "indent": ["tabs"],
     "class-name": false,
     "array-type": false,

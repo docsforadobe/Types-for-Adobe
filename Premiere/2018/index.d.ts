@@ -2,1618 +2,1639 @@
 /// <reference path="../../shared/ScriptUI.d.ts" />
 
 /**
- * 
+ *
  */
 declare class Sequence {
-	/**
-	 * 
-	 */
-	readonly audioTracks: TrackCollection;
+  /**
+   *
+   */
+  readonly audioTracks: TrackCollection
 
-	/**
-	 * 
-	 */
-	readonly end: string;
+  /**
+   *
+   */
+  readonly end: string
 
-	/**
-	 * 
-	 */
-	readonly frameSizeHorizontal: number;
+  /**
+   *
+   */
+  readonly frameSizeHorizontal: number
 
-	/**
-	 * 
-	 */
-	readonly frameSizeVertical: number;
+  /**
+   *
+   */
+  readonly frameSizeVertical: number
 
-	/**
-	 * 
-	 */
-	readonly id: number;
+  /**
+   *
+   */
+  readonly id: number
 
-	/**
-	 * 
-	 */
-	readonly markers: MarkerCollection;
+  /**
+   *
+   */
+  readonly markers: MarkerCollection
 
-	/**
-	 * 
-	 */
-	name: string;
+  /**
+   *
+   */
+  name: string
 
-	/**
-	 * 
-	 */
-	readonly projectItem: ProjectItem;
+  /**
+   *
+   */
+  readonly projectItem: ProjectItem
 
-	/**
-	 * 
-	 */
-	readonly sequenceID: string;
+  /**
+   *
+   */
+  readonly sequenceID: string
 
-	/**
-	 * 
-	 */
-	readonly timebase: string;
+  /**
+   *
+   */
+  readonly timebase: string
 
-	/**
-	 * 
-	 */
-	readonly videoTracks: TrackCollection;
+  /**
+   *
+   */
+  readonly videoTracks: TrackCollection
 
-	/**
-	 * 
-	 */
-	readonly zeroPoint: string;
+  /**
+   *
+   */
+  readonly zeroPoint: string
 
-	/**
-	 * 
-	 */
-	attachCustomProperty(propertyID: string, propertyValue: string): void;
+  /**
+   *
+   */
+  attachCustomProperty(propertyID: string, propertyValue: string): void
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	clone(): void;
+  /**
+   *
+   */
+  clone(): void
 
-	/**
-	 * 
-	 */
-	exportAsFinalCutProXML(exportPath: string, suppressUI: number): boolean;
+  /**
+   *
+   */
+  exportAsFinalCutProXML(exportPath: string, suppressUI: number): boolean
 
-	/**
-	 * 
-	 */
-	exportAsMediaDirect(outputFilePath: string, presetPath: string, workAreaType?: number): string;
+  /**
+   *
+   */
+  exportAsMediaDirect(outputFilePath: string, presetPath: string, workAreaType?: number): string
 
-	/**
-	 * 
-	 */
-	exportAsProject(exportPath: string): void;
+  /**
+   *
+   */
+  exportAsProject(exportPath: string): void
 
-	/**
-	 * 
-	 */
-	getExportFileExtension(presetFilePath: string): string;
+  /**
+   *
+   */
+  getExportFileExtension(presetFilePath: string): string
 
-	/**
-	 * 
-	 */
-	getInPoint(): string;
+  /**
+   *
+   */
+  getInPoint(): string
 
-	/**
-	 * 
-	 */
-	getOutPoint(): string;
+  /**
+   *
+   */
+  getOutPoint(): string
 
-	/**
-	 * 
-	 */
-	getPlayerPosition(): Time;
+  /**
+   *
+   */
+  getPlayerPosition(): Time
 
-	/**
-	 * 
-	 */
-	setInPoint(seconds: number): void;
+  /**
+   *
+   */
+  setInPoint(seconds: number): void
 
-	/**
-	 * 
-	 */
-	setOutPoint(seconds: number): void;
+  /**
+   *
+   */
+  setOutPoint(seconds: number): void
 
-	/**
-	 * 
-	 */
-	setPlayerPosition(pos: string): void;
+  /**
+   *
+   */
+  setPlayerPosition(pos: string): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	setZeroPoint(ticks: string): void;
+  /**
+   *
+   */
+  setZeroPoint(ticks: string): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class SequenceCollection {
-	/**
-	 * 
-	 */
-	readonly numSequences: number;
+  /**
+   *
+   */
+  readonly numSequences: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Metadata {
-	/**
-	 * 
-	 */
-	readonly getMetadata: string;
+  /**
+   *
+   */
+  readonly getMetadata: string
 
-	/**
-	 * 
-	 */
-	addMarker(): void;
+  /**
+   *
+   */
+  addMarker(): void
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	deleteMarker(): void;
+  /**
+   *
+   */
+  deleteMarker(): void
 
-	/**
-	 * 
-	 */
-	setMarkerData(): void;
+  /**
+   *
+   */
+  setMarkerData(): void
 
-	/**
-	 * 
-	 */
-	setMetadataValue(): void;
+  /**
+   *
+   */
+  setMetadataValue(): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
+  /**
+   *
+   */
+  unbind(eventName: string): void
 
-	/**
-	 * 
-	 */
-	updateMarker(): void;
-
+  /**
+   *
+   */
+  updateMarker(): void
 }
 
 /**
- * 
+ *
  */
 declare class Anywhere {
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	getAuthenticationToken(): string;
+  /**
+   *
+   */
+  getAuthenticationToken(): string
 
-	/**
-	 * 
-	 */
-	getCurrentEditingSessionActiveSequenceURL(): string;
+  /**
+   *
+   */
+  getCurrentEditingSessionActiveSequenceURL(): string
 
-	/**
-	 * 
-	 */
-	getCurrentEditingSessionSelectionURL(): string;
+  /**
+   *
+   */
+  getCurrentEditingSessionSelectionURL(): string
 
-	/**
-	 * 
-	 */
-	getCurrentEditingSessionURL(): string;
+  /**
+   *
+   */
+  getCurrentEditingSessionURL(): string
 
-	/**
-	 * 
-	 */
-	isProductionOpen(): boolean;
+  /**
+   *
+   */
+  isProductionOpen(): boolean
 
-	/**
-	 * 
-	 */
-	listProductions(): RemoteProductionCollection;
+  /**
+   *
+   */
+  listProductions(): RemoteProductionCollection
 
-	/**
-	 * 
-	 */
-	openProduction(inProductionURL: string): boolean;
+  /**
+   *
+   */
+  openProduction(inProductionURL: string): boolean
 
-	/**
-	 * 
-	 */
-	setAuthenticationToken(inAuthToken: string, inEmail: string): boolean;
+  /**
+   *
+   */
+  setAuthenticationToken(inAuthToken: string, inEmail: string): boolean
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class CsxsResourceCentral {
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	getBrightness(): string;
+  /**
+   *
+   */
+  getBrightness(): string
 
-	/**
-	 * 
-	 */
-	openURL(urlString: string): void;
+  /**
+   *
+   */
+  openURL(urlString: string): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
+  /**
+   *
+   */
+  unbind(eventName: string): void
 
-	/**
-	 * 
-	 */
-	validateClient(token: string): boolean;
-
+  /**
+   *
+   */
+  validateClient(token: string): boolean
 }
 
 /**
- * 
+ *
  */
 declare class SourceMonitor {
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	closeAllClips(): void;
+  /**
+   *
+   */
+  closeAllClips(): void
 
-	/**
-	 * 
-	 */
-	closeClip(): void;
+  /**
+   *
+   */
+  closeClip(): void
 
-	/**
-	 * 
-	 */
-	openFilePath(filePath: string): boolean;
+  /**
+   *
+   */
+  openFilePath(filePath: string): boolean
 
-	/**
-	 * 
-	 */
-	play(speed?: number): void;
+  /**
+   *
+   */
+  play(speed?: number): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Time {
-	/**
-	 * 
-	 */
-	seconds: number;
+  /**
+   *
+   */
+  seconds: number
 
-	/**
-	 * 
-	 */
-	ticks: string;
+  /**
+   *
+   */
+  ticks: string
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class ProjectItemType {
-	/**
-	 * 
-	 */
-	readonly BIN: number;
+  /**
+   *
+   */
+  readonly BIN: number
 
-	/**
-	 * 
-	 */
-	readonly CLIP: number;
+  /**
+   *
+   */
+  readonly CLIP: number
 
-	/**
-	 * 
-	 */
-	readonly FILE: number;
+  /**
+   *
+   */
+  readonly FILE: number
 
-	/**
-	 * 
-	 */
-	readonly ROOT: number;
+  /**
+   *
+   */
+  readonly ROOT: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Project {
-	/**
-	 * 
-	 */
-	activeSequence: Sequence;
+  /**
+   *
+   */
+  activeSequence: Sequence
 
-	/**
-	 * 
-	 */
-	readonly documentID: string;
+  /**
+   *
+   */
+  readonly documentID: string
 
-	/**
-	 * 
-	 */
-	readonly name: string;
+  /**
+   *
+   */
+  readonly name: string
 
-	/**
-	 * 
-	 */
-	readonly path: string;
+  /**
+   *
+   */
+  readonly path: string
 
-	/**
-	 * 
-	 */
-	readonly rootItem: ProjectItem;
+  /**
+   *
+   */
+  readonly rootItem: ProjectItem
 
-	/**
-	 * 
-	 */
-	readonly sequences: SequenceCollection;
+  /**
+   *
+   */
+  readonly sequences: SequenceCollection
 
-	/**
-	 * 
-	 */
-	addPropertyToProjectMetadataSchema(name: string, label: string, type: number): boolean;
+  /**
+   *
+   */
+  addPropertyToProjectMetadataSchema(name: string, label: string, type: number): boolean
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	closeDocument(): boolean;
+  /**
+   *
+   */
+  closeDocument(): boolean
 
-	/**
-	 * 
-	 */
-	createNewSequence(sequenceName: string, placeholderID: string): void;
+  /**
+   *
+   */
+  createNewSequence(sequenceName: string, placeholderID: string): void
 
-	/**
-	 * 
-	 */
-	deleteAsset(): void;
+  /**
+   *
+   */
+  deleteAsset(): void
 
-	/**
-	 * 
-	 */
-	deleteSequence(sequence: Sequence): boolean;
+  /**
+   *
+   */
+  deleteSequence(sequence: Sequence): boolean
 
-	/**
-	 * 
-	 */
-	exportAAF(sequence: Sequence, filePath: string, mixDownVideo: number, explodeToMono: number, sampleRate: number, bitsPerSample: number, embedAudio: number, audioFileFormat: number, trimSources: number, handleFrames: number): number;
+  /**
+   *
+   */
+  exportAAF(
+    sequence: Sequence,
+    filePath: string,
+    mixDownVideo: number,
+    explodeToMono: number,
+    sampleRate: number,
+    bitsPerSample: number,
+    embedAudio: number,
+    audioFileFormat: number,
+    trimSources: number,
+    handleFrames: number,
+  ): number
 
-	/**
-	 * 
-	 */
-	exportFinalCutProXML(exportPath: string, suppressUI: number): boolean;
+  /**
+   *
+   */
+  exportFinalCutProXML(exportPath: string, suppressUI: number): boolean
 
-	/**
-	 * 
-	 */
-	exportOMF(sequence: Sequence, filePath: string, OMFTitle: string, sampleRate: number, bitsPerSample: number, audioEncapsulated: number, audioFileFormat: number, trimAudioFiles: number, handleFrames: number, includePan: number): number;
+  /**
+   *
+   */
+  exportOMF(
+    sequence: Sequence,
+    filePath: string,
+    OMFTitle: string,
+    sampleRate: number,
+    bitsPerSample: number,
+    audioEncapsulated: number,
+    audioFileFormat: number,
+    trimAudioFiles: number,
+    handleFrames: number,
+    includePan: number,
+  ): number
 
-	/**
-	 * 
-	 */
-	exportTimeline(exportControllerName: string): number;
+  /**
+   *
+   */
+  exportTimeline(exportControllerName: string): number
 
-	/**
-	 * 
-	 */
-	getInsertionBin(): ProjectItem;
+  /**
+   *
+   */
+  getInsertionBin(): ProjectItem
 
-	/**
-	 * 
-	 */
-	getProjectPanelMetadata(): void;
+  /**
+   *
+   */
+  getProjectPanelMetadata(): void
 
-	/**
-	 * 
-	 */
-	importAEComps(arg1: any): boolean;
+  /**
+   *
+   */
+  importAEComps(arg1: any): boolean
 
-	/**
-	 * 
-	 */
-	importAllAEComps(arg1: any): boolean;
+  /**
+   *
+   */
+  importAllAEComps(arg1: any): boolean
 
-	/**
-	 * 
-	 */
-	importFiles(arg1: any): boolean;
+  /**
+   *
+   */
+  importFiles(arg1: any): boolean
 
-	/**
-	 * 
-	 */
-	importSequences(arg1: any): boolean;
+  /**
+   *
+   */
+  importSequences(arg1: any): boolean
 
-	/**
-	 * 
-	 */
-	openSequence(sequenceID: string): boolean;
+  /**
+   *
+   */
+  openSequence(sequenceID: string): boolean
 
-	/**
-	 * 
-	 */
-	pauseGrowing(pausedOrNot: number): boolean;
+  /**
+   *
+   */
+  pauseGrowing(pausedOrNot: number): boolean
 
-	/**
-	 * 
-	 */
-	placeAsset(arg1: any): boolean;
+  /**
+   *
+   */
+  placeAsset(arg1: any): boolean
 
-	/**
-	 * 
-	 */
-	save(): void;
+  /**
+   *
+   */
+  save(): void
 
-	/**
-	 * 
-	 */
-	saveAs(saveAsPath: string): boolean;
+  /**
+   *
+   */
+  saveAs(saveAsPath: string): boolean
 
-	/**
-	 * 
-	 */
-	setProjectPanelMetadata(): void;
+  /**
+   *
+   */
+  setProjectPanelMetadata(): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Track {
-	/**
-	 * 
-	 */
-	readonly clips: TrackItemCollection;
+  /**
+   *
+   */
+  readonly clips: TrackItemCollection
 
-	/**
-	 * 
-	 */
-	readonly id: number;
+  /**
+   *
+   */
+  readonly id: number
 
-	/**
-	 * 
-	 */
-	readonly mediaType: string;
+  /**
+   *
+   */
+  readonly mediaType: string
 
-	/**
-	 * 
-	 */
-	readonly transitions: TrackItemCollection;
+  /**
+   *
+   */
+  readonly transitions: TrackItemCollection
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	insertClip(clipProjectItem: ProjectItem, time: object): void;
+  /**
+   *
+   */
+  insertClip(clipProjectItem: ProjectItem, time: object): void
 
-	/**
-	 * 
-	 */
-	isMuted(): boolean;
+  /**
+   *
+   */
+  isMuted(): boolean
 
-	/**
-	 * 
-	 */
-	overwriteClip(clipProjectItem: ProjectItem, time: object): void;
+  /**
+   *
+   */
+  overwriteClip(clipProjectItem: ProjectItem, time: object): void
 
-	/**
-	 * 
-	 */
-	setMute(arg1?: number): void;
+  /**
+   *
+   */
+  setMute(arg1?: number): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class TrackItem {
-	/**
-	 * 
-	 */
-	readonly components: any;
+  /**
+   *
+   */
+  readonly components: any
 
-	/**
-	 * 
-	 */
-	readonly duration: Time;
+  /**
+   *
+   */
+  readonly duration: Time
 
-	/**
-	 * 
-	 */
-	readonly end: Time;
+  /**
+   *
+   */
+  readonly end: Time
 
-	/**
-	 * 
-	 */
-	readonly inPoint: Time;
+  /**
+   *
+   */
+  readonly inPoint: Time
 
-	/**
-	 * 
-	 */
-	readonly mediaType: string;
+  /**
+   *
+   */
+  readonly mediaType: string
 
-	/**
-	 * 
-	 */
-	name: string;
+  /**
+   *
+   */
+  name: string
 
-	/**
-	 * 
-	 */
-	readonly outPoint: Time;
+  /**
+   *
+   */
+  readonly outPoint: Time
 
-	/**
-	 * 
-	 */
-	projectItem: ProjectItem;
+  /**
+   *
+   */
+  projectItem: ProjectItem
 
-	/**
-	 * 
-	 */
-	readonly start: Time;
+  /**
+   *
+   */
+  readonly start: Time
 
-	/**
-	 * 
-	 */
-	readonly type: number;
+  /**
+   *
+   */
+  readonly type: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	getLinkedItems(): TrackItemCollection;
+  /**
+   *
+   */
+  getLinkedItems(): TrackItemCollection
 
-	/**
-	 * 
-	 */
-	isSelected(): boolean;
+  /**
+   *
+   */
+  isSelected(): boolean
 
-	/**
-	 * 
-	 */
-	setSelected(isSelected: number, updateUI?: number): void;
+  /**
+   *
+   */
+  setSelected(isSelected: number, updateUI?: number): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class ProjectItem {
-	/**
-	 * 
-	 */
-	readonly children: ProjectItemCollection;
+  /**
+   *
+   */
+  readonly children: ProjectItemCollection
 
-	/**
-	 * 
-	 */
-	name: string;
+  /**
+   *
+   */
+  name: string
 
-	/**
-	 * 
-	 */
-	readonly nodeId: string;
+  /**
+   *
+   */
+  readonly nodeId: string
 
-	/**
-	 * 
-	 */
-	readonly treePath: string;
+  /**
+   *
+   */
+  readonly treePath: string
 
-	/**
-	 * 
-	 */
-	readonly type: number;
+  /**
+   *
+   */
+  readonly type: number
 
-	/**
-	 * 
-	 */
-	readonly videoComponents: any;
+  /**
+   *
+   */
+  readonly videoComponents: any
 
-	/**
-	 * 
-	 */
-	attachProxy(mediaPath: string, isHiRes: number): boolean;
+  /**
+   *
+   */
+  attachProxy(mediaPath: string, isHiRes: number): boolean
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	canChangeMediaPath(): boolean;
+  /**
+   *
+   */
+  canChangeMediaPath(): boolean
 
-	/**
-	 * 
-	 */
-	canProxy(): boolean;
+  /**
+   *
+   */
+  canProxy(): boolean
 
-	/**
-	 * 
-	 */
-	changeMediaPath(mediaPath: string): boolean;
+  /**
+   *
+   */
+  changeMediaPath(mediaPath: string): boolean
 
-	/**
-	 * 
-	 */
-	createBin(name: string): void;
+  /**
+   *
+   */
+  createBin(name: string): void
 
-	/**
-	 * 
-	 */
-	createSmartBin(name: string, query: string): void;
+  /**
+   *
+   */
+  createSmartBin(name: string, query: string): void
 
-	/**
-	 * 
-	 */
-	createSubClip(name: string, startTime: object, endTime: object, hasHardBoundaries: number, takeVideo?: number, takeAudio?: number): ProjectItem;
+  /**
+   *
+   */
+  createSubClip(
+    name: string,
+    startTime: object,
+    endTime: object,
+    hasHardBoundaries: number,
+    takeVideo?: number,
+    takeAudio?: number,
+  ): ProjectItem
 
-	/**
-	 * 
-	 */
-	deleteBin(): void;
+  /**
+   *
+   */
+  deleteBin(): void
 
-	/**
-	 * 
-	 */
-	findItemsMatchingMediaPath(matchString: string, ignoreSubclips?: number): void;
+  /**
+   *
+   */
+  findItemsMatchingMediaPath(matchString: string, ignoreSubclips?: number): void
 
-	/**
-	 * 
-	 */
-	getColorLabel(): number;
+  /**
+   *
+   */
+  getColorLabel(): number
 
-	/**
-	 * 
-	 */
-	getMarkers(): MarkerCollection;
+  /**
+   *
+   */
+  getMarkers(): MarkerCollection
 
-	/**
-	 * 
-	 */
-	getMediaPath(): string;
+  /**
+   *
+   */
+  getMediaPath(): string
 
-	/**
-	 * 
-	 */
-	getProjectMetadata(): string;
+  /**
+   *
+   */
+  getProjectMetadata(): string
 
-	/**
-	 * 
-	 */
-	getProxyPath(): string;
+  /**
+   *
+   */
+  getProxyPath(): string
 
-	/**
-	 * 
-	 */
-	getXMPMetadata(): string;
+  /**
+   *
+   */
+  getXMPMetadata(): string
 
-	/**
-	 * 
-	 */
-	hasProxy(): boolean;
+  /**
+   *
+   */
+  hasProxy(): boolean
 
-	/**
-	 * 
-	 */
-	moveBin(destination: ProjectItem): void;
+  /**
+   *
+   */
+  moveBin(destination: ProjectItem): void
 
-	/**
-	 * 
-	 */
-	refreshMedia(): string;
+  /**
+   *
+   */
+  refreshMedia(): string
 
-	/**
-	 * 
-	 */
-	renameBin(name: string): boolean;
+  /**
+   *
+   */
+  renameBin(name: string): boolean
 
-	/**
-	 * 
-	 */
-	select(): void;
+  /**
+   *
+   */
+  select(): void
 
-	/**
-	 * 
-	 */
-	setColorLabel(): void;
+  /**
+   *
+   */
+  setColorLabel(): void
 
-	/**
-	 * 
-	 */
-	setOverridePixelAspectRatio(numerator: number, denominator: number): boolean;
+  /**
+   *
+   */
+  setOverridePixelAspectRatio(numerator: number, denominator: number): boolean
 
-	/**
-	 * 
-	 */
-	setProjectMetadata(buffer: string): void;
+  /**
+   *
+   */
+  setProjectMetadata(buffer: string): void
 
-	/**
-	 * 
-	 */
-	setScaleToFrameSize(): void;
+  /**
+   *
+   */
+  setScaleToFrameSize(): void
 
-	/**
-	 * 
-	 */
-	setStartTime(arg1: object): void;
+  /**
+   *
+   */
+  setStartTime(arg1: object): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	setXMPMetadata(buffer: string): boolean;
+  /**
+   *
+   */
+  setXMPMetadata(buffer: string): boolean
 
-	/**
-	 * 
-	 */
-	startTime(): Time;
+  /**
+   *
+   */
+  startTime(): Time
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class ProjectCollection {
-	/**
-	 * 
-	 */
-	readonly numProjects: number;
+  /**
+   *
+   */
+  readonly numProjects: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class ProjectItemCollection {
-	/**
-	 * 
-	 */
-	readonly numItems: number;
+  /**
+   *
+   */
+  readonly numItems: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class TrackCollection {
-	/**
-	 * 
-	 */
-	readonly numTracks: number;
+  /**
+   *
+   */
+  readonly numTracks: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class TrackItemCollection {
-	/**
-	 * 
-	 */
-	readonly numItems: number;
+  /**
+   *
+   */
+  readonly numItems: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class ScratchDiskType {
-	/**
-	 * 
-	 */
-	readonly FirstAudioCaptureFolder: string;
+  /**
+   *
+   */
+  readonly FirstAudioCaptureFolder: string
 
-	/**
-	 * 
-	 */
-	readonly FirstAudioPreviewFolder: string;
+  /**
+   *
+   */
+  readonly FirstAudioPreviewFolder: string
 
-	/**
-	 * 
-	 */
-	readonly FirstAutoSaveFolder: string;
+  /**
+   *
+   */
+  readonly FirstAutoSaveFolder: string
 
-	/**
-	 * 
-	 */
-	readonly FirstCClibrariesFolder: string;
+  /**
+   *
+   */
+  readonly FirstCClibrariesFolder: string
 
-	/**
-	 * 
-	 */
-	readonly FirstCapsuleMediaFolder: string;
+  /**
+   *
+   */
+  readonly FirstCapsuleMediaFolder: string
 
-	/**
-	 * 
-	 */
-	readonly FirstVideoCaptureFolder: string;
+  /**
+   *
+   */
+  readonly FirstVideoCaptureFolder: string
 
-	/**
-	 * 
-	 */
-	readonly FirstVideoPreviewFolder: string;
+  /**
+   *
+   */
+  readonly FirstVideoPreviewFolder: string
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Csxs {
-	/**
-	 * 
-	 */
-	readonly resourceCentral: CsxsResourceCentral;
+  /**
+   *
+   */
+  readonly resourceCentral: CsxsResourceCentral
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class RemoteProductionCollection {
-	/**
-	 * 
-	 */
-	readonly numProductions: number;
+  /**
+   *
+   */
+  readonly numProductions: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class RemoteProduction {
-	/**
-	 * 
-	 */
-	readonly description: string;
+  /**
+   *
+   */
+  readonly description: string
 
-	/**
-	 * 
-	 */
-	readonly name: string;
+  /**
+   *
+   */
+  readonly name: string
 
-	/**
-	 * 
-	 */
-	readonly url: string;
+  /**
+   *
+   */
+  readonly url: string
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Encoder {
-	/**
-	 * 
-	 */
-	readonly ENCODE_ENTIRE: number;
+  /**
+   *
+   */
+  readonly ENCODE_ENTIRE: number
 
-	/**
-	 * 
-	 */
-	readonly ENCODE_IN_TO_OUT: number;
+  /**
+   *
+   */
+  readonly ENCODE_IN_TO_OUT: number
 
-	/**
-	 * 
-	 */
-	readonly ENCODE_WORKAREA: number;
+  /**
+   *
+   */
+  readonly ENCODE_WORKAREA: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	encodeFile(inputFilePath: string, outputFilePath: string, presetPath: string, removeOnCompletion?: number, startTime?: object, stopTime?: object): string;
+  /**
+   *
+   */
+  encodeFile(
+    inputFilePath: string,
+    outputFilePath: string,
+    presetPath: string,
+    removeOnCompletion?: number,
+    startTime?: object,
+    stopTime?: object,
+  ): string
 
-	/**
-	 * 
-	 */
-	encodeProjectItem(projectItem: ProjectItem, outputFilePath: string, presetPath: string, WorkAreaType?: number, removeOnCompletion?: number): string;
+  /**
+   *
+   */
+  encodeProjectItem(
+    projectItem: ProjectItem,
+    outputFilePath: string,
+    presetPath: string,
+    WorkAreaType?: number,
+    removeOnCompletion?: number,
+  ): string
 
-	/**
-	 * 
-	 */
-	encodeSequence(sequence: Sequence, outputFilePath: string, presetPath: string, WorkAreaType?: number, removeOnCompletion?: number): string;
+  /**
+   *
+   */
+  encodeSequence(
+    sequence: Sequence,
+    outputFilePath: string,
+    presetPath: string,
+    WorkAreaType?: number,
+    removeOnCompletion?: number,
+  ): string
 
-	/**
-	 * 
-	 */
-	launchEncoder(): boolean;
+  /**
+   *
+   */
+  launchEncoder(): boolean
 
-	/**
-	 * 
-	 */
-	setEmbeddedXMPEnabled(enable: number): void;
+  /**
+   *
+   */
+  setEmbeddedXMPEnabled(enable: number): void
 
-	/**
-	 * 
-	 */
-	setSidecarXMPEnabled(enable: number): void;
+  /**
+   *
+   */
+  setSidecarXMPEnabled(enable: number): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	startBatch(): boolean;
+  /**
+   *
+   */
+  startBatch(): boolean
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Properties {
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	clearProperty(propertyKey: string): void;
+  /**
+   *
+   */
+  clearProperty(propertyKey: string): void
 
-	/**
-	 * 
-	 */
-	doesPropertyExist(propertyKey: string): boolean;
+  /**
+   *
+   */
+  doesPropertyExist(propertyKey: string): boolean
 
-	/**
-	 * 
-	 */
-	getProperty(propertyKey: string): void;
+  /**
+   *
+   */
+  getProperty(propertyKey: string): void
 
-	/**
-	 * 
-	 */
-	isPropertyReadOnly(propertyKey: string): boolean;
+  /**
+   *
+   */
+  isPropertyReadOnly(propertyKey: string): boolean
 
-	/**
-	 * 
-	 */
-	setProperty(propertyKey: string): void;
+  /**
+   *
+   */
+  setProperty(propertyKey: string): void
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class App {
-	/**
-	 * 
-	 */
-	readonly anywhere: Anywhere;
+  /**
+   *
+   */
+  readonly anywhere: Anywhere
 
-	/**
-	 * 
-	 */
-	readonly build: string;
+  /**
+   *
+   */
+  readonly build: string
 
-	/**
-	 * 
-	 */
-	readonly csxs: Csxs;
+  /**
+   *
+   */
+  readonly csxs: Csxs
 
-	/**
-	 * 
-	 */
-	readonly encoder: Encoder;
+  /**
+   *
+   */
+  readonly encoder: Encoder
 
-	/**
-	 * 
-	 */
-	readonly getAppPrefPath: string;
+  /**
+   *
+   */
+  readonly getAppPrefPath: string
 
-	/**
-	 * 
-	 */
-	readonly getAppSystemPrefPath: string;
+  /**
+   *
+   */
+  readonly getAppSystemPrefPath: string
 
-	/**
-	 * 
-	 */
-	readonly getPProPrefPath: string;
+  /**
+   *
+   */
+  readonly getPProPrefPath: string
 
-	/**
-	 * 
-	 */
-	readonly getPProSystemPrefPath: string;
+  /**
+   *
+   */
+  readonly getPProSystemPrefPath: string
 
-	/**
-	 * 
-	 */
-	readonly metadata: Metadata;
+  /**
+   *
+   */
+  readonly metadata: Metadata
 
-	/**
-	 * 
-	 */
-	project: Project;
+  /**
+   *
+   */
+  project: Project
 
-	/**
-	 * 
-	 */
-	readonly projects: ProjectCollection;
+  /**
+   *
+   */
+  readonly projects: ProjectCollection
 
-	/**
-	 * 
-	 */
-	readonly properties: Properties;
+  /**
+   *
+   */
+  readonly properties: Properties
 
-	/**
-	 * 
-	 */
-	readonly sourceMonitor: SourceMonitor;
+  /**
+   *
+   */
+  readonly sourceMonitor: SourceMonitor
 
-	/**
-	 * 
-	 */
-	readonly userGuid: string;
+  /**
+   *
+   */
+  readonly userGuid: string
 
-	/**
-	 * 
-	 */
-	readonly version: string;
+  /**
+   *
+   */
+  readonly version: string
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	broadcastPrefsChanged(preferencesThatChanged: string): boolean;
+  /**
+   *
+   */
+  broadcastPrefsChanged(preferencesThatChanged: string): boolean
 
-	/**
-	 * 
-	 */
-	getEnableProxies(): number;
+  /**
+   *
+   */
+  getEnableProxies(): number
 
-	/**
-	 * 
-	 */
-	isDocument(filePath: string): boolean;
+  /**
+   *
+   */
+  isDocument(filePath: string): boolean
 
-	/**
-	 * 
-	 */
-	isDocumentOpen(): boolean;
+  /**
+   *
+   */
+  isDocumentOpen(): boolean
 
-	/**
-	 * 
-	 */
-	openDocument(): boolean;
+  /**
+   *
+   */
+  openDocument(): boolean
 
-	/**
-	 * 
-	 */
-	openFCPXML(): boolean;
+  /**
+   *
+   */
+  openFCPXML(): boolean
 
-	/**
-	 * 
-	 */
-	quit(): void;
+  /**
+   *
+   */
+  quit(): void
 
-	/**
-	 * 
-	 */
-	setEnableProxies(enable: number): boolean;
+  /**
+   *
+   */
+  setEnableProxies(enable: number): boolean
 
-	/**
-	 * 
-	 */
-	setExtensionPersistent(extensionID: string, state?: number): void;
+  /**
+   *
+   */
+  setExtensionPersistent(extensionID: string, state?: number): void
 
-	/**
-	 * 
-	 */
-	setSDKEventMessage(value: string, eventType: string): boolean;
+  /**
+   *
+   */
+  setSDKEventMessage(value: string, eventType: string): boolean
 
-	/**
-	 * 
-	 */
-	setScratchDiskPath(value: string, type: string): boolean;
+  /**
+   *
+   */
+  setScratchDiskPath(value: string, type: string): boolean
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	showCursor(enable: boolean): void;
+  /**
+   *
+   */
+  showCursor(enable: boolean): void
 
-	/**
-	 * 
-	 */
-	trace(message: string): void;
+  /**
+   *
+   */
+  trace(message: string): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class MarkerCollection {
-	/**
-	 * 
-	 */
-	readonly numMarkers: number;
+  /**
+   *
+   */
+  readonly numMarkers: number
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	createMarker(time: number): Marker;
+  /**
+   *
+   */
+  createMarker(time: number): Marker
 
-	/**
-	 * 
-	 */
-	deleteMarker(marker: Marker): void;
+  /**
+   *
+   */
+  deleteMarker(marker: Marker): void
 
-	/**
-	 * 
-	 */
-	getFirstMarker(): Marker;
+  /**
+   *
+   */
+  getFirstMarker(): Marker
 
-	/**
-	 * 
-	 */
-	getLastMarker(): Marker;
+  /**
+   *
+   */
+  getLastMarker(): Marker
 
-	/**
-	 * 
-	 */
-	getNextMarker(marker: Marker): Marker;
+  /**
+   *
+   */
+  getNextMarker(marker: Marker): Marker
 
-	/**
-	 * 
-	 */
-	getPrevMarker(marker: Marker): Marker;
+  /**
+   *
+   */
+  getPrevMarker(marker: Marker): Marker
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Marker {
-	/**
-	 * 
-	 */
-	comments: string;
+  /**
+   *
+   */
+  comments: string
 
-	/**
-	 * 
-	 */
-	end: Time;
+  /**
+   *
+   */
+  end: Time
 
-	/**
-	 * 
-	 */
-	readonly guid: string;
+  /**
+   *
+   */
+  readonly guid: string
 
-	/**
-	 * 
-	 */
-	name: string;
+  /**
+   *
+   */
+  name: string
 
-	/**
-	 * 
-	 */
-	start: Time;
+  /**
+   *
+   */
+  start: Time
 
-	/**
-	 * 
-	 */
-	type: string;
+  /**
+   *
+   */
+  type: string
 
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	getWebLinkFrameTarget(): string;
+  /**
+   *
+   */
+  getWebLinkFrameTarget(): string
 
-	/**
-	 * 
-	 */
-	getWebLinkURL(): string;
+  /**
+   *
+   */
+  getWebLinkURL(): string
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	setTypeAsChapter(): void;
+  /**
+   *
+   */
+  setTypeAsChapter(): void
 
-	/**
-	 * 
-	 */
-	setTypeAsComment(): void;
+  /**
+   *
+   */
+  setTypeAsComment(): void
 
-	/**
-	 * 
-	 */
-	setTypeAsSegmentation(): void;
+  /**
+   *
+   */
+  setTypeAsSegmentation(): void
 
-	/**
-	 * 
-	 */
-	setTypeAsWebLink(url: string, frameTarget: string): void;
+  /**
+   *
+   */
+  setTypeAsWebLink(url: string, frameTarget: string): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
 
 /**
- * 
+ *
  */
 declare class Document {
-	/**
-	 * 
-	 */
-	bind(eventName: string, function_: any): void;
+  /**
+   *
+   */
+  bind(eventName: string, function_: any): void
 
-	/**
-	 * 
-	 */
-	getFilePath(): string;
+  /**
+   *
+   */
+  getFilePath(): string
 
-	/**
-	 * 
-	 */
-	importFiles(arg1: any): boolean;
+  /**
+   *
+   */
+  importFiles(arg1: any): boolean
 
-	/**
-	 * 
-	 */
-	setTimeout(eventName: string, function_: any, milliseconds: number): void;
+  /**
+   *
+   */
+  setTimeout(eventName: string, function_: any, milliseconds: number): void
 
-	/**
-	 * 
-	 */
-	unbind(eventName: string): void;
-
+  /**
+   *
+   */
+  unbind(eventName: string): void
 }
-
