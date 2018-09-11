@@ -3,8 +3,6 @@ import { IOptions, sync as glob } from "glob"
 import { promisify } from "util"
 const execFile = promisify(child_process.execFile)
 
-// TODO add tslint -c resources/tslint.json */**/*.ts
-
 main()
 
 async function main() {
