@@ -1,3 +1,5 @@
+/// <reference path="../JavaScript.d.ts" />
+
 interface CSXSEvent {
 	/**
 	 * Retrieves the unique identifier of the application from which this event was dispatched.
