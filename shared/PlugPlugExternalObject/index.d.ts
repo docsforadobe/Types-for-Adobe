@@ -20,6 +20,11 @@ interface CSXSEvent {
 	scope: string;
 
 	/**
+	 * Retrieves the type of this event.
+	 */
+	type: string;
+
+	/**
 	 * Dispatch the event
 	 */
 	dispatch(): void;
