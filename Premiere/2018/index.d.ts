@@ -555,7 +555,7 @@ declare class Project {
   /**
    *
    */
-  importFiles(arg1: any): boolean
+  importFiles(arrayOfFilePathsToImport: string[], suppressUI: boolean, projectBin: string, importAsNumberedStill: boolean): boolean
 
   /**
    *
@@ -635,7 +635,7 @@ declare class Track {
   /**
    *
    */
-  insertClip(clipProjectItem: ProjectItem, time: object): void
+  insertClip(clipProjectItem: ProjectItem, time: number): void
 
   /**
    *
@@ -645,7 +645,7 @@ declare class Track {
   /**
    *
    */
-  overwriteClip(clipProjectItem: ProjectItem, time: object): void
+  overwriteClip(clipProjectItem: ProjectItem, time: number): void
 
   /**
    *
@@ -988,6 +988,11 @@ declare class ProjectItemCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [key: number]: ProjectItem
 }
 
 /**
@@ -1013,6 +1018,8 @@ declare class TrackCollection {
    *
    */
   unbind(eventName: string): void
+
+  [key: number]: Track
 }
 
 /**
@@ -1038,6 +1045,11 @@ declare class TrackItemCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [key: number]: TrackItem
 }
 
 /**
@@ -1317,7 +1329,7 @@ declare class Properties {
 /**
  *
  */
-declare class App {
+declare class Application {
   /**
    *
    */
@@ -1472,6 +1484,11 @@ declare class App {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  enableQE(): void
 }
 
 /**
@@ -1638,3 +1655,5 @@ declare class Document {
    */
   unbind(eventName: string): void
 }
+
+declare const qe: any
