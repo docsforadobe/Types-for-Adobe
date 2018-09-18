@@ -1002,7 +1002,7 @@ declare class AVLayer extends Layer {
 
   /** Shortcuts */
   readonly timeRemap: Property
-  readonly mask: PropertyGroup
+  readonly mask: MaskPropertyGroup
   readonly effect: PropertyGroup
   readonly layerStyle: _LayerStyles
   readonly geometryOption: _GeometryOptionsGroup
@@ -1088,7 +1088,7 @@ declare class CompItem extends AVItem {
   readonly markerProperty: Property
 
   /** The selected layers of the composition. */
-  readonly selectedLayers: Layer[]
+  readonly selectedLayers: AVLayer[]
 
   /** The selected properties of the composition. */
   readonly selectedProperties: PropertyBase[]
@@ -1423,7 +1423,7 @@ declare class Layer {
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
 declare class LayerCollection extends Collection {
   /** Retrieves a Layer object in the collection by its index number. The first object is at index 1. */
-  readonly [index: number]: Layer
+  readonly [index: number]: AVLayer
 
   /** Creates a new AVLayer and adds it to this collection. */
   add(item: AVItem, duration?: number): AVLayer
@@ -1457,7 +1457,7 @@ declare class LayerCollection extends Collection {
   addShape(): ShapeLayer
 
   /** Retrieves the layer object with a specified name. */
-  byName(name: string): Layer | null
+  byName(name: string): AVLayer | null
 
   /** Collects specified layers into a new composition. */
   precompose(layerIndicies: number[], name: string, moveAllAttributes?: boolean): CompItem
@@ -1509,6 +1509,11 @@ declare class MarkerValue {
 
   /** Sets the key-value pairs associated with the marker value. */
   setParameters(keyValuePairs: object): void
+}
+
+declare interface MaskPropertyGroup {
+  (index: number): MaskPropertyGroup
+  (name: string): MaskPropertyGroup
 }
 
 /** The MaskPropertyGroup object encapsulates mask attributes in a layer. */
