@@ -1002,7 +1002,7 @@ declare class AVLayer extends Layer {
 
   /** Shortcuts */
   readonly timeRemap: Property
-  readonly mask: PropertyGroup
+  readonly mask: MaskPropertyGroup
   readonly effect: PropertyGroup
   readonly layerStyle: _LayerStyles
   readonly geometryOption: _GeometryOptionsGroup
@@ -1509,6 +1509,11 @@ declare class MarkerValue {
 
   /** Sets the key-value pairs associated with the marker value. */
   setParameters(keyValuePairs: object): void
+}
+
+declare interface MaskPropertyGroup {
+  (index: number): MaskPropertyGroup
+  (name: string): MaskPropertyGroup
 }
 
 /** The MaskPropertyGroup object encapsulates mask attributes in a layer. */
