@@ -992,7 +992,7 @@ declare class ProjectItemCollection {
   /**
    *
    */
-  [key: number]: ProjectItem
+  [index: number]: ProjectItem
 }
 
 /**
@@ -1019,7 +1019,10 @@ declare class TrackCollection {
    */
   unbind(eventName: string): void
 
-  [key: number]: Track
+  /**
+   *
+   */
+  [index: number]: Track
 }
 
 /**
@@ -1049,7 +1052,7 @@ declare class TrackItemCollection {
   /**
    *
    */
-  [key: number]: TrackItem
+  [index: number]: TrackItem
 }
 
 /**
