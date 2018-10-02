@@ -1659,4 +1659,7 @@ declare class Document {
   unbind(eventName: string): void
 }
 
-declare const qe: any
+/**
+ * In order to use qe please call app.enableQE() first.
+ */
+declare const qe: undefined | any
