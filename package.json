@@ -1,6 +1,6 @@
 {
   "name": "types-for-adobe",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "productName": "TypeScript types for Adobe Products",
   "description": "TypeScript types for Adobe Audition, Illustrator, InDesign, Photoshop, AfterEffects, Premiere, ScriptUI",
   "keywords": [
