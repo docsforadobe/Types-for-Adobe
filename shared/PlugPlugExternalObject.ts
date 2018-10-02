@@ -1,4 +1,4 @@
-/// <reference path="../JavaScript.d.ts" />
+/// <reference path="JavaScript.d.ts" />
 
 interface ExternalObject {
   /**
