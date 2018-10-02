@@ -1,5 +1,16 @@
 /// <reference path="JavaScript.d.ts" />
 
+interface ExternalObjectConstructor {
+  readonly prototype: ExternalObject
+
+  /**
+   * Creates a new ExternalObject object.
+   */
+  new (lib: string): ExternalObject
+  (lib: string): ExternalObject
+}
+declare const ExternalObject: ExternalObjectConstructor
+
 interface ExternalObject {
   /**
    * Set to true to write status information to standard output (the
@@ -36,18 +47,16 @@ interface ExternalObject {
   terminate(): undefined
 }
 
-interface ExternalObjectConstructor {
-  readonly prototype: ExternalObject
+interface CSXSEventConstructor {
+  readonly prototype: CSXSEvent
 
   /**
-   * Creates a new ExternalObject object.
+   * Creates a new CSXSEvent object.
    */
-  new (lib: string): ExternalObject
-
-  (lib: string): ExternalObject
+  new (type?: string, scope?: string, data?: string): CSXSEvent
+  (type?: string, scope?: string, data?: string): CSXSEvent
 }
-
-declare const ExternalObject: ExternalObjectConstructor
+declare const CSXSEvent: CSXSEventConstructor
 
 interface CSXSEvent {
   /**
@@ -80,16 +89,3 @@ interface CSXSEvent {
    */
   dispatch(): void
 }
-
-interface CSXSEventConstructor {
-  readonly prototype: CSXSEvent
-
-  /**
-   * Creates a new CSXSEvent object.
-   */
-  new (type?: string, scope?: string, data?: string): CSXSEvent
-
-  (type?: string, scope?: string, data?: string): CSXSEvent
-}
-
-declare const CSXSEvent: CSXSEventConstructor
