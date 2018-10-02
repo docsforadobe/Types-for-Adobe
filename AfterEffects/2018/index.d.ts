@@ -1088,7 +1088,7 @@ declare class CompItem extends AVItem {
   readonly markerProperty: Property
 
   /** The selected layers of the composition. */
-  readonly selectedLayers: AVLayer[]
+  readonly selectedLayers: Layer[]
 
   /** The selected properties of the composition. */
   readonly selectedProperties: PropertyBase[]
@@ -1423,7 +1423,7 @@ declare class Layer {
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
 declare class LayerCollection extends Collection {
   /** Retrieves a Layer object in the collection by its index number. The first object is at index 1. */
-  readonly [index: number]: AVLayer
+  readonly [index: number]: Layer
 
   /** Creates a new AVLayer and adds it to this collection. */
   add(item: AVItem, duration?: number): AVLayer
@@ -1457,7 +1457,7 @@ declare class LayerCollection extends Collection {
   addShape(): ShapeLayer
 
   /** Retrieves the layer object with a specified name. */
-  byName(name: string): AVLayer | null
+  byName(name: string): Layer | null
 
   /** Collects specified layers into a new composition. */
   precompose(layerIndicies: number[], name: string, moveAllAttributes?: boolean): CompItem
