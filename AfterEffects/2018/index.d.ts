@@ -1418,6 +1418,21 @@ declare class Layer {
   /** Shortcuts */
   readonly marker: Property
   readonly transform: _TransformGroup
+
+  /** Transform shortcuts */
+  readonly anchorPoint: Property
+  readonly position: Property
+  readonly xPosition: Property
+  readonly yPosition: Property
+  readonly zPosition: Property
+  readonly scale: Property
+  readonly orientation: Property
+  readonly rotation: Property
+  readonly xRotation: Property
+  readonly yRotation: Property
+  readonly zRotation: Property
+  readonly opacity: Property
+  readonly pointOfInterest: Property
 }
 
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
