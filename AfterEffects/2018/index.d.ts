@@ -2383,7 +2383,7 @@ declare class _TransformGroup extends PropertyGroup {
   readonly yRotation: Property
   readonly zRotation: Property
   readonly opacity: Property
-  readonly pointOfInterest: Property;
+  readonly pointOfInterest: Property
 }
 
 declare class _LightOptionsGroup extends PropertyGroup {
