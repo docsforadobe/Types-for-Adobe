@@ -892,7 +892,7 @@ declare class AVItem extends Item {
 /** The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers). */
 declare class AVLayer extends Layer {
   /** The source item for this layer. */
-  readonly source: any
+  readonly source: AVItem
 
   /** When true, the layer has no expressly set name, but contains a named source. */
   readonly isNameFromSource: boolean
