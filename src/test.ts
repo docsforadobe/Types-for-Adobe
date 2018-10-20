@@ -19,7 +19,7 @@ async function main() {
     console.log("Tests passed.")
     process.exit(0)
   } catch (e) {
-    console.log(e instanceof Error ? e.message : typeof e === "string" ? e : "😞")
+    console.log(e.stdout)
     process.exit(1)
   }
 }
