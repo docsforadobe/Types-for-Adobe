@@ -1553,6 +1553,9 @@ declare class MaskPropertyGroup extends PropertyGroup {
 
   /** The feather falloff mode for the mask. */
   maskFeatherFalloff: MaskFeatherFalloff
+
+  /** The shape of the mask */
+  maskShape: Property
 }
 
 /** The OMCollection contains all of the output modules in a render queue. The collection provides access to the OutputModule objects, but does not provide any additional functionality. The first OutputModule object in the collection is at index position 1. */
@@ -1878,17 +1881,17 @@ declare class Property extends PropertyBase {
   setTemporalEaseAtKey(
     keyIndex: number,
     inTemporalEase: [KeyframeEase],
-    outTemporalEase: typeof inTemporalEase,
+    outTemporalEase?: typeof inTemporalEase,
   ): void
   setTemporalEaseAtKey(
     keyIndex: number,
     inTemporalEase: [KeyframeEase, KeyframeEase],
-    outTemporalEase: typeof inTemporalEase,
+    outTemporalEase?: typeof inTemporalEase,
   ): void
   setTemporalEaseAtKey(
     keyIndex: number,
     inTemporalEase: [KeyframeEase, KeyframeEase, KeyframeEase],
-    outTemporalEase: typeof inTemporalEase,
+    outTemporalEase?: typeof inTemporalEase,
   ): void
 
   /** Gets the “in” temporal ease for a key. */
