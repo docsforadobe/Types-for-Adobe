@@ -2673,6 +2673,14 @@ interface UnitValue {
 /**
  * Only for TypeScript compatibility
  */
+interface CallableFunction extends Function {
+
+}
+
+interface NewableFunction extends Function {
+
+}
+
 interface IArguments {
   [index: number]: any
   length: number
