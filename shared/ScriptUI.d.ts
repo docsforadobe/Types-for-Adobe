@@ -130,7 +130,7 @@ declare class Window extends _Control {
    * The bounds of the window frame in screen coordinates.
    * The frame consists of the title bar and borders that enclose the content region of a window, depending on the windowing system.
    */
-  readonly frameBounds: Bounds
+  readonly frameBounds: _Bounds | [number, number, number, number]
 
   /**
    * The top left corner of the window frame in screen coordinates.
@@ -225,7 +225,7 @@ declare class Window extends _Control {
   constructor(
     type: string,
     title?: string,
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     properties?: Partial<_ControlPropertiesMap["window"]>,
   )
 
@@ -2087,7 +2087,6 @@ declare class Dimension {
  * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
  * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties namedleft, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
  */
-declare type Bounds = _Bounds | [number, number, number, number]
 declare class _Bounds {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
@@ -2400,7 +2399,7 @@ declare class _Control {
    * The boundaries of the element, in parent-relative coordinates.
    * Setting an element's size or location changes its bounds property, and vice-versa.
    */
-  bounds: Bounds
+  bounds: _Bounds | [number, number, number, number]
 
   /**
    * True if this element is enabled.
@@ -2472,7 +2471,7 @@ declare class _Control {
   /**
    * The bounds of this element relative to the top-level parent window.
    */
-  readonly windowBounds: Bounds
+  readonly windowBounds: _Bounds | [number, number, number, number]
 
   /**
    * Registers an event handler for a particular type of event occuring in this element.
@@ -2716,69 +2715,69 @@ interface _ControlPropertiesMap {
 interface _WindowPanelGroupAdd {
   (
     type: "button",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_ControlPropertiesMap["button"]>,
   ): Button
   (
     type: "checkbox",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_ControlPropertiesMap["checkbox"]>,
   ): Checkbox
   (
     type: "dropdownlist",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     items?: string[],
     properties?: Partial<_ControlPropertiesMap["dropdownlist"]>,
   ): DropDownList
   (
     type: "edittext",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_ControlPropertiesMap["edittext"]>,
   ): EditText
   (
     type: "flashplayer",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     movieToLoad?: string | File,
     properties?: Partial<_ControlPropertiesMap["flashplayer"]>,
   ): FlashPlayer
-  (type: "group", bounds?: Bounds, properties?: Partial<_ControlPropertiesMap["group"]>): Group
+  (type: "group", bounds?: _Bounds | [number, number, number, number], properties?: Partial<_ControlPropertiesMap["group"]>): Group
   (
     type: "iconbutton",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     icon?: string | File,
     properties?: Partial<_ControlPropertiesMap["iconbutton"]>,
   ): IconButton
   (
     type: "listbox",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     items?: string[],
     properties?: Partial<_ControlPropertiesMap["listbox"]>,
   ): ListBox
   (
     type: "panel",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_ControlPropertiesMap["panel"]>,
   ): Panel
   (
     type: "progressbar",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     value?: number,
     max?: number,
     properties?: Partial<_ControlPropertiesMap["progressbar"]>,
   ): Progressbar
   (
     type: "radiobutton",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_ControlPropertiesMap["radiobutton"]>,
   ): RadioButton
   (
     type: "scrollbar",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     value?: number,
     min?: number,
     max?: number,
@@ -2786,7 +2785,7 @@ interface _WindowPanelGroupAdd {
   ): Scrollbar
   (
     type: "slider",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     value?: number,
     min?: number,
     max?: number,
@@ -2794,13 +2793,13 @@ interface _WindowPanelGroupAdd {
   ): Slider
   (
     type: "statictext",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_ControlPropertiesMap["statictext"]>,
   ): StaticText
   (
     type: "treeview",
-    bounds?: Bounds,
+    bounds?: _Bounds | [number, number, number, number],
     items?: string[],
     properties?: Partial<_ControlPropertiesMap["treeview"]>,
   ): TreeView
