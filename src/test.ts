@@ -12,7 +12,7 @@ async function main() {
 
     for (const file of files) {
       const dir = file.replace("/tsconfig.json", "")
-      await execFile("tsc", ["-p", ".", "--pretty"], { cwd: dir })
+      await execFile("tsc", ["-p", ".", "--pretty", "--noEmit"], { cwd: dir })
       console.log("OK " + dir)
     }
 
