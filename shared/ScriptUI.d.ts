@@ -141,7 +141,7 @@ declare class Window extends _Control {
   /**
    * The size and location of the window's frame in screen coordinates.
    */
-  readonly frameSize: _Dimension | [number, number]
+  readonly frameSize: Dimension | [number, number]
 
   /**
    * Deprecated. Use ScriptUI.frameworkName instead.
@@ -557,7 +557,7 @@ declare class ScriptUIGraphics {
    * @param font The font to use. Default is the font value in this object.
    * @param boundingWidth The bounding width.
    */
-  measureString(text: string, font?: ScriptUIFont, boundingWidth?: number): _Dimension | [number, number]
+  measureString(text: string, font?: ScriptUIFont, boundingWidth?: number): Dimension | [number, number]
 
   /**
    * Adds a given point to the currentPath, and makes it the current drawing position.
@@ -726,7 +726,7 @@ declare class ScriptUIImage {
   /**
    * The image size in pixels.
    */
-  readonly size: _Dimension | [number, number]
+  readonly size: Dimension | [number, number]
 }
 
 /**
@@ -1059,7 +1059,7 @@ declare class ListBox extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: _Dimension | [number, number]
+  itemSize: Dimension | [number, number]
 
   /**
    * The array of choice items displayed in the list.
@@ -1172,7 +1172,7 @@ declare class DropDownList extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: _Dimension | [number, number]
+  itemSize: Dimension | [number, number]
 
   /**
    * The array of choice items displayed in the drop-down or pop-up list.
@@ -1726,7 +1726,7 @@ declare class TreeView extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: _Dimension | [number, number]
+  itemSize: Dimension | [number, number]
 
   /**
    * The array of top-level items displayed in the list.
@@ -2062,7 +2062,7 @@ declare class Point {
  * Defines the size of a window or UI element. Contains a 2-element array.
  * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
  */
-declare class _Dimension {
+declare class Dimension {
   /**
    * The height in pixels.
    */
@@ -2428,12 +2428,12 @@ declare class _Control {
   /**
    * The maximum height and width to which the element can be resized.
    */
-  maximumSize: _Dimension | [number, number]
+  maximumSize: Dimension | [number, number]
 
   /**
    * The minimum height and width to which the element can be resized.
    */
-  minimumSize: _Dimension | [number, number]
+  minimumSize: Dimension | [number, number]
 
   /**
    * The parent element.
@@ -2445,13 +2445,13 @@ declare class _Control {
    * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes. A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
    * To set a specific value for only one dimension, specify the other dimension as -1.
    */
-  preferredSize: _Dimension | [number, number]
+  preferredSize: Dimension | [number, number]
 
   /**
    * The current dimensions of this element.
    * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
    */
-  size: _Dimension | [number, number]
+  size: Dimension | [number, number]
 
   /**
    * The element type.
