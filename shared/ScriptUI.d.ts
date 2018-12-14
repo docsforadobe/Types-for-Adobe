@@ -136,7 +136,7 @@ declare class Window extends _Control {
    * The top left corner of the window frame in screen coordinates.
    * The same as [frameBounds.x, frameBounds.y]. Set this value to move the window frame to the specified location on the screen. The frameBounds value changes accordingly.
    */
-  frameLocation: Point
+  frameLocation: _Point | [number, number]
 
   /**
    * The size and location of the window's frame in screen coordinates.
@@ -459,7 +459,7 @@ declare class ScriptUIGraphics {
   /**
    * The current position in the current drawing path.
    */
-  readonly currentPoint: Point
+  readonly currentPoint: _Point | [number, number]
 
   /**
    * The background color for containers when disabled or inactive; for non-containers, the parent background color.
@@ -533,7 +533,7 @@ declare class ScriptUIGraphics {
    * @param width The width of the region in pixels.
    * @param height The height of the region in pixels.
    */
-  ellipsePath(left: number, top: number, width: number, height: number): Point
+  ellipsePath(left: number, top: number, width: number, height: number): _Point | [number, number]
 
   /**
    * Fills a path using a given painting brush.
@@ -548,7 +548,7 @@ declare class ScriptUIGraphics {
    * @param x The X coordinate for the destination point, relative to the origin of this element.
    * @param y The Y coordinate for the destination point, relative to the origin of this element.
    */
-  lineTo(x: number, y: number): Point
+  lineTo(x: number, y: number): _Point | [number, number]
 
   /**
    * Calculates the size needed to display a string using the given font.
@@ -565,7 +565,7 @@ declare class ScriptUIGraphics {
    * @param x The X coordinate for the new point, relative to the origin of this element.
    * @param y The Y coordinate for the new point, relative to the origin of this element.
    */
-  moveTo(x: number, y: number): Point
+  moveTo(x: number, y: number): _Point | [number, number]
 
   /**
    * Creates a new painting brush object.
@@ -596,7 +596,7 @@ declare class ScriptUIGraphics {
    * @param width The width in pixels.
    * @param height The height in pixels.
    */
-  rectPath(left: number, top: number, width: number, height: number): Point
+  rectPath(left: number, top: number, width: number, height: number): _Point | [number, number]
 
   /**
    * Strokes the path segments of a path with a given drawing pen.
@@ -2027,7 +2027,6 @@ declare class Panel extends _Control {
  * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
  * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
  */
-declare type Point = _Point | [number, number]
 declare class _Point {
   /**
    * The left coordinate.
@@ -2425,7 +2424,7 @@ declare class _Control {
    * The upper left corner of this element relative to its parent.
    * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
    */
-  location: Point
+  location: _Point | [number, number]
 
   /**
    * The maximum height and width to which the element can be resized.

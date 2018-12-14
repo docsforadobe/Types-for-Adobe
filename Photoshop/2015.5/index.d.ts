@@ -7043,12 +7043,12 @@ declare class PathPointInfo {
   /**
    * The x and y coordinates of one end point of the path segment.
    */
-  static anchor: Point[]
+  static anchor: (_Point | [number, number])[]
 
   /**
    * The x and y coordinates of one end point of the path segment.
    */
-  anchor: Point[]
+  anchor: (_Point | [number, number])[]
 
   /**
    * The point type.
@@ -7063,22 +7063,22 @@ declare class PathPointInfo {
   /**
    * The location of the left direction point ("in" position).
    */
-  static leftDirection: Point[]
+  static leftDirection: (_Point | [number, number])[]
 
   /**
    * The location of the left direction point ("in" position).
    */
-  leftDirection: Point[]
+  leftDirection: (_Point | [number, number])[]
 
   /**
    * The location of the right direction point ("out" position).
    */
-  static rightDirection: Point[]
+  static rightDirection: (_Point | [number, number])[]
 
   /**
    * The location of the right direction point ("out" position).
    */
-  rightDirection: Point[]
+  rightDirection: (_Point | [number, number])[]
 }
 
 /**
@@ -9308,7 +9308,7 @@ declare class ArtLayer extends Layer {
    * Adjusts the tonal range of the selected channel using up to fourteen points.
    * @param curveShape The curve points. The number of points must be between 2 and 14.
    */
-  adjustCurves(curveShape: Point[]): void
+  adjustCurves(curveShape: (_Point | [number, number])[]): void
 
   /**
    * Adjusts levels of the selected channels.
@@ -10653,7 +10653,7 @@ declare class PathPoint {
   /**
    * The position (coordinates) of the anchor point.
    */
-  readonly anchor: Point
+  readonly anchor: _Point | [number, number]
 
   /**
    * The type of point.
@@ -10663,7 +10663,7 @@ declare class PathPoint {
   /**
    * The location of the left direction point (the "in" position).
    */
-  readonly leftDirection: Point
+  readonly leftDirection: _Point | [number, number]
 
   /**
    * The object's container.
@@ -10673,7 +10673,7 @@ declare class PathPoint {
   /**
    * The location of the right direction point (the "out" position).
    */
-  readonly rightDirection: Point
+  readonly rightDirection: _Point | [number, number]
 
   /**
    * The class name of the object.

@@ -4197,7 +4197,7 @@ declare class TextFrameItems extends Array {
    * @param anchor The position (coordinates) of the anchor point.
    * @param orientation The orientation of the text.
    */
-  static pointText(anchor: Point, orientation?: TextOrientation): TextFrameItem
+  static pointText(anchor: _Point | [number, number], orientation?: TextOrientation): TextFrameItem
 
   /**
    * Deletes all elements.
@@ -6670,7 +6670,7 @@ declare class PatternColor extends Color {
   /**
    * The fraction to scale the prototype before filling.
    */
-  static scaleFactor: Point
+  static scaleFactor: _Point | [number, number]
 
   /**
    * The angle to slant the shear by.
@@ -6730,7 +6730,7 @@ declare class GradientColor extends Color {
   /**
    * The gradient vector origin.
    */
-  static origin: Point
+  static origin: _Point | [number, number]
 }
 
 /**
@@ -8534,7 +8534,7 @@ declare class Document {
   /**
    *
    */
-  pageOrigin: Point
+  pageOrigin: _Point | [number, number]
 
   /**
    * The list of paragraph styles in this document.
@@ -8589,7 +8589,7 @@ declare class Document {
   /**
    *
    */
-  rulerOrigin: Point
+  rulerOrigin: _Point | [number, number]
 
   /**
    *
@@ -8719,10 +8719,10 @@ declare class Document {
    * @param destination The destination coordinate system.
    */
   convertCoordinate(
-    coordinate: Point,
+    coordinate: _Point | [number, number],
     source: CoordinateSystem,
     destination: CoordinateSystem,
-  ): Point
+  ): _Point | [number, number]
 
   /**
    * Export the specified document(s)
@@ -8929,7 +8929,7 @@ declare class Document {
    * @param imageFile The TIFF file to which the captured image should be written.
    * @param windowSize The size to make the window before capture.
    */
-  windowCapture(imageFile: File, windowSize: Point): void
+  windowCapture(imageFile: File, windowSize: _Point | [number, number]): void
 }
 
 /**
@@ -9127,7 +9127,7 @@ declare class View {
   /**
    * The center point of this view.
    */
-  centerPoint: Point
+  centerPoint: _Point | [number, number]
 
   /**
    * The object's container.
@@ -9797,7 +9797,7 @@ declare class PageItem {
   /**
    * The position of the top left corner of the art item.
    */
-  position: Point
+  position: _Point | [number, number]
 
   /**
    * Is this artwork item selected?
@@ -10167,12 +10167,12 @@ declare class PathPoint {
   /**
    * The position (coordinates) of the anchor point.
    */
-  anchor: Point
+  anchor: _Point | [number, number]
 
   /**
    * Location of the left direction point (in position)
    */
-  leftDirection: Point
+  leftDirection: _Point | [number, number]
 
   /**
    * The object's container.
@@ -10187,7 +10187,7 @@ declare class PathPoint {
   /**
    * Location of the right direction point (out position)
    */
-  rightDirection: Point
+  rightDirection: _Point | [number, number]
 
   /**
    * The path point selected state.
@@ -10559,7 +10559,7 @@ declare class TextPath {
   /**
    * The position of the top left corner of the text path.
    */
-  position: Point
+  position: _Point | [number, number]
 
   /**
    * The resolution of the path.
@@ -10710,7 +10710,7 @@ declare class TextFrameItem extends PageItem {
   /**
    * The position of the anchor point (start of base line for point text)
    */
-  anchor: Point
+  anchor: _Point | [number, number]
 
   /**
    * The type of a text anti-aliasing on text frame item.
@@ -11962,7 +11962,7 @@ declare class Artboard {
   /**
    * Ruler origin of artboard.It is relative to left-bottom corner of the Artboard.
    */
-  rulerOrigin: Point
+  rulerOrigin: _Point | [number, number]
 
   /**
    * Pixel aspect ratio, used in ruler visualization if the units are pixels.
