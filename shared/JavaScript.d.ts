@@ -1992,7 +1992,7 @@ interface Folder {
    * Returns an array of File and Folder objects, or null if this object's referenced folder does not exist.
    * @param mask A search mask for file names, specified as a string or a function. A mask string can contain question mark (?) and asterisk (*) wild cards. Default is "*", which matches all file names. Can also be the name of a function that takes a File or Folder object as its argument. It is called for each file or folder found in the search; if it returns true, the object is added to the return array. NOTE: In Windows, all aliases end with the extension .lnk. ExtendScript strips this from the file name when found, in order to preserve compatibility with other operating systems. You can search for all aliases by supplying the search mask "*.lnk", but note that such code is not portable.
    */
-  getFiles(mask: any): Array<File | Folder>
+  getFiles(mask?: any): Array<File | Folder>
 
   /**
    * Retrieves and returns the path for this file, relative to the specified base path, in URI notation.
