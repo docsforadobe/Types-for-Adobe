@@ -635,7 +635,7 @@ declare class FLfile {
 /**
  * The flash object represents the Flash application. You can use flash or fl to refer to this object. This documentation uses fl in code samples throughout.
  */
-interface Flash {
+declare class Flash {
   /**
    * An actionsPanel object, which represents the currently displayed Actions panel. For information on using this property, see actionsPanel object.
    */
@@ -1112,7 +1112,7 @@ declare const flash: Flash;
 /**
  * Short variable name for flash.
  */
-interface fl extends Flash { }
+declare interface fl extends Flash { }
 declare const fl: Flash;
 /**
  * The SpriteSheetExporter object is a subclass of the
