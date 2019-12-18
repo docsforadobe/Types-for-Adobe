@@ -1108,10 +1108,12 @@ interface flash {
    */
   xmlPanelFromString(xmlString: string): XMLUI;
 }
+declare const flash: flash;
 /**
  * Short variable name for flash.
  */
 interface fl extends flash { }
+declare const fl: flash;
 /**
  * The SpriteSheetExporter object is a subclass of the
 Item object.
