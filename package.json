@@ -5,6 +5,7 @@
   "description": "TypeScript types for Adobe Audition, Illustrator, InDesign, Photoshop, AfterEffects, Premiere, ScriptUI",
   "files": [
     "AfterEffects",
+    "Animate",
     "Audition",
     "InDesign",
     "Illustrator",
