@@ -3,9 +3,6 @@
   "version": "1.5.0",
   "productName": "TypeScript types for Adobe Products",
   "description": "TypeScript types for Adobe Audition, Illustrator, InDesign, Photoshop, AfterEffects, Premiere, ScriptUI",
-  "keywords": [
-    "adobe"
-  ],
   "files": [
     "AfterEffects",
     "Audition",
@@ -20,8 +17,7 @@
     "url": "https://github.com/pravdomil/types-for-adobe.git"
   },
   "scripts": {
-    "pretest": "npm i typescript ts-node glob @types/glob",
-    "test": "ts-node src/test"
+    "test": "_bin/test"
   },
   "license": "MIT"
 }
