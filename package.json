@@ -16,7 +16,7 @@
     "url": "https://github.com/pravdomil/types-for-adobe.git"
   },
   "scripts": {
-    "test": "_bin/test"
+    "test": "_bin/test.sh"
   },
   "license": "MIT"
 }

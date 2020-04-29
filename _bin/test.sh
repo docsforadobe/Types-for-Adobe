@@ -1,10 +1,12 @@
 #!/usr/bin/env sh
 
-cd "${0%/*}"
-cd ..
+# To stop if something fails.
+set -e
 
-set -x
+# To be always in project root.
+cd "${0%/*}/.."
 
+# To test if everything compiles.
 tsc --pretty --noEmit -p ./AfterEffects/2018
 tsc --pretty --noEmit -p ./Animate/2013
 tsc --pretty --noEmit -p ./Audition/2015.2
