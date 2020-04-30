@@ -6535,17 +6535,17 @@ declare class LabColor extends Color {
   /**
    * The a color value (between -128.0 and 127.0)
    */
-  static a: number
+  a: number
 
   /**
    * The b color value (between -128.0 and 127.0)
    */
-  static b: number
+  b: number
 
   /**
    * The L color value (between 0.0 and 100.0)
    */
-  static l: number
+  l: number
 }
 
 /**
@@ -6570,17 +6570,17 @@ declare class RGBColor extends Color {
   /**
    * The blue color value (between 0.0 and 255.0)
    */
-  static blue: number
+  blue: number
 
   /**
    * The green color value (between 0.0 and 255.0)
    */
-  static green: number
+  green: number
 
   /**
    * The red color value (between 0.0 and 255.0)
    */
-  static red: number
+  red: number
 }
 
 /**
@@ -6590,22 +6590,22 @@ declare class CMYKColor extends Color {
   /**
    * The black color value (between 0.0 and 100.0)
    */
-  static black: number
+  black: number
 
   /**
    * The cyan color value (between 0.0 and 100.0)
    */
-  static cyan: number
+  cyan: number
 
   /**
    * The magenta color value (between 0.0 and 100.0)
    */
-  static magenta: number
+  magenta: number
 
   /**
    * The yellow color value (between 0.0 and 100.0)
    */
-  static yellow: number
+  yellow: number
 }
 
 /**
@@ -6615,7 +6615,7 @@ declare class GrayColor extends Color {
   /**
    * The gray value (between 0.0 and 100.0)
    */
-  static gray: number
+  gray: number
 }
 
 /**
@@ -6630,12 +6630,12 @@ declare class SpotColor extends Color {
   /**
    *
    */
-  static spot: Spot
+  spot: Spot
 
   /**
    * Percentage level of tint to be applied to the spot color.
    */
-  static tint: number
+  tint: number
 }
 
 /**
@@ -6645,52 +6645,52 @@ declare class PatternColor extends Color {
   /**
    * Additional transformation arising from manipulating the path.
    */
-  static matrix: Matrix
+  matrix: Matrix
 
   /**
    *
    */
-  static pattern: Pattern
+  pattern: Pattern
 
   /**
    * Whether or not the prototype is reflected before filling.
    */
-  static reflect: boolean
+  reflect: boolean
 
   /**
    * The axis around which to reflect.
    */
-  static reflectAngle: number
+  reflectAngle: number
 
   /**
    * The angle to rotate the before filling.
    */
-  static rotation: number
+  rotation: number
 
   /**
    * The fraction to scale the prototype before filling.
    */
-  static scaleFactor: Point | [number, number]
+  scaleFactor: Point | [number, number]
 
   /**
    * The angle to slant the shear by.
    */
-  static shearAngle: number
+  shearAngle: number
 
   /**
    * The axis to shear with respect to.
    */
-  static shearAxis: number
+  shearAxis: number
 
   /**
    * The angle to translate the (unscaled) prototype before filling.
    */
-  static shiftAngle: number
+  shiftAngle: number
 
   /**
    * The distance to translate the (unscaled) prototype before filling.
    */
-  static shiftDistance: number
+  shiftDistance: number
 }
 
 /**
@@ -6700,37 +6700,37 @@ declare class GradientColor extends Color {
   /**
    * The gradient vector angle.
    */
-  static angle: number
+  angle: number
 
   /**
    * Reference to the object defining the gradient.
    */
-  static gradient: Gradient
+  gradient: Gradient
 
   /**
    * The gradient hilite vector angle.
    */
-  static hiliteAngle: number
+  hiliteAngle: number
 
   /**
    * The gradient hilite vector length.
    */
-  static hiliteLength: number
+  hiliteLength: number
 
   /**
    * The gradient vector length.
    */
-  static length: number
+  length: number
 
   /**
    * Additional transformation arising from manipulating the path.
    */
-  static matrix: Matrix
+  matrix: Matrix
 
   /**
    * The gradient vector origin.
    */
-  static origin: Point | [number, number]
+  origin: Point | [number, number]
 }
 
 /**
