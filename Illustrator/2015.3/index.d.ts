@@ -4133,7 +4133,7 @@ declare class Stories extends Array<Story> {
 /**
  * A collection of text frame items.
  */
-declare class TextFrameItems extends Array<TextFrameItem> {
+declare class TextFrameItems extends Array<TextFrame> {
   /**
    * Number of elements in the collection.
    */
@@ -4152,7 +4152,7 @@ declare class TextFrameItems extends Array<TextFrameItem> {
   /**
    * Create a point text frame item.
    */
-  add(): TextFrameItem
+  add(): TextFrame
 
   /**
    * Create an area text frame item.
@@ -4164,15 +4164,15 @@ declare class TextFrameItems extends Array<TextFrameItem> {
   static areaText(
     textPath: PathItem,
     orientation?: TextOrientation,
-    baseFrame?: TextFrameItem,
+    baseFrame?: TextFrame,
     postFix?: boolean,
-  ): TextFrameItem
+  ): TextFrame
 
   /**
    * Get the first element in the collection with the provided name.
    * @param name
    */
-  getByName(name: string): TextFrameItem
+  getByName(name: string): TextFrame
 
   /**
    * Create an on-path text frame item.
@@ -4188,16 +4188,16 @@ declare class TextFrameItems extends Array<TextFrameItem> {
     startTValue?: number,
     endTValue?: number,
     orientation?: TextOrientation,
-    baseFrame?: TextFrameItem,
+    baseFrame?: TextFrame,
     postFix?: boolean,
-  ): TextFrameItem
+  ): TextFrame
 
   /**
    * Create a point text frame item.
    * @param anchor The position (coordinates) of the anchor point.
    * @param orientation The orientation of the text.
    */
-  static pointText(anchor: Point | [number, number], orientation?: TextOrientation): TextFrameItem
+  static pointText(anchor: Point | [number, number], orientation?: TextOrientation): TextFrame
 
   /**
    * Deletes all elements.
@@ -10706,7 +10706,7 @@ declare class Story {
 /**
  * Text frame item.
  */
-declare class TextFrameItem extends PageItem {
+declare class TextFrame extends PageItem {
   /**
    * The position of the anchor point (start of base line for point text)
    */
@@ -10785,7 +10785,7 @@ declare class TextFrameItem extends PageItem {
   /**
    * The linked text frame following this one.
    */
-  nextFrame: TextFrameItem
+  nextFrame: TextFrame
 
   /**
    * Is the optical alignment active?
@@ -10805,7 +10805,7 @@ declare class TextFrameItem extends PageItem {
   /**
    * The linked text frame preceding this one.
    */
-  previousFrame: TextFrameItem
+  previousFrame: TextFrame
 
   /**
    * The row count in the text frame (area text only)
@@ -10860,12 +10860,12 @@ declare class TextFrameItem extends PageItem {
   /**
    * Convert Area Type Text Object To Point Type Object.
    */
-  convertAreaObjectToPointObject(): TextFrameItem
+  convertAreaObjectToPointObject(): TextFrame
 
   /**
    * Convert Point Type Text Object To Area Type Object.
    */
-  convertPointObjectToAreaObject(): TextFrameItem
+  convertPointObjectToAreaObject(): TextFrame
 
   /**
    * Convert text item to path items.
