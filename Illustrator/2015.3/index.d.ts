@@ -12002,50 +12002,11 @@ declare class Artboard {
 
 /**
  * Describes a rectangle. This class is also a four-element collection.
+ *
+ * Format: left, top, right, bottom.
+ * Width and height can be computed using `[r[2] - r[0], r[1] - r[3]]`.
+ *
+ * **Note:** y axis is flipped. Upper means negative number, lower means positive.
+ *
  */
-declare class Rect {
-  /**
-   * The bottom coordinate.
-   */
-  bottom: number
-
-  /**
-   * The height.
-   */
-  height: number
-
-  /**
-   * The left coordinate.
-   */
-  left: number
-
-  /**
-   * The array length.
-   */
-  readonly length: number
-
-  /**
-   * The right coordinate.
-   */
-  right: number
-
-  /**
-   * The top coordinate.
-   */
-  top: number
-
-  /**
-   * The width.
-   */
-  width: number
-
-  /**
-   * The left coordinate.
-   */
-  x: number
-
-  /**
-   * The top coordinate.
-   */
-  y: number
-}
+type Rect = [number, number, number, number]
