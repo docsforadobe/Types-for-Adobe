@@ -3669,7 +3669,7 @@ declare enum DocumentLayoutStyle {
 /**
  * A collection of artboards.
  */
-declare class Artboards extends Array {
+declare class Artboards extends Array<Artboard> {
   /**
    * Number of elements in the collection.
    */
@@ -3736,7 +3736,7 @@ declare class Artboards extends Array {
 /**
  * A collection of documents.
  */
-declare class Documents extends Array {
+declare class Documents extends Array<Document> {
   /**
    * Number of elements in the collection.
    */
@@ -3807,7 +3807,7 @@ declare class Documents extends Array {
 /**
  * A collection of layers.
  */
-declare class Layers extends Array {
+declare class Layers extends Array<Layer> {
   /**
    * Number of elements in the collection.
    */
@@ -3843,7 +3843,7 @@ declare class Layers extends Array {
 /**
  * A collection of group items.
  */
-declare class GroupItems extends Array {
+declare class GroupItems extends Array<GroupItem> {
   /**
    * Number of elements in the collection.
    */
@@ -3885,7 +3885,7 @@ declare class GroupItems extends Array {
 /**
  * A collection of page items.
  */
-declare class PageItems extends Array {
+declare class PageItems extends Array<PageItem> {
   /**
    * Number of elements in the collection.
    */
@@ -3911,7 +3911,7 @@ declare class PageItems extends Array {
 /**
  * A collection of path items.
  */
-declare class PathItems extends Array {
+declare class PathItems extends Array<PathItem> {
   /**
    * Number of elements in the collection.
    */
@@ -4035,7 +4035,7 @@ declare class PathItems extends Array {
 /**
  * A collection of path points.
  */
-declare class PathPoints extends Array {
+declare class PathPoints extends Array<PathPoint> {
   /**
    * Number of elements in the collection.
    */
@@ -4071,7 +4071,7 @@ declare class PathPoints extends Array {
 /**
  * A collection of compound path items.
  */
-declare class CompoundPathItems extends Array {
+declare class CompoundPathItems extends Array<CompoundPathItem> {
   /**
    * Number of elements in the collection.
    */
@@ -4107,7 +4107,7 @@ declare class CompoundPathItems extends Array {
 /**
  * A collection of stories.
  */
-declare class Stories extends Array {
+declare class Stories extends Array<Story> {
   /**
    * Number of elements in the collection.
    */
@@ -4133,7 +4133,7 @@ declare class Stories extends Array {
 /**
  * A collection of text frame items.
  */
-declare class TextFrameItems extends Array {
+declare class TextFrameItems extends Array<TextFrameItem> {
   /**
    * Number of elements in the collection.
    */
@@ -4208,7 +4208,7 @@ declare class TextFrameItems extends Array {
 /**
  * A collection of legacy text items.
  */
-declare class LegacyTextItems extends Array {
+declare class LegacyTextItems extends Array<LegacyTextItem> {
   /**
    * Number of elements in the collection.
    */
@@ -4239,7 +4239,7 @@ declare class LegacyTextItems extends Array {
 /**
  * A collection of text range items.
  */
-declare class TextRanges extends Array {
+declare class TextRanges extends Array<TextRange> {
   /**
    * Number of elements in the collection.
    */
@@ -4265,7 +4265,7 @@ declare class TextRanges extends Array {
 /**
  * A collection of insertion points.
  */
-declare class InsertionPoints extends Array {
+declare class InsertionPoints extends Array<InsertionPoint> {
   /**
    * Number of elements in the collection.
    */
@@ -4291,7 +4291,7 @@ declare class InsertionPoints extends Array {
 /**
  * A collection of characters.
  */
-declare class Characters extends Array {
+declare class Characters extends Array<TextRange> {
   /**
    * Number of elements in the collection.
    */
@@ -4334,7 +4334,7 @@ declare class Characters extends Array {
 /**
  * A collection of words.
  */
-declare class Words extends Array {
+declare class Words extends Array<TextRange> {
   /**
    * Number of elements in the collection.
    */
@@ -4377,7 +4377,7 @@ declare class Words extends Array {
 /**
  * A collection of lines.
  */
-declare class Lines extends Array {
+declare class Lines extends Array<TextRange> {
   /**
    * Number of elements in the collection.
    */
@@ -4403,7 +4403,7 @@ declare class Lines extends Array {
 /**
  * A collection of Paragraphs.
  */
-declare class Paragraphs extends Array {
+declare class Paragraphs extends Array<TextRange> {
   /**
    * Number of elements in the collection.
    */
@@ -4446,7 +4446,7 @@ declare class Paragraphs extends Array {
 /**
  * A collection of character styles.
  */
-declare class CharacterStyles extends Array {
+declare class CharacterStyles extends Array<CharacterStyle> {
   /**
    * Number of elements in the collection.
    */
@@ -4483,7 +4483,7 @@ declare class CharacterStyles extends Array {
 /**
  * A collection of paragraph styles.
  */
-declare class ParagraphStyles extends Array {
+declare class ParagraphStyles extends Array<ParagraphStyle> {
   /**
    * Number of elements in the collection.
    */
@@ -4520,7 +4520,7 @@ declare class ParagraphStyles extends Array {
 /**
  * A collection of custom spot colors.
  */
-declare class Spots extends Array {
+declare class Spots extends Array<Spot> {
   /**
    * Number of elements in the collection.
    */
@@ -4556,7 +4556,7 @@ declare class Spots extends Array {
 /**
  * A collection of swatches.
  */
-declare class Swatches extends Array {
+declare class Swatches extends Array<Swatch> {
   /**
    * Number of elements in the collection.
    */
@@ -4598,7 +4598,7 @@ declare class Swatches extends Array {
 /**
  * A collection of Swatch groups.
  */
-declare class SwatchGroups extends Array {
+declare class SwatchGroups extends Array<SwatchGroup> {
   /**
    * Number of elements in the collection.
    */
@@ -4639,7 +4639,7 @@ declare class SwatchGroups extends Array {
 /**
  * A collection of gradients.
  */
-declare class Gradients extends Array {
+declare class Gradients extends Array<Gradient> {
   /**
    * Number of elements in the collection.
    */
@@ -4675,7 +4675,7 @@ declare class Gradients extends Array {
 /**
  * A collection of gradient stops.
  */
-declare class GradientStops extends Array {
+declare class GradientStops extends Array<GradientStop> {
   /**
    * Number of elements in the collection.
    */
@@ -4711,7 +4711,7 @@ declare class GradientStops extends Array {
 /**
  * A collection of patterns.
  */
-declare class Patterns extends Array {
+declare class Patterns extends Array<Pattern> {
   /**
    * Number of elements in the collection.
    */
@@ -4747,7 +4747,7 @@ declare class Patterns extends Array {
 /**
  * A collection of symbols.
  */
-declare class Symbols extends Array {
+declare class Symbols extends Array<Symbol> {
   /**
    * Number of elements in the collection.
    */
@@ -4785,7 +4785,7 @@ declare class Symbols extends Array {
 /**
  * A collection of symbol items.
  */
-declare class SymbolItems extends Array {
+declare class SymbolItems extends Array<SymbolItem> {
   /**
    * Number of elements in the collection.
    */
@@ -4822,7 +4822,7 @@ declare class SymbolItems extends Array {
 /**
  * A collection of brushes.
  */
-declare class Brushes extends Array {
+declare class Brushes extends Array<Brush> {
   /**
    * Number of elements in the collection.
    */
@@ -4861,7 +4861,7 @@ declare class Brushes extends Array {
 /**
  * A collection of art styles.
  */
-declare class ArtStyles extends Array {
+declare class ArtStyles extends Array<ArtStyle> {
   /**
    * Number of elements in the collection.
    */
@@ -4892,7 +4892,7 @@ declare class ArtStyles extends Array {
 /**
  * A collection of fonts.
  */
-declare class TextFonts extends Array {
+declare class TextFonts extends Array<TextFont> {
   /**
    * Number of elements in the collection.
    */
@@ -4935,7 +4935,7 @@ declare class TextFonts extends Array {
 /**
  * The collection of tags associated with a page item.
  */
-declare class Tags extends Array {
+declare class Tags extends Array<Tag> {
   /**
    * Number of elements in the collection.
    */
@@ -4971,7 +4971,7 @@ declare class Tags extends Array {
 /**
  * A collection of RasterItems.
  */
-declare class RasterItems extends Array {
+declare class RasterItems extends Array<RasterItem> {
   /**
    * Number of elements in the collection.
    */
@@ -5002,7 +5002,7 @@ declare class RasterItems extends Array {
 /**
  * A collection of PlacedItems.
  */
-declare class PlacedItems extends Array {
+declare class PlacedItems extends Array<PlacedItem> {
   /**
    * Number of elements in the collection.
    */
@@ -5038,7 +5038,7 @@ declare class PlacedItems extends Array {
 /**
  * EmbeddedItems Collection.
  */
-declare class EmbeddedItems extends Array {
+declare class EmbeddedItems extends Array<EmbedItem> {
   /**
    * Number of elements in the collection.
    */
@@ -5074,7 +5074,7 @@ declare class EmbeddedItems extends Array {
 /**
  * A collection of MeshItems.
  */
-declare class MeshItems extends Array {
+declare class MeshItems extends Array<MeshItem> {
   /**
    * Number of elements in the collection.
    */
@@ -5105,7 +5105,7 @@ declare class MeshItems extends Array {
 /**
  * A collection of GraphItems.
  */
-declare class GraphItems extends Array {
+declare class GraphItems extends Array<GraphItem> {
   /**
    * Number of elements in the collection.
    */
@@ -5136,7 +5136,7 @@ declare class GraphItems extends Array {
 /**
  * A collection of PluginItems.
  */
-declare class PluginItems extends Array {
+declare class PluginItems extends Array<PluginItem> {
   /**
    * Number of elements in the collection.
    */
@@ -5167,7 +5167,7 @@ declare class PluginItems extends Array {
 /**
  * A collection of NonNativeItems.
  */
-declare class NonNativeItems extends Array {
+declare class NonNativeItems extends Array<NonNativeItem> {
   /**
    * Number of elements in the collection.
    */
@@ -5193,7 +5193,7 @@ declare class NonNativeItems extends Array {
 /**
  * A collection of views.
  */
-declare class Views extends Array {
+declare class Views extends Array<View> {
   /**
    * Number of elements in the collection.
    */
@@ -5219,7 +5219,7 @@ declare class Views extends Array {
 /**
  * A collection of variables.
  */
-declare class Variables extends Array {
+declare class Variables extends Array<Variable> {
   /**
    * Number of elements in the collection.
    */
@@ -5255,7 +5255,7 @@ declare class Variables extends Array {
 /**
  * A collection of datasets.
  */
-declare class DataSets extends Array {
+declare class DataSets extends Array<DataSet> {
   /**
    * Number of elements in the collection.
    */
