@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 
-# To stop if something fails.
+# To stop if any command fails.
 set -e
+
+# To stop on unset variables.
+set -u
 
 # To be always in project root.
 cd "${0%/*}/.."
