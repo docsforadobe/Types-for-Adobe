@@ -6,6 +6,9 @@ set -e
 # To stop on unset variables.
 set -u
 
+# To show what we are doing.
+set -x
+
 # To be always in project root.
 cd "${0%/*}/.."
 
