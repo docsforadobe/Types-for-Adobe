@@ -10157,7 +10157,7 @@ declare class PathItem extends PageItem {
    * Set the path using the provided array of path point (x, y) coordinate pairs.
    * @param pathPoints Array of (x, y) coordinate pairs for the path points.
    */
-  setEntirePath(pathPoints: any[]): void
+  setEntirePath(pathPoints: [number, number][]): void
 }
 
 /**
