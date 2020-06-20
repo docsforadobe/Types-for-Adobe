@@ -1,5 +1,33 @@
 /// <reference path="JavaScript.d.ts" />
 
+declare enum Alignment {
+  TOP,
+  BOTTOM,
+  LEFT,
+  RIGHT,
+  FILL,
+  CENTER
+}
+
+declare enum FontStyle {
+  REGULAR,
+  BOLD,
+  ITALIC,
+  BOLDITALIC
+}
+
+declare const enum BrushType {
+  SOLID_COLOR = 0,
+  THEME_COLOR = 1
+}
+
+declare const enum PenType {
+  SOLID_COLOR = 0,
+  THEME_COLOR = 1
+}
+
+declare type _Container = Panel | Window | Group;
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -8,13 +36,13 @@ declare class ScriptUI {
    * Collects the enumerated values that can be used in the alignment and alignChildren properties of controls and containers.
    * Predefined alignment values are: TOP, BOTTOM, LEFT, RIGHT, FILL, CENTER
    */
-  static readonly Alignment: string
+  static readonly Alignment: Alignment
 
   /**
    * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
    * Predefined styles are REGULAR, BOLD, ITALIC, BOLDITALIC.
    */
-  static readonly FontStyle: object
+  static readonly FontStyle: FontStyle
 
   /**
    * The font constants defined by the host application.
@@ -118,7 +146,7 @@ declare class Window extends _Control {
    * The collection of UI elements that have been added to this container.
    * An array indexed by number or by a string containing an element's name. The length property of this array is the number of child elements for container elements, and is zero for controls.
    */
-  readonly children: object[]
+  readonly children: _Control[]
 
   /**
    * For windows of type dialog, the UI element to notify when the user presses a Enter key.
@@ -359,8 +387,10 @@ declare class LayoutManager {
    * Invokes the automatic layout behavior for the managed container.
    * Adjusts sizes and positions of the child elements of this window or container according to the placement and alignment property values in the parent and children.
    * Invoked automatically the first time the window is displayed. Thereafter, the script must invoke it explicitly to change the layout in case of changes in the size or position of the parent or children.
+   *
+   * @param recalculate Optional. When true, forces the layout manager to recalculate the container size for this and any child containers. Default is false.
    */
-  layout(): void
+  layout(recalculate?: boolean): void
 
   /**
    * Performs a layout after a Window is resized, based on the new size.
@@ -395,7 +425,7 @@ declare class ScriptUIPen {
    * The pen type, solid or theme.
    * One of these constants: ScriptUIGraphics.PenType.SOLID_COLOR or ScriptUIGraphics.PenType.THEME_COLOR
    */
-  readonly type: string
+  readonly type: typeof PenType
 }
 
 /**
@@ -419,7 +449,7 @@ declare class ScriptUIBrush {
    * The brush type, solid or theme.
    * One of these constants: ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR
    */
-  readonly type: number
+  readonly type: typeof BrushType
 }
 
 /**
@@ -433,17 +463,18 @@ declare class ScriptUIPath {}
  * Allows a script to customize aspects of the element’s appearance, such as the color and font. Use an onDraw callback function to set these properties or call the functions.All measurements are in pixels.
  */
 declare class ScriptUIGraphics {
+
   /**
    * Contains the enumerated constants for the type argument of newBrush().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly BrushType: object
+  readonly BrushType: typeof BrushType
 
   /**
    * Contains the enumerated constants for the type argument of newPen().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly PenType: object
+  readonly PenType: typeof PenType
 
   /**
    * The background color for containers; for non-containers, the parent background color.
@@ -572,7 +603,7 @@ declare class ScriptUIGraphics {
    * @param type The brush type, solid or theme. One of the constants ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR.
    * @param color The brush color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
    */
-  newBrush(type: number, color: number[]): ScriptUIBrush
+  newBrush(type: BrushType, color: number[]): ScriptUIBrush
 
   /**
    * Creates a new, empty path object.
@@ -586,7 +617,7 @@ declare class ScriptUIGraphics {
    * @param color The pen color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
    * @param width The width of the pen line in pixels. The line is centered around the current point. For example, if the value is 2, drawing a line from (0, 10) to (5, 10) paints the two rows of pixels directly above and below y-position 10.
    */
-  newPen(type: number, color: number[], width: number): ScriptUIPen
+  newPen(type: PenType, color: number[], width: number): ScriptUIPen
 
   /**
    * Defines a rectangular path in the currentPath object.
@@ -695,7 +726,7 @@ declare class ScriptUIFont {
   /**
    * The font style. One of the constants in ScriptUIGraphics.FontStyle.
    */
-  readonly style: object
+  readonly style: FontStyle
 
   /**
    * The name of a substitution font, a fallback font to substitute for this font if the requested font family or style is not available.
@@ -1283,7 +1314,7 @@ declare class ListItem {
   /**
    * The parent element, a list control.
    */
-  readonly parent: object
+  readonly parent: _Control
 
   /**
    * The selection state of this item.
@@ -1883,7 +1914,7 @@ declare class Group extends _Control {
   /**
    * An array of child elements.
    */
-  readonly children: object[]
+  readonly children: _Control[]
 
   /**
    * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1956,7 +1987,7 @@ declare class Panel extends _Control {
   /**
    * An array of child elements.
    */
-  readonly children: object[]
+  readonly children: _Control[]
 
   /**
    * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -2175,7 +2206,7 @@ declare class UIEvent {
   /**
    * The current phase of event propagation; one of none, target, capture, bubble.
    */
-  readonly eventPhase: string
+  readonly eventPhase: number
 
   /**
    * The event target object for this event.
@@ -2293,7 +2324,7 @@ declare class Event {
   /**
    * The current phase of event propagation; one of none, target, capture, bubble.
    */
-  readonly eventPhase: string
+  readonly eventPhase: number
 
   /**
    * The event target object for this event.
@@ -2437,7 +2468,7 @@ declare class _Control {
   /**
    * The parent element.
    */
-  readonly parent: object
+  readonly parent: _Container
 
   /**
    * The preferred size, used by layout managers to determine the best size for each element.
