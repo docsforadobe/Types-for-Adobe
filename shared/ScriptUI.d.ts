@@ -418,7 +418,7 @@ declare class ScriptUIPen {
    * The pen type, solid or theme.
    * One of these constants: ScriptUIGraphics.PenType.SOLID_COLOR or ScriptUIGraphics.PenType.THEME_COLOR
    */
-  readonly type: string
+  readonly type: typeof ScriptUIGraphics.PenType
 }
 
 /**
@@ -442,7 +442,7 @@ declare class ScriptUIBrush {
    * The brush type, solid or theme.
    * One of these constants: ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR
    */
-  readonly type: number
+  readonly type: typeof ScriptUIGraphics.BrushType
 }
 
 /**
@@ -599,7 +599,7 @@ declare class ScriptUIGraphics {
    * @param type The brush type, solid or theme. One of the constants ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR.
    * @param color The brush color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
    */
-  newBrush(type: number, color: number[]): ScriptUIBrush
+  newBrush(type: typeof ScriptUIGraphics.BrushType, color: number[]): ScriptUIBrush
 
   /**
    * Creates a new, empty path object.
@@ -613,7 +613,7 @@ declare class ScriptUIGraphics {
    * @param color The pen color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
    * @param width The width of the pen line in pixels. The line is centered around the current point. For example, if the value is 2, drawing a line from (0, 10) to (5, 10) paints the two rows of pixels directly above and below y-position 10.
    */
-  newPen(type: number, color: number[], width: number): ScriptUIPen
+  newPen(type: typeof ScriptUIGraphics.PenType, color: number[], width: number): ScriptUIPen
 
   /**
    * Defines a rectangular path in the currentPath object.
