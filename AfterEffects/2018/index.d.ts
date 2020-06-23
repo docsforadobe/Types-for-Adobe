@@ -1,10 +1,10 @@
 /// <reference path="../../shared/global.d.ts" />
 /// <reference path="../../shared/ScriptUI.d.ts" />
 
-declare class Global {
-  app: Application
-  system: System
-}
+/**
+ * The global System object.
+ */
+declare var system: System
 
 /** CONSTANTS */
 declare const enum AppVersion {
