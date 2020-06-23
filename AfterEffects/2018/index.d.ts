@@ -104,7 +104,8 @@ declare const enum _CommandID {
    * Edit
    */
   Undo = 16,
-  Redo = 17,
+  Redo = 2035,
+  Redo2 = 17,
 
   Cut = 18,
   Copy = 19,
