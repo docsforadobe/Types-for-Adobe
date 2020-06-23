@@ -2268,7 +2268,7 @@ declare class SwatchValue {
   /** When type = "LAB", the color values. L is in the range [0.0..1.0]. a and b are in the range [-128.0..+128.0] 0, 0, 0 is Black. */
   L: number
   a: number
-  // b:number;
+  // b: number;
 
   /** When type = "Gray", the value range is [0.0..1.0]. 0.0 is Black. */
   gray: number
