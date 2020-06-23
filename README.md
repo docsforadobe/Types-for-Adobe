@@ -45,7 +45,7 @@ tsc
 
 ## Contributors
 
-Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.com/atarabi), [lm913](https://github.com/lm913).
+Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.com/atarabi), [lm913](https://github.com/lm913), [zlovatt](https://github.com/zlovatt).
 
 ## Showcase
 
