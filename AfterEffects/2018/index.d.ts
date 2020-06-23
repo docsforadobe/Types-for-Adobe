@@ -1011,7 +1011,7 @@ declare class AVLayer extends Layer {
   compPointToSource(point: [number, number]): [number, number]
 
   /** Shortcuts */
-  readonly timeRemap: Property
+  readonly timeRemap: Property<number>
   readonly mask: MaskPropertyGroup
   readonly effect: PropertyGroup
   readonly layerStyle: _LayerStyles
@@ -1095,7 +1095,7 @@ declare class CompItem extends AVItem {
   readonly layers: LayerCollection
 
   /** CC 2017(14.0)- The markers of the composition. */
-  readonly markerProperty: Property
+  readonly markerProperty: Property<MarkerValue>
 
   /** The selected layers of the composition. */
   readonly selectedLayers: Layer[]
@@ -1426,23 +1426,23 @@ declare class Layer {
   property(name: string): PropertyBase
 
   /** Shortcuts */
-  readonly marker: Property
+  readonly marker: Property<MarkerValue>
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: Property
-  readonly position: Property
-  readonly xPosition: Property
-  readonly yPosition: Property
-  readonly zPosition: Property
-  readonly scale: Property
-  readonly orientation: Property
-  readonly rotation: Property
-  readonly xRotation: Property
-  readonly yRotation: Property
-  readonly zRotation: Property
-  readonly opacity: Property
-  readonly pointOfInterest: Property
+  readonly anchorPoint: Property<number>
+  readonly position: Property<[number, number] | [number, number, number]>
+  readonly xPosition: Property<number>
+  readonly yPosition: Property<number>
+  readonly zPosition: Property<number>
+  readonly scale: Property<[number, number] | [number, number, number]>
+  readonly orientation: Property<[number, number, number]>
+  readonly rotation: Property<number>
+  readonly xRotation: Property<number>
+  readonly yRotation: Property<number>
+  readonly zRotation: Property<number>
+  readonly opacity: Property<number>
+  readonly pointOfInterest: Property<[number, number, number]>
 }
 
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
@@ -1985,7 +1985,7 @@ declare class Property<A> extends PropertyBase {
   keySelected(keyIndex: number): boolean
 
   /** For a separated, multidimensional property, retrieves a specific follower property. */
-  getSeparationFollower(dim: number): Property
+  getSeparationFollower(dim: number): Property<number>
 }
 
 /** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
@@ -2393,6 +2393,7 @@ declare class TextLayer extends AVLayer {
   readonly source: null
 
   readonly text: _TextProperties
+  readonly sourceText: Property<TextDocument>
 }
 
 /** The Viewer object represents a Composition, Layer, or Footage panel. */
@@ -2433,48 +2434,48 @@ declare class ViewOptions {
  * Properties for Shortcuts
  */
 declare class _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: Property
-  readonly position: Property
-  readonly xPosition: Property
-  readonly yPosition: Property
-  readonly zPosition: Property
-  readonly scale: Property
-  readonly orientation: Property
-  readonly rotation: Property
-  readonly xRotation: Property
-  readonly yRotation: Property
-  readonly zRotation: Property
-  readonly opacity: Property
-  readonly pointOfInterest: Property
+  readonly anchorPoint: Property<number>
+  readonly position: Property<[number, number] | [number, number, number]>
+  readonly xPosition: Property<number>
+  readonly yPosition: Property<number>
+  readonly zPosition: Property<number>
+  readonly scale: Property<[number, number] | [number, number, number]>
+  readonly orientation: Property<[number, number, number]>
+  readonly rotation: Property<number>
+  readonly xRotation: Property<number>
+  readonly yRotation: Property<number>
+  readonly zRotation: Property<number>
+  readonly opacity: Property<number>
+  readonly pointOfInterest: Property<[number, number, number]>
 }
 
 declare class _LightOptionsGroup extends PropertyGroup {
-  readonly intensity: Property
-  readonly color: Property
-  readonly coneAngle: Property
-  readonly coneFeather: Property
-  readonly falloff: Property
-  readonly radius: Property
-  readonly falloffDistance: Property
-  readonly castsShadows: Property
-  readonly shadowDarkness: Property
-  readonly shadowDiffusion: Property
+  readonly intensity: Property<number>
+  readonly color: Property<[number, number, number, number]>
+  readonly coneAngle: Property<number>
+  readonly coneFeather: Property<number>
+  readonly falloff: Property<number>
+  readonly radius: Property<number>
+  readonly falloffDistance: Property<number>
+  readonly castsShadows: Property<boolean>
+  readonly shadowDarkness: Property<number>
+  readonly shadowDiffusion: Property<number>
 }
 
 declare class _CameraOptionsGroup extends PropertyGroup {
-  readonly zoom: Property
-  readonly depthOfField: Property
-  readonly focusDistance: Property
-  readonly aperture: Property
-  readonly blurLevel: Property
-  readonly irisShape: Property
-  readonly irisRotation: Property
-  readonly irisRoundness: Property
-  readonly irisAspectRatio: Property
-  readonly irisDiffractionFringe: Property
-  readonly highlightGain: Property
-  readonly highlightThreshold: Property
-  readonly highlightSaturation: Property
+  readonly zoom: Property<number>
+  readonly depthOfField: Property<boolean>
+  readonly focusDistance: Property<number>
+  readonly aperture: Property<number>
+  readonly blurLevel: Property<number>
+  readonly irisShape: Property<number>
+  readonly irisRotation: Property<number>
+  readonly irisRoundness: Property<number>
+  readonly irisAspectRatio: Property<number>
+  readonly irisDiffractionFringe: Property<number>
+  readonly highlightGain: Property<number>
+  readonly highlightThreshold: Property<number>
+  readonly highlightSaturation: Property<number>
 }
 
 declare class _LayerStyles extends PropertyGroup {
@@ -2491,177 +2492,177 @@ declare class _LayerStyles extends PropertyGroup {
 }
 
 declare class _BlendOptionsGroup extends PropertyGroup {
-  readonly globalLightAngle: Property
-  readonly globalLightAltitude: Property
+  readonly globalLightAngle: Property<number>
+  readonly globalLightAltitude: Property<number>
   readonly advancedBlending: _AdvBlendGroup
 }
 
 declare class _AdvBlendGroup extends PropertyGroup {
-  readonly fillOpacity: Property
-  readonly red: Property
-  readonly green: Property
-  readonly blue: Property
-  readonly blendInteriorStylesAsGroup: Property
-  readonly useBlendRangesFromSource: Property
+  readonly fillOpacity: Property<number>
+  readonly red: Property<boolean>
+  readonly green: Property<boolean>
+  readonly blue: Property<boolean>
+  readonly blendInteriorStylesAsGroup: Property<boolean>
+  readonly useBlendRangesFromSource: Property<boolean>
 }
 
 declare class _DropShadow extends PropertyGroup {
-  readonly blendMode: Property
-  readonly color: Property
-  readonly opacity: Property
-  readonly useGlobalLight: Property
-  readonly angle: Property
-  readonly distance: Property
-  readonly spread: Property
-  readonly size: Property
-  readonly noise: Property
-  readonly layerKnocksOutDropShadow: Property
+  readonly blendMode: Property<number>
+  readonly color: Property<[number, number, number, number]>
+  readonly opacity: Property<number>
+  readonly useGlobalLight: Property<boolean>
+  readonly angle: Property<number>
+  readonly distance: Property<number>
+  readonly spread: Property<number>
+  readonly size: Property<number>
+  readonly noise: Property<number>
+  readonly layerKnocksOutDropShadow: Property<boolean>
 }
 
 declare class _InnerShadow extends PropertyGroup {
-  readonly blendMode: Property
-  readonly color: Property
-  readonly opacity: Property
-  readonly useGlobalLight: Property
-  readonly angle: Property
-  readonly distance: Property
-  readonly choke: Property
-  readonly size: Property
-  readonly noise: Property
+  readonly blendMode: Property<number>
+  readonly color: Property<[number, number, number, number]>
+  readonly opacity: Property<number>
+  readonly useGlobalLight: Property<boolean>
+  readonly angle: Property<number>
+  readonly distance: Property<number>
+  readonly choke: Property<number>
+  readonly size: Property<boolean>
+  readonly noise: Property<number>
 }
 
 declare class _OuterGlow extends PropertyGroup {
-  readonly blendMode: Property
-  readonly opacity: Property
-  readonly noise: Property
-  readonly colorType: Property
-  readonly color: Property
-  readonly colors: Property
-  readonly gradientSmoothness: Property
-  readonly technique: Property
-  readonly spread: Property
-  readonly size: Property
-  readonly range: Property
-  readonly jitter: Property
+  readonly blendMode: Property<number>
+  readonly opacity: Property<number>
+  readonly noise: Property<number>
+  readonly colorType: Property<number>
+  readonly color: Property<[number, number, number, number]>
+  readonly colors: Property<void>
+  readonly gradientSmoothness: Property<number>
+  readonly technique: Property<number>
+  readonly spread: Property<number>
+  readonly size: Property<number>
+  readonly range: Property<number>
+  readonly jitter: Property<number>
 }
 
 declare class _InnerGlow extends PropertyGroup {
-  readonly blendMode: Property
-  readonly opacity: Property
-  readonly noise: Property
-  readonly colorType: Property
-  readonly color: Property
-  readonly colors: Property
-  readonly gradientSmoothness: Property
-  readonly technique: Property
-  readonly source: Property
-  readonly choke: Property
-  readonly size: Property
-  readonly range: Property
-  readonly jitter: Property
+  readonly blendMode: Property<number>
+  readonly opacity: Property<number>
+  readonly noise: Property<number>
+  readonly colorType: Property<number>
+  readonly color: Property<[number, number, number, number]>
+  readonly colors: Property<void>
+  readonly gradientSmoothness: Property<number>
+  readonly technique: Property<number>
+  readonly source: Property<number>
+  readonly choke: Property<number>
+  readonly size: Property<number>
+  readonly range: Property<number>
+  readonly jitter: Property<number>
 }
 
 declare class _BevelAndEmboss extends PropertyGroup {
-  readonly style: Property
-  readonly technique: Property
-  readonly depth: Property
-  readonly direction: Property
-  readonly size: Property
-  readonly soften: Property
-  readonly useGlobalLight: Property
-  readonly angle: Property
-  readonly altitude: Property
-  readonly highlightMode: Property
-  readonly highlightColor: Property
-  readonly highlightOpacity: Property
-  readonly shadowMode: Property
-  readonly shadowColor: Property
-  readonly shadowOpacity: Property
+  readonly style: Property<number>
+  readonly technique: Property<number>
+  readonly depth: Property<number>
+  readonly direction: Property<number>
+  readonly size: Property<number>
+  readonly soften: Property<number>
+  readonly useGlobalLight: Property<boolean>
+  readonly angle: Property<number>
+  readonly altitude: Property<number>
+  readonly highlightMode: Property<number>
+  readonly highlightColor: Property<[number, number, number, number]>
+  readonly highlightOpacity: Property<number>
+  readonly shadowMode: Property<number>
+  readonly shadowColor: Property<[number, number, number, number]>
+  readonly shadowOpacity: Property<number>
 }
 
 declare class _Satin extends PropertyGroup {
-  readonly blendMode: Property
-  readonly color: Property
-  readonly opacity: Property
-  readonly angle: Property
-  readonly distance: Property
-  readonly size: Property
-  readonly invert: Property
+  readonly blendMode: Property<number>
+  readonly color: Property<[number, number, number, number]>
+  readonly opacity: Property<number>
+  readonly angle: Property<number>
+  readonly distance: Property<number>
+  readonly size: Property<number>
+  readonly invert: Property<boolean>
 }
 
 declare class _ColorOverlay extends PropertyGroup {
-  readonly blendMode: Property
-  readonly color: Property
-  readonly opacity: Property
+  readonly blendMode: Property<number>
+  readonly color: Property<[number, number, number, number]>
+  readonly opacity: Property<number>
 }
 
 declare class _GradientOverlay extends PropertyGroup {
-  readonly blendMode: Property
-  readonly opacity: Property
-  readonly colors: Property
-  readonly gradientSmoothness: Property
-  readonly angle: Property
-  readonly style: Property
-  readonly reverse: Property
-  readonly alignWithLayer: Property
-  readonly scale: Property
-  readonly offset: Property
+  readonly blendMode: Property<number>
+  readonly opacity: Property<number>
+  readonly colors: Property<void>
+  readonly gradientSmoothness: Property<number>
+  readonly angle: Property<number>
+  readonly style: Property<number>
+  readonly reverse: Property<boolean>
+  readonly alignWithLayer: Property<boolean>
+  readonly scale: Property<number>
+  readonly offset: Property<[number, number]>
 }
 
 declare class _Stroke extends PropertyGroup {
-  readonly color: Property
-  readonly blendMode: Property
-  readonly size: Property
-  readonly opacity: Property
-  readonly position: Property
+  readonly color: Property<[number, number, number, number]>
+  readonly blendMode: Property<number>
+  readonly size: Property<number>
+  readonly opacity: Property<number>
+  readonly position: Property<number>
 }
 
 declare class _GeometryOptionsGroup extends PropertyGroup {
-  readonly curvature: Property
-  readonly segments: Property
+  readonly curvature: Property<number>
+  readonly segments: Property<number>
 
-  readonly bevelStyle: Property
-  readonly bevelDepth: Property
-  readonly holeBevelDepth: Property
-  readonly extrusionDepth: Property
+  readonly bevelStyle: Property<number>
+  readonly bevelDepth: Property<number>
+  readonly holeBevelDepth: Property<number>
+  readonly extrusionDepth: Property<number>
 }
 
 declare class _MaterialOptionsGroup extends PropertyGroup {
-  readonly castsShadows: Property
-  readonly lightTransmission: Property
-  readonly acceptsShadows: Property
-  readonly acceptsLights: Property
-  readonly appearsInReflections: Property
-  readonly ambient: Property
-  readonly diffuse: Property
-  readonly specularIntensity: Property
-  readonly specularShininess: Property
-  readonly metal: Property
-  readonly reflectionIntensity: Property
-  readonly reflectionSharpness: Property
-  readonly reflectionRolloff: Property
-  readonly transparency: Property
-  readonly transparencyRolloff: Property
-  readonly indexOfRefraction: Property
+  readonly castsShadows: Property<boolean>
+  readonly lightTransmission: Property<number>
+  readonly acceptsShadows: Property<boolean>
+  readonly acceptsLights: Property<boolean>
+  readonly appearsInReflections: Property<boolean>
+  readonly ambient: Property<number>
+  readonly diffuse: Property<number>
+  readonly specularIntensity: Property<number>
+  readonly specularShininess: Property<number>
+  readonly metal: Property<number>
+  readonly reflectionIntensity: Property<number>
+  readonly reflectionSharpness: Property<number>
+  readonly reflectionRolloff: Property<number>
+  readonly transparency: Property<number>
+  readonly transparencyRolloff: Property<number>
+  readonly indexOfRefraction: Property<number>
 }
 
 declare class _AudioGroup extends PropertyGroup {
-  readonly audioLevels: Property
+  readonly audioLevels: Property<[number, number]>
 }
 
 declare class _TextProperties extends PropertyGroup {
-  readonly sourceText: Property
+  readonly sourceText: Property<TextDocument>
   readonly pathOption: _TextPathOptions
   readonly moreOption: _TextMoreOptions
 }
 
 declare class _TextPathOptions extends PropertyGroup {
-  readonly path: Property
+  readonly path: Property<number>
 }
 
 declare class _TextMoreOptions extends PropertyGroup {
-  readonly anchorPointGrouping: Property
-  readonly groupingAlignment: Property
-  readonly fillANdStroke: Property
-  readonly interCharacterBlending: Property
+  readonly anchorPointGrouping: Property<number>
+  readonly groupingAlignment: Property<[number, number]>
+  readonly fillANdStroke: Property<number>
+  readonly interCharacterBlending: Property<number>
 }
