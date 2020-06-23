@@ -1310,7 +1310,7 @@ declare class ListItem {
   /**
    * The parent element, a list control.
    */
-  readonly parent: object
+  readonly parent: _Control
 
   /**
    * The selection state of this item.
@@ -2464,7 +2464,7 @@ declare class _Control {
   /**
    * The parent element.
    */
-  readonly parent: object
+  readonly parent: _Control
 
   /**
    * The preferred size, used by layout managers to determine the best size for each element.
