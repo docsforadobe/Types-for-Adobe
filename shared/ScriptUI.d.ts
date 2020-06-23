@@ -720,9 +720,9 @@ declare class ScriptUIFont {
   readonly size: number
 
   /**
-   * The font style. One of the constants in ScriptUIGraphics.FontStyle.
+   * The font style. One of the constants in ScriptUI.FontStyle.
    */
-  readonly style: object
+  readonly style: typeof ScriptUI.FontStyle
 
   /**
    * The name of a substitution font, a fallback font to substitute for this font if the requested font family or style is not available.
