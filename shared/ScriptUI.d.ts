@@ -375,8 +375,10 @@ declare class LayoutManager {
    * Invokes the automatic layout behavior for the managed container.
    * Adjusts sizes and positions of the child elements of this window or container according to the placement and alignment property values in the parent and children.
    * Invoked automatically the first time the window is displayed. Thereafter, the script must invoke it explicitly to change the layout in case of changes in the size or position of the parent or children.
+   *
+   * @param recalculate Optional. When true, forces the layout manager to recalculate the container size for this and any child containers. Default is false.
    */
-  layout(): void
+  layout(recalculate?: boolean): void
 
   /**
    * Performs a layout after a Window is resized, based on the new size.
