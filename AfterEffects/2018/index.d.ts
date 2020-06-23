@@ -6,8 +6,7 @@
  */
 declare var system: System
 
-/** CONSTANTS */
-declare const enum AppVersion {
+declare const enum _AppVersion {
   CS3 = 8.0,
   CS4 = 9.0,
   CS5 = 10.0,
@@ -25,7 +24,7 @@ declare const enum AppVersion {
   CC2020 = 17.0,
 }
 
-declare const enum CommandID {
+declare const enum _CommandID {
   /**
    * File
    */
