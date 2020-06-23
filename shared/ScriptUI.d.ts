@@ -557,7 +557,11 @@ declare class ScriptUIGraphics {
    * @param font The font to use. Default is the font value in this object.
    * @param boundingWidth The bounding width.
    */
-  measureString(text: string, font?: ScriptUIFont, boundingWidth?: number): Dimension | [number, number]
+  measureString(
+    text: string,
+    font?: ScriptUIFont,
+    boundingWidth?: number,
+  ): Dimension | [number, number]
 
   /**
    * Adds a given point to the currentPath, and makes it the current drawing position.
@@ -2743,7 +2747,11 @@ interface _WindowPanelGroupAdd {
     movieToLoad?: string | File,
     properties?: Partial<_ControlPropertiesMap["flashplayer"]>,
   ): FlashPlayer
-  (type: "group", bounds?: Bounds | [number, number, number, number], properties?: Partial<_ControlPropertiesMap["group"]>): Group
+  (
+    type: "group",
+    bounds?: Bounds | [number, number, number, number],
+    properties?: Partial<_ControlPropertiesMap["group"]>,
+  ): Group
   (
     type: "iconbutton",
     bounds?: Bounds | [number, number, number, number],
