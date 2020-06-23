@@ -139,7 +139,7 @@ declare class Window extends _Control {
    * The collection of UI elements that have been added to this container.
    * An array indexed by number or by a string containing an element's name. The length property of this array is the number of child elements for container elements, and is zero for controls.
    */
-  readonly children: object[]
+  readonly children: _Control[]
 
   /**
    * For windows of type dialog, the UI element to notify when the user presses a Enter key.
@@ -1910,7 +1910,7 @@ declare class Group extends _Control {
   /**
    * An array of child elements.
    */
-  readonly children: object[]
+  readonly children: _Control[]
 
   /**
    * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
@@ -1983,7 +1983,7 @@ declare class Panel extends _Control {
   /**
    * An array of child elements.
    */
-  readonly children: object[]
+  readonly children: _Control[]
 
   /**
    * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
