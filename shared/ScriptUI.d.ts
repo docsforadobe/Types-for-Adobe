@@ -895,7 +895,7 @@ declare class Button extends _Control {
 }
 
 /**
- * Amouse-sensitive pushbutton that displays an image instead of text.
+ * A mouse-sensitive pushbutton that displays an image instead of text.
  * Calls the onClick() callback if the control is clicked or if its notify() method is called.
  */
 declare class IconButton extends _Control {
@@ -921,6 +921,12 @@ declare class IconButton extends _Control {
   image: ScriptUIImage
 
   /**
+   * The image object that defines the image to be drawn.
+   * Same as IconButton.image
+   */
+  icon: ScriptUIImage
+
+  /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
    */
   shortcutKey: string
@@ -941,6 +947,61 @@ declare class IconButton extends _Control {
    * An event-handler callback function, called when the element has been clicked.
    */
   onClick(): void
+
+  /**
+   * An event-handler callback function, called when the element loses the keyboard focus.
+   * Called when the user moves the keyboard focus from the previously active control to another control.
+   */
+  onDeactivate(): void
+
+  /**
+   * An event-handler callback function, called when the window is about to be drawn.
+   * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
+   */
+  onDraw(): void
+
+  /**
+   * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
+   * In Windows only.
+   */
+  onShortcutKey(): void
+}
+
+/**
+ * Displays an icon or image.
+ */
+declare class Image extends _Control {
+  /**
+   * An array of child elements.
+   */
+  readonly children: object[]
+
+  /**
+   * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
+   */
+  readonly graphics: ScriptUIGraphics
+
+  /**
+   * The image object that defines the image to be drawn.
+   */
+  image: ScriptUIImage
+
+  /**
+   * The image object that defines the image to be drawn.
+   * Same as Image.image
+   */
+  icon: ScriptUIImage
+
+  /**
+   * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
+   */
+  shortcutKey: string
+
+  /**
+   * An event-handler callback function, called when the element acquires the keyboard focus.
+   * Called when the user gives the control the keyboard focus by clicking it or tabbing into it.
+   */
+  onActivate(): void
 
   /**
    * An event-handler callback function, called when the element loses the keyboard focus.
@@ -2620,6 +2681,14 @@ interface _ControlPropertiesMap {
   }
 
   /**
+   * Creation properties of an Image
+   * @param name A unique name for the control.
+   */
+  image: {
+    name: string
+  }
+
+  /**
    * Creation properties of a ListBox
    * @param name A unique name for the control.
    * @param multiselect When false (the default), only one item can be selected. When true, multiple items can be selected.
@@ -2781,6 +2850,12 @@ interface _WindowPanelGroupAdd {
     icon?: string | File,
     properties?: Partial<_ControlPropertiesMap["iconbutton"]>,
   ): IconButton
+  (
+    type: "image",
+    bounds?: Bounds | [number, number, number, number],
+    icon?: string | File,
+    properties?: Partial<_ControlPropertiesMap["image"]>,
+  ): Image
   (
     type: "listbox",
     bounds?: Bounds | [number, number, number, number],
