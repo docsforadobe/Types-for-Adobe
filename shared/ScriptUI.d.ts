@@ -9,6 +9,13 @@ declare enum _Alignment {
   CENTER,
 }
 
+declare enum _FontStyle {
+  REGULAR,
+  BOLD,
+  ITALIC,
+  BOLDITALIC,
+}
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -23,7 +30,7 @@ declare class ScriptUI {
    * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
    * Predefined styles are REGULAR, BOLD, ITALIC, BOLDITALIC.
    */
-  static readonly FontStyle: object
+  static readonly FontStyle: _FontStyle
 
   /**
    * The font constants defined by the host application.
