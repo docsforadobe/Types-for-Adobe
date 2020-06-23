@@ -72,7 +72,7 @@ declare const enum CommandID {
 
   CollectFiles = 2482,
   ConsolidateAllFootage = 2107,
-  RemoveUnsedFootage = 2109,
+  RemoveUnusedFootage = 2109,
   ReduceProject = 2735,
   FindMissingEffects = 4002,
   FindMissingFonts = 4003,
@@ -95,7 +95,7 @@ declare const enum CommandID {
   ReplaceFootagePlaceholder = 2126,
   ReplaceFootageSolid = 3000,
   ReloadFootage = 2257,
-  RevealInExploler = 2562,
+  RevealInExplorer = 2562,
   RevealInFinder = 2562,
   RevealInBridge = 3690,
 
@@ -170,7 +170,7 @@ declare const enum CommandID {
 
   OpenLayer = 3784,
   OpenLayerSource = 2523,
-  // RevealInExploler = 2562,
+  // RevealInExplorer = 2562,
   // RevealInFinder = 2562,
 
   NewMask = 2367,
@@ -228,7 +228,7 @@ declare const enum CommandID {
   CreateOrbitNull = 3844,
   LinkFocusDistanceToPointOfInterest = 3845,
   LinkFocusDistanceToLayer = 3847,
-  SetFocusDitanceToLayer = 3846,
+  SetFocusDistanceToLayer = 3846,
   AutoTrace = 3044,
   PreCompose = 2071,
 
