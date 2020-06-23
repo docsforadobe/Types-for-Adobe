@@ -962,6 +962,61 @@ declare class IconButton extends _Control {
 }
 
 /**
+ * Displays an icon or image.
+ */
+declare class Image extends _Control {
+  /**
+   * An array of child elements.
+   */
+  readonly children: object[]
+
+  /**
+   * The graphics object that can be used to customize the element's appearance, in response to the onDraw() event.
+   */
+  readonly graphics: ScriptUIGraphics
+
+  /**
+   * The image object that defines the image to be drawn.
+   */
+  image: ScriptUIImage
+
+  /**
+   * The image object that defines the image to be drawn.
+   * Same as Image.image.
+   */
+  icon: ScriptUIImage
+
+  /**
+   * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
+   */
+  shortcutKey: string
+
+  /**
+   * An event-handler callback function, called when the element acquires the keyboard focus.
+   * Called when the user gives the control the keyboard focus by clicking it or tabbing into it.
+   */
+  onActivate(): void
+
+  /**
+   * An event-handler callback function, called when the element loses the keyboard focus.
+   * Called when the user moves the keyboard focus from the previously active control to another control.
+   */
+  onDeactivate(): void
+
+  /**
+   * An event-handler callback function, called when the window is about to be drawn.
+   * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
+   */
+  onDraw(): void
+
+  /**
+   * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
+   * In Windows only.
+   */
+  onShortcutKey(): void
+}
+
+/**
  * An editable text field that the user can select and change.
  * Calls the onChange() callback if the text is changed and the user types Enter or the control loses focus, or if its notify() method is called. Calls the onChanging() callback when any change is made to the text. The textselection property contains currently selected text.
  */
@@ -2615,6 +2670,14 @@ interface _AddControlPropertiesIconButton {
 }
 
 /**
+ * Creation properties of an Image.
+ * @param name A unique name for the control.
+ */
+interface _AddControlPropertiesImage {
+  name: string
+}
+
+/**
  * Creation properties of a ListBox.
  * @param name A unique name for the control.
  * @param multiselect When false (the default), only one item can be selected. When true, multiple items can be selected.
@@ -2770,6 +2833,12 @@ interface _AddControl {
     icon?: string | File,
     properties?: Partial<_AddControlPropertiesIconButton>,
   ): IconButton
+  (
+    type: "image",
+    bounds?: Bounds | [number, number, number, number],
+    icon?: string | File,
+    properties?: Partial<_AddControlPropertiesImage>,
+  ): Image
   (
     type: "listbox",
     bounds?: Bounds | [number, number, number, number],
