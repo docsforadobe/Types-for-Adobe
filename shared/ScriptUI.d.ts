@@ -16,6 +16,11 @@ declare enum _FontStyle {
   BOLDITALIC,
 }
 
+declare const enum _BrushOrPenType {
+  SOLID_COLOR,
+  THEME_COLOR,
+}
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -455,13 +460,13 @@ declare class ScriptUIGraphics {
    * Contains the enumerated constants for the type argument of newBrush().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly BrushType: object
+  static readonly BrushType: _BrushOrPenType
 
   /**
    * Contains the enumerated constants for the type argument of newPen().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly PenType: object
+  static readonly PenType: _BrushOrPenType
 
   /**
    * The background color for containers; for non-containers, the parent background color.
