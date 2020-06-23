@@ -3,6 +3,7 @@
 
 declare class Global {
   app: Application
+  system: System
 }
 
 /** CONSTANTS */
