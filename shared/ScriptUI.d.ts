@@ -2202,7 +2202,7 @@ declare class UIEvent {
   /**
    * The current phase of event propagation; one of none, target, capture, bubble.
    */
-  readonly eventPhase: string
+  readonly eventPhase: number
 
   /**
    * The event target object for this event.
@@ -2320,7 +2320,7 @@ declare class Event {
   /**
    * The current phase of event propagation; one of none, target, capture, bubble.
    */
-  readonly eventPhase: string
+  readonly eventPhase: number
 
   /**
    * The event target object for this event.
