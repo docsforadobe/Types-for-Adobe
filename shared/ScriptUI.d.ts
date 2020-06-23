@@ -1,5 +1,14 @@
 /// <reference path="JavaScript.d.ts" />
 
+declare enum _Alignment {
+  TOP = 1,
+  BOTTOM,
+  LEFT,
+  RIGHT,
+  FILL,
+  CENTER,
+}
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -8,7 +17,7 @@ declare class ScriptUI {
    * Collects the enumerated values that can be used in the alignment and alignChildren properties of controls and containers.
    * Predefined alignment values are: TOP, BOTTOM, LEFT, RIGHT, FILL, CENTER
    */
-  static readonly Alignment: string
+  static readonly Alignment: _Alignment
 
   /**
    * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
