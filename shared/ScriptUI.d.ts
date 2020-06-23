@@ -43,8 +43,8 @@ declare class ScriptUI {
   static readonly applicationFonts: object
 
   /**
-   * An object whose properties are the names of compatability modes supported by the host application.
-   * The presence of ScriptUI.compatability.su1PanelCoordinates means that the application allows backward compatibility with the coordinate system of Panel elements in ScriptUI version 1.
+   * An object whose properties are the names of compatibility modes supported by the host application.
+   * The presence of ScriptUI.compatibility.su1PanelCoordinates means that the application allows backward compatibility with the coordinate system of Panel elements in ScriptUI version 1.
    */
   static readonly compatibility: object
 
@@ -226,7 +226,7 @@ declare class Window extends _Control {
   spacing: number
 
   /**
-   * The title, label, or displayed text, a localizeable string.
+   * The title, label, or displayed text, a localizable string.
    * Does not apply to containers of type group.
    */
   text: string
@@ -268,7 +268,7 @@ declare class Window extends _Control {
   static alert(message: string, title?: string, errorIcon?: boolean): void
 
   /**
-   * Centers this window on screen or with repect to another window.
+   * Centers this window on screen or with respect to another window.
    * @param window The relative window. If not specified, centers on the screen.
    */
   center(window?: Window): void
@@ -310,7 +310,7 @@ declare class Window extends _Control {
   onActivate(): void
 
   /**
-   * An event-handler callback function, calledwhen the window is about to be closed.
+   * An event-handler callback function, called when the window is about to be closed.
    * Called when a request is made to close the window, either by an explicit call to the close() function or by a user action (clicking the OS-specific close icon in the title bar). The function is called before the window actually closes; it can return false to cancel the close operation.
    */
   onClose(): boolean
@@ -322,12 +322,12 @@ declare class Window extends _Control {
   onDeactivate(): void
 
   /**
-   * An event-handler callback function, calledwhen the windowhas been moved
+   * An event-handler callback function, called when the window has been moved
    */
   onMove(): void
 
   /**
-   * An event-handler callback function, calledwhen the window is being moved
+   * An event-handler callback function, called when the window is being moved
    * Called while a window in being moved, each time the position changes. A handler can monitor the move operation.
    */
   onMoving(): void
@@ -470,7 +470,7 @@ declare class ScriptUIGraphics {
 
   /**
    * The background color for containers; for non-containers, the parent background color.
-   * The paint color and style is defined in this brush object.This property is only supported for controls likedropdownlist, edittext, and listbox.
+   * The paint color and style is defined in this brush object.This property is only supported for controls like dropdownlist, edittext, and listbox.
    */
   backgroundColor: ScriptUIBrush
 
@@ -486,7 +486,7 @@ declare class ScriptUIGraphics {
 
   /**
    * The background color for containers when disabled or inactive; for non-containers, the parent background color.
-   * The paint color and style is defined in this brush object.This property is only supported for controls likedropdownlist, edittext, and listbox.
+   * The paint color and style is defined in this brush object.This property is only supported for controls like dropdownlist, edittext, and listbox.
    */
   disabledBackgroundColor: ScriptUIBrush
 
@@ -509,7 +509,7 @@ declare class ScriptUIGraphics {
 
   /**
    * Closes the current path.
-   * Defines a line from the current postion (currentPoint) to the start point of the current path (the value of currentPath).
+   * Defines a line from the current position (currentPoint) to the start point of the current path (the value of currentPath).
    */
   closePath(): void
 
@@ -567,7 +567,7 @@ declare class ScriptUIGraphics {
 
   /**
    * Adds a path segment to the currentPath.
-   * The line is defined from the currentPoint to the specified destination point. Returns the Point objectfor the destination point, which becomes the new value of currentPoint.
+   * The line is defined from the currentPoint to the specified destination point. Returns the Point object for the destination point, which becomes the new value of currentPoint.
    * @param x The X coordinate for the destination point, relative to the origin of this element.
    * @param y The Y coordinate for the destination point, relative to the origin of this element.
    */
@@ -617,7 +617,7 @@ declare class ScriptUIGraphics {
 
   /**
    * Defines a rectangular path in the currentPath object.
-   * The rectangle can be filled using fillPath() or stroked using strokePath().Returns the Point objectfor the upper left corner of the rectangle, which becomes the new value of currentPoint.
+   * The rectangle can be filled using fillPath() or stroked using strokePath().Returns the Point object for the upper left corner of the rectangle, which becomes the new value of currentPoint.
    * @param left The left coordinate relative to the origin of this element.
    * @param top The top coordinate relative to the origin of this element.
    * @param width The width in pixels.
@@ -895,7 +895,7 @@ declare class Button extends _Control {
 }
 
 /**
- * Amouse-sensitive pushbutton that displays an image instead of text.
+ * A mouse-sensitive pushbutton that displays an image instead of text.
  * Calls the onClick() callback if the control is clicked or if its notify() method is called.
  */
 declare class IconButton extends _Control {
@@ -1073,7 +1073,7 @@ declare class ListBox extends _Control {
    * A JavaScript object with two read-only properties whose values are set by the creation parameters:
    * titles: An array of column title strings, whose length matches the number of columns specified at creation.
    * preferredWidths: An array of column widths, whose length matches the number of columns specified at creation.
-   * visible: An array of boolean visible attributes, whose length matches the number of columns specified at creation.This property can be used to show/hide a column. Avaiblable in ScriptUI Version 6.0 or later provided ScriptUI.frameworkName == 'Flex'.
+   * visible: An array of boolean visible attributes, whose length matches the number of columns specified at creation.This property can be used to show/hide a column. Available in ScriptUI Version 6.0 or later provided ScriptUI.frameworkName == 'Flex'.
    */
   readonly columns: object
 
@@ -2501,7 +2501,7 @@ declare class _Control {
   readonly windowBounds: Bounds | [number, number, number, number]
 
   /**
-   * Registers an event handler for a particular type of event occuring in this element.
+   * Registers an event handler for a particular type of event occurring in this element.
    * @param eventName The name of the event. Event names are listed in the JavaScript Tools Guide.
    * @param handler The function that handles the event. This can be the name of a function defined in the extension, or a locally defined handler function to be executed when the event occurs. A handler function takes one argument, the UIEvent object.
    * @param capturePhase When true, the handler is called only in the capturing phase of the event propagation. Default is false, meaning that the handler is called in the bubbling phase if this object is an ancestor of the target, or in the at-target phase if this object is itself the target.
@@ -2520,7 +2520,7 @@ declare class _Control {
   hide(): void
 
   /**
-   * Unregisters an event handler for a particular type of event occuring in this element.
+   * Unregisters an event handler for a particular type of event occurring in this element.
    * All arguments must be identical to those that were used to register the event handler.
    * @param eventName The name of the event.
    * @param handler The function that handles the event.
@@ -2645,7 +2645,7 @@ interface _ControlPropertiesMap {
    * Creation properties of a Panel
    * @param name A unique name for the control.
    * @param borderStyle A string that specifies the appearance of the border drawn around the panel. One of black, etched, gray, raised, sunken. Default is etched.
-   * @param su1PanelCoordinates Photoshop only. When true, this panel automatically adjusts the positions of its children for compatability with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
+   * @param su1PanelCoordinates Photoshop only. When true, this panel automatically adjusts the positions of its children for compatibility with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
    */
   panel: {
     name: string
@@ -2716,7 +2716,7 @@ interface _ControlPropertiesMap {
   /**
    * Creation properties of a Window
    * @param resizeable When true, the window can be resized by the user. Default is false.
-   * @param su1PanelCoordinates Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatability with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting.
+   * @param su1PanelCoordinates Photoshop only. When true, the child panels of this window automatically adjust the positions of their children for compatibility with Photoshop CS (in which the vertical coordinate was measured from outside the frame). Default is false. Individual panels can override the parent window’s setting.
    * @param closeButton Bridge only. When true, the title bar includes a button to close the window, if the platform and window type allow it. When false, it does not. Default is true. Not used for dialogs.
    * @param maximizeButton Bridge only. When true, the title bar includes a button to expand the window to its maximum size (typically, the entire screen), if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Not used for dialogs.
    * @param minimizeButton Bridge only. When true, the title bar includes a button to minimize or iconify the window, if the platform and window type allow it. When false, it does not. Default is false for type palette, true for type window. Main windows cannot have a minimize button in Mac OS. Not used for dialogs.
