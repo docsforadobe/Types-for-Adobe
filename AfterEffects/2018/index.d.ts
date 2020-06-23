@@ -1101,7 +1101,7 @@ declare class CompItem extends AVItem {
   readonly selectedLayers: Layer[]
 
   /** The selected properties of the composition. */
-  readonly selectedProperties: PropertyBase[]
+  readonly selectedProperties: (Property<any> | PropertyGroup | MaskPropertyGroup)[]
 
   /** The rendering plug-in module to be used to render this composition. */
   renderer: string
@@ -1367,7 +1367,7 @@ declare class Layer {
   readonly nullLayer: boolean
 
   /** All selected AE properties in the layer. */
-  readonly selectedProperties: PropertyBase[]
+  readonly selectedProperties: (Property<any> | PropertyGroup | MaskPropertyGroup)[]
 
   /** A descriptive comment for the layer. */
   comment: string
