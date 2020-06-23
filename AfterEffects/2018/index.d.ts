@@ -1787,24 +1787,13 @@ declare class Project {
   resolveConflict(ResolveType: ResolveType): boolean
 }
 
-declare type PropertyValue =
-  | void
-  | boolean
-  | number
-  | [number, number]
-  | [number, number, number]
-  | [number, number, number, number]
-  | MarkerValue
-  | Shape
-  | TextDocument
-
 /** The Property object contains value, keyframe, and expression information about a particular AE property of a layer. */
-declare class Property extends PropertyBase {
+declare class Property<A> extends PropertyBase {
   /** Type of value stored in this property. */
   readonly propertyValueType: PropertyValueType
 
   /** Current value of the property. */
-  readonly value: PropertyValue
+  readonly value: A
 
   /** When true, there is a minimum permitted value. */
   readonly hasMin: boolean
@@ -1864,22 +1853,22 @@ declare class Property extends PropertyBase {
   readonly separationDimension: number
 
   /** The original multidimensional property for this separated follower. */
-  readonly separationLeader: Property
+  readonly separationLeader: Property<A>
 
   /** Gets the value of the property evaluated at given time. */
-  valueAtTime(time: number, preExpression: boolean): PropertyValue
+  valueAtTime(time: number, preExpression: boolean): A
 
   /** Sets the static value of the property. */
-  setValue(newValue: PropertyValue): void
+  setValue(newValue: A): void
 
   /** Creates a keyframe for the property. */
-  setValueAtTime(time: number, newValue: PropertyValue): void
+  setValueAtTime(time: number, newValue: A): void
 
   /** Creates a set of keyframes for the property. */
-  setValuesAtTimes(times: number[], newValues: PropertyValue[]): void
+  setValuesAtTimes(times: number[], newValues: A[]): void
 
   /** Finds a keyframe and sets the value of the property at that keyframe. */
-  setValueAtKey(keyIndex: number, newValue: PropertyValue): void
+  setValueAtKey(keyIndex: number, newValue: A): void
 
   /** Gets the keyframe nearest to a specified time. */
   nearestKeyIndex(time: number): number
@@ -1889,7 +1878,7 @@ declare class Property extends PropertyBase {
   keyTime(markerComment: string): number
 
   /** Gets the value of a keyframe at the time at which a condition occurs. */
-  keyValue(keyIndex: number): PropertyValue
+  keyValue(keyIndex: number): A
   keyValue(markerComment: string): MarkerValue
 
   /** Adds a new keyframe to the property at a given time. */
