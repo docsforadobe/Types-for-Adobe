@@ -1564,8 +1564,20 @@ declare class MaskPropertyGroup extends PropertyGroup {
   /** The feather falloff mode for the mask. */
   maskFeatherFalloff: MaskFeatherFalloff
 
-  /** The shape of the mask */
-  maskShape: Property
+  /** The shape of the mask. */
+  maskShape: Property<Shape>
+
+  /** The path of the mask. */
+  maskPath: Property<Shape>
+
+  /** The mask feather amount. */
+  maskFeather: Property<[number, number]>
+
+  /** The mask opacity. */
+  maskOpacity: Property<number>
+
+  /** The mask expansion amount. */
+  maskExpansion: Property<number>
 }
 
 /** The OMCollection contains all of the output modules in a render queue. The collection provides access to the OutputModule objects, but does not provide any additional functionality. The first OutputModule object in the collection is at index position 1. */
