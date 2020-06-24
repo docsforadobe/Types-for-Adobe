@@ -2598,20 +2598,10 @@ declare class _Control {
 }
 
 /**
- * Creation properties of a Button.
- * But the third argument to the add() method that creates it can be the initial text value.
- * @param name A unique name for the control. Special name "ok" makes the button primary for parent dialog, and the special name "cancel" makes the button default cancel button for parent dialog.
- */
-interface _AddControlPropertiesButton {
-  name: string
-}
-
-/**
- * Creation properties of a CheckBox.
- * The third argument to the add() method that creates it is the text to be displayed.
+ * Creation properties.
  * @param name A unique name for the control.
  */
-interface _AddControlPropertiesCheckbox {
+interface _AddControlProperties {
   name: string
 }
 
@@ -2648,22 +2638,6 @@ interface _AddControlPropertiesEditText {
 }
 
 /**
- * Creation properties of a FlashPlayer.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesFlashPlayer {
-  name: string
-}
-
-/**
- * Creation properties of a Group.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesGroup {
-  name: string
-}
-
-/**
  * Creation properties of an IconButton.
  * @param name A unique name for the control.
  * @param style A string for the visual style, either "button", which has a visible border with a raised or 3D appearance, or "toolbutton", which has a flat appearance, appropriate for inclusion in a toolbar.
@@ -2673,14 +2647,6 @@ interface _AddControlPropertiesIconButton {
   name: string
   style: "button" | "toolbutton"
   toggle: boolean
-}
-
-/**
- * Creation properties of an Image.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesImage {
-  name: string
 }
 
 /**
@@ -2715,42 +2681,6 @@ interface _AddControlPropertiesPanel {
   name: string
   borderStyle: string
   su1PanelCoordinates: boolean
-}
-
-/**
- * Creation properties of a ProgressBar.
- * The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesProgressbar {
-  name: string
-}
-
-/**
- * Creation properties of a RadioButton.
- * The third argument of the add() method that creates can be the label text.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesRadioButton {
-  name: string
-}
-
-/**
- * Creation properties of a Scrollbar.
- * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesScrollbar {
-  name: string
-}
-
-/**
- * Creation properties of a Slider.
- * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesSlider {
-  name: string
 }
 
 /**
@@ -2798,18 +2728,27 @@ interface _AddControlPropertiesWindow {
 }
 
 interface _AddControl {
+  /**
+   * Creation of a Button.
+   * The third argument can be the initial text value.
+   * Special name "ok" makes the button primary for parent dialog, and the special name "cancel" makes the button default cancel button for parent dialog.
+   */
   (
     type: "button",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
-    properties?: Partial<_AddControlPropertiesButton>,
+    properties?: Partial<_AddControlProperties>,
   ): Button
 
+  /**
+   * Creation of a CheckBox.
+   * The third argument is the text to be displayed.
+   */
   (
     type: "checkbox",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
-    properties?: Partial<_AddControlPropertiesCheckbox>,
+    properties?: Partial<_AddControlProperties>,
   ): Checkbox
 
   (
@@ -2830,13 +2769,13 @@ interface _AddControl {
     type: "flashplayer",
     bounds?: Bounds | [number, number, number, number],
     movieToLoad?: string | File,
-    properties?: Partial<_AddControlPropertiesFlashPlayer>,
+    properties?: Partial<_AddControlProperties>,
   ): FlashPlayer
 
   (
     type: "group",
     bounds?: Bounds | [number, number, number, number],
-    properties?: Partial<_AddControlPropertiesGroup>,
+    properties?: Partial<_AddControlProperties>,
   ): Group
 
   (
@@ -2850,7 +2789,7 @@ interface _AddControl {
     type: "image",
     bounds?: Bounds | [number, number, number, number],
     icon?: string | File,
-    properties?: Partial<_AddControlPropertiesImage>,
+    properties?: Partial<_AddControlProperties>,
   ): Image
 
   (
@@ -2867,37 +2806,53 @@ interface _AddControl {
     properties?: Partial<_AddControlPropertiesPanel>,
   ): Panel
 
+  /**
+   * Creation of a ProgressBar.
+   * The third argument is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
+   */
   (
     type: "progressbar",
     bounds?: Bounds | [number, number, number, number],
     value?: number,
     max?: number,
-    properties?: Partial<_AddControlPropertiesProgressbar>,
+    properties?: Partial<_AddControlProperties>,
   ): Progressbar
 
+  /**
+   * Creation of a RadioButton.
+   * The third argument can be the label text.
+   */
   (
     type: "radiobutton",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
-    properties?: Partial<_AddControlPropertiesRadioButton>,
+    properties?: Partial<_AddControlProperties>,
   ): RadioButton
 
+  /**
+   * Creation of a Scrollbar.
+   * The third argument is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+   */
   (
     type: "scrollbar",
     bounds?: Bounds | [number, number, number, number],
     value?: number,
     min?: number,
     max?: number,
-    properties?: Partial<_AddControlPropertiesScrollbar>,
+    properties?: Partial<_AddControlProperties>,
   ): Scrollbar
 
+  /**
+   * Creation of a Slider.
+   * The third argument is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+   */
   (
     type: "slider",
     bounds?: Bounds | [number, number, number, number],
     value?: number,
     min?: number,
     max?: number,
-    properties?: Partial<_AddControlPropertiesSlider>,
+    properties?: Partial<_AddControlProperties>,
   ): Slider
 
   (
