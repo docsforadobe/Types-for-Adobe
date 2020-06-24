@@ -2639,7 +2639,7 @@ declare class _Control {
  * @param name A unique name for the control.
  */
 interface _AddControlProperties {
-  name: string
+  name?: string
 }
 
 /**
@@ -2774,7 +2774,7 @@ interface _AddControl {
     type: "button",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Button
 
   /**
@@ -2785,9 +2785,11 @@ interface _AddControl {
     type: "checkbox",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Checkbox
 
+  /**
+   */
   (
     type: "dropdownlist",
     bounds?: Bounds | [number, number, number, number],
@@ -2795,6 +2797,8 @@ interface _AddControl {
     properties?: Partial<_AddControlPropertiesDropDownList>,
   ): DropDownList
 
+  /**
+   */
   (
     type: "edittext",
     bounds?: Bounds | [number, number, number, number],
@@ -2802,19 +2806,25 @@ interface _AddControl {
     properties?: Partial<_AddControlPropertiesEditText>,
   ): EditText
 
+  /**
+   */
   (
     type: "flashplayer",
     bounds?: Bounds | [number, number, number, number],
     movieToLoad?: string | File,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): FlashPlayer
 
+  /**
+   */
   (
     type: "group",
     bounds?: Bounds | [number, number, number, number],
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Group
 
+  /**
+   */
   (
     type: "iconbutton",
     bounds?: Bounds | [number, number, number, number],
@@ -2822,13 +2832,17 @@ interface _AddControl {
     properties?: Partial<_AddControlPropertiesIconButton>,
   ): IconButton
 
+  /**
+   */
   (
     type: "image",
     bounds?: Bounds | [number, number, number, number],
     icon?: string | File,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Image
 
+  /**
+   */
   (
     type: "listbox",
     bounds?: Bounds | [number, number, number, number],
@@ -2836,6 +2850,8 @@ interface _AddControl {
     properties?: Partial<_AddControlPropertiesListBox>,
   ): ListBox
 
+  /**
+   */
   (
     type: "panel",
     bounds?: Bounds | [number, number, number, number],
@@ -2852,7 +2868,7 @@ interface _AddControl {
     bounds?: Bounds | [number, number, number, number],
     value?: number,
     max?: number,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Progressbar
 
   /**
@@ -2863,7 +2879,7 @@ interface _AddControl {
     type: "radiobutton",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): RadioButton
 
   /**
@@ -2876,7 +2892,7 @@ interface _AddControl {
     value?: number,
     min?: number,
     max?: number,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Scrollbar
 
   /**
@@ -2889,9 +2905,11 @@ interface _AddControl {
     value?: number,
     min?: number,
     max?: number,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Slider
 
+  /**
+   */
   (
     type: "statictext",
     bounds?: Bounds | [number, number, number, number],
@@ -2899,20 +2917,26 @@ interface _AddControl {
     properties?: Partial<_AddControlPropertiesStaticText>,
   ): StaticText
 
+  /**
+   */
   (
     type: "tab",
     bounds: Bounds | [number, number, number, number],
     text?: string[],
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): Tab
 
+  /**
+   */
   (
     type: "tabbedpanel",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
-    properties?: Partial<_AddControlProperties>,
+    properties?: _AddControlProperties,
   ): TabbedPanel
 
+  /**
+   */
   (
     type: "treeview",
     bounds?: Bounds | [number, number, number, number],
