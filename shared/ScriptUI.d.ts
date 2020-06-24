@@ -21,6 +21,8 @@ declare const enum _BrushOrPenType {
   THEME_COLOR,
 }
 
+type _Bounds = Bounds | [number, number, number, number]
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -151,7 +153,7 @@ declare class Window extends _Control {
    * The bounds of the window frame in screen coordinates.
    * The frame consists of the title bar and borders that enclose the content region of a window, depending on the windowing system.
    */
-  readonly frameBounds: Bounds | [number, number, number, number]
+  readonly frameBounds: _Bounds
 
   /**
    * The top left corner of the window frame in screen coordinates.
@@ -246,7 +248,7 @@ declare class Window extends _Control {
   constructor(
     type: string,
     title?: string,
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     properties?: Partial<_AddControlPropertiesWindow>,
   )
 
@@ -2524,7 +2526,7 @@ declare class _Control {
    * The boundaries of the element, in parent-relative coordinates.
    * Setting an element's size or location changes its bounds property, and vice-versa.
    */
-  bounds: Bounds | [number, number, number, number]
+  bounds: _Bounds
 
   /**
    * True if this element is enabled.
@@ -2596,7 +2598,7 @@ declare class _Control {
   /**
    * The bounds of this element relative to the top-level parent window.
    */
-  readonly windowBounds: Bounds | [number, number, number, number]
+  readonly windowBounds: _Bounds
 
   /**
    * Registers an event handler for a particular type of event occurring in this element.
@@ -2770,29 +2772,19 @@ interface _AddControl {
    * The third argument can be the initial text value.
    * Special name "ok" makes the button primary for parent dialog, and the special name "cancel" makes the button default cancel button for parent dialog.
    */
-  (
-    type: "button",
-    bounds?: Bounds | [number, number, number, number],
-    text?: string,
-    properties?: _AddControlProperties,
-  ): Button
+  (type: "button", bounds?: _Bounds, text?: string, properties?: _AddControlProperties): Button
 
   /**
    * Creation of a CheckBox.
    * The third argument is the text to be displayed.
    */
-  (
-    type: "checkbox",
-    bounds?: Bounds | [number, number, number, number],
-    text?: string,
-    properties?: _AddControlProperties,
-  ): Checkbox
+  (type: "checkbox", bounds?: _Bounds, text?: string, properties?: _AddControlProperties): Checkbox
 
   /**
    */
   (
     type: "dropdownlist",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     items?: string[],
     properties?: Partial<_AddControlPropertiesDropDownList>,
   ): DropDownList
@@ -2801,7 +2793,7 @@ interface _AddControl {
    */
   (
     type: "edittext",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
     properties?: Partial<_AddControlPropertiesEditText>,
   ): EditText
@@ -2810,42 +2802,33 @@ interface _AddControl {
    */
   (
     type: "flashplayer",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     movieToLoad?: string | File,
     properties?: _AddControlProperties,
   ): FlashPlayer
 
   /**
    */
-  (
-    type: "group",
-    bounds?: Bounds | [number, number, number, number],
-    properties?: _AddControlProperties,
-  ): Group
+  (type: "group", bounds?: _Bounds, properties?: _AddControlProperties): Group
 
   /**
    */
   (
     type: "iconbutton",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     icon?: string | File,
     properties?: Partial<_AddControlPropertiesIconButton>,
   ): IconButton
 
   /**
    */
-  (
-    type: "image",
-    bounds?: Bounds | [number, number, number, number],
-    icon?: string | File,
-    properties?: _AddControlProperties,
-  ): Image
+  (type: "image", bounds?: _Bounds, icon?: string | File, properties?: _AddControlProperties): Image
 
   /**
    */
   (
     type: "listbox",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     items?: string[],
     properties?: Partial<_AddControlPropertiesListBox>,
   ): ListBox
@@ -2854,7 +2837,7 @@ interface _AddControl {
    */
   (
     type: "panel",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
     properties?: Partial<_AddControlPropertiesPanel>,
   ): Panel
@@ -2865,7 +2848,7 @@ interface _AddControl {
    */
   (
     type: "progressbar",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     value?: number,
     max?: number,
     properties?: _AddControlProperties,
@@ -2877,7 +2860,7 @@ interface _AddControl {
    */
   (
     type: "radiobutton",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
     properties?: _AddControlProperties,
   ): RadioButton
@@ -2888,7 +2871,7 @@ interface _AddControl {
    */
   (
     type: "scrollbar",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     value?: number,
     min?: number,
     max?: number,
@@ -2901,7 +2884,7 @@ interface _AddControl {
    */
   (
     type: "slider",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     value?: number,
     min?: number,
     max?: number,
@@ -2912,25 +2895,20 @@ interface _AddControl {
    */
   (
     type: "statictext",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
     properties?: Partial<_AddControlPropertiesStaticText>,
   ): StaticText
 
   /**
    */
-  (
-    type: "tab",
-    bounds: Bounds | [number, number, number, number],
-    text?: string[],
-    properties?: _AddControlProperties,
-  ): Tab
+  (type: "tab", bounds: _Bounds, text?: string[], properties?: _AddControlProperties): Tab
 
   /**
    */
   (
     type: "tabbedpanel",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
     properties?: _AddControlProperties,
   ): TabbedPanel
@@ -2939,7 +2917,7 @@ interface _AddControl {
    */
   (
     type: "treeview",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     items?: string[],
     properties?: Partial<_AddControlPropertiesTreeView>,
   ): TreeView
