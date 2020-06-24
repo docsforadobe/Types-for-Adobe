@@ -249,7 +249,7 @@ declare class Window extends _Control {
     type: string,
     title?: string,
     bounds?: _Bounds,
-    properties?: Partial<_AddControlPropertiesWindow>,
+    properties?: _AddControlPropertiesWindow,
   )
 
   /**
