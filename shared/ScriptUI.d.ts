@@ -2508,15 +2508,15 @@ declare class KeyboardState {
 }
 
 /**
- * Added by types-for-adobe
+ * A Control class.
  */
 declare class _Control {
   /**
    * The alignment style for child elements of a container. If defined, this value overrides the alignChildren setting for the parent container.
    * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-   * For orientation=row:top, bottom, fill
-   * For orientation=column: left, right, fill
-   * For orientation=stack:top, bottom, left, right, fill
+   * For orientation = row: top, bottom, fill
+   * For orientation = column: left, right, fill
+   * For orientation = stack: top, bottom, left, right, fill
    */
   alignment: string
 
