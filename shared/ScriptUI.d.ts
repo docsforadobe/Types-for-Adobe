@@ -2650,8 +2650,8 @@ interface _AddControlProperties {
  * @param items An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
  */
 interface _AddControlPropertiesDropDownList {
-  name: string
-  items: string[]
+  name?: string
+  items?: string[]
 }
 
 /**
@@ -2666,14 +2666,14 @@ interface _AddControlPropertiesDropDownList {
  * @param wantReturn Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
  */
 interface _AddControlPropertiesEditText {
-  name: string
-  multiline: boolean
-  borderless: boolean
-  scrollable: boolean
-  readonly: boolean
-  noecho: boolean
-  enterKeySignalsOnChange: boolean
-  wantReturn: boolean
+  name?: string
+  multiline?: boolean
+  borderless?: boolean
+  scrollable?: boolean
+  readonly?: boolean
+  noecho?: boolean
+  enterKeySignalsOnChange?: boolean
+  wantReturn?: boolean
 }
 
 /**
@@ -2683,9 +2683,9 @@ interface _AddControlPropertiesEditText {
  * @param toggle For a button-style control, a value of true causes it to get a button-pressed appearance the first time it is clicked, and alternate with the unpressed appearance each time it is clicked. The toggle state is reflected in the control’s value property.
  */
 interface _AddControlPropertiesIconButton {
-  name: string
-  style: "button" | "toolbutton"
-  toggle: boolean
+  name?: string
+  style?: "button" | "toolbutton"
+  toggle?: boolean
 }
 
 /**
@@ -2700,14 +2700,14 @@ interface _AddControlPropertiesIconButton {
  * @param columnTitles A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
  */
 interface _AddControlPropertiesListBox {
-  name: string
-  multiselect: boolean
-  selected: boolean
-  items: string[]
-  numberOfColumns: number
-  showHeaders: boolean
-  columnWidths: number[]
-  columnTitles: string[]
+  name?: string
+  multiselect?: boolean
+  selected?: boolean
+  items?: string[]
+  numberOfColumns?: number
+  showHeaders?: boolean
+  columnWidths?: number[]
+  columnTitles?: string[]
 }
 
 /**
@@ -2717,9 +2717,9 @@ interface _AddControlPropertiesListBox {
  * @param su1PanelCoordinates Photoshop only. When true, this panel automatically adjusts the positions of its children for compatibility with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
  */
 interface _AddControlPropertiesPanel {
-  name: string
-  borderStyle: string
-  su1PanelCoordinates: boolean
+  name?: string
+  borderStyle?: string
+  su1PanelCoordinates?: boolean
 }
 
 /**
@@ -2730,10 +2730,10 @@ interface _AddControlPropertiesPanel {
  * @param truncate If middle or end, defines where to remove characters from the text and replace them with an ellipsis if the specified title does not fit within the space reserved for it. If none, and the text does not fit, characters are removed from the end, without any replacement ellipsis character.
  */
 interface _AddControlPropertiesStaticText {
-  name: string
-  multiline: boolean
-  scrolling: boolean
-  truncate: string
+  name?: string
+  multiline?: boolean
+  scrolling?: boolean
+  truncate?: string
 }
 
 /**
@@ -2742,8 +2742,8 @@ interface _AddControlPropertiesStaticText {
  * @param items An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
  */
 interface _AddControlPropertiesTreeView {
-  name: string
-  items: string[]
+  name?: string
+  items?: string[]
 }
 
 /**
@@ -2757,13 +2757,13 @@ interface _AddControlPropertiesTreeView {
  * @param borderless When true, the window has no title bar or borders. Properties that control those features are ignored.
  */
 interface _AddControlPropertiesWindow {
-  resizeable: boolean
-  su1PanelCoordinates: boolean
-  closeButton: boolean
-  maximizeButton: boolean
-  minimizeButton: boolean
-  independent: boolean
-  borderless: boolean
+  resizeable?: boolean
+  su1PanelCoordinates?: boolean
+  closeButton?: boolean
+  maximizeButton?: boolean
+  minimizeButton?: boolean
+  independent?: boolean
+  borderless?: boolean
 }
 
 interface _AddControl {
@@ -2786,7 +2786,7 @@ interface _AddControl {
     type: "dropdownlist",
     bounds?: _Bounds,
     items?: string[],
-    properties?: Partial<_AddControlPropertiesDropDownList>,
+    properties?: _AddControlPropertiesDropDownList,
   ): DropDownList
 
   /**
@@ -2795,7 +2795,7 @@ interface _AddControl {
     type: "edittext",
     bounds?: _Bounds,
     text?: string,
-    properties?: Partial<_AddControlPropertiesEditText>,
+    properties?: _AddControlPropertiesEditText,
   ): EditText
 
   /**
@@ -2817,7 +2817,7 @@ interface _AddControl {
     type: "iconbutton",
     bounds?: _Bounds,
     icon?: string | File,
-    properties?: Partial<_AddControlPropertiesIconButton>,
+    properties?: _AddControlPropertiesIconButton,
   ): IconButton
 
   /**
@@ -2830,17 +2830,12 @@ interface _AddControl {
     type: "listbox",
     bounds?: _Bounds,
     items?: string[],
-    properties?: Partial<_AddControlPropertiesListBox>,
+    properties?: _AddControlPropertiesListBox,
   ): ListBox
 
   /**
    */
-  (
-    type: "panel",
-    bounds?: _Bounds,
-    text?: string,
-    properties?: Partial<_AddControlPropertiesPanel>,
-  ): Panel
+  (type: "panel", bounds?: _Bounds, text?: string, properties?: _AddControlPropertiesPanel): Panel
 
   /**
    * Creation of a ProgressBar.
@@ -2897,7 +2892,7 @@ interface _AddControl {
     type: "statictext",
     bounds?: _Bounds,
     text?: string,
-    properties?: Partial<_AddControlPropertiesStaticText>,
+    properties?: _AddControlPropertiesStaticText,
   ): StaticText
 
   /**
@@ -2919,6 +2914,6 @@ interface _AddControl {
     type: "treeview",
     bounds?: _Bounds,
     items?: string[],
-    properties?: Partial<_AddControlPropertiesTreeView>,
+    properties?: _AddControlPropertiesTreeView,
   ): TreeView
 }
