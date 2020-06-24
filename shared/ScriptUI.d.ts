@@ -2804,59 +2804,69 @@ interface _AddControl {
     text?: string,
     properties?: Partial<_AddControlPropertiesButton>,
   ): Button
+
   (
     type: "checkbox",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_AddControlPropertiesCheckbox>,
   ): Checkbox
+
   (
     type: "dropdownlist",
     bounds?: Bounds | [number, number, number, number],
     items?: string[],
     properties?: Partial<_AddControlPropertiesDropDownList>,
   ): DropDownList
+
   (
     type: "edittext",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_AddControlPropertiesEditText>,
   ): EditText
+
   (
     type: "flashplayer",
     bounds?: Bounds | [number, number, number, number],
     movieToLoad?: string | File,
     properties?: Partial<_AddControlPropertiesFlashPlayer>,
   ): FlashPlayer
+
   (
     type: "group",
     bounds?: Bounds | [number, number, number, number],
     properties?: Partial<_AddControlPropertiesGroup>,
   ): Group
+
   (
     type: "iconbutton",
     bounds?: Bounds | [number, number, number, number],
     icon?: string | File,
     properties?: Partial<_AddControlPropertiesIconButton>,
   ): IconButton
+
   (
     type: "image",
     bounds?: Bounds | [number, number, number, number],
     icon?: string | File,
     properties?: Partial<_AddControlPropertiesImage>,
   ): Image
+
   (
     type: "listbox",
     bounds?: Bounds | [number, number, number, number],
     items?: string[],
     properties?: Partial<_AddControlPropertiesListBox>,
   ): ListBox
+
   (
     type: "panel",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_AddControlPropertiesPanel>,
   ): Panel
+
   (
     type: "progressbar",
     bounds?: Bounds | [number, number, number, number],
@@ -2864,12 +2874,14 @@ interface _AddControl {
     max?: number,
     properties?: Partial<_AddControlPropertiesProgressbar>,
   ): Progressbar
+
   (
     type: "radiobutton",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_AddControlPropertiesRadioButton>,
   ): RadioButton
+
   (
     type: "scrollbar",
     bounds?: Bounds | [number, number, number, number],
@@ -2878,6 +2890,7 @@ interface _AddControl {
     max?: number,
     properties?: Partial<_AddControlPropertiesScrollbar>,
   ): Scrollbar
+
   (
     type: "slider",
     bounds?: Bounds | [number, number, number, number],
@@ -2886,12 +2899,14 @@ interface _AddControl {
     max?: number,
     properties?: Partial<_AddControlPropertiesSlider>,
   ): Slider
+
   (
     type: "statictext",
     bounds?: Bounds | [number, number, number, number],
     text?: string,
     properties?: Partial<_AddControlPropertiesStaticText>,
   ): StaticText
+
   (
     type: "treeview",
     bounds?: Bounds | [number, number, number, number],
