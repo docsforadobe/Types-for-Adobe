@@ -3941,7 +3941,7 @@ declare class PathItems extends Array<PathItem> {
    * @param reversed Is the ellipse path reversed?
    * @param inscribed Is the ellipse path inscribed?
    */
-  static ellipse(
+  ellipse(
     top?: number,
     left?: number,
     width?: number,
@@ -3964,7 +3964,7 @@ declare class PathItems extends Array<PathItem> {
    * @param sides The number of sides on the polygon.
    * @param reversed Is the polygon path reversed?
    */
-  static polygon(
+  polygon(
     centerX?: number,
     centerY?: number,
     radius?: number,
@@ -3980,13 +3980,7 @@ declare class PathItems extends Array<PathItem> {
    * @param height The height of the rectangle.
    * @param reversed Is the rectangle path reversed?
    */
-  static rectangle(
-    top: number,
-    left: number,
-    width: number,
-    height: number,
-    reversed?: boolean,
-  ): PathItem
+  rectangle(top: number, left: number, width: number, height: number, reversed?: boolean): PathItem
 
   /**
    * Deletes all elements.
@@ -4003,7 +3997,7 @@ declare class PathItems extends Array<PathItem> {
    * @param verticalRadius Vertical corner radius.
    * @param reversed Is the rectangle path reversed?
    */
-  static roundedRectangle(
+  roundedRectangle(
     top: number,
     left: number,
     width: number,
@@ -4022,7 +4016,7 @@ declare class PathItems extends Array<PathItem> {
    * @param points The number of points on the star.
    * @param reversed Is the star path reversed?
    */
-  static star(
+  star(
     centerX?: number,
     centerY?: number,
     radius?: number,
