@@ -1676,6 +1676,9 @@ declare class Project {
   /** The project’s render queue. */
   readonly renderQueue: RenderQueue
 
+  /** The current expression engine used in the project. */
+  expressionEngine: string
+
   /** The time display style, corresponding to the Time Display Style section in the Project Settings dialog box. */
   timeDisplayType: TimeDisplayType
 
