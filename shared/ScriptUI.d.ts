@@ -21,6 +21,8 @@ declare const enum _BrushOrPenType {
   THEME_COLOR,
 }
 
+type _Bounds = Bounds | [number, number, number, number]
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -151,7 +153,7 @@ declare class Window extends _Control {
    * The bounds of the window frame in screen coordinates.
    * The frame consists of the title bar and borders that enclose the content region of a window, depending on the windowing system.
    */
-  readonly frameBounds: Bounds | [number, number, number, number]
+  readonly frameBounds: _Bounds
 
   /**
    * The top left corner of the window frame in screen coordinates.
@@ -246,8 +248,8 @@ declare class Window extends _Control {
   constructor(
     type: string,
     title?: string,
-    bounds?: Bounds | [number, number, number, number],
-    properties?: Partial<_AddControlPropertiesWindow>,
+    bounds?: _Bounds,
+    properties?: _AddControlPropertiesWindow,
   )
 
   /**
@@ -2143,6 +2145,43 @@ declare class Panel extends _Control {
 }
 
 /**
+ * A container for other types of controls.
+ * Differs from a panel element in that is must be a direct child of a tabbedpanel element, the title is shown in the selection tab, and it does not have a script-definable border.
+ */
+declare class Tab extends Panel {
+  /**
+   * The parent element.
+   */
+  readonly parent: TabbedPanel
+}
+
+/**
+ * A container for selectable tab containers.
+ * Differs from a panel element in that it can contain only tab elements as direct children.
+ */
+declare class TabbedPanel extends Panel {
+  /**
+   * An array of child elements.
+   */
+  readonly children: Tab[]
+
+  /**
+   * The currently selected tab.
+   * Setting this value causes the specified tab to be enabled in the panel.
+   * You can set the value using the index of an item, rather than an object reference.
+   * If set to an index value that is out of range, the operation is ignored.
+   * When set with an index value, the property still returns an object reference.
+   * When the value of the selection property changes, either by a user selecting a different tab, or by a script setting the property, the TabbedPanel receives an onChange notification.
+   */
+  selection: Tab | number
+
+  /**
+   * An event-handler callback function, called when the selected tab has changed.
+   */
+  onChange(): void
+}
+
+/**
  * Defines the location of a window or UI element. Contains a 2-element array.
  * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
  * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
@@ -2503,15 +2542,15 @@ declare class KeyboardState {
 }
 
 /**
- * Added by types-for-adobe
+ * A Control class.
  */
 declare class _Control {
   /**
    * The alignment style for child elements of a container. If defined, this value overrides the alignChildren setting for the parent container.
    * This can be a single string, which indicates the alignment for the orientation specified in the parent container, or an array of two strings, indicating both the horizontal and vertical alignment (in that order). Allowed values depend on the orientation value of the parent container. They are not case sensitive.
-   * For orientation=row:top, bottom, fill
-   * For orientation=column: left, right, fill
-   * For orientation=stack:top, bottom, left, right, fill
+   * For orientation = row: top, bottom, fill
+   * For orientation = column: left, right, fill
+   * For orientation = stack: top, bottom, left, right, fill
    */
   alignment: string
 
@@ -2519,7 +2558,7 @@ declare class _Control {
    * The boundaries of the element, in parent-relative coordinates.
    * Setting an element's size or location changes its bounds property, and vice-versa.
    */
-  bounds: Bounds | [number, number, number, number]
+  bounds: _Bounds
 
   /**
    * True if this element is enabled.
@@ -2591,7 +2630,7 @@ declare class _Control {
   /**
    * The bounds of this element relative to the top-level parent window.
    */
-  readonly windowBounds: Bounds | [number, number, number, number]
+  readonly windowBounds: _Bounds
 
   /**
    * Registers an event handler for a particular type of event occurring in this element.
@@ -2630,21 +2669,11 @@ declare class _Control {
 }
 
 /**
- * Creation properties of a Button.
- * But the third argument to the add() method that creates it can be the initial text value.
- * @param name A unique name for the control. Special name "ok" makes the button primary for parent dialog, and the special name "cancel" makes the button default cancel button for parent dialog.
- */
-interface _AddControlPropertiesButton {
-  name: string
-}
-
-/**
- * Creation properties of a CheckBox.
- * The third argument to the add() method that creates it is the text to be displayed.
+ * Creation properties.
  * @param name A unique name for the control.
  */
-interface _AddControlPropertiesCheckbox {
-  name: string
+interface _AddControlProperties {
+  name?: string
 }
 
 /**
@@ -2653,8 +2682,8 @@ interface _AddControlPropertiesCheckbox {
  * @param items An array of strings for the text of each list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
  */
 interface _AddControlPropertiesDropDownList {
-  name: string
-  items: string[]
+  name?: string
+  items?: string[]
 }
 
 /**
@@ -2669,30 +2698,14 @@ interface _AddControlPropertiesDropDownList {
  * @param wantReturn Only applies to multiple line edit controls in ScriptUI Version 6.0 or later. When true the RETURN/ENTER keystroke is considered as text-input advancing the cursor to the next line. The default value is false.
  */
 interface _AddControlPropertiesEditText {
-  name: string
-  multiline: boolean
-  borderless: boolean
-  scrollable: boolean
-  readonly: boolean
-  noecho: boolean
-  enterKeySignalsOnChange: boolean
-  wantReturn: boolean
-}
-
-/**
- * Creation properties of a FlashPlayer.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesFlashPlayer {
-  name: string
-}
-
-/**
- * Creation properties of a Group.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesGroup {
-  name: string
+  name?: string
+  multiline?: boolean
+  borderless?: boolean
+  scrollable?: boolean
+  readonly?: boolean
+  noecho?: boolean
+  enterKeySignalsOnChange?: boolean
+  wantReturn?: boolean
 }
 
 /**
@@ -2702,17 +2715,9 @@ interface _AddControlPropertiesGroup {
  * @param toggle For a button-style control, a value of true causes it to get a button-pressed appearance the first time it is clicked, and alternate with the unpressed appearance each time it is clicked. The toggle state is reflected in the control’s value property.
  */
 interface _AddControlPropertiesIconButton {
-  name: string
-  style: "button" | "toolbutton"
-  toggle: boolean
-}
-
-/**
- * Creation properties of an Image.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesImage {
-  name: string
+  name?: string
+  style?: "button" | "toolbutton"
+  toggle?: boolean
 }
 
 /**
@@ -2727,14 +2732,14 @@ interface _AddControlPropertiesImage {
  * @param columnTitles A corresponding array of strings for the title of each column, to be shown if showHeaders is true.
  */
 interface _AddControlPropertiesListBox {
-  name: string
-  multiselect: boolean
-  selected: boolean
-  items: string[]
-  numberOfColumns: number
-  showHeaders: boolean
-  columnWidths: number[]
-  columnTitles: string[]
+  name?: string
+  multiselect?: boolean
+  selected?: boolean
+  items?: string[]
+  numberOfColumns?: number
+  showHeaders?: boolean
+  columnWidths?: number[]
+  columnTitles?: string[]
 }
 
 /**
@@ -2744,45 +2749,9 @@ interface _AddControlPropertiesListBox {
  * @param su1PanelCoordinates Photoshop only. When true, this panel automatically adjusts the positions of its children for compatibility with Photoshop CS. Default is false, meaning that the panel does not adjust the positions of its children, even if the parent window has automatic adjustment enabled.
  */
 interface _AddControlPropertiesPanel {
-  name: string
-  borderStyle: string
-  su1PanelCoordinates: boolean
-}
-
-/**
- * Creation properties of a ProgressBar.
- * The third argument of the add() method that creates it is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesProgressbar {
-  name: string
-}
-
-/**
- * Creation properties of a RadioButton.
- * The third argument of the add() method that creates can be the label text.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesRadioButton {
-  name: string
-}
-
-/**
- * Creation properties of a Scrollbar.
- * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesScrollbar {
-  name: string
-}
-
-/**
- * Creation properties of a Slider.
- * The third argument of the add() method that creates it is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesSlider {
-  name: string
+  name?: string
+  borderStyle?: string
+  su1PanelCoordinates?: boolean
 }
 
 /**
@@ -2793,10 +2762,10 @@ interface _AddControlPropertiesSlider {
  * @param truncate If middle or end, defines where to remove characters from the text and replace them with an ellipsis if the specified title does not fit within the space reserved for it. If none, and the text does not fit, characters are removed from the end, without any replacement ellipsis character.
  */
 interface _AddControlPropertiesStaticText {
-  name: string
-  multiline: boolean
-  scrolling: boolean
-  truncate: string
+  name?: string
+  multiline?: boolean
+  scrolling?: boolean
+  truncate?: string
 }
 
 /**
@@ -2821,8 +2790,8 @@ interface _AddControlPropertiesTabbedPanel {
  * @param items An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
  */
 interface _AddControlPropertiesTreeView {
-  name: string
-  items: string[]
+  name?: string
+  items?: string[]
 }
 
 /**
@@ -2836,110 +2805,159 @@ interface _AddControlPropertiesTreeView {
  * @param borderless When true, the window has no title bar or borders. Properties that control those features are ignored.
  */
 interface _AddControlPropertiesWindow {
-  resizeable: boolean
-  su1PanelCoordinates: boolean
-  closeButton: boolean
-  maximizeButton: boolean
-  minimizeButton: boolean
-  independent: boolean
-  borderless: boolean
+  resizeable?: boolean
+  su1PanelCoordinates?: boolean
+  closeButton?: boolean
+  maximizeButton?: boolean
+  minimizeButton?: boolean
+  independent?: boolean
+  borderless?: boolean
 }
 
 interface _AddControl {
-  (
-    type: "button",
-    bounds?: Bounds | [number, number, number, number],
-    text?: string,
-    properties?: Partial<_AddControlPropertiesButton>,
-  ): Button
-  (
-    type: "checkbox",
-    bounds?: Bounds | [number, number, number, number],
-    text?: string,
-    properties?: Partial<_AddControlPropertiesCheckbox>,
-  ): Checkbox
+  /**
+   * Creation of a Button.
+   * The third argument can be the initial text value.
+   * Special name "ok" makes the button primary for parent dialog, and the special name "cancel" makes the button default cancel button for parent dialog.
+   */
+  (type: "button", bounds?: _Bounds, text?: string, properties?: _AddControlProperties): Button
+
+  /**
+   * Creation of a CheckBox.
+   * The third argument is the text to be displayed.
+   */
+  (type: "checkbox", bounds?: _Bounds, text?: string, properties?: _AddControlProperties): Checkbox
+
+  /**
+   */
   (
     type: "dropdownlist",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     items?: string[],
-    properties?: Partial<_AddControlPropertiesDropDownList>,
+    properties?: _AddControlPropertiesDropDownList,
   ): DropDownList
+
+  /**
+   */
   (
     type: "edittext",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
-    properties?: Partial<_AddControlPropertiesEditText>,
+    properties?: _AddControlPropertiesEditText,
   ): EditText
+
+  /**
+   */
   (
     type: "flashplayer",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     movieToLoad?: string | File,
-    properties?: Partial<_AddControlPropertiesFlashPlayer>,
+    properties?: _AddControlProperties,
   ): FlashPlayer
-  (
-    type: "group",
-    bounds?: Bounds | [number, number, number, number],
-    properties?: Partial<_AddControlPropertiesGroup>,
-  ): Group
+
+  /**
+   */
+  (type: "group", bounds?: _Bounds, properties?: _AddControlProperties): Group
+
+  /**
+   */
   (
     type: "iconbutton",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     icon?: string | File,
-    properties?: Partial<_AddControlPropertiesIconButton>,
+    properties?: _AddControlPropertiesIconButton,
   ): IconButton
-  (
-    type: "image",
-    bounds?: Bounds | [number, number, number, number],
-    icon?: string | File,
-    properties?: Partial<_AddControlPropertiesImage>,
-  ): Image
+
+  /**
+   */
+  (type: "image", bounds?: _Bounds, icon?: string | File, properties?: _AddControlProperties): Image
+
+  /**
+   */
   (
     type: "listbox",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     items?: string[],
-    properties?: Partial<_AddControlPropertiesListBox>,
+    properties?: _AddControlPropertiesListBox,
   ): ListBox
-  (
-    type: "panel",
-    bounds?: Bounds | [number, number, number, number],
-    text?: string,
-    properties?: Partial<_AddControlPropertiesPanel>,
-  ): Panel
+
+  /**
+   */
+  (type: "panel", bounds?: _Bounds, text?: string, properties?: _AddControlPropertiesPanel): Panel
+
+  /**
+   * Creation of a ProgressBar.
+   * The third argument is the initial value (default 0), and the fourth argument is the maximum value of the range (default 100).
+   */
   (
     type: "progressbar",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     value?: number,
     max?: number,
-    properties?: Partial<_AddControlPropertiesProgressbar>,
+    properties?: _AddControlProperties,
   ): Progressbar
+
+  /**
+   * Creation of a RadioButton.
+   * The third argument can be the label text.
+   */
   (
     type: "radiobutton",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
-    properties?: Partial<_AddControlPropertiesRadioButton>,
+    properties?: _AddControlProperties,
   ): RadioButton
+
+  /**
+   * Creation of a Scrollbar.
+   * The third argument is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+   */
   (
     type: "scrollbar",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     value?: number,
     min?: number,
     max?: number,
-    properties?: Partial<_AddControlPropertiesScrollbar>,
+    properties?: _AddControlProperties,
   ): Scrollbar
+
+  /**
+   * Creation of a Slider.
+   * The third argument is the initial value, and the fourth and fifth arguments are the minimum and maximum values of the range.
+   */
   (
     type: "slider",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     value?: number,
     min?: number,
     max?: number,
-    properties?: Partial<_AddControlPropertiesSlider>,
+    properties?: _AddControlProperties,
   ): Slider
+
+  /**
+   */
   (
     type: "statictext",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     text?: string,
-    properties?: Partial<_AddControlPropertiesStaticText>,
+    properties?: _AddControlPropertiesStaticText,
   ): StaticText
+
+  /**
+   */
+  (type: "tab", bounds: _Bounds, text?: string[], properties?: _AddControlProperties): Tab
+
+  /**
+   */
+  (
+    type: "tabbedpanel",
+    bounds?: _Bounds,
+    text?: string,
+    properties?: _AddControlProperties,
+  ): TabbedPanel
+
+  /**
+   */
   (
     type: "tab",
     _bounds: undefined,
@@ -2954,8 +2972,8 @@ interface _AddControl {
   ): TabbedPanel
   (
     type: "treeview",
-    bounds?: Bounds | [number, number, number, number],
+    bounds?: _Bounds,
     items?: string[],
-    properties?: Partial<_AddControlPropertiesTreeView>,
+    properties?: _AddControlPropertiesTreeView,
   ): TreeView
 }
