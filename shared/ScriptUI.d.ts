@@ -1960,38 +1960,6 @@ declare class FlashPlayer extends _Control {
 }
 
 /**
- * A container for other types of controls. Differs from a panel element in that is must be a direct child of a tabbedpanel element, the title is shown in the selection tab, and it does not have a script-definable border.
- */
-declare class Tab extends Panel {
-  /**
-   * The parent element.
-   */
-  readonly parent: TabbedPanel
-}
-
-/**
- * A container for selectable tab containers. Differs from a panel element in that it can contain only tab elements as direct children.
- */
-declare class TabbedPanel extends Panel {
-  /**
-   * An array of child elements.
-   */
-  readonly children: Tab[]
-
-  /**
-   * The currently selected tab.
-   * Setting this value causes the specified tab to be enabled in the panel. You can set the value using the index of an item, rather than an object reference. If set to an index value that is out of range, the operation is ignored. When set with an index value, the property still returns an object reference.
-   * When the value of the selection property changes, either by a user selecting a different tab, or by a script setting the property, the TabbedPanel receives an onChange notification.
-   */
-  selection: Tab | number
-
-  /**
-   * An event-handler callback function, called when the selected tab has changed
-   */
-  onChange(): void
-}
-
-/**
  * A container for other controls within a window.
  * A group can specify layout options for its child elements. Hiding a group hides all its children. Making it visible makes visible those children that are not individually hidden.
  */
