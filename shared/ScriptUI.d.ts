@@ -2737,22 +2737,6 @@ interface _AddControlPropertiesStaticText {
 }
 
 /**
- * Creation properties of a Tab.
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesTab {
-  name: string
-}
-
-/**
- * Creation properties of a Tabbed Panel
- * @param name A unique name for the control.
- */
-interface _AddControlPropertiesTabbedPanel {
-  name: string
-}
-
-/**
  * Creation properties of a TreeView.
  * @param name A unique name for the control.
  * @param items An array of strings for the text of each top-level list item. An item object is created for each item. An item with the text string "-" creates a separator item. Supply this property, or the items argument to the add() method, not both. This form is most useful for elements defined using Resource Specifications.
@@ -2926,18 +2910,6 @@ interface _AddControl {
 
   /**
    */
-  (
-    type: "tab",
-    _bounds: undefined,
-    text?: string[],
-    properties?: Partial<_AddControlPropertiesTab>,
-  ): Tab
-  (
-    type: "tabbedpanel",
-    bounds?: Bounds | [number, number, number, number],
-    _text?: undefined,
-    properties?: Partial<_AddControlPropertiesTabbedPanel>,
-  ): TabbedPanel
   (
     type: "treeview",
     bounds?: _Bounds,
