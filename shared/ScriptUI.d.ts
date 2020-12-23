@@ -2,11 +2,11 @@
 
 declare enum _Alignment {
   TOP = 1,
-  BOTTOM,
-  LEFT,
-  RIGHT,
-  FILL,
-  CENTER,
+  BOTTOM = 2,
+  LEFT = 3,
+  RIGHT = 4,
+  FILL = 5,
+  CENTER = 6,
 }
 
 declare enum _FontStyle {
@@ -22,6 +22,11 @@ declare const enum _BrushOrPenType {
 }
 
 type _Bounds = Bounds | [number, number, number, number]
+
+type _AlignmentProperty = "left" | "right" | "fill" | "center"
+  | "top" | "bottom" | "fill" | "center"
+  | ["left" | "right" | "fill" | "center", "top" | "bottom" | "fill" | "center"]
+  | [_Alignment.LEFT | _Alignment.RIGHT | _Alignment.FILL | _Alignment.CENTER, _Alignment.TOP | _Alignment.BOTTOM | _Alignment.FILL | _Alignment.CENTER];
 
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
@@ -124,7 +129,7 @@ declare class Window extends _Control {
    * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
    * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
    */
-  alignChildren: string
+  alignChildren: _AlignmentProperty
 
   /**
    * For windows of type dialog, the UI element to notify when the user presses a cancellation key combination.
@@ -1968,7 +1973,7 @@ declare class Group extends _Control {
    * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
    * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
    */
-  alignChildren: string
+  alignChildren: _AlignmentProperty
 
   /**
    * An array of child elements.
@@ -2036,7 +2041,7 @@ declare class Panel extends _Control {
   /**
    * Specifies how to align the child elements.
    */
-  alignChildren: string
+  alignChildren: _AlignmentProperty
 
   /**
    * Reserve space for the specified number of characters; affects calculation of preferredSize .
@@ -2520,7 +2525,7 @@ declare class _Control {
    * For orientation = column: left, right, fill
    * For orientation = stack: top, bottom, left, right, fill
    */
-  alignment: string
+  alignment: _AlignmentProperty
 
   /**
    * The boundaries of the element, in parent-relative coordinates.
