@@ -28,6 +28,8 @@ type _AlignmentProperty = "left" | "right" | "fill" | "center"
   | ["left" | "right" | "fill" | "center", "top" | "bottom" | "fill" | "center"]
   | [_Alignment.LEFT | _Alignment.RIGHT | _Alignment.FILL | _Alignment.CENTER, _Alignment.TOP | _Alignment.BOTTOM | _Alignment.FILL | _Alignment.CENTER];
 
+type _Justify = "left" | "center" | "right";
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -185,7 +187,7 @@ declare class Window extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The layout manager for this container.
@@ -792,7 +794,7 @@ declare class StaticText extends _Control {
    * The text justification style.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -853,7 +855,7 @@ declare class Button extends _Control {
    * The text justification style.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1059,7 +1061,7 @@ declare class EditText extends _Control {
    * The text justification style.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1437,7 +1439,7 @@ declare class Checkbox extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1619,7 +1621,7 @@ declare class RadioButton extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -2062,7 +2064,7 @@ declare class Panel extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The layout manager for this container.
