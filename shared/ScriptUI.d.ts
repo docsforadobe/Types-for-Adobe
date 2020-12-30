@@ -944,6 +944,9 @@ declare class IconButton extends _Control {
    */
   shortcutKey: string
 
+  title: string
+  titleLayout: _TitleLayout
+
   /**
    * Sends a notification message, simulating the specified user interaction event.
    * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
@@ -1009,6 +1012,9 @@ declare class Image extends _Control {
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
    */
   shortcutKey: string
+
+  title: string
+  titleLayout: _TitleLayout
 
   /**
    * An event-handler callback function, called when the element acquires the keyboard focus.
@@ -1292,6 +1298,9 @@ declare class DropDownList extends _Control {
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
    */
   shortcutKey: string
+
+  title: string
+  titleLayout: _TitleLayout
 
   /**
    * Adds an item or separator to the choices in this list.
@@ -1943,6 +1952,9 @@ declare class FlashPlayer extends _Control {
    */
   active: boolean
 
+  title: string
+  titleLayout: _TitleLayout
+
   /**
    * A function definition for a callback from the Flash ActionScript environment.
    * The Flash ActionScript code can call any callback function defined on the ExtendScript side of the FlashPlayer object, invoking it by name as a property of the control object. The function can take any arguments of a supported data types, and can return any value of a supported data type. data types:Number, String, Boolean, null, undefined, Object, Array.
@@ -2166,6 +2178,9 @@ declare class TabbedPanel extends Panel {
    * When the value of the selection property changes, either by a user selecting a different tab, or by a script setting the property, the TabbedPanel receives an onChange notification.
    */
   selection: Tab | number
+
+  title: string
+  titleLayout: _TitleLayout
 
   /**
    * An event-handler callback function, called when the selected tab has changed.
@@ -2961,4 +2976,13 @@ interface _AddControl {
     items?: string[],
     properties?: _AddControlPropertiesTreeView,
   ): TreeView
+}
+
+interface _TitleLayout {
+  alignment?: _Alignment
+  characters?: number
+  spacing?: number
+  margins?: [number, number, number, number]
+  justify?: _Justify
+  truncate?: _Truncate
 }
