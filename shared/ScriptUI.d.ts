@@ -255,7 +255,7 @@ declare class Window extends _Control {
    * @param properties An object containing creation-only properties.
    */
   constructor(
-    type: string,
+    type: "dialog" | "palette" | "window",
     title?: string,
     bounds?: _Bounds,
     properties?: _AddControlPropertiesWindow,
