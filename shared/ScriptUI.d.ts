@@ -1184,8 +1184,9 @@ declare class ListBox extends _Control {
    * Returns the item control object. If this is a multi-column list box, each added ListItem represents one selectable row.Its text and image values specify the label in the first column, and the subitems property specifies the labels in the additional columns.
    * @param type The type of the child element, the string "item".
    * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
    */
-  add(type: string, text?: string): ListItem
+  add(type: "item", text?: string, index?: number): ListItem
 
   /**
    * Retrieves an item object from the list that has a given text label.
@@ -1295,8 +1296,10 @@ declare class DropDownList extends _Control {
    * Returns the item control object for type="item", or null for type="separator".
    * @param type The type of the child element. Either item (a basic, selectable item with a text label) or separator
    * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
    */
-  add(type: string, text?: string): ListItem
+  add(type: "item", text?: string, index?: number): ListItem
+  add(type: "separator", text?: string, index?: number): null
 
   /**
    * Retrieves an item object from the list that has a given text label.
@@ -1409,6 +1412,15 @@ declare class ListItem {
    * Normally "item", but an item whose parent is a DropDownList control can have type "separator". A separator item is not mouse-sensitive and is drawn as a horizontal line across the drop-down or pop-up menu.
    */
   readonly type: string
+
+  /**
+   * Adds an item to the choices in this list.
+   * Returns the item control object.
+   * @param type The type of the child element, the string "item" or "node".
+   * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
+   */
+  add(type: "item" | "node", text?: string, index?: number): ListItem
 }
 
 /**
@@ -1847,10 +1859,11 @@ declare class TreeView extends _Control {
   /**
    * Adds an item to the top-level choices in this list.
    * Returns the item control object.
-   * @param type The type of the child element, the string "item".
+   * @param type The type of the child element, the string "item" or "node".
    * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
    */
-  add(type: string, text?: string): ListItem
+  add(type: "item" | "node", text?: string, index?: number): ListItem
 
   /**
    * Retrieves an item object from the list that has a given text label.
