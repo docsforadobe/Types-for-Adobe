@@ -2531,6 +2531,27 @@ declare class KeyboardState {
   readonly shiftKey: boolean
 }
 
+declare class KeyboardEvent extends UIEvent implements KeyboardState {
+  altKey: boolean;
+  ctrlKey: boolean;
+  metaKey: boolean;
+  shiftKey: boolean;
+  keyIdentifier: string;
+  keyLocation: number;
+  keyName: string;
+  type: string;
+  getModifierState(keyIdentifier: "Alt" | "CapsLock" | "Control" | "Meta" | "NumLock" | "Scroll" | "Shift"): boolean
+  initKeyboardEvent(
+    eventName: string,
+    bubble: boolean,
+    isCancelable: boolean,
+    view: _Control,
+    keyID: string,
+    keyLocation: number,
+    modifiersList: string,
+  ): void
+}
+
 /**
  * A Control class.
  */
