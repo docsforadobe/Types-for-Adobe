@@ -195,7 +195,7 @@ declare class Window extends _Control {
    * The layout manager for this container.
    * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
    */
-  layout: LayoutManager
+  layout: AutoLayoutManager
 
   /**
    * The number of pixels between the edges of a container and the outermost child elements.
@@ -386,7 +386,7 @@ declare class Window extends _Control {
  * Controls the automatic layout behavior for a window or container.
  * The subclass AutoLayoutManager implements the default automatic layout behavior.
  */
-declare class LayoutManager {
+declare class AutoLayoutManager {
   /**
    * Invokes the automatic layout behavior for the managed container.
    * Adjusts sizes and positions of the child elements of this window or container according to the placement and alignment property values in the parent and children.
@@ -1993,7 +1993,7 @@ declare class Group extends _Control {
    * The layout manager for this container.
    * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
    */
-  layout: LayoutManager
+  layout: AutoLayoutManager
 
   /**
    * The number of pixels between the edges of a container and the outermost child elements.
@@ -2072,7 +2072,7 @@ declare class Panel extends _Control {
    * The layout manager for this container.
    * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
    */
-  layout: LayoutManager
+  layout: AutoLayoutManager
 
   /**
    * The number of pixels between the edges of a container and the outermost child elements.
