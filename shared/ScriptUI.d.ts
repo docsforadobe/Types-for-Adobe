@@ -32,6 +32,8 @@ type _Justify = "left" | "center" | "right"
 
 type _Orientation = "row" | "column" | "stack"
 
+type _Truncate = "middle" | "end" | "none"
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -2776,7 +2778,7 @@ interface _AddControlPropertiesStaticText {
   name?: string
   multiline?: boolean
   scrolling?: boolean
-  truncate?: string
+  truncate?: _Truncate
 }
 
 /**
