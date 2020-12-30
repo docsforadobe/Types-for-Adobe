@@ -26,9 +26,11 @@ type _Bounds = Bounds | [number, number, number, number]
 type _AlignmentProperty = "left" | "right" | "fill" | "center"
   | "top" | "bottom" | "fill" | "center"
   | ["left" | "right" | "fill" | "center", "top" | "bottom" | "fill" | "center"]
-  | [_Alignment.LEFT | _Alignment.RIGHT | _Alignment.FILL | _Alignment.CENTER, _Alignment.TOP | _Alignment.BOTTOM | _Alignment.FILL | _Alignment.CENTER];
+  | [_Alignment.LEFT | _Alignment.RIGHT | _Alignment.FILL | _Alignment.CENTER, _Alignment.TOP | _Alignment.BOTTOM | _Alignment.FILL | _Alignment.CENTER]
 
-type _Justify = "left" | "center" | "right";
+type _Justify = "left" | "center" | "right"
+
+type _Orientation = "row" | "column" | "stack"
 
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
@@ -221,7 +223,7 @@ declare class Window extends _Control {
    * The layout orientation of children in a container.
    * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
    */
-  orientation: string
+  orientation: _Orientation
 
   /**
    * The keypress combination that invokes this element's onShortcutKey() callback.
@@ -2003,7 +2005,7 @@ declare class Group extends _Control {
    * The layout orientation of children in a container.
    * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
    */
-  orientation: string
+  orientation: _Orientation
 
   /**
    * The number of pixels separating one child element from its adjacent sibling element.
@@ -2082,7 +2084,7 @@ declare class Panel extends _Control {
    * The layout orientation of children in a container.
    * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
    */
-  orientation: string
+  orientation: _Orientation
 
   /**
    * The number of pixels separating one child element from its adjacent sibling element.
