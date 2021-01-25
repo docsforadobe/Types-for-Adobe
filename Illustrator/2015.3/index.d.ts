@@ -3941,7 +3941,7 @@ declare class PathItems extends Array<PathItem> {
    * @param reversed Is the ellipse path reversed?
    * @param inscribed Is the ellipse path inscribed?
    */
-  static ellipse(
+  ellipse(
     top?: number,
     left?: number,
     width?: number,
@@ -3964,7 +3964,7 @@ declare class PathItems extends Array<PathItem> {
    * @param sides The number of sides on the polygon.
    * @param reversed Is the polygon path reversed?
    */
-  static polygon(
+  polygon(
     centerX?: number,
     centerY?: number,
     radius?: number,
@@ -3980,7 +3980,7 @@ declare class PathItems extends Array<PathItem> {
    * @param height The height of the rectangle.
    * @param reversed Is the rectangle path reversed?
    */
-  static rectangle(
+  rectangle(
     top: number,
     left: number,
     width: number,
@@ -4003,7 +4003,7 @@ declare class PathItems extends Array<PathItem> {
    * @param verticalRadius Vertical corner radius.
    * @param reversed Is the rectangle path reversed?
    */
-  static roundedRectangle(
+  roundedRectangle(
     top: number,
     left: number,
     width: number,
@@ -4022,7 +4022,7 @@ declare class PathItems extends Array<PathItem> {
    * @param points The number of points on the star.
    * @param reversed Is the star path reversed?
    */
-  static star(
+  star(
     centerX?: number,
     centerY?: number,
     radius?: number,
@@ -4133,7 +4133,7 @@ declare class Stories extends Array<Story> {
 /**
  * A collection of text frame items.
  */
-declare class TextFrameItems extends Array<TextFrame> {
+declare class TextFrameItems extends Array<TextFrameItem> {
   /**
    * Number of elements in the collection.
    */
@@ -4152,7 +4152,7 @@ declare class TextFrameItems extends Array<TextFrame> {
   /**
    * Create a point text frame item.
    */
-  add(): TextFrame
+  add(): TextFrameItem
 
   /**
    * Create an area text frame item.
@@ -4164,15 +4164,15 @@ declare class TextFrameItems extends Array<TextFrame> {
   static areaText(
     textPath: PathItem,
     orientation?: TextOrientation,
-    baseFrame?: TextFrame,
+    baseFrame?: TextFrameItem,
     postFix?: boolean,
-  ): TextFrame
+  ): TextFrameItem
 
   /**
    * Get the first element in the collection with the provided name.
    * @param name
    */
-  getByName(name: string): TextFrame
+  getByName(name: string): TextFrameItem
 
   /**
    * Create an on-path text frame item.
@@ -4188,16 +4188,16 @@ declare class TextFrameItems extends Array<TextFrame> {
     startTValue?: number,
     endTValue?: number,
     orientation?: TextOrientation,
-    baseFrame?: TextFrame,
+    baseFrame?: TextFrameItem,
     postFix?: boolean,
-  ): TextFrame
+  ): TextFrameItem
 
   /**
    * Create a point text frame item.
    * @param anchor The position (coordinates) of the anchor point.
    * @param orientation The orientation of the text.
    */
-  static pointText(anchor: Point | [number, number], orientation?: TextOrientation): TextFrame
+  static pointText(anchor: Point | [number, number], orientation?: TextOrientation): TextFrameItem
 
   /**
    * Deletes all elements.
@@ -10706,7 +10706,7 @@ declare class Story {
 /**
  * Text frame item.
  */
-declare class TextFrame extends PageItem {
+declare class TextFrameItem extends PageItem {
   /**
    * The position of the anchor point (start of base line for point text)
    */
@@ -10785,7 +10785,7 @@ declare class TextFrame extends PageItem {
   /**
    * The linked text frame following this one.
    */
-  nextFrame: TextFrame
+  nextFrame: TextFrameItem
 
   /**
    * Is the optical alignment active?
@@ -10805,7 +10805,7 @@ declare class TextFrame extends PageItem {
   /**
    * The linked text frame preceding this one.
    */
-  previousFrame: TextFrame
+  previousFrame: TextFrameItem
 
   /**
    * The row count in the text frame (area text only)
@@ -10860,12 +10860,12 @@ declare class TextFrame extends PageItem {
   /**
    * Convert Area Type Text Object To Point Type Object.
    */
-  convertAreaObjectToPointObject(): TextFrame
+  convertAreaObjectToPointObject(): TextFrameItem
 
   /**
    * Convert Point Type Text Object To Area Type Object.
    */
-  convertPointObjectToAreaObject(): TextFrame
+  convertPointObjectToAreaObject(): TextFrameItem
 
   /**
    * Convert text item to path items.
