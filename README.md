@@ -41,7 +41,6 @@ tsc
 
 - [Adobe's offical typings](https://github.com/Adobe-CEP/Samples/tree/master/TypeScript/typings)
 - [BrightShadow/CSInterface-TS](https://github.com/BrightShadow/CSInterface-TS)
-- [Premiere](http://ppro.aenhancers.com)
 
 ## Contributors
 
@@ -49,8 +48,5 @@ Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.co
 
 ## Showcase
 
-[Add your project](https://github.com/pravdomil/Types-for-Adobe/edit/master/README.md).
+[Add your project](https://github.com/bbb999/Types-for-Adobe/edit/master/README.md).
 
-## Become a backer
-
-Support this project by [buying a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=types-for-adobe%20Beer).
