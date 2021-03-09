@@ -1430,7 +1430,7 @@ declare class Layer {
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: Property<number>
+  readonly anchorPoint: Property<[number, number] | [number, number, number]>
   readonly position: Property<[number, number] | [number, number, number]>
   readonly xPosition: Property<number>
   readonly yPosition: Property<number>
