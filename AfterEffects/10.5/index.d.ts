@@ -52,7 +52,7 @@ declare interface Project {
   timeDisplayType: TimeDisplayType
 }
 
-declare interface Compitem {
+declare interface CompItem {
   /** When true, indicates that the composition uses drop-frame timecode. */
   dropFrame: boolean
 }
