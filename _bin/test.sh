@@ -13,7 +13,7 @@ set -x
 cd "${0%/*}/.."
 
 # To test if everything compiles.
-tsc --pretty --noEmit -p ./AfterEffects/2018
+tsc --pretty --noEmit -p ./AfterEffects/17.1
 tsc --pretty --noEmit -p ./Animate/2013
 tsc --pretty --noEmit -p ./Audition/2015.2
 tsc --pretty --noEmit -p ./Audition/2017

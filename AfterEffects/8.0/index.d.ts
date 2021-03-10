@@ -6,22 +6,8 @@
  */
 declare var system: System
 
-declare const enum _AppVersion {
-  CS3 = 8.0,
-  CS4 = 9.0,
-  CS5 = 10.0,
-  CS5_5 = 10.5,
-  CS6 = 11.0,
-  CC = 12.0,
-  CC2014 = 13.0,
-  CC2015 = 13.5,
-  CC2015_1 = 13.6,
-  CC2015_2 = 13.7,
-  CC2015_3 = 13.8,
-  CC2017 = 14.0,
-  CC2018 = 15.0,
-  CC2019 = 16.0,
-  CC2020 = 17.0,
+declare interface _AppVersion {
+  CS3: 8.0,
 }
 
 declare const enum _CommandID {
@@ -408,11 +394,6 @@ declare enum AutoOrientType {
   NO_AUTO_ORIENT,
 }
 
-declare enum LayerSamplingQuality {
-  BICUBIC,
-  BILINEAR,
-}
-
 declare enum AlphaMode {
   IGNORE,
   STRAIGHT,
@@ -451,13 +432,6 @@ declare enum ImportAsType {
   PROJECT,
 }
 
-declare enum LightType {
-  PARALLEL,
-  SPOT,
-  POINT,
-  AMBIENT,
-}
-
 declare enum MaskMode {
   NONE,
   ADD,
@@ -484,35 +458,6 @@ declare enum PostRenderAction {
   IMPORT,
   IMPORT_AND_REPLACE_USAGE,
   SET_PROXY,
-}
-
-declare enum GetSettingsFormat {
-  STRING,
-  STRING_SETTABLE,
-  NUMBER,
-  NUMBER_SETTABLE,
-  SPEC,
-}
-
-declare enum TimeDisplayType {
-  FRAMES,
-  TIMECODE,
-}
-
-declare enum FootageTimecodeDisplayStartType {
-  FTCS_START_0,
-  FTCS_USE_SOURCE_MEDIA,
-}
-
-declare enum FeetFramesFilmType {
-  MM16,
-  MM35,
-}
-
-declare enum FramesCountType {
-  FC_START_0,
-  FC_START_1,
-  FC_TIMECODE_CONVERSION,
 }
 
 declare enum CloseOptions {
@@ -585,86 +530,6 @@ declare enum PREFType {
   PREF_Type_MACHINE_SPECIFIC_PAINT,
 }
 
-declare enum ParagraphJustification {
-  LEFT_JUSTIFY,
-  CENTER_JUSTIFY,
-  RIGHT_JUSTIFY,
-  FULL_JUSTIFY_LASTLINE_LEFT,
-  FULL_JUSTIFY_LASTLINE_RIGHT,
-  FULL_JUSTIFY_LASTLINE_CENTER,
-  FULL_JUSTIFY_LASTLINE_FULL,
-  MULTIPLE_JUSTIFICATIONS,
-}
-
-declare enum ViewerType {
-  VIEWER_COMPOSITION,
-  VIEWER_LAYER,
-  VIEWER_FOOTAGE,
-}
-
-declare enum FastPreviewType {
-  FP_OFF,
-  FP_ADAPTIVE_RESOLUTION,
-  FP_DRAFT,
-  FP_FAST_DRAFT,
-  FP_WIREFRAME,
-}
-
-declare enum ChannelType {
-  CHANNEL_RGB,
-  CHANNEL_RED,
-  CHANNEL_GREEN,
-  CHANNEL_BLUE,
-  CHANNEL_ALPHA,
-  CHANNEL_RED_COLORIZE,
-  CHANNEL_GREEN_COLORIZE,
-  CHANNEL_BLUE_COLORIZE,
-  CHANNEL_RGB_STRAIGHT,
-  CHANNEL_ALPHA_OVERLAY,
-  CHANNEL_ALPHA_BOUNDARY,
-}
-
-/** CC2015.3- */
-declare enum GpuAccelType {
-  CUDA,
-  METAL,
-  OPENCL,
-  SOFTWARE,
-}
-
-/** CC2017- */
-declare enum ToolType {
-  Tool_Arrow,
-  Tool_Rotate,
-  Tool_CameraMaya,
-  Tool_CameraOrbit,
-  Tool_CameraTrackXY,
-  Tool_CameraTrackZ,
-  Tool_Paintbrush,
-  Tool_CloneStamp,
-  Tool_Eraser,
-  Tool_Hand,
-  Tool_Magnify,
-  Tool_PanBehind,
-  Tool_Rect,
-  Tool_RoundedRect,
-  Tool_Oval,
-  Tool_Polygon,
-  Tool_Star,
-  Tool_TextH,
-  Tool_TextV,
-  Tool_Pen,
-  Tool_Feather,
-  Tool_PenPlus,
-  Tool_PenMinus,
-  Tool_PenConvert,
-  Tool_Pin,
-  Tool_PinStarch,
-  Tool_PinDepth,
-  Tool_Quickselect,
-  Tool_Hairbrush,
-}
-
 /**
  * TYPES
  */
@@ -692,12 +557,9 @@ declare var writeLn: (text: string) => void
 declare var isValid: (obj: object) => boolean
 
 /** Provides access to objects and application settings within the After Effects application. The single global object is always available by its name, app. */
-declare class Application {
+declare interface Application {
   /** The current After Effects project. */
   readonly project: Project
-
-  /** The locale (language and region) in which the application is running. */
-  readonly isoLanguage: string
 
   /** The version number of the After Effects application. */
   readonly version: string
@@ -739,17 +601,8 @@ declare class Application {
   /** Memory in use by this application. */
   readonly memoryInUse: number
 
-  /** The effects available in the application. */
-  readonly effects: { displayName: string; matchName: string; version: string; category: string }[]
-
-  /** The currently focused or last-focused viewer panel. */
-  readonly activeViewer: Viewer | null
-
   /** Preferences */
   readonly preferences: Preferences
-
-  /** CC2017- */
-  availableGPUAccelTypes: GpuAccelType
 
   /** Creates a new project in After Effects. */
   newProject(): Project | null
@@ -812,7 +665,7 @@ declare class Application {
   cancelTimeout(id: number): void
 }
 
-declare class Preferences {
+declare interface Preferences {
   deletePref(section: string, key: string, type?: PREFType): void
   getPrefAsBool(section: string, key: string, type?: PREFType): boolean
   getPrefAsFloat(section: string, key: string, type?: PREFType): number
@@ -828,7 +681,7 @@ declare class Preferences {
 }
 
 /** The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects. */
-declare class AVItem extends Item {
+declare interface AVItem extends Item {
   /** The name of the object as shown in the Project panel. */
   name: string
 
@@ -900,7 +753,7 @@ declare class AVItem extends Item {
 }
 
 /** The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers). */
-declare class AVLayer extends Layer {
+declare interface AVLayer extends Layer {
   /** The source item for this layer. */
   readonly source: any
 
@@ -933,9 +786,6 @@ declare class AVLayer extends Layer {
 
   /** When true, 3D is set on a per-character basis in this text layer. */
   threeDPerChar: boolean
-
-  /** When true, this is an environment layer. */
-  environmentLayer: boolean
 
   /** When true, it is legal to change the value of collapseTransformation. */
   readonly canSetCollapseTransformation: boolean
@@ -979,9 +829,6 @@ declare class AVLayer extends Layer {
   /** The layer quality setting. */
   quality: LayerQuality
 
-  /** The layer sampling quality setting. */
-  samplingQuality: LayerSamplingQuality
-
   /** Reports whether this layer's audio is active at a given time. */
   audioActiveAtTime(time: number): boolean
 
@@ -1001,15 +848,6 @@ declare class AVLayer extends Layer {
     extents: boolean,
   ): { top: number; left: number; width: number; height: number }
 
-  /** Opens the layer in a Layer panel. */
-  openInViewer(): Viewer | null
-
-  /** CC 2014.2(13.2)- */
-  sourcePointToComp(point: [number, number]): [number, number]
-
-  /** CC 2014.2(13.2)- */
-  compPointToSource(point: [number, number]): [number, number]
-
   /** Shortcuts */
   readonly timeRemap: Property<number>
   readonly mask: MaskPropertyGroup
@@ -1021,24 +859,21 @@ declare class AVLayer extends Layer {
 }
 
 /** The CameraLayer object represents a camera layer within a composition. Create it using the LayerCollection object’s addCamera method */
-declare class CameraLayer extends Layer {
+declare interface CameraLayer extends Layer {
   /** Shortcuts */
   readonly cameraOption: _CameraOptionsGroup
 }
 
 /** Like an array, a collection associates a set of objects or values as a logical group and provides access to them by index. However, most collection objects are read-only. You do not assign objects to them yourself—their contents update automatically as objects are created or deleted. */
-declare class Collection {
+declare interface Collection {
   /** The number of objects in the collection. */
   readonly length: number
 }
 
 /** The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s item collection. */
-declare class CompItem extends AVItem {
+declare interface CompItem extends AVItem {
   /** The duration of a single frame. */
   frameDuration: number
-
-  /** When true, indicates that the composition uses drop-frame timecode. */
-  dropFrame: boolean
 
   /** The work area start time. */
   workAreaStart: number
@@ -1094,9 +929,6 @@ declare class CompItem extends AVItem {
   /** The layers of the composition. */
   readonly layers: LayerCollection
 
-  /** CC 2017(14.0)- The markers of the composition. */
-  readonly markerProperty: Property<MarkerValue>
-
   /** The selected layers of the composition. */
   readonly selectedLayers: Layer[]
 
@@ -1117,9 +949,6 @@ declare class CompItem extends AVItem {
   layer(otherLayer: Layer, relIndex: number): Layer
   layer(name: string): Layer
 
-  /** Opens the composition in a Composition panel. */
-  openInViewer(): Viewer | null
-
   /** Save the specific frame to a png file */
   saveFrameToPng(time: number, file: File): void
 
@@ -1128,7 +957,7 @@ declare class CompItem extends AVItem {
 }
 
 /** The FileSource object describes footage that comes from a file. */
-declare class FileSource extends FootageSource {
+declare interface FileSource extends FootageSource {
   /** The file that defines this asset. */
   readonly file: File
 
@@ -1140,7 +969,7 @@ declare class FileSource extends FootageSource {
 }
 
 /** The FolderItem object corresponds to a folder in your Project panel. It can contain various types of items (footage, compositions, solids) as well as other folders. */
-declare class FolderItem extends Item {
+declare interface FolderItem extends Item {
   /** The contents of this folder. */
   readonly items: ItemCollection
 
@@ -1152,7 +981,7 @@ declare class FolderItem extends Item {
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
-declare class FootageItem extends AVItem {
+declare interface FootageItem extends AVItem {
   /** The footage source file. */
   readonly file: File | null
 
@@ -1182,15 +1011,12 @@ declare class FootageItem extends AVItem {
     height: number,
     pixelAspect: number,
   ): void
-
-  /** Opens the footage in a Footage panel. */
-  openInViewer(): Viewer | null
 }
 
-declare class PlaceholderItem extends FootageItem {}
+declare interface PlaceholderItem extends FootageItem {}
 
 /** The FootageSource object holds information describing the source of some footage. It is used as the mainSource of a FootageItem, or the proxySource of a CompItem or FootageItem. */
-declare class FootageSource {
+declare interface FootageSource {
   /** The footage source file. */
   readonly file: File | null
 
@@ -1238,8 +1064,8 @@ declare class FootageSource {
 }
 
 /** The ImportOptions object encapsulates the options used to import a file with the Project.importFile methods. */
-declare class ImportOptions {
-  constructor(file?: File)
+declare interface ImportOptions {
+  constructor(file?: File): ImportOptions
 
   /** The type of file to be imported. */
   importAs: ImportAsType
@@ -1258,7 +1084,7 @@ declare class ImportOptions {
 }
 
 /** The Item object represents an item that can appear in the Project panel. */
-declare class Item {
+declare interface Item {
   /** The name of the object as shown in the Project panel. */
   name: string
 
@@ -1285,7 +1111,7 @@ declare class Item {
 }
 
 /** The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder. */
-declare class ItemCollection extends Collection {
+declare interface ItemCollection extends Collection {
   /** Retrieves a Item object in the collection by its index number. The first object is at index 1. */
   readonly [index: number]: Item
 
@@ -1304,8 +1130,8 @@ declare class ItemCollection extends Collection {
 }
 
 /** The KeyframeEase object encapsulates the keyframe ease settings of a layer’s AE property. Keyframe ease is determined by the speed and influence values that you set using the property’s setTemporalEaseAtKey method. */
-declare class KeyframeEase {
-  constructor(speed: number, influence: number)
+declare interface KeyframeEase {
+  constructor(speed: number, influence: number): KeyframeEase
 
   /** The speed setting for a keyframe. */
   speed: number
@@ -1320,7 +1146,7 @@ declare interface Layer {
   (name: string): Property<any> | PropertyGroup | MaskPropertyGroup
 }
 
-declare class Layer {
+declare interface Layer {
   /** The index position of the layer. */
   readonly index: number
 
@@ -1446,7 +1272,7 @@ declare class Layer {
 }
 
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
-declare class LayerCollection extends Collection {
+declare interface LayerCollection extends Collection {
   /** Retrieves a Layer object in the collection by its index number. The first object is at index 1. */
   readonly [index: number]: Layer
 
@@ -1469,9 +1295,6 @@ declare class LayerCollection extends Collection {
   /** Creates a new point text layer and adds it to this collection. */
   addText(sourceText?: string | TextDocument): TextLayer
 
-  /** Creates a new paragraph (box) text layer and adds it to this collection. */
-  addBoxText(size: [number, number], sourceText?: string | TextDocument): TextLayer
-
   /** Creates a new camera layer and adds it to this collection. */
   addCamera(name: string, centerPoint: [number, number]): CameraLayer
 
@@ -1489,16 +1312,13 @@ declare class LayerCollection extends Collection {
 }
 
 /** The LightLayer object represents a light layer within a composition. Create it using the LayerCollection object’s addLight method */
-declare class LightLayer extends Layer {
-  /** For light layers, the type of light. */
-  lightType: LightType
-
+declare interface LightLayer extends Layer {
   /** Shortcuts */
   readonly lightOption: _LightOptionsGroup
 }
 
 /** The MarkerValue object represents a layer marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer. */
-declare class MarkerValue {
+declare interface MarkerValue {
   constructor(
     comment: string,
     chapter?: string,
@@ -1506,13 +1326,10 @@ declare class MarkerValue {
     frameTarget?: string,
     cuePointName?: string,
     params?: string,
-  )
+  ): MarkerValue
 
   /** A comment on the associated layer. */
   comment: string
-
-  /** The amount of time represented by the marker. */
-  duration: number
 
   /** A chapter link reference point for the associated layer. */
   chapter: string
@@ -1537,7 +1354,7 @@ declare class MarkerValue {
 }
 
 /** The MaskPropertyGroup object encapsulates mask attributes in a layer. */
-declare class MaskPropertyGroup extends PropertyGroup {
+declare interface MaskPropertyGroup extends PropertyGroup {
   /** The mask mode. */
   maskMode: MaskMode
 
@@ -1556,9 +1373,6 @@ declare class MaskPropertyGroup extends PropertyGroup {
   /** The color used to draw the mask outline in the user interface. */
   color: [number, number, number]
 
-  /** The feather falloff mode for the mask. */
-  maskFeatherFalloff: MaskFeatherFalloff
-
   /** The shape of the mask. */
   maskShape: Property<Shape>
 
@@ -1576,13 +1390,13 @@ declare class MaskPropertyGroup extends PropertyGroup {
 }
 
 /** The OMCollection contains all of the output modules in a render queue. The collection provides access to the OutputModule objects, but does not provide any additional functionality. The first OutputModule object in the collection is at index position 1. */
-declare class OMCollection extends Collection {
+declare interface OMCollection extends Collection {
   /** Retrieves a OutputModule object in the collection by its index number. The first object is at index 1. */
   readonly [index: number]: OutputModule
 }
 
 /** An OutputModule object of a RenderQueueItem generates a single file or sequence via a render operation, and contains attributes and methods relating to the file to be rendered. */
-declare class OutputModule {
+declare interface OutputModule {
   /** The path and name of the file to be rendered. */
   file: File
 
@@ -1595,9 +1409,6 @@ declare class OutputModule {
   /** All templates for the output module */
   readonly templates: string[]
 
-  /** When true, writes all source footage XMP metadata to the output file. */
-  includeSourceXMP: boolean
-
   /** Removes this output module from the render-queue item’s list. */
   remove(): void
 
@@ -1606,49 +1417,13 @@ declare class OutputModule {
 
   /** Applies an output-module template. */
   applyTemplate(templateName: string): void
-
-  getSetting(key: string): string | number
-
-  getSettings(
-    format?: GetSettingsFormat,
-  ): {
-    "Audio Bit Depth": string
-    "Audio Channels": string
-    "Audio Sample Rate": string
-    Channels: string
-    Color: string
-    Crop: string
-    "Crop Bottom": string
-    "Crop Left": string
-    "Crop Right": string
-    "Crop Top": string
-    Depth: string
-    Format: string
-    "Include Project Link": string
-    "Include Source XMP Metadata": string
-    "Lock Aspect Ratio": string
-    "Output Audio": string
-    "Output File Info": string
-    "Post-Render Action": string
-    Resize: string
-    "Resize Quality": string
-    "Resize to": object
-    "Starting #": string
-    "Use Comp Frame Number": string
-    "Use Region of Interest": string
-    "Video Output": string
-  }
-
-  setSetting(key: string, value: string | number): void
-
-  setSettings(settings: object): void
 }
 
 /** The PlaceholderSource object describes the footage source of a placeholder. */
-declare class PlaceholderSource extends FootageSource {}
+declare interface PlaceholderSource extends FootageSource {}
 
 /** The project object represents an After Effects project. Attributes provide access to specific objects within the project, such as imported files or footage and compositions, and also to project settings such as the timecode base. Methods can import footage, create solids, compositions and folders, and save changes. */
-declare class Project {
+declare interface Project {
   /** The file for the currently open project. */
   readonly file: File | null
 
@@ -1676,38 +1451,11 @@ declare class Project {
   /** The project’s render queue. */
   readonly renderQueue: RenderQueue
 
-  /** The current expression engine used in the project. */
-  expressionEngine: string
-
-  /** The time display style, corresponding to the Time Display Style section in the Project Settings dialog box. */
-  timeDisplayType: TimeDisplayType
-
-  /** CC 2017(14.0)- The active tool in the Tools panel. */
-  toolType: ToolType
-
-  /** The Footage Start Time setting in the Project Settings dialog box, which is enabled when Timecode is selected as the time display style. */
-  footageTimecodeDisplayStartType: FootageTimecodeDisplayStartType
-
-  /** The Use Feet + Frames setting in the Project Settings dialog box. */
-  framesUseFeetFrames: boolean
-
-  /** The Use Feet + Frames menu setting in the Project Settings dialog box. */
-  feetFramesFilmType: FeetFramesFilmType
-
-  /** CC 2015.3(13.8)- */
-  gpuAccelType: GpuAccelType
-
-  /** The Frame Count menu setting in the Project Settings dialog box. */
-  framesCountType: FramesCountType
-
   /** The frame at which to start numbering when displaying the project. */
   displayStartFrame: number
 
   /** When true, linear blending is used for the project. */
   linearBlending: boolean
-
-  /** The project’s XMP metadata. */
-  xmpPacket: string
 
   /** Retrieves an item from the project. */
   item(index: number): Item
@@ -1750,55 +1498,10 @@ declare class Project {
 
   /** Automatically replaces text in all expressions. */
   autoFixExpressions(oldText: string, newText: string): void
-
-  /** Creates a new team project. */
-  newTeamProject(teamProjectName: string, description: string): boolean
-
-  /** Opens a team project. */
-  openTeamProject(teamProjectName: string): boolean
-
-  /** Shares the currently open team project. */
-  shareTeamProject(comment: string): boolean
-
-  /** Syncs the currently open team project. */
-  syncTeamProject(): boolean
-
-  /** Closes a currently open team project. */
-  closeTeamProject(): boolean
-
-  /** Converts a team project to an After Effects project on a local disk. */
-  convertTeamProjectToProject(project_file: File): boolean
-
-  /** Returns an array containing the name strings for all team projects available for the current user. Archived Team Projects are not included. */
-  listTeamProjects(): string[]
-
-  /** Checks whether specified team project is currently open. */
-  isTeamProjectOpen(teamProjectName: string): boolean
-
-  /** Checks whether any team project is currently open. */
-  isAnyTeamProjectOpen(): boolean
-
-  /** Checks whether or not team projects is enabled for After Effects. (This will almost always return true.) */
-  isTeamProjectEnabled(): boolean
-
-  /** Checks whether or not the client (After Effects) is currently logged into the team project server. */
-  isLoggedInToTeamProject(): boolean
-
-  /** Checks whether or not the Sync command is enabled. */
-  isSyncCommandEnabled(): boolean
-
-  /** Checks whether or not the Share command is enabled. */
-  isShareCommandEnabled(): boolean
-
-  /** Checks whether or not the Resolve command is enabled. */
-  isResolveCommandEnabled(): boolean
-
-  /** Resolves a conflict between the open team project and the version on the team projects server, using the specified resolution method. */
-  resolveConflict(ResolveType: ResolveType): boolean
 }
 
 /** The Property object contains value, keyframe, and expression information about a particular AE property of a layer. */
-declare class Property<A> extends PropertyBase {
+declare interface Property<A> extends PropertyBase {
   /** Type of value stored in this property. */
   readonly propertyValueType: PropertyValueType
 
@@ -1835,9 +1538,6 @@ declare class Property<A> extends PropertyBase {
   /** The expression string for this property. */
   expression: string
 
-  /** When true, the expression can be set by a script. */
-  readonly canSetExpression: boolean
-
   /** When true, the expression is used to generate values for the property. */
   expressionEnabled: boolean
 
@@ -1849,21 +1549,6 @@ declare class Property<A> extends PropertyBase {
 
   /** The position index of this property. */
   readonly propertyIndex: number
-
-  /** When true, the property’s dimensions are represented as separate properties. */
-  dimensionsSeparated: boolean
-
-  /** When true, the property represents one of the separated dimensions for a multidimensional property. */
-  readonly isSeparationFollower: boolean
-
-  /** When true, the property is multidimensional and can be separated. */
-  readonly isSeparationLeader: boolean
-
-  /** For a separated follower, the dimension it represents in the multidimensional leader. */
-  readonly separationDimension: number
-
-  /** The original multidimensional property for this separated follower. */
-  readonly separationLeader: Property<A>
 
   /** Gets the value of the property evaluated at given time. */
   valueAtTime(time: number, preExpression: boolean): A
@@ -1993,9 +1678,6 @@ declare class Property<A> extends PropertyBase {
 
   /** Reports whether a keyframe is selected. */
   keySelected(keyIndex: number): boolean
-
-  /** For a separated, multidimensional property, retrieves a specific follower property. */
-  getSeparationFollower(dim: number): Property<number>
 }
 
 /** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
@@ -2004,7 +1686,7 @@ declare interface PropertyBase {
   (name: string): Property<any> | PropertyGroup | MaskPropertyGroup
 }
 
-declare class PropertyBase {
+declare interface PropertyBase {
   /** Name of the property. */
   name: string
 
@@ -2065,7 +1747,7 @@ declare class PropertyBase {
 }
 
 /** The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes. */
-declare class PropertyGroup extends PropertyBase {
+declare interface PropertyGroup extends PropertyBase {
   /** The number of indexed properties in the group. */
   readonly numProperties: number
 
@@ -2077,7 +1759,7 @@ declare class PropertyGroup extends PropertyBase {
 }
 
 /** The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. */
-declare class RenderQueue {
+declare interface RenderQueue {
   /** When true, a render is in progress. */
   readonly rendering: boolean
 
@@ -2104,13 +1786,10 @@ declare class RenderQueue {
 
   /** Gets a render-queue item from the collection. */
   item(index: number): RenderQueueItem
-
-  /** CC 2017(14.0)- */
-  queueInAME(render_immediately_in_AME: boolean): void
 }
 
 /** The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the RQItemCollection object; */
-declare class RenderQueueItem {
+declare interface RenderQueueItem {
   /** The total number of Output Modules assigned to the item. */
   readonly numOutputModules: number
 
@@ -2164,18 +1843,10 @@ declare class RenderQueueItem {
 
   /** Duplicates this item. */
   duplicate(): RenderQueueItem
-
-  getSetting(key: string): string | number
-
-  getSettings(format: GetSettingsFormat): object
-
-  setSetting(key: string, value: string | number): void
-
-  setSettings(settings: object): void
 }
 
 /** The RQItemCollection contains all of the render-queue items in a project, as shown in the Render Queue panel of the project. The collection provides access to the RenderQueueItem objects, and allows you to create them from compositions. The first RenderQueueItem object in the collection is at index position 1. */
-declare class RQItemCollection extends Collection {
+declare interface RQItemCollection extends Collection {
   /** Retrieves an RenderQueueItem in the collection by its index number. The first object is at index 1. */
   [index: number]: RenderQueueItem
 
@@ -2184,7 +1855,7 @@ declare class RQItemCollection extends Collection {
 }
 
 /** The Settings object provides an easy way to manage settings for scripts. The settings are saved in the After Effects preferences file and are persistent between application sessions. Settings are identified by section and key within the file, and each key name is associated with a value. In the preferences file, section names are enclosed in brackets and quotation marks, and key names are listing in quotation marks below the section name. All values are strings. */
-declare class Settings {
+declare interface Settings {
   /** Saves a default value for a setting. */
   saveSetting(sectionName: string, keyName: string, value: string, type?: PREFType): void
 
@@ -2196,7 +1867,7 @@ declare class Settings {
 }
 
 /** The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. */
-declare class Shape {
+declare interface Shape {
   /** When true, the shape is a closed curve. */
   closed: boolean
 
@@ -2208,40 +1879,19 @@ declare class Shape {
 
   /** The tangent vectors coming out of the shape vertices. */
   outTangents: [number, number][]
-
-  /** The mask path segment (sections of a mask path between vertices) containing each feather point. */
-  featherSegLocs: number[]
-
-  /** The relative position of each feather point on its mask path segment. */
-  featherRelSegLocs: number[]
-
-  /** The feather amount (radius) for each feather point. */
-  featherRadii: number[]
-
-  /** The feather radius interpolation type for each feather point. */
-  featherInterps: number[]
-
-  /** The feather tension at each feather point. */
-  featherTensions: number[]
-
-  /** The direction (inner or outer) of each feather point. */
-  featherTypes: number[]
-
-  /** The relative angle between the two normals on either side of a curved outer feather boundary at a corner on a mask path. */
-  featherRelCornerAngles: number[]
 }
 
 /** The ShapeLayer object represents a shape layer within a composition. Create it using the LayerCollection object’s addShape() method. */
-declare class ShapeLayer extends AVLayer {}
+declare interface ShapeLayer extends AVLayer {}
 
 /** The SolidSource object represents a solid-color footage source. */
-declare class SolidSource extends FootageSource {
+declare interface SolidSource extends FootageSource {
   /** The color of the solid. */
   color: [number, number, number]
 }
 
 /** The file specification, an ExtendScript File object. */
-declare class Swatch {
+declare interface Swatch {
   /** The ASE version number. */
   majorVersion: number
 
@@ -2253,7 +1903,7 @@ declare class Swatch {
 }
 
 /** The file specification, an ExtendScript File object. */
-declare class SwatchValue {
+declare interface SwatchValue {
   /** One of "RGB", "CMYK", "LAB", "Gray" */
   type: "RGB" | "CMYK" | "LAB" | "Gray"
 
@@ -2279,7 +1929,7 @@ declare class SwatchValue {
 }
 
 /** The System object provides access to attributes found on the user’s system, such as the user name and the name and version of the operating system. It is available through the system global variable. */
-declare class System {
+declare interface System {
   /** The current user name. */
   readonly userName: string
 
@@ -2297,149 +1947,25 @@ declare class System {
 }
 
 /** The TextDocument object stores a value for a TextLayer's Source Text property. Create it with the constructor, passing the string to be encapsulated. */
-declare class TextDocument {
-  constructor(docText: string)
+declare interface TextDocument {
+  constructor(docText: string): TextDocument
 
   /** The text layer’s Source Text value. */
   text: string
-
-  /** The text layer’s font specified by its PostScript name. */
-  font: string
-
-  /** string with path of font file, providing its location on disk (not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts) */
-  readonly fontLocation: string
-
-  /** string with style information — e.g., “bold”, “italic” */
-  readonly fontStyle: string
-
-  /** a string with the name of the font family */
-  readonly fontFamily: string
-
-  /** The text layer’s font size in pixels. */
-  fontSize: number
-
-  /** When true, the text layer shows a fill. */
-  applyFill: boolean
-
-  /** When true, the text layer shows a stroke. */
-  applyStroke: boolean
-
-  /** The text layer’s fill color. */
-  fillColor: [number, number, number]
-
-  /** The text layer’s stroke color. */
-  strokeColor: [number, number, number]
-
-  /** Indicates the rendering order for the fill and stroke of a text layer. */
-  strokeOverFill: boolean
-
-  /** The text layer’s stroke thickness. */
-  strokeWidth: number
-
-  /** The paragraph justification for the text layer. */
-  justification: ParagraphJustification
-
-  /** The text layer’s spacing between characters. */
-  tracking: number
-
-  /** When true, the text layer is point (unbounded) text. */
-  readonly pointText: boolean
-
-  /** When true, the text layer is paragraph (bounded) text. */
-  readonly boxText: boolean
-
-  /** For box text, the pixel dimensions for the text bounds. */
-  boxTextSize: [number, number]
-
-  /** CC 2014.2(13.2)- */
-  readonly fauxBold: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly fauxItalic: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly allCaps: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly smallCaps: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly superscript: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly subscript: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly verticalScale: number
-
-  /** CC 2014.2(13.2)- */
-  readonly horizontalScale: number
-
-  /** CC 2014.2(13.2)- */
-  readonly baselineShift: number
-
-  /** CC 2014.2(13.2)- */
-  readonly tsume: number
-
-  /** CC 2014.2(13.2)- */
-  readonly boxTextPos: [number, number]
-
-  /** CC 2015(13.6)- */
-  readonly baselineLocs: number[]
-
-  /** Restores the default character settings in the Character panel. */
-  resetCharStyle(): void
-
-  /** Restores the default paragraph settings in the Paragraph panel. */
-  resetParagraphStyle(): void
 }
 
 /** The TextLayer object represents a text layer within a composition. Create it using the LayerCollection object’s addText method. */
-declare class TextLayer extends AVLayer {
+declare interface TextLayer extends AVLayer {
   readonly source: null
 
   readonly text: _TextProperties
   readonly sourceText: Property<TextDocument>
 }
 
-/** The Viewer object represents a Composition, Layer, or Footage panel. */
-declare class Viewer {
-  /** The type of content in the viewer. */
-  readonly type: ViewerType
-
-  /** When true, the viewer is focused. */
-  readonly active: boolean
-
-  activeViewIndex: number
-
-  readonly views: View[]
-
-  /** When true, the viewer is at its maximized size. */
-  maximized: boolean
-
-  /** Moves the viewer to front and places focus on it. */
-  setActive(): boolean
-}
-
-declare class View {
-  readonly active: boolean
-  readonly options: ViewOptions
-
-  setActive(): void
-}
-
-declare class ViewOptions {
-  channels: ChannelType
-  checkerboards: boolean
-  exposure: number
-  fastPreview: FastPreviewType
-  zoom: number
-}
-
 /**
  * Properties for Shortcuts
  */
-declare class _TransformGroup extends PropertyGroup {
+declare interface _TransformGroup extends PropertyGroup {
   readonly anchorPoint: Property<[number, number] | [number, number, number]>
   readonly position: Property<[number, number] | [number, number, number]>
   readonly xPosition: Property<number>
@@ -2455,7 +1981,7 @@ declare class _TransformGroup extends PropertyGroup {
   readonly pointOfInterest: Property<[number, number, number]>
 }
 
-declare class _LightOptionsGroup extends PropertyGroup {
+declare interface _LightOptionsGroup extends PropertyGroup {
   readonly intensity: Property<number>
   readonly color: Property<[number, number, number, number]>
   readonly coneAngle: Property<number>
@@ -2468,7 +1994,7 @@ declare class _LightOptionsGroup extends PropertyGroup {
   readonly shadowDiffusion: Property<number>
 }
 
-declare class _CameraOptionsGroup extends PropertyGroup {
+declare interface _CameraOptionsGroup extends PropertyGroup {
   readonly zoom: Property<number>
   readonly depthOfField: Property<boolean>
   readonly focusDistance: Property<number>
@@ -2484,7 +2010,7 @@ declare class _CameraOptionsGroup extends PropertyGroup {
   readonly highlightSaturation: Property<number>
 }
 
-declare class _LayerStyles extends PropertyGroup {
+declare interface _LayerStyles extends PropertyGroup {
   readonly blendingOption: _BlendOptionsGroup
   readonly dropShadow: _DropShadow
   readonly innerShadow: _InnerShadow
@@ -2497,13 +2023,13 @@ declare class _LayerStyles extends PropertyGroup {
   readonly stroke: _Stroke
 }
 
-declare class _BlendOptionsGroup extends PropertyGroup {
+declare interface _BlendOptionsGroup extends PropertyGroup {
   readonly globalLightAngle: Property<number>
   readonly globalLightAltitude: Property<number>
   readonly advancedBlending: _AdvBlendGroup
 }
 
-declare class _AdvBlendGroup extends PropertyGroup {
+declare interface _AdvBlendGroup extends PropertyGroup {
   readonly fillOpacity: Property<number>
   readonly red: Property<boolean>
   readonly green: Property<boolean>
@@ -2512,7 +2038,7 @@ declare class _AdvBlendGroup extends PropertyGroup {
   readonly useBlendRangesFromSource: Property<boolean>
 }
 
-declare class _DropShadow extends PropertyGroup {
+declare interface _DropShadow extends PropertyGroup {
   readonly blendMode: Property<number>
   readonly color: Property<[number, number, number, number]>
   readonly opacity: Property<number>
@@ -2525,7 +2051,7 @@ declare class _DropShadow extends PropertyGroup {
   readonly layerKnocksOutDropShadow: Property<boolean>
 }
 
-declare class _InnerShadow extends PropertyGroup {
+declare interface _InnerShadow extends PropertyGroup {
   readonly blendMode: Property<number>
   readonly color: Property<[number, number, number, number]>
   readonly opacity: Property<number>
@@ -2537,7 +2063,7 @@ declare class _InnerShadow extends PropertyGroup {
   readonly noise: Property<number>
 }
 
-declare class _OuterGlow extends PropertyGroup {
+declare interface _OuterGlow extends PropertyGroup {
   readonly blendMode: Property<number>
   readonly opacity: Property<number>
   readonly noise: Property<number>
@@ -2552,7 +2078,7 @@ declare class _OuterGlow extends PropertyGroup {
   readonly jitter: Property<number>
 }
 
-declare class _InnerGlow extends PropertyGroup {
+declare interface _InnerGlow extends PropertyGroup {
   readonly blendMode: Property<number>
   readonly opacity: Property<number>
   readonly noise: Property<number>
@@ -2568,7 +2094,7 @@ declare class _InnerGlow extends PropertyGroup {
   readonly jitter: Property<number>
 }
 
-declare class _BevelAndEmboss extends PropertyGroup {
+declare interface _BevelAndEmboss extends PropertyGroup {
   readonly style: Property<number>
   readonly technique: Property<number>
   readonly depth: Property<number>
@@ -2586,7 +2112,7 @@ declare class _BevelAndEmboss extends PropertyGroup {
   readonly shadowOpacity: Property<number>
 }
 
-declare class _Satin extends PropertyGroup {
+declare interface _Satin extends PropertyGroup {
   readonly blendMode: Property<number>
   readonly color: Property<[number, number, number, number]>
   readonly opacity: Property<number>
@@ -2596,13 +2122,13 @@ declare class _Satin extends PropertyGroup {
   readonly invert: Property<boolean>
 }
 
-declare class _ColorOverlay extends PropertyGroup {
+declare interface _ColorOverlay extends PropertyGroup {
   readonly blendMode: Property<number>
   readonly color: Property<[number, number, number, number]>
   readonly opacity: Property<number>
 }
 
-declare class _GradientOverlay extends PropertyGroup {
+declare interface _GradientOverlay extends PropertyGroup {
   readonly blendMode: Property<number>
   readonly opacity: Property<number>
   readonly colors: Property<void>
@@ -2615,7 +2141,7 @@ declare class _GradientOverlay extends PropertyGroup {
   readonly offset: Property<[number, number]>
 }
 
-declare class _Stroke extends PropertyGroup {
+declare interface _Stroke extends PropertyGroup {
   readonly color: Property<[number, number, number, number]>
   readonly blendMode: Property<number>
   readonly size: Property<number>
@@ -2623,7 +2149,7 @@ declare class _Stroke extends PropertyGroup {
   readonly position: Property<number>
 }
 
-declare class _GeometryOptionsGroup extends PropertyGroup {
+declare interface _GeometryOptionsGroup extends PropertyGroup {
   readonly curvature: Property<number>
   readonly segments: Property<number>
 
@@ -2633,7 +2159,7 @@ declare class _GeometryOptionsGroup extends PropertyGroup {
   readonly extrusionDepth: Property<number>
 }
 
-declare class _MaterialOptionsGroup extends PropertyGroup {
+declare interface _MaterialOptionsGroup extends PropertyGroup {
   readonly castsShadows: Property<boolean>
   readonly lightTransmission: Property<number>
   readonly acceptsShadows: Property<boolean>
@@ -2652,21 +2178,21 @@ declare class _MaterialOptionsGroup extends PropertyGroup {
   readonly indexOfRefraction: Property<number>
 }
 
-declare class _AudioGroup extends PropertyGroup {
+declare interface _AudioGroup extends PropertyGroup {
   readonly audioLevels: Property<[number, number]>
 }
 
-declare class _TextProperties extends PropertyGroup {
+declare interface _TextProperties extends PropertyGroup {
   readonly sourceText: Property<TextDocument>
   readonly pathOption: _TextPathOptions
   readonly moreOption: _TextMoreOptions
 }
 
-declare class _TextPathOptions extends PropertyGroup {
+declare interface _TextPathOptions extends PropertyGroup {
   readonly path: Property<number>
 }
 
-declare class _TextMoreOptions extends PropertyGroup {
+declare interface _TextMoreOptions extends PropertyGroup {
   readonly anchorPointGrouping: Property<number>
   readonly groupingAlignment: Property<[number, number]>
   readonly fillANdStroke: Property<number>
