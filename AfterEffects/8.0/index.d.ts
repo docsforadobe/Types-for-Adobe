@@ -957,7 +957,7 @@ declare interface CompItem extends AVItem {
 }
 
 /** The FileSource object describes footage that comes from a file. */
-declare interface FileSource extends FootageSource {
+declare class FileSource extends FootageSource {
   /** The file that defines this asset. */
   readonly file: File
 
@@ -1016,7 +1016,7 @@ declare interface FootageItem extends AVItem {
 declare interface PlaceholderItem extends FootageItem {}
 
 /** The FootageSource object holds information describing the source of some footage. It is used as the mainSource of a FootageItem, or the proxySource of a CompItem or FootageItem. */
-declare interface FootageSource {
+declare class FootageSource {
   /** The footage source file. */
   readonly file: File | null
 
@@ -1064,8 +1064,8 @@ declare interface FootageSource {
 }
 
 /** The ImportOptions object encapsulates the options used to import a file with the Project.importFile methods. */
-declare interface ImportOptions {
-  constructor(file?: File): ImportOptions
+declare class ImportOptions {
+  constructor(file?: File)
 
   /** The type of file to be imported. */
   importAs: ImportAsType
@@ -1130,8 +1130,8 @@ declare interface ItemCollection extends Collection {
 }
 
 /** The KeyframeEase object encapsulates the keyframe ease settings of a layer’s AE property. Keyframe ease is determined by the speed and influence values that you set using the property’s setTemporalEaseAtKey method. */
-declare interface KeyframeEase {
-  constructor(speed: number, influence: number): KeyframeEase
+declare class KeyframeEase {
+  constructor(speed: number, influence: number)
 
   /** The speed setting for a keyframe. */
   speed: number
@@ -1318,7 +1318,7 @@ declare interface LightLayer extends Layer {
 }
 
 /** The MarkerValue object represents a layer marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer. */
-declare interface MarkerValue {
+declare class MarkerValue {
   constructor(
     comment: string,
     chapter?: string,
@@ -1326,7 +1326,7 @@ declare interface MarkerValue {
     frameTarget?: string,
     cuePointName?: string,
     params?: string,
-  ): MarkerValue
+  )
 
   /** A comment on the associated layer. */
   comment: string
@@ -1420,10 +1420,10 @@ declare interface OutputModule {
 }
 
 /** The PlaceholderSource object describes the footage source of a placeholder. */
-declare interface PlaceholderSource extends FootageSource {}
+declare class PlaceholderSource extends FootageSource {}
 
 /** The project object represents an After Effects project. Attributes provide access to specific objects within the project, such as imported files or footage and compositions, and also to project settings such as the timecode base. Methods can import footage, create solids, compositions and folders, and save changes. */
-declare interface Project {
+declare class Project {
   /** The file for the currently open project. */
   readonly file: File | null
 
@@ -1885,7 +1885,7 @@ declare interface Shape {
 declare interface ShapeLayer extends AVLayer {}
 
 /** The SolidSource object represents a solid-color footage source. */
-declare interface SolidSource extends FootageSource {
+declare class SolidSource extends FootageSource {
   /** The color of the solid. */
   color: [number, number, number]
 }
@@ -1947,8 +1947,8 @@ declare interface System {
 }
 
 /** The TextDocument object stores a value for a TextLayer's Source Text property. Create it with the constructor, passing the string to be encapsulated. */
-declare interface TextDocument {
-  constructor(docText: string): TextDocument
+declare class TextDocument {
+  constructor(docText: string)
 
   /** The text layer’s Source Text value. */
   text: string
