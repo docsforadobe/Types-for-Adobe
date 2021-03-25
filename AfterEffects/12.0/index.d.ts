@@ -1349,12 +1349,12 @@ declare class Layer extends PropertyGroup {
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: OneDProperty | TwoDProperty
-  readonly position: OneDProperty | TwoDProperty
+  readonly anchorPoint: TwoDProperty | ThreeDProperty
+  readonly position: TwoDProperty | ThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: OneDProperty | TwoDProperty
+  readonly scale: TwoDProperty | ThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
@@ -2292,12 +2292,12 @@ declare class ViewOptions {
  * Properties for Shortcuts
  */
 declare interface _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: OneDProperty | TwoDProperty
-  readonly position: OneDProperty | TwoDProperty
+  readonly anchorPoint: TwoDProperty | ThreeDProperty
+  readonly position: TwoDProperty | ThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: OneDProperty | TwoDProperty
+  readonly scale: TwoDProperty | ThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
