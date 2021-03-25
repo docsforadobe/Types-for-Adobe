@@ -1567,7 +1567,6 @@ declare interface ShapePropertyType extends PropertyClassMembers {
 
 type NoValueProperty = Property<NoValueType>;
 type ColorProperty = Property<ColorType>;
-type BooleanProperty = Property<BooleanType>;
 type OneDProperty = Property<OneDType>;
 type TwoDProperty = Property<TwoDType>;
 type ThreeDProperty = Property<ThreeDType>;
@@ -2066,14 +2065,14 @@ declare interface _LightOptionsGroup extends PropertyGroup {
   readonly falloff: OneDProperty
   readonly radius: OneDProperty
   readonly falloffDistance: OneDProperty
-  readonly castsShadows: BooleanProperty
+  readonly castsShadows: OneDProperty
   readonly shadowDarkness: OneDProperty
   readonly shadowDiffusion: OneDProperty
 }
 
 declare interface _CameraOptionsGroup extends PropertyGroup {
   readonly zoom: OneDProperty
-  readonly depthOfField: BooleanProperty
+  readonly depthOfField: OneDProperty
   readonly focusDistance: OneDProperty
   readonly aperture: OneDProperty
   readonly blurLevel: OneDProperty
@@ -2108,35 +2107,35 @@ declare interface _BlendOptionsGroup extends PropertyGroup {
 
 declare interface _AdvBlendGroup extends PropertyGroup {
   readonly fillOpacity: OneDProperty
-  readonly red: BooleanProperty
-  readonly green: BooleanProperty
-  readonly blue: BooleanProperty
-  readonly blendInteriorStylesAsGroup: BooleanProperty
-  readonly useBlendRangesFromSource: BooleanProperty
+  readonly red: OneDProperty
+  readonly green: OneDProperty
+  readonly blue: OneDProperty
+  readonly blendInteriorStylesAsGroup: OneDProperty
+  readonly useBlendRangesFromSource: OneDProperty
 }
 
 declare interface _DropShadow extends PropertyGroup {
   readonly blendMode: OneDProperty
   readonly color: ColorProperty
   readonly opacity: OneDProperty
-  readonly useGlobalLight: BooleanProperty
+  readonly useGlobalLight: OneDProperty
   readonly angle: OneDProperty
   readonly distance: OneDProperty
   readonly spread: OneDProperty
   readonly size: OneDProperty
   readonly noise: OneDProperty
-  readonly layerKnocksOutDropShadow: BooleanProperty
+  readonly layerKnocksOutDropShadow: OneDProperty
 }
 
 declare interface _InnerShadow extends PropertyGroup {
   readonly blendMode: OneDProperty
   readonly color: ColorProperty
   readonly opacity: OneDProperty
-  readonly useGlobalLight: BooleanProperty
+  readonly useGlobalLight: OneDProperty
   readonly angle: OneDProperty
   readonly distance: OneDProperty
   readonly choke: OneDProperty
-  readonly size: BooleanProperty
+  readonly size: OneDProperty
   readonly noise: OneDProperty
 }
 
@@ -2146,7 +2145,7 @@ declare interface _OuterGlow extends PropertyGroup {
   readonly noise: OneDProperty
   readonly colorType: OneDProperty
   readonly color: ColorProperty
-  readonly colors: Property<void>
+  readonly colors: NoValueProperty
   readonly gradientSmoothness: OneDProperty
   readonly technique: OneDProperty
   readonly spread: OneDProperty
@@ -2161,7 +2160,7 @@ declare interface _InnerGlow extends PropertyGroup {
   readonly noise: OneDProperty
   readonly colorType: OneDProperty
   readonly color: ColorProperty
-  readonly colors: Property<void>
+  readonly colors: NoValueProperty
   readonly gradientSmoothness: OneDProperty
   readonly technique: OneDProperty
   readonly source: OneDProperty
@@ -2178,7 +2177,7 @@ declare interface _BevelAndEmboss extends PropertyGroup {
   readonly direction: OneDProperty
   readonly size: OneDProperty
   readonly soften: OneDProperty
-  readonly useGlobalLight: BooleanProperty
+  readonly useGlobalLight: OneDProperty
   readonly angle: OneDProperty
   readonly altitude: OneDProperty
   readonly highlightMode: OneDProperty
@@ -2196,7 +2195,7 @@ declare interface _Satin extends PropertyGroup {
   readonly angle: OneDProperty
   readonly distance: OneDProperty
   readonly size: OneDProperty
-  readonly invert: BooleanProperty
+  readonly invert: OneDProperty
 }
 
 declare interface _ColorOverlay extends PropertyGroup {
@@ -2208,12 +2207,12 @@ declare interface _ColorOverlay extends PropertyGroup {
 declare interface _GradientOverlay extends PropertyGroup {
   readonly blendMode: OneDProperty
   readonly opacity: OneDProperty
-  readonly colors: Property<void>
+  readonly colors: NoValueProperty
   readonly gradientSmoothness: OneDProperty
   readonly angle: OneDProperty
   readonly style: OneDProperty
-  readonly reverse: BooleanProperty
-  readonly alignWithLayer: BooleanProperty
+  readonly reverse: OneDProperty
+  readonly alignWithLayer: OneDProperty
   readonly scale: OneDProperty
   readonly offset: TwoDProperty
 }
@@ -2237,11 +2236,11 @@ declare interface _GeometryOptionsGroup extends PropertyGroup {
 }
 
 declare interface _MaterialOptionsGroup extends PropertyGroup {
-  readonly castsShadows: BooleanProperty
+  readonly castsShadows: OneDProperty
   readonly lightTransmission: OneDProperty
-  readonly acceptsShadows: BooleanProperty
-  readonly acceptsLights: BooleanProperty
-  readonly appearsInReflections: BooleanProperty
+  readonly acceptsShadows: OneDProperty
+  readonly acceptsLights: OneDProperty
+  readonly appearsInReflections: OneDProperty
   readonly ambient: OneDProperty
   readonly diffuse: OneDProperty
   readonly specularIntensity: OneDProperty
