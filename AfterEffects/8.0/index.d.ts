@@ -7,7 +7,7 @@
 declare var system: System
 
 declare interface _AppVersion {
-  CS3: 8.0,
+  CS3: 8.0
 }
 
 declare const enum _CommandID {
@@ -558,7 +558,7 @@ declare var writeLn: (text: string) => void
 declare var isValid: (obj: object) => boolean
 
 /** Provides access to objects and application settings within the After Effects application. The single global object is always available by its name, app. */
-declare interface Application {
+declare class Application {
   /** The current After Effects project. */
   readonly project: Project
 
@@ -654,7 +654,7 @@ declare interface Application {
   cancelTask(taskID: number): void
 
   /** Loads a color swatch from an Adobe Swatch Exchange (ASE) file. */
-  parseSwatchFile(file: File): Swatch
+  parseSwatchFile(file: File): _Swatch
 
   findMenuCommandId(str: string): number
 
@@ -666,7 +666,7 @@ declare interface Application {
   cancelTimeout(id: number): void
 }
 
-declare interface Preferences {
+declare class Preferences {
   deletePref(section: string, key: string, type?: PREFType): void
   getPrefAsBool(section: string, key: string, type?: PREFType): boolean
   getPrefAsFloat(section: string, key: string, type?: PREFType): number
@@ -682,7 +682,7 @@ declare interface Preferences {
 }
 
 /** The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects. */
-declare interface AVItem extends Item {
+declare class AVItem extends Item {
   /** The name of the object as shown in the Project panel. */
   name: string
 
@@ -754,7 +754,7 @@ declare interface AVItem extends Item {
 }
 
 /** The AVLayer object provides an interface to those layers that contain AVItem objects (composition layers, footage layers, solid layers, text layers, and sound layers). */
-declare interface AVLayer extends Layer {
+declare class AVLayer extends Layer {
   /** The source item for this layer. */
   readonly source: any
 
@@ -860,19 +860,19 @@ declare interface AVLayer extends Layer {
 }
 
 /** The CameraLayer object represents a camera layer within a composition. Create it using the LayerCollection object’s addCamera method */
-declare interface CameraLayer extends Layer {
+declare class CameraLayer extends Layer {
   /** Shortcuts */
   readonly cameraOption: _CameraOptionsGroup
 }
 
 /** Like an array, a collection associates a set of objects or values as a logical group and provides access to them by index. However, most collection objects are read-only. You do not assign objects to them yourself—their contents update automatically as objects are created or deleted. */
-declare interface Collection {
+declare class Collection {
   /** The number of objects in the collection. */
   readonly length: number
 }
 
 /** The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s item collection. */
-declare interface CompItem extends AVItem {
+declare class CompItem extends AVItem {
   /** The duration of a single frame. */
   frameDuration: number
 
@@ -970,7 +970,7 @@ declare class FileSource extends FootageSource {
 }
 
 /** The FolderItem object corresponds to a folder in your Project panel. It can contain various types of items (footage, compositions, solids) as well as other folders. */
-declare interface FolderItem extends Item {
+declare class FolderItem extends Item {
   /** The contents of this folder. */
   readonly items: ItemCollection
 
@@ -982,7 +982,7 @@ declare interface FolderItem extends Item {
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
-declare interface FootageItem extends AVItem {
+declare class FootageItem extends AVItem {
   /** The footage source file. */
   readonly file: File | null
 
@@ -1014,7 +1014,7 @@ declare interface FootageItem extends AVItem {
   ): void
 }
 
-declare interface PlaceholderItem extends FootageItem {}
+declare class PlaceholderItem extends FootageItem {}
 
 /** The FootageSource object holds information describing the source of some footage. It is used as the mainSource of a FootageItem, or the proxySource of a CompItem or FootageItem. */
 declare class FootageSource {
@@ -1085,7 +1085,7 @@ declare class ImportOptions {
 }
 
 /** The Item object represents an item that can appear in the Project panel. */
-declare interface Item {
+declare class Item {
   /** The name of the object as shown in the Project panel. */
   name: string
 
@@ -1112,7 +1112,7 @@ declare interface Item {
 }
 
 /** The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder. */
-declare interface ItemCollection extends Collection {
+declare class ItemCollection extends Collection {
   /** Retrieves a Item object in the collection by its index number. The first object is at index 1. */
   readonly [index: number]: Item
 
@@ -1141,13 +1141,7 @@ declare class KeyframeEase {
   influence: number
 }
 
-/** The Layer object provides access to layers within compositions. It can be accessed from an item’s layer collection either by index number or by a name string. */
-declare interface Layer {
-  (index: number): Property | PropertyGroup | MaskPropertyGroup
-  (name: string): Property | PropertyGroup | MaskPropertyGroup
-}
-
-declare interface Layer {
+declare class Layer extends PropertyGroup {
   /** The index position of the layer. */
   readonly index: number
 
@@ -1248,10 +1242,6 @@ declare interface Layer {
   selected: boolean
   readonly numProperties: number
 
-  propertyGroup(countUp?: number): PropertyGroup
-  property(index: number): PropertyBase
-  property(name: string): PropertyBase
-
   /** Shortcuts */
   readonly marker: MarkerValueProperty
   readonly transform: _TransformGroup
@@ -1273,7 +1263,7 @@ declare interface Layer {
 }
 
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
-declare interface LayerCollection extends Collection {
+declare class LayerCollection extends Collection {
   /** Retrieves a Layer object in the collection by its index number. The first object is at index 1. */
   readonly [index: number]: Layer
 
@@ -1313,7 +1303,7 @@ declare interface LayerCollection extends Collection {
 }
 
 /** The LightLayer object represents a light layer within a composition. Create it using the LayerCollection object’s addLight method */
-declare interface LightLayer extends Layer {
+declare class LightLayer extends Layer {
   /** Shortcuts */
   readonly lightOption: _LightOptionsGroup
 }
@@ -1355,7 +1345,7 @@ declare class MarkerValue {
 }
 
 /** The MaskPropertyGroup object encapsulates mask attributes in a layer. */
-declare interface MaskPropertyGroup extends PropertyGroup {
+declare class MaskPropertyGroup extends PropertyGroup {
   /** The mask mode. */
   maskMode: MaskMode
 
@@ -1391,13 +1381,13 @@ declare interface MaskPropertyGroup extends PropertyGroup {
 }
 
 /** The OMCollection contains all of the output modules in a render queue. The collection provides access to the OutputModule objects, but does not provide any additional functionality. The first OutputModule object in the collection is at index position 1. */
-declare interface OMCollection extends Collection {
+declare class OMCollection extends Collection {
   /** Retrieves a OutputModule object in the collection by its index number. The first object is at index 1. */
   readonly [index: number]: OutputModule
 }
 
 /** An OutputModule object of a RenderQueueItem generates a single file or sequence via a render operation, and contains attributes and methods relating to the file to be rendered. */
-declare interface OutputModule {
+declare class OutputModule {
   /** The path and name of the file to be rendered. */
   file: File
 
@@ -1435,7 +1425,7 @@ declare class Project {
   readonly items: ItemCollection
 
   /** The currently active item. */
-  readonly activeItem: Item | null
+  readonly activeItem: CompItem | FootageItem | FolderItem | null
 
   /** The color depth of the current project. */
   bitsPerChannel: number
@@ -1501,88 +1491,92 @@ declare class Project {
   autoFixExpressions(oldText: string, newText: string): void
 }
 
-
 type PropertyClassMembers = {
   [P in keyof Property]: Property[P]
 }
 declare interface UnknownPropertyType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType
+  propertyValueType: PropertyValueType
   value: any
 }
 
 declare interface NoValueType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.NO_VALUE
+  propertyValueType: PropertyValueType.NO_VALUE
   value: any
 }
 
-type ColorValue = [number, number, number, number];
+type ColorValue = [number, number, number, number]
 
 declare interface ColorType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.COLOR
+  propertyValueType: PropertyValueType.COLOR
   value: ColorValue
 }
 
 declare interface BooleanType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.OneD
+  propertyValueType: PropertyValueType.OneD
   value: boolean
 }
 declare interface OneDType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.OneD
+  propertyValueType: PropertyValueType.OneD
   value: number
 }
 
 declare interface TwoDType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.TwoD
+  propertyValueType: PropertyValueType.TwoD
   value: TwoDPoint
 }
 
-type TwoDPoint = [number, number];
+type TwoDPoint = [number, number]
 declare interface TwoDSpatialType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.TwoD_SPATIAL
+  propertyValueType: PropertyValueType.TwoD_SPATIAL
   value: TwoDPoint
 }
 
-type ThreeDPoint = [number, number, number];
+type ThreeDPoint = [number, number, number]
 
 declare interface ThreeDType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.ThreeD
+  propertyValueType: PropertyValueType.ThreeD
   value: ThreeDPoint
 }
 
-
 declare interface TextDocumentType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.TEXT_DOCUMENT
+  propertyValueType: PropertyValueType.TEXT_DOCUMENT
   value: TextDocument
 }
 
 declare interface MarkerValueType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.MARKER
+  propertyValueType: PropertyValueType.MARKER
   value: MarkerValue
 }
 
 declare interface ShapePropertyType extends PropertyClassMembers {
-  propertyValueType : PropertyValueType.SHAPE
+  propertyValueType: PropertyValueType.SHAPE
   value: Shape
 }
 
-type NoValueProperty = Property<NoValueType>;
-type ColorProperty = Property<ColorType>;
-type OneDProperty = Property<OneDType>;
-type TwoDProperty = Property<TwoDType>;
-type ThreeDProperty = Property<ThreeDType>;
-type ShapeProperty = Property<ShapePropertyType>;
-type MarkerValueProperty = Property<MarkerValueType>;
-type TextDocumentProperty = Property<TextDocumentType>;
+type NoValueProperty = Property<NoValueType>
+type ColorProperty = Property<ColorType>
+type OneDProperty = Property<OneDType>
+type TwoDProperty = Property<TwoDType>
+type ThreeDProperty = Property<ThreeDType>
+type ShapeProperty = Property<ShapePropertyType>
+type MarkerValueProperty = Property<MarkerValueType>
+type TextDocumentProperty = Property<TextDocumentType>
 
-type AnyProperty = NoValueProperty | ColorProperty | OneDProperty | ShapeProperty | MarkerValueProperty | TextDocumentProperty;
+type AnyProperty =
+  | NoValueProperty
+  | ColorProperty
+  | OneDProperty
+  | ShapeProperty
+  | MarkerValueProperty
+  | TextDocumentProperty
 
 /** The Property object contains value, keyframe, and expression information about a particular AE property of a layer. */
 declare class Property<T extends UnknownPropertyType = UnknownPropertyType> extends PropertyBase {
   /** Type of value stored in this property. */
-  readonly propertyValueType: T['propertyValueType']
+  readonly propertyValueType: T["propertyValueType"]
 
   /** Current value of the property. */
-  readonly value: T['value']
+  readonly value: T["value"]
 
   /** When true, there is a minimum permitted value. */
   readonly hasMin: boolean
@@ -1627,19 +1621,19 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   readonly propertyIndex: number
 
   /** Gets the value of the property evaluated at given time. */
-  valueAtTime(time: number, preExpression: boolean): T['value']
+  valueAtTime(time: number, preExpression: boolean): T["value"]
 
   /** Sets the static value of the property. */
-  setValue(newValue: T['value']): void
+  setValue(newValue: T["value"]): void
 
   /** Creates a keyframe for the property. */
-  setValueAtTime(time: number, newValue: T['value']): void
+  setValueAtTime(time: number, newValue: T["value"]): void
 
   /** Creates a set of keyframes for the property. */
-  setValuesAtTimes(times: number[], newValues: T['value'][]): void
+  setValuesAtTimes(times: number[], newValues: T["value"][]): void
 
   /** Finds a keyframe and sets the value of the property at that keyframe. */
-  setValueAtKey(keyIndex: number, newValue: T['value']): void
+  setValueAtKey(keyIndex: number, newValue: T["value"]): void
 
   /** Gets the keyframe nearest to a specified time. */
   nearestKeyIndex(time: number): number
@@ -1649,7 +1643,7 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   keyTime(markerComment: string): number
 
   /** Gets the value of a keyframe at the time at which a condition occurs. */
-  keyValue(keyIndex: number): T['value']
+  keyValue(keyIndex: number): T["value"]
   keyValue(markerComment: string): MarkerValue
 
   /** Adds a new keyframe to the property at a given time. */
@@ -1812,8 +1806,8 @@ declare class PropertyBase {
   duplicate(): PropertyBase
 
   /** Gets a member property or group. Strictly, this should be PropertyGroup method. */
-  property(index: number): PropertyBase
-  property(name: string): PropertyBase
+  property(index: number): Property | PropertyGroup | MaskPropertyGroup
+  property(name: string): Property | PropertyGroup | MaskPropertyGroup
 }
 
 /** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
@@ -1823,7 +1817,7 @@ declare interface PropertyGroup {
 }
 
 /** The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes. */
-declare interface PropertyGroup extends PropertyBase {
+declare class PropertyGroup extends PropertyBase {
   /** The number of indexed properties in the group. */
   readonly numProperties: number
 
@@ -1835,7 +1829,7 @@ declare interface PropertyGroup extends PropertyBase {
 }
 
 /** The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. */
-declare interface RenderQueue {
+declare class RenderQueue {
   /** When true, a render is in progress. */
   readonly rendering: boolean
 
@@ -1865,7 +1859,7 @@ declare interface RenderQueue {
 }
 
 /** The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the RQItemCollection object; */
-declare interface RenderQueueItem {
+declare class RenderQueueItem {
   /** The total number of Output Modules assigned to the item. */
   readonly numOutputModules: number
 
@@ -1922,7 +1916,7 @@ declare interface RenderQueueItem {
 }
 
 /** The RQItemCollection contains all of the render-queue items in a project, as shown in the Render Queue panel of the project. The collection provides access to the RenderQueueItem objects, and allows you to create them from compositions. The first RenderQueueItem object in the collection is at index position 1. */
-declare interface RQItemCollection extends Collection {
+declare class RQItemCollection extends Collection {
   /** Retrieves an RenderQueueItem in the collection by its index number. The first object is at index 1. */
   [index: number]: RenderQueueItem
 
@@ -1931,7 +1925,7 @@ declare interface RQItemCollection extends Collection {
 }
 
 /** The Settings object provides an easy way to manage settings for scripts. The settings are saved in the After Effects preferences file and are persistent between application sessions. Settings are identified by section and key within the file, and each key name is associated with a value. In the preferences file, section names are enclosed in brackets and quotation marks, and key names are listing in quotation marks below the section name. All values are strings. */
-declare interface Settings {
+declare class Settings {
   /** Saves a default value for a setting. */
   saveSetting(sectionName: string, keyName: string, value: string, type?: PREFType): void
 
@@ -1943,7 +1937,7 @@ declare interface Settings {
 }
 
 /** The Shape object encapsulates information describing a shape in a shape layer, or the outline shape of a Mask. */
-declare interface Shape {
+declare class Shape {
   /** When true, the shape is a closed curve. */
   closed: boolean
 
@@ -1958,7 +1952,7 @@ declare interface Shape {
 }
 
 /** The ShapeLayer object represents a shape layer within a composition. Create it using the LayerCollection object’s addShape() method. */
-declare interface ShapeLayer extends AVLayer {}
+declare class ShapeLayer extends AVLayer {}
 
 /** The SolidSource object represents a solid-color footage source. */
 declare class SolidSource extends FootageSource {
@@ -1967,7 +1961,7 @@ declare class SolidSource extends FootageSource {
 }
 
 /** The file specification, an ExtendScript File object. */
-declare interface Swatch {
+declare interface _Swatch {
   /** The ASE version number. */
   majorVersion: number
 
@@ -1975,11 +1969,11 @@ declare interface Swatch {
   minorVersion: number
 
   /** An array of SwatchValue. */
-  values: SwatchValue[]
+  values: _SwatchValue[]
 }
 
 /** The file specification, an ExtendScript File object. */
-declare interface SwatchValue {
+declare interface _SwatchValue {
   /** One of "RGB", "CMYK", "LAB", "Gray" */
   type: "RGB" | "CMYK" | "LAB" | "Gray"
 
@@ -2005,7 +1999,7 @@ declare interface SwatchValue {
 }
 
 /** The System object provides access to attributes found on the user’s system, such as the user name and the name and version of the operating system. It is available through the system global variable. */
-declare interface System {
+declare class System {
   /** The current user name. */
   readonly userName: string
 
@@ -2031,7 +2025,7 @@ declare class TextDocument {
 }
 
 /** The TextLayer object represents a text layer within a composition. Create it using the LayerCollection object’s addText method. */
-declare interface TextLayer extends AVLayer {
+declare class TextLayer extends AVLayer {
   readonly source: null
 
   readonly text: _TextProperties
