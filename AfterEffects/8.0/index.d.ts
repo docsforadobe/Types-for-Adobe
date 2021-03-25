@@ -300,235 +300,244 @@ declare const enum _CommandID {
   Wiggler = 5030,
 }
 
-declare enum Language {
-  ENGLISH,
-  JAPANESE,
-  GERMAN,
-  FRENCH,
-  ITALIAN,
-  SPANISH,
-  KOREAN,
-  CHINESE,
-  RUSSIAN,
-  PORTUGUESE,
-}
-
-declare enum PurgeTarget {
-  /** Purges all data that After Effects has cached to physical memory. */
-  ALL_CACHES,
-  /** Purges all data saved in the undo cache. */
-  UNDO_CACHES,
-  /** Purges all data cached as composition/layer snapshots. */
-  SNAPSHOT_CACHES,
-  /** Purges all saved image data. */
-  IMAGE_CACHES,
-}
-
-declare enum FrameBlendingType {
-  FRAME_MIX,
-  NO_FRAME_BLEND,
-  PIXEL_MOTION,
-}
-
-declare enum BlendingMode {
-  ADD,
-  ALPHA_ADD,
-  CLASSIC_COLOR_BURN,
-  CLASSIC_COLOR_DODGE,
-  CLASSIC_DIFFERENCE,
-  COLOR,
-  COLOR_BURN,
-  COLOR_DODGE,
-  DANCING_DISSOLVE,
-  DARKEN,
-  DARKER_COLOR,
-  DIFFERENCE,
-  DISSOLVE,
-  EXCLUSION,
-  HARD_LIGHT,
-  HARD_MIX,
-  HUE,
-  LIGHTEN,
-  LIGHTER_COLOR,
-  LINEAR_BURN,
-  LINEAR_DODGE,
-  LINEAR_LIGHT,
-  LUMINESCENT_PREMUL,
-  LUMINOSITY,
-  MULTIPLY,
-  NORMAL,
-  OVERLAY,
-  PIN_LIGHT,
-  SATURATION,
-  SCREEN,
-  SILHOUETE_ALPHA,
-  SILHOUETTE_LUMA,
-  SOFT_LIGHT,
-  STENCIL_ALPHA,
-  STENCIL_LUMA,
-  VIVID_LIGHT,
-}
-
-declare enum TrackMatteType {
-  ALPHA,
-  ALPHA_INVERTED,
-  LUMA,
-  LUMA_INVERTED,
-  NO_TRACK_MATTE,
-}
-
-declare enum LayerQuality {
-  BEST,
-  DRAFT,
-  WIREFRAME,
+declare enum AlphaMode {
+  IGNORE = 5413,
+  PREMULTIPLIED = 5414,
+  STRAIGHT = 5412,
 }
 
 declare enum AutoOrientType {
   /** Layer faces in the direction of the motion path. */
-  ALONG_PATH,
+  ALONG_PATH = 4213,
+
   /** Layer always faces the active camera or points at its point of interest. */
-  CAMERA_OR_POINT_OF_INTEREST,
+  CAMERA_OR_POINT_OF_INTEREST = 4214,
+
   /** Each character in a per-character 3D text layer automatically faces the active camera. */
-  CHARACTERS_TOWARD_CAMERA,
+  CHARACTERS_TOWARD_CAMERA = 4215,
+
   /** Layer rotates freely, independent of any motion path, point of interest, or other layers. */
-  NO_AUTO_ORIENT,
+  NO_AUTO_ORIENT = 4212,
 }
 
-declare enum AlphaMode {
-  IGNORE,
-  STRAIGHT,
-  PREMULTIPLIED,
-}
-
-declare enum FieldSeparationType {
-  OFF,
-  UPPER_FIELD_FIRST,
-  LOWER_FIELD_FIRST,
-}
-
-declare enum PulldownPhase {
-  OFF,
-  SSWWW,
-  SWWWS,
-  SWWWW_24P_ADVANCE,
-  WSSWW,
-  WSWWW_24P_ADVANCE,
-  WWSSW,
-  WWSWW_24P_ADVANCE,
-  WWWSS,
-  WWWSW_24P_ADVANCE,
-  WWWWS_24P_ADVANCE,
-}
-
-declare enum PulldownMethod {
-  PULLDOWN_3_2,
-  ADVANCE_24P,
-}
-
-declare enum ImportAsType {
-  COMP_CROPPED_LAYERS,
-  FOOTAGE,
-  COMP,
-  PROJECT,
-}
-
-declare enum MaskMode {
-  NONE,
-  ADD,
-  SUBTRACT,
-  INTERSECT,
-  LIGHTEN,
-  DARKEN,
-  DIFFERENCE,
-}
-
-declare enum MaskMotionBlur {
-  SAME_AS_LAYER,
-  ON,
-  OFF,
-}
-
-declare enum MaskFeatherFalloff {
-  FFO_LINEAR,
-  FFO_SMOOTH,
-}
-
-declare enum PostRenderAction {
-  NONE,
-  IMPORT,
-  IMPORT_AND_REPLACE_USAGE,
-  SET_PROXY,
+declare enum BlendingMode {
+  ADD = 5220,
+  ALPHA_ADD = 5244,
+  CLASSIC_COLOR_BURN = 5219,
+  CLASSIC_COLOR_DODGE = 5225,
+  CLASSIC_DIFFERENCE = 5234,
+  COLOR = 5238,
+  COLOR_BURN = 5218,
+  COLOR_DODGE = 5224,
+  DANCING_DISSOLVE = 5214,
+  DARKEN = 5215,
+  DARKER_COLOR = 5247,
+  DIFFERENCE = 5233,
+  DISSOLVE = 5213,
+  DIVIDE = 5249,
+  EXCLUSION = 5235,
+  HARD_LIGHT = 5228,
+  HARD_MIX = 5232,
+  HUE = 5236,
+  LIGHTEN = 5221,
+  LIGHTER_COLOR = 5246,
+  LINEAR_BURN = 5217,
+  LINEAR_DODGE = 5223,
+  LINEAR_LIGHT = 5229,
+  LUMINESCENT_PREMUL = 5245,
+  LUMINOSITY = 5239,
+  MULTIPLY = 5216,
+  NORMAL = 5212,
+  OVERLAY = 5226,
+  PIN_LIGHT = 5231,
+  SATURATION = 5237,
+  SCREEN = 5222,
+  SILHOUETE_ALPHA = 5242,
+  SILHOUETTE_LUMA = 5243,
+  SOFT_LIGHT = 5227,
+  STENCIL_ALPHA = 5240,
+  STENCIL_LUMA = 5241,
+  SUBTRACT = 5248,
+  VIVID_LIGHT = 5230,
 }
 
 declare enum CloseOptions {
   /** Close without saving. */
-  DO_NOT_SAVE_CHANGES,
+  DO_NOT_SAVE_CHANGES = 1212,
+
   /** Prompt for whether to save changes before close. */
-  PROMPT_TO_SAVE_CHANGES,
+  PROMPT_TO_SAVE_CHANGES = 1213,
+
   /** Save automatically on close. */
-  SAVE_CHANGES,
+  SAVE_CHANGES = 1214,
 }
 
-// TODO: Update this to use correct values
-declare enum PropertyValueType {
-  NO_VALUE = 0,
-  ThreeD_SPATIAL = 1,
-  ThreeD = 2,
-  TwoD_SPATIAL = 3,
-  TwoD = 4,
-  OneD = 5,
-  COLOR = 6,
-  CUSTOM_VALUE = 7,
-  MARKER = 8,
-  LAYER_INDEX = 9,
-  MASK_INDEX = 10,
-  SHAPE = 11,
-  TEXT_DOCUMENT = 12,
+declare enum FieldSeparationType {
+  LOWER_FIELD_FIRST = 5614,
+  OFF = 5613,
+  UPPER_FIELD_FIRST = 5612,
+}
+
+declare enum FrameBlendingType {
+  FRAME_MIX = 4013,
+  NO_FRAME_BLEND = 4012,
+  PIXEL_MOTION = 4014,
+}
+
+declare enum ImportAsType {
+  COMP = 3814,
+  COMP_CROPPED_LAYERS = 3812,
+  FOOTAGE = 3813,
+  PROJECT = 3815,
 }
 
 declare enum KeyframeInterpolationType {
-  LINEAR,
-  BEZIER,
-  HOLD,
+  BEZIER = 6613,
+  HOLD = 6614,
+  LINEAR = 6612,
 }
 
-declare enum PropertyType {
-  PROPERTY,
-  INDEXED_GROUP,
-  NAMED_GROUP,
+declare enum Language {
+  CHINESE = 1619,
+  ENGLISH = 1612,
+  FRENCH = 1615,
+  GERMAN = 1614,
+  ITALIAN = 1616,
+  JAPANESE = 1613,
+  KOREAN = 1618,
+  PORTUGUESE = 1621,
+  RUSSIAN = 1620,
+  SPANISH = 1617,
 }
 
-declare enum ResolveType {
-  ACCEPT_THEIRS,
-  ACCEPT_YOURS,
-  ACCEPT_THEIRS_AND_COPY,
-}
-
-declare enum RQItemStatus {
-  WILL_CONTINUE,
-  NEEDS_OUTPUT,
-  UNQUEUED,
-  QUEUED,
-  RENDERING,
-  USER_STOPPED,
-  ERR_STOPPED,
-  DONE,
+declare enum LayerQuality {
+  BEST = 4614,
+  DRAFT = 4613,
+  WIREFRAME = 4612,
 }
 
 declare enum LogType {
-  ERRORS_ONLY,
-  ERRORS_AND_SETTINGS,
-  ERRORS_AND_PER_FRAME_INFO,
+  ERRORS_AND_PER_FRAME_INFO = 3214,
+  ERRORS_AND_SETTINGS = 3213,
+  ERRORS_ONLY = 3212,
+}
+
+declare enum MaskFeatherFalloff {
+  FFO_LINEAR = 7213,
+  FFO_SMOOTH = 7212,
+}
+
+declare enum MaskMode {
+  ADD = 6813,
+  DARKEN = 6817,
+  DIFFERENCE = 6818,
+  INTERSECT = 6815,
+  LIGHTEN = 6816,
+  NONE = 6812,
+  SUBTRACT = 6814,
+}
+
+declare enum MaskMotionBlur {
+  OFF = 7014,
+  ON = 7013,
+  SAME_AS_LAYER = 7012,
+}
+
+declare enum PostRenderAction {
+  IMPORT = 3613,
+  IMPORT_AND_REPLACE_USAGE = 3614,
+  NONE = 3612,
+  SET_PROXY = 3615,
 }
 
 declare enum PREFType {
-  PREF_Type_MACHINE_SPECIFIC,
-  PREF_Type_MACHINE_INDEPENDENT,
-  PREF_Type_MACHINE_INDEPENDENT_RENDER,
-  PREF_Type_MACHINE_INDEPENDENT_OUTPUT,
-  PREF_Type_MACHINE_INDEPENDENT_COMPOSITION,
-  PREF_Type_MACHINE_SPECIFIC_TEXT,
-  PREF_Type_MACHINE_SPECIFIC_PAINT,
+  PREF_Type_MACHINE_INDEPENDENT = 8813,
+  PREF_Type_MACHINE_INDEPENDENT_COMPOSITION = 8816,
+  PREF_Type_MACHINE_INDEPENDENT_OUTPUT = 8815,
+  PREF_Type_MACHINE_INDEPENDENT_RENDER = 8814,
+  PREF_Type_MACHINE_SPECIFIC = 8812,
+  PREF_Type_MACHINE_SPECIFIC_PAINT = 8818,
+  PREF_Type_MACHINE_SPECIFIC_TEXT = 8817,
+}
+
+declare enum PropertyType {
+  INDEXED_GROUP = 6214,
+  NAMED_GROUP = 6213,
+  PROPERTY = 6212,
+}
+
+declare enum PropertyValueType {
+  COLOR = 6418,
+  CUSTOM_VALUE = 6419,
+  LAYER_INDEX = 6421,
+  MARKER = 6420,
+  MASK_INDEX = 6422,
+  NO_VALUE = 6412,
+  OneD = 6417,
+  SHAPE = 6423,
+  TEXT_DOCUMENT = 6424,
+  ThreeD = 6414,
+  ThreeD_SPATIAL = 6413,
+  TwoD = 6416,
+  TwoD_SPATIAL = 6415,
+}
+
+declare enum PulldownMethod {
+  ADVANCE_24P = 6013,
+  PULLDOWN_3_2 = 6012,
+}
+
+declare enum PulldownPhase {
+  OFF = 5813,
+  SSWWW = 5814,
+  SWWWS = 5815,
+  SWWWW_24P_ADVANCE = 5821,
+  WSSWW = 5812,
+  WSWWW_24P_ADVANCE = 5820,
+  WWSSW = 5817,
+  WWSWW_24P_ADVANCE = 5819,
+  WWWSS = 5816,
+  WWWSW_24P_ADVANCE = 5818,
+  WWWWS_24P_ADVANCE = 5822,
+}
+
+declare enum PurgeTarget {
+  /** Purges all data that After Effects has cached to physical memory. */
+  ALL_CACHES = 1412,
+
+  /** Purges all saved image data. */
+  IMAGE_CACHES = 1415,
+
+  /** Purges all data cached as composition/layer snapshots. */
+  SNAPSHOT_CACHES = 1414,
+
+  /** Purges all data saved in the undo cache. */
+  UNDO_CACHES = 1413,
+}
+
+declare enum ResolveType {
+  ACCEPT_THEIRS = 8612,
+  ACCEPT_THEIRS_AND_COPY = 8613,
+  ACCEPT_YOURS = 8614,
+}
+
+declare enum RQItemStatus {
+  DONE = 3019,
+  ERR_STOPPED = 3018,
+  NEEDS_OUTPUT = 3013,
+  QUEUED = 3015,
+  RENDERING = 3016,
+  UNQUEUED = 3014,
+  USER_STOPPED = 3017,
+  WILL_CONTINUE = 3012,
+}
+
+declare enum TrackMatteType {
+  ALPHA = 5013,
+  ALPHA_INVERTED = 5014,
+  LUMA = 5015,
+  LUMA_INVERTED = 5016,
+  NO_TRACK_MATTE = 5012,
 }
 
 /**
