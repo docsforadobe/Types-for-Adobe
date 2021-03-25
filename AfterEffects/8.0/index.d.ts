@@ -594,6 +594,12 @@ declare class Application {
   /** Application settings that can be set via scripting. */
   readonly settings: Settings
 
+  /** Memory in use by this application. */
+  readonly memoryInUse: number
+
+  /** Preferences */
+  readonly preferences: Preferences
+
   /** A callback function that is called when an error occurs in the application. */
   onError: string | null
 
@@ -609,12 +615,6 @@ declare class Application {
 
   /** When true, the project is saved if the application closes unexpectedly. */
   saveProjectOnCrash: boolean
-
-  /** Memory in use by this application. */
-  readonly memoryInUse: number
-
-  /** Preferences */
-  readonly preferences: Preferences
 
   /** Creates a new project in After Effects. */
   newProject(): Project | null
@@ -694,8 +694,20 @@ declare class Preferences {
 
 /** The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects. */
 declare class AVItem extends Item {
-  /** The name of the object as shown in the Project panel. */
-  name: string
+  /** The FootageItem object used as proxy for the item. */
+  readonly proxySource: FootageSource
+
+  /** The CompItem objects that use this item. */
+  readonly usedIn: CompItem[]
+
+  /** When true, the item has a video component. */
+  readonly hasVideo: boolean
+
+  /** When true, the item has an audio component. */
+  readonly hasAudio: boolean
+
+  /** When true, the item cannot be found or is a placeholder. */
+  readonly footageMissing: boolean
 
   /** The width of the item. */
   width: number
@@ -718,23 +730,8 @@ declare class AVItem extends Item {
   /** When true, a proxy source is used for this item. */
   useProxy: boolean
 
-  /** The FootageItem object used as proxy for the item. */
-  readonly proxySource: FootageSource
-
   /** Current time of the item. */
   time: number
-
-  /** The CompItem objects that use this item. */
-  readonly usedIn: CompItem[]
-
-  /** When true, the item has a video component. */
-  readonly hasVideo: boolean
-
-  /** When true, the item has an audio component. */
-  readonly hasAudio: boolean
-
-  /** When true, the item cannot be found or is a placeholder. */
-  readonly footageMissing: boolean
 
   /** Sets a proxy for the item. */
   setProxy(file: File): void
@@ -778,6 +775,27 @@ declare class AVLayer extends Layer {
   /** The width of the layer. */
   readonly width: number
 
+  /** When true, it is legal to change the value of collapseTransformation. */
+  readonly canSetCollapseTransformation: boolean
+
+  /** When true, frame blending is enabled. */
+  readonly frameBlending: boolean
+
+  /** When true, it is legal to change the value of timeRemapEnabled. */
+  readonly canSetTimeRemapEnabled: boolean
+
+  /** When true, the layer contains an audio component. */
+  readonly hasAudio: boolean
+
+  /** When true, the layer's audio is active at the current time. */
+  readonly audioActive: boolean
+
+  /** When true, this layer is being used as a track matte for the layer below it. */
+  readonly isTrackMatte: boolean
+
+  /** When true, the layer above is being used as a track matte on this layer. */
+  readonly hasTrackMatte: boolean
+
   /** When true, the layer's audio is enabled. */
   audioEnabled: boolean
 
@@ -799,29 +817,14 @@ declare class AVLayer extends Layer {
   /** When true, 3D is set on a per-character basis in this text layer. */
   threeDPerChar: boolean
 
-  /** When true, it is legal to change the value of collapseTransformation. */
-  readonly canSetCollapseTransformation: boolean
-
   /** When true, collapse transformation is on. */
   collapseTransformation: boolean
-
-  /** When true, frame blending is enabled. */
-  readonly frameBlending: boolean
 
   /** The type of frame blending for the layer. */
   frameBlendingType: FrameBlendingType
 
-  /** When true, it is legal to change the value of timeRemapEnabled. */
-  readonly canSetTimeRemapEnabled: boolean
-
   /** When true, time remapping is enabled on this layer. */
   timeRemapEnabled: boolean
-
-  /** When true, the layer contains an audio component. */
-  readonly hasAudio: boolean
-
-  /** When true, the layer's audio is active at the current time. */
-  readonly audioActive: boolean
 
   /** The blending mode of the layer. */
   blendingMode: BlendingMode
@@ -831,12 +834,6 @@ declare class AVLayer extends Layer {
 
   /** if layer has a track matte, specifies the way it is applied. */
   trackMatteType: TrackMatteType
-
-  /** When true, this layer is being used as a track matte for the layer below it. */
-  readonly isTrackMatte: boolean
-
-  /** When true, the layer above is being used as a track matte on this layer. */
-  readonly hasTrackMatte: boolean
 
   /** The layer quality setting. */
   quality: LayerQuality
@@ -884,6 +881,24 @@ declare class Collection {
 
 /** The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s item collection. */
 declare class CompItem extends AVItem {
+  /** The number of layers in the composition. */
+  readonly numLayers: number
+
+  /** The current active camera layer. */
+  readonly activeCamera: CameraLayer | null
+
+  /** The layers of the composition. */
+  readonly layers: LayerCollection
+
+  /** The selected layers of the composition. */
+  readonly selectedLayers: Layer[]
+
+  /** The selected properties of the composition. */
+  readonly selectedProperties: _PropertyClasses[]
+
+  /** The set of available rendering plug-in modules. */
+  readonly renderers: string[]
+
   /** The duration of a single frame. */
   frameDuration: number
 
@@ -892,9 +907,6 @@ declare class CompItem extends AVItem {
 
   /** The work area duration. */
   workAreaDuration: number
-
-  /** The number of layers in the composition. */
-  readonly numLayers: number
 
   /** When true, shy layers are visible in the Timeline panel. */
   hideShyLayers: boolean
@@ -917,9 +929,6 @@ declare class CompItem extends AVItem {
   /** The background color of the composition. */
   bgColor: [number, number, number]
 
-  /** The current active camera layer. */
-  readonly activeCamera: CameraLayer | null
-
   /** Changes the display of the start time in the Timeline panel. */
   displayStartTime: number
 
@@ -938,20 +947,8 @@ declare class CompItem extends AVItem {
   /** The maximum number of motion blur samples of 2D layer motion. */
   motionBlurAdaptiveSampleLimit: number
 
-  /** The layers of the composition. */
-  readonly layers: LayerCollection
-
-  /** The selected layers of the composition. */
-  readonly selectedLayers: Layer[]
-
-  /** The selected properties of the composition. */
-  readonly selectedProperties: _PropertyClasses[]
-
   /** The rendering plug-in module to be used to render this composition. */
   renderer: string
-
-  /** The set of available rendering plug-in modules. */
-  readonly renderers: string[]
 
   /** Creates and returns a duplicate of this composition. */
   duplicate(): CompItem
@@ -1032,6 +1029,12 @@ declare class FootageSource {
   /** The footage source file. */
   readonly file: File | null
 
+  /** When true, footage is a still image. */
+  readonly isStill: boolean
+
+  /** The effective frame rate as displayed and rendered in compositions by After Effects. */
+  readonly displayFrameRate: number
+
   /** When true, a footage clip or proxy includes an alpha channel. */
   hasAlpha: boolean
 
@@ -1043,9 +1046,6 @@ declare class FootageSource {
 
   /** When true, an alpha channel in a footage clip or proxy should be inverted. */
   invertAlpha: boolean
-
-  /** When true, footage is a still image. */
-  readonly isStill: boolean
 
   /** The field separation type. */
   fieldSeparationType: FieldSeparationType
@@ -1061,9 +1061,6 @@ declare class FootageSource {
 
   /** The native frame rate of the footage. */
   nativeFrameRate: number
-
-  /** The effective frame rate as displayed and rendered in compositions by After Effects. */
-  readonly displayFrameRate: number
 
   /** The rate to which footage should conform. */
   conformFrameRate: number
@@ -1097,23 +1094,23 @@ declare class ImportOptions {
 
 /** The Item object represents an item that can appear in the Project panel. */
 declare class Item {
+  /** A unique identifier for this item. */
+  readonly id: number
+
+  /** The type of item. */
+  readonly typeName: string
+
   /** The name of the object as shown in the Project panel. */
   name: string
 
   /** A descriptive string. */
   comment: string
 
-  /** A unique identifier for this item. */
-  readonly id: number
-
   /** The parent folder of this item. */
   parentFolder: FolderItem
 
   /** When true, this item is currently selected. */
   selected: boolean
-
-  /** The type of item. */
-  readonly typeName: string
 
   /** The label color for the item. */
   label: number
@@ -1156,38 +1153,8 @@ declare class Layer extends PropertyGroup {
   /** The index position of the layer. */
   readonly index: number
 
-  /** The name of the layer. */
-  name: string
-
-  /** The parent of this layer. */
-  parent: Layer | null
-
   /** The current time of the layer. */
   readonly time: number
-
-  /** The start time of the layer. */
-  startTime: number
-
-  /** The time stretch percentage of the layer. */
-  stretch: number
-
-  /** The “in” point of the layer. */
-  inPoint: number
-
-  /** The “out” point of the layer. */
-  outPoint: number
-
-  /** When true, the layer is enabled. */
-  enabled: boolean
-
-  /** When true, the layer is soloed. */
-  solo: boolean
-
-  /** When true, the layer is shy. */
-  shy: boolean
-
-  /** When true, the layer is locked. */
-  locked: boolean
 
   /** When true, the layer contains a video component. */
   readonly hasVideo: boolean
@@ -1201,23 +1168,44 @@ declare class Layer extends PropertyGroup {
   /** All selected AE properties in the layer. */
   readonly selectedProperties: _PropertyClasses[]
 
-  /** A descriptive comment for the layer. */
-  comment: string
-
   /** The composition that contains this layer. */
   readonly containingComp: CompItem
 
   /** When true, the layer’s name has been explicitly set. */
   readonly isNameSet: boolean
 
+  /** The parent of this layer. */
+  parent: Layer | null
+
+  /** The start time of the layer. */
+  startTime: number
+
+  /** The time stretch percentage of the layer. */
+  stretch: number
+
+  /** The “in” point of the layer. */
+  inPoint: number
+
+  /** The “out” point of the layer. */
+  outPoint: number
+
+  /** When true, the layer is soloed. */
+  solo: boolean
+
+  /** When true, the layer is shy. */
+  shy: boolean
+
+  /** When true, the layer is locked. */
+  locked: boolean
+
+  /** A descriptive comment for the layer. */
+  comment: string
+
   /** The label color for the layer. */
   label: number
 
   /** The type of automatic orientation for the layer. */
   autoOrient: AutoOrientType
-
-  /** Deletes the layer from the composition. */
-  remove(): void
 
   /** Moves the layer to the top of the composition (makes it the first layer). */
   moveToBeginning(): void
@@ -1245,13 +1233,6 @@ declare class Layer extends PropertyGroup {
 
   /** Applies a named collection of animation settings to the layer. */
   applyPreset(presetName: File): void
-
-  /** From PropertyGroup */
-  readonly matchName: string
-  readonly propertyDepth: number
-  readonly propertyType: PropertyType
-  selected: boolean
-  readonly numProperties: number
 
   /** Shortcuts */
   readonly marker: MarkerValueProperty
@@ -1622,9 +1603,6 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   /** All selected keyframes of the property. */
   readonly selectedKeys: number[]
 
-  /** The position index of this property. */
-  readonly propertyIndex: number
-
   /** The expression string for this property. */
   expression: string
 
@@ -1762,9 +1740,6 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
 }
 
 declare class PropertyBase {
-  /** Name of the property. */
-  name: string
-
   /** A special name for the property used to build unique naming paths. */
   readonly matchName: string
 
@@ -1786,9 +1761,6 @@ declare class PropertyBase {
   /** When true, the user interface displays an eyeball icon for this property. */
   readonly canSetEnabled: boolean
 
-  /** When true, this property is enabled. */
-  enabled: boolean
-
   /** When true, this property is active. */
   readonly active: boolean
 
@@ -1800,6 +1772,12 @@ declare class PropertyBase {
 
   /** When true, this property is a mask. */
   readonly isMask: boolean
+
+  /** When true, this property is enabled. */
+  enabled: boolean
+
+  /** Name of the property. */
+  name: string
 
   /** When true, this property is selected. */
   selected: boolean
@@ -1874,23 +1852,11 @@ declare class RenderQueueItem {
   /** The total number of Output Modules assigned to the item. */
   readonly numOutputModules: number
 
-  /** When true, this item is rendered when the queue is started. */
-  render: boolean
-
   /** The time when rendering began for the item. */
   readonly startTime: Date | null
 
   /** The time elapsed in the current rendering of this item. */
   readonly elapsedSeconds: number | null
-
-  /** The start time in the composition to be rendered. */
-  timeSpanStart: number
-
-  /** The duration of the composition to be rendered. */
-  timeSpanDuration: number
-
-  /** The number of frames to skip when rendering this item. */
-  skipFrames: number
 
   /** The composition to be rendered by this item. */
   readonly comp: CompItem
@@ -1903,6 +1869,18 @@ declare class RenderQueueItem {
 
   /** The current rendering status of the item. */
   readonly status: RQItemStatus
+
+  /** When true, this item is rendered when the queue is started. */
+  render: boolean
+
+  /** The start time in the composition to be rendered. */
+  timeSpanStart: number
+
+  /** The duration of the composition to be rendered. */
+  timeSpanDuration: number
+
+  /** The number of frames to skip when rendering this item. */
+  skipFrames: number
 
   /** A callback function that is called during the rendering process when the status of the item changes. */
   onStatusChanged: string | null
