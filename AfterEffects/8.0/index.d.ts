@@ -534,6 +534,8 @@ declare enum PREFType {
 /**
  * TYPES
  */
+type _PropertyClasses = Property | PropertyGroup | MaskPropertyGroup
+type _ItemClasses = CompItem | FootageItem | FolderItem
 
 /** Clears text from the Info panel. */
 declare var clearOutput: () => void
@@ -934,7 +936,7 @@ declare class CompItem extends AVItem {
   readonly selectedLayers: Layer[]
 
   /** The selected properties of the composition. */
-  readonly selectedProperties: (Property | PropertyGroup | MaskPropertyGroup)[]
+  readonly selectedProperties: _PropertyClasses[]
 
   /** The rendering plug-in module to be used to render this composition. */
   renderer: string
@@ -978,7 +980,7 @@ declare class FolderItem extends Item {
   readonly numItems: number
 
   /** Gets an item from the folder. */
-  item(index: number): Item
+  item(index: number): _ItemClasses
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
@@ -1114,7 +1116,7 @@ declare class Item {
 /** The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder. */
 declare class ItemCollection extends Collection {
   /** Retrieves a Item object in the collection by its index number. The first object is at index 1. */
-  readonly [index: number]: Item
+  readonly [index: number]: _ItemClasses
 
   /** Creates a new CompItem object and adds it to the collection. */
   addComp(
@@ -1188,7 +1190,7 @@ declare class Layer extends PropertyGroup {
   readonly nullLayer: boolean
 
   /** All selected AE properties in the layer. */
-  readonly selectedProperties: (Property | PropertyGroup | MaskPropertyGroup)[]
+  readonly selectedProperties: _PropertyClasses[]
 
   /** A descriptive comment for the layer. */
   comment: string
@@ -1425,7 +1427,7 @@ declare class Project {
   readonly items: ItemCollection
 
   /** The currently active item. */
-  readonly activeItem: CompItem | FootageItem | FolderItem | null
+  readonly activeItem: _ItemClasses | null
 
   /** The color depth of the current project. */
   bitsPerChannel: number
@@ -1437,7 +1439,7 @@ declare class Project {
   readonly numItems: number
 
   /** All items selected in the Project panel. */
-  readonly selection: Item[]
+  readonly selection: _ItemClasses[]
 
   /** The project’s render queue. */
   readonly renderQueue: RenderQueue
@@ -1449,7 +1451,7 @@ declare class Project {
   linearBlending: boolean
 
   /** Retrieves an item from the project. */
-  item(index: number): Item
+  item(index: number): _ItemClasses
 
   /** Consolidates all footage in the project. */
   consolidateFootage(): number
@@ -1458,7 +1460,7 @@ declare class Project {
   removeUnusedFootage(): number
 
   /** Reduces the project to a specified set of items. */
-  reduceProject(array_of_items: Item[]): number
+  reduceProject(array_of_items: _ItemClasses[]): number
 
   /** Closes the project with normal save options. */
   close(closeOptions: CloseOptions): boolean
@@ -1479,10 +1481,10 @@ declare class Project {
   ): PlaceholderItem
 
   /** Imports a file into the project. */
-  importFile(importOptions: ImportOptions): Item
+  importFile(importOptions: ImportOptions): _ItemClasses
 
   /** Displays an Import File dialog box. */
-  importFileWithDialog(): Item[] | null
+  importFileWithDialog(): _ItemClasses[] | null
 
   /** Shows or hides the Project panel. */
   showWindow(doShow: boolean): void
@@ -1803,17 +1805,17 @@ declare class PropertyBase {
   moveTo(newIndex: number): void
 
   /** Duplicates this property object. */
-  duplicate(): PropertyBase
+  duplicate(): _PropertyClasses
 
   /** Gets a member property or group. Strictly, this should be PropertyGroup method. */
-  property(index: number): Property | PropertyGroup | MaskPropertyGroup
-  property(name: string): Property | PropertyGroup | MaskPropertyGroup
+  property(index: number): _PropertyClasses
+  property(name: string): _PropertyClasses
 }
 
 /** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
 declare interface PropertyGroup {
-  (index: number): Property | PropertyGroup | MaskPropertyGroup
-  (name: string): Property | PropertyGroup | MaskPropertyGroup
+  (index: number): _PropertyClasses
+  (name: string): _PropertyClasses
 }
 
 /** The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes. */
@@ -1825,7 +1827,7 @@ declare class PropertyGroup extends PropertyBase {
   canAddProperty(name: string): boolean
 
   /** Adds a property to the group. */
-  addProperty(name: string): PropertyBase
+  addProperty(name: string): _PropertyClasses
 }
 
 /** The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. */
