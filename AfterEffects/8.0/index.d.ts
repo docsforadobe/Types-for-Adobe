@@ -1399,17 +1399,17 @@ declare class OMCollection extends Collection {
 
 /** An OutputModule object of a RenderQueueItem generates a single file or sequence via a render operation, and contains attributes and methods relating to the file to be rendered. */
 declare class OutputModule {
-  /** The path and name of the file to be rendered. */
-  file: File
-
-  /** An action to be taken after rendering. */
-  postRenderAction: PostRenderAction
-
   /** The user-interface name of the output module. */
   readonly name: string
 
   /** All templates for the output module */
   readonly templates: string[]
+
+  /** The path and name of the file to be rendered. */
+  file: File
+
+  /** An action to be taken after rendering. */
+  postRenderAction: PostRenderAction
 
   /** Removes this output module from the render-queue item’s list. */
   remove(): void
@@ -1438,12 +1438,6 @@ declare class Project {
   /** The currently active item. */
   readonly activeItem: _ItemClasses | null
 
-  /** The color depth of the current project. */
-  bitsPerChannel: number
-
-  /** When true, thumbnail views use the transparency checkerboard pattern. */
-  transparencyGridThumbnails: boolean
-
   /** The total number of items contained in the project. */
   readonly numItems: number
 
@@ -1452,6 +1446,12 @@ declare class Project {
 
   /** The project’s render queue. */
   readonly renderQueue: RenderQueue
+
+  /** The color depth of the current project. */
+  bitsPerChannel: number
+
+  /** When true, thumbnail views use the transparency checkerboard pattern. */
+  transparencyGridThumbnails: boolean
 
   /** The frame at which to start numbering when displaying the project. */
   displayStartFrame: number
@@ -1616,12 +1616,6 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   /** A text description of the units in which the value is expressed. */
   readonly unitsText: string
 
-  /** The expression string for this property. */
-  expression: string
-
-  /** When true, the expression is used to generate values for the property. */
-  expressionEnabled: boolean
-
   /** The error, if any, that occurred when the last expression was evaluated. */
   readonly expressionError: string
 
@@ -1630,6 +1624,12 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
 
   /** The position index of this property. */
   readonly propertyIndex: number
+
+  /** The expression string for this property. */
+  expression: string
+
+  /** When true, the expression is used to generate values for the property. */
+  expressionEnabled: boolean
 
   /** Gets the value of the property evaluated at given time. */
   valueAtTime(time: number, preExpression: boolean): T["value"]
