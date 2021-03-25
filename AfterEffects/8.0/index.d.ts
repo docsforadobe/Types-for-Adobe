@@ -469,20 +469,21 @@ declare enum CloseOptions {
   SAVE_CHANGES,
 }
 
+// TODO: Update this to use correct values
 declare enum PropertyValueType {
-  NO_VALUE,
-  ThreeD_SPATIAL,
-  ThreeD,
-  TwoD_SPATIAL,
-  TwoD,
-  OneD,
-  COLOR,
-  CUSTOM_VALUE,
-  MARKER,
-  LAYER_INDEX,
-  MASK_INDEX,
-  SHAPE,
-  TEXT_DOCUMENT,
+  NO_VALUE = 0,
+  ThreeD_SPATIAL = 1,
+  ThreeD = 2,
+  TwoD_SPATIAL = 3,
+  TwoD = 4,
+  OneD = 5,
+  COLOR = 6,
+  CUSTOM_VALUE = 7,
+  MARKER = 8,
+  LAYER_INDEX = 9,
+  MASK_INDEX = 10,
+  SHAPE = 11,
+  TEXT_DOCUMENT = 12,
 }
 
 declare enum KeyframeInterpolationType {
@@ -849,7 +850,7 @@ declare interface AVLayer extends Layer {
   ): { top: number; left: number; width: number; height: number }
 
   /** Shortcuts */
-  readonly timeRemap: Property<number>
+  readonly timeRemap: OneDProperty
   readonly mask: MaskPropertyGroup
   readonly effect: PropertyGroup
   readonly layerStyle: _LayerStyles
@@ -933,7 +934,7 @@ declare interface CompItem extends AVItem {
   readonly selectedLayers: Layer[]
 
   /** The selected properties of the composition. */
-  readonly selectedProperties: (Property<any> | PropertyGroup | MaskPropertyGroup)[]
+  readonly selectedProperties: (Property | PropertyGroup | MaskPropertyGroup)[]
 
   /** The rendering plug-in module to be used to render this composition. */
   renderer: string
@@ -1142,8 +1143,8 @@ declare class KeyframeEase {
 
 /** The Layer object provides access to layers within compositions. It can be accessed from an item’s layer collection either by index number or by a name string. */
 declare interface Layer {
-  (index: number): Property<any> | PropertyGroup | MaskPropertyGroup
-  (name: string): Property<any> | PropertyGroup | MaskPropertyGroup
+  (index: number): Property | PropertyGroup | MaskPropertyGroup
+  (name: string): Property | PropertyGroup | MaskPropertyGroup
 }
 
 declare interface Layer {
@@ -1193,7 +1194,7 @@ declare interface Layer {
   readonly nullLayer: boolean
 
   /** All selected AE properties in the layer. */
-  readonly selectedProperties: (Property<any> | PropertyGroup | MaskPropertyGroup)[]
+  readonly selectedProperties: (Property | PropertyGroup | MaskPropertyGroup)[]
 
   /** A descriptive comment for the layer. */
   comment: string
@@ -1252,23 +1253,23 @@ declare interface Layer {
   property(name: string): PropertyBase
 
   /** Shortcuts */
-  readonly marker: Property<MarkerValue>
+  readonly marker: MarkerValueProperty
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: Property<[number, number] | [number, number, number]>
-  readonly position: Property<[number, number] | [number, number, number]>
-  readonly xPosition: Property<number>
-  readonly yPosition: Property<number>
-  readonly zPosition: Property<number>
-  readonly scale: Property<[number, number] | [number, number, number]>
-  readonly orientation: Property<[number, number, number]>
-  readonly rotation: Property<number>
-  readonly xRotation: Property<number>
-  readonly yRotation: Property<number>
-  readonly zRotation: Property<number>
-  readonly opacity: Property<number>
-  readonly pointOfInterest: Property<[number, number, number]>
+  readonly anchorPoint: OneDProperty | TwoDProperty
+  readonly position: OneDProperty | TwoDProperty
+  readonly xPosition: OneDProperty
+  readonly yPosition: OneDProperty
+  readonly zPosition: OneDProperty
+  readonly scale: OneDProperty | TwoDProperty
+  readonly orientation: ThreeDProperty
+  readonly rotation: OneDProperty
+  readonly xRotation: OneDProperty
+  readonly yRotation: OneDProperty
+  readonly zRotation: OneDProperty
+  readonly opacity: OneDProperty
+  readonly pointOfInterest: ThreeDProperty
 }
 
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
@@ -1374,19 +1375,19 @@ declare interface MaskPropertyGroup extends PropertyGroup {
   color: [number, number, number]
 
   /** The shape of the mask. */
-  maskShape: Property<Shape>
+  maskShape: ShapeProperty
 
   /** The path of the mask. */
-  maskPath: Property<Shape>
+  maskPath: ShapeProperty
 
   /** The mask feather amount. */
-  maskFeather: Property<[number, number]>
+  maskFeather: TwoDProperty
 
   /** The mask opacity. */
-  maskOpacity: Property<number>
+  maskOpacity: OneDProperty
 
   /** The mask expansion amount. */
-  maskExpansion: Property<number>
+  maskExpansion: OneDProperty
 }
 
 /** The OMCollection contains all of the output modules in a render queue. The collection provides access to the OutputModule objects, but does not provide any additional functionality. The first OutputModule object in the collection is at index position 1. */
@@ -1500,13 +1501,89 @@ declare class Project {
   autoFixExpressions(oldText: string, newText: string): void
 }
 
+
+type PropertyClassMembers = {
+  [P in keyof Property]: Property[P]
+}
+declare interface UnknownPropertyType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType
+  value: any
+}
+
+declare interface NoValueType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.NO_VALUE
+  value: any
+}
+
+type ColorValue = [number, number, number, number];
+
+declare interface ColorType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.COLOR
+  value: ColorValue
+}
+
+declare interface BooleanType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.OneD
+  value: boolean
+}
+declare interface OneDType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.OneD
+  value: number
+}
+
+declare interface TwoDType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.TwoD
+  value: TwoDPoint
+}
+
+type TwoDPoint = [number, number];
+declare interface TwoDSpatialType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.TwoD_SPATIAL
+  value: TwoDPoint
+}
+
+type ThreeDPoint = [number, number, number];
+
+declare interface ThreeDType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.ThreeD
+  value: ThreeDPoint
+}
+
+
+declare interface TextDocumentType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.TEXT_DOCUMENT
+  value: TextDocument
+}
+
+declare interface MarkerValueType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.MARKER
+  value: MarkerValue
+}
+
+declare interface ShapePropertyType extends PropertyClassMembers {
+  propertyValueType : PropertyValueType.SHAPE
+  value: Shape
+}
+
+type NoValueProperty = Property<NoValueType>;
+type ColorProperty = Property<ColorType>;
+type BooleanProperty = Property<BooleanType>;
+type OneDProperty = Property<OneDType>;
+type TwoDProperty = Property<TwoDType>;
+type ThreeDProperty = Property<ThreeDType>;
+type ShapeProperty = Property<ShapePropertyType>;
+type MarkerValueProperty = Property<MarkerValueType>;
+type TextDocumentProperty = Property<TextDocumentType>;
+
+type AnyProperty = NoValueProperty | ColorProperty | OneDProperty | ShapeProperty | MarkerValueProperty | TextDocumentProperty;
+
 /** The Property object contains value, keyframe, and expression information about a particular AE property of a layer. */
-declare interface Property<A> extends PropertyBase {
+declare class Property<T extends UnknownPropertyType = UnknownPropertyType> extends PropertyBase {
   /** Type of value stored in this property. */
-  readonly propertyValueType: PropertyValueType
+  readonly propertyValueType: T['propertyValueType']
 
   /** Current value of the property. */
-  readonly value: A
+  readonly value: T['value']
 
   /** When true, there is a minimum permitted value. */
   readonly hasMin: boolean
@@ -1551,19 +1628,19 @@ declare interface Property<A> extends PropertyBase {
   readonly propertyIndex: number
 
   /** Gets the value of the property evaluated at given time. */
-  valueAtTime(time: number, preExpression: boolean): A
+  valueAtTime(time: number, preExpression: boolean): T['value']
 
   /** Sets the static value of the property. */
-  setValue(newValue: A): void
+  setValue(newValue: T['value']): void
 
   /** Creates a keyframe for the property. */
-  setValueAtTime(time: number, newValue: A): void
+  setValueAtTime(time: number, newValue: T['value']): void
 
   /** Creates a set of keyframes for the property. */
-  setValuesAtTimes(times: number[], newValues: A[]): void
+  setValuesAtTimes(times: number[], newValues: T['value'][]): void
 
   /** Finds a keyframe and sets the value of the property at that keyframe. */
-  setValueAtKey(keyIndex: number, newValue: A): void
+  setValueAtKey(keyIndex: number, newValue: T['value']): void
 
   /** Gets the keyframe nearest to a specified time. */
   nearestKeyIndex(time: number): number
@@ -1573,7 +1650,7 @@ declare interface Property<A> extends PropertyBase {
   keyTime(markerComment: string): number
 
   /** Gets the value of a keyframe at the time at which a condition occurs. */
-  keyValue(keyIndex: number): A
+  keyValue(keyIndex: number): T['value']
   keyValue(markerComment: string): MarkerValue
 
   /** Adds a new keyframe to the property at a given time. */
@@ -1680,13 +1757,7 @@ declare interface Property<A> extends PropertyBase {
   keySelected(keyIndex: number): boolean
 }
 
-/** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
-declare interface PropertyBase {
-  (index: number): Property<any> | PropertyGroup | MaskPropertyGroup
-  (name: string): Property<any> | PropertyGroup | MaskPropertyGroup
-}
-
-declare interface PropertyBase {
+declare class PropertyBase {
   /** Name of the property. */
   name: string
 
@@ -1744,6 +1815,12 @@ declare interface PropertyBase {
   /** Gets a member property or group. Strictly, this should be PropertyGroup method. */
   property(index: number): PropertyBase
   property(name: string): PropertyBase
+}
+
+/** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
+declare interface PropertyGroup {
+  (index: number): Property | PropertyGroup | MaskPropertyGroup
+  (name: string): Property | PropertyGroup | MaskPropertyGroup
 }
 
 /** The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes. */
@@ -1959,55 +2036,55 @@ declare interface TextLayer extends AVLayer {
   readonly source: null
 
   readonly text: _TextProperties
-  readonly sourceText: Property<TextDocument>
+  readonly sourceText: TextDocumentProperty
 }
 
 /**
  * Properties for Shortcuts
  */
 declare interface _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: Property<[number, number] | [number, number, number]>
-  readonly position: Property<[number, number] | [number, number, number]>
-  readonly xPosition: Property<number>
-  readonly yPosition: Property<number>
-  readonly zPosition: Property<number>
-  readonly scale: Property<[number, number] | [number, number, number]>
-  readonly orientation: Property<[number, number, number]>
-  readonly rotation: Property<number>
-  readonly xRotation: Property<number>
-  readonly yRotation: Property<number>
-  readonly zRotation: Property<number>
-  readonly opacity: Property<number>
-  readonly pointOfInterest: Property<[number, number, number]>
+  readonly anchorPoint: OneDProperty | TwoDProperty
+  readonly position: OneDProperty | TwoDProperty
+  readonly xPosition: OneDProperty
+  readonly yPosition: OneDProperty
+  readonly zPosition: OneDProperty
+  readonly scale: OneDProperty | TwoDProperty
+  readonly orientation: ThreeDProperty
+  readonly rotation: OneDProperty
+  readonly xRotation: OneDProperty
+  readonly yRotation: OneDProperty
+  readonly zRotation: OneDProperty
+  readonly opacity: OneDProperty
+  readonly pointOfInterest: ThreeDProperty
 }
 
 declare interface _LightOptionsGroup extends PropertyGroup {
-  readonly intensity: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly coneAngle: Property<number>
-  readonly coneFeather: Property<number>
-  readonly falloff: Property<number>
-  readonly radius: Property<number>
-  readonly falloffDistance: Property<number>
-  readonly castsShadows: Property<boolean>
-  readonly shadowDarkness: Property<number>
-  readonly shadowDiffusion: Property<number>
+  readonly intensity: OneDProperty
+  readonly color: ColorProperty
+  readonly coneAngle: OneDProperty
+  readonly coneFeather: OneDProperty
+  readonly falloff: OneDProperty
+  readonly radius: OneDProperty
+  readonly falloffDistance: OneDProperty
+  readonly castsShadows: BooleanProperty
+  readonly shadowDarkness: OneDProperty
+  readonly shadowDiffusion: OneDProperty
 }
 
 declare interface _CameraOptionsGroup extends PropertyGroup {
-  readonly zoom: Property<number>
-  readonly depthOfField: Property<boolean>
-  readonly focusDistance: Property<number>
-  readonly aperture: Property<number>
-  readonly blurLevel: Property<number>
-  readonly irisShape: Property<number>
-  readonly irisRotation: Property<number>
-  readonly irisRoundness: Property<number>
-  readonly irisAspectRatio: Property<number>
-  readonly irisDiffractionFringe: Property<number>
-  readonly highlightGain: Property<number>
-  readonly highlightThreshold: Property<number>
-  readonly highlightSaturation: Property<number>
+  readonly zoom: OneDProperty
+  readonly depthOfField: BooleanProperty
+  readonly focusDistance: OneDProperty
+  readonly aperture: OneDProperty
+  readonly blurLevel: OneDProperty
+  readonly irisShape: OneDProperty
+  readonly irisRotation: OneDProperty
+  readonly irisRoundness: OneDProperty
+  readonly irisAspectRatio: OneDProperty
+  readonly irisDiffractionFringe: OneDProperty
+  readonly highlightGain: OneDProperty
+  readonly highlightThreshold: OneDProperty
+  readonly highlightSaturation: OneDProperty
 }
 
 declare interface _LayerStyles extends PropertyGroup {
@@ -2024,177 +2101,177 @@ declare interface _LayerStyles extends PropertyGroup {
 }
 
 declare interface _BlendOptionsGroup extends PropertyGroup {
-  readonly globalLightAngle: Property<number>
-  readonly globalLightAltitude: Property<number>
+  readonly globalLightAngle: OneDProperty
+  readonly globalLightAltitude: OneDProperty
   readonly advancedBlending: _AdvBlendGroup
 }
 
 declare interface _AdvBlendGroup extends PropertyGroup {
-  readonly fillOpacity: Property<number>
-  readonly red: Property<boolean>
-  readonly green: Property<boolean>
-  readonly blue: Property<boolean>
-  readonly blendInteriorStylesAsGroup: Property<boolean>
-  readonly useBlendRangesFromSource: Property<boolean>
+  readonly fillOpacity: OneDProperty
+  readonly red: BooleanProperty
+  readonly green: BooleanProperty
+  readonly blue: BooleanProperty
+  readonly blendInteriorStylesAsGroup: BooleanProperty
+  readonly useBlendRangesFromSource: BooleanProperty
 }
 
 declare interface _DropShadow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
-  readonly useGlobalLight: Property<boolean>
-  readonly angle: Property<number>
-  readonly distance: Property<number>
-  readonly spread: Property<number>
-  readonly size: Property<number>
-  readonly noise: Property<number>
-  readonly layerKnocksOutDropShadow: Property<boolean>
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
+  readonly useGlobalLight: BooleanProperty
+  readonly angle: OneDProperty
+  readonly distance: OneDProperty
+  readonly spread: OneDProperty
+  readonly size: OneDProperty
+  readonly noise: OneDProperty
+  readonly layerKnocksOutDropShadow: BooleanProperty
 }
 
 declare interface _InnerShadow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
-  readonly useGlobalLight: Property<boolean>
-  readonly angle: Property<number>
-  readonly distance: Property<number>
-  readonly choke: Property<number>
-  readonly size: Property<boolean>
-  readonly noise: Property<number>
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
+  readonly useGlobalLight: BooleanProperty
+  readonly angle: OneDProperty
+  readonly distance: OneDProperty
+  readonly choke: OneDProperty
+  readonly size: BooleanProperty
+  readonly noise: OneDProperty
 }
 
 declare interface _OuterGlow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly opacity: Property<number>
-  readonly noise: Property<number>
-  readonly colorType: Property<number>
-  readonly color: Property<[number, number, number, number]>
+  readonly blendMode: OneDProperty
+  readonly opacity: OneDProperty
+  readonly noise: OneDProperty
+  readonly colorType: OneDProperty
+  readonly color: ColorProperty
   readonly colors: Property<void>
-  readonly gradientSmoothness: Property<number>
-  readonly technique: Property<number>
-  readonly spread: Property<number>
-  readonly size: Property<number>
-  readonly range: Property<number>
-  readonly jitter: Property<number>
+  readonly gradientSmoothness: OneDProperty
+  readonly technique: OneDProperty
+  readonly spread: OneDProperty
+  readonly size: OneDProperty
+  readonly range: OneDProperty
+  readonly jitter: OneDProperty
 }
 
 declare interface _InnerGlow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly opacity: Property<number>
-  readonly noise: Property<number>
-  readonly colorType: Property<number>
-  readonly color: Property<[number, number, number, number]>
+  readonly blendMode: OneDProperty
+  readonly opacity: OneDProperty
+  readonly noise: OneDProperty
+  readonly colorType: OneDProperty
+  readonly color: ColorProperty
   readonly colors: Property<void>
-  readonly gradientSmoothness: Property<number>
-  readonly technique: Property<number>
-  readonly source: Property<number>
-  readonly choke: Property<number>
-  readonly size: Property<number>
-  readonly range: Property<number>
-  readonly jitter: Property<number>
+  readonly gradientSmoothness: OneDProperty
+  readonly technique: OneDProperty
+  readonly source: OneDProperty
+  readonly choke: OneDProperty
+  readonly size: OneDProperty
+  readonly range: OneDProperty
+  readonly jitter: OneDProperty
 }
 
 declare interface _BevelAndEmboss extends PropertyGroup {
-  readonly style: Property<number>
-  readonly technique: Property<number>
-  readonly depth: Property<number>
-  readonly direction: Property<number>
-  readonly size: Property<number>
-  readonly soften: Property<number>
-  readonly useGlobalLight: Property<boolean>
-  readonly angle: Property<number>
-  readonly altitude: Property<number>
-  readonly highlightMode: Property<number>
-  readonly highlightColor: Property<[number, number, number, number]>
-  readonly highlightOpacity: Property<number>
-  readonly shadowMode: Property<number>
-  readonly shadowColor: Property<[number, number, number, number]>
-  readonly shadowOpacity: Property<number>
+  readonly style: OneDProperty
+  readonly technique: OneDProperty
+  readonly depth: OneDProperty
+  readonly direction: OneDProperty
+  readonly size: OneDProperty
+  readonly soften: OneDProperty
+  readonly useGlobalLight: BooleanProperty
+  readonly angle: OneDProperty
+  readonly altitude: OneDProperty
+  readonly highlightMode: OneDProperty
+  readonly highlightColor: ColorProperty
+  readonly highlightOpacity: OneDProperty
+  readonly shadowMode: OneDProperty
+  readonly shadowColor: ColorProperty
+  readonly shadowOpacity: OneDProperty
 }
 
 declare interface _Satin extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
-  readonly angle: Property<number>
-  readonly distance: Property<number>
-  readonly size: Property<number>
-  readonly invert: Property<boolean>
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
+  readonly angle: OneDProperty
+  readonly distance: OneDProperty
+  readonly size: OneDProperty
+  readonly invert: BooleanProperty
 }
 
 declare interface _ColorOverlay extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
 }
 
 declare interface _GradientOverlay extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly opacity: Property<number>
+  readonly blendMode: OneDProperty
+  readonly opacity: OneDProperty
   readonly colors: Property<void>
-  readonly gradientSmoothness: Property<number>
-  readonly angle: Property<number>
-  readonly style: Property<number>
-  readonly reverse: Property<boolean>
-  readonly alignWithLayer: Property<boolean>
-  readonly scale: Property<number>
-  readonly offset: Property<[number, number]>
+  readonly gradientSmoothness: OneDProperty
+  readonly angle: OneDProperty
+  readonly style: OneDProperty
+  readonly reverse: BooleanProperty
+  readonly alignWithLayer: BooleanProperty
+  readonly scale: OneDProperty
+  readonly offset: TwoDProperty
 }
 
 declare interface _Stroke extends PropertyGroup {
-  readonly color: Property<[number, number, number, number]>
-  readonly blendMode: Property<number>
-  readonly size: Property<number>
-  readonly opacity: Property<number>
-  readonly position: Property<number>
+  readonly color: ColorProperty
+  readonly blendMode: OneDProperty
+  readonly size: OneDProperty
+  readonly opacity: OneDProperty
+  readonly position: OneDProperty
 }
 
 declare interface _GeometryOptionsGroup extends PropertyGroup {
-  readonly curvature: Property<number>
-  readonly segments: Property<number>
+  readonly curvature: OneDProperty
+  readonly segments: OneDProperty
 
-  readonly bevelStyle: Property<number>
-  readonly bevelDepth: Property<number>
-  readonly holeBevelDepth: Property<number>
-  readonly extrusionDepth: Property<number>
+  readonly bevelStyle: OneDProperty
+  readonly bevelDepth: OneDProperty
+  readonly holeBevelDepth: OneDProperty
+  readonly extrusionDepth: OneDProperty
 }
 
 declare interface _MaterialOptionsGroup extends PropertyGroup {
-  readonly castsShadows: Property<boolean>
-  readonly lightTransmission: Property<number>
-  readonly acceptsShadows: Property<boolean>
-  readonly acceptsLights: Property<boolean>
-  readonly appearsInReflections: Property<boolean>
-  readonly ambient: Property<number>
-  readonly diffuse: Property<number>
-  readonly specularIntensity: Property<number>
-  readonly specularShininess: Property<number>
-  readonly metal: Property<number>
-  readonly reflectionIntensity: Property<number>
-  readonly reflectionSharpness: Property<number>
-  readonly reflectionRolloff: Property<number>
-  readonly transparency: Property<number>
-  readonly transparencyRolloff: Property<number>
-  readonly indexOfRefraction: Property<number>
+  readonly castsShadows: BooleanProperty
+  readonly lightTransmission: OneDProperty
+  readonly acceptsShadows: BooleanProperty
+  readonly acceptsLights: BooleanProperty
+  readonly appearsInReflections: BooleanProperty
+  readonly ambient: OneDProperty
+  readonly diffuse: OneDProperty
+  readonly specularIntensity: OneDProperty
+  readonly specularShininess: OneDProperty
+  readonly metal: OneDProperty
+  readonly reflectionIntensity: OneDProperty
+  readonly reflectionSharpness: OneDProperty
+  readonly reflectionRolloff: OneDProperty
+  readonly transparency: OneDProperty
+  readonly transparencyRolloff: OneDProperty
+  readonly indexOfRefraction: OneDProperty
 }
 
 declare interface _AudioGroup extends PropertyGroup {
-  readonly audioLevels: Property<[number, number]>
+  readonly audioLevels: TwoDProperty
 }
 
 declare interface _TextProperties extends PropertyGroup {
-  readonly sourceText: Property<TextDocument>
+  readonly sourceText: TextDocumentProperty
   readonly pathOption: _TextPathOptions
   readonly moreOption: _TextMoreOptions
 }
 
 declare interface _TextPathOptions extends PropertyGroup {
-  readonly path: Property<number>
+  readonly path: OneDProperty
 }
 
 declare interface _TextMoreOptions extends PropertyGroup {
-  readonly anchorPointGrouping: Property<number>
-  readonly groupingAlignment: Property<[number, number]>
-  readonly fillANdStroke: Property<number>
-  readonly interCharacterBlending: Property<number>
+  readonly anchorPointGrouping: OneDProperty
+  readonly groupingAlignment: TwoDProperty
+  readonly fillANdStroke: OneDProperty
+  readonly interCharacterBlending: OneDProperty
 }
