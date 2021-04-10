@@ -903,7 +903,7 @@ declare class AVItem extends Item {
 
   /** Sets a solid as a proxy for the item. */
   setProxyWithSolid(
-    color: [number, number, number],
+    color: ThreeDColorValue,
     name: string,
     width: number,
     height: number,
@@ -1110,7 +1110,7 @@ declare class CompItem extends AVItem {
   preserveNestedResolution: boolean
 
   /** The background color of the composition. */
-  bgColor: [number, number, number]
+  bgColor: ThreeDColorValue
 
   /** Changes the display of the start time in the Timeline panel. */
   displayStartTime: number
@@ -1224,7 +1224,7 @@ declare class FootageItem extends AVItem {
 
   /** Replaces a footage file with a solid. */
   replaceWithSolid(
-    color: [number, number, number],
+    color: ThreeDColorValue,
     name: string,
     width: number,
     height: number,
@@ -1252,7 +1252,7 @@ declare class FootageSource {
   alphaMode: AlphaMode
 
   /** The color to be premultiplied. */
-  premulColor: [number, number, number]
+  premulColor: ThreeDColorValue
 
   /** When true, an alpha channel in a footage clip or proxy should be inverted. */
   invertAlpha: boolean
@@ -1492,7 +1492,7 @@ declare class LayerCollection extends Collection {
 
   /** Creates a new layer, a FootageItem with a SolidSource, and adds it to this collection. */
   addSolid(
-    color: [number, number, number],
+    color: ThreeDColorValue,
     name: string,
     width: number,
     height: number,
@@ -1594,7 +1594,7 @@ declare class MaskPropertyGroup extends PropertyGroup {
   locked: boolean
 
   /** The color used to draw the mask outline in the user interface. */
-  color: [number, number, number]
+  color: ThreeDColorValue
 
   /** The shape of the mask. */
   maskShape: ShapeProperty
@@ -1872,6 +1872,7 @@ declare interface NoValueType extends PropertyClassMembers {
 }
 
 type ColorValue = [number, number, number, number]
+type ThreeDColorValue = [number, number, number]
 
 declare interface ColorType extends PropertyClassMembers {
   propertyValueType: PropertyValueType.COLOR
@@ -2392,7 +2393,7 @@ declare class ShapeLayer extends AVLayer {}
 /** The SolidSource object represents a solid-color footage source. */
 declare class SolidSource extends FootageSource {
   /** The color of the solid. */
-  color: [number, number, number]
+  color: ThreeDColorValue
 }
 
 /** The file specification, an ExtendScript File object. */
@@ -2516,7 +2517,7 @@ declare class TextDocument {
   applyStroke: boolean
 
   /** The text layer’s fill color. */
-  fillColor: [number, number, number]
+  fillColor: ThreeDColorValue
 
   /** The text layer’s font specified by its PostScript name. */
   font: string
@@ -2531,7 +2532,7 @@ declare class TextDocument {
   leading: number
 
   /** The text layer’s stroke color. */
-  strokeColor: [number, number, number]
+  strokeColor: ThreeDColorValue
 
   /** Indicates the rendering order for the fill and stroke of a text layer. */
   strokeOverFill: boolean
