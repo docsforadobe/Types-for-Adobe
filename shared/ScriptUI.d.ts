@@ -31,13 +31,13 @@ declare class ScriptUI {
    * Collects the enumerated values that can be used in the alignment and alignChildren properties of controls and containers.
    * Predefined alignment values are: TOP, BOTTOM, LEFT, RIGHT, FILL, CENTER
    */
-  static readonly Alignment: _Alignment
+  static readonly Alignment: typeof _Alignment
 
   /**
    * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
    * Predefined styles are REGULAR, BOLD, ITALIC, BOLDITALIC.
    */
-  static readonly FontStyle: _FontStyle
+  static readonly FontStyle: typeof _FontStyle
 
   /**
    * The font constants defined by the host application.
@@ -124,7 +124,7 @@ declare class Window extends _Control {
    * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
    * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
    */
-  alignChildren: string
+  alignChildren: string | [string, string]
 
   /**
    * For windows of type dialog, the UI element to notify when the user presses a cancellation key combination.
@@ -192,7 +192,7 @@ declare class Window extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: number | [number, number, number, number]
 
   /**
    * True if the window is expanded.
@@ -420,7 +420,7 @@ declare class ScriptUIPen {
    * The pen type, solid or theme.
    * One of these constants: ScriptUIGraphics.PenType.SOLID_COLOR or ScriptUIGraphics.PenType.THEME_COLOR
    */
-  readonly type: typeof ScriptUIGraphics.PenType
+  readonly type: _BrushOrPenType
 }
 
 /**
@@ -444,7 +444,7 @@ declare class ScriptUIBrush {
    * The brush type, solid or theme.
    * One of these constants: ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR
    */
-  readonly type: typeof ScriptUIGraphics.BrushType
+  readonly type: _BrushOrPenType
 }
 
 /**
@@ -462,13 +462,13 @@ declare class ScriptUIGraphics {
    * Contains the enumerated constants for the type argument of newBrush().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly BrushType: _BrushOrPenType
+  readonly BrushType: typeof _BrushOrPenType
 
   /**
    * Contains the enumerated constants for the type argument of newPen().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly PenType: _BrushOrPenType
+  readonly PenType: typeof _BrushOrPenType
 
   /**
    * The background color for containers; for non-containers, the parent background color.
@@ -601,7 +601,7 @@ declare class ScriptUIGraphics {
    * @param type The brush type, solid or theme. One of the constants ScriptUIGraphics.BrushType.SOLID_COLOR or ScriptUIGraphics.BrushType.THEME_COLOR.
    * @param color The brush color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
    */
-  newBrush(type: typeof ScriptUIGraphics.BrushType, color: number[]): ScriptUIBrush
+  newBrush(type: _BrushOrPenType, color: number[]): ScriptUIBrush
 
   /**
    * Creates a new, empty path object.
@@ -615,7 +615,7 @@ declare class ScriptUIGraphics {
    * @param color The pen color. If type is SOLID_COLOR, the color expressed as an array of three or four values, in the form [R, B, G, A] specifying the red, green, and blue values of the color and, optionally, the opacity (alpha channel). All values are numbers in the range [0.0..1.0]. An opacity of 0 is fully transparent, and an opacity of 1 is fully opaque. If the type is THEME_COLOR, the name string of the theme. Theme colors are defined by the host application.
    * @param width The width of the pen line in pixels. The line is centered around the current point. For example, if the value is 2, drawing a line from (0, 10) to (5, 10) paints the two rows of pixels directly above and below y-position 10.
    */
-  newPen(type: typeof ScriptUIGraphics.PenType, color: number[], width: number): ScriptUIPen
+  newPen(type: _BrushOrPenType, color: number[], width: number): ScriptUIPen
 
   /**
    * Defines a rectangular path in the currentPath object.
@@ -816,6 +816,18 @@ declare class StaticText extends _Control {
    * In Windows only.
    */
   onShortcutKey(): void
+
+  /**
+   * The background color for containers; for non-containers, the parent background color.
+   * The paint color and style is defined in this brush object.This property is only supported for controls like dropdownlist, edittext, and listbox.
+   */
+  backgroundColor: ScriptUIBrush
+
+  /**
+   * The text color.
+   * The paint color and style is defined in this pen object.
+   */
+  foregroundColor: ScriptUIPen
 }
 
 /**
@@ -894,6 +906,18 @@ declare class Button extends _Control {
    * In Windows only.
    */
   onShortcutKey(): void
+
+  /**
+   * The background color for containers; for non-containers, the parent background color.
+   * The paint color and style is defined in this brush object.This property is only supported for controls like dropdownlist, edittext, and listbox.
+   */
+  backgroundColor: ScriptUIBrush
+
+  /**
+   * The text color.
+   * The paint color and style is defined in this pen object.
+   */
+  foregroundColor: ScriptUIPen
 }
 
 /**
@@ -1113,6 +1137,18 @@ declare class EditText extends _Control {
    * In Windows only.
    */
   onShortcutKey(): void
+
+  /**
+   * The background color for containers; for non-containers, the parent background color.
+   * The paint color and style is defined in this brush object.This property is only supported for controls like dropdownlist, edittext, and listbox.
+   */
+  backgroundColor: ScriptUIBrush
+
+  /**
+   * The text color.
+   * The paint color and style is defined in this pen object.
+   */
+  foregroundColor: ScriptUIPen
 }
 
 /**
@@ -1968,7 +2004,7 @@ declare class Group extends _Control {
    * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
    * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
    */
-  alignChildren: string
+  alignChildren: string | [string, string]
 
   /**
    * An array of child elements.
@@ -1990,7 +2026,7 @@ declare class Group extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: number | [number, number, number, number]
 
   /**
    * The layout orientation of children in a container.
@@ -2039,6 +2075,17 @@ declare class Panel extends _Control {
   alignChildren: string
 
   /**
+   * An event-handler callback function, called after the window has been resized
+   */
+  onResize(): void
+
+  /**
+   * An event-handler callback function, called while a window is being resized
+   * Called while a window is being resized, each time the height or width changes. A handler can monitor the resize operation.
+   */
+  onResizing(): void
+
+  /**
    * Reserve space for the specified number of characters; affects calculation of preferredSize .
    */
   characters: number
@@ -2069,7 +2116,7 @@ declare class Panel extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: number | [number, number, number, number]
 
   /**
    * The layout orientation of children in a container.
@@ -2520,7 +2567,7 @@ declare class _Control {
    * For orientation = column: left, right, fill
    * For orientation = stack: top, bottom, left, right, fill
    */
-  alignment: string
+  alignment: string | [string, string]
 
   /**
    * The boundaries of the element, in parent-relative coordinates.
