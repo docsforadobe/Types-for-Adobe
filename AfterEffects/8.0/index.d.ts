@@ -544,7 +544,7 @@ declare enum TrackMatteType {
  * TYPES
  */
 type _PropertyClasses = Property | PropertyGroup | MaskPropertyGroup
-type _ItemClasses = CompItem | FootageItem | FolderItem
+type _ItemClasses = CompItem | FootageItem<FootageSourceType> | FolderItem
 
 /** Clears text from the Info panel. */
 declare var clearOutput: () => void
@@ -989,13 +989,16 @@ declare class FolderItem extends Item {
   item(index: number): _ItemClasses
 }
 
+/** These don't exist in AE, just here for the ease of types */
+type FootageSourceType = SolidSource | FileSource | PlaceholderSource;
+
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
-declare class FootageItem extends AVItem {
+declare class FootageItem<FootageSourceType> extends AVItem {
   /** The footage source file. */
   readonly file: File | null
 
   /** All settings related to the footage item. */
-  readonly mainSource: FootageSource
+  readonly mainSource: FootageSourceType
 
   /** Replaces a footage file with another footage file. */
   replace(file: File): void
@@ -1022,7 +1025,9 @@ declare class FootageItem extends AVItem {
   ): void
 }
 
-declare class PlaceholderItem extends FootageItem {}
+type SolidItem = FootageItem<SolidSource>;
+type FileItem = FootageItem<FileSource>;
+type PlaceholderItem = FootageItem<PlaceholderSource>;
 
 /** The FootageSource object holds information describing the source of some footage. It is used as the mainSource of a FootageItem, or the proxySource of a CompItem or FootageItem. */
 declare class FootageSource {
