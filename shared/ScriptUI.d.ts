@@ -21,7 +21,7 @@ declare const enum _BrushOrPenType {
   THEME_COLOR,
 }
 
-type _Bounds = Bounds | [number, number, number, number]
+type _Bounds = Bounds
 
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
@@ -159,12 +159,12 @@ declare class Window extends _Control {
    * The top left corner of the window frame in screen coordinates.
    * The same as [frameBounds.x, frameBounds.y]. Set this value to move the window frame to the specified location on the screen. The frameBounds value changes accordingly.
    */
-  frameLocation: Point | [number, number]
+  frameLocation: Point
 
   /**
    * The size and location of the window's frame in screen coordinates.
    */
-  readonly frameSize: Dimension | [number, number]
+  readonly frameSize: Dimension
 
   /**
    * Deprecated. Use ScriptUI.frameworkName instead.
@@ -484,7 +484,7 @@ declare class ScriptUIGraphics {
   /**
    * The current position in the current drawing path.
    */
-  readonly currentPoint: Point | [number, number]
+  readonly currentPoint: Point
 
   /**
    * The background color for containers when disabled or inactive; for non-containers, the parent background color.
@@ -558,7 +558,7 @@ declare class ScriptUIGraphics {
    * @param width The width of the region in pixels.
    * @param height The height of the region in pixels.
    */
-  ellipsePath(left: number, top: number, width: number, height: number): Point | [number, number]
+  ellipsePath(left: number, top: number, width: number, height: number): Point
 
   /**
    * Fills a path using a given painting brush.
@@ -573,7 +573,7 @@ declare class ScriptUIGraphics {
    * @param x The X coordinate for the destination point, relative to the origin of this element.
    * @param y The Y coordinate for the destination point, relative to the origin of this element.
    */
-  lineTo(x: number, y: number): Point | [number, number]
+  lineTo(x: number, y: number): Point
 
   /**
    * Calculates the size needed to display a string using the given font.
@@ -586,7 +586,7 @@ declare class ScriptUIGraphics {
     text: string,
     font?: ScriptUIFont,
     boundingWidth?: number,
-  ): Dimension | [number, number]
+  ): Dimension
 
   /**
    * Adds a given point to the currentPath, and makes it the current drawing position.
@@ -594,7 +594,7 @@ declare class ScriptUIGraphics {
    * @param x The X coordinate for the new point, relative to the origin of this element.
    * @param y The Y coordinate for the new point, relative to the origin of this element.
    */
-  moveTo(x: number, y: number): Point | [number, number]
+  moveTo(x: number, y: number): Point
 
   /**
    * Creates a new painting brush object.
@@ -625,7 +625,7 @@ declare class ScriptUIGraphics {
    * @param width The width in pixels.
    * @param height The height in pixels.
    */
-  rectPath(left: number, top: number, width: number, height: number): Point | [number, number]
+  rectPath(left: number, top: number, width: number, height: number): Point
 
   /**
    * Strokes the path segments of a path with a given drawing pen.
@@ -755,7 +755,7 @@ declare class ScriptUIImage {
   /**
    * The image size in pixels.
    */
-  readonly size: Dimension | [number, number]
+  readonly size: Dimension
 }
 
 /**
@@ -1149,7 +1149,7 @@ declare class ListBox extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: Dimension | [number, number]
+  itemSize: Dimension
 
   /**
    * The array of choice items displayed in the list.
@@ -1262,7 +1262,7 @@ declare class DropDownList extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: Dimension | [number, number]
+  itemSize: Dimension
 
   /**
    * The array of choice items displayed in the drop-down or pop-up list.
@@ -1816,7 +1816,7 @@ declare class TreeView extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: Dimension | [number, number]
+  itemSize: Dimension
 
   /**
    * The array of top-level items displayed in the list.
@@ -1968,7 +1968,7 @@ declare class Group extends _Control {
    * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
    * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
    */
-  alignChildren: string
+  alignChildren: string | string[]
 
   /**
    * An array of child elements.
@@ -2154,16 +2154,11 @@ declare class TabbedPanel extends Panel {
  * Specifies the origin point of an element as horizontal and vertical pixel offsets from the origin of the element's coordinate space.
  * A Point object is created when you set an element’s location property. You can set the property using a JavaScript object with properties named x and y, or an array with 2 values in the order [x, y].
  */
-declare class Point {
+declare class Point extends Array<number> {
   /**
    * The left coordinate.
    */
   left: number
-
-  /**
-   * The array length.
-   */
-  readonly length: number
 
   /**
    * The top coordinate.
@@ -2179,42 +2174,29 @@ declare class Point {
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
   y: number;
-
-  [0]: number;
-
-  [1]: number
 }
 
 /**
  * Defines the size of a window or UI element. Contains a 2-element array.
  * Specifies the height and width of an element in pixels. A Dimension object is created when you set an element’s size property. You can set the property using a JavaScript object with named properties {width: wd, height: ht}, or an array with 2 values in the order [wd, ht].
  */
-declare class Dimension {
+declare class Dimension extends Array<number> {
   /**
    * The height in pixels.
    */
   height: number
 
   /**
-   * The array length.
-   */
-  readonly length: number
-
-  /**
    * The width in pixels.
    */
   width: number;
-
-  [0]: number;
-
-  [1]: number
 }
 
 /**
  * Defines the boundaries of a window within the screen’s coordinate space, or of a UI element within the container’s coordinate space.
  * A Bounds object is created when you set an element’s bounds property. You can set the property using a JavaScript object with properties named left, top, right, bottom or x, y, width, height, or an array with 4 values in the order [x, y, wd, ht].
  */
-declare class Bounds {
+declare class Bounds extends Array<number> {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
@@ -2229,11 +2211,6 @@ declare class Bounds {
    * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
    */
   left: number
-
-  /**
-   * The array length.
-   */
-  readonly length: number
 
   /**
    * The width in pixels.
@@ -2259,14 +2236,6 @@ declare class Bounds {
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
   y: number;
-
-  [0]: number;
-
-  [1]: number;
-
-  [2]: number;
-
-  [3]: number
 }
 
 /**
@@ -2520,7 +2489,7 @@ declare class _Control {
    * For orientation = column: left, right, fill
    * For orientation = stack: top, bottom, left, right, fill
    */
-  alignment: string
+  alignment: string | string[]
 
   /**
    * The boundaries of the element, in parent-relative coordinates.
@@ -2549,17 +2518,17 @@ declare class _Control {
    * The upper left corner of this element relative to its parent.
    * The location is defined as [bounds.x, bounds.y]. Setting an element's location changes its bounds property, and vice-versa.
    */
-  location: Point | [number, number]
+  location: Point
 
   /**
    * The maximum height and width to which the element can be resized.
    */
-  maximumSize: Dimension | [number, number]
+  maximumSize: Dimension
 
   /**
    * The minimum height and width to which the element can be resized.
    */
-  minimumSize: Dimension | [number, number]
+  minimumSize: Dimension
 
   /**
    * The parent element.
@@ -2571,13 +2540,13 @@ declare class _Control {
    * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes. A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
    * To set a specific value for only one dimension, specify the other dimension as -1.
    */
-  preferredSize: Dimension | [number, number]
+  preferredSize: Dimension
 
   /**
    * The current dimensions of this element.
    * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
    */
-  size: Dimension | [number, number]
+  size: Dimension
 
   /**
    * The element type.
