@@ -2148,7 +2148,7 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   canAddToMotionGraphicsTemplate(comp: CompItem): boolean
 
   /** Sets parameters for a Dropdown Menu Control’s Menu Property. */
-  setPropertyParameters(items: string[]): void
+  setPropertyParameters(items: string[]): Property<OneDProperty>
 }
 
 declare class PropertyBase {
