@@ -48,5 +48,7 @@ Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.co
 
 ## Showcase
 
+- [vscode-types-for-adobe](https://github.com/Afanyiyu/vscode-types-for-adobe): Visual Studio Code Plugin for Types-for-Adobe.
+
 [Add your project](https://github.com/bbb999/Types-for-Adobe/edit/master/README.md).
 
