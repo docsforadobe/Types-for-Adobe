@@ -625,6 +625,11 @@ declare class Track {
   /**
    *
    */
+  readonly name: string
+
+  /**
+   *
+   */
   readonly transitions: TrackItemCollection
 
   /**
