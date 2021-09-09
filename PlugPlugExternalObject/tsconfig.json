@@ -6,5 +6,7 @@
     "lib": ["ES5"],
     "typeRoots": []
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
