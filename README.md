@@ -48,5 +48,7 @@ Thanks to [vespakoen](https://github.com/vespakoen), [atarabi](https://github.co
 
 ## Showcase
 
+[Sample VSCode project with support for ES5 and CommonJS modules](https://github.com/wadimw/extendscript-ts-sample-project) by wadimw
+
 [Add your project](https://github.com/bbb999/Types-for-Adobe/edit/master/README.md).
 
