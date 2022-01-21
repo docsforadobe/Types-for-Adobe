@@ -1,6 +1,5 @@
 /// <reference path="../../shared/global.d.ts" />
 /// <reference path="../../shared/ScriptUI.d.ts" />
-/// <reference path="./qeDom.d.ts" />
 
 /**
  *
@@ -1664,8 +1663,3 @@ declare class Document {
    */
   unbind(eventName: string): void
 }
-
-/**
- * In order to use qe please call app.enableQE() first.
- */
-declare const qe: undefined | QEApplication
