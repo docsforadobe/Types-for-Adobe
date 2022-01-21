@@ -1,5 +1,6 @@
 /// <reference path="../../shared/global.d.ts" />
 /// <reference path="../../shared/ScriptUI.d.ts" />
+/// <reference path="./qeDom.d.ts" />
 
 /**
  *
@@ -555,7 +556,12 @@ declare class Project {
   /**
    *
    */
-  importFiles(arrayOfFilePathsToImport: string[], suppressUI: boolean, projectBin: string, importAsNumberedStill: boolean): boolean
+  importFiles(
+    arrayOfFilePathsToImport: string[],
+    suppressUI: boolean,
+    projectBin: string,
+    importAsNumberedStill: boolean,
+  ): boolean
 
   /**
    *
@@ -1662,4 +1668,4 @@ declare class Document {
 /**
  * In order to use qe please call app.enableQE() first.
  */
-declare const qe: undefined | any
+declare const qe: undefined | QEApplication
