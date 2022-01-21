@@ -1,4 +1,4 @@
-/// <reference path="../../shared/global.d.ts" />
+/// <reference path="../../shared/JavaScript.d.ts" />
 /// <reference path="../../shared/ScriptUI.d.ts" />
 
 // Docs here: https://help.adobe.com/archive/en_US/flash/cs5/flash_cs5_extending.pdf
