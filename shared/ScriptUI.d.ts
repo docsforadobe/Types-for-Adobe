@@ -1,5 +1,3 @@
-/// <reference path="JavaScript.d.ts" />
-
 declare enum _Alignment {
   TOP = 1,
   BOTTOM,

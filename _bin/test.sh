@@ -7,19 +7,20 @@ set -e
 set -u
 
 # To show what we are doing.
-set -x
+# set -x
 
 # To be always in project root.
 cd "${0%/*}/.."
 
 # To test if everything compiles.
-tsc --pretty --noEmit -p ./AfterEffects/17.1
-tsc --pretty --noEmit -p ./Animate/2013
-tsc --pretty --noEmit -p ./Audition/2015.2
-tsc --pretty --noEmit -p ./Audition/2017
-tsc --pretty --noEmit -p ./Audition/2018
-tsc --pretty --noEmit -p ./Illustrator/2015.3
-tsc --pretty --noEmit -p ./InDesign/2015.3
-tsc --pretty --noEmit -p ./InDesign/2018
-tsc --pretty --noEmit -p ./Photoshop/2015.5
-tsc --pretty --noEmit -p ./Premiere/2018
+for app in AfterEffects Animate Audition Illustrator InDesign Photoshop Premiere; do
+  for version in `ls $app`; do
+    echo "Testing $app/$version"
+    tsc --pretty --noEmit -p ./$app/$version
+  done
+done
+
+echo "Testing PlugPlugExternalObject"
+tsc --pretty --noEmit -p ./PlugPlugExternalObject
+echo "Testing JavaScript"
+tsc --pretty --noEmit -p ./JavaScript

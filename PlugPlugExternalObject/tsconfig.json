@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "none",
+    "strict": true,
+    "noLib": false,
+    "lib": ["ES5"],
+    "typeRoots": []
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

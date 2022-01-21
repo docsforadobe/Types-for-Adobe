@@ -26,10 +26,13 @@ npm init -y
 npm i types-for-adobe
 
 # create tsconfig.json
-printf '{"compilerOptions":{"module":"none","noLib":true}}' > tsconfig.json
+printf '{"compilerOptions":{"module":"none","noLib": true, "types": ["types-for-adobe/JavaScript", "types-for-adobe/PlugPlugExternalObject", "types-for-adobe/Illustrator/2015.3"],}}' > tsconfig.json
 
-# create index.ts and change reference types to Adobe product you're targeting
-printf '/// <reference types="types-for-adobe/Illustrator/2015.3"/>\nalert(String(app));\n' > index.ts
+# optionally, use the ES5 lib from TypeScript (note: you have to do the shimming yourself, this is more unsafe!
+# printf '{"compilerOptions":{"module":"none","lib": ["ES5"], "types": ["types-for-adobe/Illustrator/2015.3", "types-for-adobe/PlugPlugExternalObject"],}}' > tsconfig.json
+
+# create index.ts and write typed code!
+printf 'alert(String(app));\n' > index.ts
 
 # compile typescript files
 tsc
