@@ -1645,9 +1645,7 @@ declare class OutputModule {
 
   getSetting(key: string): string | number
 
-  getSettings(
-    format?: GetSettingsFormat,
-  ): {
+  getSettings(format?: GetSettingsFormat): {
     "Audio Bit Depth": string
     "Audio Channels": string
     "Audio Sample Rate": string
@@ -2291,7 +2289,7 @@ declare class RenderQueueItem {
   skipFrames: number
 
   /** A callback function that is called during the rendering process when the status of the item changes. */
-  onStatusChanged: string | null
+  onStatus: string | null
 
   /** A log type for this item. */
   logType: LogType
