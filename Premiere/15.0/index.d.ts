@@ -878,7 +878,7 @@ declare class Project {
   /**
    *
    */
-  createNewSequence(sequenceName: string, placeholderID: string): void
+  createNewSequence(sequenceName: string, placeholderID: string): Sequence
 
   /**
    *
@@ -1019,7 +1019,7 @@ declare class Project {
     newSequenceName: string,
     projectItems: Array<ProjectItem>,
     targetBin: ProjectItem,
-  ): void
+  ): Sequence
 
   /**
    *
@@ -1083,9 +1083,9 @@ declare class Track {
   bind(eventName: string, function_: any): void
 
   /**
-   *
+   * Inserts a clip relative to the time of the last item on that track
    */
-  insertClip(clipProjectItem: ProjectItem, time: number): void
+  insertClip(clipProjectItem: ProjectItem, time: number): boolean
 
   /**
    *
@@ -1095,12 +1095,22 @@ declare class Track {
   /**
    *
    */
-  overwriteClip(clipProjectItem: ProjectItem, time: number): void
+  isLocked(): boolean
+
+  /**
+   * Overwrites a clip at an absolute time on a track
+   */
+  overwriteClip(clipProjectItem: ProjectItem, time: number): boolean
 
   /**
    *
    */
   setMute(arg1?: number): void
+
+  /**
+   *
+   */
+  setLocked(arg1?: number): void
 
   /**
    *
@@ -1126,6 +1136,36 @@ declare class Track {
 /**
  *
  */
+
+declare class ComponentCollection {
+  /**Number of items
+   *
+   */
+  readonly numItems: number
+  /**Number of items
+   *
+   */
+  readonly length: number;
+
+  /**
+   *
+   */
+  [index: number]: Component
+}
+declare class Component {
+  /**
+   *
+   */
+  readonly displayName: string
+  /**
+   *
+   */
+  readonly matchName: string
+  /**
+   *
+   */
+  readonly properties: ComponentParamCollection
+}
 declare class TrackItem {
   /**
    *
@@ -1270,7 +1310,7 @@ declare class ProjectItem {
   /**
    *
    */
-  readonly videoComponents: any
+  videoComponents: () => ComponentCollection | undefined
 
   /**
    *
@@ -1313,9 +1353,9 @@ declare class ProjectItem {
   createSmartBin(name: string, query: string): void
 
   /**
-  	 * 	Returns whether the projectItem represents a sequence.
-  	 	@returns true, if projectItem is a sequence.
-  	*/
+      * 	Returns whether the projectItem represents a sequence.
+        @returns true, if projectItem is a sequence.
+     */
   isSequence(): boolean
 
   /**
@@ -1424,6 +1464,18 @@ declare class ProjectItem {
    *
    */
   setStartTime(arg1: object): void
+
+  /**
+   * Sets the in point of the clip.
+   * @param seconds Time of in point.
+   */
+  setInPoint(seconds: Time | number, p2: number): void
+
+  /**
+   * Sets the out point of the clip.
+   * @param seconds Time of out point.
+   */
+  setOutPoint(seconds: Time | number, p2: number): void
 
   /**
    *
@@ -1823,35 +1875,12 @@ declare class Encoder {
 /**
  *
  */
-declare class Properties {
-  /**
-   *
-   */
+declare class ComponentParamCollection {
   bind(eventName: string, function_: any): void
-
-  /**
-   *
-   */
   clearProperty(propertyKey: string): void
-
-  /**
-   *
-   */
   doesPropertyExist(propertyKey: string): boolean
-
-  /**
-   *
-   */
   getProperty(propertyKey: string): any
-
-  /**
-   *
-   */
   isPropertyReadOnly(propertyKey: string): boolean
-
-  /**
-   *
-   */
   setProperty(
     propertyKey: string,
     propertyValue: any,
@@ -1859,15 +1888,33 @@ declare class Properties {
     allowCreateNewProperty: boolean,
   ): void
 
-  /**
-   *
-   */
   setTimeout(eventName: string, function_: any, milliseconds: number): void
-
-  /**
-   *
-   */
   unbind(eventName: string): void
+  [index: number]: ComponentParam
+}
+
+declare class ComponentParam {
+  readonly displayName: string
+  addKey(): boolean
+  areKeyframesSupported(): boolean
+  findNearestKey(): object
+  findNextKey(): object
+  findPreviousKey(): object
+  getColorValue(): any[]
+  getKeys(): any[]
+  getValue(): boolean
+  getValueAtKey(): boolean
+  getValueAtTime(): boolean
+  isEmpty(): boolean
+  isTimeVarying(): boolean
+  keyExistsAtTime(): boolean
+  removeKey(): boolean
+  removeKeyRange(): boolean
+  setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
+  setInterpolationTypeAtKey(): boolean
+  setTimeVarying(p0: boolean, p1: boolean): boolean
+  setValue(value: any): boolean
+  setValueAtKey(): boolean
 }
 /**
  *
@@ -1970,7 +2017,7 @@ declare class Application {
   /**
    *
    */
-  readonly properties: Properties
+  readonly properties: ComponentParamCollection
 
   /**
    *
