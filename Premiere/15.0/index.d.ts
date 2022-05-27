@@ -2214,7 +2214,7 @@ declare class MarkerCollection {
   /**
    *
    */
-  createMarker(time: number): Marker
+  createMarker(start: number, name: string, duration: number, comments: string): Marker
 
   /**
    *
@@ -2250,6 +2250,11 @@ declare class MarkerCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [index: number]: Marker
 }
 
 /**
