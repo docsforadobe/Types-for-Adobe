@@ -1955,6 +1955,24 @@ declare class PrProduction {
    */
   moveToTrash(projectPath: String, suppressUI: Boolean, saveProject: Boolean): Boolean
 }
+
+type ApplicationEvent =
+  | "onSourceClipSelectedInProjectPanel"
+  | "onSequenceActivated"
+  | "onActiveSequenceChanged"
+  | "onActiveSequenceSelectionChanged"
+  | "onActiveSequenceTrackItemAdded"
+  | "onActiveSequenceTrackItemRemoved"
+  | "onActiveSequenceStructureChanged"
+  | "onProjectChanged"
+  | "onProjectEndDrop"
+  | "onEncoderJobCanceled"
+  | "onEncoderJobQueued"
+  | "onEncoderJobComplete"
+  | "onEncoderJobError"
+  | "onEncoderJobProgress"
+  | "onEncoderLaunched"
+
 /**
  *
  */
@@ -2042,7 +2060,7 @@ declare class Application {
   /**
    *
    */
-  bind(eventName: string, function_: any): void
+  bind(eventName: ApplicationEvent, function_: Function): void
 
   /**
    *
