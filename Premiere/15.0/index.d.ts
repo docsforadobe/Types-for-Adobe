@@ -1182,6 +1182,11 @@ declare class TrackItem {
    */
   readonly duration: Time
 
+   /**
+   *
+   */
+  readonly nodeId: string
+  
   /**
    *
    */
