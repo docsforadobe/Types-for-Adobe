@@ -1779,6 +1779,14 @@ declare class RemoteProduction {
   unbind(eventName: string): void
 }
 
+type EncoderEvent =
+  | "onEncoderJobCanceled"
+  | "onEncoderJobQueued"
+  | "onEncoderJobComplete"
+  | "onEncoderJobError"
+  | "onEncoderJobProgress"
+  | "onEncoderLaunched"
+
 /**
  *
  */
@@ -1801,7 +1809,7 @@ declare class Encoder {
   /**
    *
    */
-  bind(eventName: string, function_: any): void
+  bind(eventName: EncoderEvent, function_: any): void
 
   /**
    *
@@ -1966,12 +1974,6 @@ type ApplicationEvent =
   | "onActiveSequenceStructureChanged"
   | "onProjectChanged"
   | "onProjectEndDrop"
-  | "onEncoderJobCanceled"
-  | "onEncoderJobQueued"
-  | "onEncoderJobComplete"
-  | "onEncoderJobError"
-  | "onEncoderJobProgress"
-  | "onEncoderLaunched"
 
 /**
  *
