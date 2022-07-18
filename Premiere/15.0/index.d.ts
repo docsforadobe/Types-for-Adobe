@@ -1125,12 +1125,12 @@ declare class Track {
   /**
    *
    */
-  isTargeted(): Boolean
+  isTargeted(): boolean
 
   /**
    *
    */
-  setTargeted(isTargeted: Boolean, shouldBroadcast: Boolean): Boolean
+  setTargeted(isTargeted: boolean, shouldBroadcast: boolean): boolean
 
   /**
    *
@@ -1208,6 +1208,11 @@ declare class TrackItem {
   name: string
 
   /**
+   * @version 22.0
+   */
+  disabled: boolean
+
+  /**
    *
    */
   projectItem: ProjectItem
@@ -1240,7 +1245,7 @@ declare class TrackItem {
   /**
    *
    */
-  isSpeedReversed(): boolean
+  isSpeedReversed(): 0 | 1
 
   /**
    *
