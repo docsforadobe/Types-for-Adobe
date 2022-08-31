@@ -990,7 +990,7 @@ declare class FolderItem extends Item {
 }
 
 /** These don't exist in AE, just here for the ease of types */
-type FootageSourceType = SolidSource | FileSource | PlaceholderSource;
+type FootageSourceType = SolidSource | FileSource | PlaceholderSource
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
 declare class FootageItem<FootageSourceType> extends AVItem {
@@ -1025,9 +1025,9 @@ declare class FootageItem<FootageSourceType> extends AVItem {
   ): void
 }
 
-type SolidItem = FootageItem<SolidSource>;
-type FileItem = FootageItem<FileSource>;
-type PlaceholderItem = FootageItem<PlaceholderSource>;
+type SolidItem = FootageItem<SolidSource>
+type FileItem = FootageItem<FileSource>
+type PlaceholderItem = FootageItem<PlaceholderSource>
 
 /** The FootageSource object holds information describing the source of some footage. It is used as the mainSource of a FootageItem, or the proxySource of a CompItem or FootageItem. */
 declare class FootageSource {
@@ -1889,7 +1889,7 @@ declare class RenderQueueItem {
   skipFrames: number
 
   /** A callback function that is called during the rendering process when the status of the item changes. */
-  onStatusChanged: string | null
+  onStatus: string | null
 
   /** A log type for this item. */
   logType: LogType
