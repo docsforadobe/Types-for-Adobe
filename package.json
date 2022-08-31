@@ -18,5 +18,8 @@
   "scripts": {
     "test": "_bin/test.sh"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typedoc": "^0.23.12"
+  }
 }
