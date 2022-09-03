@@ -16,10 +16,11 @@
     "url": "https://github.com/aenhancers/types-for-adobe.git"
   },
   "scripts": {
-    "test": "_bin/test.sh"
+    "test": "_bin/test.sh",
+    "docs": "_bin/docs.sh"
   },
   "license": "MIT",
   "devDependencies": {
-    "typedoc": "^0.23.12"
+    "typedoc": "^0.23.13"
   }
 }
