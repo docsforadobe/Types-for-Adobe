@@ -31,6 +31,7 @@ tsc --pretty --noEmit -p ./AfterEffects/16.1
 tsc --pretty --noEmit -p ./AfterEffects/17.0
 tsc --pretty --noEmit -p ./AfterEffects/17.1
 tsc --pretty --noEmit -p ./AfterEffects/18.0
+tsc --pretty --noEmit -p ./AfterEffects/22.6
 tsc --pretty --noEmit -p ./Animate/13.0
 tsc --pretty --noEmit -p ./Animate/22.0
 tsc --pretty --noEmit -p ./Audition/2015.2
