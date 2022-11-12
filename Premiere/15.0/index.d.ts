@@ -21,6 +21,25 @@ type SampleRateOption = 48000 | 96000
 type BitsPerSampleOption = 16 | 24
 type SDKEventType = "warning" | "info" | "error"
 
+declare enum TIME_FORMAT {
+  TIMEDISPLAY_24Timecode = 100,
+  TIMEDISPLAY_25Timecode = 101,
+  TIMEDISPLAY_2997DropTimecode = 102,
+  TIMEDISPLAY_2997NonDropTimecode = 103,
+  TIMEDISPLAY_30Timecode = 104,
+  TIMEDISPLAY_50Timecode = 105,
+  TIMEDISPLAY_5994DropTimecode = 106,
+  TIMEDISPLAY_5994NonDropTimecode = 107,
+  TIMEDISPLAY_60Timecode = 108,
+  TIMEDISPLAY_Frames = 109,
+  TIMEDISPLAY_23976Timecode = 110,
+  TIMEDISPLAY_16mmFeetFrames = 111,
+  TIMEDISPLAY_35mmFeetFrames = 112,
+  TIMEDISPLAY_48Timecode = 113,
+  TIMEDISPLAY_AudioSamplesTimecode = 200,
+  TIMEDISPLAY_AudioMsTimecode = 201,
+}
+
 interface $ {
   _PPP_: any
 }
@@ -778,7 +797,7 @@ declare class Time {
   /**
    *
    */
-  getFormatted(Time: Time, whichFormat: number): String
+  getFormatted(Time: Time, timeFormat: TIME_FORMAT): String
 
   /**
    *
