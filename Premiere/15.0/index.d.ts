@@ -870,7 +870,10 @@ declare class Project {
   readonly name: string
 
   /**
+   * Warning: in MacOS Ventura, fetching the project path can throw an error during shutdown
+   * Bug ID:  DVAPR-4242199
    *
+   * Workaround: put any path checks in a try/catch block if checking may coincide with shutdown
    */
   readonly path: string
 
@@ -1124,7 +1127,7 @@ declare class Track {
   /**
    * Overwrites a clip at an absolute time on a track
    */
-  overwriteClip(clipProjectItem: ProjectItem, time: number): boolean
+  overwriteClip(clipProjectItem: ProjectItem, time: number | Time): boolean
 
   /**
    *

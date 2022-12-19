@@ -22,7 +22,13 @@ interface XMPMetaConstructor {
 
   // Class stuff.
 }
-type XMPProperty = any
+type XMPProperty = {
+  locale: string
+  namespace: string
+  options: string
+  path: string
+  value: string
+}
 interface XMPMetaInstance {
   doesPropertyExist(namespace: String, value: String): Boolean
   getProperty(namespace: String, property: String): XMPProperty
