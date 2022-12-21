@@ -1292,7 +1292,7 @@ declare class TrackItem {
   /**
    *
    */
-  getMGTComponent(): any
+  getMGTComponent(): Component
 
   /**
    *
@@ -1931,6 +1931,7 @@ declare class ComponentParamCollection {
   setTimeout(eventName: string, function_: any, milliseconds: number): void
   unbind(eventName: string): void
   [index: number]: ComponentParam
+  getParamForDisplayName(paramName: string): ComponentParam | null
 }
 
 declare class ComponentParam {
@@ -1942,9 +1943,9 @@ declare class ComponentParam {
   findPreviousKey(): object
   getColorValue(): any[]
   getKeys(): any[]
-  getValue(): boolean
-  getValueAtKey(): boolean
-  getValueAtTime(): boolean
+  getValue(): any
+  getValueAtKey(): any
+  getValueAtTime(): any
   isEmpty(): boolean
   isTimeVarying(): boolean
   keyExistsAtTime(): boolean
@@ -1953,7 +1954,7 @@ declare class ComponentParam {
   setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
   setInterpolationTypeAtKey(): boolean
   setTimeVarying(p0: boolean, p1: boolean): boolean
-  setValue(value: any): boolean
+  setValue(value: any, updateUI?: boolean): boolean
   setValueAtKey(): boolean
 }
 /**
