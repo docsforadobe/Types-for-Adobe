@@ -1,4 +1,4 @@
-/// <reference path="../../shared/PlugPlugExternalObject.d.ts" />
+/// <reference path="./PlugPlugExternalObject.d.ts" />
 
 // A commonly used construct for loading XMPScript into
 // ExtendScript contexts.
@@ -19,8 +19,16 @@ interface XMPMetaConstructor {
    * on an `XMPMeta` instance.
    */
   new (buffer: number[]): XMPMetaInstance
-
-  // Class stuff.
+  /**
+   * @param prefix The prefix of the namespace.
+   * @example XMPMeta.getNamespacePrefix('xmp'); // 'http://ns.adobe.com/xap/1.0/'
+   */
+  getNamespaceURI(prefix: string): string
+  /**
+   * @param uri The URI of the namespace.
+   * @example XMPMeta.getNamespacePrefix('http://ns.adobe.com/xap/1.0/'); // 'xmp:'
+   */
+  getNamespacePrefix(uri: string): string
 }
 type XMPProperty = {
   locale: string
@@ -30,22 +38,22 @@ type XMPProperty = {
   value: string
 }
 interface XMPMetaInstance {
-  doesPropertyExist(namespace: String, value: String): Boolean
-  getProperty(namespace: String, property: String): XMPProperty
-  setProperty(namespace: String, property: String, value: String): Boolean
-  countArrayItems(namespace: String, property: String): Number
-  getArrayItem(namespace: String, property: String, itemIndex: Number): XMPProperty
-  deleteProperty(namespace: String, property: String): Boolean
+  doesPropertyExist(namespace: string, value: string): boolean
+  getProperty(namespace: string, property: string): XMPProperty
+  setProperty(namespace: string, property: string, value: string): boolean
+  countArrayItems(namespace: string, property: string): number
+  getArrayItem(namespace: string, property: string, itemIndex: number): XMPProperty
+  deleteProperty(namespace: string, property: string): boolean
   appendArrayItem(
-    namespace: String,
-    property: String,
-    arrayOptions: String,
-    valueToAppend: String,
-    valueOptions: String,
-  ): Boolean
-  dumpObject(): String
-  serialize(): String
-  // Instance stuff.
+    namespace: string,
+    property: string,
+    arrayOptions: string,
+    valueToAppend: string,
+    valueOptions: string,
+  ): boolean
+  dumpObject(): string
+  serialize(): string
+  getNamespaceURI(ns: string): string
 }
 
 declare const XMPMeta: XMPMetaConstructor | undefined
@@ -55,7 +63,6 @@ interface XMPConstConstructor {
   NS_DM: string
   NS_DC: string
   ARRAY_IS_ORDERED: string
-  // Class stuff.
 }
 
 interface XMPConstInstance {

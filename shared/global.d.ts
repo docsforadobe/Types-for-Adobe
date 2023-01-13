@@ -1,4 +1,5 @@
 /// <reference path="JavaScript.d.ts" />
+/// <reference path="XMPScript.d.ts" />
 
 /**
  * The global BridgeTalk object.
