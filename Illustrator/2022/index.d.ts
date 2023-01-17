@@ -9993,6 +9993,10 @@ declare class PageItem {
  */
 declare class CompoundPathItem extends PageItem {
   /**
+   * Unique Identifier of the Path
+   */
+  readonly uuid: string
+  /**
    * The path artwork in this compound path.
    */
   readonly pathItems: PathItems
