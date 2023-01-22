@@ -21,6 +21,25 @@ type SampleRateOption = 48000 | 96000
 type BitsPerSampleOption = 16 | 24
 type SDKEventType = "warning" | "info" | "error"
 
+declare enum TIME_FORMAT {
+  TIMEDISPLAY_24Timecode = 100,
+  TIMEDISPLAY_25Timecode = 101,
+  TIMEDISPLAY_2997DropTimecode = 102,
+  TIMEDISPLAY_2997NonDropTimecode = 103,
+  TIMEDISPLAY_30Timecode = 104,
+  TIMEDISPLAY_50Timecode = 105,
+  TIMEDISPLAY_5994DropTimecode = 106,
+  TIMEDISPLAY_5994NonDropTimecode = 107,
+  TIMEDISPLAY_60Timecode = 108,
+  TIMEDISPLAY_Frames = 109,
+  TIMEDISPLAY_23976Timecode = 110,
+  TIMEDISPLAY_16mmFeetFrames = 111,
+  TIMEDISPLAY_35mmFeetFrames = 112,
+  TIMEDISPLAY_48Timecode = 113,
+  TIMEDISPLAY_AudioSamplesTimecode = 200,
+  TIMEDISPLAY_AudioMsTimecode = 201,
+}
+
 interface $ {
   _PPP_: any
 }
@@ -778,7 +797,7 @@ declare class Time {
   /**
    *
    */
-  getFormatted(Time: Time, whichFormat: number): String
+  getFormatted(Time: Time, timeFormat: TIME_FORMAT): String
 
   /**
    *
@@ -851,7 +870,10 @@ declare class Project {
   readonly name: string
 
   /**
+   * Warning: in MacOS Ventura, fetching the project path can throw an error during shutdown
+   * Bug ID:  DVAPR-4242199
    *
+   * Workaround: put any path checks in a try/catch block if checking may coincide with shutdown
    */
   readonly path: string
 
@@ -1105,7 +1127,7 @@ declare class Track {
   /**
    * Overwrites a clip at an absolute time on a track
    */
-  overwriteClip(clipProjectItem: ProjectItem, time: number): boolean
+  overwriteClip(clipProjectItem: ProjectItem, time: number | Time): boolean
 
   /**
    *
@@ -1270,7 +1292,7 @@ declare class TrackItem {
   /**
    *
    */
-  getMGTComponent(): any
+  getMGTComponent(): Component
 
   /**
    *
@@ -1909,6 +1931,7 @@ declare class ComponentParamCollection {
   setTimeout(eventName: string, function_: any, milliseconds: number): void
   unbind(eventName: string): void
   [index: number]: ComponentParam
+  getParamForDisplayName(paramName: string): ComponentParam | null
 }
 
 declare class ComponentParam {
@@ -1920,9 +1943,9 @@ declare class ComponentParam {
   findPreviousKey(): object
   getColorValue(): any[]
   getKeys(): any[]
-  getValue(): boolean
-  getValueAtKey(): boolean
-  getValueAtTime(): boolean
+  getValue(): any
+  getValueAtKey(): any
+  getValueAtTime(): any
   isEmpty(): boolean
   isTimeVarying(): boolean
   keyExistsAtTime(): boolean
@@ -1931,7 +1954,7 @@ declare class ComponentParam {
   setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
   setInterpolationTypeAtKey(): boolean
   setTimeVarying(p0: boolean, p1: boolean): boolean
-  setValue(value: any): boolean
+  setValue(value: any, updateUI?: boolean): boolean
   setValueAtKey(): boolean
 }
 /**
