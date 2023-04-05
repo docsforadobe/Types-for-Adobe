@@ -1950,7 +1950,7 @@ declare class ComponentParam {
   isTimeVarying(): boolean
   keyExistsAtTime(): boolean
   removeKey(): boolean
-  removeKeyRange(): boolean
+  removeKeyRange(start: Time, end: Time): boolean
   setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
   setInterpolationTypeAtKey(): boolean
   setTimeVarying(p0: boolean, p1: boolean): boolean
