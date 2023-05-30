@@ -1574,6 +1574,11 @@ declare class ProjectCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [index: number]: Project
 }
 
 /**
