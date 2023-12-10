@@ -6,22 +6,18 @@
  */
 declare var system: System
 
-declare const enum _AppVersion {
-  CS3 = 8.0,
-  CS4 = 9.0,
-  CS5 = 10.0,
-  CS5_5 = 10.5,
-  CS6 = 11.0,
-  CC = 12.0,
-  CC2014 = 13.0,
-  CC2015 = 13.5,
-  CC2015_1 = 13.6,
-  CC2015_2 = 13.7,
-  CC2015_3 = 13.8,
-  CC2017 = 14.0,
-  CC2018 = 15.0,
-  CC2019 = 16.0,
-  CC2020 = 17.0,
+declare interface _AppVersion {
+  CS3: 8.0
+  CS4: 9.0
+  CS5: 10.0
+  CS5_5: 10.5
+  CS6: 11.0
+  CC: 12.0
+  CC2014: 13.0
+  CC2015: 13.5
+  CC2015_1: 13.6
+  CC2015_2: 13.7
+  CC2015_3: 13.8
 }
 
 declare const enum _CommandID {
@@ -314,363 +310,345 @@ declare const enum _CommandID {
   Wiggler = 5030,
 }
 
-declare enum Language {
-  ENGLISH,
-  JAPANESE,
-  GERMAN,
-  FRENCH,
-  ITALIAN,
-  SPANISH,
-  KOREAN,
-  CHINESE,
-  RUSSIAN,
-  PORTUGUESE,
-}
-
-declare enum PurgeTarget {
-  /** Purges all data that After Effects has cached to physical memory. */
-  ALL_CACHES,
-  /** Purges all data saved in the undo cache. */
-  UNDO_CACHES,
-  /** Purges all data cached as composition/layer snapshots. */
-  SNAPSHOT_CACHES,
-  /** Purges all saved image data. */
-  IMAGE_CACHES,
-}
-
-declare enum FrameBlendingType {
-  FRAME_MIX,
-  NO_FRAME_BLEND,
-  PIXEL_MOTION,
-}
-
-declare enum BlendingMode {
-  ADD,
-  ALPHA_ADD,
-  CLASSIC_COLOR_BURN,
-  CLASSIC_COLOR_DODGE,
-  CLASSIC_DIFFERENCE,
-  COLOR,
-  COLOR_BURN,
-  COLOR_DODGE,
-  DANCING_DISSOLVE,
-  DARKEN,
-  DARKER_COLOR,
-  DIFFERENCE,
-  DISSOLVE,
-  EXCLUSION,
-  HARD_LIGHT,
-  HARD_MIX,
-  HUE,
-  LIGHTEN,
-  LIGHTER_COLOR,
-  LINEAR_BURN,
-  LINEAR_DODGE,
-  LINEAR_LIGHT,
-  LUMINESCENT_PREMUL,
-  LUMINOSITY,
-  MULTIPLY,
-  NORMAL,
-  OVERLAY,
-  PIN_LIGHT,
-  SATURATION,
-  SCREEN,
-  SILHOUETE_ALPHA,
-  SILHOUETTE_LUMA,
-  SOFT_LIGHT,
-  STENCIL_ALPHA,
-  STENCIL_LUMA,
-  VIVID_LIGHT,
-}
-
-declare enum TrackMatteType {
-  ALPHA,
-  ALPHA_INVERTED,
-  LUMA,
-  LUMA_INVERTED,
-  NO_TRACK_MATTE,
-}
-
-declare enum LayerQuality {
-  BEST,
-  DRAFT,
-  WIREFRAME,
+declare enum AlphaMode {
+  IGNORE = 5413,
+  PREMULTIPLIED = 5414,
+  STRAIGHT = 5412,
 }
 
 declare enum AutoOrientType {
   /** Layer faces in the direction of the motion path. */
-  ALONG_PATH,
+  ALONG_PATH = 4213,
+
   /** Layer always faces the active camera or points at its point of interest. */
-  CAMERA_OR_POINT_OF_INTEREST,
+  CAMERA_OR_POINT_OF_INTEREST = 4214,
+
   /** Each character in a per-character 3D text layer automatically faces the active camera. */
-  CHARACTERS_TOWARD_CAMERA,
+  CHARACTERS_TOWARD_CAMERA = 4215,
+
   /** Layer rotates freely, independent of any motion path, point of interest, or other layers. */
-  NO_AUTO_ORIENT,
+  NO_AUTO_ORIENT = 4212,
 }
 
-declare enum LayerSamplingQuality {
-  BICUBIC,
-  BILINEAR,
+declare enum BlendingMode {
+  ADD = 5220,
+  ALPHA_ADD = 5244,
+  CLASSIC_COLOR_BURN = 5219,
+  CLASSIC_COLOR_DODGE = 5225,
+  CLASSIC_DIFFERENCE = 5234,
+  COLOR = 5238,
+  COLOR_BURN = 5218,
+  COLOR_DODGE = 5224,
+  DANCING_DISSOLVE = 5214,
+  DARKEN = 5215,
+  DARKER_COLOR = 5247,
+  DIFFERENCE = 5233,
+  DISSOLVE = 5213,
+  DIVIDE = 5249,
+  EXCLUSION = 5235,
+  HARD_LIGHT = 5228,
+  HARD_MIX = 5232,
+  HUE = 5236,
+  LIGHTEN = 5221,
+  LIGHTER_COLOR = 5246,
+  LINEAR_BURN = 5217,
+  LINEAR_DODGE = 5223,
+  LINEAR_LIGHT = 5229,
+  LUMINESCENT_PREMUL = 5245,
+  LUMINOSITY = 5239,
+  MULTIPLY = 5216,
+  NORMAL = 5212,
+  OVERLAY = 5226,
+  PIN_LIGHT = 5231,
+  SATURATION = 5237,
+  SCREEN = 5222,
+  SILHOUETE_ALPHA = 5242,
+  SILHOUETTE_LUMA = 5243,
+  SOFT_LIGHT = 5227,
+  STENCIL_ALPHA = 5240,
+  STENCIL_LUMA = 5241,
+  SUBTRACT = 5248,
+  VIVID_LIGHT = 5230,
 }
 
-declare enum AlphaMode {
-  IGNORE,
-  STRAIGHT,
-  PREMULTIPLIED,
-}
-
-declare enum FieldSeparationType {
-  OFF,
-  UPPER_FIELD_FIRST,
-  LOWER_FIELD_FIRST,
-}
-
-declare enum PulldownPhase {
-  OFF,
-  SSWWW,
-  SWWWS,
-  SWWWW_24P_ADVANCE,
-  WSSWW,
-  WSWWW_24P_ADVANCE,
-  WWSSW,
-  WWSWW_24P_ADVANCE,
-  WWWSS,
-  WWWSW_24P_ADVANCE,
-  WWWWS_24P_ADVANCE,
-}
-
-declare enum PulldownMethod {
-  PULLDOWN_3_2,
-  ADVANCE_24P,
-}
-
-declare enum ImportAsType {
-  COMP_CROPPED_LAYERS,
-  FOOTAGE,
-  COMP,
-  PROJECT,
-}
-
-declare enum LightType {
-  PARALLEL,
-  SPOT,
-  POINT,
-  AMBIENT,
-}
-
-declare enum MaskMode {
-  NONE,
-  ADD,
-  SUBTRACT,
-  INTERSECT,
-  LIGHTEN,
-  DARKEN,
-  DIFFERENCE,
-}
-
-declare enum MaskMotionBlur {
-  SAME_AS_LAYER,
-  ON,
-  OFF,
-}
-
-declare enum MaskFeatherFalloff {
-  FFO_LINEAR,
-  FFO_SMOOTH,
-}
-
-declare enum PostRenderAction {
-  NONE,
-  IMPORT,
-  IMPORT_AND_REPLACE_USAGE,
-  SET_PROXY,
-}
-
-declare enum GetSettingsFormat {
-  STRING,
-  STRING_SETTABLE,
-  NUMBER,
-  NUMBER_SETTABLE,
-  SPEC,
-}
-
-declare enum TimeDisplayType {
-  FRAMES,
-  TIMECODE,
-}
-
-declare enum FootageTimecodeDisplayStartType {
-  FTCS_START_0,
-  FTCS_USE_SOURCE_MEDIA,
-}
-
-declare enum FeetFramesFilmType {
-  MM16,
-  MM35,
-}
-
-declare enum FramesCountType {
-  FC_START_0,
-  FC_START_1,
-  FC_TIMECODE_CONVERSION,
+declare enum ChannelType {
+  CHANNEL_ALPHA = 7816,
+  CHANNEL_ALPHA_BOUNDARY = 7822,
+  CHANNEL_ALPHA_OVERLAY = 7821,
+  CHANNEL_BLUE = 7815,
+  CHANNEL_BLUE_COLORIZE = 7819,
+  CHANNEL_GREEN = 7814,
+  CHANNEL_GREEN_COLORIZE = 7818,
+  CHANNEL_RED = 7813,
+  CHANNEL_RED_COLORIZE = 7817,
+  CHANNEL_RGB = 7812,
+  CHANNEL_RGB_STRAIGHT = 7820,
 }
 
 declare enum CloseOptions {
   /** Close without saving. */
-  DO_NOT_SAVE_CHANGES,
+  DO_NOT_SAVE_CHANGES = 1212,
+
   /** Prompt for whether to save changes before close. */
-  PROMPT_TO_SAVE_CHANGES,
+  PROMPT_TO_SAVE_CHANGES = 1213,
+
   /** Save automatically on close. */
-  SAVE_CHANGES,
-}
-
-declare enum PropertyValueType {
-  NO_VALUE,
-  ThreeD_SPATIAL,
-  ThreeD,
-  TwoD_SPATIAL,
-  TwoD,
-  OneD,
-  COLOR,
-  CUSTOM_VALUE,
-  MARKER,
-  LAYER_INDEX,
-  MASK_INDEX,
-  SHAPE,
-  TEXT_DOCUMENT,
-}
-
-declare enum KeyframeInterpolationType {
-  LINEAR,
-  BEZIER,
-  HOLD,
-}
-
-declare enum PropertyType {
-  PROPERTY,
-  INDEXED_GROUP,
-  NAMED_GROUP,
-}
-
-declare enum ResolveType {
-  ACCEPT_THEIRS,
-  ACCEPT_YOURS,
-  ACCEPT_THEIRS_AND_COPY,
-}
-
-declare enum RQItemStatus {
-  WILL_CONTINUE,
-  NEEDS_OUTPUT,
-  UNQUEUED,
-  QUEUED,
-  RENDERING,
-  USER_STOPPED,
-  ERR_STOPPED,
-  DONE,
-}
-
-declare enum LogType {
-  ERRORS_ONLY,
-  ERRORS_AND_SETTINGS,
-  ERRORS_AND_PER_FRAME_INFO,
-}
-
-declare enum PREFType {
-  PREF_Type_MACHINE_SPECIFIC,
-  PREF_Type_MACHINE_INDEPENDENT,
-  PREF_Type_MACHINE_INDEPENDENT_RENDER,
-  PREF_Type_MACHINE_INDEPENDENT_OUTPUT,
-  PREF_Type_MACHINE_INDEPENDENT_COMPOSITION,
-  PREF_Type_MACHINE_SPECIFIC_TEXT,
-  PREF_Type_MACHINE_SPECIFIC_PAINT,
-}
-
-declare enum ParagraphJustification {
-  LEFT_JUSTIFY,
-  CENTER_JUSTIFY,
-  RIGHT_JUSTIFY,
-  FULL_JUSTIFY_LASTLINE_LEFT,
-  FULL_JUSTIFY_LASTLINE_RIGHT,
-  FULL_JUSTIFY_LASTLINE_CENTER,
-  FULL_JUSTIFY_LASTLINE_FULL,
-  MULTIPLE_JUSTIFICATIONS,
-}
-
-declare enum ViewerType {
-  VIEWER_COMPOSITION,
-  VIEWER_LAYER,
-  VIEWER_FOOTAGE,
+  SAVE_CHANGES = 1214,
 }
 
 declare enum FastPreviewType {
-  FP_OFF,
-  FP_ADAPTIVE_RESOLUTION,
-  FP_DRAFT,
-  FP_FAST_DRAFT,
-  FP_WIREFRAME,
+  FP_ADAPTIVE_RESOLUTION = 8013,
+  FP_DRAFT = 8014,
+  FP_FAST_DRAFT = 8015,
+  FP_OFF = 8012,
+  FP_WIREFRAME = 8016,
 }
 
-declare enum ChannelType {
-  CHANNEL_RGB,
-  CHANNEL_RED,
-  CHANNEL_GREEN,
-  CHANNEL_BLUE,
-  CHANNEL_ALPHA,
-  CHANNEL_RED_COLORIZE,
-  CHANNEL_GREEN_COLORIZE,
-  CHANNEL_BLUE_COLORIZE,
-  CHANNEL_RGB_STRAIGHT,
-  CHANNEL_ALPHA_OVERLAY,
-  CHANNEL_ALPHA_BOUNDARY,
+declare enum FeetFramesFilmType {
+  MM16 = 2412,
+  MM35 = 2413,
 }
 
-/** CC2015.3- */
+declare enum FieldSeparationType {
+  LOWER_FIELD_FIRST = 5614,
+  OFF = 5613,
+  UPPER_FIELD_FIRST = 5612,
+}
+
+declare enum FootageTimecodeDisplayStartType {
+  FTCS_START_0 = 2213,
+  FTCS_USE_SOURCE_MEDIA = 2212,
+}
+
+declare enum FrameBlendingType {
+  FRAME_MIX = 4013,
+  NO_FRAME_BLEND = 4012,
+  PIXEL_MOTION = 4014,
+}
+
+declare enum FramesCountType {
+  FC_START_0 = 2612,
+  FC_START_1 = 2613,
+  FC_TIMECODE_CONVERSION = 2614,
+}
+
+declare enum GetSettingsFormat {
+  NUMBER = 3413,
+  NUMBER_SETTABLE = 3414,
+  SPEC = 3412,
+  STRING = 3415,
+  STRING_SETTABLE = 3416,
+}
+
 declare enum GpuAccelType {
-  CUDA,
-  METAL,
-  OPENCL,
-  SOFTWARE,
+  CUDA = 1813,
+  METAL = 1814,
+  OPENCL = 1812,
+  SOFTWARE = 1816,
+  VULKAN = 1815,
 }
 
-/** CC2017- */
-declare enum ToolType {
-  Tool_Arrow,
-  Tool_Rotate,
-  Tool_CameraMaya,
-  Tool_CameraOrbit,
-  Tool_CameraTrackXY,
-  Tool_CameraTrackZ,
-  Tool_Paintbrush,
-  Tool_CloneStamp,
-  Tool_Eraser,
-  Tool_Hand,
-  Tool_Magnify,
-  Tool_PanBehind,
-  Tool_Rect,
-  Tool_RoundedRect,
-  Tool_Oval,
-  Tool_Polygon,
-  Tool_Star,
-  Tool_TextH,
-  Tool_TextV,
-  Tool_Pen,
-  Tool_Feather,
-  Tool_PenPlus,
-  Tool_PenMinus,
-  Tool_PenConvert,
-  Tool_Pin,
-  Tool_PinStarch,
-  Tool_PinDepth,
-  Tool_Quickselect,
-  Tool_Hairbrush,
+declare enum ImportAsType {
+  COMP = 3814,
+  COMP_CROPPED_LAYERS = 3812,
+  FOOTAGE = 3813,
+  PROJECT = 3815,
+}
+
+declare enum KeyframeInterpolationType {
+  BEZIER = 6613,
+  HOLD = 6614,
+  LINEAR = 6612,
+}
+
+declare enum Language {
+  CHINESE = 1619,
+  ENGLISH = 1612,
+  FRENCH = 1615,
+  GERMAN = 1614,
+  ITALIAN = 1616,
+  JAPANESE = 1613,
+  KOREAN = 1618,
+  PORTUGUESE = 1621,
+  RUSSIAN = 1620,
+  SPANISH = 1617,
+}
+
+declare enum LayerQuality {
+  BEST = 4614,
+  DRAFT = 4613,
+  WIREFRAME = 4612,
+}
+
+declare enum LayerSamplingQuality {
+  BICUBIC = 4813,
+  BILINEAR = 4812,
+}
+
+declare enum LightType {
+  AMBIENT = 4415,
+  PARALLEL = 4412,
+  POINT = 4414,
+  SPOT = 4413,
+}
+
+declare enum LogType {
+  ERRORS_AND_PER_FRAME_INFO = 3214,
+  ERRORS_AND_SETTINGS = 3213,
+  ERRORS_ONLY = 3212,
+}
+
+declare enum MaskFeatherFalloff {
+  FFO_LINEAR = 7213,
+  FFO_SMOOTH = 7212,
+}
+
+declare enum MaskMode {
+  ADD = 6813,
+  DARKEN = 6817,
+  DIFFERENCE = 6818,
+  INTERSECT = 6815,
+  LIGHTEN = 6816,
+  NONE = 6812,
+  SUBTRACT = 6814,
+}
+
+declare enum MaskMotionBlur {
+  OFF = 7014,
+  ON = 7013,
+  SAME_AS_LAYER = 7012,
+}
+
+declare enum ParagraphJustification {
+  CENTER_JUSTIFY = 7415,
+  FULL_JUSTIFY_LASTLINE_CENTER = 7418,
+  FULL_JUSTIFY_LASTLINE_FULL = 7419,
+  FULL_JUSTIFY_LASTLINE_LEFT = 7416,
+  FULL_JUSTIFY_LASTLINE_RIGHT = 7417,
+  LEFT_JUSTIFY = 7413,
+  MULTIPLE_JUSTIFICATIONS = 7412,
+  RIGHT_JUSTIFY = 7414,
+}
+
+declare enum PostRenderAction {
+  IMPORT = 3613,
+  IMPORT_AND_REPLACE_USAGE = 3614,
+  NONE = 3612,
+  SET_PROXY = 3615,
+}
+
+declare enum PREFType {
+  PREF_Type_MACHINE_INDEPENDENT = 8813,
+  PREF_Type_MACHINE_INDEPENDENT_COMPOSITION = 8816,
+  PREF_Type_MACHINE_INDEPENDENT_OUTPUT = 8815,
+  PREF_Type_MACHINE_INDEPENDENT_RENDER = 8814,
+  PREF_Type_MACHINE_SPECIFIC = 8812,
+  PREF_Type_MACHINE_SPECIFIC_PAINT = 8818,
+  PREF_Type_MACHINE_SPECIFIC_TEXT = 8817,
+}
+
+declare enum PropertyType {
+  INDEXED_GROUP = 6214,
+  NAMED_GROUP = 6213,
+  PROPERTY = 6212,
+}
+
+declare enum PropertyValueType {
+  COLOR = 6418,
+  CUSTOM_VALUE = 6419,
+  LAYER_INDEX = 6421,
+  MARKER = 6420,
+  MASK_INDEX = 6422,
+  NO_VALUE = 6412,
+  OneD = 6417,
+  SHAPE = 6423,
+  TEXT_DOCUMENT = 6424,
+  ThreeD = 6414,
+  ThreeD_SPATIAL = 6413,
+  TwoD = 6416,
+  TwoD_SPATIAL = 6415,
+}
+
+declare enum PulldownMethod {
+  ADVANCE_24P = 6013,
+  PULLDOWN_3_2 = 6012,
+}
+
+declare enum PulldownPhase {
+  OFF = 5813,
+  SSWWW = 5814,
+  SWWWS = 5815,
+  SWWWW_24P_ADVANCE = 5821,
+  WSSWW = 5812,
+  WSWWW_24P_ADVANCE = 5820,
+  WWSSW = 5817,
+  WWSWW_24P_ADVANCE = 5819,
+  WWWSS = 5816,
+  WWWSW_24P_ADVANCE = 5818,
+  WWWWS_24P_ADVANCE = 5822,
+}
+
+declare enum PurgeTarget {
+  /** Purges all data that After Effects has cached to physical memory. */
+  ALL_CACHES = 1412,
+
+  /** Purges all saved image data. */
+  IMAGE_CACHES = 1415,
+
+  /** Purges all data cached as composition/layer snapshots. */
+  SNAPSHOT_CACHES = 1414,
+
+  /** Purges all data saved in the undo cache. */
+  UNDO_CACHES = 1413,
+}
+
+declare enum ResolveType {
+  ACCEPT_THEIRS = 8612,
+  ACCEPT_THEIRS_AND_COPY = 8613,
+  ACCEPT_YOURS = 8614,
+}
+
+declare enum RQItemStatus {
+  DONE = 3019,
+  ERR_STOPPED = 3018,
+  NEEDS_OUTPUT = 3013,
+  QUEUED = 3015,
+  RENDERING = 3016,
+  UNQUEUED = 3014,
+  USER_STOPPED = 3017,
+  WILL_CONTINUE = 3012,
+}
+
+declare enum TimeDisplayType {
+  FRAMES = 2013,
+  TIMECODE = 2012,
+}
+
+declare enum TrackMatteType {
+  ALPHA = 5013,
+  ALPHA_INVERTED = 5014,
+  LUMA = 5015,
+  LUMA_INVERTED = 5016,
+  NO_TRACK_MATTE = 5012,
+}
+
+declare enum ViewerType {
+  VIEWER_COMPOSITION = 7612,
+  VIEWER_FOOTAGE = 7614,
+  VIEWER_LAYER = 7613,
 }
 
 /**
  * TYPES
  */
+type _PropertyClasses = Property | PropertyGroup | MaskPropertyGroup
+type _ItemClasses = CompItem | FootageItem | FolderItem
 
 /** Clears text from the Info panel. */
 declare var clearOutput: () => void
+
+/** Generates random numbers. */
+declare var generateRandomNumber: () => number
 
 /** Converts string time value to a numeric time value. */
 declare var currentFormatToTime: (
@@ -696,9 +674,6 @@ declare class Application {
   /** The current After Effects project. */
   readonly project: Project
 
-  /** The locale (language and region) in which the application is running. */
-  readonly isoLanguage: string
-
   /** The version number of the After Effects application. */
   readonly version: string
 
@@ -720,6 +695,21 @@ declare class Application {
   /** Application settings that can be set via scripting. */
   readonly settings: Settings
 
+  /** The locale (language and region) in which the application is running. */
+  readonly isoLanguage: string
+
+  /** Memory in use by this application. */
+  readonly memoryInUse: number
+
+  /** Preferences */
+  readonly preferences: Preferences
+
+  /** The currently focused or last-focused viewer panel. */
+  readonly activeViewer: Viewer | null
+
+  /** The effects available in the application. */
+  readonly effects: { displayName: string; matchName: string; version: string; category: string }[]
+
   /** A callback function that is called when an error occurs in the application. */
   onError: string | null
 
@@ -735,21 +725,6 @@ declare class Application {
 
   /** When true, the project is saved if the application closes unexpectedly. */
   saveProjectOnCrash: boolean
-
-  /** Memory in use by this application. */
-  readonly memoryInUse: number
-
-  /** The effects available in the application. */
-  readonly effects: { displayName: string; matchName: string; version: string; category: string }[]
-
-  /** The currently focused or last-focused viewer panel. */
-  readonly activeViewer: Viewer | null
-
-  /** Preferences */
-  readonly preferences: Preferences
-
-  /** CC2017- */
-  availableGPUAccelTypes: GpuAccelType
 
   /** Creates a new project in After Effects. */
   newProject(): Project | null
@@ -800,7 +775,7 @@ declare class Application {
   cancelTask(taskID: number): void
 
   /** Loads a color swatch from an Adobe Swatch Exchange (ASE) file. */
-  parseSwatchFile(file: File): Swatch
+  parseSwatchFile(file: File): _Swatch
 
   findMenuCommandId(str: string): number
 
@@ -829,8 +804,20 @@ declare class Preferences {
 
 /** The AVItem object provides access to attributes and methods of audio/visual files imported into After Effects. */
 declare class AVItem extends Item {
-  /** The name of the object as shown in the Project panel. */
-  name: string
+  /** The FootageItem object used as proxy for the item. */
+  readonly proxySource: FootageSource
+
+  /** The CompItem objects that use this item. */
+  readonly usedIn: CompItem[]
+
+  /** When true, the item has a video component. */
+  readonly hasVideo: boolean
+
+  /** When true, the item has an audio component. */
+  readonly hasAudio: boolean
+
+  /** When true, the item cannot be found or is a placeholder. */
+  readonly footageMissing: boolean
 
   /** The width of the item. */
   width: number
@@ -853,23 +840,8 @@ declare class AVItem extends Item {
   /** When true, a proxy source is used for this item. */
   useProxy: boolean
 
-  /** The FootageItem object used as proxy for the item. */
-  readonly proxySource: FootageSource
-
   /** Current time of the item. */
   time: number
-
-  /** The CompItem objects that use this item. */
-  readonly usedIn: CompItem[]
-
-  /** When true, the item has a video component. */
-  readonly hasVideo: boolean
-
-  /** When true, the item has an audio component. */
-  readonly hasAudio: boolean
-
-  /** When true, the item cannot be found or is a placeholder. */
-  readonly footageMissing: boolean
 
   /** Sets a proxy for the item. */
   setProxy(file: File): void
@@ -879,7 +851,7 @@ declare class AVItem extends Item {
 
   /** Sets a solid as a proxy for the item. */
   setProxyWithSolid(
-    color: [number, number, number],
+    color: ThreeDColorValue,
     name: string,
     width: number,
     height: number,
@@ -913,6 +885,27 @@ declare class AVLayer extends Layer {
   /** The width of the layer. */
   readonly width: number
 
+  /** When true, it is legal to change the value of collapseTransformation. */
+  readonly canSetCollapseTransformation: boolean
+
+  /** When true, frame blending is enabled. */
+  readonly frameBlending: boolean
+
+  /** When true, it is legal to change the value of timeRemapEnabled. */
+  readonly canSetTimeRemapEnabled: boolean
+
+  /** When true, the layer contains an audio component. */
+  readonly hasAudio: boolean
+
+  /** When true, the layer's audio is active at the current time. */
+  readonly audioActive: boolean
+
+  /** When true, this layer is being used as a track matte for the layer below it. */
+  readonly isTrackMatte: boolean
+
+  /** When true, the layer above is being used as a track matte on this layer. */
+  readonly hasTrackMatte: boolean
+
   /** When true, the layer's audio is enabled. */
   audioEnabled: boolean
 
@@ -925,6 +918,9 @@ declare class AVLayer extends Layer {
   /** When true, this is an adjustment layer. */
   adjustmentLayer: boolean
 
+  /** When true, this is an environment layer. */
+  environmentLayer: boolean
+
   /** When true, this is a guide layer. */
   guideLayer: boolean
 
@@ -934,32 +930,14 @@ declare class AVLayer extends Layer {
   /** When true, 3D is set on a per-character basis in this text layer. */
   threeDPerChar: boolean
 
-  /** When true, this is an environment layer. */
-  environmentLayer: boolean
-
-  /** When true, it is legal to change the value of collapseTransformation. */
-  readonly canSetCollapseTransformation: boolean
-
   /** When true, collapse transformation is on. */
   collapseTransformation: boolean
-
-  /** When true, frame blending is enabled. */
-  readonly frameBlending: boolean
 
   /** The type of frame blending for the layer. */
   frameBlendingType: FrameBlendingType
 
-  /** When true, it is legal to change the value of timeRemapEnabled. */
-  readonly canSetTimeRemapEnabled: boolean
-
   /** When true, time remapping is enabled on this layer. */
   timeRemapEnabled: boolean
-
-  /** When true, the layer contains an audio component. */
-  readonly hasAudio: boolean
-
-  /** When true, the layer's audio is active at the current time. */
-  readonly audioActive: boolean
 
   /** The blending mode of the layer. */
   blendingMode: BlendingMode
@@ -967,20 +945,14 @@ declare class AVLayer extends Layer {
   /** When true, preserve transparency is enabled. */
   preserveTransparency: boolean
 
+  /** The layer sampling quality setting. */
+  samplingQuality: LayerSamplingQuality
+
   /** if layer has a track matte, specifies the way it is applied. */
   trackMatteType: TrackMatteType
 
-  /** When true, this layer is being used as a track matte for the layer below it. */
-  readonly isTrackMatte: boolean
-
-  /** When true, the layer above is being used as a track matte on this layer. */
-  readonly hasTrackMatte: boolean
-
   /** The layer quality setting. */
   quality: LayerQuality
-
-  /** The layer sampling quality setting. */
-  samplingQuality: LayerSamplingQuality
 
   /** Reports whether this layer's audio is active at a given time. */
   audioActiveAtTime(time: number): boolean
@@ -992,6 +964,15 @@ declare class AVLayer extends Layer {
     pointBottomRight: typeof pointTopLeft,
   ): object
 
+  /** Converts composition coordinates, such as sourcePointToComp, to layer coordinates. */
+  sourcePointToComp(point: [number, number]): [number, number]
+
+  /** Converts composition coordinates, such as sourcePointToComp, to layer coordinates. */
+  compPointToSource(point: [number, number]): [number, number]
+
+  /** Opens the layer in a Layer panel. */
+  openInViewer(): Viewer | null
+
   /** Changes the source item for this layer. */
   replaceSource(newSource: AVItem, fixExpressions: boolean): void
 
@@ -1001,17 +982,8 @@ declare class AVLayer extends Layer {
     extents: boolean,
   ): { top: number; left: number; width: number; height: number }
 
-  /** Opens the layer in a Layer panel. */
-  openInViewer(): Viewer | null
-
-  /** CC 2014.2(13.2)- */
-  sourcePointToComp(point: [number, number]): [number, number]
-
-  /** CC 2014.2(13.2)- */
-  compPointToSource(point: [number, number]): [number, number]
-
   /** Shortcuts */
-  readonly timeRemap: Property<number>
+  readonly timeRemap: OneDProperty
   readonly mask: MaskPropertyGroup
   readonly effect: PropertyGroup
   readonly layerStyle: _LayerStyles
@@ -1034,20 +1006,32 @@ declare class Collection {
 
 /** The CompItem object represents a composition, and allows you to manipulate and get information about it. Access the objects by position index number in a project’s item collection. */
 declare class CompItem extends AVItem {
+  /** The number of layers in the composition. */
+  readonly numLayers: number
+
+  /** The current active camera layer. */
+  readonly activeCamera: CameraLayer | null
+
+  /** The layers of the composition. */
+  readonly layers: LayerCollection
+
+  /** The selected layers of the composition. */
+  readonly selectedLayers: Layer[]
+
+  /** The selected properties of the composition. */
+  readonly selectedProperties: _PropertyClasses[]
+
+  /** The set of available rendering plug-in modules. */
+  readonly renderers: string[]
+
   /** The duration of a single frame. */
   frameDuration: number
-
-  /** When true, indicates that the composition uses drop-frame timecode. */
-  dropFrame: boolean
 
   /** The work area start time. */
   workAreaStart: number
 
   /** The work area duration. */
   workAreaDuration: number
-
-  /** The number of layers in the composition. */
-  readonly numLayers: number
 
   /** When true, shy layers are visible in the Timeline panel. */
   hideShyLayers: boolean
@@ -1068,10 +1052,7 @@ declare class CompItem extends AVItem {
   preserveNestedResolution: boolean
 
   /** The background color of the composition. */
-  bgColor: [number, number, number]
-
-  /** The current active camera layer. */
-  readonly activeCamera: CameraLayer | null
+  bgColor: ThreeDColorValue
 
   /** Changes the display of the start time in the Timeline panel. */
   displayStartTime: number
@@ -1091,23 +1072,11 @@ declare class CompItem extends AVItem {
   /** The maximum number of motion blur samples of 2D layer motion. */
   motionBlurAdaptiveSampleLimit: number
 
-  /** The layers of the composition. */
-  readonly layers: LayerCollection
-
-  /** CC 2017(14.0)- The markers of the composition. */
-  readonly markerProperty: Property<MarkerValue>
-
-  /** The selected layers of the composition. */
-  readonly selectedLayers: Layer[]
-
-  /** The selected properties of the composition. */
-  readonly selectedProperties: (Property<any> | PropertyGroup | MaskPropertyGroup)[]
-
   /** The rendering plug-in module to be used to render this composition. */
   renderer: string
 
-  /** The set of available rendering plug-in modules. */
-  readonly renderers: string[]
+  /** When true, indicates that the composition uses drop-frame timecode. */
+  dropFrame: boolean
 
   /** Creates and returns a duplicate of this composition. */
   duplicate(): CompItem
@@ -1148,7 +1117,7 @@ declare class FolderItem extends Item {
   readonly numItems: number
 
   /** Gets an item from the folder. */
-  item(index: number): Item
+  item(index: number): _ItemClasses
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
@@ -1158,6 +1127,9 @@ declare class FootageItem extends AVItem {
 
   /** All settings related to the footage item. */
   readonly mainSource: FootageSource
+
+  /** Opens the footage in a Footage panel. */
+  openInViewer(): Viewer | null
 
   /** Replaces a footage file with another footage file. */
   replace(file: File): void
@@ -1176,15 +1148,12 @@ declare class FootageItem extends AVItem {
 
   /** Replaces a footage file with a solid. */
   replaceWithSolid(
-    color: [number, number, number],
+    color: ThreeDColorValue,
     name: string,
     width: number,
     height: number,
     pixelAspect: number,
   ): void
-
-  /** Opens the footage in a Footage panel. */
-  openInViewer(): Viewer | null
 }
 
 declare class PlaceholderItem extends FootageItem {}
@@ -1194,6 +1163,12 @@ declare class FootageSource {
   /** The footage source file. */
   readonly file: File | null
 
+  /** When true, footage is a still image. */
+  readonly isStill: boolean
+
+  /** The effective frame rate as displayed and rendered in compositions by After Effects. */
+  readonly displayFrameRate: number
+
   /** When true, a footage clip or proxy includes an alpha channel. */
   hasAlpha: boolean
 
@@ -1201,13 +1176,10 @@ declare class FootageSource {
   alphaMode: AlphaMode
 
   /** The color to be premultiplied. */
-  premulColor: [number, number, number]
+  premulColor: ThreeDColorValue
 
   /** When true, an alpha channel in a footage clip or proxy should be inverted. */
   invertAlpha: boolean
-
-  /** When true, footage is a still image. */
-  readonly isStill: boolean
 
   /** The field separation type. */
   fieldSeparationType: FieldSeparationType
@@ -1223,9 +1195,6 @@ declare class FootageSource {
 
   /** The native frame rate of the footage. */
   nativeFrameRate: number
-
-  /** The effective frame rate as displayed and rendered in compositions by After Effects. */
-  readonly displayFrameRate: number
 
   /** The rate to which footage should conform. */
   conformFrameRate: number
@@ -1259,23 +1228,23 @@ declare class ImportOptions {
 
 /** The Item object represents an item that can appear in the Project panel. */
 declare class Item {
+  /** A unique identifier for this item. */
+  readonly id: number
+
+  /** The type of item. */
+  readonly typeName: string
+
   /** The name of the object as shown in the Project panel. */
   name: string
 
   /** A descriptive string. */
   comment: string
 
-  /** A unique identifier for this item. */
-  readonly id: number
-
   /** The parent folder of this item. */
   parentFolder: FolderItem
 
   /** When true, this item is currently selected. */
   selected: boolean
-
-  /** The type of item. */
-  readonly typeName: string
 
   /** The label color for the item. */
   label: number
@@ -1287,7 +1256,7 @@ declare class Item {
 /** The ItemCollection object represents a collection of items. The ItemCollection belonging to a Project object contains all the Item objects for items in the project. The ItemCollection belonging to a FolderItem object contains all the Item objects for items in that folder. */
 declare class ItemCollection extends Collection {
   /** Retrieves a Item object in the collection by its index number. The first object is at index 1. */
-  readonly [index: number]: Item
+  readonly [index: number]: _ItemClasses
 
   /** Creates a new CompItem object and adds it to the collection. */
   addComp(
@@ -1314,24 +1283,36 @@ declare class KeyframeEase {
   influence: number
 }
 
-/** The Layer object provides access to layers within compositions. It can be accessed from an item’s layer collection either by index number or by a name string. */
-declare interface Layer {
-  (index: number): Property<any> | PropertyGroup | MaskPropertyGroup
-  (name: string): Property<any> | PropertyGroup | MaskPropertyGroup
-}
-
-declare class Layer {
+declare class Layer extends PropertyGroup {
   /** The index position of the layer. */
   readonly index: number
+
+  /** The current time of the layer. */
+  readonly time: number
+
+  /** When true, the layer contains a video component. */
+  readonly hasVideo: boolean
+
+  /** When true, the layer is active at the current time. */
+  readonly active: boolean
+
+  /** When true, this is a null layer. */
+  readonly nullLayer: boolean
+
+  /** All selected AE properties in the layer. */
+  readonly selectedProperties: _PropertyClasses[]
+
+  /** The composition that contains this layer. */
+  readonly containingComp: CompItem
+
+  /** When true, the layer’s name has been explicitly set. */
+  readonly isNameSet: boolean
 
   /** The name of the layer. */
   name: string
 
   /** The parent of this layer. */
   parent: Layer | null
-
-  /** The current time of the layer. */
-  readonly time: number
 
   /** The start time of the layer. */
   startTime: number
@@ -1357,35 +1338,14 @@ declare class Layer {
   /** When true, the layer is locked. */
   locked: boolean
 
-  /** When true, the layer contains a video component. */
-  readonly hasVideo: boolean
-
-  /** When true, the layer is active at the current time. */
-  readonly active: boolean
-
-  /** When true, this is a null layer. */
-  readonly nullLayer: boolean
-
-  /** All selected AE properties in the layer. */
-  readonly selectedProperties: (Property<any> | PropertyGroup | MaskPropertyGroup)[]
-
   /** A descriptive comment for the layer. */
   comment: string
-
-  /** The composition that contains this layer. */
-  readonly containingComp: CompItem
-
-  /** When true, the layer’s name has been explicitly set. */
-  readonly isNameSet: boolean
 
   /** The label color for the layer. */
   label: number
 
   /** The type of automatic orientation for the layer. */
   autoOrient: AutoOrientType
-
-  /** Deletes the layer from the composition. */
-  remove(): void
 
   /** Moves the layer to the top of the composition (makes it the first layer). */
   moveToBeginning(): void
@@ -1414,35 +1374,24 @@ declare class Layer {
   /** Applies a named collection of animation settings to the layer. */
   applyPreset(presetName: File): void
 
-  /** From PropertyGroup */
-  readonly matchName: string
-  readonly propertyDepth: number
-  readonly propertyType: PropertyType
-  selected: boolean
-  readonly numProperties: number
-
-  propertyGroup(countUp?: number): PropertyGroup
-  property(index: number): PropertyBase
-  property(name: string): PropertyBase
-
   /** Shortcuts */
-  readonly marker: Property<MarkerValue>
+  readonly marker: MarkerValueProperty
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: Property<number>
-  readonly position: Property<[number, number] | [number, number, number]>
-  readonly xPosition: Property<number>
-  readonly yPosition: Property<number>
-  readonly zPosition: Property<number>
-  readonly scale: Property<[number, number] | [number, number, number]>
-  readonly orientation: Property<[number, number, number]>
-  readonly rotation: Property<number>
-  readonly xRotation: Property<number>
-  readonly yRotation: Property<number>
-  readonly zRotation: Property<number>
-  readonly opacity: Property<number>
-  readonly pointOfInterest: Property<[number, number, number]>
+  readonly anchorPoint: TwoDProperty | ThreeDProperty
+  readonly position: TwoDProperty | ThreeDProperty
+  readonly xPosition: OneDProperty
+  readonly yPosition: OneDProperty
+  readonly zPosition: OneDProperty
+  readonly scale: TwoDProperty | ThreeDProperty
+  readonly orientation: ThreeDProperty
+  readonly rotation: OneDProperty
+  readonly xRotation: OneDProperty
+  readonly yRotation: OneDProperty
+  readonly zRotation: OneDProperty
+  readonly opacity: OneDProperty
+  readonly pointOfInterest: ThreeDProperty
 }
 
 /** The LayerCollection object represents a set of layers. The LayerCollection belonging to a CompItem object contains all the layer objects for layers in the composition. The methods of the collection object allow you to manipulate the layer list. */
@@ -1458,7 +1407,7 @@ declare class LayerCollection extends Collection {
 
   /** Creates a new layer, a FootageItem with a SolidSource, and adds it to this collection. */
   addSolid(
-    color: [number, number, number],
+    color: ThreeDColorValue,
     name: string,
     width: number,
     height: number,
@@ -1466,11 +1415,11 @@ declare class LayerCollection extends Collection {
     duration?: number,
   ): AVLayer
 
-  /** Creates a new point text layer and adds it to this collection. */
-  addText(sourceText?: string | TextDocument): TextLayer
-
   /** Creates a new paragraph (box) text layer and adds it to this collection. */
   addBoxText(size: [number, number], sourceText?: string | TextDocument): TextLayer
+
+  /** Creates a new point text layer and adds it to this collection. */
+  addText(sourceText?: string | TextDocument): TextLayer
 
   /** Creates a new camera layer and adds it to this collection. */
   addCamera(name: string, centerPoint: [number, number]): CameraLayer
@@ -1490,11 +1439,11 @@ declare class LayerCollection extends Collection {
 
 /** The LightLayer object represents a light layer within a composition. Create it using the LayerCollection object’s addLight method */
 declare class LightLayer extends Layer {
-  /** For light layers, the type of light. */
-  lightType: LightType
-
   /** Shortcuts */
   readonly lightOption: _LightOptionsGroup
+
+  /** For light layers, the type of light. */
+  lightType: LightType
 }
 
 /** The MarkerValue object represents a layer marker, which associates a comment, and optionally a chapter reference point, Web-page link, or Flash Video cue point with a particular point in a layer. */
@@ -1511,14 +1460,14 @@ declare class MarkerValue {
   /** A comment on the associated layer. */
   comment: string
 
-  /** The amount of time represented by the marker. */
-  duration: number
-
   /** A chapter link reference point for the associated layer. */
   chapter: string
 
   /** The Flash Video cue point name. */
   cuePointName: string
+
+  /** The amount of time represented by the marker. */
+  duration: number
 
   /** Whether the Flash Video cue point is for an event or navigation. */
   eventCuePoint: boolean
@@ -1554,25 +1503,25 @@ declare class MaskPropertyGroup extends PropertyGroup {
   locked: boolean
 
   /** The color used to draw the mask outline in the user interface. */
-  color: [number, number, number]
+  color: ThreeDColorValue
+
+  /** The shape of the mask. */
+  maskShape: ShapeProperty
+
+  /** The path of the mask. */
+  maskPath: ShapeProperty
+
+  /** The mask feather amount. */
+  maskFeather: TwoDProperty
 
   /** The feather falloff mode for the mask. */
   maskFeatherFalloff: MaskFeatherFalloff
 
-  /** The shape of the mask. */
-  maskShape: Property<Shape>
-
-  /** The path of the mask. */
-  maskPath: Property<Shape>
-
-  /** The mask feather amount. */
-  maskFeather: Property<[number, number]>
-
   /** The mask opacity. */
-  maskOpacity: Property<number>
+  maskOpacity: OneDProperty
 
   /** The mask expansion amount. */
-  maskExpansion: Property<number>
+  maskExpansion: OneDProperty
 }
 
 /** The OMCollection contains all of the output modules in a render queue. The collection provides access to the OutputModule objects, but does not provide any additional functionality. The first OutputModule object in the collection is at index position 1. */
@@ -1583,17 +1532,17 @@ declare class OMCollection extends Collection {
 
 /** An OutputModule object of a RenderQueueItem generates a single file or sequence via a render operation, and contains attributes and methods relating to the file to be rendered. */
 declare class OutputModule {
-  /** The path and name of the file to be rendered. */
-  file: File
-
-  /** An action to be taken after rendering. */
-  postRenderAction: PostRenderAction
-
   /** The user-interface name of the output module. */
   readonly name: string
 
   /** All templates for the output module */
   readonly templates: string[]
+
+  /** The path and name of the file to be rendered. */
+  file: File
+
+  /** An action to be taken after rendering. */
+  postRenderAction: PostRenderAction
 
   /** When true, writes all source footage XMP metadata to the output file. */
   includeSourceXMP: boolean
@@ -1609,9 +1558,7 @@ declare class OutputModule {
 
   getSetting(key: string): string | number
 
-  getSettings(
-    format?: GetSettingsFormat,
-  ): {
+  getSettings(format?: GetSettingsFormat): {
     "Audio Bit Depth": string
     "Audio Channels": string
     "Audio Sample Rate": string
@@ -1659,7 +1606,16 @@ declare class Project {
   readonly items: ItemCollection
 
   /** The currently active item. */
-  readonly activeItem: Item | null
+  readonly activeItem: _ItemClasses | null
+
+  /** The total number of items contained in the project. */
+  readonly numItems: number
+
+  /** All items selected in the Project panel. */
+  readonly selection: _ItemClasses[]
+
+  /** The project’s render queue. */
+  readonly renderQueue: RenderQueue
 
   /** The color depth of the current project. */
   bitsPerChannel: number
@@ -1667,38 +1623,11 @@ declare class Project {
   /** When true, thumbnail views use the transparency checkerboard pattern. */
   transparencyGridThumbnails: boolean
 
-  /** The total number of items contained in the project. */
-  readonly numItems: number
-
-  /** All items selected in the Project panel. */
-  readonly selection: Item[]
-
-  /** The project’s render queue. */
-  readonly renderQueue: RenderQueue
-
-  /** The time display style, corresponding to the Time Display Style section in the Project Settings dialog box. */
-  timeDisplayType: TimeDisplayType
-
-  /** CC 2017(14.0)- The active tool in the Tools panel. */
-  toolType: ToolType
-
-  /** The Footage Start Time setting in the Project Settings dialog box, which is enabled when Timecode is selected as the time display style. */
-  footageTimecodeDisplayStartType: FootageTimecodeDisplayStartType
-
-  /** The Use Feet + Frames setting in the Project Settings dialog box. */
-  framesUseFeetFrames: boolean
-
-  /** The Use Feet + Frames menu setting in the Project Settings dialog box. */
-  feetFramesFilmType: FeetFramesFilmType
-
-  /** CC 2015.3(13.8)- */
-  gpuAccelType: GpuAccelType
-
-  /** The Frame Count menu setting in the Project Settings dialog box. */
-  framesCountType: FramesCountType
-
   /** The frame at which to start numbering when displaying the project. */
   displayStartFrame: number
+
+  /** Get or set the current projects GPU Acceleration option. */
+  gpuAccelType: GpuAccelType
 
   /** When true, linear blending is used for the project. */
   linearBlending: boolean
@@ -1706,8 +1635,26 @@ declare class Project {
   /** The project’s XMP metadata. */
   xmpPacket: string
 
+  /** The Frame Count menu setting in the Project Settings dialog box. */
+  framesCountType: FramesCountType
+
+  /** The Use Feet + Frames menu setting in the Project Settings dialog box. */
+  feetFramesFilmType: FeetFramesFilmType
+
+  /** The Use Feet + Frames setting in the Project Settings dialog box. */
+  framesUseFeetFrames: boolean
+
+  /** The Footage Start Time setting in the Project Settings dialog box, which is enabled when Timecode is selected as the time display style. */
+  footageTimecodeDisplayStartType: FootageTimecodeDisplayStartType
+
+  /** The time display style, corresponding to the Time Display Style section in the Project Settings dialog box. */
+  timeDisplayType: TimeDisplayType
+
   /** Retrieves an item from the project. */
-  item(index: number): Item
+  item(index: number): _ItemClasses
+
+  /** Retrieves an item by its Item ID */
+  itemById(id: number): _ItemClasses
 
   /** Consolidates all footage in the project. */
   consolidateFootage(): number
@@ -1716,7 +1663,7 @@ declare class Project {
   removeUnusedFootage(): number
 
   /** Reduces the project to a specified set of items. */
-  reduceProject(array_of_items: Item[]): number
+  reduceProject(array_of_items: _ItemClasses[]): number
 
   /** Closes the project with normal save options. */
   close(closeOptions: CloseOptions): boolean
@@ -1737,70 +1684,105 @@ declare class Project {
   ): PlaceholderItem
 
   /** Imports a file into the project. */
-  importFile(importOptions: ImportOptions): Item
+  importFile(importOptions: ImportOptions): _ItemClasses
 
   /** Displays an Import File dialog box. */
-  importFileWithDialog(): Item[] | null
+  importFileWithDialog(): _ItemClasses[] | null
 
   /** Shows or hides the Project panel. */
   showWindow(doShow: boolean): void
 
   /** Automatically replaces text in all expressions. */
   autoFixExpressions(oldText: string, newText: string): void
-
-  /** Creates a new team project. */
-  newTeamProject(teamProjectName: string, description: string): boolean
-
-  /** Opens a team project. */
-  openTeamProject(teamProjectName: string): boolean
-
-  /** Shares the currently open team project. */
-  shareTeamProject(comment: string): boolean
-
-  /** Syncs the currently open team project. */
-  syncTeamProject(): boolean
-
-  /** Closes a currently open team project. */
-  closeTeamProject(): boolean
-
-  /** Converts a team project to an After Effects project on a local disk. */
-  convertTeamProjectToProject(project_file: File): boolean
-
-  /** Returns an array containing the name strings for all team projects available for the current user. Archived Team Projects are not included. */
-  listTeamProjects(): string[]
-
-  /** Checks whether specified team project is currently open. */
-  isTeamProjectOpen(teamProjectName: string): boolean
-
-  /** Checks whether any team project is currently open. */
-  isAnyTeamProjectOpen(): boolean
-
-  /** Checks whether or not team projects is enabled for After Effects. (This will almost always return true.) */
-  isTeamProjectEnabled(): boolean
-
-  /** Checks whether or not the client (After Effects) is currently logged into the team project server. */
-  isLoggedInToTeamProject(): boolean
-
-  /** Checks whether or not the Sync command is enabled. */
-  isSyncCommandEnabled(): boolean
-
-  /** Checks whether or not the Share command is enabled. */
-  isShareCommandEnabled(): boolean
-
-  /** Checks whether or not the Resolve command is enabled. */
-  isResolveCommandEnabled(): boolean
-
-  /** Resolves a conflict between the open team project and the version on the team projects server, using the specified resolution method. */
-  resolveConflict(ResolveType: ResolveType): boolean
 }
 
+type PropertyClassMembers = {
+  [P in keyof Property]: Property[P]
+}
+declare interface UnknownPropertyType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType
+  value: any
+}
+
+declare interface NoValueType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.NO_VALUE
+  value: any
+}
+
+type ColorValue = [number, number, number, number]
+type ThreeDColorValue = [number, number, number]
+
+declare interface ColorType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.COLOR
+  value: ColorValue
+}
+
+declare interface BooleanType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.OneD
+  value: boolean
+}
+declare interface OneDType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.OneD
+  value: number
+}
+
+declare interface TwoDType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.TwoD
+  value: TwoDPoint
+}
+
+type TwoDPoint = [number, number]
+declare interface TwoDSpatialType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.TwoD_SPATIAL
+  value: TwoDPoint
+}
+
+type ThreeDPoint = [number, number, number]
+
+declare interface ThreeDType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.ThreeD
+  value: ThreeDPoint
+}
+
+declare interface TextDocumentType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.TEXT_DOCUMENT
+  value: TextDocument
+}
+
+declare interface MarkerValueType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.MARKER
+  value: MarkerValue
+}
+
+declare interface ShapePropertyType extends PropertyClassMembers {
+  propertyValueType: PropertyValueType.SHAPE
+  value: Shape
+}
+
+type NoValueProperty = Property<NoValueType>
+type ColorProperty = Property<ColorType>
+type OneDProperty = Property<OneDType>
+type TwoDProperty = Property<TwoDType>
+type ThreeDProperty = Property<ThreeDType>
+type ShapeProperty = Property<ShapePropertyType>
+type MarkerValueProperty = Property<MarkerValueType>
+type TextDocumentProperty = Property<TextDocumentType>
+
+type AnyProperty =
+  | NoValueProperty
+  | ColorProperty
+  | OneDProperty
+  | ShapeProperty
+  | MarkerValueProperty
+  | TextDocumentProperty
+
 /** The Property object contains value, keyframe, and expression information about a particular AE property of a layer. */
-declare class Property<A> extends PropertyBase {
+declare class Property<T extends UnknownPropertyType = UnknownPropertyType> extends PropertyBase {
   /** Type of value stored in this property. */
-  readonly propertyValueType: PropertyValueType
+  readonly propertyValueType: T["propertyValueType"]
 
   /** Current value of the property. */
-  readonly value: A
+  readonly value: T["value"]
 
   /** When true, there is a minimum permitted value. */
   readonly hasMin: boolean
@@ -1820,6 +1802,9 @@ declare class Property<A> extends PropertyBase {
   /** When true, the property can be keyframed. */
   readonly canVaryOverTime: boolean
 
+  /** When true, the expression can be set by a script. */
+  readonly canSetExpression: boolean
+
   /** When true, the property has keyframes or an expression enabled that can vary its values. */
   readonly isTimeVarying: boolean
 
@@ -1829,15 +1814,6 @@ declare class Property<A> extends PropertyBase {
   /** A text description of the units in which the value is expressed. */
   readonly unitsText: string
 
-  /** The expression string for this property. */
-  expression: string
-
-  /** When true, the expression can be set by a script. */
-  readonly canSetExpression: boolean
-
-  /** When true, the expression is used to generate values for the property. */
-  expressionEnabled: boolean
-
   /** The error, if any, that occurred when the last expression was evaluated. */
   readonly expressionError: string
 
@@ -1846,9 +1822,6 @@ declare class Property<A> extends PropertyBase {
 
   /** The position index of this property. */
   readonly propertyIndex: number
-
-  /** When true, the property’s dimensions are represented as separate properties. */
-  dimensionsSeparated: boolean
 
   /** When true, the property represents one of the separated dimensions for a multidimensional property. */
   readonly isSeparationFollower: boolean
@@ -1860,22 +1833,31 @@ declare class Property<A> extends PropertyBase {
   readonly separationDimension: number
 
   /** The original multidimensional property for this separated follower. */
-  readonly separationLeader: Property<A>
+  readonly separationLeader: Property<TwoDProperty | ThreeDProperty>
+
+  /** The expression string for this property. */
+  expression: string
+
+  /** When true, the expression is used to generate values for the property. */
+  expressionEnabled: boolean
+
+  /** When true, the property’s dimensions are represented as separate properties. */
+  dimensionsSeparated: boolean
 
   /** Gets the value of the property evaluated at given time. */
-  valueAtTime(time: number, preExpression: boolean): A
+  valueAtTime(time: number, preExpression: boolean): T["value"]
 
   /** Sets the static value of the property. */
-  setValue(newValue: A): void
+  setValue(newValue: T["value"]): void
 
   /** Creates a keyframe for the property. */
-  setValueAtTime(time: number, newValue: A): void
+  setValueAtTime(time: number, newValue: T["value"]): void
 
   /** Creates a set of keyframes for the property. */
-  setValuesAtTimes(times: number[], newValues: A[]): void
+  setValuesAtTimes(times: number[], newValues: T["value"][]): void
 
   /** Finds a keyframe and sets the value of the property at that keyframe. */
-  setValueAtKey(keyIndex: number, newValue: A): void
+  setValueAtKey(keyIndex: number, newValue: T["value"]): void
 
   /** Gets the keyframe nearest to a specified time. */
   nearestKeyIndex(time: number): number
@@ -1885,7 +1867,7 @@ declare class Property<A> extends PropertyBase {
   keyTime(markerComment: string): number
 
   /** Gets the value of a keyframe at the time at which a condition occurs. */
-  keyValue(keyIndex: number): A
+  keyValue(keyIndex: number): T["value"]
   keyValue(markerComment: string): MarkerValue
 
   /** Adds a new keyframe to the property at a given time. */
@@ -1992,19 +1974,10 @@ declare class Property<A> extends PropertyBase {
   keySelected(keyIndex: number): boolean
 
   /** For a separated, multidimensional property, retrieves a specific follower property. */
-  getSeparationFollower(dim: number): Property<number>
-}
-
-/** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
-declare interface PropertyBase {
-  (index: number): Property<any> | PropertyGroup | MaskPropertyGroup
-  (name: string): Property<any> | PropertyGroup | MaskPropertyGroup
+  getSeparationFollower(dim: number): Property<OneDProperty>
 }
 
 declare class PropertyBase {
-  /** Name of the property. */
-  name: string
-
   /** A special name for the property used to build unique naming paths. */
   readonly matchName: string
 
@@ -2026,9 +1999,6 @@ declare class PropertyBase {
   /** When true, the user interface displays an eyeball icon for this property. */
   readonly canSetEnabled: boolean
 
-  /** When true, this property is enabled. */
-  enabled: boolean
-
   /** When true, this property is active. */
   readonly active: boolean
 
@@ -2040,6 +2010,12 @@ declare class PropertyBase {
 
   /** When true, this property is a mask. */
   readonly isMask: boolean
+
+  /** Name of the property. */
+  name: string
+
+  /** When true, this property is enabled. */
+  enabled: boolean
 
   /** When true, this property is selected. */
   selected: boolean
@@ -2054,11 +2030,17 @@ declare class PropertyBase {
   moveTo(newIndex: number): void
 
   /** Duplicates this property object. */
-  duplicate(): PropertyBase
+  duplicate(): _PropertyClasses
 
   /** Gets a member property or group. Strictly, this should be PropertyGroup method. */
-  property(index: number): PropertyBase
-  property(name: string): PropertyBase
+  property(index: number): _PropertyClasses
+  property(name: string): _PropertyClasses
+}
+
+/** Properties are accessed by name through layers, using various kinds of expression syntax, as controlled by application preferences. */
+declare interface PropertyGroup {
+  (index: number): _PropertyClasses
+  (name: string): _PropertyClasses
 }
 
 /** The PropertyGroup object represents a group of properties. It can contain Property objects and other PropertyGroup objects. Property groups can be nested to provide a parent-child hierarchy, with a Layer object at the top (root) down to a single Property object, such as the mask feather of the third mask. To traverse the group hierarchy, use PropertyBase methods and attributes. */
@@ -2070,7 +2052,7 @@ declare class PropertyGroup extends PropertyBase {
   canAddProperty(name: string): boolean
 
   /** Adds a property to the group. */
-  addProperty(name: string): PropertyBase
+  addProperty(name: string): _PropertyClasses
 }
 
 /** The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. */
@@ -2101,9 +2083,6 @@ declare class RenderQueue {
 
   /** Gets a render-queue item from the collection. */
   item(index: number): RenderQueueItem
-
-  /** CC 2017(14.0)- */
-  queueInAME(render_immediately_in_AME: boolean): void
 }
 
 /** The RenderQueueItem object represents an individual item in the render queue. It provides access to the specific settings for an item to be rendered. Create the object by adding a composition to the Render Queue with the RQItemCollection object; */
@@ -2111,23 +2090,11 @@ declare class RenderQueueItem {
   /** The total number of Output Modules assigned to the item. */
   readonly numOutputModules: number
 
-  /** When true, this item is rendered when the queue is started. */
-  render: boolean
-
   /** The time when rendering began for the item. */
   readonly startTime: Date | null
 
   /** The time elapsed in the current rendering of this item. */
   readonly elapsedSeconds: number | null
-
-  /** The start time in the composition to be rendered. */
-  timeSpanStart: number
-
-  /** The duration of the composition to be rendered. */
-  timeSpanDuration: number
-
-  /** The number of frames to skip when rendering this item. */
-  skipFrames: number
 
   /** The composition to be rendered by this item. */
   readonly comp: CompItem
@@ -2141,11 +2108,31 @@ declare class RenderQueueItem {
   /** The current rendering status of the item. */
   readonly status: RQItemStatus
 
+  /** When true, this item is rendered when the queue is started. */
+  render: boolean
+
+  /** The start time in the composition to be rendered. */
+  timeSpanStart: number
+
+  /** The duration of the composition to be rendered. */
+  timeSpanDuration: number
+
+  /** The number of frames to skip when rendering this item. */
+  skipFrames: number
+
   /** A callback function that is called during the rendering process when the status of the item changes. */
-  onStatusChanged: string | null
+  onStatus: string | null
 
   /** A log type for this item. */
   logType: LogType
+
+  getSetting(key: string): string | number
+
+  getSettings(format: GetSettingsFormat): object
+
+  setSetting(key: string, value: string | number): void
+
+  setSettings(settings: object): void
 
   /** Gets an Output Module for the item. */
   outputModule(index: number): OutputModule
@@ -2161,14 +2148,6 @@ declare class RenderQueueItem {
 
   /** Duplicates this item. */
   duplicate(): RenderQueueItem
-
-  getSetting(key: string): string | number
-
-  getSettings(format: GetSettingsFormat): object
-
-  setSetting(key: string, value: string | number): void
-
-  setSettings(settings: object): void
 }
 
 /** The RQItemCollection contains all of the render-queue items in a project, as shown in the Render Queue panel of the project. The collection provides access to the RenderQueueItem objects, and allows you to create them from compositions. The first RenderQueueItem object in the collection is at index position 1. */
@@ -2234,11 +2213,11 @@ declare class ShapeLayer extends AVLayer {}
 /** The SolidSource object represents a solid-color footage source. */
 declare class SolidSource extends FootageSource {
   /** The color of the solid. */
-  color: [number, number, number]
+  color: ThreeDColorValue
 }
 
 /** The file specification, an ExtendScript File object. */
-declare class Swatch {
+declare interface _Swatch {
   /** The ASE version number. */
   majorVersion: number
 
@@ -2246,11 +2225,11 @@ declare class Swatch {
   minorVersion: number
 
   /** An array of SwatchValue. */
-  values: SwatchValue[]
+  values: _SwatchValue[]
 }
 
 /** The file specification, an ExtendScript File object. */
-declare class SwatchValue {
+declare interface _SwatchValue {
   /** One of "RGB", "CMYK", "LAB", "Gray" */
   type: "RGB" | "CMYK" | "LAB" | "Gray"
 
@@ -2297,23 +2276,59 @@ declare class System {
 declare class TextDocument {
   constructor(docText: string)
 
-  /** The text layer’s Source Text value. */
-  text: string
+  /** When true, the text layer is point (unbounded) text. */
+  readonly pointText: boolean
 
-  /** The text layer’s font specified by its PostScript name. */
-  font: string
+  /** When true, the text layer is paragraph (bounded) text. */
+  readonly boxText: boolean
 
-  /** string with path of font file, providing its location on disk (not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts) */
+  /** Path of font file, providing its location on disk (not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts) */
   readonly fontLocation: string
 
-  /** string with style information — e.g., “bold”, “italic” */
+  /** Style information — e.g., “bold”, “italic” */
   readonly fontStyle: string
 
-  /** a string with the name of the font family */
+  /** The name of the font family */
   readonly fontFamily: string
 
-  /** The text layer’s font size in pixels. */
-  fontSize: number
+  /** True if a text layer has faux bold enabled */
+  readonly fauxBold: boolean
+
+  /** True if a text layer has faux italic enabled */
+  readonly fauxItalic: boolean
+
+  /** True if a text layer has allcaps enabled */
+  readonly allCaps: boolean
+
+  /** True if a text layer has smallcaps enabled */
+  readonly smallCaps: boolean
+
+  /** True if a text layer has superscript enabled- */
+  readonly superscript: boolean
+
+  /** True if a text layer has subscript enabled- */
+  readonly subscript: boolean
+
+  /** This text layer’s vertical scale in pixels. */
+  readonly verticalScale: number
+
+  /** This text layer’s horizontal scale in pixels. */
+  readonly horizontalScale: number
+
+  /** This text layer’s baseline shift in pixels. */
+  readonly baselineShift: number
+
+  /** This text layer’s tsume value. */
+  readonly tsume: number
+
+  /** The layer coordinates from a paragraph (box) text layer’s anchor point as a [width, height] array of pixel dimensions. */
+  readonly boxTextPos: [number, number]
+
+  /** The baseline (x,y) locations for a text layer. */
+  readonly baselineLocs: number[]
+
+  /** The text layer’s Source Text value. */
+  text: string
 
   /** When true, the text layer shows a fill. */
   applyFill: boolean
@@ -2322,10 +2337,19 @@ declare class TextDocument {
   applyStroke: boolean
 
   /** The text layer’s fill color. */
-  fillColor: [number, number, number]
+  fillColor: ThreeDColorValue
+
+  /** The text layer’s font specified by its PostScript name. */
+  font: string
+
+  /** The text layer’s font size in pixels. */
+  fontSize: number
+
+  /** The paragraph justification for the text layer. */
+  justification: ParagraphJustification
 
   /** The text layer’s stroke color. */
-  strokeColor: [number, number, number]
+  strokeColor: ThreeDColorValue
 
   /** Indicates the rendering order for the fill and stroke of a text layer. */
   strokeOverFill: boolean
@@ -2333,56 +2357,11 @@ declare class TextDocument {
   /** The text layer’s stroke thickness. */
   strokeWidth: number
 
-  /** The paragraph justification for the text layer. */
-  justification: ParagraphJustification
-
   /** The text layer’s spacing between characters. */
   tracking: number
 
-  /** When true, the text layer is point (unbounded) text. */
-  readonly pointText: boolean
-
-  /** When true, the text layer is paragraph (bounded) text. */
-  readonly boxText: boolean
-
   /** For box text, the pixel dimensions for the text bounds. */
   boxTextSize: [number, number]
-
-  /** CC 2014.2(13.2)- */
-  readonly fauxBold: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly fauxItalic: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly allCaps: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly smallCaps: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly superscript: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly subscript: boolean
-
-  /** CC 2014.2(13.2)- */
-  readonly verticalScale: number
-
-  /** CC 2014.2(13.2)- */
-  readonly horizontalScale: number
-
-  /** CC 2014.2(13.2)- */
-  readonly baselineShift: number
-
-  /** CC 2014.2(13.2)- */
-  readonly tsume: number
-
-  /** CC 2014.2(13.2)- */
-  readonly boxTextPos: [number, number]
-
-  /** CC 2015(13.6)- */
-  readonly baselineLocs: number[]
 
   /** Restores the default character settings in the Character panel. */
   resetCharStyle(): void
@@ -2396,7 +2375,14 @@ declare class TextLayer extends AVLayer {
   readonly source: null
 
   readonly text: _TextProperties
-  readonly sourceText: Property<TextDocument>
+  readonly sourceText: TextDocumentProperty
+}
+
+declare class View {
+  readonly active: boolean
+  readonly options: ViewOptions
+
+  setActive(): void
 }
 
 /** The Viewer object represents a Composition, Layer, or Footage panel. */
@@ -2418,13 +2404,6 @@ declare class Viewer {
   setActive(): boolean
 }
 
-declare class View {
-  readonly active: boolean
-  readonly options: ViewOptions
-
-  setActive(): void
-}
-
 declare class ViewOptions {
   channels: ChannelType
   checkerboards: boolean
@@ -2436,52 +2415,52 @@ declare class ViewOptions {
 /**
  * Properties for Shortcuts
  */
-declare class _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: Property<number>
-  readonly position: Property<[number, number] | [number, number, number]>
-  readonly xPosition: Property<number>
-  readonly yPosition: Property<number>
-  readonly zPosition: Property<number>
-  readonly scale: Property<[number, number] | [number, number, number]>
-  readonly orientation: Property<[number, number, number]>
-  readonly rotation: Property<number>
-  readonly xRotation: Property<number>
-  readonly yRotation: Property<number>
-  readonly zRotation: Property<number>
-  readonly opacity: Property<number>
-  readonly pointOfInterest: Property<[number, number, number]>
+declare interface _TransformGroup extends PropertyGroup {
+  readonly anchorPoint: TwoDProperty | ThreeDProperty
+  readonly position: TwoDProperty | ThreeDProperty
+  readonly xPosition: OneDProperty
+  readonly yPosition: OneDProperty
+  readonly zPosition: OneDProperty
+  readonly scale: TwoDProperty | ThreeDProperty
+  readonly orientation: ThreeDProperty
+  readonly rotation: OneDProperty
+  readonly xRotation: OneDProperty
+  readonly yRotation: OneDProperty
+  readonly zRotation: OneDProperty
+  readonly opacity: OneDProperty
+  readonly pointOfInterest: ThreeDProperty
 }
 
-declare class _LightOptionsGroup extends PropertyGroup {
-  readonly intensity: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly coneAngle: Property<number>
-  readonly coneFeather: Property<number>
-  readonly falloff: Property<number>
-  readonly radius: Property<number>
-  readonly falloffDistance: Property<number>
-  readonly castsShadows: Property<boolean>
-  readonly shadowDarkness: Property<number>
-  readonly shadowDiffusion: Property<number>
+declare interface _LightOptionsGroup extends PropertyGroup {
+  readonly intensity: OneDProperty
+  readonly color: ColorProperty
+  readonly coneAngle: OneDProperty
+  readonly coneFeather: OneDProperty
+  readonly falloff: OneDProperty
+  readonly radius: OneDProperty
+  readonly falloffDistance: OneDProperty
+  readonly castsShadows: OneDProperty
+  readonly shadowDarkness: OneDProperty
+  readonly shadowDiffusion: OneDProperty
 }
 
-declare class _CameraOptionsGroup extends PropertyGroup {
-  readonly zoom: Property<number>
-  readonly depthOfField: Property<boolean>
-  readonly focusDistance: Property<number>
-  readonly aperture: Property<number>
-  readonly blurLevel: Property<number>
-  readonly irisShape: Property<number>
-  readonly irisRotation: Property<number>
-  readonly irisRoundness: Property<number>
-  readonly irisAspectRatio: Property<number>
-  readonly irisDiffractionFringe: Property<number>
-  readonly highlightGain: Property<number>
-  readonly highlightThreshold: Property<number>
-  readonly highlightSaturation: Property<number>
+declare interface _CameraOptionsGroup extends PropertyGroup {
+  readonly zoom: OneDProperty
+  readonly depthOfField: OneDProperty
+  readonly focusDistance: OneDProperty
+  readonly aperture: OneDProperty
+  readonly blurLevel: OneDProperty
+  readonly irisShape: OneDProperty
+  readonly irisRotation: OneDProperty
+  readonly irisRoundness: OneDProperty
+  readonly irisAspectRatio: OneDProperty
+  readonly irisDiffractionFringe: OneDProperty
+  readonly highlightGain: OneDProperty
+  readonly highlightThreshold: OneDProperty
+  readonly highlightSaturation: OneDProperty
 }
 
-declare class _LayerStyles extends PropertyGroup {
+declare interface _LayerStyles extends PropertyGroup {
   readonly blendingOption: _BlendOptionsGroup
   readonly dropShadow: _DropShadow
   readonly innerShadow: _InnerShadow
@@ -2494,178 +2473,178 @@ declare class _LayerStyles extends PropertyGroup {
   readonly stroke: _Stroke
 }
 
-declare class _BlendOptionsGroup extends PropertyGroup {
-  readonly globalLightAngle: Property<number>
-  readonly globalLightAltitude: Property<number>
+declare interface _BlendOptionsGroup extends PropertyGroup {
+  readonly globalLightAngle: OneDProperty
+  readonly globalLightAltitude: OneDProperty
   readonly advancedBlending: _AdvBlendGroup
 }
 
-declare class _AdvBlendGroup extends PropertyGroup {
-  readonly fillOpacity: Property<number>
-  readonly red: Property<boolean>
-  readonly green: Property<boolean>
-  readonly blue: Property<boolean>
-  readonly blendInteriorStylesAsGroup: Property<boolean>
-  readonly useBlendRangesFromSource: Property<boolean>
+declare interface _AdvBlendGroup extends PropertyGroup {
+  readonly fillOpacity: OneDProperty
+  readonly red: OneDProperty
+  readonly green: OneDProperty
+  readonly blue: OneDProperty
+  readonly blendInteriorStylesAsGroup: OneDProperty
+  readonly useBlendRangesFromSource: OneDProperty
 }
 
-declare class _DropShadow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
-  readonly useGlobalLight: Property<boolean>
-  readonly angle: Property<number>
-  readonly distance: Property<number>
-  readonly spread: Property<number>
-  readonly size: Property<number>
-  readonly noise: Property<number>
-  readonly layerKnocksOutDropShadow: Property<boolean>
+declare interface _DropShadow extends PropertyGroup {
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
+  readonly useGlobalLight: OneDProperty
+  readonly angle: OneDProperty
+  readonly distance: OneDProperty
+  readonly spread: OneDProperty
+  readonly size: OneDProperty
+  readonly noise: OneDProperty
+  readonly layerKnocksOutDropShadow: OneDProperty
 }
 
-declare class _InnerShadow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
-  readonly useGlobalLight: Property<boolean>
-  readonly angle: Property<number>
-  readonly distance: Property<number>
-  readonly choke: Property<number>
-  readonly size: Property<boolean>
-  readonly noise: Property<number>
+declare interface _InnerShadow extends PropertyGroup {
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
+  readonly useGlobalLight: OneDProperty
+  readonly angle: OneDProperty
+  readonly distance: OneDProperty
+  readonly choke: OneDProperty
+  readonly size: OneDProperty
+  readonly noise: OneDProperty
 }
 
-declare class _OuterGlow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly opacity: Property<number>
-  readonly noise: Property<number>
-  readonly colorType: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly colors: Property<void>
-  readonly gradientSmoothness: Property<number>
-  readonly technique: Property<number>
-  readonly spread: Property<number>
-  readonly size: Property<number>
-  readonly range: Property<number>
-  readonly jitter: Property<number>
+declare interface _OuterGlow extends PropertyGroup {
+  readonly blendMode: OneDProperty
+  readonly opacity: OneDProperty
+  readonly noise: OneDProperty
+  readonly colorType: OneDProperty
+  readonly color: ColorProperty
+  readonly colors: NoValueProperty
+  readonly gradientSmoothness: OneDProperty
+  readonly technique: OneDProperty
+  readonly spread: OneDProperty
+  readonly size: OneDProperty
+  readonly range: OneDProperty
+  readonly jitter: OneDProperty
 }
 
-declare class _InnerGlow extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly opacity: Property<number>
-  readonly noise: Property<number>
-  readonly colorType: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly colors: Property<void>
-  readonly gradientSmoothness: Property<number>
-  readonly technique: Property<number>
-  readonly source: Property<number>
-  readonly choke: Property<number>
-  readonly size: Property<number>
-  readonly range: Property<number>
-  readonly jitter: Property<number>
+declare interface _InnerGlow extends PropertyGroup {
+  readonly blendMode: OneDProperty
+  readonly opacity: OneDProperty
+  readonly noise: OneDProperty
+  readonly colorType: OneDProperty
+  readonly color: ColorProperty
+  readonly colors: NoValueProperty
+  readonly gradientSmoothness: OneDProperty
+  readonly technique: OneDProperty
+  readonly source: OneDProperty
+  readonly choke: OneDProperty
+  readonly size: OneDProperty
+  readonly range: OneDProperty
+  readonly jitter: OneDProperty
 }
 
-declare class _BevelAndEmboss extends PropertyGroup {
-  readonly style: Property<number>
-  readonly technique: Property<number>
-  readonly depth: Property<number>
-  readonly direction: Property<number>
-  readonly size: Property<number>
-  readonly soften: Property<number>
-  readonly useGlobalLight: Property<boolean>
-  readonly angle: Property<number>
-  readonly altitude: Property<number>
-  readonly highlightMode: Property<number>
-  readonly highlightColor: Property<[number, number, number, number]>
-  readonly highlightOpacity: Property<number>
-  readonly shadowMode: Property<number>
-  readonly shadowColor: Property<[number, number, number, number]>
-  readonly shadowOpacity: Property<number>
+declare interface _BevelAndEmboss extends PropertyGroup {
+  readonly style: OneDProperty
+  readonly technique: OneDProperty
+  readonly depth: OneDProperty
+  readonly direction: OneDProperty
+  readonly size: OneDProperty
+  readonly soften: OneDProperty
+  readonly useGlobalLight: OneDProperty
+  readonly angle: OneDProperty
+  readonly altitude: OneDProperty
+  readonly highlightMode: OneDProperty
+  readonly highlightColor: ColorProperty
+  readonly highlightOpacity: OneDProperty
+  readonly shadowMode: OneDProperty
+  readonly shadowColor: ColorProperty
+  readonly shadowOpacity: OneDProperty
 }
 
-declare class _Satin extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
-  readonly angle: Property<number>
-  readonly distance: Property<number>
-  readonly size: Property<number>
-  readonly invert: Property<boolean>
+declare interface _Satin extends PropertyGroup {
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
+  readonly angle: OneDProperty
+  readonly distance: OneDProperty
+  readonly size: OneDProperty
+  readonly invert: OneDProperty
 }
 
-declare class _ColorOverlay extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly color: Property<[number, number, number, number]>
-  readonly opacity: Property<number>
+declare interface _ColorOverlay extends PropertyGroup {
+  readonly blendMode: OneDProperty
+  readonly color: ColorProperty
+  readonly opacity: OneDProperty
 }
 
-declare class _GradientOverlay extends PropertyGroup {
-  readonly blendMode: Property<number>
-  readonly opacity: Property<number>
-  readonly colors: Property<void>
-  readonly gradientSmoothness: Property<number>
-  readonly angle: Property<number>
-  readonly style: Property<number>
-  readonly reverse: Property<boolean>
-  readonly alignWithLayer: Property<boolean>
-  readonly scale: Property<number>
-  readonly offset: Property<[number, number]>
+declare interface _GradientOverlay extends PropertyGroup {
+  readonly blendMode: OneDProperty
+  readonly opacity: OneDProperty
+  readonly colors: NoValueProperty
+  readonly gradientSmoothness: OneDProperty
+  readonly angle: OneDProperty
+  readonly style: OneDProperty
+  readonly reverse: OneDProperty
+  readonly alignWithLayer: OneDProperty
+  readonly scale: OneDProperty
+  readonly offset: TwoDProperty
 }
 
-declare class _Stroke extends PropertyGroup {
-  readonly color: Property<[number, number, number, number]>
-  readonly blendMode: Property<number>
-  readonly size: Property<number>
-  readonly opacity: Property<number>
-  readonly position: Property<number>
+declare interface _Stroke extends PropertyGroup {
+  readonly color: ColorProperty
+  readonly blendMode: OneDProperty
+  readonly size: OneDProperty
+  readonly opacity: OneDProperty
+  readonly position: OneDProperty
 }
 
-declare class _GeometryOptionsGroup extends PropertyGroup {
-  readonly curvature: Property<number>
-  readonly segments: Property<number>
+declare interface _GeometryOptionsGroup extends PropertyGroup {
+  readonly curvature: OneDProperty
+  readonly segments: OneDProperty
 
-  readonly bevelStyle: Property<number>
-  readonly bevelDepth: Property<number>
-  readonly holeBevelDepth: Property<number>
-  readonly extrusionDepth: Property<number>
+  readonly bevelStyle: OneDProperty
+  readonly bevelDepth: OneDProperty
+  readonly holeBevelDepth: OneDProperty
+  readonly extrusionDepth: OneDProperty
 }
 
-declare class _MaterialOptionsGroup extends PropertyGroup {
-  readonly castsShadows: Property<boolean>
-  readonly lightTransmission: Property<number>
-  readonly acceptsShadows: Property<boolean>
-  readonly acceptsLights: Property<boolean>
-  readonly appearsInReflections: Property<boolean>
-  readonly ambient: Property<number>
-  readonly diffuse: Property<number>
-  readonly specularIntensity: Property<number>
-  readonly specularShininess: Property<number>
-  readonly metal: Property<number>
-  readonly reflectionIntensity: Property<number>
-  readonly reflectionSharpness: Property<number>
-  readonly reflectionRolloff: Property<number>
-  readonly transparency: Property<number>
-  readonly transparencyRolloff: Property<number>
-  readonly indexOfRefraction: Property<number>
+declare interface _MaterialOptionsGroup extends PropertyGroup {
+  readonly castsShadows: OneDProperty
+  readonly lightTransmission: OneDProperty
+  readonly acceptsShadows: OneDProperty
+  readonly acceptsLights: OneDProperty
+  readonly appearsInReflections: OneDProperty
+  readonly ambient: OneDProperty
+  readonly diffuse: OneDProperty
+  readonly specularIntensity: OneDProperty
+  readonly specularShininess: OneDProperty
+  readonly metal: OneDProperty
+  readonly reflectionIntensity: OneDProperty
+  readonly reflectionSharpness: OneDProperty
+  readonly reflectionRolloff: OneDProperty
+  readonly transparency: OneDProperty
+  readonly transparencyRolloff: OneDProperty
+  readonly indexOfRefraction: OneDProperty
 }
 
-declare class _AudioGroup extends PropertyGroup {
-  readonly audioLevels: Property<[number, number]>
+declare interface _AudioGroup extends PropertyGroup {
+  readonly audioLevels: TwoDProperty
 }
 
-declare class _TextProperties extends PropertyGroup {
-  readonly sourceText: Property<TextDocument>
+declare interface _TextProperties extends PropertyGroup {
+  readonly sourceText: TextDocumentProperty
   readonly pathOption: _TextPathOptions
   readonly moreOption: _TextMoreOptions
 }
 
-declare class _TextPathOptions extends PropertyGroup {
-  readonly path: Property<number>
+declare interface _TextPathOptions extends PropertyGroup {
+  readonly path: OneDProperty
 }
 
-declare class _TextMoreOptions extends PropertyGroup {
-  readonly anchorPointGrouping: Property<number>
-  readonly groupingAlignment: Property<[number, number]>
-  readonly fillANdStroke: Property<number>
-  readonly interCharacterBlending: Property<number>
+declare interface _TextMoreOptions extends PropertyGroup {
+  readonly anchorPointGrouping: OneDProperty
+  readonly groupingAlignment: TwoDProperty
+  readonly fillANdStroke: OneDProperty
+  readonly interCharacterBlending: OneDProperty
 }

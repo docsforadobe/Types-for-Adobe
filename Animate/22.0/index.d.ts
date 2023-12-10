@@ -1,7 +1,7 @@
-/// <reference path="../../shared/global.d.ts" />
-/// <reference path="../../shared/ScriptUI.d.ts" />
-
 // Docs here: https://help.adobe.com/archive/en_US/flash/cs5/flash_cs5_extending.pdf
+
+/// <reference path="../../shared/JavaScript.d.ts" />
+/// <reference path="../../shared/ScriptUI.d.ts" />
 
 /*** Helpful Interfaces ***/
 declare interface Point {
@@ -206,7 +206,8 @@ declare function setCursor(): void
  * To create a folder on the Macintosh, you could use the following command:
  * FLfile.createFolder("file:///Macintosh/MyApp/config");
  */
-declare class FLfile {
+declare const FLfile: FLfileClass
+declare class FLfileClass {
   /**
    * Copies a file from one location to another. This method returns false if copyURI already exists.
    * @returns A Boolean value of true if successful; false otherwise.
@@ -1011,6 +1012,7 @@ declare class ComponentsPanel {
 /**
  * The Document object represents the Stage. That is, only FLA files are considered documents. To return the Document object for the current document, use fl.getDocumentDOM().
  */
+declare const document: Document
 declare class Document {
   /**
    * A string that is equivalent to the Name field in the Accessibility panel. Screen readers identify objects by reading the name aloud.
@@ -1491,6 +1493,7 @@ declare class Document {
    * @param fileURI A string, expressed as a file:/// URI, that specifies the name of the exported file. If fileURI is empty or not specified, Flash displays the Export Movie dialog box. This parameter is optional.
    * @param bCurrentSettings A Boolean value that, when set to true, causes Flash to use current SWF publish settings. Otherwise, Flash displays the Export Flash Player dialog box. The default is false. This parameter is optional.
    */
+  exportSVG(fileURI: string, unknown: boolean, unknown2: boolean): boolean
   exportSWF(fileURI?: string, bCurrentSettings?: boolean): void
   /**
    * Exports a video from the document and optionally sends it to Adobe Media Encoder to convert the video.

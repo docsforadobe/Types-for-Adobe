@@ -1,0 +1,57 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\justin\.node\corepack\yarn\1.22.19\bin\yarn.js publish
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\ProgramData\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\justin\AppData\Local\Microsoft\WindowsApps;C:\Users\justin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\doctl-1.84.0-windows-amd64
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/-/user/org.couchdb.user:justintaylor-dev: failed to authenticate: Could not authenticate justintaylor-dev: bad password
+      at Request.params.callback [as _callback] (C:\Users\justin\.node\corepack\yarn\1.22.19\lib\cli.js:66145:18)
+      at Request.self.callback (C:\Users\justin\.node\corepack\yarn\1.22.19\lib\cli.js:140890:22)
+      at Request.emit (node:events:513:28)
+      at Request.<anonymous> (C:\Users\justin\.node\corepack\yarn\1.22.19\lib\cli.js:141862:10)
+      at Request.emit (node:events:513:28)
+      at IncomingMessage.<anonymous> (C:\Users\justin\.node\corepack\yarn\1.22.19\lib\cli.js:141784:12)
+      at Object.onceWrapper (node:events:627:28)
+      at IncomingMessage.emit (node:events:525:35)
+      at endReadableNT (node:internal/streams/readable:1358:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "types-for-adobe",
+    "version": "7.0.7",
+    "files": [
+      "AfterEffects",
+      "Animate",
+      "Audition",
+      "InDesign",
+      "Illustrator",
+      "Photoshop",
+      "Premiere",
+      "shared"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/aenhancers/types-for-adobe.git"
+    },
+    "scripts": {
+      "test": "_bin/test.sh"
+    },
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
