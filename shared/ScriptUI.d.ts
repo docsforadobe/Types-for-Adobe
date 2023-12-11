@@ -23,6 +23,8 @@ declare const enum _BrushOrPenType {
 
 type _Bounds = Bounds
 
+type _Margins = Margins | number
+
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
  */
@@ -192,7 +194,7 @@ declare class Window extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * True if the window is expanded.
@@ -582,11 +584,7 @@ declare class ScriptUIGraphics {
    * @param font The font to use. Default is the font value in this object.
    * @param boundingWidth The bounding width.
    */
-  measureString(
-    text: string,
-    font?: ScriptUIFont,
-    boundingWidth?: number,
-  ): Dimension
+  measureString(text: string, font?: ScriptUIFont, boundingWidth?: number): Dimension
 
   /**
    * Adds a given point to the currentPath, and makes it the current drawing position.
@@ -1990,7 +1988,7 @@ declare class Group extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * The layout orientation of children in a container.
@@ -2069,7 +2067,7 @@ declare class Panel extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * The layout orientation of children in a container.
@@ -2173,7 +2171,7 @@ declare class Point extends Array<number> {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  y: number;
+  y: number
 }
 
 /**
@@ -2189,7 +2187,7 @@ declare class Dimension extends Array<number> {
   /**
    * The width in pixels.
    */
-  width: number;
+  width: number
 }
 
 /**
@@ -2235,7 +2233,30 @@ declare class Bounds extends Array<number> {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  y: number;
+  y: number
+}
+
+/**
+ * Defines the number of pixels between the edges of a container and its outermost child elements.
+ * Contains an array [ left, top, right, bottom ] whose elements define the margins between the left edge of a container and its leftmost child element, and so on.
+ */
+declare class Margins extends Array<number> {
+  /**
+   * Defines the number of pixels between the left edge of a container and its leftmost child element.
+   */
+  left: number
+  /**
+   * Defines the number of pixels between the right edge of a container and its rightmost child element.
+   */
+  right: number
+  /**
+   * Defines the number of pixels between the top edge of a container and its top child element.
+   */
+  top: number
+  /**
+   * Defines the number of pixels between the bottom edge of a container and its bottom child element.
+   */
+  bottom: number
 }
 
 /**
