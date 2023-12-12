@@ -2239,6 +2239,11 @@ declare class Bounds extends Array<number> {
 /**
  * Defines the number of pixels between the edges of a container and its outermost child elements.
  * Contains an array [ left, top, right, bottom ] whose elements define the margins between the left edge of a container and its leftmost child element, and so on.
+ *
+ * A Margins object is created when you set an element’s margins property.
+ * An object must contain properties named left, top, right, and bottom.
+ * An array must have values in the order [ left, top, right, bottom ].
+ * You can also set the margins property to a number; all of the array values are then set to this number.
  */
 declare class Margins extends Array<number> {
   /**
