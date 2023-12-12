@@ -38,6 +38,13 @@ type _AlignmentProperty =
       _Alignment.TOP | _Alignment.BOTTOM | _Alignment.FILL | _Alignment.CENTER,
     ]
 
+type _AlignmentPropertyTitleLayout =
+  | ["left" | "right" | "center", "top" | "bottom" | "center"]
+  | [
+      _Alignment.LEFT | _Alignment.RIGHT | _Alignment.CENTER,
+      _Alignment.TOP | _Alignment.BOTTOM | _Alignment.CENTER,
+    ]
+
 type _Justify = "left" | "center" | "right"
 
 type _Orientation = "row" | "column" | "stack"
@@ -2956,7 +2963,7 @@ interface _AddControl {
 }
 
 interface _TitleLayout {
-  alignment?: _AlignmentProperty
+  alignment?: _AlignmentPropertyTitleLayout
   characters?: number
   spacing?: number
   margins?: [number, number, number, number]
