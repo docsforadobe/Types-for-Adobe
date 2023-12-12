@@ -1186,7 +1186,7 @@ declare class ListBox extends _Control {
    * If you set the value to an array for a single-selection list, only the first item in the array is selected.
    * If you set the value to a single item for a multi-selection list, that item is added to the current selection.
    */
-  selection: ListItem
+  selection: ListItem | number
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -2956,7 +2956,7 @@ interface _AddControl {
 }
 
 interface _TitleLayout {
-  alignment?: _Alignment
+  alignment?: _AlignmentProperty
   characters?: number
   spacing?: number
   margins?: [number, number, number, number]
