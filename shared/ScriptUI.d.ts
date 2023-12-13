@@ -391,7 +391,7 @@ declare class Window extends _Control {
    * @param default_ The initial value to be displayed in the text edit field.
    * @param title A string to appear as the title of the dialog. In Windows, this appears in the window’s frame; in Mac OS it appears above the message. The default title string is "Script Prompt".
    */
-  static prompt(prompt: string, default_?: string, title?: string): string
+  static prompt(prompt: string, default_?: string, title?: string): string | null
 
   /**
    * Removes the specified child control from this window’s children array.
