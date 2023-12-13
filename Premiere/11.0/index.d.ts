@@ -224,6 +224,12 @@ declare class TrackItem extends PremiereObject {
    */
   readonly mediaType: MediaType
   readonly duration: Time
+
+  /**
+   *
+   */
+  readonly nodeId: string
+
   /**
    * The start time of the clip, in sequence time.
    */
