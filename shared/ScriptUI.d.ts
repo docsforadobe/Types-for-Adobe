@@ -23,6 +23,8 @@ declare const enum _BrushOrPenType {
 
 type _Bounds = Bounds
 
+type _Margins = Margins | number
+
 type _AlignmentProperty =
   | "left"
   | "right"
@@ -220,7 +222,7 @@ declare class Window extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * True if the window is expanded.
@@ -2039,7 +2041,7 @@ declare class Group extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * The layout orientation of children in a container.
@@ -2118,7 +2120,7 @@ declare class Panel extends _Control {
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * The layout orientation of children in a container.
@@ -2288,6 +2290,34 @@ declare class Bounds extends Array<number> {
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
   y: number
+}
+
+/**
+ * Defines the number of pixels between the edges of a container and its outermost child elements.
+ * Contains an array [ left, top, right, bottom ] whose elements define the margins between the left edge of a container and its leftmost child element, and so on.
+ *
+ * A Margins object is created when you set an element’s margins property.
+ * An object must contain properties named left, top, right, and bottom.
+ * An array must have values in the order [ left, top, right, bottom ].
+ * You can also set the margins property to a number; all of the array values are then set to this number.
+ */
+declare class Margins extends Array<number> {
+  /**
+   * Defines the number of pixels between the left edge of a container and its leftmost child element.
+   */
+  left: number
+  /**
+   * Defines the number of pixels between the right edge of a container and its rightmost child element.
+   */
+  right: number
+  /**
+   * Defines the number of pixels between the top edge of a container and its top child element.
+   */
+  top: number
+  /**
+   * Defines the number of pixels between the bottom edge of a container and its bottom child element.
+   */
+  bottom: number
 }
 
 /**
