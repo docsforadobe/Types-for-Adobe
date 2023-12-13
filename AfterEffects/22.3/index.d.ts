@@ -1969,6 +1969,9 @@ type AnyProperty =
   | NoValueProperty
   | ColorProperty
   | OneDProperty
+  | TwoDProperty
+  | ThreeDProperty
+  | TwoDOrThreeDProperty
   | ShapeProperty
   | MarkerValueProperty
   | TextDocumentProperty
