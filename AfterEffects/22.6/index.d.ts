@@ -623,6 +623,13 @@ declare enum RQItemStatus {
   WILL_CONTINUE = 3012,
 }
 
+declare enum SceneEditDetectionMode {
+  MARKERS = 10012,
+  SPLIT = 10013,
+  SPLIT_PRECOMP = 10014,
+  NONE = 10015,
+}
+
 declare enum TimeDisplayType {
   FRAMES = 2013,
   TIMECODE = 2012,
@@ -1461,6 +1468,9 @@ declare class Layer extends PropertyGroup {
 
   /** Copies the layer to the top (beginning) of another composition. */
   copyToComp(intoComp: CompItem): void
+
+  /** Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes */
+  doSceneEditDetection(applyOptions: SceneEditDetectionMode): number[];
 
   /** Reports whether this layer will be active at a specified time. */
   activeAtTime(time: number): boolean
