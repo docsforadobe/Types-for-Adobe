@@ -2178,7 +2178,7 @@ declare class Tab extends Panel {
  * A container for selectable tab containers.
  * Differs from a panel element in that it can contain only tab elements as direct children.
  */
-declare class TabbedPanel extends Panel {
+declare class TabbedPanel extends _Control {
   /**
    * An array of child elements.
    */
@@ -2196,6 +2196,14 @@ declare class TabbedPanel extends Panel {
 
   title: string
   titleLayout: _TitleLayout
+
+  /**
+   * Adds a tab to this tabbed panel.
+   * Returns the created tab control object.
+   *
+   * Note: `bounds` is not used; pass `undefined`
+   */
+  add(type: "tab", bounds?: undefined, text?: string, properties?: _AddControlProperties): Tab
 
   /**
    * An event-handler callback function, called when the selected tab has changed.
@@ -2968,15 +2976,6 @@ interface _AddControl {
     text?: string,
     properties?: _AddControlPropertiesStaticText,
   ): StaticText
-
-  /**
-   */
-  (
-    type: "tab",
-    bounds: _Bounds,
-    text?: string,
-    properties?: _AddControlProperties
-  ): Tab
 
   /**
    */
