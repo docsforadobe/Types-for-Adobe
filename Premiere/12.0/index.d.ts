@@ -169,6 +169,11 @@ declare class SequenceCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [index: number]: Sequence
 }
 
 /**

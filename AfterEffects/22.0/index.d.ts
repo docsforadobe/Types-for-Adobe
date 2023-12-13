@@ -21,6 +21,7 @@ declare interface _AppVersion {
   CC2017: 14.0
   CC2018: 15.0
   CC2019: 16.0
+  CC2020: 17.0
 }
 
 declare const enum _CommandID {
@@ -813,6 +814,14 @@ declare class Application {
   /** Sets memory usage limits as in the Memory & Cache preferences area. */
   setMemoryUsageLimits(imageCachePercentage: number, maximumMemoryPercentage: number): void
 
+  /**
+   * Set the Multi-Frame Rendering configuration for the next render
+   *
+   * @param use_mfr Set to `true` to enable Multi-Frame Rendering.
+   * @param max_cpu_perc Value from 1-100 representing the maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100.
+   */
+  setMultiFrameRenderingConfig(use_mfr: boolean, max_cpu_percent: number): void;
+
   /** Sets whether preferences are saved when the application is quit. */
   setSavePreferencesOnQuit(doSave: boolean): void
 
@@ -869,6 +878,9 @@ declare class AVItem extends Item {
 
   /** When true, the item cannot be found or is a placeholder. */
   readonly footageMissing: boolean
+
+  /** True if the AVItem can be used as an alternate source when calling Property.setAlternateSource */
+  readonly isMediaReplacementCompatible: boolean
 
   /** The width of the item. */
   width: number
@@ -1033,6 +1045,15 @@ declare class AVLayer extends Layer {
     extents: boolean,
   ): { top: number; left: number; width: number; height: number }
 
+  /** Adds the layer to the Essential Graphics Panel for the specified composition. */
+  addToMotionGraphicsTemplate(comp: CompItem): boolean
+
+  /** Adds the layer to the Essential Graphics Panel for the specified composition. */
+  addToMotionGraphicsTemplateAs(comp: CompItem, name: string): boolean
+
+  /** True if the layer can be added to the EGP for the specified composition */
+  canAddToMotionGraphicsTemplate(comp: CompItem): boolean
+
   /** Shortcuts */
   readonly timeRemap: OneDProperty
   readonly mask: MaskPropertyGroup
@@ -1137,6 +1158,9 @@ declare class CompItem extends AVItem {
 
   /** When true, indicates that the composition uses drop-frame timecode. */
   dropFrame: boolean
+
+  /** The frame value of the beginning of the composition. */
+  displayStartFrame: number
 
   /** Creates and returns a duplicate of this composition. */
   duplicate(): CompItem
@@ -1365,6 +1389,9 @@ declare class KeyframeEase {
 }
 
 declare class Layer extends PropertyGroup {
+  /** The unique and persistent identification number. */
+  readonly id: number
+
   /** The index position of the layer. */
   readonly index: number
 
@@ -1821,6 +1848,9 @@ declare class Project {
   /** Returns an array containing the name strings for all team projects available for the current user. Archived Team Projects are not included. */
   listTeamProjects(): string[]
 
+  /** Retrieves a layer by its Layer ID */
+  layerByID(id: number): Layer | null
+
   /** Checks whether specified team project is currently open. */
   isTeamProjectOpen(teamProjectName: string): boolean
 
@@ -1991,6 +2021,20 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   /** The original multidimensional property for this separated follower. */
   readonly separationLeader: Property<TwoDProperty | ThreeDProperty>
 
+  /** When true, the property is the Menu property of a Dropdown Menu Control effect. */
+  readonly isDropdownEffect: boolean
+
+  /** The alternate render source for Media Replacement */
+  readonly alternateSource: AVItem
+
+  /** True if the property allows Media Replacement */
+  readonly canSetAlternateSource: boolean
+
+  /**
+   * Instance property on an Essential Property object which returns the original source Property which was used to create the Essential Property.
+   */
+  readonly essentialPropertySource: Property<T> | AVLayer | null
+
   /** The expression string for this property. */
   expression: string
 
@@ -2140,6 +2184,12 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
 
   /** Test whether or not the property can be added to the Essential Graphics panel for the specified composition. */
   canAddToMotionGraphicsTemplate(comp: CompItem): boolean
+
+  /** Sets parameters for a Dropdown Menu Control’s Menu Property. */
+  setPropertyParameters(items: string[]): Property<OneDProperty>
+
+  /** Set the alternate source for this property. */
+  setAlternateSource(newSource: AVItem): void
 }
 
 declare class PropertyBase {
@@ -2234,6 +2284,9 @@ declare class RenderQueue {
   /** The collection of items in the render queue. */
   readonly items: RQItemCollection
 
+  /** Read or write the Notify property for the entire Render Queue */
+  queueNotify: boolean;
+
   /** Show or hides the Render Queue panel. */
   showWindow(doShow: boolean): void
 
@@ -2275,6 +2328,9 @@ declare class RenderQueueItem {
 
   /** The current rendering status of the item. */
   readonly status: RQItemStatus
+
+  /** Sets the Notify checkbox for each individual item in the Render Queue */
+  queueItemNotify: boolean;
 
   /** When true, this item is rendered when the queue is started. */
   render: boolean

@@ -21,6 +21,25 @@ type SampleRateOption = 48000 | 96000
 type BitsPerSampleOption = 16 | 24
 type SDKEventType = "warning" | "info" | "error"
 
+declare enum TIME_FORMAT {
+  TIMEDISPLAY_24Timecode = 100,
+  TIMEDISPLAY_25Timecode = 101,
+  TIMEDISPLAY_2997DropTimecode = 102,
+  TIMEDISPLAY_2997NonDropTimecode = 103,
+  TIMEDISPLAY_30Timecode = 104,
+  TIMEDISPLAY_50Timecode = 105,
+  TIMEDISPLAY_5994DropTimecode = 106,
+  TIMEDISPLAY_5994NonDropTimecode = 107,
+  TIMEDISPLAY_60Timecode = 108,
+  TIMEDISPLAY_Frames = 109,
+  TIMEDISPLAY_23976Timecode = 110,
+  TIMEDISPLAY_16mmFeetFrames = 111,
+  TIMEDISPLAY_35mmFeetFrames = 112,
+  TIMEDISPLAY_48Timecode = 113,
+  TIMEDISPLAY_AudioSamplesTimecode = 200,
+  TIMEDISPLAY_AudioMsTimecode = 201,
+}
+
 interface $ {
   _PPP_: any
 }
@@ -554,6 +573,11 @@ declare class SequenceCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [index: number]: Sequence
 }
 
 /**
@@ -773,7 +797,7 @@ declare class Time {
   /**
    *
    */
-  getFormatted(Time: Time, whichFormat: number): String
+  getFormatted(Time: Time, timeFormat: TIME_FORMAT): String
 
   /**
    *
@@ -846,7 +870,10 @@ declare class Project {
   readonly name: string
 
   /**
+   * Warning: in MacOS Ventura, fetching the project path can throw an error during shutdown
+   * Bug ID:  DVAPR-4242199
    *
+   * Workaround: put any path checks in a try/catch block if checking may coincide with shutdown
    */
   readonly path: string
 
@@ -878,7 +905,7 @@ declare class Project {
   /**
    *
    */
-  createNewSequence(sequenceName: string, placeholderID: string): void
+  createNewSequence(sequenceName: string, placeholderID: string): Sequence
 
   /**
    *
@@ -1019,7 +1046,7 @@ declare class Project {
     newSequenceName: string,
     projectItems: Array<ProjectItem>,
     targetBin: ProjectItem,
-  ): void
+  ): Sequence
 
   /**
    *
@@ -1083,9 +1110,9 @@ declare class Track {
   bind(eventName: string, function_: any): void
 
   /**
-   *
+   * Inserts a clip relative to the time of the last item on that track
    */
-  insertClip(clipProjectItem: ProjectItem, time: number): void
+  insertClip(clipProjectItem: ProjectItem, time: number): boolean
 
   /**
    *
@@ -1095,7 +1122,12 @@ declare class Track {
   /**
    *
    */
-  overwriteClip(clipProjectItem: ProjectItem, time: number): void
+  isLocked(): boolean
+
+  /**
+   * Overwrites a clip at an absolute time on a track
+   */
+  overwriteClip(clipProjectItem: ProjectItem, time: number | Time): boolean
 
   /**
    *
@@ -1105,17 +1137,22 @@ declare class Track {
   /**
    *
    */
+  setLocked(arg1?: number): void
+
+  /**
+   *
+   */
   setTimeout(eventName: string, function_: any, milliseconds: number): void
 
   /**
    *
    */
-  isTargeted(): Boolean
+  isTargeted(): boolean
 
   /**
    *
    */
-  setTargeted(isTargeted: Boolean, shouldBroadcast: Boolean): Boolean
+  setTargeted(isTargeted: boolean, shouldBroadcast: boolean): boolean
 
   /**
    *
@@ -1126,6 +1163,36 @@ declare class Track {
 /**
  *
  */
+
+declare class ComponentCollection {
+  /**Number of items
+   *
+   */
+  readonly numItems: number
+  /**Number of items
+   *
+   */
+  readonly length: number;
+
+  /**
+   *
+   */
+  [index: number]: Component
+}
+declare class Component {
+  /**
+   *
+   */
+  readonly displayName: string
+  /**
+   *
+   */
+  readonly matchName: string
+  /**
+   *
+   */
+  readonly properties: ComponentParamCollection
+}
 declare class TrackItem {
   /**
    *
@@ -1163,6 +1230,11 @@ declare class TrackItem {
   name: string
 
   /**
+   * @version 22.0
+   */
+  disabled: boolean
+
+  /**
    *
    */
   projectItem: ProjectItem
@@ -1195,7 +1267,7 @@ declare class TrackItem {
   /**
    *
    */
-  isSpeedReversed(): boolean
+  isSpeedReversed(): 0 | 1
 
   /**
    *
@@ -1220,7 +1292,7 @@ declare class TrackItem {
   /**
    *
    */
-  getMGTComponent(): any
+  getMGTComponent(): Component
 
   /**
    *
@@ -1270,7 +1342,7 @@ declare class ProjectItem {
   /**
    *
    */
-  readonly videoComponents: any
+  videoComponents: () => ComponentCollection | undefined
 
   /**
    *
@@ -1313,9 +1385,9 @@ declare class ProjectItem {
   createSmartBin(name: string, query: string): void
 
   /**
-  	 * 	Returns whether the projectItem represents a sequence.
-  	 	@returns true, if projectItem is a sequence.
-  	*/
+      * 	Returns whether the projectItem represents a sequence.
+        @returns true, if projectItem is a sequence.
+     */
   isSequence(): boolean
 
   /**
@@ -1426,6 +1498,18 @@ declare class ProjectItem {
   setStartTime(arg1: object): void
 
   /**
+   * Sets the in point of the clip.
+   * @param seconds Time of in point.
+   */
+  setInPoint(seconds: Time | number, p2: number): void
+
+  /**
+   * Sets the out point of the clip.
+   * @param seconds Time of out point.
+   */
+  setOutPoint(seconds: Time | number, p2: number): void
+
+  /**
    *
    */
   setTimeout(eventName: string, function_: any, milliseconds: number): void
@@ -1490,6 +1574,11 @@ declare class ProjectCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [index: number]: Project
 }
 
 /**
@@ -1722,6 +1811,14 @@ declare class RemoteProduction {
   unbind(eventName: string): void
 }
 
+type EncoderEvent =
+  | "onEncoderJobCanceled"
+  | "onEncoderJobQueued"
+  | "onEncoderJobComplete"
+  | "onEncoderJobError"
+  | "onEncoderJobProgress"
+  | "onEncoderLaunched"
+
 /**
  *
  */
@@ -1744,7 +1841,7 @@ declare class Encoder {
   /**
    *
    */
-  bind(eventName: string, function_: any): void
+  bind(eventName: EncoderEvent, function_: any): void
 
   /**
    *
@@ -1823,35 +1920,12 @@ declare class Encoder {
 /**
  *
  */
-declare class Properties {
-  /**
-   *
-   */
+declare class ComponentParamCollection {
   bind(eventName: string, function_: any): void
-
-  /**
-   *
-   */
   clearProperty(propertyKey: string): void
-
-  /**
-   *
-   */
   doesPropertyExist(propertyKey: string): boolean
-
-  /**
-   *
-   */
   getProperty(propertyKey: string): any
-
-  /**
-   *
-   */
   isPropertyReadOnly(propertyKey: string): boolean
-
-  /**
-   *
-   */
   setProperty(
     propertyKey: string,
     propertyValue: any,
@@ -1859,15 +1933,34 @@ declare class Properties {
     allowCreateNewProperty: boolean,
   ): void
 
-  /**
-   *
-   */
   setTimeout(eventName: string, function_: any, milliseconds: number): void
-
-  /**
-   *
-   */
   unbind(eventName: string): void
+  [index: number]: ComponentParam
+  getParamForDisplayName(paramName: string): ComponentParam | null
+}
+
+declare class ComponentParam {
+  readonly displayName: string
+  addKey(): boolean
+  areKeyframesSupported(): boolean
+  findNearestKey(): object
+  findNextKey(): object
+  findPreviousKey(): object
+  getColorValue(): any[]
+  getKeys(): any[]
+  getValue(): any
+  getValueAtKey(): any
+  getValueAtTime(): any
+  isEmpty(): boolean
+  isTimeVarying(): boolean
+  keyExistsAtTime(): boolean
+  removeKey(): boolean
+  removeKeyRange(start: Time, end: Time): boolean
+  setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
+  setInterpolationTypeAtKey(): boolean
+  setTimeVarying(p0: boolean, p1: boolean): boolean
+  setValue(value: any, updateUI?: boolean): boolean
+  setValueAtKey(): boolean
 }
 /**
  *
@@ -1903,6 +1996,18 @@ declare class PrProduction {
    */
   moveToTrash(projectPath: String, suppressUI: Boolean, saveProject: Boolean): Boolean
 }
+
+type ApplicationEvent =
+  | "onSourceClipSelectedInProjectPanel"
+  | "onSequenceActivated"
+  | "onActiveSequenceChanged"
+  | "onActiveSequenceSelectionChanged"
+  | "onActiveSequenceTrackItemAdded"
+  | "onActiveSequenceTrackItemRemoved"
+  | "onActiveSequenceStructureChanged"
+  | "onProjectChanged"
+  | "onProjectEndDrop"
+
 /**
  *
  */
@@ -1970,7 +2075,7 @@ declare class Application {
   /**
    *
    */
-  readonly properties: Properties
+  readonly properties: ComponentParamCollection
 
   /**
    *
@@ -1990,7 +2095,7 @@ declare class Application {
   /**
    *
    */
-  bind(eventName: string, function_: any): void
+  bind(eventName: ApplicationEvent, function_: Function): void
 
   /**
    *
@@ -2162,7 +2267,7 @@ declare class MarkerCollection {
   /**
    *
    */
-  createMarker(time: number): Marker
+  createMarker(start: number, name: string, duration: number, comments: string): Marker
 
   /**
    *
@@ -2198,6 +2303,11 @@ declare class MarkerCollection {
    *
    */
   unbind(eventName: string): void
+
+  /**
+   *
+   */
+  [index: number]: Marker
 }
 
 /**

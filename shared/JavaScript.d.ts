@@ -2620,6 +2620,25 @@ interface XML {
  */
 interface XMLList {}
 declare const XMLList: XMLList
+type UnitNameAbbrev = 'in' | 'ft' | 'yd'  | 'mi'  | 'mm' | 'cm' | 'm' | 'km' |
+                      'pt' | 'pc' | 'tpt' | 'tpc' | 'ci' | 'px' | '%'
+
+type UnitName = UnitNameAbbrev |
+                'inch' | 'inches' |
+                'foot' | 'feet' |
+                'yard' | 'yards' |
+                'mile' | 'miles' |
+                'millimeter' | 'millimeters' |
+                'centimeter' | 'centimeters' |
+                'meter' | 'meters' |
+                'kilometer' | 'kilometers' |
+                'point' | 'points' |
+                'pica' | 'picas' |
+                'traditional point' | 'traditional points' |
+                'traditional pica' | 'traditional picas' |
+                'cicero' | 'ciceros' |
+                'pixel' | 'pixels' |
+                'percent' | 'percent'
 
 interface UnitValueConstructor {
   readonly prototype: UnitValue
@@ -2627,8 +2646,8 @@ interface UnitValueConstructor {
   /**
    * Creates a new UnitValue object.
    */
-  new (value: string | UnitValue): UnitValue
-  (value: string | UnitValue): UnitValue
+  new (value: string | number | UnitValue, unitName?: UnitName): UnitValue
+  (value: string | number | UnitValue, unitName?: UnitName): UnitValue
 
   /**
    * The base unit for all conversions.
@@ -2650,7 +2669,7 @@ interface UnitValue {
   /**
    * The unit name.
    */
-  readonly type: string
+  readonly type: UnitNameAbbrev | '?'
 
   /**
    * The numeric value.
@@ -2661,13 +2680,13 @@ interface UnitValue {
    * Returns this instance as a different unit.
    * @param unitName The unit name.
    */
-  as(unitName: string): UnitValue
+  as(unitName: UnitNameAbbrev): UnitValue
 
   /**
    * Converts this instance to a different unit.
    * @param unitName The unit name.
    */
-  convert(unitName: string): any
+  convert(unitName: UnitNameAbbrev): boolean
 }
 
 /**

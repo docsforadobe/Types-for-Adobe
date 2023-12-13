@@ -1,4 +1,5 @@
 /// <reference path="JavaScript.d.ts" />
+/// <reference path="XMPScript.d.ts" />
 
 /**
  * The global BridgeTalk object.
@@ -128,7 +129,7 @@ declare function parseInt(text: string, base?: number): number
  * @param default_ The default text to preset the edit field with
  * @param title The title of the dialog;
  */
-declare function prompt(prompt: string, default_?: string, title?: string): string
+declare function prompt(prompt: string, default_?: string, title?: string): string | null
 
 /**
  * Defines the default XML namespace.
