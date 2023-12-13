@@ -889,7 +889,11 @@ declare class Component extends PremiereObject {
 }
 
 declare class ComponentParamCollection extends PremiereObject {
+  /** Number of items */
   readonly numItems: number;
+
+  /** Number of items */
+  readonly length: number;
 
   // WARNING! This functionality is only assumed to exist!
   [n: number]: ComponentParam
