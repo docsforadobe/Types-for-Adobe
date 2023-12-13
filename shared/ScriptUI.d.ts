@@ -2971,7 +2971,12 @@ interface _AddControl {
 
   /**
    */
-  (type: "tab", bounds: _Bounds, text?: string[], properties?: _AddControlProperties): Tab
+  (
+    type: "tab",
+    bounds: _Bounds,
+    text?: string,
+    properties?: _AddControlProperties
+  ): Tab
 
   /**
    */
