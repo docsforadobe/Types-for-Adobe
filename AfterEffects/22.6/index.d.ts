@@ -2640,6 +2640,26 @@ declare class Viewer {
 
   activeViewIndex: number
 
+  /** When true, the viewer is at its maximized size. */
+  maximized: boolean
+
+  /** Moves the viewer to front and places focus on it. */
+  setActive(): boolean
+}
+
+declare class ViewOptions {
+  /** The state of the Channels menu */
+  channels: ChannelType
+
+  /** When true, checkerboards are on */
+  checkerboards: boolean
+
+  /** Current exposure setting */
+  exposure: number
+
+  /** The state of the Fast Previews menu */
+  fastPreview: FastPreviewType
+
   /** When true, indicates guides are locked in the viewer. */
   guidesLocked: boolean
 
@@ -2652,18 +2672,7 @@ declare class Viewer {
   /** When true, indicates rulers are shown in the viewer. */
   rulers: boolean
 
-  /** When true, the viewer is at its maximized size. */
-  maximized: boolean
-
-  /** Moves the viewer to front and places focus on it. */
-  setActive(): boolean
-}
-
-declare class ViewOptions {
-  channels: ChannelType
-  checkerboards: boolean
-  exposure: number
-  fastPreview: FastPreviewType
+  /** The viewer Zoom value */
   zoom: number
 }
 
