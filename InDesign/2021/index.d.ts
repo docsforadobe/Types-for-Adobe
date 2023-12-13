@@ -35260,7 +35260,7 @@ declare class Polygons {
    * @param reference The reference object. Note: Required when the at parameter is before or after.
    * @param withProperties Initial values for properties of the new Polygon
    */
-  add(layer?: Layer, numberOfSides: number, insetPercentage: number, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Polygon
+  add(layer: Layer, numberOfSides: number, insetPercentage: number, at?: LocationOptions, reference?: Document | Spread | MasterSpread | Page | Layer | PageItem, withProperties?: object): Polygon
 
   /**
    * Returns any Polygon in the collection.
@@ -91948,4 +91948,3 @@ declare class XMLRuleMatchData {
    */
   toSpecifier(): string
 }
-
