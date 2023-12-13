@@ -1442,12 +1442,12 @@ declare class Layer extends PropertyGroup {
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: Property<TwoDType | ThreeDType>
-  readonly position: Property<TwoDType | ThreeDType>
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: Property<TwoDType | ThreeDType>
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
@@ -1902,6 +1902,7 @@ type ColorProperty = Property<ColorType>
 type OneDProperty = Property<OneDType>
 type TwoDProperty = Property<TwoDType>
 type ThreeDProperty = Property<ThreeDType>
+type TwoDOrThreeDProperty = Property<TwoDType | ThreeDType>
 type ShapeProperty = Property<ShapePropertyType>
 type MarkerValueProperty = Property<MarkerValueType>
 type TextDocumentProperty = Property<TextDocumentType>
@@ -1971,7 +1972,7 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   readonly separationDimension: number
 
   /** The original multidimensional property for this separated follower. */
-  readonly separationLeader: Property<TwoDProperty | ThreeDProperty>
+  readonly separationLeader: TwoDOrThreeDProperty
 
   /** The expression string for this property. */
   expression: string
@@ -2566,12 +2567,12 @@ declare class ViewOptions {
  * Properties for Shortcuts
  */
 declare interface _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: Property<TwoDType | ThreeDType>
-  readonly position: Property<TwoDType | ThreeDType>
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: Property<TwoDType | ThreeDType>
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty

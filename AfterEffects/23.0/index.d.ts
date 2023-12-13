@@ -827,7 +827,7 @@ declare class Application {
    * @param use_mfr Set to `true` to enable Multi-Frame Rendering.
    * @param max_cpu_perc Value from 1-100 representing the maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100.
    */
-    setMultiFrameRenderingConfig(use_mfr: boolean, max_cpu_percent: number): void;
+  setMultiFrameRenderingConfig(use_mfr: boolean, max_cpu_percent: number): void;
 
   /** Sets whether preferences are saved when the application is quit. */
   setSavePreferencesOnQuit(doSave: boolean): void
@@ -1512,12 +1512,12 @@ declare class Layer extends PropertyGroup {
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: TwoDProperty | ThreeDProperty
-  readonly position: TwoDProperty | ThreeDProperty
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: TwoDProperty | ThreeDProperty
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
@@ -1975,6 +1975,7 @@ type ColorProperty = Property<ColorType>
 type OneDProperty = Property<OneDType>
 type TwoDProperty = Property<TwoDType>
 type ThreeDProperty = Property<ThreeDType>
+type TwoDOrThreeDProperty = Property<TwoDType | ThreeDType>
 type ShapeProperty = Property<ShapePropertyType>
 type MarkerValueProperty = Property<MarkerValueType>
 type TextDocumentProperty = Property<TextDocumentType>
@@ -2044,7 +2045,7 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   readonly separationDimension: number
 
   /** The original multidimensional property for this separated follower. */
-  readonly separationLeader: Property<TwoDProperty | ThreeDProperty>
+  readonly separationLeader: TwoDOrThreeDProperty
 
   /** When true, the property is the Menu property of a Dropdown Menu Control effect. */
   readonly isDropdownEffect: boolean
@@ -2695,12 +2696,12 @@ declare class ViewOptions {
  * Properties for Shortcuts
  */
 declare interface _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: TwoDProperty | ThreeDProperty
-  readonly position: TwoDProperty | ThreeDProperty
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: TwoDProperty | ThreeDProperty
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty

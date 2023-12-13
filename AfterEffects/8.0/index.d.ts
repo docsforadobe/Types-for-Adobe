@@ -1244,12 +1244,12 @@ declare class Layer extends PropertyGroup {
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: Property<TwoDType | ThreeDType>
-  readonly position: Property<TwoDType | ThreeDType>
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: Property<TwoDType | ThreeDType>
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
@@ -1556,6 +1556,7 @@ type ColorProperty = Property<ColorType>
 type OneDProperty = Property<OneDType>
 type TwoDProperty = Property<TwoDType>
 type ThreeDProperty = Property<ThreeDType>
+type TwoDOrThreeDProperty = Property<TwoDType | ThreeDType>
 type ShapeProperty = Property<ShapePropertyType>
 type MarkerValueProperty = Property<MarkerValueType>
 type TextDocumentProperty = Property<TextDocumentType>
@@ -2031,12 +2032,12 @@ declare class TextLayer extends AVLayer {
  * Properties for Shortcuts
  */
 declare interface _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: Property<TwoDType | ThreeDType>
-  readonly position: Property<TwoDType | ThreeDType>
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: Property<TwoDType | ThreeDType>
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
