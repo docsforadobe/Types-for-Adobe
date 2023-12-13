@@ -1388,6 +1388,9 @@ declare class KeyframeEase {
 }
 
 declare class Layer extends PropertyGroup {
+  /** The unique and persistent identification number. */
+  readonly id: number
+
   /** The index position of the layer. */
   readonly index: number
 
