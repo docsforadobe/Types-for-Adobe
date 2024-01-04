@@ -1641,7 +1641,7 @@ declare class Project {
   item(index: number): _ItemClasses
 
   /** Retrieves an item by its Item ID */
-  itemById(id: number): _ItemClasses
+  itemByID(id: number): _ItemClasses
 
   /** Consolidates all footage in the project. */
   consolidateFootage(): number
