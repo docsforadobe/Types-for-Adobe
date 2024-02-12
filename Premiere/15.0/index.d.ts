@@ -2205,6 +2205,11 @@ declare class Application {
   /**
    *
    */
+  getCurrentProjectViewSelection(): Array<ProjectItem>
+  
+  /**
+   *
+   */
   setProjectViewSelection(projectItems: Array<ProjectItem>, viewID: String): void
 
   /**
