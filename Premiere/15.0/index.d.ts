@@ -1990,6 +1990,11 @@ declare class PrProduction {
   /**
    *
    */
+  path: string
+
+  /**
+   *
+   */
   close(): void
 
   /**
