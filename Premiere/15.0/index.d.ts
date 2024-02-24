@@ -193,7 +193,7 @@ declare class Sequence {
   exportAsFinalCutProXML(exportPath: string, suppressUI?: number): boolean
 
   /**
-   * Premiere Pro exports the sequence immediately.
+   * Premiere Pro exports the sequence immediately. WARNING: This method is not synchronous, will return before render job is completed.
    * @param outputFilePath The output file path (with name).
    * @param presetPath The .epr file to use.
    * @param workAreaType Optional work area specifier.
