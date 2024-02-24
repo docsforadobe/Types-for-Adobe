@@ -2,11 +2,11 @@
 
 declare enum _Alignment {
   TOP = 1,
-  BOTTOM,
-  LEFT,
-  RIGHT,
-  FILL,
-  CENTER,
+  BOTTOM = 2,
+  LEFT = 3,
+  RIGHT = 4,
+  FILL = 5,
+  CENTER = 6,
 }
 
 declare enum _FontStyle {
@@ -22,6 +22,37 @@ declare const enum _BrushOrPenType {
 }
 
 type _Bounds = Bounds
+type _Dimension = Dimension
+
+type _Margins = Margins | number
+
+type _AlignmentProperty =
+  | "left"
+  | "right"
+  | "fill"
+  | "center"
+  | "top"
+  | "bottom"
+  | "fill"
+  | "center"
+  | ["left" | "right" | "fill" | "center", "top" | "bottom" | "fill" | "center"]
+  | [
+      _Alignment.LEFT | _Alignment.RIGHT | _Alignment.FILL | _Alignment.CENTER,
+      _Alignment.TOP | _Alignment.BOTTOM | _Alignment.FILL | _Alignment.CENTER,
+    ]
+
+type _AlignmentPropertyTitleLayout =
+  | ["left" | "right" | "center", "top" | "bottom" | "center"]
+  | [
+      _Alignment.LEFT | _Alignment.RIGHT | _Alignment.CENTER,
+      _Alignment.TOP | _Alignment.BOTTOM | _Alignment.CENTER,
+    ]
+
+type _Justify = "left" | "center" | "right"
+
+type _Orientation = "row" | "column" | "stack"
+
+type _Truncate = "middle" | "end" | "none"
 
 /**
  * A global class containing central information about ScriptUI. Not instantiable.
@@ -124,7 +155,7 @@ declare class Window extends _Control {
    * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
    * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
    */
-  alignChildren: string
+  alignChildren: _AlignmentProperty
 
   /**
    * For windows of type dialog, the UI element to notify when the user presses a cancellation key combination.
@@ -164,7 +195,7 @@ declare class Window extends _Control {
   /**
    * The size and location of the window's frame in screen coordinates.
    */
-  readonly frameSize: Dimension
+  readonly frameSize: _Dimension
 
   /**
    * Deprecated. Use ScriptUI.frameworkName instead.
@@ -180,19 +211,19 @@ declare class Window extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The layout manager for this container.
    * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
    */
-  layout: LayoutManager
+  layout: AutoLayoutManager
 
   /**
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * True if the window is expanded.
@@ -214,7 +245,7 @@ declare class Window extends _Control {
    * The layout orientation of children in a container.
    * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
    */
-  orientation: string
+  orientation: _Orientation
 
   /**
    * The keypress combination that invokes this element's onShortcutKey() callback.
@@ -246,7 +277,7 @@ declare class Window extends _Control {
    * @param properties An object containing creation-only properties.
    */
   constructor(
-    type: string,
+    type: "dialog" | "palette" | "window",
     title?: string,
     bounds?: _Bounds,
     properties?: _AddControlPropertiesWindow,
@@ -363,7 +394,7 @@ declare class Window extends _Control {
    * @param default_ The initial value to be displayed in the text edit field.
    * @param title A string to appear as the title of the dialog. In Windows, this appears in the window’s frame; in Mac OS it appears above the message. The default title string is "Script Prompt".
    */
-  static prompt(prompt: string, default_?: string, title?: string): string
+  static prompt(prompt: string, default_?: string, title?: string): string | null
 
   /**
    * Removes the specified child control from this window’s children array.
@@ -377,7 +408,7 @@ declare class Window extends _Control {
  * Controls the automatic layout behavior for a window or container.
  * The subclass AutoLayoutManager implements the default automatic layout behavior.
  */
-declare class LayoutManager {
+declare class AutoLayoutManager {
   /**
    * Invokes the automatic layout behavior for the managed container.
    * Adjusts sizes and positions of the child elements of this window or container according to the placement and alignment property values in the parent and children.
@@ -582,11 +613,7 @@ declare class ScriptUIGraphics {
    * @param font The font to use. Default is the font value in this object.
    * @param boundingWidth The bounding width.
    */
-  measureString(
-    text: string,
-    font?: ScriptUIFont,
-    boundingWidth?: number,
-  ): Dimension
+  measureString(text: string, font?: ScriptUIFont, boundingWidth?: number): _Dimension
 
   /**
    * Adds a given point to the currentPath, and makes it the current drawing position.
@@ -755,7 +782,7 @@ declare class ScriptUIImage {
   /**
    * The image size in pixels.
    */
-  readonly size: Dimension
+  readonly size: _Dimension
 }
 
 /**
@@ -787,7 +814,7 @@ declare class StaticText extends _Control {
    * The text justification style.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -848,7 +875,7 @@ declare class Button extends _Control {
    * The text justification style.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -933,6 +960,9 @@ declare class IconButton extends _Control {
    */
   shortcutKey: string
 
+  title: string
+  titleLayout: _TitleLayout
+
   /**
    * Sends a notification message, simulating the specified user interaction event.
    * @param eventName The name of the control event handler to call. One of: onClick, onChange, onChanging. By default, simulates the onChange event for an edittext control, an onClick event for controls that support that event.
@@ -999,6 +1029,9 @@ declare class Image extends _Control {
    */
   shortcutKey: string
 
+  title: string
+  titleLayout: _TitleLayout
+
   /**
    * An event-handler callback function, called when the element acquires the keyboard focus.
    * Called when the user gives the control the keyboard focus by clicking it or tabbing into it.
@@ -1054,7 +1087,7 @@ declare class EditText extends _Control {
    * The text justification style.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1149,7 +1182,7 @@ declare class ListBox extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: Dimension
+  itemSize: _Dimension
 
   /**
    * The array of choice items displayed in the list.
@@ -1163,7 +1196,7 @@ declare class ListBox extends _Control {
    * If you set the value to an array for a single-selection list, only the first item in the array is selected.
    * If you set the value to a single item for a multi-selection list, that item is added to the current selection.
    */
-  selection: ListItem
+  selection: ListItem | number
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1175,8 +1208,9 @@ declare class ListBox extends _Control {
    * Returns the item control object. If this is a multi-column list box, each added ListItem represents one selectable row.Its text and image values specify the label in the first column, and the subitems property specifies the labels in the additional columns.
    * @param type The type of the child element, the string "item".
    * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
    */
-  add(type: string, text?: string): ListItem
+  add(type: "item", text?: string, index?: number): ListItem
 
   /**
    * Retrieves an item object from the list that has a given text label.
@@ -1262,7 +1296,7 @@ declare class DropDownList extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: Dimension
+  itemSize: _Dimension
 
   /**
    * The array of choice items displayed in the drop-down or pop-up list.
@@ -1281,13 +1315,18 @@ declare class DropDownList extends _Control {
    */
   shortcutKey: string
 
+  title: string
+  titleLayout: _TitleLayout
+
   /**
    * Adds an item or separator to the choices in this list.
    * Returns the item control object for type="item", or null for type="separator".
    * @param type The type of the child element. Either item (a basic, selectable item with a text label) or separator
    * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
    */
-  add(type: string, text?: string): ListItem
+  add(type: "item", text?: string, index?: number): ListItem
+  add(type: "separator", text?: string, index?: number): null
 
   /**
    * Retrieves an item object from the list that has a given text label.
@@ -1400,6 +1439,15 @@ declare class ListItem {
    * Normally "item", but an item whose parent is a DropDownList control can have type "separator". A separator item is not mouse-sensitive and is drawn as a horizontal line across the drop-down or pop-up menu.
    */
   readonly type: string
+
+  /**
+   * Adds an item to the choices in this list.
+   * Returns the item control object.
+   * @param type The type of the child element, the string "item" or "node".
+   * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
+   */
+  add(type: "item" | "node", text?: string, index?: number): ListItem
 }
 
 /**
@@ -1432,7 +1480,7 @@ declare class Checkbox extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1614,7 +1662,7 @@ declare class RadioButton extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The key sequence that invokes the onShortcutKey() callback for this element (in Windows only).
@@ -1816,7 +1864,7 @@ declare class TreeView extends _Control {
    * The width and height in pixels of each item in the list.
    * Used by auto-layout to determine the preferredSize of the list, if not otherwise specified. If not set explicitly, the size of each item is set to match the largest height and width among all items in the list
    */
-  itemSize: Dimension
+  itemSize: _Dimension
 
   /**
    * The array of top-level items displayed in the list.
@@ -1838,10 +1886,11 @@ declare class TreeView extends _Control {
   /**
    * Adds an item to the top-level choices in this list.
    * Returns the item control object.
-   * @param type The type of the child element, the string "item".
+   * @param type The type of the child element, the string "item" or "node".
    * @param text The localizable text label for the item.
+   * @param index The index into the current item list after which this item is inserted. If not supplied, or greater than the current list length, the new item is added at the end.
    */
-  add(type: string, text?: string): ListItem
+  add(type: "item" | "node", text?: string, index?: number): ListItem
 
   /**
    * Retrieves an item object from the list that has a given text label.
@@ -1919,6 +1968,9 @@ declare class FlashPlayer extends _Control {
    */
   active: boolean
 
+  title: string
+  titleLayout: _TitleLayout
+
   /**
    * A function definition for a callback from the Flash ActionScript environment.
    * The Flash ActionScript code can call any callback function defined on the ExtendScript side of the FlashPlayer object, invoking it by name as a property of the control object. The function can take any arguments of a supported data types, and can return any value of a supported data type. data types:Number, String, Boolean, null, undefined, Object, Array.
@@ -1968,7 +2020,7 @@ declare class Group extends _Control {
    * Tells the layout manager how unlike-sized children of this container should be aligned within a column or row.
    * Order of creation determines which children are at the top of a column or the left of a row; the earlier a child is created, the closer it is to the top or left of its column or row. If defined, alignment for a child element overrides the alignChildren setting for the parent container. See alignment property for values.
    */
-  alignChildren: string | string[]
+  alignChildren: _AlignmentProperty
 
   /**
    * An array of child elements.
@@ -1984,19 +2036,19 @@ declare class Group extends _Control {
    * The layout manager for this container.
    * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
    */
-  layout: LayoutManager
+  layout: AutoLayoutManager
 
   /**
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * The layout orientation of children in a container.
    * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
    */
-  orientation: string
+  orientation: _Orientation
 
   /**
    * The number of pixels separating one child element from its adjacent sibling element.
@@ -2036,7 +2088,7 @@ declare class Panel extends _Control {
   /**
    * Specifies how to align the child elements.
    */
-  alignChildren: string
+  alignChildren: _AlignmentProperty
 
   /**
    * Reserve space for the specified number of characters; affects calculation of preferredSize .
@@ -2057,25 +2109,25 @@ declare class Panel extends _Control {
    * The default text justification style for child text elements.
    * One of left, center, or right. Justification only works if this value is set on creation of the element.
    */
-  justify: string
+  justify: _Justify
 
   /**
    * The layout manager for this container.
    * The first time a container object is made visible, ScriptUI invokes this layout manager by calling its layout() function. Default is an instance of the LayoutManager class that is automatically created when the container element is created.
    */
-  layout: LayoutManager
+  layout: AutoLayoutManager
 
   /**
    * The number of pixels between the edges of a container and the outermost child elements.
    * You can specify different margins for each edge of the container. The default value is based on the type of container, and is chosen to match the standard Adobe UI guidelines.
    */
-  margins: number
+  margins: _Margins
 
   /**
    * The layout orientation of children in a container.
    * Interpreted by the layout manager for the container. The default LayoutManager  Object accepts the (case-insensitive) values row, column, or stack.For window and panel, the default is column, and for group the default is row. The allowed values for the container’s alignChildren and its children’s alignment properties depend on the orientation.
    */
-  orientation: string
+  orientation: _Orientation
 
   /**
    * The number of pixels separating one child element from its adjacent sibling element.
@@ -2127,7 +2179,7 @@ declare class Tab extends Panel {
  * A container for selectable tab containers.
  * Differs from a panel element in that it can contain only tab elements as direct children.
  */
-declare class TabbedPanel extends Panel {
+declare class TabbedPanel extends _Control {
   /**
    * An array of child elements.
    */
@@ -2142,6 +2194,17 @@ declare class TabbedPanel extends Panel {
    * When the value of the selection property changes, either by a user selecting a different tab, or by a script setting the property, the TabbedPanel receives an onChange notification.
    */
   selection: Tab | number
+
+  title: string
+  titleLayout: _TitleLayout
+
+  /**
+   * Adds a tab to this tabbed panel.
+   * Returns the created tab control object.
+   *
+   * Note: `bounds` is not used; pass `undefined`
+   */
+  add(type: "tab", bounds?: undefined, text?: string, properties?: _AddControlProperties): Tab
 
   /**
    * An event-handler callback function, called when the selected tab has changed.
@@ -2173,7 +2236,7 @@ declare class Point extends Array<number> {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  y: number;
+  y: number
 }
 
 /**
@@ -2184,12 +2247,12 @@ declare class Dimension extends Array<number> {
   /**
    * The height in pixels.
    */
-  height: number
+  height?: number
 
   /**
    * The width in pixels.
    */
-  width: number;
+  width?: number
 }
 
 /**
@@ -2200,42 +2263,70 @@ declare class Bounds extends Array<number> {
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  bottom: number
+  bottom?: number
 
   /**
    * The height in pixels.
    */
-  height: number
+  height?: number
 
   /**
    * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  left: number
+  left?: number
 
   /**
    * The width in pixels.
    */
-  right: number
+  right?: number
 
   /**
    * The height in pixels.
    */
-  top: number
+  top?: number
 
   /**
    * The width in pixels.
    */
-  width: number
+  width?: number
 
   /**
    * The horizontal coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  x: number
+  x?: number
 
   /**
    * The vertical coordinate, a pixel offset from the origin of the element's coordinate space.
    */
-  y: number;
+  y?: number
+}
+
+/**
+ * Defines the number of pixels between the edges of a container and its outermost child elements.
+ * Contains an array [ left, top, right, bottom ] whose elements define the margins between the left edge of a container and its leftmost child element, and so on.
+ *
+ * A Margins object is created when you set an element’s margins property.
+ * An object must contain properties named left, top, right, and bottom.
+ * An array must have values in the order [ left, top, right, bottom ].
+ * You can also set the margins property to a number; all of the array values are then set to this number.
+ */
+declare class Margins extends Array<number> {
+  /**
+   * Defines the number of pixels between the left edge of a container and its leftmost child element.
+   */
+  left: number
+  /**
+   * Defines the number of pixels between the right edge of a container and its rightmost child element.
+   */
+  right: number
+  /**
+   * Defines the number of pixels between the top edge of a container and its top child element.
+   */
+  top: number
+  /**
+   * Defines the number of pixels between the bottom edge of a container and its bottom child element.
+   */
+  bottom: number
 }
 
 /**
@@ -2478,6 +2569,29 @@ declare class KeyboardState {
   readonly shiftKey: boolean
 }
 
+declare class KeyboardEvent extends UIEvent implements KeyboardState {
+  altKey: boolean
+  ctrlKey: boolean
+  metaKey: boolean
+  shiftKey: boolean
+  keyIdentifier: string
+  keyLocation: number
+  keyName: string
+  type: string
+  getModifierState(
+    keyIdentifier: "Alt" | "CapsLock" | "Control" | "Meta" | "NumLock" | "Scroll" | "Shift",
+  ): boolean
+  initKeyboardEvent(
+    eventName: string,
+    bubble: boolean,
+    isCancelable: boolean,
+    view: _Control,
+    keyID: string,
+    keyLocation: number,
+    modifiersList: string,
+  ): void
+}
+
 /**
  * A Control class.
  */
@@ -2489,7 +2603,7 @@ declare class _Control {
    * For orientation = column: left, right, fill
    * For orientation = stack: top, bottom, left, right, fill
    */
-  alignment: string | string[]
+  alignment: _AlignmentProperty
 
   /**
    * The boundaries of the element, in parent-relative coordinates.
@@ -2523,12 +2637,12 @@ declare class _Control {
   /**
    * The maximum height and width to which the element can be resized.
    */
-  maximumSize: Dimension
+  maximumSize: _Dimension
 
   /**
    * The minimum height and width to which the element can be resized.
    */
-  minimumSize: Dimension
+  minimumSize: _Dimension
 
   /**
    * The parent element.
@@ -2540,13 +2654,13 @@ declare class _Control {
    * If not explicitly set by a script, value is established by the UI framework in which ScriptUI is employed, and is based on such attributes of the element as its text, font, font size, icon size, and other UI framework-specific attributes. A script can explicitly set this value before the layout manager is invoked in order to establish an element size other than the default.
    * To set a specific value for only one dimension, specify the other dimension as -1.
    */
-  preferredSize: Dimension
+  preferredSize: _Dimension
 
   /**
    * The current dimensions of this element.
    * Initially undefined, and unless explicitly set by a script, it is defined by a LayoutManager . A script can explicitly set size before the layout manager is invoked to establish an element size other than the preferredSize or the default size, but this is not recommended. Defined as [bounds.width, bounds.height]. Setting an element's size changes its bounds property, and vice-versa.
    */
-  size: Dimension
+  size: _Dimension
 
   /**
    * The element type.
@@ -2702,7 +2816,7 @@ interface _AddControlPropertiesStaticText {
   name?: string
   multiline?: boolean
   scrolling?: boolean
-  truncate?: string
+  truncate?: _Truncate
 }
 
 /**
@@ -2866,10 +2980,6 @@ interface _AddControl {
 
   /**
    */
-  (type: "tab", bounds: _Bounds, text?: string[], properties?: _AddControlProperties): Tab
-
-  /**
-   */
   (
     type: "tabbedpanel",
     bounds?: _Bounds,
@@ -2885,4 +2995,13 @@ interface _AddControl {
     items?: string[],
     properties?: _AddControlPropertiesTreeView,
   ): TreeView
+}
+
+interface _TitleLayout {
+  alignment?: _AlignmentPropertyTitleLayout
+  characters?: number
+  spacing?: number
+  margins?: [number, number, number, number]
+  justify?: _Justify
+  truncate?: _Truncate
 }

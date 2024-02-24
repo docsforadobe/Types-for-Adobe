@@ -1207,6 +1207,11 @@ declare class TrackItem {
   /**
    *
    */
+  readonly nodeId: string
+
+  /**
+   *
+   */
   end: Time
 
   /**
@@ -1921,6 +1926,12 @@ declare class Encoder {
  *
  */
 declare class ComponentParamCollection {
+  /** Number of items */
+  readonly numItems: number;
+
+  /** Number of items */
+  readonly length: number;
+
   bind(eventName: string, function_: any): void
   clearProperty(propertyKey: string): void
   doesPropertyExist(propertyKey: string): boolean

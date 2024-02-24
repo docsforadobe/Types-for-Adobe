@@ -623,6 +623,13 @@ declare enum RQItemStatus {
   WILL_CONTINUE = 3012,
 }
 
+declare enum SceneEditDetectionMode {
+  MARKERS = 10012,
+  SPLIT = 10013,
+  SPLIT_PRECOMP = 10014,
+  NONE = 10015,
+}
+
 declare enum TimeDisplayType {
   FRAMES = 2013,
   TIMECODE = 2012,
@@ -814,6 +821,14 @@ declare class Application {
   /** Sets memory usage limits as in the Memory & Cache preferences area. */
   setMemoryUsageLimits(imageCachePercentage: number, maximumMemoryPercentage: number): void
 
+  /**
+   * Set the Multi-Frame Rendering configuration for the next render
+   *
+   * @param use_mfr Set to `true` to enable Multi-Frame Rendering.
+   * @param max_cpu_perc Value from 1-100 representing the maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100.
+   */
+  setMultiFrameRenderingConfig(use_mfr: boolean, max_cpu_percent: number): void;
+
   /** Sets whether preferences are saved when the application is quit. */
   setSavePreferencesOnQuit(doSave: boolean): void
 
@@ -961,6 +976,9 @@ declare class AVLayer extends Layer {
   /** When true, the layer above is being used as a track matte on this layer. */
   readonly hasTrackMatte: boolean
 
+  /** Returns the track matte layer for this layer. Returns null if this layer has no track matte layer. */
+  readonly trackMatteLayer: AVLayer | null
+
   /** When true, the layer's audio is enabled. */
   audioEnabled: boolean
 
@@ -1003,7 +1021,13 @@ declare class AVLayer extends Layer {
   /** The layer sampling quality setting. */
   samplingQuality: LayerSamplingQuality
 
-  /** if layer has a track matte, specifies the way it is applied. */
+  /**
+   * If this layer has a track matte, specifies the way the track matte is applied.
+   *
+   * Legacy API; use `AVLayer.setTrackMatte()` and `AVLayer.removeTrackMatte()` instead.
+   *
+   * @deprecated since version 23.0.
+   */
   trackMatteType: TrackMatteType
 
   /** The layer quality setting. */
@@ -1045,6 +1069,12 @@ declare class AVLayer extends Layer {
 
   /** True if the layer can be added to the EGP for the specified composition */
   canAddToMotionGraphicsTemplate(comp: CompItem): boolean
+
+  /** Removes the track matte for this layer while preserving the TrackMatteType. Use setTrackMatteType() for another way of removing track matte. */
+  removeTrackMatte(): void
+
+  /** Sets the track matte layer and type for this layer. Passing in null to trackMatteLayer parameter removes the track matte. Use removeTrackMatte() for another way of removing track matte. */
+  setTrackMatte(trackMatteLayer: AVLayer | null, trackMatteType: TrackMatteType): void
 
   /** Shortcuts */
   readonly timeRemap: OneDProperty
@@ -1381,6 +1411,9 @@ declare class KeyframeEase {
 }
 
 declare class Layer extends PropertyGroup {
+  /** The unique and persistent identification number. */
+  readonly id: number
+
   /** The index position of the layer. */
   readonly index: number
 
@@ -1461,6 +1494,9 @@ declare class Layer extends PropertyGroup {
 
   /** Copies the layer to the top (beginning) of another composition. */
   copyToComp(intoComp: CompItem): void
+
+  /** Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes */
+  doSceneEditDetection(applyOptions: SceneEditDetectionMode): number[];
 
   /** Reports whether this layer will be active at a specified time. */
   activeAtTime(time: number): boolean
@@ -1837,6 +1873,9 @@ declare class Project {
   /** Returns an array containing the name strings for all team projects available for the current user. Archived Team Projects are not included. */
   listTeamProjects(): string[]
 
+  /** Retrieves a layer by its Layer ID */
+  layerByID(id: number): Layer | null
+
   /** Checks whether specified team project is currently open. */
   isTeamProjectOpen(teamProjectName: string): boolean
 
@@ -2020,6 +2059,11 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   /** True if the property allows Media Replacement */
   readonly canSetAlternateSource: boolean
 
+  /**
+   * Instance property on an Essential Property object which returns the original source Property which was used to create the Essential Property.
+   */
+  readonly essentialPropertySource: Property<T> | AVLayer | null
+
   /** The expression string for this property. */
   expression: string
 
@@ -2060,6 +2104,12 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
 
   /** Removes a keyframe from the property. */
   removeKey(keyIndex: number): void
+
+  /** Returns the labelIndex value assigned to the referenced keyframe. (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences). */
+  keyLabel(keyIndex: number): number
+
+  /** Sets the labelIndex value for the referenced keyframe. (0 for None, or 1 to 16 for one of the preset colors in the Labels preferences). */
+  setLabelAtKey(keyIndex: number, labelIndex: number): void
 
   /** When true, this property can be interpolated. */
   isInterpolationTypeValid(type: KeyframeInterpolationType): boolean
@@ -2269,6 +2319,9 @@ declare class RenderQueue {
   /** The collection of items in the render queue. */
   readonly items: RQItemCollection
 
+  /** Read or write the Notify property for the entire Render Queue */
+  queueNotify: boolean;
+
   /** Show or hides the Render Queue panel. */
   showWindow(doShow: boolean): void
 
@@ -2310,6 +2363,9 @@ declare class RenderQueueItem {
 
   /** The current rendering status of the item. */
   readonly status: RQItemStatus
+
+  /** Sets the Notify checkbox for each individual item in the Render Queue */
+  queueItemNotify: boolean;
 
   /** When true, this item is rendered when the queue is started. */
   render: boolean

@@ -814,6 +814,14 @@ declare class Application {
   /** Sets memory usage limits as in the Memory & Cache preferences area. */
   setMemoryUsageLimits(imageCachePercentage: number, maximumMemoryPercentage: number): void
 
+  /**
+   * Set the Multi-Frame Rendering configuration for the next render
+   *
+   * @param use_mfr Set to `true` to enable Multi-Frame Rendering.
+   * @param max_cpu_perc Value from 1-100 representing the maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100.
+   */
+  setMultiFrameRenderingConfig(use_mfr: boolean, max_cpu_percent: number): void;
+
   /** Sets whether preferences are saved when the application is quit. */
   setSavePreferencesOnQuit(doSave: boolean): void
 
@@ -1479,12 +1487,12 @@ declare class Layer extends PropertyGroup {
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: TwoDProperty | ThreeDProperty
-  readonly position: TwoDProperty | ThreeDProperty
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: TwoDProperty | ThreeDProperty
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
@@ -1778,7 +1786,7 @@ declare class Project {
   item(index: number): _ItemClasses
 
   /** Retrieves an item by its Item ID */
-  itemById(id: number): _ItemClasses
+  itemByID(id: number): _ItemClasses
 
   /** Consolidates all footage in the project. */
   consolidateFootage(): number
@@ -1839,6 +1847,9 @@ declare class Project {
 
   /** Returns an array containing the name strings for all team projects available for the current user. Archived Team Projects are not included. */
   listTeamProjects(): string[]
+
+  /** Retrieves a layer by its Layer ID */
+  layerByID(id: number): Layer | null
 
   /** Checks whether specified team project is currently open. */
   isTeamProjectOpen(teamProjectName: string): boolean
@@ -1939,6 +1950,7 @@ type ColorProperty = Property<ColorType>
 type OneDProperty = Property<OneDType>
 type TwoDProperty = Property<TwoDType>
 type ThreeDProperty = Property<ThreeDType>
+type TwoDOrThreeDProperty = Property<TwoDType | ThreeDType>
 type ShapeProperty = Property<ShapePropertyType>
 type MarkerValueProperty = Property<MarkerValueType>
 type TextDocumentProperty = Property<TextDocumentType>
@@ -1947,6 +1959,9 @@ type AnyProperty =
   | NoValueProperty
   | ColorProperty
   | OneDProperty
+  | TwoDProperty
+  | ThreeDProperty
+  | TwoDOrThreeDProperty
   | ShapeProperty
   | MarkerValueProperty
   | TextDocumentProperty
@@ -2008,7 +2023,7 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   readonly separationDimension: number
 
   /** The original multidimensional property for this separated follower. */
-  readonly separationLeader: Property<TwoDProperty | ThreeDProperty>
+  readonly separationLeader: TwoDOrThreeDProperty
 
   /** When true, the property is the Menu property of a Dropdown Menu Control effect. */
   readonly isDropdownEffect: boolean
@@ -2018,6 +2033,11 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
 
   /** True if the property allows Media Replacement */
   readonly canSetAlternateSource: boolean
+
+  /**
+   * Instance property on an Essential Property object which returns the original source Property which was used to create the Essential Property.
+   */
+  readonly essentialPropertySource: Property<T> | AVLayer | null
 
   /** The expression string for this property. */
   expression: string
@@ -2170,7 +2190,7 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   canAddToMotionGraphicsTemplate(comp: CompItem): boolean
 
   /** Sets parameters for a Dropdown Menu Control’s Menu Property. */
-  setPropertyParameters(items: string[]): void
+  setPropertyParameters(items: string[]): Property<OneDProperty>
 
   /** Set the alternate source for this property. */
   setAlternateSource(newSource: AVItem): void
@@ -2268,6 +2288,9 @@ declare class RenderQueue {
   /** The collection of items in the render queue. */
   readonly items: RQItemCollection
 
+  /** Read or write the Notify property for the entire Render Queue */
+  queueNotify: boolean;
+
   /** Show or hides the Render Queue panel. */
   showWindow(doShow: boolean): void
 
@@ -2309,6 +2332,9 @@ declare class RenderQueueItem {
 
   /** The current rendering status of the item. */
   readonly status: RQItemStatus
+
+  /** Sets the Notify checkbox for each individual item in the Render Queue */
+  queueItemNotify: boolean;
 
   /** When true, this item is rendered when the queue is started. */
   render: boolean
@@ -2602,6 +2628,26 @@ declare class Viewer {
 
   activeViewIndex: number
 
+  /** When true, the viewer is at its maximized size. */
+  maximized: boolean
+
+  /** Moves the viewer to front and places focus on it. */
+  setActive(): boolean
+}
+
+declare class ViewOptions {
+  /** The state of the Channels menu */
+  channels: ChannelType
+
+  /** When true, checkerboards are on */
+  checkerboards: boolean
+
+  /** Current exposure setting */
+  exposure: number
+
+  /** The state of the Fast Previews menu */
+  fastPreview: FastPreviewType
+
   /** When true, indicates guides are locked in the viewer. */
   guidesLocked: boolean
 
@@ -2614,35 +2660,20 @@ declare class Viewer {
   /** When true, indicates rulers are shown in the viewer. */
   rulers: boolean
 
-  /** When true, the viewer is at its maximized size. */
-  maximized: boolean
-
-  /** Moves the viewer to front and places focus on it. */
-  setActive(): boolean
-}
-
-declare class ViewOptions {
-  channels: ChannelType
-  checkerboards: boolean
-  exposure: number
-  fastPreview: FastPreviewType
+  /** The viewer Zoom value */
   zoom: number
-  guidesLocked: boolean
-  guidesSnap: boolean
-  guidesVisibility: boolean
-  rulers: boolean
 }
 
 /**
  * Properties for Shortcuts
  */
 declare interface _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: TwoDProperty | ThreeDProperty
-  readonly position: TwoDProperty | ThreeDProperty
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: TwoDProperty | ThreeDProperty
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty

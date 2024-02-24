@@ -1438,12 +1438,12 @@ declare class Layer extends PropertyGroup {
   readonly transform: _TransformGroup
 
   /** Transform shortcuts */
-  readonly anchorPoint: TwoDProperty | ThreeDProperty
-  readonly position: TwoDProperty | ThreeDProperty
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: TwoDProperty | ThreeDProperty
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
@@ -1716,7 +1716,7 @@ declare class Project {
   item(index: number): _ItemClasses
 
   /** Retrieves an item by its Item ID */
-  itemById(id: number): _ItemClasses
+  itemByID(id: number): _ItemClasses
 
   /** Consolidates all footage in the project. */
   consolidateFootage(): number
@@ -1871,6 +1871,7 @@ type ColorProperty = Property<ColorType>
 type OneDProperty = Property<OneDType>
 type TwoDProperty = Property<TwoDType>
 type ThreeDProperty = Property<ThreeDType>
+type TwoDOrThreeDProperty = Property<TwoDType | ThreeDType>
 type ShapeProperty = Property<ShapePropertyType>
 type MarkerValueProperty = Property<MarkerValueType>
 type TextDocumentProperty = Property<TextDocumentType>
@@ -1879,6 +1880,9 @@ type AnyProperty =
   | NoValueProperty
   | ColorProperty
   | OneDProperty
+  | TwoDProperty
+  | ThreeDProperty
+  | TwoDOrThreeDProperty
   | ShapeProperty
   | MarkerValueProperty
   | TextDocumentProperty
@@ -1940,7 +1944,7 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   readonly separationDimension: number
 
   /** The original multidimensional property for this separated follower. */
-  readonly separationLeader: Property<TwoDProperty | ThreeDProperty>
+  readonly separationLeader: TwoDOrThreeDProperty
 
   /** The expression string for this property. */
   expression: string
@@ -2535,12 +2539,12 @@ declare class ViewOptions {
  * Properties for Shortcuts
  */
 declare interface _TransformGroup extends PropertyGroup {
-  readonly anchorPoint: TwoDProperty | ThreeDProperty
-  readonly position: TwoDProperty | ThreeDProperty
+  readonly anchorPoint: TwoDOrThreeDProperty
+  readonly position: TwoDOrThreeDProperty
   readonly xPosition: OneDProperty
   readonly yPosition: OneDProperty
   readonly zPosition: OneDProperty
-  readonly scale: TwoDProperty | ThreeDProperty
+  readonly scale: TwoDOrThreeDProperty
   readonly orientation: ThreeDProperty
   readonly rotation: OneDProperty
   readonly xRotation: OneDProperty
