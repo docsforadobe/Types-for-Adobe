@@ -193,7 +193,7 @@ declare class Sequence {
   exportAsFinalCutProXML(exportPath: string, suppressUI?: number): boolean
 
   /**
-   * Premiere Pro exports the sequence immediately. WARNING: This method is not synchronous, will return before render job is completed.
+   * Premiere Pro exports the sequence immediately.
    * @param outputFilePath The output file path (with name).
    * @param presetPath The .epr file to use.
    * @param workAreaType Optional work area specifier.
@@ -1927,10 +1927,10 @@ declare class Encoder {
  */
 declare class ComponentParamCollection {
   /** Number of items */
-  readonly numItems: number;
+  readonly numItems: number
 
   /** Number of items */
-  readonly length: number;
+  readonly length: number
 
   bind(eventName: string, function_: any): void
   clearProperty(propertyKey: string): void
