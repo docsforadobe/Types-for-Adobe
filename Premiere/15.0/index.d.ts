@@ -79,6 +79,41 @@ declare class SequenceSettings {
  */
 declare class Sequence {
   /**
+   * Subtitle (Default)
+   */
+  static readonly CAPTION_FORMAT_SUBTITLE: number
+  
+  /**
+   * CEA-608
+   */
+  static readonly CAPTION_FORMAT_608: number
+  
+  /**
+   * CEA-708
+   */
+  static readonly CAPTION_FORMAT_708: number
+  
+  /**
+   * Teletext
+   */
+  static readonly CAPTION_FORMAT_TELETEXT: number
+
+  /**
+   * EBU Subtitle
+   */
+  static readonly CAPTION_FORMAT_OPEN_EBU: number
+
+  /**
+   * OP-42
+   */
+  static readonly CAPTION_FORMAT_OP42: number
+
+  /**
+   * OP-47
+   */
+  static readonly CAPTION_FORMAT_OP47: number
+  
+  /**
    *
    */
   sequenceSettings: SequenceSettings
@@ -175,6 +210,14 @@ declare class Sequence {
    * @returns the clone Sequence.
    */
   clone(): Sequence
+
+  /**
+   * Creates a caption track in the active sequence using caption data from a project item.
+   * @param projectItem A captions source clip (e.g. .srt)
+   * @param startAtTime Offset in seconds from start of sequence
+   * @param captionsFormat (Optional, defaults to subtitle) Caption format of the new track (see table below).
+   */
+  createCaptionTrack(projectItem: ProjectItem, startAtTime: number, captionFormat: number): Sequence
 
   /**
    * Creates a new sequence from the source sequence's in and out points.
