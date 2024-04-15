@@ -21,6 +21,12 @@ type SampleRateOption = 48000 | 96000
 type BitsPerSampleOption = 16 | 24
 type SDKEventType = "warning" | "info" | "error"
 
+declare enum WorkAreaType {
+  ENCODE_ENTIRE = 0,
+  ENCODE_IN_TO_OUT = 1,
+  ENCODE_WORK_AREA = 2
+}
+
 declare enum TIME_FORMAT {
   TIMEDISPLAY_24Timecode = 100,
   TIMEDISPLAY_25Timecode = 101,
@@ -241,7 +247,7 @@ declare class Sequence {
    * @param presetPath The .epr file to use.
    * @param workAreaType Optional work area specifier.
    */
-  exportAsMediaDirect(outputFilePath: string, presetPath: string, workAreaType?: number): string
+  exportAsMediaDirect(outputFilePath: string, presetPath: string, workAreaType?: WorkAreaType): string
 
   /**
    * Exports the sequence (and its constituent media) as a new PPro project.
