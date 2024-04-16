@@ -21,6 +21,12 @@ type SampleRateOption = 48000 | 96000
 type BitsPerSampleOption = 16 | 24
 type SDKEventType = "warning" | "info" | "error"
 
+declare enum WorkAreaType {
+  ENCODE_ENTIRE = 0,
+  ENCODE_IN_TO_OUT = 1,
+  ENCODE_WORK_AREA = 2
+}
+
 declare enum TIME_FORMAT {
   TIMEDISPLAY_24Timecode = 100,
   TIMEDISPLAY_25Timecode = 101,
@@ -78,6 +84,41 @@ declare class SequenceSettings {
  * A sequence.
  */
 declare class Sequence {
+  /**
+   * Subtitle (Default)
+   */
+  static readonly CAPTION_FORMAT_SUBTITLE: number
+  
+  /**
+   * CEA-608
+   */
+  static readonly CAPTION_FORMAT_608: number
+  
+  /**
+   * CEA-708
+   */
+  static readonly CAPTION_FORMAT_708: number
+  
+  /**
+   * Teletext
+   */
+  static readonly CAPTION_FORMAT_TELETEXT: number
+
+  /**
+   * EBU Subtitle
+   */
+  static readonly CAPTION_FORMAT_OPEN_EBU: number
+
+  /**
+   * OP-42
+   */
+  static readonly CAPTION_FORMAT_OP42: number
+
+  /**
+   * OP-47
+   */
+  static readonly CAPTION_FORMAT_OP47: number
+  
   /**
    *
    */
@@ -177,6 +218,14 @@ declare class Sequence {
   clone(): Sequence
 
   /**
+   * Creates a caption track in the active sequence using caption data from a project item.
+   * @param projectItem A captions source clip (e.g. .srt)
+   * @param startAtTime Offset in seconds from start of sequence
+   * @param captionsFormat (Optional, defaults to subtitle) Caption format of the new track (see table below).
+   */
+  createCaptionTrack(projectItem: ProjectItem, startAtTime: number, captionFormat: number): Sequence
+
+  /**
    * Creates a new sequence from the source sequence's in and out points.
    * @param ignoreMapping If True the current selection, not track targeting, will determine
    * the clips to include in the new sequence.
@@ -198,7 +247,7 @@ declare class Sequence {
    * @param presetPath The .epr file to use.
    * @param workAreaType Optional work area specifier.
    */
-  exportAsMediaDirect(outputFilePath: string, presetPath: string, workAreaType?: number): string
+  exportAsMediaDirect(outputFilePath: string, presetPath: string, workAreaType?: WorkAreaType): string
 
   /**
    * Exports the sequence (and its constituent media) as a new PPro project.
