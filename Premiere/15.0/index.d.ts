@@ -24,7 +24,7 @@ type SDKEventType = "warning" | "info" | "error"
 declare enum WorkAreaType {
   ENCODE_ENTIRE = 0,
   ENCODE_IN_TO_OUT = 1,
-  ENCODE_WORK_AREA = 2
+  ENCODE_WORK_AREA = 2,
 }
 
 declare enum TIME_FORMAT {
@@ -88,17 +88,17 @@ declare class Sequence {
    * Subtitle (Default)
    */
   static readonly CAPTION_FORMAT_SUBTITLE: number
-  
+
   /**
    * CEA-608
    */
   static readonly CAPTION_FORMAT_608: number
-  
+
   /**
    * CEA-708
    */
   static readonly CAPTION_FORMAT_708: number
-  
+
   /**
    * Teletext
    */
@@ -118,7 +118,7 @@ declare class Sequence {
    * OP-47
    */
   static readonly CAPTION_FORMAT_OP47: number
-  
+
   /**
    *
    */
@@ -247,7 +247,11 @@ declare class Sequence {
    * @param presetPath The .epr file to use.
    * @param workAreaType Optional work area specifier.
    */
-  exportAsMediaDirect(outputFilePath: string, presetPath: string, workAreaType?: WorkAreaType): string
+  exportAsMediaDirect(
+    outputFilePath: string,
+    presetPath: string,
+    workAreaType?: WorkAreaType,
+  ): string
 
   /**
    * Exports the sequence (and its constituent media) as a new PPro project.
@@ -1392,6 +1396,11 @@ declare class ProjectItem {
    *
    */
   readonly type: number
+
+  /**
+   *
+   */
+  timeDisplayFormat: number
 
   /**
    *
