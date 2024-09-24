@@ -2310,7 +2310,7 @@ declare class Application {
   /**
    *
    */
-  unbind(eventName: string): void
+  unbind(eventName: ApplicationEvent): void
 
   /**
    *
