@@ -1250,7 +1250,7 @@ declare class TrackItem {
   /**
    *
    */
-  readonly components: any
+  readonly components: Component[]
 
   /**
    *
@@ -2010,26 +2010,40 @@ declare class ComponentParamCollection {
 
 declare class ComponentParam {
   readonly displayName: string
-  addKey(): boolean
+  addKey(time: Time, updateUI?: boolean): boolean
   areKeyframesSupported(): boolean
-  findNearestKey(): object
-  findNextKey(): object
-  findPreviousKey(): object
+  /**
+   * threshold in ticks
+   */
+  findNearestKey(timeToCheck: Time, threshold: number): object
+  findNextKey(timeToCheck: Time): object
+  findPreviousKey(timeToCheck: Time): object
   getColorValue(): any[]
   getKeys(): any[]
   getValue(): any
-  getValueAtKey(): any
-  getValueAtTime(): any
+  getValueAtKey(timeToCheck: Time): any
+  getValueAtTime(time: Time): any
   isEmpty(): boolean
   isTimeVarying(): boolean
   keyExistsAtTime(): boolean
-  removeKey(): boolean
+  removeKey(time: Time, updateUI?: boolean): boolean
   removeKeyRange(start: Time, end: Time): boolean
-  setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
-  setInterpolationTypeAtKey(): boolean
-  setTimeVarying(p0: boolean, p1: boolean): boolean
+  setColorValue(alpha: number, red: number, green: number, blue: number, updateUI: boolean): boolean
+  /**
+   * interpolationType must be one of the following:
+   * 0 KF_Interp_Mode_Linear
+   * 1 kfInterpMode_EaseIn_Obsolete
+   * 2 kfInterpMode_EaseOut_Obsolete
+   * 3 kfInterpMode_EaseInEaseOut_Obsolete
+   * 4 KF_Interp_Mode_Hold
+   * 5 KF_Interp_Mode_Bezier
+   * 6 KF_Interp_Mode_Time
+   * 7 kfInterpMode_TimeTransitionStart
+   * 8 kfInterpMode_TimeTransitionEnd   
+   * */
+  setInterpolationTypeAtKey(time: Time, interpolationType: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8, updateUI?: boolean): boolean
   setValue(value: any, updateUI?: boolean): boolean
-  setValueAtKey(): boolean
+  setValueAtKey(time: Time, value: any, updateUI: boolean): boolean
 }
 /**
  *
