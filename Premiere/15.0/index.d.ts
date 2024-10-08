@@ -1250,7 +1250,7 @@ declare class TrackItem {
   /**
    *
    */
-  readonly components: any
+  readonly components: Component[]
 
   /**
    *
@@ -2010,26 +2010,29 @@ declare class ComponentParamCollection {
 
 declare class ComponentParam {
   readonly displayName: string
-  addKey(): boolean
+  addKey(time: Time): boolean
   areKeyframesSupported(): boolean
-  findNearestKey(): object
-  findNextKey(): object
-  findPreviousKey(): object
+  /**
+   * threshold in ticks
+   */
+  findNearestKey(timeToCheck: Time, threshold: number): object
+  findNextKey(timeToCheck: Time): object
+  findPreviousKey(timeToCheck: Time): object
   getColorValue(): any[]
   getKeys(): any[]
   getValue(): any
-  getValueAtKey(): any
-  getValueAtTime(): any
+  getValueAtKey(timeToCheck: Time): any
+  getValueAtTime(time: Time): any
   isEmpty(): boolean
   isTimeVarying(): boolean
   keyExistsAtTime(): boolean
-  removeKey(): boolean
+  removeKey(time: Time): boolean
   removeKeyRange(start: Time, end: Time): boolean
-  setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
+  setColorValue(alpha: number, red: number, green: number, blue: number, updateUI: boolean): boolean
   setInterpolationTypeAtKey(): boolean
-  setTimeVarying(p0: boolean, p1: boolean): boolean
+  setTimeVarying(varying: boolean, updateUI: boolean): boolean
   setValue(value: any, updateUI?: boolean): boolean
-  setValueAtKey(): boolean
+  setValueAtKey(time: Time, value: any, updateUI: boolean): boolean
 }
 /**
  *
