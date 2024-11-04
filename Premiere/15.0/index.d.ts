@@ -1360,7 +1360,7 @@ declare class TrackItem {
   /**
    *
    */
-  move(seconds: number): String
+  move(seconds: number): boolean
 
   /**
    *
