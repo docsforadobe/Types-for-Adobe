@@ -71,7 +71,7 @@ declare class SequenceSettings {
   videoFrameRate: Time
   videoFrameHeight: number
   videoFrameWidth: number
-  videoPixelAspectRatio: string
+  videoPixelAspectRatio: number
   vrHorzCapturedView: number
   vrLayout: number
   vrProjection: number
@@ -1360,11 +1360,6 @@ declare class TrackItem {
   /**
    *
    */
-  move(seconds: number): String
-
-  /**
-   *
-   */
   setTimeout(eventName: string, function_: any, milliseconds: number): void
 
   /**
@@ -1569,13 +1564,13 @@ declare class ProjectItem {
    * Sets the in point of the clip.
    * @param seconds Time of in point.
    */
-  setInPoint(seconds: Time | number | string, p2: number): void
+  setInPoint(seconds: Time | number, p2: number): void
 
   /**
    * Sets the out point of the clip.
    * @param seconds Time of out point.
    */
-  setOutPoint(seconds: Time | number | string, p2: number): void
+  setOutPoint(seconds: Time | number, p2: number): void
 
   /**
    *
@@ -2023,7 +2018,7 @@ declare class ComponentParam {
   getColorValue(): any[]
   getKeys(): any[]
   getValue(): any
-  getValueAtKey(time: Time): any
+  getValueAtKey(): any
   getValueAtTime(): any
   isEmpty(): boolean
   isTimeVarying(): boolean
@@ -2032,9 +2027,9 @@ declare class ComponentParam {
   removeKeyRange(start: Time, end: Time): boolean
   setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
   setInterpolationTypeAtKey(): boolean
-  setTimeVarying(setTimeVarying: boolean, p1?: boolean): boolean
-  setValue(value: any, updateUI?: boolean |  number): boolean
-  setValueAtKey(time: Time, value: any, updateUI?: boolean | number): boolean
+  setTimeVarying(p0: boolean, p1: boolean): boolean
+  setValue(value: any, updateUI?: boolean): boolean
+  setValueAtKey(): boolean
 }
 /**
  *
