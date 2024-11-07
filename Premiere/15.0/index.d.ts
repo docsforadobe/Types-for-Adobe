@@ -1616,6 +1616,16 @@ declare class ProjectItem {
   /**
    *
    */
+  getInPoint(): Time
+
+  /**
+   *
+   */
+  getOutPoint(): Time
+
+  /**
+   *
+   */
   unbind(eventName: string): void
 }
 
@@ -2033,7 +2043,7 @@ declare class ComponentParam {
   setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
   setInterpolationTypeAtKey(): boolean
   setTimeVarying(setTimeVarying: boolean, p1?: boolean): boolean
-  setValue(value: any, updateUI?: boolean |  number): boolean
+  setValue(value: any, updateUI?: boolean | number): boolean
   setValueAtKey(time: Time, value: any, updateUI?: boolean | number): boolean
 }
 /**
