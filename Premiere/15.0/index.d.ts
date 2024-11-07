@@ -2073,6 +2073,7 @@ declare class PrProduction {
 
 type ApplicationEvent =
   | "onSourceClipSelectedInProjectPanel"
+  | "onItemsAddedToProjectSuccess"
   | "onSequenceActivated"
   | "onActiveSequenceChanged"
   | "onActiveSequenceSelectionChanged"
@@ -2081,6 +2082,19 @@ type ApplicationEvent =
   | "onActiveSequenceStructureChanged"
   | "onProjectChanged"
   | "onProjectEndDrop"
+
+type ApplicationEventHandler = {
+    onSourceClipSelectedInProjectPanel: (items: ProjectItem[]) => void;
+    onItemsAddedToProjectSuccess: () => void; 
+    onSequenceActivated: () => void;
+    onActiveSequenceChanged: () => void;
+    onActiveSequenceSelectionChanged: () => void;
+    onActiveSequenceTrackItemAdded: (track: Track, trackItem: TrackItem) => void;
+    onActiveSequenceTrackItemRemoved: (track: Track, trackItem: TrackItem) => void;
+    onActiveSequenceStructureChanged: () => void;
+    onProjectChanged: (documentID: string) => void;
+    onProjectEndDrop: () => void;
+};
 
 /**
  *
@@ -2169,7 +2183,7 @@ declare class Application {
   /**
    *
    */
-  bind(eventName: ApplicationEvent, function_: Function): void
+  bind<T extends ApplicationEvent>(eventName: T, function_: ApplicationEventHandler[T]): void;
 
   /**
    *
@@ -2301,7 +2315,7 @@ declare class Application {
   /**
    *
    */
-  unbind(eventName: string): void
+  unbind(eventName: ApplicationEvent): void
 
   /**
    *
