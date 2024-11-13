@@ -3778,7 +3778,7 @@ declare class Documents extends Array<Document> {
    * @param presetSettings Custom settings to apply to the preset.
    * @param showOptionsDialog If false, do not show Options dialog.
    */
-  static addDocument(
+  addDocument(
     startupPreset: string,
     presetSettings?: DocumentPreset,
     showOptionsDialog?: boolean,
