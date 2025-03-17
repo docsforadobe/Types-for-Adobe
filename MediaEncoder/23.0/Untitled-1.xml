@@ -1,0 +1,275 @@
+<classdef name="FrontendScriptObject" dynamic="true">
+  <elements type="instance">
+    <method name="addCompToBatch">
+      <parameters>
+        <parameter name="compPath">
+          <datatype>
+            <type>Path to e.g. an After Effects project or Premiere Pro project. The first comp resp. sequence will be used.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="presetPath">
+          <datatype>
+            <type>Optional. If presetPath is empty</type>
+          </datatype>
+        </parameter>
+        <parameter name="then the default preset will be applied.">
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+        <parameter name="outputPath">
+          <datatype>
+            <type>Optional. If outputPath is empty</type>
+          </datatype>
+        </parameter>
+        <parameter name="then the output file name will be generated based on the comp path.">
+          <shortdesc>Adds the first comp of an After Effects project resp. the first sequence of a Premiere Pro project to the batch.### TODO: Verify the behavior for Ch and Au projects. Also add support for AMEBatchItemCreationFailedEvent and call ReportError.</shortdesc>
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>bool</type>
+      </datatype>
+    </method>
+    <method name="addDLToBatch">
+      <parameters>
+        <parameter name="projectPath">
+          <datatype>
+            <type>E.g. Premiere Pro or After Effects project path.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="format">
+          <datatype>
+            <type>E.g. 'H.264':string</type>
+          </datatype>
+        </parameter>
+        <parameter name="presetPath">
+          <datatype>
+            <type>Either a preset or a format input must be present. If no preset is used then the default preset of the specified format will be applied.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="guid">
+          <datatype>
+            <type>The unique id of e.g. a Premiere Pro sequence or After Effects composition.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="outputPath">
+          <datatype>
+            <type>Optional. If outputPath is empty</type>
+          </datatype>
+        </parameter>
+        <parameter name="then the output file name will be generated based on the project path.">
+          <shortdesc>Adds e.g. an After Effects comp or Premiere Pro sequence to the batch and returns an EncoderWrapper object.### TODO: Verify the behavior for Ch and Au projects.</shortdesc>
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>Object</type>
+      </datatype>
+    </method>
+    <method name="addFileSequenceToBatch">
+      <parameters>
+        <parameter name="containingFolder">
+          <datatype>
+            <type>The folder containing image files.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="imagePath">
+          <datatype>
+            <type>All images from the containing folder with the same extension will be added to the output file.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="presetPath">
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+        <parameter name="outputPath">
+          <datatype>
+            <type>Optional. If outputPath is empty</type>
+          </datatype>
+        </parameter>
+        <parameter name="then the output file name will be generated based on the containingFolder name">
+          <shortdesc>Adds an image sequence to the batch. The images will be sorted in alphabetical order. ### TODO: Add support for AMEBatchItemCreationFailedEvent and call ReportError.</shortdesc>
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>bool</type>
+      </datatype>
+    </method>
+    <method name="addFileToBatch">
+      <parameters>
+        <parameter name="filePath">
+          <datatype>
+            <type>File path of a media source.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="format">
+          <datatype>
+            <type>E.g. 'H.264':string</type>
+          </datatype>
+        </parameter>
+        <parameter name="presetPath">
+          <datatype>
+            <type>Either a preset or a format input must be present. If no preset is used then the default preset of the specified format will be applied.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="outputPath">
+          <datatype>
+            <type>Optional. If outputPath is empty</type>
+          </datatype>
+        </parameter>
+        <parameter name="then the output file name will be generated based on the file path.">
+          <shortdesc>Adds a file to the batch and returns an EncoderWrapper object. ### TODO: Call ReportError when AMEBatch::VerifyScriptArguments fails (also for all other API's which use AMEBatch::VerifyScriptArguments).</shortdesc>
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>Object</type>
+      </datatype>
+    </method>
+    <method name="addItemToBatch">
+      <parameters>
+        <parameter name="sourcePath">
+          <shortdesc>Adds a media source to the batch. ### TODO: It's also possible to use a PPro or AE project as source. In these cases we display a dialog for choosing a sequence resp. compwhich is bad for automated scripting workflows. We should return an error that these projects aren't supported. We have other API's for PPro sequences resp. AE comps.We should also verify the behavior for Ch and Au projects. Also add support for AMEBatchItemCreationFailedEvent and call ReportError.</shortdesc>
+          <datatype>
+            <type>Path of the media source.:string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>bool</type>
+      </datatype>
+    </method>
+    <method name="addTeamProjectsItemToBatch">
+      <parameters>
+        <parameter name="projectsURL">
+          <datatype>
+            <type>Team Projects URL or Team Projects Snap. You can create a tp2snap file in PPro for a ProjectItem via the scripting API saveProjectSnapshot.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="format">
+          <datatype>
+            <type>E.g. 'H.264':string</type>
+          </datatype>
+        </parameter>
+        <parameter name="presetPath">
+          <datatype>
+            <type>Either a preset or a format input must be present. If no preset is used then the default preset of the specified format will be applied.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="outputPath">
+          <shortdesc>Adds a team project item to the batch and returns an EncoderWrapper object.</shortdesc>
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>Object</type>
+      </datatype>
+    </method>
+    <method name="addXMLToBatch">
+      <parameters>
+        <parameter name="xmlPath">
+          <datatype>
+            <type>Path to a Final Cut Pro xml file.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="presetPath">
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+        <parameter name="outputFolderPath">
+          <datatype>
+            <type>Optional. If outputFolderPath is empty</type>
+          </datatype>
+        </parameter>
+        <parameter name="then the output file name will be generated based on the XML file path.">
+          <shortdesc>Adds Final Cut Pro xml to the batch. ### TODO: Add support for AMEBatchItemCreationFailedEvent and call ReportError.</shortdesc>
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>bool</type>
+      </datatype>
+    </method>
+    <method name="getDLItemsAtRoot">
+      <parameters>
+        <parameter name="projectPath">
+          <shortdesc>Returns the list of GUIDs for objects (sequences|comps) at the top|root level. ### TODO: Verify the behavior for Ch and Au projects.</shortdesc>
+          <datatype>
+            <type>E.g. Premiere Pro or After Effects project path.:string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>Array</type>
+      </datatype>
+    </method>
+    <method name="stitchFiles">
+      <parameters>
+        <parameter name="mediaPaths">
+          <datatype>
+            <type>Semicolon delimited list of media paths.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="format">
+          <datatype>
+            <type>E.g. 'H.264':string</type>
+          </datatype>
+        </parameter>
+        <parameter name="presetPath">
+          <datatype>
+            <type>Either a preset or a format input must be present. If no preset is used then the default preset of the specified format will be applied.:string</type>
+          </datatype>
+        </parameter>
+        <parameter name="outputPath">
+          <shortdesc>Adds a batch item for the given media and returns an EncoderWrapper object.</shortdesc>
+          <datatype>
+            <type>string</type>
+          </datatype>
+        </parameter>
+      </parameters>
+      <datatype>
+        <type>Object</type>
+      </datatype>
+    </method>
+    <method name="stopBatch">
+      <shortdesc>Stops the batch.</shortdesc>
+      <datatype>
+        <type>bool</type>
+      </datatype>
+    </method>
+    <method name="addEventListener">
+      <datatype>
+        <type>any</type>
+      </datatype>
+    </method>
+    <method name="removeEventListener">
+      <datatype>
+        <type>any</type>
+      </datatype>
+    </method>
+    <method name="dispatchEvent">
+      <datatype>
+        <type>any</type>
+      </datatype>
+    </method>
+  </elements>
+</classdef>
+
+
+
