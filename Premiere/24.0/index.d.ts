@@ -1293,6 +1293,11 @@ declare class TrackItem {
   disabled: boolean
 
   /**
+   * @version 22.0
+   */
+  readonly parentTrackIndex: number
+
+  /**
    *
    */
   projectItem: ProjectItem
@@ -2192,7 +2197,8 @@ declare class Application {
   bind(eventName: ApplicationEvent, function_: Function): void
 
   /**
-   *
+   * Notifies App that Preferences have changed
+   * Only valid argument currently is 'BE::PreferencesScratchDisksChanged'
    */
   broadcastPrefsChanged(preferencesThatChanged: string): boolean
 
