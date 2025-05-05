@@ -601,6 +601,10 @@ interface DateConstructor {
     sec?: number,
     ms?: number,
   ): Date
+  /**
+   * The now() method returns the number of milliseconds that have passed since midnight January 1, 1970 UTC.
+   */
+  now(): number
 }
 declare const Date: DateConstructor
 
@@ -2624,25 +2628,55 @@ interface XML {
  */
 interface XMLList {}
 declare const XMLList: XMLList
-type UnitNameAbbrev = 'in' | 'ft' | 'yd'  | 'mi'  | 'mm' | 'cm' | 'm' | 'km' |
-                      'pt' | 'pc' | 'tpt' | 'tpc' | 'ci' | 'px' | '%'
+type UnitNameAbbrev =
+  | "in"
+  | "ft"
+  | "yd"
+  | "mi"
+  | "mm"
+  | "cm"
+  | "m"
+  | "km"
+  | "pt"
+  | "pc"
+  | "tpt"
+  | "tpc"
+  | "ci"
+  | "px"
+  | "%"
 
-type UnitName = UnitNameAbbrev |
-                'inch' | 'inches' |
-                'foot' | 'feet' |
-                'yard' | 'yards' |
-                'mile' | 'miles' |
-                'millimeter' | 'millimeters' |
-                'centimeter' | 'centimeters' |
-                'meter' | 'meters' |
-                'kilometer' | 'kilometers' |
-                'point' | 'points' |
-                'pica' | 'picas' |
-                'traditional point' | 'traditional points' |
-                'traditional pica' | 'traditional picas' |
-                'cicero' | 'ciceros' |
-                'pixel' | 'pixels' |
-                'percent' | 'percent'
+type UnitName =
+  | UnitNameAbbrev
+  | "inch"
+  | "inches"
+  | "foot"
+  | "feet"
+  | "yard"
+  | "yards"
+  | "mile"
+  | "miles"
+  | "millimeter"
+  | "millimeters"
+  | "centimeter"
+  | "centimeters"
+  | "meter"
+  | "meters"
+  | "kilometer"
+  | "kilometers"
+  | "point"
+  | "points"
+  | "pica"
+  | "picas"
+  | "traditional point"
+  | "traditional points"
+  | "traditional pica"
+  | "traditional picas"
+  | "cicero"
+  | "ciceros"
+  | "pixel"
+  | "pixels"
+  | "percent"
+  | "percent"
 
 interface UnitValueConstructor {
   readonly prototype: UnitValue
@@ -2673,7 +2707,7 @@ interface UnitValue {
   /**
    * The unit name.
    */
-  readonly type: UnitNameAbbrev | '?'
+  readonly type: UnitNameAbbrev | "?"
 
   /**
    * The numeric value.
@@ -2696,13 +2730,9 @@ interface UnitValue {
 /**
  * Only for TypeScript compatibility
  */
-interface CallableFunction extends Function {
+interface CallableFunction extends Function {}
 
-}
-
-interface NewableFunction extends Function {
-
-}
+interface NewableFunction extends Function {}
 
 interface IArguments {
   [index: number]: any
