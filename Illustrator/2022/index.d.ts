@@ -2,6 +2,34 @@
 /// <reference path="../../shared/ScriptUI.d.ts" />
 
 /**
+ * Location to move element to.
+ * @see https://ai-scripting.docsforadobe.dev/jsobjref/scripting-constants/?h=elementplacement#elementplacement
+ */
+declare const ElementPlacement: {
+  /**
+   * Inside
+   */
+  readonly INSIDE: Object
+  /**
+   * Place After
+   */
+  readonly PLACEAFTER: Object
+  /**
+   * Place At Beginning
+   */
+  readonly PLACEATBEGINNING: Object
+  /**
+   * Place At End
+   */
+  readonly PLACEATEND: Object
+  /**
+   * Place Before
+   */
+  readonly PLACEBEFORE: Object
+}
+declare type ElementPlacement = typeof ElementPlacement
+
+/**
  * The screen mode.
  */
 declare enum ScreenMode {
@@ -9090,7 +9118,7 @@ declare class Layer {
    * @param relativeObject
    * @param insertionLocation
    */
-  move(relativeObject: object, insertionLocation: any): Layer
+  move(relativeObject: object, insertionLocation: ElementPlacement): Layer
 
   /**
    * Deletes this object.
@@ -9583,7 +9611,7 @@ declare class Symbol {
    * @param relativeObject
    * @param insertionLocation
    */
-  duplicate(relativeObject: object, insertionLocation: any): Symbol
+  duplicate(relativeObject: object, insertionLocation: ElementPlacement): Symbol
 
   /**
    * Deletes this object.
@@ -9876,14 +9904,14 @@ declare class PageItem {
    * @param relativeObject
    * @param insertionLocation
    */
-  duplicate(relativeObject?: object, insertionLocation?: any): PageItem
+  duplicate(relativeObject?: object, insertionLocation?: ElementPlacement): PageItem
 
   /**
    * Move the object.
    * @param relativeObject
    * @param insertionLocation
    */
-  move(relativeObject: object, insertionLocation: any): PageItem
+  move(relativeObject: object, insertionLocation: ElementPlacement): PageItem
 
   /**
    * Deletes this object.
@@ -10166,14 +10194,14 @@ declare class PathItem extends PageItem {
    * @param relativeObject
    * @param insertionLocation
    */
-  duplicate(relativeObject?: object, insertionLocation?: any): PathItem
+  duplicate(relativeObject?: object, insertionLocation?: ElementPlacement): PathItem
 
   /**
    * Move the object.
    * @param relativeObject
    * @param insertionLocation
    */
-  move(relativeObject: object, insertionLocation: any): PathItem
+  move(relativeObject: object, insertionLocation: ElementPlacement): PathItem
 }
 
 /**
@@ -11028,14 +11056,14 @@ declare class TextRange {
    * @param relativeObject
    * @param insertionLocation
    */
-  duplicate(relativeObject: object, insertionLocation: any): TextRange
+  duplicate(relativeObject: object, insertionLocation: ElementPlacement): TextRange
 
   /**
    * Move the object.
    * @param relativeObject
    * @param insertionLocation
    */
-  move(relativeObject: object, insertionLocation: any): TextRange
+  move(relativeObject: object, insertionLocation: ElementPlacement): TextRange
 
   /**
    * Deletes this object.
