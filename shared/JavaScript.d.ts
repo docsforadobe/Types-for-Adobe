@@ -1008,7 +1008,7 @@ interface String {
    * Those values are concatenated with the original string, the result is returned. The original string is not effected.Returns the concatenated string.
    * @param value The values to be concatenated with the given string.
    */
-  concat(...value: string[]): string
+  concat(...value: any[]): string
 
   /**
    * Returns a string consisting of this string enclosed in a <tt> tag.
