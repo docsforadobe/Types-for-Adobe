@@ -1305,7 +1305,7 @@ declare class TrackItem {
   /**
    *
    */
-  readonly start: Time
+  start: Time
 
   /**
    *
