@@ -2698,6 +2698,11 @@ declare class _Control {
   dispatchEvent(): Event
 
   /**
+   * Searches for the named element among the children of this window or container, and returns the object if found.
+   */
+  findElement(name: string): _Control | null
+
+  /**
    * Hides this element.
    */
   hide(): void
