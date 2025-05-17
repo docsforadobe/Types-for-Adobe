@@ -1097,7 +1097,7 @@ interface String {
    * @param delimiter Specifies the string to use for delimiting. If delimiter is omitted, the array returned contains one element, consisting of the entire string.
    * @param limit
    */
-  split(delimiter: string, limit?: number): string[]
+  split(delimiter: string | RegExp, limit?: number): string[]
 
   /**
    * Returns a string consisting of this string enclosed in a <strike> tag.
