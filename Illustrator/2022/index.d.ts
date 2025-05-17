@@ -5,29 +5,28 @@
  * Location to move element to.
  * @see https://ai-scripting.docsforadobe.dev/jsobjref/scripting-constants/?h=elementplacement#elementplacement
  */
-declare const ElementPlacement: {
+declare enum ElementPlacement {
   /**
    * Inside
    */
-  readonly INSIDE: Object
+  INSIDE = "INSIDE",
   /**
    * Place After
    */
-  readonly PLACEAFTER: Object
+  PLACEAFTER = "PLACEAFTER",
   /**
    * Place At Beginning
    */
-  readonly PLACEATBEGINNING: Object
+  PLACEATBEGINNING = "PLACEATBEGINNING",
   /**
    * Place At End
    */
-  readonly PLACEATEND: Object
+  PLACEATEND = "PLACEATEND",
   /**
    * Place Before
    */
-  readonly PLACEBEFORE: Object
+  PLACEBEFORE = "PLACEBEFORE",
 }
-declare type ElementPlacement = typeof ElementPlacement
 
 /**
  * The screen mode.
