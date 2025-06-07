@@ -50,6 +50,11 @@ interface $ {
   _PPP_: any
 }
 
+interface Collection<T> {
+  readonly length: number
+  readonly [index: number]: T
+}
+
 /**
  * Structure containing sequence settings.
  */
@@ -606,7 +611,7 @@ declare class ProjectManager {
 /**
  *
  */
-declare class SequenceCollection {
+interface SequenceCollection extends Collection<Sequence> {
   /**
    *
    */
@@ -626,11 +631,6 @@ declare class SequenceCollection {
    *
    */
   unbind(eventName: string): void
-
-  /**
-   *
-   */
-  [index: number]: Sequence
 }
 
 /**
@@ -1217,7 +1217,7 @@ declare class Track {
  *
  */
 
-declare class ComponentCollection {
+interface ComponentCollection extends Collection<Component> {
   /**Number of items
    *
    */
@@ -1226,11 +1226,6 @@ declare class ComponentCollection {
    *
    */
   readonly length: number;
-
-  /**
-   *
-   */
-  [index: number]: Component
 }
 declare class Component {
   /**
@@ -1647,7 +1642,7 @@ declare class ProjectItem {
 /**
  *
  */
-declare class ProjectCollection {
+interface ProjectCollection extends Collection<Project> {
   /**
    *
    */
@@ -1667,17 +1662,12 @@ declare class ProjectCollection {
    *
    */
   unbind(eventName: string): void
-
-  /**
-   *
-   */
-  [index: number]: Project
 }
 
 /**
  *
  */
-declare class ProjectItemCollection {
+interface ProjectItemCollection extends Collection<ProjectItem> {
   /**
    *
    */
@@ -1697,17 +1687,12 @@ declare class ProjectItemCollection {
    *
    */
   unbind(eventName: string): void
-
-  /**
-   *
-   */
-  [index: number]: ProjectItem
 }
 
 /**
  *
  */
-declare class TrackCollection {
+interface TrackCollection extends Collection<Track> {
   /**
    *
    */
@@ -1727,17 +1712,12 @@ declare class TrackCollection {
    *
    */
   unbind(eventName: string): void
-
-  /**
-   *
-   */
-  [index: number]: Track
 }
 
 /**
  *
  */
-declare class TrackItemCollection {
+interface TrackItemCollection extends Collection<TrackItem> {
   /**Number of items
    *
    */
@@ -1757,11 +1737,6 @@ declare class TrackItemCollection {
    *
    */
   unbind(eventName: string): void
-
-  /**
-   *
-   */
-  [index: number]: TrackItem
 }
 
 /**
@@ -1847,7 +1822,7 @@ declare class Csxs {
 /**
  *
  */
-declare class RemoteProductionCollection {
+interface RemoteProductionCollection extends Collection<RemoteProduction> {
   /**
    *
    */
@@ -2013,12 +1988,9 @@ declare class Encoder {
 /**
  *
  */
-declare class ComponentParamCollection {
+interface ComponentParamCollection extends Collection<ComponentParam> {
   /** Number of items */
   readonly numItems: number
-
-  /** Number of items */
-  readonly length: number
 
   bind(eventName: string, function_: any): void
   clearProperty(propertyKey: string): void
@@ -2034,7 +2006,6 @@ declare class ComponentParamCollection {
 
   setTimeout(eventName: string, function_: any, milliseconds: number): void
   unbind(eventName: string): void
-  [index: number]: ComponentParam
   getParamForDisplayName(paramName: string): ComponentParam | null
 }
 
@@ -2353,7 +2324,7 @@ declare class Application {
 /**
  *
  */
-declare class MarkerCollection {
+interface MarkerCollection extends Collection<Marker> {
   /**
    *
    */
@@ -2403,11 +2374,6 @@ declare class MarkerCollection {
    *
    */
   unbind(eventName: string): void
-
-  /**
-   *
-   */
-  [index: number]: Marker
 }
 
 /**
