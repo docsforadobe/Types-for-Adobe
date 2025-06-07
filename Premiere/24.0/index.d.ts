@@ -27,24 +27,46 @@ declare enum WorkAreaType {
   ENCODE_WORK_AREA = 2,
 }
 
-declare enum TIME_FORMAT {
-  TIMEDISPLAY_24Timecode = 100,
-  TIMEDISPLAY_25Timecode = 101,
-  TIMEDISPLAY_2997DropTimecode = 102,
-  TIMEDISPLAY_2997NonDropTimecode = 103,
-  TIMEDISPLAY_30Timecode = 104,
-  TIMEDISPLAY_50Timecode = 105,
-  TIMEDISPLAY_5994DropTimecode = 106,
-  TIMEDISPLAY_5994NonDropTimecode = 107,
-  TIMEDISPLAY_60Timecode = 108,
-  TIMEDISPLAY_Frames = 109,
-  TIMEDISPLAY_23976Timecode = 110,
-  TIMEDISPLAY_16mmFeetFrames = 111,
-  TIMEDISPLAY_35mmFeetFrames = 112,
-  TIMEDISPLAY_48Timecode = 113,
-  TIMEDISPLAY_AudioSamplesTimecode = 200,
-  TIMEDISPLAY_AudioMsTimecode = 201,
-}
+/**
+ * Video time display formats.
+ */
+type VideoTimeDisplay  =
+  | 100 /** TIMEDISPLAY_24Timecode: Timecode 24 fps. */
+  | 101 /** TIMEDISPLAY_25Timecode: Timecode 25 fps. */
+  | 102 /** TIMEDISPLAY_2997DropTimecode: Timecode 29.97 fps, drop frame. */
+  | 103 /** TIMEDISPLAY_2997NonDropTimecode: Timecode 29.97 fps, non-drop frame. */
+  | 104 /** TIMEDISPLAY_30Timecode: Timecode 30 fps. */
+  | 105 /** TIMEDISPLAY_50Timecode: Timecode 50 fps. */
+  | 106 /** TIMEDISPLAY_5994DropTimecode: Timecode 59.94 fps, drop frame. */
+  | 107 /** TIMEDISPLAY_5994NonDropTimecode: Timecode 59.94 fps, non-drop frame. */
+  | 108 /** TIMEDISPLAY_60Timecode: Timecode 60 fps. */
+  | 109 /** TIMEDISPLAY_Frames: Frames. */
+  | 110 /** TIMEDISPLAY_23976Timecode: Timecode 23.976 fps. */
+  | 111 /** TIMEDISPLAY_16mmFeetFrames: 16mm Feet+Frames. */
+  | 112 /** TIMEDISPLAY_35mmFeetFrames: 35mm Feet+Frames. */
+  | 113 /** TIMEDISPLAY_48Timecode: Timecode 48 fps. */
+
+type AudioTimeDisplay  =
+  | 200 /** TIMEDISPLAY_AudioSamplesTimecode: Audio Samples. */
+  | 201 /** TIMEDISPLAY_AudioMsTimecode: Audio Milliseconds. */;
+
+/**
+ * @See {@link VideoTimeDisplay} and {@link AudioTimeDisplay}
+ */
+type TIME_FORMAT =
+  | VideoTimeDisplay
+  | AudioTimeDisplay
+
+type InterpolationType =
+  | 0 /** KF_Interp_Mode_Linear */
+  | 1 /** kfInterpMode_EaseIn_Obsolete */
+  | 2 /** kfInterpMode_EaseOut_Obsolete */
+  | 3 /** kfInterpMode_EaseInEaseOut_Obsolete */
+  | 4 /** KF_Interp_Mode_Hold */
+  | 5 /** KF_Interp_Mode_Bezier */
+  | 6 /** KF_Interp_Mode_Time */
+  | 7 /** kfInterpMode_TimeTransitionStart */
+  | 8 /** kfInterpMode_TimeTransitionEnd */
 
 interface $ {
   _PPP_: any
@@ -55,13 +77,81 @@ interface Collection<T> {
   readonly [index: number]: T
 }
 
+declare class Properties {
+  clearProperty(propertyKey: string): void;
+  doesPropertyExist(propertyKey: string): boolean;
+  getProperty(propertyKey: string): any;
+  isPropertyReadOnly(propertyKey: string): boolean;
+  setProperty(
+    property: string,
+    value: any,
+    persistent?: number,
+    createIfNotExist?: boolean,
+  ): void;
+}
+
+declare class AudioChannelMapping {
+  readonly audioChannelsType: number;
+  readonly audioClipsNumber: number;
+  setMappingForChannel(channelIndex: number, sourceChannelIndex: number): boolean;
+}
+
+interface FootageInterpretation {
+  alphaUsage: number;
+  fieldType: number;
+  ignoreAlpha: boolean;
+  invertAlpha: boolean;
+  frameRate: number;
+  pixelAspectRatio: number;
+  removePulldown: boolean;
+  vrConformProjectionType: number;
+  vrLayoutType: number;
+  vrHorizontalView: number;
+  vrVerticalView: number;
+}
+
+/**
+ * ColorSpaceObject exposes various helpful scripting functions which are useful when working with color spaces
+ */
+declare class ColorSpace {
+  /**
+   * Is the color space empty
+   */
+  readonly empty: boolean;
+
+  /**
+   * Is the color space scene referred
+   */
+  readonly isSceneReferred: boolean;
+
+  /**
+   * The color matrix equation code associated with the color space
+   */
+  readonly matrixEquation: number;
+
+  /**
+   * The name of the associated color space
+   */
+  readonly name: string;
+
+  /**
+   * The color primaries code associated with the color space
+   */
+  readonly primaries: number;
+
+  /**
+   * The color transfer characteristic code associated with the color space
+   */
+  readonly transferCharacteristic: number;
+}
+
 /**
  * Structure containing sequence settings.
  */
 declare class SequenceSettings {
   audioChannelCount: number
   audioChannelType: number
-  audioDisplayFormat: number
+  audioDisplayFormat: AudioTimeDisplay
   audioSampleRate: Time
   compositeLinearColor: boolean
   editingMode: String
@@ -71,7 +161,7 @@ declare class SequenceSettings {
   previewFileFormat: String
   previewFrameHeight: number
   previewFrameWidth: number
-  videoDisplayFormat: number
+  videoDisplayFormat: VideoTimeDisplay
   videoFieldType: number
   videoFrameRate: Time
   videoFrameHeight: number
@@ -128,6 +218,12 @@ declare class Sequence {
    *
    */
   sequenceSettings: SequenceSettings
+
+  /**
+   * The audio display format of the sequence. Will be one of the following:
+   * @See {@link AudioTimeDisplay}
+   */
+  audioDisplayFormat: AudioTimeDisplay;
 
   /**
    * A collection of the sequence's audio tracks.
@@ -223,6 +319,11 @@ declare class Sequence {
   clone(): Sequence
 
   /**
+   * Closes the sequence.
+   */
+  close(): boolean;
+
+  /**
    * Creates a caption track in the active sequence using caption data from a project item.
    * @param projectItem A captions source clip (e.g. .srt)
    * @param startAtTime Offset in seconds from start of sequence
@@ -296,16 +397,16 @@ declare class Sequence {
   getPlayerPosition(): Time
 
   /**
-   * Sets the in point of the sequence.
-   * @param seconds Time of in point.
+   * Sets the in point of the sequence to the specified time.
+   * @param time Time of in point. Can be given as a number in seconds, a string representing ticks, or a {@link Time} object.
    */
-  setInPoint(seconds: number): void
+  setInPoint(time: number | string | Time): null
 
   /**
    * Sets the out point of the sequence.
-   * @param seconds Time of out point.
+   * @param seconds Time of out point. Can be given as a number in seconds, a string representing ticks, or a {@link Time} object.
    */
-  setOutPoint(seconds: number): void
+  setOutPoint(time: number | string | Time): null
 
   /**
    * Sets the current player position.
@@ -352,6 +453,17 @@ declare class Sequence {
   ): TrackItem
 
   /**
+   * Imports a Motion Graphics Template (.mogrt) from a Creative Cloud Library.
+   * @param libraryName The name of Library (from the current PPro user’s Creative Cloud Libraries).
+   * @param mgtName The name of .mogrt within that library.
+   * @param time The time at which to insert .mogrt, in ticks.
+   * @param vidTrackOffset How many tracks from the zero-th video track, into which to insert .mogrt content.
+   * @param audTrackOffset How many tracks from the zero-th audio track, into which to insert .mogrt content.
+   * @returns newly-created {@link TrackItem} representing the .mogrt
+   */
+  importMGTFromLibrary(libraryName: string, mgtName: string, time: string, vidTrackOffset: number, audTrackOffset: number): TrackItem;
+
+  /**
    * Returns `true` if work area is enabled.
    */
   isWorkAreaEnabled(): Boolean
@@ -369,9 +481,9 @@ declare class Sequence {
 
   /**
    * Specify the work area in point, in seconds.
-   * @param timeInSeconds new in point time.
+   * @param time new in point time. Can be given as a number in seconds, a string representing ticks, or a {@link Time} object.
    */
-  setWorkAreaInPoint(timeInSeconds: number): void
+  setWorkAreaInPoint(time: number | string | Time): null
 
   /**
    * Returns the work area out point, in seconds.
@@ -380,9 +492,9 @@ declare class Sequence {
 
   /**
    * Specify the work area out point, in seconds.
-   * @param timeInSeconds new out point time.
+   * @param time new out point time. Can be given as a number in seconds, a string representing ticks, or a {@link Time} object.
    */
-  setWorkAreaOutPoint(timeInSeconds: number): void
+  setWorkAreaOutPoint(tme: number | string | Time): null
 
   /**
    * @returns the work area in point, as a `Time` object.
@@ -390,19 +502,9 @@ declare class Sequence {
   getWorkAreaInPointAsTime(): Time
 
   /**
-   * Specify the work area in point, as `Time`.
-   */
-  setWorkAreaInPointAsTime(outPoint: Time): void
-
-  /**
    * @returns the work area out point, as a `Time` object.
    */
   getWorkAreaOutPointAsTime(): Time
-
-  /**
-   * Specify the work area out point, as `Time`.
-   */
-  setWorkAreaOutPointAsTime(outPoint: Time): void
 
   /**
    * Inserts a clip (`trackItem`) into the sequence.
@@ -417,6 +519,15 @@ declare class Sequence {
     vidTrackOffset: number,
     audTrackOffset: number,
   ): TrackItem
+
+  /**
+   * Overwrites a clip into the sequence.
+   * @param projectItem A project item from which to get media.
+   * @param time The time at which to add project item. Can be given as a number in seconds, a string representing ticks, or a {@link Time} object.
+   * @param vTrackIndex The (zero-based) track index, into which to insert video.
+   * @param aTrackIndex The (zero-based) track index, into which to insert audio.
+   */
+  overwriteClip(projectItem: ProjectItem, time: string|number|Time, vTrackIndex: number, aTrackIndex: number): boolean;
 
   /**
    * @returns currently-selected clips, as an `Array` of `trackItems`
@@ -803,6 +914,11 @@ declare class SourceMonitor {
   openFilePath(filePath: string): boolean
 
   /**
+   * @returns 0 if successful
+   */
+  openProjectItem(itemToOpen: ProjectItem): void
+
+  /**
    *
    */
   play(speed?: number): void
@@ -823,9 +939,9 @@ declare class SourceMonitor {
   getPosition(): Time
 
   /**
-   *
+   * Returns project item if successful, null if not.
    */
-  openProjectItem(itemToOpen: ProjectItem): void
+  getProjectItem(): ProjectItem | null;
 }
 
 /**
@@ -848,9 +964,15 @@ declare class Time {
   bind(eventName: string, function_: any): void
 
   /**
-   *
+   * @param Time A Time object to compare against.
+   * @param timeFormat See {@link VideoTimeDisplay} and {@link AudioTimeDisplay}
    */
   getFormatted(Time: Time, timeFormat: TIME_FORMAT): String
+
+  /**
+   * Sets the Time object to a time in seconds, resulting from dividing the numerator by the denominator.
+   */
+  setSecondsAsFraction(numerator: number, denominator: number): boolean;
 
   /**
    *
@@ -913,9 +1035,19 @@ declare class Project {
   activeSequence: Sequence
 
   /**
+   * The ID of the cloud project.
+   */
+  readonly cloudProjectlocalID: string;
+
+  /**
    *
    */
   readonly documentID: string
+
+  /**
+   * Whether the project is a cloud project.
+   */
+  readonly isCloudProject: boolean;
 
   /**
    *
@@ -940,10 +1072,18 @@ declare class Project {
    */
   readonly sequences: SequenceCollection
 
-  /**
-   *
+/**
+   * Adds a property to the project metadata schema.
+   * @param name A name for the property to be added.
+   * @param label A label for the property to be added.
+   * @param type The type of the property. Must be one of the following:
+   *             `0` (Integer),
+   *             `1` (Real),
+   *             `2` (String),
+   *             `3` (Boolean)
+   * @returns `true` if the property was successfully added, `false` if it failed, or `undefined` if the operation is not supported or an error occurred.
    */
-  addPropertyToProjectMetadataSchema(name: string, label: string, type: number): boolean
+  addPropertyToProjectMetadataSchema(name: string, label: string, type: 0 | 1 | 2 | 3): boolean | undefined
 
   /**
    *
@@ -953,7 +1093,7 @@ declare class Project {
   /**
    *
    */
-  closeDocument(): boolean
+  closeDocument(saveFirst?: number, promptIfDirty?: number): boolean
 
   /**
    *
@@ -1026,6 +1166,41 @@ declare class Project {
    *
    */
   getProjectPanelMetadata(): string
+
+  /**
+   * Returns the path to the location to which shared files are to be copied.
+   */
+  getSharedLocation(): string;
+
+  /**
+   * Determines whether copying to a shared location is enabled, for this project.
+   */
+  isSharedLocationCopyEnabled(): boolean;
+
+  /**
+   * Creates a media clip containing bars and tone.
+   * @param name Name of the new clip
+   * @returns `true` if successful
+   */
+  newBarsAndTone(p0: number, p1: number, p2: number, p3: number, p4: number, p5: number, name: string): boolean;
+  newBarsAndTone(): boolean;
+
+  /**
+   *
+   */
+  newSequence(name: string, pathToSequencePreset: string): Sequence;
+
+  /**
+   * Controls the enablement of transcode-upon-ingest behavior, for the given project.
+   * @param state The desired state.
+   */
+  setEnableTranscodeOnIngest(state: boolean): boolean;
+
+  /**
+   * Changes the specified scratch disk path to a new path
+   * @returns 0 if unsuccessful
+   */
+  setScratchDiskPath(newPath: string, whichScratchDiskPath: ScratchDiskType): boolean;
 
   /**
    *
@@ -1222,30 +1397,36 @@ interface ComponentCollection extends Collection<Component> {
    *
    */
   readonly numItems: number
-  /**Number of items
-   *
-   */
-  readonly length: number;
+
 }
+
 declare class Component {
   /**
    *
    */
   readonly displayName: string
+
+  /**
+	 * 
+	 */
+	readonly instanceName: string;
+
   /**
    *
    */
   readonly matchName: string
+
   /**
    *
    */
   readonly properties: ComponentParamCollection
 }
+
 declare class TrackItem {
   /**
    *
    */
-  readonly components: any
+  readonly components: ComponentCollection
 
   /**
    *
@@ -1271,6 +1452,11 @@ declare class TrackItem {
    *
    */
   outPoint: Time
+
+  /**
+   *
+   */
+  readonly matchName: string;
 
   /**
    *
@@ -1320,6 +1506,16 @@ declare class TrackItem {
   /**
    *
    */
+  getMatchName(): string;
+
+  /**
+	 * 
+	 */
+	isMGT(): boolean;
+
+  /**
+   *
+   */
   isSelected(): boolean
 
   /**
@@ -1358,9 +1554,10 @@ declare class TrackItem {
   getColorSpace(): String
 
   /**
-   *
+   * Move the track item by the specified time along the track. It will not move any linked media (like linked audio)
+   * @param time Can be given as a number in seconds, a string representing ticks, or a {@link Time} object.
    */
-  move(seconds: number): boolean
+  move(time: Time|number|string): boolean
 
   /**
    *
@@ -1395,6 +1592,11 @@ declare class ProjectItem {
   /**
    *
    */
+  readonly teamProjectsAssetId: string;
+
+  /**
+   *
+   */
   readonly treePath: string
 
   /**
@@ -1403,9 +1605,9 @@ declare class ProjectItem {
   readonly type: number
 
   /**
-   *
+   * @See {@link VideoTimeDisplay} and {@link AudioTimeDisplay}
    */
-  timeDisplayFormat: number
+  timeDisplayFormat: TIME_FORMAT
 
   /**
    *
@@ -1479,6 +1681,56 @@ declare class ProjectItem {
    *
    */
   findItemsMatchingMediaPath(matchString: string, ignoreSubclips?: number): void
+
+  /**
+   *
+   */
+  getAudioChannelMapping(): AudioChannelMapping;
+
+  /**
+   *
+   */
+  getOverrideColorSpaceList(): Array<ColorSpace>;
+
+  /**
+   *
+   */
+  isOffline(): boolean;
+
+  /**
+   *
+   */
+  setOffline(): boolean;
+
+  /**
+   *
+   */
+  getFootageInterpretation(): FootageInterpretation;
+
+  /**
+   *
+   */
+  setFootageInterpretation(interpretation: FootageInterpretation): boolean;
+
+  /**
+   *
+   */
+  getOriginalColorSpace(): ColorSpace;
+
+  /**
+   *
+   */
+  getProjectColumnsMetadata(): string;
+
+  /**
+   *
+   */
+  getEmbeddedLUTID(): string;
+
+  /**
+   *
+   */
+  getInputLUTID(): string;
 
   /**
    *
@@ -1629,9 +1881,9 @@ declare class ProjectItem {
   getInPoint(): Time
 
   /**
-   *
+   * @param mediaType Optional: 1 for video only, 2 for audio only, none for all media
    */
-  getOutPoint(): Time
+  getOutPoint(mediaType?: number): Time
 
   /**
    *
@@ -1992,44 +2244,76 @@ interface ComponentParamCollection extends Collection<ComponentParam> {
   /** Number of items */
   readonly numItems: number
 
-  bind(eventName: string, function_: any): void
-  clearProperty(propertyKey: string): void
-  doesPropertyExist(propertyKey: string): boolean
-  getProperty(propertyKey: string): any
-  isPropertyReadOnly(propertyKey: string): boolean
-  setProperty(
-    propertyKey: string,
-    propertyValue: any,
-    permanenceValue: number,
-    allowCreateNewProperty: boolean,
-  ): void
-
-  setTimeout(eventName: string, function_: any, milliseconds: number): void
-  unbind(eventName: string): void
   getParamForDisplayName(paramName: string): ComponentParam | null
 }
 
 declare class ComponentParam {
   readonly displayName: string
-  addKey(): boolean
+  /**
+   * Adds a keyframe at the specified time. You must use the time within the clip, not the sequence.
+   * @param time Can be a {@link Time} object, a number for seconds, or a string for ticks
+   * @param updateUI If `true`, the UI will be updated after adding the keyframe.
+   */
+  addKey(time: Time|number|string, updateUI?: boolean): boolean
+
   areKeyframesSupported(): boolean
-  findNearestKey(): object
-  findNextKey(): object
-  findPreviousKey(): object
+
+  /**
+   * Gets the time of the nearest keyframe to the specified time, within the given threshold. You must use the time within the clip, not the sequence.
+   * @param timeToCheck Can be a {@link Time} object, a number for seconds, or a string for ticks
+   * @param threshold Can be a {@link Time} object, a number for seconds, or a string for ticks
+   * @returns A {@link Time} object representing the nearest keyframe, or `undefined` if no keyframe is found within the threshold.
+   */
+  findNearestKey(timeToCheck: Time|string|number, threshold: Time|string|number): Time | undefined
+
+  findNextKey(timeToCheck: Time|string|number): Time | undefined
+  findPreviousKey(timeToCheck: Time|string|number): Time
   getColorValue(): any[]
-  getKeys(): any[]
+
+  /**
+   * Get the time of all keys in the component parameter.
+   * @returns An array of {@link Time} objects representing the times of all keys, or `undefined` if there are no keys or it's not time-varying.
+   */
+  getKeys(): Time[] | undefined
+
+  /**
+   * Gets the value of the component parameter. It may be a single value or an array of values, depending on the parameter type.
+   */
   getValue(): any
+
   getValueAtKey(time: Time): any
-  getValueAtTime(): any
+  getValueAtTime(time: Time): any
   isEmpty(): boolean
+
   isTimeVarying(): boolean
-  keyExistsAtTime(): boolean
-  removeKey(): boolean
+  /**
+   * Checks if a key exists at the specified time. You must use the time within the clip, not the sequence.
+   * @param time Can be a {@link Time} object, a number for seconds, or a string for ticks
+   * @returns `true` if a key exists at the specified time, `false` otherwise.
+   */
+  keyExistsAtTime(time: Time|number|string): boolean
+
+  removeKey(time: Time): boolean
   removeKeyRange(start: Time, end: Time): boolean
   setColorValue(p0: number, p1: number, p2: number, p3: number, p4: boolean): boolean
-  setInterpolationTypeAtKey(): boolean
+
+  /**
+   * Set the interpolation type for a keyframe at the specified time.
+   * @param interpolationType See {@link InterpolationType}
+   * @param updateUI If `true`, the UI will be updated after setting the interpolation type.
+   */
+  setInterpolationTypeAtKey(time: Time, interpolationType: InterpolationType, updateUI?: boolean): boolean
+
   setTimeVarying(setTimeVarying: boolean, p1?: boolean): boolean
   setValue(value: any, updateUI?: boolean | number): boolean
+
+  /**
+   * Sets the keyframe value of a the component parameter at a specific time. A keyframe must already exist at that time.
+   * Check using {@link areKeyframesSupported()} before calling this method. And a keyframe can be added using {@link addKey()}.
+   * @param time 
+   * @param value New value to set at the keyframe
+   * @param updateUI 1 to update the UI after setting the value, 0 to not update the UI
+   */
   setValueAtKey(time: Time, value: any, updateUI?: boolean | number): boolean
 }
 /**
@@ -2044,7 +2328,17 @@ declare class PrProduction {
   /**
    *
    */
+  readonly path: string;
+
+  /**
+   *
+   */
   projects: ProjectCollection
+
+  /**
+   *
+   */
+  addProject(srcProjectPath: string, destProjectPath: string): boolean;
 
   /**
    *
@@ -2130,7 +2424,22 @@ declare class Application {
   /**
    *
    */
+  readonly learnPanelContentDirPath: string;
+
+  /**
+   *
+   */
+  readonly learnPanelExampleProjectDirPath: string;
+
+  /**
+   *
+   */
   readonly metadata: Metadata
+
+  /**
+   *
+   */
+  readonly path: string;
 
   /**
    * This is the current active project.
@@ -2145,7 +2454,7 @@ declare class Application {
   /**
    *
    */
-  readonly properties: ComponentParamCollection
+  readonly properties: Properties
 
   /**
    *
@@ -2179,6 +2488,11 @@ declare class Application {
   getEnableProxies(): number
 
   /**
+   * Gets an arra of ProjectItem objects that are currently selected in the Project panel.
+   */
+  getCurrentProjectViewSelection(): Array<ProjectItem> | undefined;
+
+  /**
    * Checks whether file specified is a doc
    * @param filePath This is the path to be checked
    * @returns true if the document at that path is openable as a PPro project
@@ -2210,7 +2524,7 @@ declare class Application {
   /**
    *
    */
-  openFCPXML(): boolean
+  openFCPXML(path: string, projPath: string): boolean
 
   /**
    *
@@ -2293,7 +2607,7 @@ declare class Application {
   /**
    *
    */
-  trace(message: string): void
+  trace(message: string): boolean
 
   /**
    *
@@ -2338,32 +2652,33 @@ interface MarkerCollection extends Collection<Marker> {
   /**
    *
    */
+  createMarker(time: number): Marker
   createMarker(start: number, name: string, duration: number, comments: string): Marker
 
   /**
    *
    */
-  deleteMarker(marker: Marker): void
+  deleteMarker(marker: Marker): boolean
 
   /**
    *
    */
-  getFirstMarker(): Marker
+  getFirstMarker(): Marker | undefined
 
   /**
    *
    */
-  getLastMarker(): Marker
+  getLastMarker(): Marker | undefined
 
   /**
    *
    */
-  getNextMarker(marker: Marker): Marker
+  getNextMarker(marker: Marker): Marker | undefined
 
   /**
    *
    */
-  getPrevMarker(marker: Marker): Marker
+  getPrevMarker(marker: Marker): Marker | undefined
 
   /**
    *
@@ -2464,6 +2779,198 @@ declare class Marker {
    *
    */
   unbind(eventName: string): void
+}
+
+/**
+ * FrameRate class
+ */
+declare class FrameRate {
+	/**
+	 * Read|Write property to get|set ticks per frame.
+	 */
+	ticksPerFrame: number;
+
+	/**
+	 * Get the number of frames per second.
+	 */
+	readonly value: number;
+
+	/**
+	 * Constructs a FrameRateObject object
+	 */
+	constructor();
+
+	/**
+	 * 
+	 */
+	static createWithValue(p0: number): FrameRate;
+}
+
+/**
+ * TimeDisplay class
+ */
+declare class TimeDisplay {
+	/**
+	 * Read|Write property to get|set the time display custom frames per second value
+	 */
+	customFPS: number;
+
+	/**
+	 * Read|Write property to get|set the time display type numeric code
+   * @see {@link VideoTimeDisplay} and {@link AudioTimeDisplay}
+	 */
+	type: TIME_FORMAT;
+
+	/**
+	 * Constructs a TimeDisplay object
+	 */
+	constructor();
+
+}
+
+/**
+ * TickTime class
+ */
+declare class TickTime {
+	/**
+	 * Invalid Tick Time Constant
+	 */
+	static readonly TIME_INVALID: TickTime;
+
+	/**
+	 * Max Tick Time Constant
+	 */
+	static readonly TIME_MAX: TickTime;
+
+	/**
+	 * Min Tick Time Constant
+	 */
+	static readonly TIME_MIN: TickTime;
+
+	/**
+	 * One Hour Tick Time Constant
+	 */
+	static readonly TIME_ONE_HOUR: TickTime;
+
+	/**
+	 * One Second Tick Time Constant
+	 */
+	static readonly TIME_ONE_MINUTE: TickTime;
+
+	/**
+	 * One Second Tick Time Constant
+	 */
+	static readonly TIME_ONE_SECOND: TickTime;
+
+	/**
+	 * Zero Tick Time Constant
+	 */
+	static readonly TIME_ZERO: TickTime;
+
+	/**
+	 * Get the TickTime in seconds
+	 */
+	readonly seconds: number;
+
+	/**
+	 * Get the TickTime in ticks as a string
+	 */
+	readonly ticks: string;
+
+	/**
+	 * Get the TickTime in ticks as a number
+	 */
+	readonly ticksNumber: number;
+
+	/**
+	 * Constructs a TickTime object
+	 */
+	constructor();
+
+	/**
+	 * 
+	 * @param tickTime Add another TickTime to this one and return it. This TickTime is not modified.
+	 */
+	add(tickTime: TickTime): TickTime;
+
+	/**
+	 * 
+	 * @param FrameRate alignToFrame will return a TickTime that is aligned to the nearest frame boundary less than the given time for a given frame rate by rounding any fractional portion.
+	 */
+	alignToFrame(FrameRate: object): TickTime;
+
+	/**
+	 * 
+	 * @param FrameRate AlignToNearestFrame will return a TickTime that is aligned to the nearest frame boundary greater than or less than the given time for a given frame rate by rounding any fractional portion.
+	 */
+	alignToNearestFrame(FrameRate: object): TickTime;
+
+	/**
+	 * 
+	 * @param frameRate Constructs a TickTime object with a frame and a frame rate.
+	 */
+	static createWithFrameAndFrameRate(frameCount: number, frameRate: FrameRate): TickTime;
+
+	/**
+	 * 
+	 * @param seconds Constructs a TickTime object with seconds.
+	 */
+	static createWithSeconds(seconds: number): TickTime;
+
+	/**
+	 * 
+	 * @param ticks Constructs a TickTime object with ticks as a string.
+	 */
+	static createWithTicks(ticks: string): TickTime;
+
+	/**
+	 * 
+	 * @param ticksNumber Constructs a TickTime object with ticks as a number.
+	 */
+	static createWithTicksNumber(ticksNumber: number): TickTime;
+
+	/**
+	 * 
+	 * @param divisor Divide this TickTime by a divisor and return it. In case of a division by zero TIME_INVALID is returned. This TickTime is not modified.
+	 */
+	divide(divisor: number): TickTime;
+
+	/**
+	 * 
+	 * @param TickTime Returns true if the given TickTime is equal to the TickTime object
+	 */
+	equals(TickTime: object): boolean;
+
+	/**
+	 * 
+	 * @param factor Multiply this TickTime with a factor and return it. This TickTime is not modified.
+	 */
+	multiply(factor: number): TickTime;
+
+	/**
+	 * 
+	 * @param tickTime Subtract another TickTime from this one and return it. This TickTime is not modified.
+	 */
+	subtract(tickTime: TickTime): TickTime;
+
+	/**
+	 * 
+	 * @param TimeDisplay Convert a TickTime to a string using the current display format
+	 */
+	static timeToTimecode(TickTime: TickTime, FrameRate: object, TimeDisplay: TimeDisplay): string;
+
+	/**
+	 * 
+	 * @param TimeDisplay Convert a timecode string to a TickTime using the current display format
+	 */
+	static timecodeToTime(TimecodeString: string, FrameRate: object, TimeDisplay: TimeDisplay): TickTime;
+
+	/**
+	 * 
+	 * @param frameRate Convert the TickTime to a frame number with respect to the provided frame rate.
+	 */
+	toFrame(frameRate: FrameRate): number;
+
 }
 
 /**
