@@ -320,6 +320,12 @@ declare enum AlphaMode {
   STRAIGHT = 5412,
 }
 
+declare enum AutoKernType {
+  NO_AUTO_KERN = 11412,
+  METRIC_KERN = 11413,
+  OPTICAL_KERN = 11414,
+}
+
 declare enum AutoOrientType {
   /** Layer faces in the direction of the motion path. */
   ALONG_PATH = 4213,
@@ -332,6 +338,12 @@ declare enum AutoOrientType {
 
   /** Layer rotates freely, independent of any motion path, point of interest, or other layers. */
   NO_AUTO_ORIENT = 4212,
+}
+
+declare enum BaselineDirection {
+  BASELINE_WITH_STREAM = 11612,
+  BASELINE_VERTICAL_ROTATED = 11613,
+  BASELINE_VERTICAL_CROSS_STREAM = 11614,
 }
 
 declare enum BlendingMode {
@@ -375,6 +387,32 @@ declare enum BlendingMode {
   VIVID_LIGHT = 5230,
 }
 
+declare enum BoxAutoFitPolicy {
+  NONE = 13412,
+  HEIGHT_CURSOR = 13413,
+  HEIGHT_PRECISE_BOUNDS = 13414,
+  HEIGHT_BASELINE = 13415,
+}
+
+declare enum BoxFirstBaselineAlignment {
+  ASCENT = 13013,
+  CAP_HEIGHT = 13014,
+  EM_BOX = 13017,
+  LEADING = 13015,
+  LEGACY_METRIC = 13018,
+  MINIMUM_VALUE_ASIAN = 13019,
+  MINIMUM_VALUE_ROMAN = 13012,
+  TYPO_ASCENT = 13020,
+  X_HEIGHT = 13016,
+}
+
+declare enum BoxVerticalAlignment {
+  TOP = 12812,
+  CENTER = 12813,
+  BOTTOM = 12814,
+  JUSTIFY = 12815,
+}
+
 declare enum ChannelType {
   CHANNEL_ALPHA = 7816,
   CHANNEL_ALPHA_BOUNDARY = 7822,
@@ -400,6 +438,135 @@ declare enum CloseOptions {
   SAVE_CHANGES = 1214,
 }
 
+declare enum ComposerEngine {
+  LATIN_CJK_ENGINE = 10412,
+  UNIVERSAL_TYPE_ENGINE = 10413,
+}
+
+declare enum DigitSet {
+  DEFAULT_DIGITS = 12012,
+  ARABIC_DIGITS = 12013,
+  HINDI_DIGITS = 12014,
+  FARSI_DIGITS = 12015,
+  ARABIC_DIGITS_RTL = 12016,
+}
+
+declare enum CTFontType {
+  CT_TYPE1_FONTTYPE = 12612,
+  CT_TRUETYPE_FONTTYPE = 12613,
+  CT_CID_FONTTYPE = 12614,
+  CT_ATC_FONTTYPE = 12615,
+  CT_BITMAP_FONTTYPE = 12616,
+  CT_OPENTYPE_CFF_FONTTYPE = 12617,
+  CT_OPENTYPE_CID_FONTTYPE = 12618,
+  CT_OPENTYPE_TT_FONTTYPE = 12619,
+  CT_TYPE3_FONTTYPE = 12620,
+  CT_SVG_FONTTYPE = 12621,
+}
+
+declare enum CTFontTechnology {
+  CT_TYPE1_FONT = 12412,
+  CT_TRUETYPE_FONT = 12413,
+  CT_CID_FONT = 12414,
+  CT_BITMAP_FONT = 12415,
+  CT_ATC_FONT = 12416,
+  CT_TYPE3_FONT = 12417,
+  CT_SVG_FONT = 12418,
+  CT_ANYTECHNOLOGY = 12419,
+}
+
+declare enum CTScript {
+  CT_ROMAN_SCRIPT = 12212,
+  CT_JAPANESE_SCRIPT = 12213,
+  CT_TRADITIONALCHINESE_SCRIPT = 12214,
+  CT_KOREAN_SCRIPT = 12215,
+  CT_ARABIC_SCRIPT = 12216,
+  CT_HEBREW_SCRIPT = 12217,
+  CT_GREEK_SCRIPT = 12218,
+  CT_CYRILLIC_SCRIPT = 12219,
+  CT_RIGHTLEFT_SCRIPT = 12220,
+  CT_DEVANAGARI_SCRIPT = 12221,
+  CT_GURMUKHI_SCRIPT = 12222,
+  CT_GUJARATI_SCRIPT = 12223,
+  CT_ORIYA_SCRIPT = 12224,
+  CT_BENGALI_SCRIPT = 12225,
+  CT_TAMIL_SCRIPT = 12226,
+  CT_TELUGU_SCRIPT = 12227,
+  CT_KANNADA_SCRIPT = 12228,
+  CT_MALAYALAM_SCRIPT = 12229,
+  CT_SINHALESE_SCRIPT = 12230,
+  CT_BURMESE_SCRIPT = 12231,
+  CT_KHMER_SCRIPT = 12232,
+  CT_THAI_SCRIPT = 12233,
+  CT_LAOTIAN_SCRIPT = 12234,
+  CT_GEORGIAN_SCRIPT = 12235,
+  CT_ARMENIAN_SCRIPT = 12236,
+  CT_SIMPLIFIEDCHINESE_SCRIPT = 12237,
+  CT_TIBETAN_SCRIPT = 12238,
+  CT_MONGOLIAN_SCRIPT = 12239,
+  CT_GEEZ_SCRIPT = 12240,
+  CT_EASTEUROPEANROMAN_SCRIPT = 12241,
+  CT_VIETNAMESE_SCRIPT = 12242,
+  CT_EXTENDEDARABIC_SCRIPT = 12243,
+  CT_KLINGON_SCRIPT = 12244,
+  CT_EMOJI_SCRIPT = 12245,
+  CT_ROHINGYA_SCRIPT = 12246,
+  CT_JAVANESE_SCRIPT = 12247,
+  CT_SUNDANESE_SCRIPT = 12248,
+  CT_LONTARA_SCRIPT = 12249,
+  CT_SYRIAC_SCRIPT = 12250,
+  CT_TAITHAM_SCRIPT = 12251,
+  CT_BUGINESE_SCRIPT = 12252,
+  CT_BALINESE_SCRIPT = 12253,
+  CT_CHEROKEE_SCRIPT = 12254,
+  CT_MANDAIC_SCRIPT = 12255,
+  CT_VAI_SCRIPT = 12256,
+  CT_THAANA_SCRIPT = 12257,
+  CT_BRAVANESE_SCRIPT = 12258,
+  CT_BRAHMI_SCRIPT = 12259,
+  CT_CARIAN_SCRIPT = 12260,
+  CT_CYPRIOT_SCRIPT = 12261,
+  CT_EGYPTIAN_SCRIPT = 12262,
+  CT_IMPERIALARAMAIC_SCRIPT = 12263,
+  CT_PAHLAVI_SCRIPT = 12264,
+  CT_PARTHIAN_SCRIPT = 12265,
+  CT_KHAROSHTHI_SCRIPT = 12266,
+  CT_LYCIAN_SCRIPT = 12267,
+  CT_LYDIAN_SCRIPT = 12268,
+  CT_PHOENICIAN_SCRIPT = 12269,
+  CT_PERSIAN_SCRIPT = 12270,
+  CT_SHAVIAN_SCRIPT = 12271,
+  CT_SUMAKKCUNEIFORM_SCRIPT = 12272,
+  CT_UGARITIC_SCRIPT = 12273,
+  CT_GLAGOLITIC_SCRIPT = 12274,
+  CT_GOTHIC_SCRIPT = 12275,
+  CT_OGHAM_SCRIPT = 12276,
+  CT_OLDITALIC_SCRIPT = 12277,
+  CT_ORKHON_SCRIPT = 12278,
+  CT_RUNIC_SCRIPT = 12279,
+  CT_MEROITICCURSIVE_SCRIPT = 12280,
+  CT_COPTIC_SCRIPT = 12281,
+  CT_OLCHIKI_SCRIPT = 12282,
+  CT_SORASOMPENG_SCRIPT = 12283,
+  CT_OLDHANGUL_SCRIPT = 12284,
+  CT_LISU_SCRIPT = 12285,
+  CT_NKO_SCRIPT = 12286,
+  CT_ADLAM_SCRIPT = 12287,
+  CT_BAMUM_SCRIPT = 12288,
+  CT_BASSAVAH_SCRIPT = 12289,
+  CT_NEWA_SCRIPT = 12290,
+  CT_NEWTAILU_SCRIPT = 12291,
+  CT_SCRIPT = 12292,
+  CT_OSAGE_SCRIPT = 12293,
+  CT_UCAS_SCRIPT = 12294,
+  CT_TIFINAGH_SCRIPT = 12295,
+  CT_KAYAHLI_SCRIPT = 12296,
+  CT_LAO_SCRIPT = 12297,
+  CT_TAILE_SCRIPT = 12298,
+  CT_TAIVIET_SCRIPT = 12299,
+  CT_DONTKNOW_SCRIPT = 12300,
+}
+
 declare enum FastPreviewType {
   FP_ADAPTIVE_RESOLUTION = 8013,
   FP_DRAFT = 8014,
@@ -417,6 +584,19 @@ declare enum FieldSeparationType {
   LOWER_FIELD_FIRST = 5614,
   OFF = 5613,
   UPPER_FIELD_FIRST = 5612,
+}
+
+declare enum FontBaselineOption {
+  FONT_NORMAL_BASELINE = 11212,
+  FONT_FAUXED_SUPERSCRIPT = 11213,
+  FONT_FAUXED_SUBSCRIPT = 11214,
+}
+
+declare enum FontCapsOption {
+  FONT_NORMAL_CAPS = 11012,
+  FONT_SMALL_CAPS = 11013,
+  FONT_ALL_CAPS = 11014,
+  FONT_ALL_SMALL_CAPS = 11015,
 }
 
 declare enum FootageTimecodeDisplayStartType {
@@ -489,11 +669,28 @@ declare enum LayerSamplingQuality {
   BILINEAR = 4812,
 }
 
+declare enum LeadingType {
+  ROMAN_LEADING_TYPE = 10812,
+  JAPANESE_LEADING_TYPE = 10813,
+}
+
 declare enum LightType {
   AMBIENT = 4415,
   PARALLEL = 4412,
   POINT = 4414,
   SPOT = 4413,
+}
+
+declare enum LineJoinType {
+  LINE_JOIN_MITER = 11812,
+  LINE_JOIN_ROUND = 11813,
+  LINE_JOIN_BEVEL = 11814,
+}
+
+declare enum LineOrientation {
+  HORIZONTAL = 13212,
+  VERTICAL_RIGHT_TO_LEFT = 13213,
+  VERTICAL_LEFT_TO_RIGHT = 13214,
 }
 
 declare enum LogType {
@@ -521,6 +718,11 @@ declare enum MaskMotionBlur {
   OFF = 7014,
   ON = 7013,
   SAME_AS_LAYER = 7012,
+}
+
+declare enum ParagraphDirection {
+  DIRECTION_LEFT_TO_RIGHT = 10212,
+  DIRECTION_RIGHT_TO_LEFT = 10213,
 }
 
 declare enum ParagraphJustification {
@@ -604,6 +806,9 @@ declare enum PurgeTarget {
 
   /** Purges all data saved in the undo cache. */
   UNDO_CACHES = 1413,
+
+  /** Purges all data that After Effects has cached to RAM */
+  ALL_MEMORY_CACHES = 1416,
 }
 
 declare enum ResolveType {
@@ -628,6 +833,12 @@ declare enum SceneEditDetectionMode {
   SPLIT = 10013,
   SPLIT_PRECOMP = 10014,
   NONE = 10015,
+}
+
+declare enum SubstitutedFontReplacementMatchPolicy {
+  POSTSCRIPT_NAME = 13612,
+  CTFI_EQUAL = 13613,
+  DISABLED = 13614,
 }
 
 declare enum TimeDisplayType {
@@ -703,6 +914,8 @@ declare var clearOutput: () => void
 /** Generates random numbers. */
 declare var generateRandomNumber: () => number
 
+declare var getEnumAsString: (enumValue: number) => string
+
 /** Converts string time value to a numeric time value. */
 declare var currentFormatToTime: (
   formattedTime: string,
@@ -735,6 +948,9 @@ declare class Application {
 
   /** The number of this build of the application. */
   readonly buildNumber: number
+
+  /**  */
+  readonly fonts: FontsObject
 
   /** When true, the local application is running in Watch Folder mode. */
   readonly isWatchFolder: boolean
@@ -827,7 +1043,7 @@ declare class Application {
    * @param use_mfr Set to `true` to enable Multi-Frame Rendering.
    * @param max_cpu_perc Value from 1-100 representing the maximum CPU percentage Multi-Frame Rendering should utilize. If `mfr_on` is set to `false`, pass in 100.
    */
-  setMultiFrameRenderingConfig(use_mfr: boolean, max_cpu_percent: number): void;
+  setMultiFrameRenderingConfig(use_mfr: boolean, max_cpu_percent: number): void
 
   /** Sets whether preferences are saved when the application is quit. */
   setSavePreferencesOnQuit(doSave: boolean): void
@@ -1092,6 +1308,14 @@ declare class CameraLayer extends Layer {
   readonly cameraOption: _CameraOptionsGroup
 }
 
+declare class Range {
+  readonly characterEnd: number
+  readonly characterStart: number
+  readonly isRangeValid: boolean
+
+  toString(): string
+}
+
 /** Like an array, a collection associates a set of objects or values as a logical group and provides access to them by index. However, most collection objects are read-only. You do not assign objects to them yourself—their contents update automatically as objects are created or deleted. */
 declare class Collection {
   /** The number of objects in the collection. */
@@ -1236,6 +1460,79 @@ declare class FolderItem extends Item {
 
   /** Gets an item from the folder. */
   item(index: number): _ItemClasses
+}
+declare class FontObject {
+  /** Design axis data for variable fonts. */
+  readonly designAxesData: { name: string; tag: string; min: number; max: number }[] | undefined
+
+  /** The design vector for variable fonts. */
+  readonly designVector: number[] | undefined
+
+  /** The family name of the font. */
+  readonly familyName: string
+
+  /** The family prefix of the font. */
+  readonly familyPrefix: string
+
+  /** The full name of the font. */
+  readonly fullName: string
+
+  /** When true, the font has design axes. */
+  readonly hasDesignAxes: boolean
+
+  /** When true, the font is from Adobe Fonts. */
+  readonly isFromAdobeFonts: boolean
+
+  /** When true, the font is a substitute font. */
+  readonly isSubstitute: boolean
+
+  /** The file system location of the font. */
+  readonly location: string
+
+  /** The native family name of the font. */
+  readonly nativeFamilyName: string
+
+  /** The native full name of the font. */
+  readonly nativeFullName: string
+
+  /** The native style name of the font. */
+  readonly nativeStyleName: string
+
+  /** The PostScript name of the font. */
+  readonly postScriptName: string
+
+  /** The style name of the font. */
+  readonly styleName: string
+
+  /** The technology used by the font. */
+  readonly technology: CTFontTechnology
+
+  /** The type of the font. */
+  readonly type: CTFontType
+
+  /** The version string of the font. */
+  readonly version: string
+
+  /** An array of script types xsupported by the font. */
+  readonly writingScripts: CTScript[]
+
+  /** Checks if character string is avaible on current font */
+  hasGlyphsFor(charString: string): boolean
+
+  /** When true, the Font Object shares the same variable font as the Font object the function is called on */
+  hasSameDict(fontObject: FontObject): boolean
+
+  //** Returns the Fonts weight name within it's vector */
+  postScriptNameForDesignVector(vectorValues?: number[]): string | null
+}
+
+declare class FontsObject {
+  readonly allFonts: FontObject[][]
+  readonly fontsWithDefaultDesignAxes: FontObject[]
+  readonly missingOrSubstitutedFonts: FontObject[]
+
+  getFontsByFamilyNameAndStyleName(familyName: string, styleName: string): FontObject[] | undefined
+  getFontsByPostScriptName(postscriptName: string): FontObject[] | undefined
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
@@ -1496,7 +1793,7 @@ declare class Layer extends PropertyGroup {
   copyToComp(intoComp: CompItem): void
 
   /** Runs Scene Edit Detection on the layer that the method is called on and returns an array containing the times of any detected scenes */
-  doSceneEditDetection(applyOptions: SceneEditDetectionMode): number[];
+  doSceneEditDetection(applyOptions: SceneEditDetectionMode): number[]
 
   /** Reports whether this layer will be active at a specified time. */
   activeAtTime(time: number): boolean
@@ -2320,7 +2617,7 @@ declare class RenderQueue {
   readonly items: RQItemCollection
 
   /** Read or write the Notify property for the entire Render Queue */
-  queueNotify: boolean;
+  queueNotify: boolean
 
   /** Show or hides the Render Queue panel. */
   showWindow(doShow: boolean): void
@@ -2365,7 +2662,7 @@ declare class RenderQueueItem {
   readonly status: RQItemStatus
 
   /** Sets the Notify checkbox for each individual item in the Render Queue */
-  queueItemNotify: boolean;
+  queueItemNotify: boolean
 
   /** When true, this item is rendered when the queue is started. */
   render: boolean
@@ -2595,20 +2892,86 @@ declare class TextDocument {
   /** When true, the text layer shows a stroke. */
   applyStroke: boolean
 
+  /** When true, the text box automatically adds hyphens. */
+  autoHyphenate: boolean
+
+  /** When true, the text layer calculates the leading automatically. */
+  autoLeading: boolean
+
+  /** The text layer's kern type */
+  autoKernType: AutoKernType
+
+  /** The text layer's baseline direction */
+  baselineDirection: BaselineDirection
+
+  /** The text layer's compser engine. */
+  composerEngine: ComposerEngine
+
+  /** The text layer’s digit set. */
+  digitSet: DigitSet
+
+  /** The text layer’s paragraph direction. */
+  direction: ParagraphDirection
+
+  /** The text layer’s end indent amount. */
+  endIndent: number
+
+  /** When true, the text layer uses every line composer. When false, the text layer uses single line composer. */
+  everyLineComposer: boolean
+
   /** The text layer’s fill color. */
   fillColor: ThreeDColorValue
+
+  /** The text layer’s first line indent amount. */
+  firstLineIndent: number
 
   /** The text layer’s font specified by its PostScript name. */
   font: string
 
+  /** The text layer’s font baseline option. */
+  fontBaselineOption: FontBaselineOption
+
+  /** The text layer’s font caps option. */
+  fontCapsOption: FontCapsOption
+
+  /** Returns infomation about the font */
+  fontObject: FontObject
+
   /** The text layer’s font size in pixels. */
   fontSize: number
+
+  /** When true, the text box uses hanging roman punctuation */
+  hangingRoman: boolean
 
   /** The paragraph justification for the text layer. */
   justification: ParagraphJustification
 
+  /** The text layer’s kerning amount. */
+  kerning: number
+
   /** The text layer’s spacing between lines. */
   leading: number
+
+  /** The text layer’s leading type. */
+  leadingType: LeadingType
+
+  /** When true, the text layer uses the fonts ligatures */
+  ligatures: boolean
+
+  /** The text layer’s line join type. */
+  lineJoinType: LineJoinType
+
+  /** When true, no break is on for text boxes */
+  noBreak: boolean
+
+  /** The text layer’s paragraph spacing after a line. */
+  spaceAfter: number | undefined
+
+  /** The text layer’s paragraph spacing before a line. */
+  spaceBefore: number | undefined
+
+  /** The text layer’s start indent amount. */
+  startIndent: number
 
   /** The text layer’s stroke color. */
   strokeColor: ThreeDColorValue
