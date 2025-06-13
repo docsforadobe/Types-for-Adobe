@@ -2080,6 +2080,8 @@ declare class Project {
   /** The project’s render queue. */
   readonly renderQueue: RenderQueue
 
+  readonly usedFonts: { Font: FontObject; usedAt: { layerID: number; layerTimeD: number }[] }[]
+
   /** The color depth of the current project. */
   bitsPerChannel: number
 
@@ -2142,6 +2144,9 @@ declare class Project {
 
   /** Removes unused footage from the project. */
   removeUnusedFootage(): number
+
+  /** When true, a font has been replaced */
+  replaceFont(fromFont: string, toFont: string, noFontLocking?: boolean): boolean
 
   /** Reduces the project to a specified set of items. */
   reduceProject(array_of_items: _ItemClasses[]): number
@@ -3055,6 +3060,8 @@ declare class TextLayer extends AVLayer {
   readonly text: _TextProperties
   readonly sourceText: TextDocumentProperty
 }
+
+declare class ThreeDModelLayer extends AVLayer {}
 
 declare class View {
   readonly active: boolean
