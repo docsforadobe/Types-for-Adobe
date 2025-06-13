@@ -1474,6 +1474,9 @@ declare class FontObject {
   /** The family prefix of the font. */
   readonly familyPrefix: string
 
+  /** The unique identifier for the font. */
+  readonly fontID: number
+
   /** The full name of the font. */
   readonly fullName: string
 
@@ -1528,9 +1531,11 @@ declare class FontObject {
 
 declare class FontsObject {
   readonly allFonts: FontObject[][]
+  readonly fontServerRevision: number
   readonly fontsWithDefaultDesignAxes: FontObject[]
   readonly missingOrSubstitutedFonts: FontObject[]
 
+  getFontByID(id: string): FontObject | undefined
   getFontsByFamilyNameAndStyleName(familyName: string, styleName: string): FontObject[] | undefined
   getFontsByPostScriptName(postscriptName: string): FontObject[] | undefined
 }
@@ -1844,6 +1849,12 @@ declare class LayerCollection extends Collection {
     pixelAspect: number,
     duration?: number,
   ): AVLayer
+
+  /** Create a vertical text box */
+  addVerticalBoxText(width?: number, height?: number): TextLayer
+
+  /** Create vertical text layer */
+  addVerticalText(sourceText?: string): TextLayer
 
   /** Creates a new paragraph (box) text layer and adds it to this collection. */
   addBoxText(size: [number, number], sourceText?: string | TextDocument): TextLayer
@@ -2960,6 +2971,9 @@ declare class TextDocument {
 
   /** The text layer’s line join type. */
   lineJoinType: LineJoinType
+
+  /** The text layer’s line orientation. */
+  lineOrientation: LineOrientation
 
   /** When true, no break is on for text boxes */
   noBreak: boolean
