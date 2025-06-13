@@ -1547,13 +1547,20 @@ declare class FontObject {
 
 declare class FontsObject {
   readonly allFonts: FontObject[][]
+  readonly fontsDuplicateByPostScriptName: FontObject[]
   readonly fontServerRevision: number
   readonly fontsWithDefaultDesignAxes: FontObject[]
   readonly missingOrSubstitutedFonts: FontObject[]
 
+  favoriteFontFamilyList: string[] | undefined
+  freezeSyncSubstitutedFonts: boolean
+  mruFontFamilyList: string
+  substitutedFontReplacementMatchPolicy: SubstitutedFontReplacementMatchPolicy
+
   getFontByID(id: string): FontObject | undefined
   getFontsByFamilyNameAndStyleName(familyName: string, styleName: string): FontObject[] | undefined
   getFontsByPostScriptName(postscriptName: string): FontObject[] | undefined
+  pollForAndPushNonSystemFontFoldersChanges(): boolean
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
@@ -2876,6 +2883,9 @@ declare class TextDocument {
   /** Returns the number of paragraphs in a text layer */
   readonly paragraphCount: number
 
+  /** When true, the text layer's box has overflow. */
+  readonly boxOverflow: boolean
+
   /** Path of font file, providing its location on disk (not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts) */
   readonly fontLocation: string
 
@@ -2941,6 +2951,21 @@ declare class TextDocument {
 
   /** The text layer's baseline direction */
   baselineDirection: BaselineDirection
+
+  /** The text layer’s box fit policy. */
+  boxAutoFitPolicy: BoxAutoFitPolicy
+
+  /** The text layer’s box first baseline alignment. */
+  boxFirstBaselineAlignment: BoxFirstBaselineAlignment
+
+  /** The text layer’s box first baseline alignment minimum. */
+  boxFirstBaselineAlignmentMinimum: number
+
+  /** The text layer’s box padding. */
+  boxInsetSpacing: number
+
+  /** The text layer’s box horizontal alignment. */
+  boxVerticalAlignment: BoxVerticalAlignment
 
   /** The text layer's compser engine. */
   composerEngine: ComposerEngine
