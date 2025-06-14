@@ -30,7 +30,7 @@ declare enum WorkAreaType {
 /**
  * Video time display formats.
  */
-type VideoTimeDisplay  =
+type VideoTimeDisplay =
   | 100 /** TIMEDISPLAY_24Timecode: Timecode 24 fps. */
   | 101 /** TIMEDISPLAY_25Timecode: Timecode 25 fps. */
   | 102 /** TIMEDISPLAY_2997DropTimecode: Timecode 29.97 fps, drop frame. */
@@ -46,7 +46,7 @@ type VideoTimeDisplay  =
   | 112 /** TIMEDISPLAY_35mmFeetFrames: 35mm Feet+Frames. */
   | 113 /** TIMEDISPLAY_48Timecode: Timecode 48 fps. */
 
-type AudioTimeDisplay  =
+type AudioTimeDisplay =
   | 200 /** TIMEDISPLAY_AudioSamplesTimecode: Audio Samples. */
   | 201 /** TIMEDISPLAY_AudioMsTimecode: Audio Milliseconds. */;
 
@@ -527,7 +527,7 @@ declare class Sequence {
    * @param vTrackIndex The (zero-based) track index, into which to insert video.
    * @param aTrackIndex The (zero-based) track index, into which to insert audio.
    */
-  overwriteClip(projectItem: ProjectItem, time: string|number|Time, vTrackIndex: number, aTrackIndex: number): boolean;
+  overwriteClip(projectItem: ProjectItem, time: string | number | Time, vTrackIndex: number, aTrackIndex: number): boolean;
 
   /**
    * @returns currently-selected clips, as an `Array` of `trackItems`
@@ -617,15 +617,15 @@ declare class ProjectManagerOptions {
 
   /**
    * Which transcode option to use; will be one of these:
-   * 	`CLIP_TRANSCODE_MATCH_PRESET`
+   *  `CLIP_TRANSCODE_MATCH_PRESET`
    *  `CLIP_TRANSCODE_MATCH_CLIPS`
-   * 	`CLIP_TRANSCODE_MATCH_SEQUENCE`
+   *  `CLIP_TRANSCODE_MATCH_SEQUENCE`
    */
   clipTranscoderOption: string
 
   /**
    * Which transfer option to use; will be one of these:
-   * 	`CLIP_TRANSFER_COPY`
+   *  `CLIP_TRANSFER_COPY`
    *  `CLIP_TRANSFER_TRANSCODE`
    */
   clipTransferOption: string
@@ -1072,17 +1072,17 @@ declare class Project {
    */
   readonly sequences: SequenceCollection
 
-/**
-   * Adds a property to the project metadata schema.
-   * @param name A name for the property to be added.
-   * @param label A label for the property to be added.
-   * @param type The type of the property. Must be one of the following:
-   *             `0` (Integer),
-   *             `1` (Real),
-   *             `2` (String),
-   *             `3` (Boolean)
-   * @returns `true` if the property was successfully added, `false` if it failed, or `undefined` if the operation is not supported or an error occurred.
-   */
+  /**
+     * Adds a property to the project metadata schema.
+     * @param name A name for the property to be added.
+     * @param label A label for the property to be added.
+     * @param type The type of the property. Must be one of the following:
+     *             `0` (Integer),
+     *             `1` (Real),
+     *             `2` (String),
+     *             `3` (Boolean)
+     * @returns `true` if the property was successfully added, `false` if it failed, or `undefined` if the operation is not supported or an error occurred.
+     */
   addPropertyToProjectMetadataSchema(name: string, label: string, type: 0 | 1 | 2 | 3): boolean | undefined
 
   /**
@@ -1265,11 +1265,10 @@ declare class Project {
 
   /**
    *
-   * @param newSequenceName 	Name for newly-created sequence
-   * @param projectItems 		Array of project items to be added to sequence
-   * @param targetBin 		Bin in which new sequence should be created
+   * @param newSequenceName   Name for newly-created sequence
+   * @param projectItems     Array of project items to be added to sequence
+   * @param targetBin     Bin in which new sequence should be created
    */
-
   createNewSequenceFromClips(
     newSequenceName: string,
     projectItems: Array<ProjectItem>,
@@ -1407,9 +1406,9 @@ declare class Component {
   readonly displayName: string
 
   /**
-	 * 
-	 */
-	readonly instanceName: string;
+   * 
+   */
+  readonly instanceName: string;
 
   /**
    *
@@ -1509,9 +1508,9 @@ declare class TrackItem {
   getMatchName(): string;
 
   /**
-	 * 
-	 */
-	isMGT(): boolean;
+   * 
+   */
+  isMGT(): boolean;
 
   /**
    *
@@ -1557,7 +1556,7 @@ declare class TrackItem {
    * Move the track item by the specified time along the track. It will not move any linked media (like linked audio)
    * @param time Can be given as a number in seconds, a string representing ticks, or a {@link Time} object.
    */
-  move(time: Time|number|string): boolean
+  move(time: Time | number | string): boolean
 
   /**
    *
@@ -1655,9 +1654,9 @@ declare class ProjectItem {
   createSmartBin(name: string, query: string): void
 
   /**
-      * 	Returns whether the projectItem represents a sequence.
-        @returns true, if projectItem is a sequence.
-     */
+   * Returns whether the projectItem represents a sequence.
+   * @returns true, if projectItem is a sequence.
+   */
   isSequence(): boolean
 
   /**
@@ -2254,7 +2253,7 @@ declare class ComponentParam {
    * @param time Can be a {@link Time} object, a number for seconds, or a string for ticks
    * @param updateUI If `true`, the UI will be updated after adding the keyframe.
    */
-  addKey(time: Time|number|string, updateUI?: boolean): boolean
+  addKey(time: Time | number | string, updateUI?: boolean): boolean
 
   areKeyframesSupported(): boolean
 
@@ -2264,10 +2263,10 @@ declare class ComponentParam {
    * @param threshold Can be a {@link Time} object, a number for seconds, or a string for ticks
    * @returns A {@link Time} object representing the nearest keyframe, or `undefined` if no keyframe is found within the threshold.
    */
-  findNearestKey(timeToCheck: Time|string|number, threshold: Time|string|number): Time | undefined
+  findNearestKey(timeToCheck: Time | string | number, threshold: Time | string | number): Time | undefined
 
-  findNextKey(timeToCheck: Time|string|number): Time | undefined
-  findPreviousKey(timeToCheck: Time|string|number): Time
+  findNextKey(timeToCheck: Time | string | number): Time | undefined
+  findPreviousKey(timeToCheck: Time | string | number): Time
   getColorValue(): any[]
 
   /**
@@ -2291,7 +2290,7 @@ declare class ComponentParam {
    * @param time Can be a {@link Time} object, a number for seconds, or a string for ticks
    * @returns `true` if a key exists at the specified time, `false` otherwise.
    */
-  keyExistsAtTime(time: Time|number|string): boolean
+  keyExistsAtTime(time: Time | number | string): boolean
 
   removeKey(time: Time): boolean
   removeKeyRange(start: Time, end: Time): boolean
@@ -2785,46 +2784,46 @@ declare class Marker {
  * FrameRate class
  */
 declare class FrameRate {
-	/**
-	 * Read|Write property to get|set ticks per frame.
-	 */
-	ticksPerFrame: number;
+  /**
+   * Read|Write property to get|set ticks per frame.
+   */
+  ticksPerFrame: number;
 
-	/**
-	 * Get the number of frames per second.
-	 */
-	readonly value: number;
+  /**
+   * Get the number of frames per second.
+   */
+  readonly value: number;
 
-	/**
-	 * Constructs a FrameRateObject object
-	 */
-	constructor();
+  /**
+   * Constructs a FrameRateObject object
+   */
+  constructor();
 
-	/**
-	 * 
-	 */
-	static createWithValue(p0: number): FrameRate;
+  /**
+   * 
+   */
+  static createWithValue(p0: number): FrameRate;
 }
 
 /**
  * TimeDisplay class
  */
 declare class TimeDisplay {
-	/**
-	 * Read|Write property to get|set the time display custom frames per second value
-	 */
-	customFPS: number;
+  /**
+   * Read|Write property to get|set the time display custom frames per second value
+   */
+  customFPS: number;
 
-	/**
-	 * Read|Write property to get|set the time display type numeric code
+  /**
+   * Read|Write property to get|set the time display type numeric code
    * @see {@link VideoTimeDisplay} and {@link AudioTimeDisplay}
-	 */
-	type: TIME_FORMAT;
+   */
+  type: TIME_FORMAT;
 
-	/**
-	 * Constructs a TimeDisplay object
-	 */
-	constructor();
+  /**
+   * Constructs a TimeDisplay object
+   */
+  constructor();
 
 }
 
@@ -2832,144 +2831,144 @@ declare class TimeDisplay {
  * TickTime class
  */
 declare class TickTime {
-	/**
-	 * Invalid Tick Time Constant
-	 */
-	static readonly TIME_INVALID: TickTime;
+  /**
+   * Invalid Tick Time Constant
+   */
+  static readonly TIME_INVALID: TickTime;
 
-	/**
-	 * Max Tick Time Constant
-	 */
-	static readonly TIME_MAX: TickTime;
+  /**
+   * Max Tick Time Constant
+   */
+  static readonly TIME_MAX: TickTime;
 
-	/**
-	 * Min Tick Time Constant
-	 */
-	static readonly TIME_MIN: TickTime;
+  /**
+   * Min Tick Time Constant
+   */
+  static readonly TIME_MIN: TickTime;
 
-	/**
-	 * One Hour Tick Time Constant
-	 */
-	static readonly TIME_ONE_HOUR: TickTime;
+  /**
+   * One Hour Tick Time Constant
+   */
+  static readonly TIME_ONE_HOUR: TickTime;
 
-	/**
-	 * One Second Tick Time Constant
-	 */
-	static readonly TIME_ONE_MINUTE: TickTime;
+  /**
+   * One Second Tick Time Constant
+   */
+  static readonly TIME_ONE_MINUTE: TickTime;
 
-	/**
-	 * One Second Tick Time Constant
-	 */
-	static readonly TIME_ONE_SECOND: TickTime;
+  /**
+   * One Second Tick Time Constant
+   */
+  static readonly TIME_ONE_SECOND: TickTime;
 
-	/**
-	 * Zero Tick Time Constant
-	 */
-	static readonly TIME_ZERO: TickTime;
+  /**
+   * Zero Tick Time Constant
+   */
+  static readonly TIME_ZERO: TickTime;
 
-	/**
-	 * Get the TickTime in seconds
-	 */
-	readonly seconds: number;
+  /**
+   * Get the TickTime in seconds
+   */
+  readonly seconds: number;
 
-	/**
-	 * Get the TickTime in ticks as a string
-	 */
-	readonly ticks: string;
+  /**
+   * Get the TickTime in ticks as a string
+   */
+  readonly ticks: string;
 
-	/**
-	 * Get the TickTime in ticks as a number
-	 */
-	readonly ticksNumber: number;
+  /**
+   * Get the TickTime in ticks as a number
+   */
+  readonly ticksNumber: number;
 
-	/**
-	 * Constructs a TickTime object
-	 */
-	constructor();
+  /**
+   * Constructs a TickTime object
+   */
+  constructor();
 
-	/**
-	 * 
-	 * @param tickTime Add another TickTime to this one and return it. This TickTime is not modified.
-	 */
-	add(tickTime: TickTime): TickTime;
+  /**
+   * 
+   * @param tickTime Add another TickTime to this one and return it. This TickTime is not modified.
+   */
+  add(tickTime: TickTime): TickTime;
 
-	/**
-	 * 
-	 * @param FrameRate alignToFrame will return a TickTime that is aligned to the nearest frame boundary less than the given time for a given frame rate by rounding any fractional portion.
-	 */
-	alignToFrame(FrameRate: object): TickTime;
+  /**
+   * 
+   * @param FrameRate alignToFrame will return a TickTime that is aligned to the nearest frame boundary less than the given time for a given frame rate by rounding any fractional portion.
+   */
+  alignToFrame(FrameRate: object): TickTime;
 
-	/**
-	 * 
-	 * @param FrameRate AlignToNearestFrame will return a TickTime that is aligned to the nearest frame boundary greater than or less than the given time for a given frame rate by rounding any fractional portion.
-	 */
-	alignToNearestFrame(FrameRate: object): TickTime;
+  /**
+   * 
+   * @param FrameRate AlignToNearestFrame will return a TickTime that is aligned to the nearest frame boundary greater than or less than the given time for a given frame rate by rounding any fractional portion.
+   */
+  alignToNearestFrame(FrameRate: object): TickTime;
 
-	/**
-	 * 
-	 * @param frameRate Constructs a TickTime object with a frame and a frame rate.
-	 */
-	static createWithFrameAndFrameRate(frameCount: number, frameRate: FrameRate): TickTime;
+  /**
+   * 
+   * @param frameRate Constructs a TickTime object with a frame and a frame rate.
+   */
+  static createWithFrameAndFrameRate(frameCount: number, frameRate: FrameRate): TickTime;
 
-	/**
-	 * 
-	 * @param seconds Constructs a TickTime object with seconds.
-	 */
-	static createWithSeconds(seconds: number): TickTime;
+  /**
+   * 
+   * @param seconds Constructs a TickTime object with seconds.
+   */
+  static createWithSeconds(seconds: number): TickTime;
 
-	/**
-	 * 
-	 * @param ticks Constructs a TickTime object with ticks as a string.
-	 */
-	static createWithTicks(ticks: string): TickTime;
+  /**
+   * 
+   * @param ticks Constructs a TickTime object with ticks as a string.
+   */
+  static createWithTicks(ticks: string): TickTime;
 
-	/**
-	 * 
-	 * @param ticksNumber Constructs a TickTime object with ticks as a number.
-	 */
-	static createWithTicksNumber(ticksNumber: number): TickTime;
+  /**
+   * 
+   * @param ticksNumber Constructs a TickTime object with ticks as a number.
+   */
+  static createWithTicksNumber(ticksNumber: number): TickTime;
 
-	/**
-	 * 
-	 * @param divisor Divide this TickTime by a divisor and return it. In case of a division by zero TIME_INVALID is returned. This TickTime is not modified.
-	 */
-	divide(divisor: number): TickTime;
+  /**
+   * 
+   * @param divisor Divide this TickTime by a divisor and return it. In case of a division by zero TIME_INVALID is returned. This TickTime is not modified.
+   */
+  divide(divisor: number): TickTime;
 
-	/**
-	 * 
-	 * @param TickTime Returns true if the given TickTime is equal to the TickTime object
-	 */
-	equals(TickTime: object): boolean;
+  /**
+   * 
+   * @param TickTime Returns true if the given TickTime is equal to the TickTime object
+   */
+  equals(TickTime: object): boolean;
 
-	/**
-	 * 
-	 * @param factor Multiply this TickTime with a factor and return it. This TickTime is not modified.
-	 */
-	multiply(factor: number): TickTime;
+  /**
+   * 
+   * @param factor Multiply this TickTime with a factor and return it. This TickTime is not modified.
+   */
+  multiply(factor: number): TickTime;
 
-	/**
-	 * 
-	 * @param tickTime Subtract another TickTime from this one and return it. This TickTime is not modified.
-	 */
-	subtract(tickTime: TickTime): TickTime;
+  /**
+   * 
+   * @param tickTime Subtract another TickTime from this one and return it. This TickTime is not modified.
+   */
+  subtract(tickTime: TickTime): TickTime;
 
-	/**
-	 * 
-	 * @param TimeDisplay Convert a TickTime to a string using the current display format
-	 */
-	static timeToTimecode(TickTime: TickTime, FrameRate: object, TimeDisplay: TimeDisplay): string;
+  /**
+   * 
+   * @param TimeDisplay Convert a TickTime to a string using the current display format
+   */
+  static timeToTimecode(TickTime: TickTime, FrameRate: object, TimeDisplay: TimeDisplay): string;
 
-	/**
-	 * 
-	 * @param TimeDisplay Convert a timecode string to a TickTime using the current display format
-	 */
-	static timecodeToTime(TimecodeString: string, FrameRate: object, TimeDisplay: TimeDisplay): TickTime;
+  /**
+   * 
+   * @param TimeDisplay Convert a timecode string to a TickTime using the current display format
+   */
+  static timecodeToTime(TimecodeString: string, FrameRate: object, TimeDisplay: TimeDisplay): TickTime;
 
-	/**
-	 * 
-	 * @param frameRate Convert the TickTime to a frame number with respect to the provided frame rate.
-	 */
-	toFrame(frameRate: FrameRate): number;
+  /**
+   * 
+   * @param frameRate Convert the TickTime to a frame number with respect to the provided frame rate.
+   */
+  toFrame(frameRate: FrameRate): number;
 
 }
 
