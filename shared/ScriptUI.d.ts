@@ -836,7 +836,7 @@ declare class StaticText extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -914,7 +914,7 @@ declare class Button extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -990,7 +990,7 @@ declare class IconButton extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1048,7 +1048,7 @@ declare class Image extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1139,7 +1139,7 @@ declare class EditText extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1251,7 +1251,7 @@ declare class ListBox extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1361,7 +1361,7 @@ declare class DropDownList extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1525,7 +1525,7 @@ declare class Checkbox extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1623,7 +1623,7 @@ declare class Scrollbar extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1706,7 +1706,7 @@ declare class RadioButton extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1792,7 +1792,7 @@ declare class Slider extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the element's shortcutKey sequence is typed in the active window.
@@ -1836,7 +1836,7 @@ declare class Progressbar extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 }
 
 /**
@@ -1931,7 +1931,7 @@ declare class TreeView extends _Control {
    * An event-handler callback function, called when the window is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * An event-handler callback function, called when the user expands (opens) a collapsed node in the treeview.
@@ -2070,7 +2070,7 @@ declare class Group extends _Control {
    * An event-handler callback function, called when the group is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * Removes the specified child control from this group's children array.
@@ -2154,7 +2154,7 @@ declare class Panel extends _Control {
    * An event-handler callback function, called when the panel is about to be drawn.
    * Allows the script to modify or control the appearance, using the control’s associated ScriptUIGraphics object. Handler takes one argument, a DrawState object.
    */
-  onDraw(): void
+  onDraw(drawState: DrawState): void
 
   /**
    * Removes the specified child control from this group's children array.
