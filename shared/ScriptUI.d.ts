@@ -62,13 +62,13 @@ declare class ScriptUI {
    * Collects the enumerated values that can be used in the alignment and alignChildren properties of controls and containers.
    * Predefined alignment values are: TOP, BOTTOM, LEFT, RIGHT, FILL, CENTER
    */
-  static readonly Alignment: _Alignment
+  static readonly Alignment: typeof _Alignment
 
   /**
    * Collects the enumerated values that can be used as the style argument to the ScriptUI.newFont() method.
    * Predefined styles are REGULAR, BOLD, ITALIC, BOLDITALIC.
    */
-  static readonly FontStyle: _FontStyle
+  static readonly FontStyle: typeof _FontStyle
 
   /**
    * The font constants defined by the host application.
@@ -493,13 +493,13 @@ declare class ScriptUIGraphics {
    * Contains the enumerated constants for the type argument of newBrush().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly BrushType: _BrushOrPenType
+  static readonly BrushType: typeof _BrushOrPenType
 
   /**
    * Contains the enumerated constants for the type argument of newPen().
    * Type constants are: SOLID_COLOR, THEME_COLOR.
    */
-  static readonly PenType: _BrushOrPenType
+  static readonly PenType: typeof _BrushOrPenType
 
   /**
    * The background color for containers; for non-containers, the parent background color.
