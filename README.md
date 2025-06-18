@@ -14,9 +14,9 @@ Repository for typedef files for various Adobe Creative Cloud products.
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/en/download/)
-* [TypeScript](https://typescriptlang.org/#download-links)
-* [git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/download/)
+- [TypeScript](https://typescriptlang.org/#download-links)
+- [git](https://git-scm.com/)
 
 ---
 
@@ -52,7 +52,7 @@ tsc
 Everything in this project was generated through one of the following methods:
 
 1. Using this [extendscript-xml-to-typescript converter](https://github.com/aenhancers/extendscript-xml-to-typescript) tool to convert scripting dictionaries to typedef format
-   - *note that this only works for a few select apps, and has been found to generate incorrect data in some cases*
+   - _note that this only works for a few select apps, and has been found to generate incorrect data in some cases_
 2. By hand, through referencing Adobe's official release announcements & developer exploration through the API.
 
 ### Why are there different versions of docs per version of each host app?
@@ -85,6 +85,23 @@ Two possible answers! Either
 Thanks to [all of our contributors](https://github.com/aenhancers/Types-for-Adobe/graphs/contributors) for helping make this project succeed!
 
 Have something to add? Please [open a PR](https://github.com/aenhancers/Types-for-Adobe/pulls)!
+
+---
+
+## Publish New Versions
+
+To publish a new version of this project on npm for use in projects, please follow the steps below:
+
+**1. Auth and Access**
+
+- Ensure you are logged in to your npmjs.com account with `npm login` and follow the prompts to complete your login
+- Ensure your npmjs.com account has access to publish to the npm package, if not, reach out to an admin for access
+
+**2. Version and Publish**
+
+- Version up the `package.json`
+- Run `npm publish`
+- Push the commit with the new version to GitHub
 
 ---
 
