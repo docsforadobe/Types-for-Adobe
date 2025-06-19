@@ -14,9 +14,9 @@ Repository for typedef files for various Adobe Creative Cloud products.
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/en/download/)
-* [TypeScript](https://typescriptlang.org/#download-links)
-* [git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/download/)
+- [TypeScript](https://typescriptlang.org/#download-links)
+- [git](https://git-scm.com/)
 
 ---
 
@@ -85,6 +85,23 @@ Two possible answers! Either
 Thanks to [all of our contributors](https://github.com/docsforadobe/Types-for-Adobe/graphs/contributors) for helping make this project succeed!
 
 Have something to add? Please [open a PR](https://github.com/docsforadobe/Types-for-Adobe/pulls)!
+
+---
+
+## Publish New Versions
+
+To publish a new version of this project on npm for use in projects, please follow the steps below:
+
+**1. Auth and Access**
+
+- Ensure you are logged in to your npmjs.com account with `npm login` and follow the prompts to complete your login
+- Ensure your npmjs.com account has access to publish to the npm package, if not, reach out to an admin for access
+
+**2. Version and Publish**
+
+- Version up the `package.json`
+- Run `npm publish`
+- Push the commit with the new version to GitHub
 
 ---
 
