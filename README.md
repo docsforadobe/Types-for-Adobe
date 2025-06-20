@@ -51,8 +51,8 @@ tsc
 
 Everything in this project was generated through one of the following methods:
 
-1. Using this [extendscript-xml-to-typescript converter](https://github.com/aenhancers/extendscript-xml-to-typescript) tool to convert scripting dictionaries to typedef format
-   - _note that this only works for a few select apps, and has been found to generate incorrect data in some cases_
+1. Using this [extendscript-xml-to-typescript converter](https://github.com/bbb999/extendscript-xml-to-typescript) tool to convert scripting dictionaries to typedef format
+   - *note that this only works for a few select apps, and has been found to generate incorrect data in some cases*
 2. By hand, through referencing Adobe's official release announcements & developer exploration through the API.
 
 ### Why are there different versions of docs per version of each host app?
@@ -76,15 +76,15 @@ This really depends on your needs; if you're hoping to release a commercial tool
 Two possible answers! Either
 
 1. There haven't been any API changes for that given version, or
-2. Nobody's taken the time to add typedefs for that version; feel free to [open a PR](https://github.com/aenhancers/Types-for-Adobe/pulls)!
+2. Nobody's taken the time to add typedefs for that version; feel free to [open a PR](https://github.com/docsforadobe/Types-for-Adobe/pulls)!
 
 ---
 
 ## Contributors
 
-Thanks to [all of our contributors](https://github.com/aenhancers/Types-for-Adobe/graphs/contributors) for helping make this project succeed!
+Thanks to [all of our contributors](https://github.com/docsforadobe/Types-for-Adobe/graphs/contributors) for helping make this project succeed!
 
-Have something to add? Please [open a PR](https://github.com/aenhancers/Types-for-Adobe/pulls)!
+Have something to add? Please [open a PR](https://github.com/docsforadobe/Types-for-Adobe/pulls)!
 
 ---
 
