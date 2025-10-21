@@ -38,12 +38,6 @@ type XMPProperty = {
   value: string
 }
 interface XMPMetaInstance {
-  doesPropertyExist(namespace: string, value: string): boolean
-  getProperty(namespace: string, property: string): XMPProperty
-  setProperty(namespace: string, property: string, value: string): boolean
-  countArrayItems(namespace: string, property: string): number
-  getArrayItem(namespace: string, property: string, itemIndex: number): XMPProperty
-  deleteProperty(namespace: string, property: string): boolean
   appendArrayItem(
     namespace: string,
     property: string,
@@ -51,12 +45,34 @@ interface XMPMetaInstance {
     valueToAppend: string,
     valueOptions: string,
   ): boolean
+  countArrayItems(namespace: string, property: string): number
+  doesPropertyExist(namespace: string, value: string): boolean
+  getProperty(namespace: string, property: string): XMPProperty
+  getArrayItem(namespace: string, property: string, itemIndex: number): XMPProperty
+  deleteProperty(namespace: string, property: string): boolean
+  deleteQualifier(schemaNS: string, propName: string, qualNS: string, qualName: string): void
+  deleteStructField(schemaNS: string, structName: string, fieldNS: string, fieldName: string): void
+  doesQualifierExist(schemaNS: string, propName: string, qualNS: string, qualName: string): boolean
   dumpObject(): string
   serialize(): string
   getNamespaceURI(ns: string): string
+  doesStructFieldExist(
+    schemaNS: string,
+    structName: string,
+    fieldNS: string,
+    fieldName: string,
+  ): boolean
+  setStructField(
+    schemaNS: string,
+    structName: string,
+    fieldNS: string,
+    fieldName: string,
+    fieldValue: string,
+  ): void
+  setProperty(namespace: string, property: string, value: string): boolean
 }
 
-declare const XMPMeta: XMPMetaConstructor | undefined
+declare const XMPMeta: XMPMetaConstructor
 
 interface XMPConstConstructor {
   new (): XMPConstInstance
@@ -69,4 +85,4 @@ interface XMPConstInstance {
   // Instance stuff.
 }
 
-declare const XMPConst: XMPConstConstructor | undefined
+declare const XMPConst: XMPConstConstructor

@@ -18,5 +18,8 @@
   "scripts": {
     "test": "_bin/test.sh"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
 }
