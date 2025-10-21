@@ -62,6 +62,12 @@ interface XMPMetaInstance {
     fieldNS: string,
     fieldName: string,
   ): boolean
+  getStructField(
+    schemaNS: string,
+    structName: string,
+    fieldNS: string,
+    fieldName: string,
+  ): XMPProperty
   setStructField(
     schemaNS: string,
     structName: string,
