@@ -451,7 +451,7 @@ declare class AudioClipSelectionCollection {
   /**
    * Returns an audio clip by its index
    */
-  readonly index: AudioClipCollection
+  [index: number]: AudioClipCollection
 
   /**
    * Number of audio clips.
@@ -533,7 +533,7 @@ declare class AudioClipCollection {
   /**
    * Returns an audio clip by its index
    */
-  readonly index: AudioClipCollection
+  [index: number]: AudioClip
 
   /**
    * Number of audio clips.
