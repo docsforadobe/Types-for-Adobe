@@ -1519,9 +1519,6 @@ declare class FontObject {
   /** An array of script types xsupported by the font. */
   readonly writingScripts: CTScript[]
 
-  /** Checks if character string is avaible on current font */
-  hasGlyphsFor(charString: string): boolean
-
   /** When true, the Font Object shares the same variable font as the Font object the function is called on */
   hasSameDict(fontObject: FontObject): boolean
 
