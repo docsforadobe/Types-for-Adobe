@@ -2344,6 +2344,9 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   /** Current value of the property. */
   readonly value: T["value"]
 
+  /** The text string of the currently-selected item in a dropdown menu property. */
+  readonly valueText: string
+
   /** When true, there is a minimum permitted value. */
   readonly hasMin: boolean
 
@@ -2382,6 +2385,9 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
 
   /** The position index of this property. */
   readonly propertyIndex: number
+
+  /** All item strings in a dropdown menu property. */
+  readonly propertyParameters: string[]
 
   /** When true, the property represents one of the separated dimensions for a multidimensional property. */
   readonly isSeparationFollower: boolean
@@ -2643,11 +2649,14 @@ declare class PropertyGroup extends PropertyBase {
   /** The number of indexed properties in the group. */
   readonly numProperties: number
 
+  /** Adds a property to the group. */
+  addProperty(name: string): _PropertyClasses
+
   /** Reports whether a property can be added to the group. */
   canAddProperty(name: string): boolean
 
-  /** Adds a property to the group. */
-  addProperty(name: string): _PropertyClasses
+  /** Adds a variable font axis property to this group. */
+  addVariableFontAxis(axisTag: string): OneDProperty
 }
 
 /** The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. */
