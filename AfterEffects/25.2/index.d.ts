@@ -1912,6 +1912,9 @@ declare class LightLayer extends Layer {
   /** Shortcuts */
   readonly lightOption: _LightOptionsGroup
 
+  /** For light layers, the layer to use as a light source when lightType is LightType.ENVIRONMENT. */
+  lightSource: AVLayer | null
+
   /** For light layers, the type of light. */
   lightType: LightType
 }
