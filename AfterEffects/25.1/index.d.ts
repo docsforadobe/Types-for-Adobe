@@ -1517,6 +1517,9 @@ declare class FontObject {
   /** The native style name of the font. */
   readonly nativeStyleName: string
 
+  /** An array of Font objects which share the same font dictionary as the font. */
+  readonly otherFontsWithSameDict: FontObject[]
+
   /** The PostScript name of the font. */
   readonly postScriptName: string
 
@@ -1557,10 +1560,13 @@ declare class FontsObject {
   mruFontFamilyList: string
   substitutedFontReplacementMatchPolicy: SubstitutedFontReplacementMatchPolicy
 
+  getCTScriptForString(charString: string, preferredCTScript: CTScript): { chars: number; ctScript: CTScript }[]
+  getDefaultFontForCTScript(ctScript: CTScript): FontObject
   getFontByID(id: string): FontObject | undefined
   getFontsByFamilyNameAndStyleName(familyName: string, styleName: string): FontObject[] | undefined
   getFontsByPostScriptName(postscriptName: string): FontObject[] | undefined
   pollForAndPushNonSystemFontFoldersChanges(): boolean
+  setDefaultFontForCTScript(ctScript: CTScript, font: FontObject | null): boolean
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
