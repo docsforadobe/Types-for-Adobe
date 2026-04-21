@@ -1009,6 +1009,9 @@ declare class Application {
 
   /** Quits the application. */
   quit(): void
+  
+  /** Restarts the After Effects application. */
+  restart(): void
 
   /** Starts Watch Folder mode; does not return until Watch Folder mode is turned off. */
   watchFolder(folder_object_to_watch: Folder): void
