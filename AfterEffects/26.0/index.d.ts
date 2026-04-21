@@ -1517,6 +1517,9 @@ declare class FontObject {
   /** The native style name of the font. */
   readonly nativeStyleName: string
 
+  /** An array of Font objects which share the same font dictionary as the font. */
+  readonly otherFontsWithSameDict: FontObject[]
+
   /** The PostScript name of the font. */
   readonly postScriptName: string
 
@@ -1535,6 +1538,9 @@ declare class FontObject {
   /** An array of script types xsupported by the font. */
   readonly writingScripts: CTScript[]
 
+  /** Checks if character string is avaible on current font */
+  hasGlyphsFor(charString: string): boolean
+
   /** When true, the Font Object shares the same variable font as the Font object the function is called on */
   hasSameDict(fontObject: FontObject): boolean
 
@@ -1544,13 +1550,23 @@ declare class FontObject {
 
 declare class FontsObject {
   readonly allFonts: FontObject[][]
+  readonly fontsDuplicateByPostScriptName: FontObject[]
   readonly fontServerRevision: number
   readonly fontsWithDefaultDesignAxes: FontObject[]
   readonly missingOrSubstitutedFonts: FontObject[]
 
+  favoriteFontFamilyList: string[] | undefined
+  freezeSyncSubstitutedFonts: boolean
+  mruFontFamilyList: string
+  substitutedFontReplacementMatchPolicy: SubstitutedFontReplacementMatchPolicy
+
+  getCTScriptForString(charString: string, preferredCTScript: CTScript): { chars: number; ctScript: CTScript }[]
+  getDefaultFontForCTScript(ctScript: CTScript): FontObject
   getFontByID(id: string): FontObject | undefined
   getFontsByFamilyNameAndStyleName(familyName: string, styleName: string): FontObject[] | undefined
   getFontsByPostScriptName(postscriptName: string): FontObject[] | undefined
+  pollForAndPushNonSystemFontFoldersChanges(): boolean
+  setDefaultFontForCTScript(ctScript: CTScript, font: FontObject | null): boolean
 }
 
 /** The FootageItem object represents a footage item imported into a project, which appears in the Project panel. These are accessed by position index number in a project’s item collection. */
@@ -1896,6 +1912,9 @@ declare class LightLayer extends Layer {
   /** Shortcuts */
   readonly lightOption: _LightOptionsGroup
 
+  /** For light layers, the layer to use as a light source when lightType is LightType.ENVIRONMENT. */
+  lightSource: AVLayer | null
+
   /** For light layers, the type of light. */
   lightType: LightType
 }
@@ -2077,6 +2096,8 @@ declare class Project {
   /** The project’s render queue. */
   readonly renderQueue: RenderQueue
 
+  readonly usedFonts: { Font: FontObject; usedAt: { layerID: number; layerTimeD: number }[] }[]
+
   /** The color depth of the current project. */
   bitsPerChannel: number
 
@@ -2139,6 +2160,9 @@ declare class Project {
 
   /** Removes unused footage from the project. */
   removeUnusedFootage(): number
+
+  /** When true, a font has been replaced */
+  replaceFont(fromFont: string, toFont: string, noFontLocking?: boolean): boolean
 
   /** Reduces the project to a specified set of items. */
   reduceProject(array_of_items: _ItemClasses[]): number
@@ -2320,6 +2344,9 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
   /** Current value of the property. */
   readonly value: T["value"]
 
+  /** The text string of the currently-selected item in a dropdown menu property. */
+  readonly valueText: string
+
   /** When true, there is a minimum permitted value. */
   readonly hasMin: boolean
 
@@ -2358,6 +2385,9 @@ declare class Property<T extends UnknownPropertyType = UnknownPropertyType> exte
 
   /** The position index of this property. */
   readonly propertyIndex: number
+
+  /** All item strings in a dropdown menu property. */
+  readonly propertyParameters: string[]
 
   /** When true, the property represents one of the separated dimensions for a multidimensional property. */
   readonly isSeparationFollower: boolean
@@ -2619,11 +2649,14 @@ declare class PropertyGroup extends PropertyBase {
   /** The number of indexed properties in the group. */
   readonly numProperties: number
 
+  /** Adds a property to the group. */
+  addProperty(name: string): _PropertyClasses
+
   /** Reports whether a property can be added to the group. */
   canAddProperty(name: string): boolean
 
-  /** Adds a property to the group. */
-  addProperty(name: string): _PropertyClasses
+  /** Adds a variable font axis property to this group. */
+  addVariableFontAxis(axisTag: string): OneDProperty
 }
 
 /** The RenderQueue object represents the render automation process, the data and functionality that is available through the Render Queue panel of a particular After Effects project. Attributes provide access to items in the render queue and their render status. Methods can start, pause, and stop the rendering process. */
@@ -2868,6 +2901,9 @@ declare class TextDocument {
   /** Returns the number of paragraphs in a text layer */
   readonly paragraphCount: number
 
+  /** When true, the text layer's box has overflow. */
+  readonly boxOverflow: boolean
+
   /** Path of font file, providing its location on disk (not guaranteed to be returned for all font types; return value may be empty string for some kinds of fonts) */
   readonly fontLocation: string
 
@@ -2933,6 +2969,21 @@ declare class TextDocument {
 
   /** The text layer's baseline direction */
   baselineDirection: BaselineDirection
+
+  /** The text layer’s box fit policy. */
+  boxAutoFitPolicy: BoxAutoFitPolicy
+
+  /** The text layer’s box first baseline alignment. */
+  boxFirstBaselineAlignment: BoxFirstBaselineAlignment
+
+  /** The text layer’s box first baseline alignment minimum. */
+  boxFirstBaselineAlignmentMinimum: number
+
+  /** The text layer’s box padding. */
+  boxInsetSpacing: number
+
+  /** The text layer’s box horizontal alignment. */
+  boxVerticalAlignment: BoxVerticalAlignment
 
   /** The text layer's compser engine. */
   composerEngine: ComposerEngine
@@ -3052,6 +3103,8 @@ declare class TextLayer extends AVLayer {
   readonly text: _TextProperties
   readonly sourceText: TextDocumentProperty
 }
+
+declare class ThreeDModelLayer extends AVLayer {}
 
 declare class View {
   readonly active: boolean
