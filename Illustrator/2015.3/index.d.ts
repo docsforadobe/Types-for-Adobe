@@ -3778,7 +3778,7 @@ declare class Documents extends Array<Document> {
    * @param presetSettings Custom settings to apply to the preset.
    * @param showOptionsDialog If false, do not show Options dialog.
    */
-  static addDocument(
+  addDocument(
     startupPreset: string,
     presetSettings?: DocumentPreset,
     showOptionsDialog?: boolean,
@@ -3789,7 +3789,7 @@ declare class Documents extends Array<Document> {
    * @param startupPreset The name of startup document preset.
    * @param showOptionsDialog Argument controls if options Dialog is shown or not.
    */
-  static addDocumentWithDialogOption(startupPreset: string, showOptionsDialog?: boolean): Document
+  addDocumentWithDialogOption(startupPreset: string, showOptionsDialog?: boolean): Document
 
   /**
    * Arranges the documents in the specified style.
@@ -3868,7 +3868,7 @@ declare class GroupItems extends Array<GroupItem> {
    * Create a group item from a vector graphics file.
    * @param imageFile The vector graphics file to be embedded.
    */
-  static createFromFile(imageFile: File): GroupItem
+  createFromFile(imageFile: File): GroupItem
 
   /**
    * Get the first element in the collection with the provided name.
@@ -4155,7 +4155,7 @@ declare class TextFrameItems extends Array<TextFrame> {
    * @param baseFrame The base text frame if it has one.
    * @param postFix Whether to postfix/prefix the new text frame to the specified base text frame.
    */
-  static areaText(
+  areaText(
     textPath: PathItem,
     orientation?: TextOrientation,
     baseFrame?: TextFrame,
@@ -4177,7 +4177,7 @@ declare class TextFrameItems extends Array<TextFrame> {
    * @param baseFrame The base text frame if it has one.
    * @param postFix Whether to postfix/prefix the new text frame to the specified base text frame.
    */
-  static pathText(
+  pathText(
     textPath: PathItem,
     startTValue?: number,
     endTValue?: number,
@@ -4191,7 +4191,7 @@ declare class TextFrameItems extends Array<TextFrame> {
    * @param anchor The position (coordinates) of the anchor point.
    * @param orientation The orientation of the text.
    */
-  static pointText(anchor: Point | [number, number], orientation?: TextOrientation): TextFrame
+  pointText(anchor: Point | [number, number], orientation?: TextOrientation): TextFrame
 
   /**
    * Deletes all elements.
@@ -4311,7 +4311,7 @@ declare class Characters extends Array<TextRange> {
    *
    * @param contents The text string.
    */
-  static addBefore(contents: string): TextRange
+  addBefore(contents: string): TextRange
 
   /**
    * Get the first element in the collection with the provided name.
@@ -4354,7 +4354,7 @@ declare class Words extends Array<TextRange> {
    *
    * @param contents The text string.
    */
-  static addBefore(contents: string): TextRange
+  addBefore(contents: string): TextRange
 
   /**
    * Get the first element in the collection with the provided name.
@@ -4423,7 +4423,7 @@ declare class Paragraphs extends Array<TextRange> {
    *
    * @param contents The text string.
    */
-  static addBefore(contents: string): TextRange
+  addBefore(contents: string): TextRange
 
   /**
    * Get the first element in the collection with the provided name.
@@ -4843,7 +4843,7 @@ declare class Brushes extends Array<Brush> {
    * Create a brush, select the brush tool and load the created brush in the brush tool.
    * @param brushDefinition The brush definition from which the brush would be created.
    */
-  static addAndLoad(brushDefinition: File): Brush
+  addAndLoad(brushDefinition: File): Brush
 
   /**
    * Get the first element in the collection with the provided name.
@@ -5289,42 +5289,42 @@ declare class OpenOptions {
   /**
    * Add this file to the list of recently opened files.
    */
-  static addToRecentFiles: boolean
+  addToRecentFiles: boolean
 
   /**
    * Convert crop area to Artboard when opening legacy document (pre-Illustrator CS4) in CS4 or later. If false then crop areas are discarded.
    */
-  static convertCropAreaToArtboard: boolean
+  convertCropAreaToArtboard: boolean
 
   /**
    * Convert print tiles to Artboard when opening legacy document (pre-Illustrator CS4) in CS4 or later.
    */
-  static convertTilesToArtboard: boolean
+  convertTilesToArtboard: boolean
 
   /**
    * Create Artboard with dimentions of artwork bounding box when opening legacy document (pre-Illustrator CS4) in CS4 or later.
    */
-  static createArtboardWithArtworkBoundingBox: boolean
+  createArtboardWithArtworkBoundingBox: boolean
 
   /**
    * Open the file as library.
    */
-  static openAs: LibraryType
+  openAs: LibraryType
 
   /**
    * Preserve Legacy Artboard (pre-Illustrator CS4) when opening in CS4 or later.
    */
-  static preserveLegacyArtboard: boolean
+  preserveLegacyArtboard: boolean
 
   /**
    * Choose to preserve the spot colors in the gradient mesh objects for legacy documents (pre-Illustrator CS3)
    */
-  static updateLegacyGradientMesh: boolean
+  updateLegacyGradientMesh: boolean
 
   /**
    * Choose to update all text objects for documents saved with legacy texts (pre-Illustrator 11)
    */
-  static updateLegacyText: boolean
+  updateLegacyText: boolean
 }
 
 /**
@@ -5334,57 +5334,57 @@ declare class FXGSaveOptions {
   /**
    * If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * The policy used by FXG to expand blends.
    */
-  static blendsPolicy: BlendsExpandPolicy
+  blendsPolicy: BlendsExpandPolicy
 
   /**
    * Choose to downsample the linked images(72ppi)
    */
-  static downsampleLinkedImages: boolean
+  downsampleLinkedImages: boolean
 
   /**
    * The policy used by FXG to preserve filters.
    */
-  static filtersPolicy: FiltersPreservePolicy
+  filtersPolicy: FiltersPreservePolicy
 
   /**
    * The policy used by FXG to preserve gradients.
    */
-  static gradientsPolicy: GradientsPreservePolicy
+  gradientsPolicy: GradientsPreservePolicy
 
   /**
    * Choose to include metadata (XMP)
    */
-  static includeMetadata: boolean
+  includeMetadata: boolean
 
   /**
    * Choose to include unused symbols.
    */
-  static includeUnusedSymbols: boolean
+  includeUnusedSymbols: boolean
 
   /**
    * Choose to preserve the editing capabilities of FXG.
    */
-  static preserveEditingCapabilities: boolean
+  preserveEditingCapabilities: boolean
 
   /**
    * All the artboards or range of the artboards will be saved.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 
   /**
    * The policy used by FXG to preserve text.
    */
-  static textPolicy: TextPreservePolicy
+  textPolicy: TextPreservePolicy
 
   /**
    * The version of the FXG file format to create.
    */
-  static version: FXGVersion
+  version: FXGVersion
 }
 
 /**
@@ -5394,62 +5394,62 @@ declare class EPSSaveOptions {
   /**
    * If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * Use CMYK PostScript.
    */
-  static cmykPostScript: boolean
+  cmykPostScript: boolean
 
   /**
    * What Illustrator file format version to create.
    */
-  static compatibility: Compatibility
+  compatibility: Compatibility
 
   /**
    * Create a raster item of the gradient or gradient mesh so that PostScript Level 2 printers can print the object.
    */
-  static compatibleGradientPrinting: boolean
+  compatibleGradientPrinting: boolean
 
   /**
    * Embed all fonts used by the document in the saved file (version 7 or later)
    */
-  static embedAllFonts: boolean
+  embedAllFonts: boolean
 
   /**
    * Are linked image files to be included in the saved document.
    */
-  static embedLinkedFiles: boolean
+  embedLinkedFiles: boolean
 
   /**
    * How should transparency be flattened for older file format versions (pre-version 9)
    */
-  static flattenOutput: OutputFlattening
+  flattenOutput: OutputFlattening
 
   /**
    * Include thumbnail image of the EPS artwork.
    */
-  static includeDocumentThumbnails: boolean
+  includeDocumentThumbnails: boolean
 
   /**
    *
    */
-  static overprint: PDFOverprint
+  overprint: PDFOverprint
 
   /**
    * PostScript level to use (level 1 valid for file format version 8 or older)
    */
-  static postScript: EPSPostScriptLevelEnum
+  postScript: EPSPostScriptLevelEnum
 
   /**
    * EPS preview format.
    */
-  static preview: EPSPreview
+  preview: EPSPreview
 
   /**
    * All the artboards or range of the artboards will be saved.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 }
 
 /**
@@ -5459,282 +5459,282 @@ declare class PDFSaveOptions {
   /**
    * Create acrobat layers from top-level layers - acrobat 6 only option.
    */
-  static acrobatLayers: boolean
+  acrobatLayers: boolean
 
   /**
    * Considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * Link 4 bleed values.
    */
-  static bleedLink: boolean
+  bleedLink: boolean
 
   /**
    * The bleed offset rect.
    */
-  static bleedOffsetRect: Rect
+  bleedOffsetRect: Rect
 
   /**
    * Draw color bars.
    */
-  static colorBars: boolean
+  colorBars: boolean
 
   /**
    * How should color bitmap images be compressed.
    */
-  static colorCompression: CompressionQuality
+  colorCompression: CompressionQuality
 
   /**
    * PDF color conversion policy. Three choices are available: (1)No Color Conversion (2) Repurpose (3) Convert to Destination.
    */
-  static colorConversionID: ColorConversion
+  colorConversionID: ColorConversion
 
   /**
    * When NoColorConversion is specified for Color Conversion, NoColorDestination is set.
    */
-  static colorDestinationID: ColorDestination
+  colorDestinationID: ColorDestination
 
   /**
    * If zero, no downsampling, otherwise, the resolution to downsample color bitmap images to.
    */
-  static colorDownsampling: number
+  colorDownsampling: number
 
   /**
    * Downsample if the image's resolution is above this value.
    */
-  static colorDownsamplingImageThreshold: number
+  colorDownsamplingImageThreshold: number
 
   /**
    * How should color bitmap images be resampled.
    */
-  static colorDownsamplingMethod: DownsampleMethod
+  colorDownsamplingMethod: DownsampleMethod
 
   /**
    * If CMS is off, Don't Include Profiles is set.
    */
-  static colorProfileID: ColorProfile
+  colorProfileID: ColorProfile
 
   /**
    * Tile size when compressing with JPEG2000.
    */
-  static colorTileSize: number
+  colorTileSize: number
 
   /**
    * The version of the Acrobat file format to create.
    */
-  static compatibility: PDFCompatibility
+  compatibility: PDFCompatibility
 
   /**
    * Should line art and text be compressed?
    */
-  static compressArt: boolean
+  compressArt: boolean
 
   /**
    * A password string to open the document.
    */
-  static documentPassword: string
+  documentPassword: string
 
   /**
    * Enable accessing 128-bit.
    */
-  static enableAccess: boolean
+  enableAccess: boolean
 
   /**
    * Enable copying of text 128-bit.
    */
-  static enableCopy: boolean
+  enableCopy: boolean
 
   /**
    * Enable copying and accessing 40-bit.
    */
-  static enableCopyAccess: boolean
+  enableCopyAccess: boolean
 
   /**
    * Enable plaintext metadata 128-bit - available only for acrobat 6.
    */
-  static enablePlainText: boolean
+  enablePlainText: boolean
 
   /**
    * The printing flattener options.
    */
-  static flattenerOptions: PrintFlattenerOptions
+  flattenerOptions: PrintFlattenerOptions
 
   /**
    * The transparency flattener preset name.
    */
-  static flattenerPreset: string
+  flattenerPreset: string
 
   /**
    * Include a subset of fonts when less than this percentage of characters are used.
    */
-  static fontSubsetThreshold: number
+  fontSubsetThreshold: number
 
   /**
    * Generate thumbnails for the saved document.
    */
-  static generateThumbnails: boolean
+  generateThumbnails: boolean
 
   /**
    * How should grayscale bitmap images be compressed.
    */
-  static grayscaleCompression: CompressionQuality
+  grayscaleCompression: CompressionQuality
 
   /**
    * If zero, no downsampling, otherwise, the resolution to downsample grayscale images to.
    */
-  static grayscaleDownsampling: number
+  grayscaleDownsampling: number
 
   /**
    * Downsample if the image's resolution is above this value.
    */
-  static grayscaleDownsamplingImageThreshold: number
+  grayscaleDownsamplingImageThreshold: number
 
   /**
    * How should grayscale bitmap images be resampled.
    */
-  static grayscaleDownsamplingMethod: DownsampleMethod
+  grayscaleDownsamplingMethod: DownsampleMethod
 
   /**
    * Tile size when compressing with JPEG2000.
    */
-  static grayscaleTileSize: number
+  grayscaleTileSize: number
 
   /**
    * How should monochrome bitmap images be compressed.
    */
-  static monochromeCompression: MonochromeCompression
+  monochromeCompression: MonochromeCompression
 
   /**
    * If zero, no downsampling, otherwise, the resolution to downsample images to.
    */
-  static monochromeDownsampling: number
+  monochromeDownsampling: number
 
   /**
    * Downsample if the image's resolution is above this value.
    */
-  static monochromeDownsamplingImageThreshold: number
+  monochromeDownsamplingImageThreshold: number
 
   /**
    * How should monochrome bitmap images be resampled.
    */
-  static monochromeDownsamplingMethod: DownsampleMethod
+  monochromeDownsamplingMethod: DownsampleMethod
 
   /**
    * Custom offset (in points) for using the custom paper.
    */
-  static offset: number
+  offset: number
 
   /**
    * Should the PDF document be optimized for fast web viewing.
    */
-  static optimization: boolean
+  optimization: boolean
 
   /**
    * This is an optional comment which, if present, is added to the PDF file and describes the intended printing condition.
    */
-  static outputCondition: string
+  outputCondition: string
 
   /**
    * If selected for Output Intent Profile Name, you can set the name of a registered printing condition.
    */
-  static outputConditionID: string
+  outputConditionID: string
 
   /**
    * When CMS is on, the output intent profile is the same profile selected for Destination in the Color group box.
    */
-  static outputIntentProfile: string
+  outputIntentProfile: string
 
   /**
    * PDF security printing permission.
    */
-  static pDFAllowPrinting: PDFPrintAllowedEnum
+  pDFAllowPrinting: PDFPrintAllowedEnum
 
   /**
    * PDF security changes allowed.
    */
-  static pDFChangesAllowed: PDFChangesAllowedEnum
+  pDFChangesAllowed: PDFChangesAllowedEnum
 
   /**
    * The max string length is 255 bytes. Name of PDF preset to use.
    */
-  static pDFPreset: string
+  pDFPreset: string
 
   /**
    * This control includes the None option for when the user is not complying with any PDF standard.
    */
-  static pDFXStandard: PDFXStandard
+  pDFXStandard: PDFXStandard
 
   /**
    * This displays the description from the selected preset.
    */
-  static pDFXStandardDescription: string
+  pDFXStandardDescription: string
 
   /**
    * Draw page information.
    */
-  static pageInformation: boolean
+  pageInformation: boolean
 
   /**
    * The page marks style.
    */
-  static pageMarksType: PageMarksTypes
+  pageMarksType: PageMarksTypes
 
   /**
    * A password string to restrict editing security settings.
    */
-  static permissionPassword: string
+  permissionPassword: string
 
   /**
    * Preserve Illustrator editing capabilities when saving the document.
    */
-  static preserveEditability: boolean
+  preserveEditability: boolean
 
   /**
    * Flattening printer resolution.
    */
-  static printerResolution: number
+  printerResolution: number
 
   /**
    * Draw registration marks.
    */
-  static registrationMarks: boolean
+  registrationMarks: boolean
 
   /**
    * URL to the site where the specified output condition is registered. No validation is performed on the URL.
    */
-  static registryName: string
+  registryName: string
 
   /**
    * Require a password to open the document.
    */
-  static requireDocumentPassword: boolean
+  requireDocumentPassword: boolean
 
   /**
    * Use a password to restrict editing security settings.
    */
-  static requirePermissionPassword: boolean
+  requirePermissionPassword: boolean
 
   /**
    * This indicates if manual trapping has been prepared in the document.
    */
-  static trapped: boolean
+  trapped: boolean
 
   /**
    * Trim mark weight.
    */
-  static trimMarkWeight: PDFTrimMarkWeight
+  trimMarkWeight: PDFTrimMarkWeight
 
   /**
    * Draw trim marks.
    */
-  static trimMarks: boolean
+  trimMarks: boolean
 
   /**
    * View PDF after saving.
    */
-  static viewAfterSaving: boolean
+  viewAfterSaving: boolean
 }
 
 /**
@@ -5744,47 +5744,47 @@ declare class IllustratorSaveOptions {
   /**
    * If SaveMultipleArtboards is true ,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * What Illustrator file format version to create.
    */
-  static compatibility: Compatibility
+  compatibility: Compatibility
 
   /**
    * Should the saved file be compressed (version 10 or later)
    */
-  static compressed: boolean
+  compressed: boolean
 
   /**
    * Embed the document's ICC profile in the saved file (version 9 or later)
    */
-  static embedICCProfile: boolean
+  embedICCProfile: boolean
 
   /**
    * Are linked image files to be included in the saved document (versions 7 or later)
    */
-  static embedLinkedFiles: boolean
+  embedLinkedFiles: boolean
 
   /**
    * How should transparency be flattened for older file format versions (pre-version 9)
    */
-  static flattenOutput: OutputFlattening
+  flattenOutput: OutputFlattening
 
   /**
    * Include a subset of fonts when less than this percentage of characters are used (version 9 or later)
    */
-  static fontSubsetThreshold: number
+  fontSubsetThreshold: number
 
   /**
    * Save as a PDF compatible file (version 10 or later)
    */
-  static pdfCompatible: boolean
+  pdfCompatible: boolean
 
   /**
    * All the artboards or range of the artboards will be saved.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 }
 
 /**
@@ -5794,32 +5794,32 @@ declare class Matrix {
   /**
    *
    */
-  static mValueA: number
+  mValueA: number
 
   /**
    *
    */
-  static mValueB: number
+  mValueB: number
 
   /**
    *
    */
-  static mValueC: number
+  mValueC: number
 
   /**
    *
    */
-  static mValueD: number
+  mValueD: number
 
   /**
    *
    */
-  static mValueTX: number
+  mValueTX: number
 
   /**
    *
    */
-  static mValueTY: number
+  mValueTY: number
 }
 
 /**
@@ -5829,52 +5829,52 @@ declare class ExportOptionsJPEG {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: boolean
+  antiAliasing: boolean
 
   /**
    * Should the resulting image be clipped to the artboard.
    */
-  static artBoardClipping: boolean
+  artBoardClipping: boolean
 
   /**
    * Blur the resulting image this much.
    */
-  static blurAmount: number
+  blurAmount: number
 
   /**
    * Horizontal scaling factor.
    */
-  static horizontalScale: number
+  horizontalScale: number
 
   /**
    * Should the artboard be matted with a color.
    */
-  static matte: boolean
+  matte: boolean
 
   /**
    * The color to use when matting the artboard (default: white)
    */
-  static matteColor: RGBColor
+  matteColor: RGBColor
 
   /**
    * Should the image be optimized for web viewing.
    */
-  static optimization: boolean
+  optimization: boolean
 
   /**
    * Quality of resulting image.
    */
-  static qualitySetting: number
+  qualitySetting: number
 
   /**
    * Should the resulting image be saved as HTML.
    */
-  static saveAsHTML: boolean
+  saveAsHTML: boolean
 
   /**
    * Vertical scaling factor.
    */
-  static verticalScale: number
+  verticalScale: number
 }
 
 /**
@@ -5884,72 +5884,72 @@ declare class ExportOptionsPNG8 {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: boolean
+  antiAliasing: boolean
 
   /**
    * Should the resulting image be clipped to the artboard.
    */
-  static artBoardClipping: boolean
+  artBoardClipping: boolean
 
   /**
    * Number of colors in exported color table.
    */
-  static colorCount: number
+  colorCount: number
 
   /**
    * Method used to dither colors.
    */
-  static colorDither: ColorDitherMethod
+  colorDither: ColorDitherMethod
 
   /**
    * Method used to reduce the number of colors.
    */
-  static colorReduction: ColorReductionMethod
+  colorReduction: ColorReductionMethod
 
   /**
    * How much should the colors be dithered.
    */
-  static ditherPercent: number
+  ditherPercent: number
 
   /**
    * Horizontal scaling factor.
    */
-  static horizontalScale: number
+  horizontalScale: number
 
   /**
    * Should the resulting image be interlaced.
    */
-  static interlaced: boolean
+  interlaced: boolean
 
   /**
    * Should the artboard be matted with a color.
    */
-  static matte: boolean
+  matte: boolean
 
   /**
    * The color to use when matting the artboard (default: white)
    */
-  static matteColor: RGBColor
+  matteColor: RGBColor
 
   /**
    * Should the resulting image be saved as HTML.
    */
-  static saveAsHTML: boolean
+  saveAsHTML: boolean
 
   /**
    * Should the resulting image use transparency.
    */
-  static transparency: boolean
+  transparency: boolean
 
   /**
    * Vertical scaling factor.
    */
-  static verticalScale: number
+  verticalScale: number
 
   /**
    * How much should the color table be changed to match the web palette.
    */
-  static webSnap: number
+  webSnap: number
 }
 
 /**
@@ -5959,47 +5959,47 @@ declare class ExportOptionsPNG24 {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: boolean
+  antiAliasing: boolean
 
   /**
    * Should the resulting image be clipped to the artboard.
    */
-  static artBoardClipping: boolean
+  artBoardClipping: boolean
 
   /**
    * Dimensions in which to contain the resulting raster.
    */
-  static dimensions: Dimensions
+  dimensions: Dimensions
 
   /**
    * Horizontal scaling factor.
    */
-  static horizontalScale: number
+  horizontalScale: number
 
   /**
    * Should the artboard be matted with a color.
    */
-  static matte: boolean
+  matte: boolean
 
   /**
    * The color to use when matting the artboard (default: white)
    */
-  static matteColor: RGBColor
+  matteColor: RGBColor
 
   /**
    * Should the resulting image be saved as HTML.
    */
-  static saveAsHTML: boolean
+  saveAsHTML: boolean
 
   /**
    * Should the resulting image use transparency.
    */
-  static transparency: boolean
+  transparency: boolean
 
   /**
    * Vertical scaling factor.
    */
-  static verticalScale: number
+  verticalScale: number
 }
 
 /**
@@ -6009,77 +6009,77 @@ declare class ExportOptionsGIF {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: boolean
+  antiAliasing: boolean
 
   /**
    * Should the resulting image be clipped to the artboard.
    */
-  static artBoardClipping: boolean
+  artBoardClipping: boolean
 
   /**
    * Number of colors in exported color table.
    */
-  static colorCount: number
+  colorCount: number
 
   /**
    * Method used to dither colors.
    */
-  static colorDither: ColorDitherMethod
+  colorDither: ColorDitherMethod
 
   /**
    * Method used to reduce the number of colors.
    */
-  static colorReduction: ColorReductionMethod
+  colorReduction: ColorReductionMethod
 
   /**
    * How much should the colors be dithered.
    */
-  static ditherPercent: number
+  ditherPercent: number
 
   /**
    * Horizontal scaling factor.
    */
-  static horizontalScale: number
+  horizontalScale: number
 
   /**
    * Level of information loss during compression.
    */
-  static infoLossPercent: number
+  infoLossPercent: number
 
   /**
    * Should the resulting image be interlaced.
    */
-  static interlaced: boolean
+  interlaced: boolean
 
   /**
    * Should the artboard be matted with a color.
    */
-  static matte: boolean
+  matte: boolean
 
   /**
    * The color to use when matting the artboard (default: white)
    */
-  static matteColor: RGBColor
+  matteColor: RGBColor
 
   /**
    * Should the resulting image be saved as HTML.
    */
-  static saveAsHTML: boolean
+  saveAsHTML: boolean
 
   /**
    * Should the resulting image use transparency.
    */
-  static transparency: boolean
+  transparency: boolean
 
   /**
    * Vertical scaling factor.
    */
-  static verticalScale: number
+  verticalScale: number
 
   /**
    * How much should the color table be changed to match the web pallet.
    */
-  static webSnap: number
+  webSnap: number
 }
 
 /**
@@ -6089,52 +6089,52 @@ declare class ExportOptionsPhotoshop {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: boolean
+  antiAliasing: boolean
 
   /**
    * If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * Export text objects as editable text layers.
    */
-  static editableText: boolean
+  editableText: boolean
 
   /**
    * Embed an ICC profile when exporting.
    */
-  static embedICCProfile: boolean
+  embedICCProfile: boolean
 
   /**
    * The color space of the exported file.
    */
-  static imageColorSpace: ImageColorSpace
+  imageColorSpace: ImageColorSpace
 
   /**
    * Preserve as much of the original document's structure as possible when exporting.
    */
-  static maximumEditability: boolean
+  maximumEditability: boolean
 
   /**
    * The resolution of the exported file.
    */
-  static resolution: number
+  resolution: number
 
   /**
    * All the artboards or range of the artboards will be exported.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 
   /**
    * Should a warning dialog be displayed because of conflicts in the export settings.
    */
-  static warnings: boolean
+  warnings: boolean
 
   /**
    * Preserve document layers when exporting.
    */
-  static writeLayers: boolean
+  writeLayers: boolean
 }
 
 /**
@@ -6144,92 +6144,92 @@ declare class ExportOptionsSVG {
   /**
    * The version of DTD that the exported file should be conforming to.
    */
-  static DTD: SVGDTDVersion
+  DTD: SVGDTDVersion
 
   /**
    * If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * Should the exported file be compressed.
    */
-  static compressed: boolean
+  compressed: boolean
 
   /**
    * Decimal precision for element coordinate values.
    */
-  static coordinatePrecision: number
+  coordinatePrecision: number
 
   /**
    * How should the CSS properties of the document be included in the document.
    */
-  static cssProperties: SVGCSSPropertyLocation
+  cssProperties: SVGCSSPropertyLocation
 
   /**
    * How should the text in the document be encoded.
    */
-  static documentEncoding: SVGDocumentEncoding
+  documentEncoding: SVGDocumentEncoding
 
   /**
    * Should the raster images in the exported file be included.
    */
-  static embedRasterImages: boolean
+  embedRasterImages: boolean
 
   /**
    * What font glyphs should be included in the exported file.
    */
-  static fontSubsetting: SVGFontSubsetting
+  fontSubsetting: SVGFontSubsetting
 
   /**
    * The type of font that should be included in the exported file.
    */
-  static fontType: SVGFontType
+  fontType: SVGFontType
 
   /**
    *
    */
-  static includeFileInfo: boolean
+  includeFileInfo: boolean
 
   /**
    *
    */
-  static includeUnusedStyles: boolean
+  includeUnusedStyles: boolean
 
   /**
    *
    */
-  static includeVariablesAndDatasets: boolean
+  includeVariablesAndDatasets: boolean
 
   /**
    *
    */
-  static optimizeForSVGViewer: boolean
+  optimizeForSVGViewer: boolean
 
   /**
    * Preserve Illustrator editing capabilities when exporting the document.
    */
-  static preserveEditability: boolean
+  preserveEditability: boolean
 
   /**
    * Is SVG auto kerning allowed?
    */
-  static sVGAutoKerning: boolean
+  sVGAutoKerning: boolean
 
   /**
    * Is SVG text-on-path construct allowed?
    */
-  static sVGTextOnPath: boolean
+  sVGTextOnPath: boolean
 
   /**
    * All the artboards or range of the artboards will be saved.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 
   /**
    * Preserve slice data in exported document.
    */
-  static slices: boolean
+  slices: boolean
 }
 
 /**
@@ -6239,47 +6239,47 @@ declare class ExportOptionsWebOptimizedSVG {
   /**
    * If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * Decimal precision for element coordinate values.
    */
-  static coordinatePrecision: number
+  coordinatePrecision: number
 
   /**
    * How should the CSS properties of the document be included in the document.
    */
-  static cssProperties: SVGCSSPropertyLocation
+  cssProperties: SVGCSSPropertyLocation
 
   /**
    * The type of font that should be included in the exported file.
    */
-  static fontType: SVGFontType
+  fontType: SVGFontType
 
   /**
    * Should the raster images in the exported file be included.
    */
-  static rasterImageLocation: RasterImageLocation
+  rasterImageLocation: RasterImageLocation
 
   /**
    * All the artboards or range of the artboards will be saved.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 
   /**
    * How object names (IDs) are generated in exported SVG.
    */
-  static svgId: SVGIdType
+  svgId: SVGIdType
 
   /**
    * Reduces the size of the svg.
    */
-  static svgMinify: boolean
+  svgMinify: boolean
 
   /**
    * Makes the SVG Responsive.
    */
-  static svgResponsive: boolean
+  svgResponsive: boolean
 }
 
 /**
@@ -6289,127 +6289,127 @@ declare class ExportOptionsFlash {
   /**
    * How should the arts be clipped during the output.
    */
-  static artClipping: ArtClippingOption
+  artClipping: ArtClippingOption
 
   /**
    * If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * The background color.
    */
-  static backgroundColor: RGBColor
+  backgroundColor: RGBColor
 
   /**
    * A list of layers to be included as the static background in all exported Flash frames.
    */
-  static backgroundLayers: Layer[]
+  backgroundLayers: Layer[]
 
   /**
    * Controls how the blend art objects are animated when export to Flash frames.
    */
-  static blendAnimation: BlendAnimationType
+  blendAnimation: BlendAnimationType
 
   /**
    * Should the exported file be compressed.
    */
-  static compressed: boolean
+  compressed: boolean
 
   /**
    * Should all text be converted to outlines.
    */
-  static convertTextToOutlines: boolean
+  convertTextToOutlines: boolean
 
   /**
    * How much curve information should be preserved.
    */
-  static curveQuality: number
+  curveQuality: number
 
   /**
    * Should all symbol definitions in the palette be exported to the SWF File.
    */
-  static exportAllSymbols: boolean
+  exportAllSymbols: boolean
 
   /**
    * How should the Flash file be created.
    */
-  static exportStyle: FlashExportStyle
+  exportStyle: FlashExportStyle
 
   /**
    * Which version of SWF to export.
    */
-  static exportVersion: FlashExportVersion
+  exportVersion: FlashExportVersion
 
   /**
    * When exporting layers to Flash frames.
    */
-  static frameRate: number
+  frameRate: number
 
   /**
    * Should the kerning information for text objects be ignored.
    */
-  static ignoreTextKerning: boolean
+  ignoreTextKerning: boolean
 
   /**
    * How should the images in the exported Flash file be compressed.
    */
-  static imageFormat: FlashImageFormat
+  imageFormat: FlashImageFormat
 
   /**
    * If true, include minimal XMP metadata in the exported file.
    */
-  static includeMetadata: boolean
+  includeMetadata: boolean
 
   /**
    * What method to use.
    */
-  static jpegMethod: FlashJPEGMethod
+  jpegMethod: FlashJPEGMethod
 
   /**
    * Level of compression.
    */
-  static jpegQuality: number
+  jpegQuality: number
 
   /**
    * The order in which the layers will be exported to Flash frames.
    */
-  static layerOrder: LayerOrderType
+  layerOrder: LayerOrderType
 
   /**
    * Should the Flash file be set to loop when run.
    */
-  static looping: boolean
+  looping: boolean
 
   /**
    * What access should the SWF file have - local or network access.
    */
-  static playbackAccess: FlashPlaybackSecurity
+  playbackAccess: FlashPlaybackSecurity
 
   /**
    * Choose whether to preserve artwork appearance or editability (default) during export.
    */
-  static preserveAppearance: boolean
+  preserveAppearance: boolean
 
   /**
    * Prevent the exported file from being imported by other applications.
    */
-  static readOnly: boolean
+  readOnly: boolean
 
   /**
    * If a file with the same name already exists, should it be replaced?
    */
-  static replacing: SaveOptions
+  replacing: SaveOptions
 
   /**
    * Pixels per inch.
    */
-  static resolution: number
+  resolution: number
 
   /**
    * All the artboards or range of the artboards will be exported.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 }
 
 /**
@@ -6419,57 +6419,57 @@ declare class ExportOptionsAutoCAD {
   /**
    * Alter paths for appearance.
    */
-  static alterPathsForAppearance: boolean
+  alterPathsForAppearance: boolean
 
   /**
    * Number of colors to export into the AutoCAD file.
    */
-  static colors: AutoCADColors
+  colors: AutoCADColors
 
   /**
    * Whether to convert text to outlines.
    */
-  static convertTextToOutlines: boolean
+  convertTextToOutlines: boolean
 
   /**
    * Which format to export the file as.
    */
-  static exportFileFormat: AutoCADExportFileFormat
+  exportFileFormat: AutoCADExportFileFormat
 
   /**
    * Whether to preserve appearance or editability during export.
    */
-  static exportOption: AutoCADExportOption
+  exportOption: AutoCADExportOption
 
   /**
    * Export selected art only.
    */
-  static exportSelectedArtOnly: boolean
+  exportSelectedArtOnly: boolean
 
   /**
    * Raster format in which to export raster art.
    */
-  static rasterFormat: AutoCADRasterFormat
+  rasterFormat: AutoCADRasterFormat
 
   /**
    * Whether to scale lineweights by the same amount as rest of the drawing.
    */
-  static scaleLineweights: boolean
+  scaleLineweights: boolean
 
   /**
    * Units from which to map.
    */
-  static unit: AutoCADUnit
+  unit: AutoCADUnit
 
   /**
    * Ratio by which to scale the output.
    */
-  static unitScaleRatio: number
+  unitScaleRatio: number
 
   /**
    * Release of AutoCAD to export to.
    */
-  static version: AutoCADCompatibility
+  version: AutoCADCompatibility
 }
 
 /**
@@ -6479,42 +6479,42 @@ declare class ExportOptionsTIFF {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: AntiAliasingMethod
+  antiAliasing: AntiAliasingMethod
 
   /**
    * If SaveMultipleArtboards is true,this will be considered for multi-asset extraction which specifies artboard range.Empty string will extracts all the artboards.Default is empty string.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * Mac or PC byte order when exporting.
    */
-  static byteOrder: TIFFByteOrder
+  byteOrder: TIFFByteOrder
 
   /**
    * Embed an ICC profile when exporting.
    */
-  static embedICCProfile: boolean
+  embedICCProfile: boolean
 
   /**
    * The color space of the exported file.
    */
-  static imageColorSpace: ImageColorSpace
+  imageColorSpace: ImageColorSpace
 
   /**
    * Compress TIFF file with LZW Compression when exporting.
    */
-  static lZWCompression: boolean
+  lZWCompression: boolean
 
   /**
    * The resolution of the exported file.
    */
-  static resolution: number
+  resolution: number
 
   /**
    * All the artboards or range of the artboards will be exported.
    */
-  static saveMultipleArtboards: boolean
+  saveMultipleArtboards: boolean
 }
 
 /**
@@ -6549,12 +6549,12 @@ declare class Dimensions {
   /**
    * The Height parameter.
    */
-  static height: number
+  height: number
 
   /**
    * The Width parameter.
    */
-  static width: number
+  width: number
 }
 
 /**
@@ -6734,22 +6734,22 @@ declare class TabStopInfo {
   /**
    * The alignment of the tab stop.
    */
-  static alignment: TabStopAlignment
+  alignment: TabStopAlignment
 
   /**
    * The character used for decimal tab stops.
    */
-  static decimalCharacter: string
+  decimalCharacter: string
 
   /**
    * The leader dot.
    */
-  static leader: string
+  leader: string
 
   /**
    * The position of the tab stop expressed in points.
    */
-  static position: number
+  position: number
 }
 
 /**
@@ -6759,12 +6759,12 @@ declare class Printer {
   /**
    * The printer name.
    */
-  static name: string
+  name: string
 
   /**
    * The printer information.
    */
-  static printerInfo: PrinterInfo
+  printerInfo: PrinterInfo
 }
 
 /**
@@ -6774,92 +6774,92 @@ declare class PrinterInfo {
   /**
    * Does the printer support binary printing?
    */
-  static binaryPrintingSupport: boolean
+  binaryPrintingSupport: boolean
 
   /**
    * The printer color capability.
    */
-  static colorSupport: PrinterColorMode
+  colorSupport: PrinterColorMode
 
   /**
    * Does the printer support custom paper size?
    */
-  static customPaperSupport: boolean
+  customPaperSupport: boolean
 
   /**
    * Does the printer support custom paper transverse?
    */
-  static customPaperTransverseSupport: boolean
+  customPaperTransverseSupport: boolean
 
   /**
    * The printer default resolution.
    */
-  static deviceResolution: number
+  deviceResolution: number
 
   /**
    * Does the printer support InRIP color separation?
    */
-  static inRIPSeparationSupport: boolean
+  inRIPSeparationSupport: boolean
 
   /**
    * The printer maximum device resolution.
    */
-  static maxDeviceResolution: number
+  maxDeviceResolution: number
 
   /**
    * Custom paper's maximum height.
    */
-  static maxPaperHeight: number
+  maxPaperHeight: number
 
   /**
    * Custom paper's maximum height offset.
    */
-  static maxPaperHeightOffset: number
+  maxPaperHeightOffset: number
 
   /**
    * Custom paper's maximum width.
    */
-  static maxPaperWidth: number
+  maxPaperWidth: number
 
   /**
    * Custom paper's maximum width offset.
    */
-  static maxPaperWidthOffset: number
+  maxPaperWidthOffset: number
 
   /**
    * Custom paper's minimum height.
    */
-  static minPaperHeight: number
+  minPaperHeight: number
 
   /**
    * Custom paper's minimum height offset.
    */
-  static minPaperHeightOffset: number
+  minPaperHeightOffset: number
 
   /**
    * Custom paper's minimum width.
    */
-  static minPaperWidth: number
+  minPaperWidth: number
 
   /**
    * Custom paper's minimum width offset.
    */
-  static minPaperWidthOffset: number
+  minPaperWidthOffset: number
 
   /**
    * The list of supported paper sizes.
    */
-  static paperSizes: Paper[]
+  paperSizes: Paper[]
 
   /**
    * The PostScript level.
    */
-  static postScriptLevel: PrinterPostScriptLevelEnum
+  postScriptLevel: PrinterPostScriptLevelEnum
 
   /**
    * The printer type.
    */
-  static printerType: PrinterTypeEnum
+  printerType: PrinterTypeEnum
 }
 
 /**
@@ -6869,12 +6869,12 @@ declare class PPDFile {
   /**
    * The PPD file information.
    */
-  static PPDInfo: PPDFileInfo
+  PPDInfo: PPDFileInfo
 
   /**
    * The PPD model name.
    */
-  static name: string
+  name: string
 }
 
 /**
@@ -6884,22 +6884,22 @@ declare class PPDFileInfo {
   /**
    * Path specification for the PPD file.
    */
-  static PPDFilePath: File
+  PPDFilePath: File
 
   /**
    * The PostScript language level.
    */
-  static languageLevel: string
+  languageLevel: string
 
   /**
    * List of color separation screens.
    */
-  static screenList: Screen[]
+  screenList: Screen[]
 
   /**
    * List of color separation screen spot functions.
    */
-  static screenSpotFunctionList: ScreenSpotFunction[]
+  screenSpotFunctionList: ScreenSpotFunction[]
 }
 
 /**
@@ -6909,12 +6909,12 @@ declare class Paper {
   /**
    * The paper name.
    */
-  static name: string
+  name: string
 
   /**
    * The paper information.
    */
-  static paperInfo: PaperInfo
+  paperInfo: PaperInfo
 }
 
 /**
@@ -6924,22 +6924,22 @@ declare class PaperInfo {
   /**
    * Is it a custom paper?
    */
-  static customPaper: boolean
+  customPaper: boolean
 
   /**
    * The paper's height (in points)
    */
-  static height: number
+  height: number
 
   /**
    * The imageable area.
    */
-  static imageableArea: Rect
+  imageableArea: Rect
 
   /**
    * The paper's width (in points)
    */
-  static width: number
+  width: number
 }
 
 /**
@@ -6949,12 +6949,12 @@ declare class Screen {
   /**
    * The color separation screen name.
    */
-  static name: string
+  name: string
 
   /**
    * The color separation screen information.
    */
-  static screenInfo: ScreenInfo
+  screenInfo: ScreenInfo
 }
 
 /**
@@ -6964,17 +6964,17 @@ declare class ScreenInfo {
   /**
    * The screen's angle (in degrees)
    */
-  static angle: number
+  angle: number
 
   /**
    * Is it the default screen?
    */
-  static defaultScreen: boolean
+  defaultScreen: boolean
 
   /**
    * The screen's frequency.
    */
-  static frequency: number
+  frequency: number
 }
 
 /**
@@ -6984,12 +6984,12 @@ declare class ScreenSpotFunction {
   /**
    * The color separation screen spot function name.
    */
-  static name: string
+  name: string
 
   /**
    * The spot function in terms of the PostScript commands.
    */
-  static spotFunction: string
+  spotFunction: string
 }
 
 /**
@@ -6999,12 +6999,12 @@ declare class Ink {
   /**
    * The ink information.
    */
-  static inkInfo: InkInfo
+  inkInfo: InkInfo
 
   /**
    * The ink's name.
    */
-  static name: string
+  name: string
 }
 
 /**
@@ -7014,47 +7014,47 @@ declare class InkInfo {
   /**
    * The ink's screen angle (in degrees)
    */
-  static angle: number
+  angle: number
 
   /**
    * The color of the custom ink.
    */
-  static customColor: Color
+  customColor: Color
 
   /**
    * The neutral density.
    */
-  static density: number
+  density: number
 
   /**
    * The dot shape name.
    */
-  static dotShape: string
+  dotShape: string
 
   /**
    * The ink's frequency.
    */
-  static frequency: number
+  frequency: number
 
   /**
    * The ink type.
    */
-  static kind: InkType
+  kind: InkType
 
   /**
    * The ink printing status.
    */
-  static printingStatus: InkPrintStatus
+  printingStatus: InkPrintStatus
 
   /**
    * The trapping type.
    */
-  static trapping: TrappingType
+  trapping: TrappingType
 
   /**
    * The order of trapping for the ink.
    */
-  static trappingOrder: number
+  trappingOrder: number
 }
 
 /**
@@ -7064,62 +7064,62 @@ declare class DocumentPreset {
   /**
    * Layout for artboards.
    */
-  static artboardLayout: DocumentArtboardLayout
+  artboardLayout: DocumentArtboardLayout
 
   /**
    * Number of rows (for rows layout) OR column(for column layouts)of artboards.Range is 1 to (docNumArtboards - 1) or 1 for single row or column layouts.
    */
-  static artboardRowsOrCols: number
+  artboardRowsOrCols: number
 
   /**
    * Spacing between artboards.
    */
-  static artboardSpacing: number
+  artboardSpacing: number
 
   /**
    * The color mode for the new document.
    */
-  static colorMode: DocumentColorSpace
+  colorMode: DocumentColorSpace
 
   /**
    * The height for the new document.
    */
-  static height: number
+  height: number
 
   /**
    * Number of artboards for new document.Range (1:100).
    */
-  static numArtboards: number
+  numArtboards: number
 
   /**
    * The preview mode for the new document.
    */
-  static previewMode: DocumentPreviewMode
+  previewMode: DocumentPreviewMode
 
   /**
    * The raster resolution for the new document.
    */
-  static rasterResolution: DocumentRasterResolution
+  rasterResolution: DocumentRasterResolution
 
   /**
    * The title for the new document.
    */
-  static title: string
+  title: string
 
   /**
    * The transparency grid for the new document.
    */
-  static transparencyGrid: DocumentTransparencyGrid
+  transparencyGrid: DocumentTransparencyGrid
 
   /**
    * The units for the new document.
    */
-  static units: RulerUnits
+  units: RulerUnits
 
   /**
    * The width for the new document.
    */
-  static width: number
+  width: number
 }
 
 /**
@@ -7129,67 +7129,67 @@ declare class PrintOptions {
   /**
    * The name of the PPD to use.
    */
-  static PPDName: string
+  PPDName: string
 
   /**
    * The printing color management options.
    */
-  static colorManagementOptions: PrintColorManagementOptions
+  colorManagementOptions: PrintColorManagementOptions
 
   /**
    * The printing color separation options.
    */
-  static colorSeparationOptions: PrintColorSeparationOptions
+  colorSeparationOptions: PrintColorSeparationOptions
 
   /**
    * The printing coordinate options.
    */
-  static coordinateOptions: PrintCoordinateOptions
+  coordinateOptions: PrintCoordinateOptions
 
   /**
    * The printing flattener options.
    */
-  static flattenerOptions: PrintFlattenerOptions
+  flattenerOptions: PrintFlattenerOptions
 
   /**
    * The transparency flattener preset name.
    */
-  static flattenerPreset: string
+  flattenerPreset: string
 
   /**
    * The printing font options.
    */
-  static fontOptions: PrintFontOptions
+  fontOptions: PrintFontOptions
 
   /**
    * The printing job options.
    */
-  static jobOptions: PrintJobOptions
+  jobOptions: PrintJobOptions
 
   /**
    * The printing page marks options.
    */
-  static pageMarksOptions: PrintPageMarksOptions
+  pageMarksOptions: PrintPageMarksOptions
 
   /**
    * The paper options.
    */
-  static paperOptions: PrintPaperOptions
+  paperOptions: PrintPaperOptions
 
   /**
    * The printing PostScript options.
    */
-  static postScriptOptions: PrintPostScriptOptions
+  postScriptOptions: PrintPostScriptOptions
 
   /**
    * The name of a print preset to use.
    */
-  static printPreset: string
+  printPreset: string
 
   /**
    * The name of the printer to print to.
    */
-  static printerName: string
+  printerName: string
 }
 
 /**
@@ -7199,27 +7199,27 @@ declare class PrintPaperOptions {
   /**
    * The custom height (in points) for using the custom paper.
    */
-  static height: number
+  height: number
 
   /**
    * The paper's name.
    */
-  static name: string
+  name: string
 
   /**
    * Custom offset (in points) for using the custom paper.
    */
-  static offset: number
+  offset: number
 
   /**
    * Whether to transverse the artwork (rotate 90 degrees) on the custom paper.
    */
-  static transverse: boolean
+  transverse: boolean
 
   /**
    * The custom width (in points) for using the custom paper.
    */
-  static width: number
+  width: number
 }
 
 /**
@@ -7229,57 +7229,57 @@ declare class PrintJobOptions {
   /**
    * Artboard Range to be printed if PrintAllArtboards is false.
    */
-  static artboardRange: string
+  artboardRange: string
 
   /**
    * The bitmap resolution.
    */
-  static bitmapResolution: number
+  bitmapResolution: number
 
   /**
    * Whether to collate print pages.
    */
-  static collate: boolean
+  collate: boolean
 
   /**
    * The number of copies to print.
    */
-  static copies: number
+  copies: number
 
   /**
    * The layers/objects to be printed.
    */
-  static designation: PrintArtworkDesignation
+  designation: PrintArtworkDesignation
 
   /**
    * The file to be printed to.
    */
-  static file: File
+  file: File
 
   /**
    * The print job name.
    */
-  static name: string
+  name: string
 
   /**
    * Whether to print all artboards.
    */
-  static printAllArtboards: boolean
+  printAllArtboards: boolean
 
   /**
    * The printing bounds.
    */
-  static printArea: PrintingBounds
+  printArea: PrintingBounds
 
   /**
    * Whether to print as bitmap.
    */
-  static printAsBitmap: boolean
+  printAsBitmap: boolean
 
   /**
    * Print pages in reverse order.
    */
-  static reversePages: boolean
+  reversePages: boolean
 }
 
 /**
@@ -7289,22 +7289,22 @@ declare class PrintColorSeparationOptions {
   /**
    * The color separation type.
    */
-  static colorSeparationMode: PrintColorSeparationMode
+  colorSeparationMode: PrintColorSeparationMode
 
   /**
    * Whether to convert all spot colors to process colors.
    */
-  static convertSpotColors: boolean
+  convertSpotColors: boolean
 
   /**
    * The list of inks for color separation.
    */
-  static inkList: Ink[]
+  inkList: Ink[]
 
   /**
    * Whether to overprint in black.
    */
-  static overPrintBlack: boolean
+  overPrintBlack: boolean
 }
 
 /**
@@ -7314,37 +7314,37 @@ declare class PrintCoordinateOptions {
   /**
    * Whether to flip artwork horizontally.
    */
-  static emulsion: boolean
+  emulsion: boolean
 
   /**
    * Whether to proportionally scale the artwork to fit on the page.
    */
-  static fitToPage: boolean
+  fitToPage: boolean
 
   /**
    * The horizontal scaling factor expressed as a percentage (100 = 100%)
    */
-  static horizontalScale: number
+  horizontalScale: number
 
   /**
    * The artwork orientation.
    */
-  static orientation: PrintOrientation
+  orientation: PrintOrientation
 
   /**
    * The artwork position on media.
    */
-  static position: PrintPosition
+  position: PrintPosition
 
   /**
    * The page tiling mode.
    */
-  static tiling: PrintTiling
+  tiling: PrintTiling
 
   /**
    * The vertical scaling factor expressed as a percentage (100 = 100%)
    */
-  static verticalScale: number
+  verticalScale: number
 }
 
 /**
@@ -7354,42 +7354,42 @@ declare class PrintPageMarksOptions {
   /**
    * The bleed offset rect.
    */
-  static bleedOffsetRect: Rect
+  bleedOffsetRect: Rect
 
   /**
    * Whether to enable color bars printing.
    */
-  static colorBars: boolean
+  colorBars: boolean
 
   /**
    * The page marks offset rect.
    */
-  static marksOffsetRect: Rect
+  marksOffsetRect: Rect
 
   /**
    * Whether to enable page info marks printing.
    */
-  static pageInfoMarks: boolean
+  pageInfoMarks: boolean
 
   /**
    * The page marks style.
    */
-  static pageMarksType: PageMarksTypes
+  pageMarksType: PageMarksTypes
 
   /**
    * Whether to enable registration marks printing.
    */
-  static registrationMarks: boolean
+  registrationMarks: boolean
 
   /**
    * Whether to enable trim marks printing.
    */
-  static trimMarks: boolean
+  trimMarks: boolean
 
   /**
    * Stroke weight of trim marks.
    */
-  static trimMarksWeight: number
+  trimMarksWeight: number
 }
 
 /**
@@ -7399,12 +7399,12 @@ declare class PrintFontOptions {
   /**
    * The font download mode.
    */
-  static downloadFonts: PrintFontDownloadMode
+  downloadFonts: PrintFontDownloadMode
 
   /**
    * The font substitution policy.
    */
-  static fontSubstitution: FontSubstitutionPolicy
+  fontSubstitution: FontSubstitutionPolicy
 }
 
 /**
@@ -7414,37 +7414,37 @@ declare class PrintPostScriptOptions {
   /**
    * Whether to print in binary mode.
    */
-  static binaryPrinting: boolean
+  binaryPrinting: boolean
 
   /**
    * Use PostScript level 1 compatible gradient and gradient mesh printing.
    */
-  static compatibleShading: boolean
+  compatibleShading: boolean
 
   /**
    * Whether to force continuous tone.
    */
-  static forceContinuousTone: boolean
+  forceContinuousTone: boolean
 
   /**
    * The image compression type.
    */
-  static imageCompression: PostScriptImageCompressionType
+  imageCompression: PostScriptImageCompressionType
 
   /**
    * Whether to print in negative mode.
    */
-  static negativePrinting: boolean
+  negativePrinting: boolean
 
   /**
    * The PostScript language level.
    */
-  static postScriptLevel: PrinterPostScriptLevelEnum
+  postScriptLevel: PrinterPostScriptLevelEnum
 
   /**
    * The shading resolution.
    */
-  static shadingResolution: number
+  shadingResolution: number
 }
 
 /**
@@ -7454,17 +7454,17 @@ declare class PrintColorManagementOptions {
   /**
    * The color management profile mode.
    */
-  static colorProfileMode: PrintColorProfile
+  colorProfileMode: PrintColorProfile
 
   /**
    * The color management intent type.
    */
-  static intent: PrintColorIntent
+  intent: PrintColorIntent
 
   /**
    * The color management profile name.
    */
-  static name: string
+  name: string
 }
 
 /**
@@ -7474,37 +7474,37 @@ declare class PrintFlattenerOptions {
   /**
    * Whether to clip complex regions.
    */
-  static clipComplexRegions: boolean
+  clipComplexRegions: boolean
 
   /**
    * Whether to convert all strokes to outlines.
    */
-  static convertStrokesToOutlines: boolean
+  convertStrokesToOutlines: boolean
 
   /**
    * Whether to convert all text to outlines.
    */
-  static convertTextToOutlines: boolean
+  convertTextToOutlines: boolean
 
   /**
    * The flattening balance.
    */
-  static flatteningBalance: number
+  flatteningBalance: number
 
   /**
    * The gradient resolution.
    */
-  static gradientResolution: number
+  gradientResolution: number
 
   /**
    * Overprint.
    */
-  static overprint: PDFOverprint
+  overprint: PDFOverprint
 
   /**
    * The rasterization resolution.
    */
-  static rasterizationResolution: number
+  rasterizationResolution: number
 }
 
 /**
@@ -7514,27 +7514,27 @@ declare class ImageCaptureOptions {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: boolean
+  antiAliasing: boolean
 
   /**
    * Should the artboard be matted with a color.
    */
-  static matte: boolean
+  matte: boolean
 
   /**
    * The color to use when matting the artboard (default: white)
    */
-  static matteColor: RGBColor
+  matteColor: RGBColor
 
   /**
    * The resolution of the captured image file.
    */
-  static resolution: number
+  resolution: number
 
   /**
    * Should the resulting image use transparency.
    */
-  static transparency: boolean
+  transparency: boolean
 }
 
 /**
@@ -7544,37 +7544,37 @@ declare class RasterEffectOptions {
   /**
    * Should the resulting image be antialiased.
    */
-  static antiAliasing: boolean
+  antiAliasing: boolean
 
   /**
    * Should a clipping mask be created for the resulting image.
    */
-  static clippingMask: boolean
+  clippingMask: boolean
 
   /**
    * The color model for the rasterization.
    */
-  static colorModel: RasterizationColorModel
+  colorModel: RasterizationColorModel
 
   /**
    * Whether to convert all spot colors to process colors in the resulting image.
    */
-  static convertSpotColors: boolean
+  convertSpotColors: boolean
 
   /**
    * The amount of white space (in points) to be added around the object during rasterization.
    */
-  static padding: number
+  padding: number
 
   /**
    * The rasterization resolution in dots-per-inch (dpi)
    */
-  static resolution: number
+  resolution: number
 
   /**
    * Should the resulting image use transparency.
    */
-  static transparency: boolean
+  transparency: boolean
 }
 
 /**
@@ -7584,52 +7584,52 @@ declare class RasterizeOptions {
   /**
    * The type of antialiasing method.
    */
-  static antiAliasingMethod: AntiAliasingMethod
+  antiAliasingMethod: AntiAliasingMethod
 
   /**
    * Should rasterize against a black background instead of white.
    */
-  static backgroundBlack: boolean
+  backgroundBlack: boolean
 
   /**
    * Should a clipping mask be created for the resulting image.
    */
-  static clippingMask: boolean
+  clippingMask: boolean
 
   /**
    * The color model for the rasterization.
    */
-  static colorModel: RasterizationColorModel
+  colorModel: RasterizationColorModel
 
   /**
    * Whether to convert all spot colors to process colors in the resulting image.
    */
-  static convertSpotColors: boolean
+  convertSpotColors: boolean
 
   /**
    * Should all text be converted to outlines before rasterization.
    */
-  static convertTextToOutlines: boolean
+  convertTextToOutlines: boolean
 
   /**
    * Should the resulting image incorporates the layer attributes (such as opacity and blend mode)
    */
-  static includeLayers: boolean
+  includeLayers: boolean
 
   /**
    * The amount of white space (in points) to be added around the object during rasterization.
    */
-  static padding: number
+  padding: number
 
   /**
    * The rasterization resolution in dots-per-inch (dpi)
    */
-  static resolution: number
+  resolution: number
 
   /**
    * Should the resulting image use transparency.
    */
-  static transparency: boolean
+  transparency: boolean
 }
 
 /**
