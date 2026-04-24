@@ -3670,6 +3670,8 @@ declare enum DocumentLayoutStyle {
  * A collection of artboards.
  */
 declare class Artboards extends Array<Artboard> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -3737,6 +3739,8 @@ declare class Artboards extends Array<Artboard> {
  * A collection of documents.
  */
 declare class Documents extends Array<Document> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -3808,6 +3812,8 @@ declare class Documents extends Array<Document> {
  * A collection of layers.
  */
 declare class Layers extends Array<Layer> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -3844,6 +3850,8 @@ declare class Layers extends Array<Layer> {
  * A collection of group items.
  */
 declare class GroupItems extends Array<GroupItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -3886,6 +3894,8 @@ declare class GroupItems extends Array<GroupItem> {
  * A collection of page items.
  */
 declare class PageItems extends Array<PageItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -3912,6 +3922,8 @@ declare class PageItems extends Array<PageItem> {
  * A collection of path items.
  */
 declare class PathItems extends Array<PathItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4030,6 +4042,8 @@ declare class PathItems extends Array<PathItem> {
  * A collection of path points.
  */
 declare class PathPoints extends Array<PathPoint> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4066,6 +4080,8 @@ declare class PathPoints extends Array<PathPoint> {
  * A collection of compound path items.
  */
 declare class CompoundPathItems extends Array<CompoundPathItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4102,6 +4118,8 @@ declare class CompoundPathItems extends Array<CompoundPathItem> {
  * A collection of stories.
  */
 declare class Stories extends Array<Story> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4128,6 +4146,8 @@ declare class Stories extends Array<Story> {
  * A collection of text frame items.
  */
 declare class TextFrameItems extends Array<TextFrame> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4203,6 +4223,8 @@ declare class TextFrameItems extends Array<TextFrame> {
  * A collection of legacy text items.
  */
 declare class LegacyTextItems extends Array<LegacyTextItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4234,6 +4256,8 @@ declare class LegacyTextItems extends Array<LegacyTextItem> {
  * A collection of text range items.
  */
 declare class TextRanges extends Array<TextRange> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4260,6 +4284,8 @@ declare class TextRanges extends Array<TextRange> {
  * A collection of insertion points.
  */
 declare class InsertionPoints extends Array<InsertionPoint> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4286,6 +4312,8 @@ declare class InsertionPoints extends Array<InsertionPoint> {
  * A collection of characters.
  */
 declare class Characters extends Array<TextRange> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4329,6 +4357,8 @@ declare class Characters extends Array<TextRange> {
  * A collection of words.
  */
 declare class Words extends Array<TextRange> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4372,6 +4402,8 @@ declare class Words extends Array<TextRange> {
  * A collection of lines.
  */
 declare class Lines extends Array<TextRange> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4398,6 +4430,8 @@ declare class Lines extends Array<TextRange> {
  * A collection of Paragraphs.
  */
 declare class Paragraphs extends Array<TextRange> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4441,6 +4475,8 @@ declare class Paragraphs extends Array<TextRange> {
  * A collection of character styles.
  */
 declare class CharacterStyles extends Array<CharacterStyle> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4478,6 +4514,8 @@ declare class CharacterStyles extends Array<CharacterStyle> {
  * A collection of paragraph styles.
  */
 declare class ParagraphStyles extends Array<ParagraphStyle> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4515,6 +4553,8 @@ declare class ParagraphStyles extends Array<ParagraphStyle> {
  * A collection of custom spot colors.
  */
 declare class Spots extends Array<Spot> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4551,6 +4591,8 @@ declare class Spots extends Array<Spot> {
  * A collection of swatches.
  */
 declare class Swatches extends Array<Swatch> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4593,6 +4635,8 @@ declare class Swatches extends Array<Swatch> {
  * A collection of Swatch groups.
  */
 declare class SwatchGroups extends Array<SwatchGroup> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4634,6 +4678,8 @@ declare class SwatchGroups extends Array<SwatchGroup> {
  * A collection of gradients.
  */
 declare class Gradients extends Array<Gradient> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4670,6 +4716,8 @@ declare class Gradients extends Array<Gradient> {
  * A collection of gradient stops.
  */
 declare class GradientStops extends Array<GradientStop> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4706,6 +4754,8 @@ declare class GradientStops extends Array<GradientStop> {
  * A collection of patterns.
  */
 declare class Patterns extends Array<Pattern> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4742,6 +4792,8 @@ declare class Patterns extends Array<Pattern> {
  * A collection of symbols.
  */
 declare class Symbols extends Array<Symbol> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4780,6 +4832,8 @@ declare class Symbols extends Array<Symbol> {
  * A collection of symbol items.
  */
 declare class SymbolItems extends Array<SymbolItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4817,6 +4871,8 @@ declare class SymbolItems extends Array<SymbolItem> {
  * A collection of brushes.
  */
 declare class Brushes extends Array<Brush> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4856,6 +4912,8 @@ declare class Brushes extends Array<Brush> {
  * A collection of art styles.
  */
 declare class ArtStyles extends Array<ArtStyle> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4887,6 +4945,8 @@ declare class ArtStyles extends Array<ArtStyle> {
  * A collection of fonts.
  */
 declare class TextFonts extends Array<TextFont> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4930,6 +4990,8 @@ declare class TextFonts extends Array<TextFont> {
  * The collection of tags associated with a page item.
  */
 declare class Tags extends Array<Tag> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4966,6 +5028,8 @@ declare class Tags extends Array<Tag> {
  * A collection of RasterItems.
  */
 declare class RasterItems extends Array<RasterItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -4997,6 +5061,8 @@ declare class RasterItems extends Array<RasterItem> {
  * A collection of PlacedItems.
  */
 declare class PlacedItems extends Array<PlacedItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5033,6 +5099,8 @@ declare class PlacedItems extends Array<PlacedItem> {
  * EmbeddedItems Collection.
  */
 declare class EmbeddedItems extends Array<EmbedItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5069,6 +5137,8 @@ declare class EmbeddedItems extends Array<EmbedItem> {
  * A collection of MeshItems.
  */
 declare class MeshItems extends Array<MeshItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5100,6 +5170,8 @@ declare class MeshItems extends Array<MeshItem> {
  * A collection of GraphItems.
  */
 declare class GraphItems extends Array<GraphItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5131,6 +5203,8 @@ declare class GraphItems extends Array<GraphItem> {
  * A collection of PluginItems.
  */
 declare class PluginItems extends Array<PluginItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5162,6 +5236,8 @@ declare class PluginItems extends Array<PluginItem> {
  * A collection of NonNativeItems.
  */
 declare class NonNativeItems extends Array<NonNativeItem> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5188,6 +5264,8 @@ declare class NonNativeItems extends Array<NonNativeItem> {
  * A collection of views.
  */
 declare class Views extends Array<View> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5214,6 +5292,8 @@ declare class Views extends Array<View> {
  * A collection of variables.
  */
 declare class Variables extends Array<Variable> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -5250,6 +5330,8 @@ declare class Variables extends Array<Variable> {
  * A collection of datasets.
  */
 declare class DataSets extends Array<DataSet> {
+  private constructor()
+
   /**
    * Number of elements in the collection.
    */
@@ -7636,6 +7718,8 @@ declare class RasterizeOptions {
  * The Adobe Illustrator application.
  */
 declare class Application {
+  private constructor()
+
   /**
    * The list of PDF preset names currently available for use.
    */
@@ -8310,6 +8394,8 @@ declare class Application {
  * A document.
  */
 declare class Document {
+  private constructor()
+
   /**
    * The XMP packet string associated with the document.
    */
@@ -8930,6 +9016,8 @@ declare class Document {
  * A layer.
  */
 declare class Layer {
+  private constructor()
+
   /**
    * The absolute drawing order of the layer.
    */
@@ -9113,6 +9201,8 @@ declare class Layer {
  * A view.
  */
 declare class View {
+  private constructor()
+
   /**
    * The bounding rectangle of this view.
    */
@@ -9148,6 +9238,8 @@ declare class View {
  * A gradient.
  */
 declare class Gradient {
+  private constructor()
+
   /**
    * The stops in this gradient.
    */
@@ -9188,6 +9280,8 @@ declare class Gradient {
  * A gradient stop.
  */
 declare class GradientStop {
+  private constructor()
+
   /**
    * The color linked to this gradient stop.
    */
@@ -9233,6 +9327,8 @@ declare class GradientStop {
  * Preferences for Illustrator.
  */
 declare class Preferences {
+  private constructor()
+
   /**
    * Options to use when opening or placing a AutoCAD file.
    */
@@ -9321,6 +9417,8 @@ declare class Preferences {
  * A custom color.
  */
 declare class Spot {
+  private constructor()
+
   /**
    *
    */
@@ -9371,6 +9469,8 @@ declare class Spot {
  * Dynamic object used to create data-driven graphics.
  */
 declare class Variable {
+  private constructor()
+
   /**
    * The variable's type.
    */
@@ -9411,6 +9511,8 @@ declare class Variable {
  * A set of variables and their associated dynamic data which will be used for dynamic publishing.
  */
 declare class DataSet {
+  private constructor()
+
   /**
    * The name of this dataset.
    */
@@ -9451,6 +9553,8 @@ declare class DataSet {
  * A color swatch.
  */
 declare class Swatch {
+  private constructor()
+
   /**
    * The color information of the swatch.
    */
@@ -9486,6 +9590,8 @@ declare class Swatch {
  * A Swatch group.
  */
 declare class SwatchGroup {
+  private constructor()
+
   /**
    * Name of the swatch group.
    */
@@ -9533,6 +9639,8 @@ declare class SwatchGroup {
  * A pattern.
  */
 declare class Pattern {
+  private constructor()
+
   /**
    * The pattern's name.
    */
@@ -9563,6 +9671,8 @@ declare class Pattern {
  * A symbol.
  */
 declare class Symbol {
+  private constructor()
+
   /**
    * The symbol's name.
    */
@@ -9600,6 +9710,8 @@ declare class Symbol {
  * A brush.
  */
 declare class Brush {
+  private constructor()
+
   /**
    * The brush's name.
    */
@@ -9626,6 +9738,8 @@ declare class Brush {
  * An art style.
  */
 declare class ArtStyle {
+  private constructor()
+
   /**
    * The art style's name.
    */
@@ -9668,6 +9782,8 @@ declare class ArtStyle {
  * An installed font.
  */
 declare class TextFont {
+  private constructor()
+
   /**
    * The font's family name.
    */
@@ -9992,6 +10108,8 @@ declare class PageItem {
  * Compound path artwork item.
  */
 declare class CompoundPathItem extends PageItem {
+  private constructor()
+
   /**
    * The path artwork in this compound path.
    */
@@ -10002,6 +10120,8 @@ declare class CompoundPathItem extends PageItem {
  * A tag associated with a piece of artwork.
  */
 declare class Tag {
+  private constructor()
+
   /**
    * The tag's name.
    */
@@ -10037,6 +10157,8 @@ declare class Tag {
  * An artwork path item.
  */
 declare class PathItem extends PageItem {
+  private constructor()
+
   /**
    * The area of this path in square points.
    */
@@ -10158,6 +10280,8 @@ declare class PathItem extends PageItem {
  * A point on a path.
  */
 declare class PathPoint {
+  private constructor()
+
   /**
    * The position (coordinates) of the anchor point.
    */
@@ -10208,6 +10332,8 @@ declare class PathPoint {
  * Raster artwork item.
  */
 declare class RasterItem extends PageItem {
+  private constructor()
+
   /**
    * The number of bits per channel.
    */
@@ -10289,6 +10415,8 @@ declare class RasterItem extends PageItem {
  * Placed artwork item.
  */
 declare class PlacedItem extends PageItem {
+  private constructor()
+
   /**
    * Dimensions of placed art object, regardless of transformations.
    */
@@ -10330,6 +10458,8 @@ declare class PlacedItem extends PageItem {
  * Embedded artwork item.
  */
 declare class EmbedItem extends PageItem {
+  private constructor()
+
   /**
    * The file containing the placed artwork.
    */
@@ -10340,6 +10470,8 @@ declare class EmbedItem extends PageItem {
  * Graph artwork item.
  */
 declare class GraphItem extends PageItem {
+  private constructor()
+
   /**
    * The content variable bound to this graph.
    */
@@ -10349,17 +10481,23 @@ declare class GraphItem extends PageItem {
 /**
  * Non-native artwork item.
  */
-declare class NonNativeItem extends PageItem {}
+declare class NonNativeItem extends PageItem {
+  private constructor()
+}
 
 /**
  * Mesh artwork item.
  */
-declare class MeshItem extends PageItem {}
+declare class MeshItem extends PageItem {
+  private constructor()
+}
 
 /**
  * Plugin artwork item.
  */
 declare class PluginItem extends PageItem {
+  private constructor()
+
   /**
    * Is the plugin group a tracing?
    */
@@ -10375,6 +10513,8 @@ declare class PluginItem extends PageItem {
  * An artwork group item.
  */
 declare class GroupItem extends PageItem {
+  private constructor()
+
   /**
    * Are the group elements clipped to the clipping path?
    */
@@ -10450,6 +10590,8 @@ declare class GroupItem extends PageItem {
  * An instance of a Symbol.
  */
 declare class SymbolItem extends PageItem {
+  private constructor()
+
   /**
    * The symbol that was used to create this symbol item.
    */
@@ -10465,6 +10607,8 @@ declare class SymbolItem extends PageItem {
  * A text path item.
  */
 declare class TextPath {
+  private constructor()
+
   /**
    * The area of this path in square points.
    */
@@ -10636,6 +10780,8 @@ declare class TextPath {
  * A contiguous block of text.
  */
 declare class Story {
+  private constructor()
+
   /**
    * All the characters in this text range.
    */
@@ -10701,6 +10847,8 @@ declare class Story {
  * Text frame item.
  */
 declare class TextFrame extends PageItem {
+  private constructor()
+
   /**
    * The position of the anchor point (start of base line for point text)
    */
@@ -10885,6 +11033,8 @@ declare class TextFrame extends PageItem {
  * Unconverted legacy text items from documents in pre-version 11 formats.
  */
 declare class LegacyTextItem extends PageItem {
+  private constructor()
+
   /**
    * Has the legacy text item been updated to a native text frame item?
    */
@@ -10900,6 +11050,8 @@ declare class LegacyTextItem extends PageItem {
  * A range of characters from a text item.
  */
 declare class TextRange {
+  private constructor()
+
   /**
    * The character properties for the text range.
    */
@@ -11036,6 +11188,8 @@ declare class TextRange {
  * A location between characters, used to insert new text objects.
  */
 declare class InsertionPoint {
+  private constructor()
+
   /**
    * All the characters in this text range.
    */
@@ -11081,6 +11235,8 @@ declare class InsertionPoint {
  * A named style that remembers character attributes.
  */
 declare class CharacterStyle {
+  private constructor()
+
   /**
    * The character properties for the text range.
    */
@@ -11133,6 +11289,8 @@ declare class CharacterStyle {
  * A named style that remembers paragraph attributes.
  */
 declare class ParagraphStyle {
+  private constructor()
+
   /**
    * The character properties for the text range.
    */
@@ -11190,6 +11348,8 @@ declare class ParagraphStyle {
  * Properties of a character.
  */
 declare class CharacterAttributes {
+  private constructor()
+
   /**
    * The percentage of space reduction around a Japanese character (100 = 100%)
    */
@@ -11455,6 +11615,8 @@ declare class CharacterAttributes {
  * Properties of a paragraph.
  */
 declare class ParagraphAttributes {
+  private constructor()
+
   /**
    * Auto leading amount (in percentage)
    */
@@ -11645,6 +11807,8 @@ declare class ParagraphAttributes {
  * Options which are applied when opening or placing a Photoshop file.
  */
 declare class OpenOptionsPhotoshop {
+  private constructor()
+
   /**
    * Should use the specified LayerComp.
    */
@@ -11685,6 +11849,8 @@ declare class OpenOptionsPhotoshop {
  * Options which may be supplied when opening a PDF file.
  */
 declare class OpenOptionsPDF {
+  private constructor()
+
   /**
    * What box should be used when placing a multipage document (default: PDF media box)
    */
@@ -11710,6 +11876,8 @@ declare class OpenOptionsPDF {
  * Options which may be supplied when opening a AutoCAD file.
  */
 declare class OpenOptionsAutoCAD {
+  private constructor()
+
   /**
    * To center the created artwork on the artboard (default: true)
    */
@@ -11765,6 +11933,8 @@ declare class OpenOptionsAutoCAD {
  * Tracing options that guide the tracing process.
  */
 declare class TracingOptions {
+  private constructor()
+
   /**
    * ColorFidelity when TracingColorTypeValue is TracingFullColor.
    */
@@ -11887,6 +12057,8 @@ declare class TracingOptions {
  * A tracing object.
  */
 declare class TracingObject {
+  private constructor()
+
   /**
    * The number of anchors in the tracing result.
    */
@@ -11938,6 +12110,8 @@ declare class TracingObject {
  * An artboard object.
  */
 declare class Artboard {
+  private constructor()
+
   /**
    * Size and position of artboard.
    */
