@@ -371,6 +371,11 @@ declare class AudioTrack {
   solo: boolean
 
   /**
+   * True if this track is visible
+   */
+  visible: boolean
+
+  /**
    * Type of the track. The value is one of AUDIOTRACKTYPE_CLIP AUDIOTRACKTYPE_BUS AUDIOTRACKTYPE_MASTER or AUDIOTRACKTYPE_UNKOWN
    */
   readonly type: number
@@ -1535,6 +1540,16 @@ declare class Application {
    * Nudge the selected clips to the right by 5 (by frames when snapping to frames is enabled).
    */
   static readonly COMMAND_CLIP_NUDGERIGHT5: string
+
+  /**
+   * Nudge the selected clips to the up (by frames when snapping to frames is enabled).
+   */
+  static readonly COMMAND_CLIP_NUDGEUP: string
+
+  /**
+   * Nudge the selected clips to the down (by frames when snapping to frames is enabled).
+   */
+  static readonly COMMAND_CLIP_NUDGEDOWN: string
 
   /**
    * Remove the focus clip from its current group.
@@ -4245,6 +4260,266 @@ declare class Application {
    * Switch to ninth workspace in Workspace menu.
    */
   static readonly COMMAND_WORKSPACE_WORKSPACE9: string
+
+  /**
+   * Trim the head of the selected clip to the current playhead position.
+   */
+  static readonly COMMAND_CLIP_TRIMHEADTOCTI: string;
+
+  /**
+   * Trim the tail of the selected clip to the current playhead position.
+   */
+  static readonly COMMAND_CLIP_TRIMTAILTOCTI: string;
+
+  /**
+   * Rename the selected item.
+   */
+  static readonly COMMAND_EDIT_RENAME: string;
+
+  /**
+   * Browse and run a script file.
+   */
+  static readonly COMMAND_FILE_BROWSEANDRUNSCRIPT: string;
+
+  /**
+   * Close the current document.
+   */
+  static readonly COMMAND_FILE_CLOSEDOCUMENT: string;
+
+  /**
+   * Link all offline media files.
+   */
+  static readonly COMMAND_FILE_LINKALLOFFLINEMEDIA: string;
+
+  /**
+   * Save the current document.
+   */
+  static readonly COMMAND_FILE_SAVEDOCUMENT: string;
+
+  /**
+   * Add multiple tracks with specified properties.
+   */
+  static readonly COMMAND_MULTITRACK_ADDTRACKS: string;
+
+  /**
+   * Delete all empty tracks from the session.
+   */
+  static readonly COMMAND_MULTITRACK_DELETEEMPTYTRACKS: string;
+
+  /**
+   * Hide the currently selected tracks.
+   */
+  static readonly COMMAND_MULTITRACK_HIDESELECTEDTRACKS: string;
+
+  /**
+   * Load track visibility preset 1.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY1: string;
+
+  /**
+   * Load track visibility preset 2.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY2: string;
+
+  /**
+   * Load track visibility preset 3.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY3: string;
+
+  /**
+   * Load track visibility preset 4.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY4: string;
+
+  /**
+   * Load track visibility preset 5.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY5: string;
+
+  /**
+   * Load track visibility preset 6.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY6: string;
+
+  /**
+   * Load track visibility preset 7.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY7: string;
+
+  /**
+   * Load track visibility preset 8.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY8: string;
+
+  /**
+   * Load track visibility preset 9.
+   */
+  static readonly COMMAND_MULTITRACK_LOADTRACKVISIBILITY9: string;
+
+  /**
+   * Save current track visibility as preset 1.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY1: string;
+
+  /**
+   * Save current track visibility as preset 2.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY2: string;
+
+  /**
+   * Save current track visibility as preset 3.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY3: string;
+
+  /**
+   * Save current track visibility as preset 4.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY4: string;
+
+  /**
+   * Save current track visibility as preset 5.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY5: string;
+
+  /**
+   * Save current track visibility as preset 6.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY6: string;
+
+  /**
+   * Save current track visibility as preset 7.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY7: string;
+
+  /**
+   * Save current track visibility as preset 8.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY8: string;
+
+  /**
+   * Save current track visibility as preset 9.
+   */
+  static readonly COMMAND_MULTITRACK_SAVETRACKVISIBILITY9: string;
+
+  /**
+   * Show all tracks in the session.
+   */
+  static readonly COMMAND_MULTITRACK_SHOWALLTRACKS: string;
+
+  /**
+   * Show only bus tracks in the session.
+   */
+  static readonly COMMAND_MULTITRACK_SHOWONLYBUSTRACKS: string;
+
+  /**
+   * Show only clip tracks in the session.
+   */
+  static readonly COMMAND_MULTITRACK_SHOWONLYCLIPTRACKS: string;
+
+  /**
+   * Show only tracks that contain clips.
+   */
+  static readonly COMMAND_MULTITRACK_SHOWONLYTRACKSWITHCLIPS: string;
+
+  /**
+   * Show only tracks that have clips at the current playhead position.
+   */
+  static readonly COMMAND_MULTITRACK_SHOWONLYTRACKSWITHCLIPSATCTI: string;
+
+  /**
+   * Show only tracks that have time-selected clips.
+   */
+  static readonly COMMAND_MULTITRACK_SHOWONLYTRACKSWITHTIMESELECTEDCLIPS: string;
+
+  /**
+   * Toggle whether track visibility settings apply to the mixer.
+   */
+  static readonly COMMAND_PREFERENCES_TOGGLETRACKVISIBILITYSETTINGSAPPLYTOMIXER: string;
+
+  /**
+   * Perform punch recording again.
+   */
+  static readonly COMMAND_TRANSPORT_PUNCHAGAIN: string;
+
+  /**
+   * Perform punch and roll recording.
+   */
+  static readonly COMMAND_TRANSPORT_PUNCHANDROLL: string;
+
+  /**
+   * Toggle record handling behavior.
+   */
+  static readonly COMMAND_TRANSPORT_TOGGLERECORDHANDLINGBEHAVIOR: string;
+
+  /**
+   * Save current zoom level as preset 1.
+   */
+  static readonly COMMAND_VIEW_SAVEZOOMPRESET1: string;
+
+  /**
+   * Save current zoom level as preset 2.
+   */
+  static readonly COMMAND_VIEW_SAVEZOOMPRESET2: string;
+
+  /**
+   * Save current zoom level as preset 3.
+   */
+  static readonly COMMAND_VIEW_SAVEZOOMPRESET3: string;
+
+  /**
+   * Save current zoom level as preset 4.
+   */
+  static readonly COMMAND_VIEW_SAVEZOOMPRESET4: string;
+
+  /**
+   * Save current zoom level as preset 5.
+   */
+  static readonly COMMAND_VIEW_SAVEZOOMPRESET5: string;
+
+  /**
+   * Toggle the display of clip gain controls.
+   */
+  static readonly COMMAND_VIEW_TOGGLECLIPGAINCONTROLS: string;
+
+  /**
+   * Zoom out to show all tracks fully.
+   */
+  static readonly COMMAND_VIEW_ZOOMOUTFULLALLTRACKS: string;
+
+  /**
+   * Zoom to preset 1 level.
+   */
+  static readonly COMMAND_VIEW_ZOOMTOPRESET1: string;
+
+  /**
+   * Zoom to preset 2 level.
+   */
+  static readonly COMMAND_VIEW_ZOOMTOPRESET2: string;
+
+  /**
+   * Zoom to preset 3 level.
+   */
+  static readonly COMMAND_VIEW_ZOOMTOPRESET3: string;
+
+  /**
+   * Zoom to preset 4 level.
+   */
+  static readonly COMMAND_VIEW_ZOOMTOPRESET4: string;
+
+  /**
+   * Zoom to preset 5 level.
+   */
+  static readonly COMMAND_VIEW_ZOOMTOPRESET5: string;
+
+  /**
+   * Zoom to fit selected clips in view.
+   */
+  static readonly COMMAND_VIEW_ZOOMTOSELECTEDCLIPS: string;
+
+  /**
+   * Open or close the Tracks panel.
+   */
+  static readonly COMMAND_WINDOW_TRACKS: string;
 
   /**
    * Get the currently active document.
