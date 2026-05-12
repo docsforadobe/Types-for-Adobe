@@ -810,6 +810,11 @@ declare class SourceMonitor {
   /**
    *
    */
+  getProjectItem(): ProjectItem | undefined
+
+  /**
+   *
+   */
   setTimeout(eventName: string, function_: any, milliseconds: number): void
 
   /**
@@ -1116,6 +1121,26 @@ declare class Project {
    * @param newGWL
    */
   setGraphicsWhiteLuminance(newGWL: number): boolean
+
+  /**
+   *
+   * @param width	Integer
+   * @param height	Integer
+   * @param timeBase A timebase for a new project item
+   * @param pixelAspectNumerator	Integer	Pixel aspect ration numerator
+   * @param pixelAspectDenominator	Integer	Pixel aspect ration denominator
+   * @param audioSampleRate		Audio sample rate
+   * @param name	String	Name for a new project item
+   */
+  newBarsAndTone(
+    width: number,
+    height: number,
+    timeBase: number,
+    pixelAspectNumerator: number,
+    pixelAspectDenominator: number,
+    audioSampleRate: number,
+    name: string,
+  ): boolean
 
   /**
    *
@@ -1568,7 +1593,7 @@ declare class ProjectItem {
   /**
    *
    */
-  setStartTime(arg1: object): void
+  setStartTime(seconds: number): void
 
   /**
    * Sets the in point of the clip.
